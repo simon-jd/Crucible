@@ -1,0 +1,1 @@
+{"error": "JSONDecodeError Extra data at line2 when treating default reaper stdout as one JSON", "effect": "Before terminal receipt/docs writes; native execution unchanged; raw stdout preserved", "correction": "reaper emitted two JSON lines (diagnostic + result); inspect and parse lines, do not overwrite original"}

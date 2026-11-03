@@ -1,0 +1,333 @@
+FFFFFF....FFFFFFFFFFFFFFF                                                [100%]
+=================================== FAILURES ===================================
+_ test_slurm_batch_isolates_all_faults_before_first_requeue_and_routes_jobs[nodes0] _
+
+nodes = ('a', 'b')
+
+    @pytest.mark.parametrize("nodes", [("a", "b"), ("a", "b", "c")])
+    def test_slurm_batch_isolates_all_faults_before_first_requeue_and_routes_jobs(nodes):
+        jobs = {str(42 + i): n for i, n in enumerate(nodes)}
+        runner = SlurmRunner(jobs)
+        results = SchedulerExecutor("slurm", set(nodes), "owner", dry_run=False, runner=runner).execute(
+            actions(nodes), [{"id": job_id} for job_id in jobs])
+        mutation = [c[1] for c in runner.calls if c[1] in ("update", "requeue")]
+>       assert mutation == ["update"] * len(nodes) + ["requeue"] * len(nodes)
+E       AssertionError: assert ['update', 'r...e', 'requeue'] == ['update', 'u...e', 'requeue']
+E
+E         At index 1 diff: 'requeue' != 'update'
+E         Use -v to get more diff
+
+cluster/drain/tests/test_review_fixes.py:79: AssertionError
+_ test_slurm_batch_isolates_all_faults_before_first_requeue_and_routes_jobs[nodes1] _
+
+nodes = ('a', 'b', 'c')
+
+    @pytest.mark.parametrize("nodes", [("a", "b"), ("a", "b", "c")])
+    def test_slurm_batch_isolates_all_faults_before_first_requeue_and_routes_jobs(nodes):
+        jobs = {str(42 + i): n for i, n in enumerate(nodes)}
+        runner = SlurmRunner(jobs)
+        results = SchedulerExecutor("slurm", set(nodes), "owner", dry_run=False, runner=runner).execute(
+            actions(nodes), [{"id": job_id} for job_id in jobs])
+        mutation = [c[1] for c in runner.calls if c[1] in ("update", "requeue")]
+>       assert mutation == ["update"] * len(nodes) + ["requeue"] * len(nodes)
+E       AssertionError: assert ['update', 'r...e', 'requeue'] == ['update', 'u...e', 'requeue']
+E
+E         At index 1 diff: 'requeue' != 'update'
+E         Use -v to get more diff
+
+cluster/drain/tests/test_review_fixes.py:79: AssertionError
+_____ test_spanning_slurm_job_requeued_once_and_associated_with_both_nodes _____
+
+    def test_spanning_slurm_job_requeued_once_and_associated_with_both_nodes():
+        runner = SlurmRunner({"42": "a,b"})
+        results = SchedulerExecutor("slurm", {"a", "b"}, "owner", dry_run=False, runner=runner).execute(
+            actions(("a", "b")), [{"id": "42"}, {"id": "42"}])
+        assert sum(c[:2] == ["scontrol", "requeue"] for c in runner.calls) == 1
+        requeues = [r for r in results if r["kind"] == "requeue"]
+>       assert all(r["status"] == "requeued" for r in requeues)
+E       assert False
+E        +  where False = all(<generator object test_spanning_slurm_job_requeued_once_and_associated_with_both_nodes.<locals>.<genexpr> at 0x716c11bed560>)
+
+cluster/drain/tests/test_review_fixes.py:93: AssertionError
+_____ test_any_batch_isolation_failure_blocks_all_requeue_attempts[slurm] ______
+
+scheduler = 'slurm'
+
+    @pytest.mark.parametrize("scheduler", ["slurm", "k8s"])
+    def test_any_batch_isolation_failure_blocks_all_requeue_attempts(scheduler):
+        nodes = ("a", "b")
+        runner = (SlurmRunner({"42": "a", "43": "b"}, fail_node="b") if scheduler == "slurm"
+                  else K8sRunner({f"train-{n}": n for n in nodes}, fail_node="b"))
+        jobs = [{"id": "42"}, {"id": "43"}] if scheduler == "slurm" else k8s_jobs(nodes)
+        results = SchedulerExecutor(scheduler, set(nodes), "owner", dry_run=False, runner=runner).execute(
+            actions(nodes), jobs)
+>       assert not any(c[:2] == ["scontrol", "requeue"] or "--raw" in c for c in runner.calls)
+E       assert not True
+E        +  where True = any(<generator object test_any_batch_isolation_failure_blocks_all_requeue_attempts.<locals>.<genexpr> at 0x716c11bee4d0>)
+
+cluster/drain/tests/test_review_fixes.py:105: AssertionError
+______ test_any_batch_isolation_failure_blocks_all_requeue_attempts[k8s] _______
+
+scheduler = 'k8s'
+
+    @pytest.mark.parametrize("scheduler", ["slurm", "k8s"])
+    def test_any_batch_isolation_failure_blocks_all_requeue_attempts(scheduler):
+        nodes = ("a", "b")
+        runner = (SlurmRunner({"42": "a", "43": "b"}, fail_node="b") if scheduler == "slurm"
+                  else K8sRunner({f"train-{n}": n for n in nodes}, fail_node="b"))
+        jobs = [{"id": "42"}, {"id": "43"}] if scheduler == "slurm" else k8s_jobs(nodes)
+        results = SchedulerExecutor(scheduler, set(nodes), "owner", dry_run=False, runner=runner).execute(
+            actions(nodes), jobs)
+>       assert not any(c[:2] == ["scontrol", "requeue"] or "--raw" in c for c in runner.calls)
+E       assert not True
+E        +  where True = any(<generator object test_any_batch_isolation_failure_blocks_all_requeue_attempts.<locals>.<genexpr> at 0x716c11beef60>)
+
+cluster/drain/tests/test_review_fixes.py:105: AssertionError
+__ test_k8s_batch_isolates_all_nodes_before_eviction_and_routes_explicit_pods __
+
+    def test_k8s_batch_isolates_all_nodes_before_eviction_and_routes_explicit_pods():
+        nodes = ("a", "b", "c")
+        runner = K8sRunner({f"train-{n}": n for n in nodes})
+        results = SchedulerExecutor("k8s", set(nodes), "owner", dry_run=False, runner=runner).execute(
+            actions(nodes), k8s_jobs(nodes))
+        isolation = [i for i, c in enumerate(runner.calls) if "cordon" in c or "taint" in c]
+        evictions = [i for i, c in enumerate(runner.calls) if "--raw" in c]
+>       assert len(isolation) == 6 and len(evictions) == 3 and max(isolation) < min(evictions)
+E       assert (6 == 6 and 3 == 3 and 23 < 5)
+E        +  where 6 = len([0, 1, 11, 12, 22, 23])
+E        +  and   3 = len([5, 18, 31])
+E        +  and   23 = max([0, 1, 11, 12, 22, 23])
+E        +  and   5 = min([5, 18, 31])
+
+cluster/drain/tests/test_review_fixes.py:118: AssertionError
+______ test_prometheus_labels_escape_protocol_characters_and_keep_unicode ______
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_escape_0')
+
+    def test_prometheus_labels_escape_protocol_characters_and_keep_unicode(tmp_path):
+        hook = StepTimeHook('节点\\"\n', '实验\\"\n', tmp_path / "step.prom", clock=lambda: 1000)
+        assert hook.observe(50, 1)
+        body = hook.path.read_text()
+>       assert 'node="节点\\\\\\"\\n",run_id="实验\\\\\\"\\n"' in body
+E       assert 'node="节点\\\\\\"\\n",run_id="实验\\\\\\"\\n"' in '# TYPE crucible_step_time_seconds gauge\ncrucible_step_time_seconds{node="\\u8282\\u70b9\\\\\\"\\n",run_id="\\u5b9e\\...crucible_step_index gauge\ncrucible_step_index{node="\\u8282\\u70b9\\\\\\"\\n",run_id="\\u5b9e\\u9a8c\\\\\\"\\n"} 50\n'
+
+cluster/drain/tests/test_review_fixes.py:150: AssertionError
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-tab\t] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_0')
+label = 'tab\t', field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-nul\x00] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_1')
+label = 'nul\x00', field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-carriage\r] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_2')
+label = 'carriage\r', field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-del\x7f] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_3')
+label = 'del\x7f', field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-c1\x85] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_4')
+label = 'c1\x85', field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-surrogate\ud800] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_5')
+label = 'surrogate\ud800', field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-42] __
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_6')
+label = 42, field = 'node'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-tab\t] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_7')
+label = 'tab\t', field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-nul\x00] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_8')
+label = 'nul\x00', field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-carriage\r] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_9')
+label = 'carriage\r', field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-del\x7f] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_10')
+label = 'del\x7f', field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-c1\x85] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_11')
+label = 'c1\x85', field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-surrogate\ud800] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_12')
+label = 'surrogate\ud800', field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+_ test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-42] _
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-94/test_prometheus_labels_reject_13')
+label = 42, field = 'run_id'
+
+    @pytest.mark.parametrize("label", ["tab\t", "nul\0", "carriage\r", "del\x7f", "c1\x85", "surrogate\ud800", 42])
+    @pytest.mark.parametrize("field", ["node", "run_id"])
+    def test_prometheus_labels_reject_unsupported_controls_and_non_strings(tmp_path, label, field):
+        kwargs = {"node": "a", "run_id": "run", "path": tmp_path / "step.prom", field: label}
+>       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+cluster/drain/tests/test_review_fixes.py:159: Failed
+=========================== short test summary info ============================
+FAILED cluster/drain/tests/test_review_fixes.py::test_slurm_batch_isolates_all_faults_before_first_requeue_and_routes_jobs[nodes0]
+FAILED cluster/drain/tests/test_review_fixes.py::test_slurm_batch_isolates_all_faults_before_first_requeue_and_routes_jobs[nodes1]
+FAILED cluster/drain/tests/test_review_fixes.py::test_spanning_slurm_job_requeued_once_and_associated_with_both_nodes
+FAILED cluster/drain/tests/test_review_fixes.py::test_any_batch_isolation_failure_blocks_all_requeue_attempts[slurm]
+FAILED cluster/drain/tests/test_review_fixes.py::test_any_batch_isolation_failure_blocks_all_requeue_attempts[k8s]
+FAILED cluster/drain/tests/test_review_fixes.py::test_k8s_batch_isolates_all_nodes_before_eviction_and_routes_explicit_pods
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_escape_protocol_characters_and_keep_unicode
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-tab\t]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-nul\x00]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-carriage\r]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-del\x7f]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-c1\x85]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-surrogate\ud800]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[node-42]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-tab\t]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-nul\x00]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-carriage\r]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-del\x7f]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-c1\x85]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-surrogate\ud800]
+FAILED cluster/drain/tests/test_review_fixes.py::test_prometheus_labels_reject_unsupported_controls_and_non_strings[run_id-42]
+21 failed, 4 passed in 0.10s

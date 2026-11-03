@@ -1,0 +1,38 @@
+{
+  "source_pid": 3518363,
+  "source_step": {
+    "dropped_stale": 0,
+    "accepted_samples": 2,
+    "effective_tokens": 2,
+    "optimizer_steps": 1,
+    "policy_version": 8,
+    "loss": 0.0
+  },
+  "parameter_count": 494032768,
+  "unique_tensors": 290,
+  "dtype": "explicit FP32 master -> BF16 inference",
+  "tensor_bytes_per_snapshot": 988065536,
+  "largest_tensor_bytes": 272269312,
+  "push_seconds": [
+    5.165212737978436,
+    5.06199585692957
+  ],
+  "parameter_max_change": 0.00010120868682861328,
+  "full_logits_max_change": 18.53125,
+  "mixed_compute_vs_published_bf16_max_abs": {
+    "The capital of France is": 0.3125,
+    "One plus one is": 0.4765625
+  },
+  "failed_learner_publication_rejected": true,
+  "peak_allocated_bytes": 10089074176,
+  "peak_reserved_bytes": 12924747776,
+  "host_peak_rss_bytes": 4121722880,
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "nccl": [
+    2,
+    27,
+    3
+  ],
+  "device": "NVIDIA GeForce RTX 4090"
+}

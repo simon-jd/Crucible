@@ -1,0 +1,23 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 15 items
+
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[exhausted] PASSED [  6%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[later-exhausted] PASSED [ 13%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[canonical-exhausted] PASSED [ 20%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[permission] PASSED [ 26%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[identity] PASSED [ 33%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[proc] PASSED [ 40%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[rss] PASSED [ 46%]
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[secondary] PASSED [ 53%]
+serving/baseline/native_pool_test.py::test_pool_history_copy_and_bound_are_explicit PASSED [ 60%]
+serving/baseline/native_pool_test.py::test_pool_scan_errors_retry_only_whole_enoent[failure0-3] PASSED [ 66%]
+serving/baseline/native_pool_test.py::test_pool_scan_errors_retry_only_whole_enoent[failure1-1] PASSED [ 73%]
+serving/baseline/native_pool_test.py::test_pool_scan_transient_restarts_whole_count PASSED [ 80%]
+serving/baseline/native_pool_test.py::test_pool_legacy_mode_no_scan_and_rss_still_enforced PASSED [ 86%]
+serving/baseline/output_limits_test.py::test_bounded_utf8_metadata_keeps_prefix_and_never_reports_success PASSED [ 93%]
+serving/baseline/output_limits_test.py::test_final_child_output_cutoff_invalidates_before_pair_publication PASSED [100%]
+
+============================== 15 passed in 0.09s ==============================

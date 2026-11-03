@@ -1,0 +1,58 @@
+{
+  "original_chunk": "25c6a3",
+  "exit": 0,
+  "log": "task12-native-pool-fix1-lint-v3.log",
+  "source_delta": "only remove two unused noqa markers, retain explanation comments",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--foreground",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "45s",
+      "/usr/bin/prlimit",
+      "--fsize=65536:65536",
+      "--core=0:0",
+      "--as=2000000000:2000000000",
+      "--",
+      "env",
+      "-u",
+      "TRANSFORMERS_CACHE",
+      "-u",
+      "TASK12_POOL_FIX1_BASELINE",
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "HF_HOME=/home/postedism/.cache/huggingface",
+      "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp",
+      "RAYON_NUM_THREADS=1",
+      ".venv/bin/ruff",
+      "check",
+      "--no-cache",
+      "serving/baseline/native_pool.py",
+      "serving/baseline/experiment.py",
+      "serving/baseline/native_pool_test.py"
+    ]
+  ],
+  "identities": {
+    "serving/baseline/native_pool.py": {
+      "bytes": 9080,
+      "sha256": "0f02c526c85904bfaa9b01d4255a992b505ea4d7acfce0aad6dd198bd0c5496d"
+    },
+    "serving/baseline/experiment.py": {
+      "bytes": 57837,
+      "sha256": "5d36897a9a6fedd53664cf38b258d6aa7a455a4ad9433a857e81fad1ccc3f596"
+    },
+    "serving/baseline/native_pool_test.py": {
+      "bytes": 24130,
+      "sha256": "057b2bcf748ba22c7ae34a4b47f394e8c7e04b60880c26eae455931ddb3e0556"
+    },
+    "serving/baseline/README.md": {
+      "bytes": 27724,
+      "sha256": "8eb49fabd7c644c32d4081d90c33ee14e5d4e4104f19215e2be911d801276cc6"
+    }
+  },
+  "formatter_repeated": false,
+  "pytest_native_git": false
+}

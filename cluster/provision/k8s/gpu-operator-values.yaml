@@ -1,0 +1,11 @@
+# Pinned host drivers and container toolkit come from the approved node image.
+# Avoid replacing the host's validated OFED/GPU driver with a second controller.
+driver:
+  enabled: false
+toolkit:
+  enabled: false
+mig:
+  strategy: none
+devicePlugin:
+  config:
+    name: ''

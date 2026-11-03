@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py", line 386, in <module>
+    main()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py", line 363, in main
+    result = ensure_file(
+             ^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py", line 271, in ensure_file
+    response = _download(
+               ^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py", line 225, in _download
+    observe(item["bytes"] - count)
+  File "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py", line 355, in observe
+    resource_sample(
+  File "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py", line 131, in resource_sample
+    project = project_bytes(ROOT)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/scripts/resource_preflight.py", line 21, in project_bytes
+    for directory, _subdirs, files in os.walk(root, followlinks=False, onerror=unreadable):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "/home/postedism/Desktop/Crucible/scripts/resource_preflight.py", line 18, in unreadable
+    raise error
+  File "<frozen os>", line 366, in walk
+FileNotFoundError: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/.agents'

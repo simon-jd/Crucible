@@ -1,0 +1,54 @@
+{
+  "time_utc": "2026-10-25T16:09:06.716422+00:00",
+  "scope": "ROOT all named outside-diff closure facts after same-agent scopedfixApproved; actualsource/commit checks, notGPU/scientificacceptance",
+  "commits": {
+    "cb84477c6f9ef57898b821f65a681859e5de9b0f": {
+      "exact_paths": 16,
+      "all_committed_SHA_match": true
+    },
+    "92744f5e20c65435511e9ed582d7fce7b8ae6b6f": {
+      "exact_paths": 8,
+      "all_committed_SHA_match": true
+    }
+  },
+  "current8sourceSHA_match": true,
+  "index_empty": true,
+  "original_handles": {
+    "97129": {
+      "exit": 0,
+      "cleanup_confirmed": true,
+      "remaining_owned_children": []
+    },
+    "83761": {
+      "exit": 0,
+      "cleanup_confirmed": true,
+      "remaining_owned_children": []
+    }
+  },
+  "two11directory_predelete_inventories_and_exactemptyrmdir": true,
+  "preservation_evidence": "task11-stream-root-fix1-preservation-end.json",
+  "host_audit": "task11-stream-root-fix1-end-host-audit.json",
+  "host_CPU_candidates": 0,
+  "host_unknown_entries": 67,
+  "initialreview_bytes": 13591,
+  "initialreview_sha256": "3ceb185937613bdcd801864a200e2590803b870290d4b7c022cfb06a2ba4a6a4",
+  "fixreview_bytes": 7947,
+  "fixreview_sha256": "bee1ef0c747cd9549e56c4ec9ee4c228b7e035ecb7e2eb0b5920e7570ace5f84",
+  "public_prefix_and_fix_exact": true,
+  "subagent_review": "/root/review_task11_stream, not human",
+  "finding_verdicts": {
+    "I1": "RESOLVED",
+    "I2": "RESOLVED",
+    "spec": "APPROVED",
+    "quality": "APPROVED"
+  },
+  "Minor_M1": "deferred finalwholebranch",
+  "phase": "serialCPUprerequisite CLOSED only",
+  "Task11_and_Goal": "OPEN active",
+  "fullmodel_CUDA_FSDP_actualfit": "UNVERIFIED",
+  "Task12_full02": "actualFAILED/spent retained",
+  "Task12_full03": "new exacttrustedGPUauthority pending",
+  "Azure": "defaultplan absent/actionnone",
+  "estimated_USD": 0,
+  "new_GPU_or_remote_or_protectedRG_or_publish": false
+}

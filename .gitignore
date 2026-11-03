@@ -1,0 +1,16 @@
+.venv/
+.venv-*/
+.tools/
+.cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+artifacts/
+.superpowers/
+.env
+.env.*
+!.env.example

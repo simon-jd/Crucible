@@ -1,0 +1,9 @@
+{
+  "time_utc": "2026-10-25T17:58:02.170315+00:00",
+  "scope": "ROOT metadata check found original interrupted pytest progressline trailing space; evidence bytes must remain immutable",
+  "default_check_exit": 3,
+  "default_check_stdout": "docs/evidence/raw/task11-ram-handoff-bridge.log:27: trailing whitespace.\n+rl/sync/tests/test_phase_bridge.py::test_two_real_cycles_adamw_bf16_reference_packed_receiver \n",
+  "path": "docs/evidence/raw/task11-ram-handoff-bridge.log",
+  "ruling": "exactone rawfile commandlocal core.whitespace=-blank-at-eol forcheckonly; other25files defaultwhitespace; no source/test rulesuppression or rawediting",
+  "cost_if_wrong": "cosmetic rawline tolerated; cannot conceal defaultsourcewhitespace violations"
+}

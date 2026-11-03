@@ -1,0 +1,40 @@
+....F..                                                                  [100%]
+=================================== FAILURES ===================================
+_____ test_size_bound_and_existing_blob_or_snapshot_are_never_overwritten ______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-model-tests/pytest-of-postedism/pytest-0/test_size_bound_and_existing_b0')
+http_bytes = ({'body': b'model-fixture', 'declared': 14, 'requests': 1}, 'http://127.0.0.1:35429/fixture')
+
+    def test_size_bound_and_existing_blob_or_snapshot_are_never_overwritten(tmp_path, http_bytes):
+        state, url = http_bytes
+        expected = item(state["body"])
+        state["declared"] += 1
+        with pytest.raises(ValueError, match="size"):
+            ensure_file(expected, tmp_path, download=True, test_url=url)
+        blob, pointer, _ = cache_paths(tmp_path, expected)
+        blob.write_bytes(b"existing")
+        with pytest.raises(ValueError, match="size"):
+            ensure_file(expected, tmp_path, download=True, test_url=url)
+        assert blob.read_bytes() == b"existing"
+        blob.unlink()
+        blob.write_bytes(state["body"])
+>       pointer.parent.mkdir(parents=True)
+
+serving/baseline/model_snapshot_test.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-model-tests/pytest-of-postedism/pytest-0/test_size_bound_and_existing_b0/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218')
+mode = 511, parents = True, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileExistsError: [Errno 17] File exists: '/home/postedism/Desktop/Crucible/.cache/task12-model-tests/pytest-of-postedism/pytest-0/test_size_bound_and_existing_b0/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218'
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1311: FileExistsError
+=========================== short test summary info ============================
+FAILED serving/baseline/model_snapshot_test.py::test_size_bound_and_existing_blob_or_snapshot_are_never_overwritten
+1 failed, 6 passed in 10.49s

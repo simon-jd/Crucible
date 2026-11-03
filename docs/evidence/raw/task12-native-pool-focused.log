@@ -1,0 +1,44 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 36 items
+
+serving/baseline/native_pool_test.py::test_pool_client_cache_evidence_and_growth_no_double_count PASSED [  2%]
+serving/baseline/native_pool_test.py::test_nonpool_exact_exclusion_hidden_sibling_and_hardlinks PASSED [  5%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[missing] PASSED [  8%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[replaced] PASSED [ 11%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[symlink] PASSED [ 13%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[work-replaced] PASSED [ 16%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[client-replaced] PASSED [ 19%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[leftover] PASSED [ 22%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[nested-symlink] PASSED [ 25%]
+serving/baseline/native_pool_test.py::test_pool_identity_and_handoff_fail_closed[output-replaced] PASSED [ 27%]
+serving/baseline/native_pool_test.py::test_pool_manifest_path_rejects_escape[root-relative] PASSED [ 30%]
+serving/baseline/native_pool_test.py::test_pool_manifest_path_rejects_escape[root-/tmp/escape] PASSED [ 33%]
+serving/baseline/native_pool_test.py::test_pool_rejects_output_overlap_and_client_hash PASSED [ 36%]
+serving/baseline/native_pool_test.py::test_pool_scan_errors_retry_only_whole_enoent[failure0-3] PASSED [ 38%]
+serving/baseline/native_pool_test.py::test_pool_scan_errors_retry_only_whole_enoent[failure1-1] PASSED [ 41%]
+serving/baseline/native_pool_test.py::test_pool_scan_transient_restarts_whole_count PASSED [ 44%]
+serving/baseline/native_pool_test.py::test_pool_independent_limits_include_client[combined] PASSED [ 47%]
+serving/baseline/native_pool_test.py::test_pool_independent_limits_include_client[cache] PASSED [ 50%]
+serving/baseline/native_pool_test.py::test_pool_independent_limits_include_client[pool] PASSED [ 52%]
+serving/baseline/native_pool_test.py::test_pool_independent_limits_include_client[canonical] PASSED [ 55%]
+serving/baseline/native_pool_test.py::test_pool_independent_limits_include_client[projection] PASSED [ 58%]
+serving/baseline/native_pool_test.py::test_pool_legacy_mode_no_scan_and_rss_still_enforced PASSED [ 61%]
+serving/baseline/native_pool_test.py::test_launch_pool_rejects_mismatch_before_side_effects[binding] PASSED [ 63%]
+serving/baseline/native_pool_test.py::test_launch_pool_rejects_mismatch_before_side_effects[client] PASSED [ 66%]
+serving/baseline/native_pool_test.py::test_launch_pool_rejects_mismatch_before_side_effects[environment] PASSED [ 69%]
+serving/baseline/native_pool_test.py::test_launch_pool_rejects_mismatch_before_side_effects[manifest] PASSED [ 72%]
+serving/baseline/native_pool_test.py::test_launch_pool_valid_binding_derives_work_without_creation PASSED [ 75%]
+serving/baseline/native_pool_test.py::test_launch_full_requires_complete_derived_pool_environment[None] PASSED [ 77%]
+serving/baseline/native_pool_test.py::test_launch_full_requires_complete_derived_pool_environment[missing] PASSED [ 80%]
+serving/baseline/native_pool_test.py::test_launch_full_requires_complete_derived_pool_environment[wrong] PASSED [ 83%]
+serving/baseline/native_pool_test.py::test_launch_full_requires_complete_derived_pool_environment[directory] PASSED [ 86%]
+serving/baseline/native_pool_test.py::test_output_credit_does_not_reserve_generated_output_twice PASSED [ 88%]
+serving/baseline/native_pool_test.py::test_output_credit_rejects_ineligible_evidence[over-budget] PASSED [ 91%]
+serving/baseline/native_pool_test.py::test_output_credit_rejects_ineligible_evidence[hardlink] PASSED [ 94%]
+serving/baseline/native_pool_test.py::test_output_credit_rejects_ineligible_evidence[symlink] PASSED [ 97%]
+serving/baseline/experiment_test.py::test_live_observer_scans_only_mutable_roots_and_stops_before_reserve PASSED [100%]
+
+============================== 36 passed in 0.10s ==============================

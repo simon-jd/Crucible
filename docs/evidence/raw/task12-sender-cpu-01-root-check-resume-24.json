@@ -1,0 +1,49 @@
+{
+  "time_utc": "2026-10-25T09:02:08.654810+00:00",
+  "task_commit": "a5b43bf23798fe8363a4a26a213f6b7ba1e0dde3",
+  "diagnostic_completed": true,
+  "original_replay_exit": 1,
+  "native_performance_accepted": false,
+  "records": 23,
+  "output_tokens": 1556,
+  "late": [
+    {
+      "index": 1,
+      "lag_ms": 6.790108999999575
+    },
+    {
+      "index": 2,
+      "lag_ms": 17.557942999999796
+    }
+  ],
+  "sample_count": 582,
+  "sampled_rss_max": 39669760,
+  "sample_sums_verified": true,
+  "sample_limit": "not a continuous peak guarantee",
+  "original_sources_artifacts_unchanged": 234,
+  "coordinator_files_unchanged": 100,
+  "cleanup": {
+    "child": {
+      "pid": 656904,
+      "starttime": 71623852,
+      "termination_requested": false,
+      "pre_cleanup_returncode": 1,
+      "returncode": 1,
+      "reaped": true,
+      "pid_absent": true
+    },
+    "fixture": {
+      "threads_alive": 0,
+      "connections": 12,
+      "listener_closed": true,
+      "port_listener_absent": true,
+      "errors": []
+    }
+  },
+  "review_package": {
+    "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/review-a468ccd..a5b43bf.diff",
+    "bytes": 235577,
+    "sha256": "7c22c26a9c3a9f5304671cbfc89bac913f02716e7a1eac03aec2f8cc9b730b0a"
+  },
+  "interpretation": "Delay at original index2 recurs without native/GPU; cause remains unlocalized. No source/threshold fix or GPU replay."
+}

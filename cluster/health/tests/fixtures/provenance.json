@@ -1,0 +1,33 @@
+{
+  "source": "https://github.com/NVIDIA/nccl-tests/issues/389",
+  "issue_updated_at": "2026-07-22T11:10:36Z",
+  "retrieved": "2026-10-23",
+  "sha256": "db6c22dc27af3a51bddaa140bf2c60a30c2d3d44c5d6bd3d9deec88281c3a626",
+  "kind": "verbatim upstream user-reported output; not Crucible observations",
+  "reported_version": "2.19.6",
+  "reported_build_commit": null,
+  "format_reference_tag": "v2.19.6",
+  "format_reference_commit": "a0b82b2260cf5152b9f8c061bbf7eaf0ba096432",
+  "configuration": "2 nodes, 8 B200 each; srun --mpi=pmix all_reduce_perf -b 512M -e 16G -f 2 -g 1; warmup=1 iters=20 validation=1; NCCL headers/library=23007",
+  "warning": "Reported binary build commit not supplied upstream; tag commit is a format reference, not a claim about that binary.",
+  "format_reference_sources": {
+    "src/common.cu": {
+      "url": "https://github.com/NVIDIA/nccl-tests/blob/a0b82b2260cf5152b9f8c061bbf7eaf0ba096432/src/common.cu",
+      "sha256": "76dda7bd8c316d4068859f463a18f4ea695df85daea0da8f1b27201068d3395a"
+    },
+    "src/alltoall.cu": {
+      "url": "https://github.com/NVIDIA/nccl-tests/blob/a0b82b2260cf5152b9f8c061bbf7eaf0ba096432/src/alltoall.cu",
+      "sha256": "00d54eb12bb1e67df773516f314cccfa579e1f6b036bc6e58f400a4e3ffb0595"
+    },
+    "src/util.cu": {
+      "url": "https://github.com/NVIDIA/nccl-tests/blob/a0b82b2260cf5152b9f8c061bbf7eaf0ba096432/src/util.cu",
+      "sha256": "62a37c65a9c3752c704b8774d6ad1651b22cc168586c99ccc743910fe84517f9"
+    },
+    "src/util.h": {
+      "url": "https://github.com/NVIDIA/nccl-tests/blob/a0b82b2260cf5152b9f8c061bbf7eaf0ba096432/src/util.h",
+      "sha256": "ac7db451af115e322b6d3ff6f616483ec3190a5e6bf80402e3f47caefb861409"
+    }
+  },
+  "nccl_headers_version": 23007,
+  "nccl_library_version": 23007
+}

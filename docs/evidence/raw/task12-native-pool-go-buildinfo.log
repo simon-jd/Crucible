@@ -1,0 +1,14 @@
+.tmp-task12-native-03-pool/replay: go1.27.3
+	path	crucible/serving/replay/cmd/replay
+	mod	crucible	v0.0.0-20261025110302-f037c7ac4c61+dirty	
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	-trimpath=true
+	build	CGO_ENABLED=1
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=f037c7ac4c61ab0b3a32b9ce4da0dc62756bff1a
+	build	vcs.time=2026-10-25T11:03:02Z
+	build	vcs.modified=true

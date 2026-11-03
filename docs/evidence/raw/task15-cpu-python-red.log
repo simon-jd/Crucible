@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+________________ ERROR collecting spec/tests/test_acceptance.py ________________
+ImportError while importing test module '/home/postedism/Desktop/Crucible/spec/tests/test_acceptance.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/tests/test_acceptance.py:5: in <module>
+    from spec.eval_acceptance import acceptance_length
+E   ModuleNotFoundError: No module named 'spec.eval_acceptance'
+=========================== short test summary info ============================
+ERROR spec/tests/test_acceptance.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.04s ===============================

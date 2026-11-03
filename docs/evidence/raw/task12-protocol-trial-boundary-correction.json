@@ -1,0 +1,23 @@
+{
+  "before_sha256": "cc0f13bdf3f40b2a2f66ac2fde6da0b3cd084ee090769c333f7c93f1c9be03e9",
+  "after_sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+  "change": "fixed idle/flush boundary after warmups and every attempted trial; before any model output",
+  "pinned_source": "SGLang 0c006b8809cd99e1f95926401a2823dd952641c8",
+  "reason": "disconnect abort is asynchronous; flush checks waiting/running/last/current/overlap before cache/pool reset",
+  "trial_boundary": {
+    "endpoint": "POST /flush_cache",
+    "deadline_seconds": 30,
+    "success_status": 200,
+    "retry_status": 400,
+    "placement": "after fixed warmups and every attempted calibration/evaluation trial",
+    "measurement": "outside selected-request interval",
+    "effect": "require scheduler idle, then reset cache and memory pools"
+  },
+  "cpu_evidence": [
+    "task12-trial-boundary-red.log",
+    "task12-trial-boundary-focused.log",
+    "task12-trial-boundary-integration.log",
+    "task12-trial-boundary-lint.log"
+  ],
+  "history": "Four new cases passed; existing full-controller fixture first lacked the new protocol field, then its corrected focused integration passed. No native run."
+}

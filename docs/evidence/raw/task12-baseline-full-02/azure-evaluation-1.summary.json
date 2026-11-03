@@ -1,0 +1,183 @@
+{
+  "identity": "azure-evaluation-1",
+  "trial": {
+    "pair": "2x-1",
+    "multiplier": 2
+  },
+  "protocol_sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "planned_rows": 132,
+  "requested_input_tokens": 129060,
+  "requested_output_tokens": 37017,
+  "status": "completed",
+  "metrics": {
+    "accepted": true,
+    "goodput": 0.14685015290761158,
+    "good": 11,
+    "planned": 132,
+    "failed": 100,
+    "undefined": 98,
+    "coalesced": 0,
+    "slo_sha256": "acdd1c368336bc89b18493b530656c4b3b6efbae32bb903573999ca11bf95a02",
+    "duration_seconds": 74.906289045,
+    "denominator": "first selected scheduled request through final completion"
+  },
+  "pid": 306442,
+  "returncode": 1,
+  "actual_records": 132,
+  "actual_output_tokens": 7897,
+  "failed_requests": 100,
+  "complete_request_failure_exit": true,
+  "effective_aborted": false,
+  "cleanup": {
+    "pid": 306442,
+    "returncode": 1,
+    "returncode_before_cleanup": 1,
+    "termination_requested": false,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "raw_sha256": "cefc4d2be77c07e3a6aad7f6db82c21f4e451d90fd0a2794d1d44667550deb5a",
+  "raw_bytes": 66055,
+  "stderr_sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9",
+  "stderr_bytes": 29,
+  "boundary": {
+    "accepted": true,
+    "attempts": [
+      {
+        "status": 400,
+        "started_seconds": 8.959323167800903e-07,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.04686537594534457
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.09693378792144358,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.25829284195788205
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.3083470920100808,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.35308875190094113
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.4031526369508356,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.4625584159512073
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.5127436709590256,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.5703110320027918
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.6203746709506959,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.6801204580115154
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.7302047859411687,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.7954690279439092
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.8457947169663385,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.8982556259725243
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.9484143760055304,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.0022499120095745
+      },
+      {
+        "status": 400,
+        "started_seconds": 1.05233422992751,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.1075273549649864
+      },
+      {
+        "status": 400,
+        "started_seconds": 1.1575977319153026,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.2103268390055746
+      },
+      {
+        "status": 400,
+        "started_seconds": 1.2605196469230577,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.3138360739685595
+      },
+      {
+        "status": 200,
+        "started_seconds": 1.363918418996036,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.4126816779607907
+      }
+    ],
+    "deadline_seconds": 30,
+    "elapsed_seconds": 1.4126842949772254
+  }
+}

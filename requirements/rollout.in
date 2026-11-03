@@ -1,0 +1,5 @@
+vllm==0.10.2
+transformers==4.55.4
+numpy==2.2.6
+torch==2.8.0
+triton==3.4.0

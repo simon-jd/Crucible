@@ -1,0 +1,43 @@
+{
+  "fix_base": "5725dd4f58d9120355489686321e724e587e3488",
+  "main_fix_commit": "fb2cdad06e1e0dcc50d343e70a95279d1cd2f66f",
+  "canonical_argv": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/resource_preflight.py",
+    "--planned-project-bytes",
+    "690000000",
+    "--download-bytes",
+    "0",
+    "--checkpoints",
+    "0",
+    "--service-memory-bytes",
+    "0"
+  ],
+  "canonical_command_scoped_unset": [
+    "XDG_CACHE_HOME",
+    "HF_HOME",
+    "HF_HUB_CACHE",
+    "HUGGINGFACE_HUB_CACHE",
+    "TRANSFORMERS_CACHE"
+  ],
+  "canonical_returncode": 0,
+  "canonical": {
+    "ok": true,
+    "units": "decimal GB = 1,000,000,000 bytes",
+    "project_bytes": 13287518765,
+    "free_bytes": 269978312704,
+    "model_cache": "/home/postedism/.cache/huggingface",
+    "errors": []
+  },
+  "remaining_after690M_bytes": 22481235,
+  "final_maintained_sha256_unchanged": true,
+  "git_bytes_after_round1_main_commit": 16845892,
+  "git_growth_round1_main_commit": 46498,
+  "cumulative_task_conservative_preclosure_bytes": 734379,
+  "task_allowance_bytes": 10000000,
+  "all_owned_round1_basetemps_absent": true,
+  "verification": "56passed/no skips;3realreports68literals;Ruffcheck/format passed; maintained diff--check passed. Whole Task16 open; no native/GPU/network/install/download/services/checkpoints/push.",
+  "preserved_failure": "git diff --cached --check exit2 on original pytest RED whitespace-only blank lines in task16-round1-i1-red.log. Kept exact raw output unchanged; maintained-source diff --check exit0. Explicit-path commit scope independently checked after commit.",
+  "notes": "Receipt, second exact-path commit and ignored-report append fit previously counted200KB contingency; point-in-time accounting only."
+}

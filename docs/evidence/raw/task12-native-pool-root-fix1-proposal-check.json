@@ -1,0 +1,67 @@
+{
+  "observed_at_utc": "2026-10-25T12:48:38.979016+00:00",
+  "scope": "root independent current hash and declared proposal delta check; CPU metadata only; no launch",
+  "initial_check_attempts": "Two KeyError stops before writing: derived_native_environment and inherited_identity_environment live only in freeze, not proposal; corrected to explicit common-field comparison plus host/freeze environment binding",
+  "checked": {
+    "sources": 183,
+    "artifacts": 207,
+    "executables": 4
+  },
+  "sources_unchanged": 179,
+  "changed_sources": {
+    "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py": {
+      "old": "53ca02d0854f3240af61f8f13cd804c665536631e8581f71b1d0066c956ed196",
+      "new": "5d36897a9a6fedd53664cf38b258d6aa7a455a4ad9433a857e81fad1ccc3f596"
+    },
+    "/home/postedism/Desktop/Crucible/serving/baseline/README.md": {
+      "old": "8338759e38fa1ef0dabaa5db8d0a8cb39534a36f81ac2a69198845f8fc8f8b45",
+      "new": "8eb49fabd7c644c32d4081d90c33ee14e5d4e4104f19215e2be911d801276cc6"
+    },
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py": {
+      "old": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90",
+      "new": "0f02c526c85904bfaa9b01d4255a992b505ea4d7acfce0aad6dd198bd0c5496d"
+    },
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_pool_test.py": {
+      "old": "30a6254e3cb9540562ead6dc911f84069db96a35ce6d02dbf8d42ce7ce1c036b",
+      "new": "057b2bcf748ba22c7ae34a4b47f394e8c7e04b60880c26eae455931ddb3e0556"
+    }
+  },
+  "old_artifacts_unchanged": 183,
+  "proposal_changed_keys": [
+    "command_environment_unset",
+    "declared_delta",
+    "fix_base",
+    "focused_evidence",
+    "historical_provenance",
+    "launcher",
+    "launcher_command",
+    "preflight",
+    "preparation",
+    "review_status",
+    "source_freeze"
+  ],
+  "all_other_proposal_keys_equal": true,
+  "proposal_freeze_common_fields_equal": [
+    "actual_client_build",
+    "base",
+    "command",
+    "command_environment_unset",
+    "command_scoped_environment",
+    "declared_delta",
+    "fix_base",
+    "launcher",
+    "launcher_command",
+    "native_pool",
+    "working_directory"
+  ],
+  "proposal_sha256": "c90c71457ea85443b6bb290c72210ccdcc82793c71359620ac796ad7c637b692",
+  "freeze_sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a",
+  "native_command_protocol_caps_resource_plan_unchanged": true,
+  "only_environment_delta": "explicit RAYON_NUM_THREADS unset to preserve default",
+  "old_proposal_freeze_preserved": true,
+  "host_receipt_verified": true,
+  "scratch_absent": true,
+  "native_output_absent": true,
+  "native_authorized": false,
+  "model_weights_read": false
+}

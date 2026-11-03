@@ -1,0 +1,63 @@
+{
+  "time_utc": "2026-10-25T18:11:15.501995+00:00",
+  "scope": "fix1tests-first/staticonly; currentproduction unchanged; noCPUyet",
+  "source_sha256": {
+    "rl/sync/tests/test_phase_bridge.py": "34319f9238f70512c8678d1642ef8b977c40a595db9883025af1acea5594288d",
+    "rl/sync/tests/ram_worker.py": "76c462d9a211bb2ee47af76e32f5362857a95e29b0a2634f3d9e7577e25db235",
+    "scripts/test_ram_handoff_cpu.py": "e32d3d975b99a220f364ea1e9c43733640bddcc6f430a41a0e4af3cf6ae737db"
+  },
+  "AST_sha256": {
+    "rl/sync/tests/test_phase_bridge.py": "29a27c53c1cb5200d64062514dcab3ac41e77da0fa30fd999c991bd1fafcc0b7",
+    "rl/sync/tests/ram_worker.py": "13b476873a7ff07faf0035ff25fe0f943b3c2d75f5430f25909eb24670f14f07",
+    "scripts/test_ram_handoff_cpu.py": "1f9509b8e29f70b718079aa7947bc9b6ae5627b061e8e9d66f9ed63de894098e"
+  },
+  "production_unchanged": true,
+  "original40949reportprefix_preserved": true,
+  "phase_retained_including_git": 1375176,
+  "remaining": {
+    "CPU6files": 294912,
+    "static4files": 32768,
+    "report_to45000": 3027,
+    "fixdiff": 60000,
+    "fixreview_and_public": 32000,
+    "source_docs_growth": 15000,
+    "rootmetadata_git_growth": 100000
+  },
+  "forecast": 1912883,
+  "cap": 2000000,
+  "sample": {
+    "project_bytes": 13317301173,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13307140942,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13997140942,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus2M": 13999140942,
+  "newpaths_absent": [
+    "docs/evidence/raw/task11-bridge-fix1-red-format.log",
+    "docs/evidence/raw/task11-bridge-fix1-red-lint.log",
+    "docs/evidence/raw/task11-bridge-fix1-green-format.log",
+    "docs/evidence/raw/task11-bridge-fix1-green-lint.log",
+    ".cache/task11-ram-handoff",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-red.log",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-red.json",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-red-supervisor.log",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-green.log",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-green.json",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-green-supervisor.log"
+  ],
+  "static_once_format_then_check": true,
+  "static_limits": {
+    "seconds": 20,
+    "AS": 1000000000,
+    "CORE": 0,
+    "FSIZE": 8192,
+    "RAYON": 1
+  }
+}

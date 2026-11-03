@@ -1,0 +1,47 @@
+[
+  {
+    "synthetic_fixture": true,
+    "command": [
+      ".venv/bin/python",
+      "-B",
+      "-m",
+      "spec.eval_acceptance",
+      "--plan",
+      "docs/evidence/raw/task15-cpu-synthetic-plan.json",
+      "--outcomes",
+      "docs/evidence/raw/task15-cpu-synthetic-valid-input.json"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "synthetic_fixture": true,
+    "command": [
+      ".venv/bin/python",
+      "-B",
+      "-m",
+      "spec.eval_acceptance",
+      "--plan",
+      "docs/evidence/raw/task15-cpu-synthetic-plan.json",
+      "--outcomes",
+      "docs/evidence/raw/task15-cpu-synthetic-incomplete-input.json"
+    ],
+    "exit_code": 1,
+    "stderr": ""
+  },
+  {
+    "synthetic_fixture": true,
+    "command": [
+      ".venv/bin/python",
+      "-B",
+      "-m",
+      "spec.eval_acceptance",
+      "--plan",
+      "docs/evidence/raw/task15-cpu-synthetic-plan.json",
+      "--outcomes",
+      "docs/evidence/raw/task15-cpu-synthetic-rejection-input.json"
+    ],
+    "exit_code": 2,
+    "stderr": ""
+  }
+]

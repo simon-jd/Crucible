@@ -1,0 +1,24 @@
+{
+  "status": "local metadata/preparation preflight, not execution approval",
+  "pool_sample": {
+    "project_bytes": 13313097417,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13302937186,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13992937186,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "host_shared_cache_snapshot": 23815435170,
+  "host_shared_snapshot_source": "task12-native-pool-host-receipt.json",
+  "free_bytes": 265395200000,
+  "output_absent": true,
+  "guard_log_absent": true,
+  "launch_receipt_absent": true,
+  "port31012": "not newly bound in this preparation; required fresh root/prelaunch check",
+  "loan_repaid": false
+}

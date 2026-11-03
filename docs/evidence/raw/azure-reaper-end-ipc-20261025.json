@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-10-25T19:38:34.654094+00:00",
+  "scope": "project-only read-only end check; no --apply, no protected RG query/mutation",
+  "command": [
+    "scripts/azure_reaper.sh",
+    "--plan"
+  ],
+  "returncode": 0,
+  "stdout": "{\"event\": \"scope\", \"subscription\": \"<azure-subscription-id>\", \"resource_group\": \"rg-crucible-lab\", \"mode\": \"plan\"}\n{\"event\": \"absent\", \"resource_group\": \"rg-crucible-lab\", \"action\": \"none\"}\n",
+  "stderr": ""
+}

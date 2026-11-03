@@ -1,0 +1,19 @@
+[
+  {
+    "argv": [
+      "kubectl",
+      "-n",
+      "crucible-baseline",
+      "get",
+      "pods",
+      "-l",
+      "component=gpu",
+      "-o",
+      "json"
+    ],
+    "started_utc": "2026-10-24T02:17:50.776167+00:00",
+    "returncode": 127,
+    "stdout": "",
+    "stderr": "FileNotFoundError: [Errno 2] No such file or directory: 'kubectl'"
+  }
+]

@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "selection_manifest_sha256": "0708a4f414e00f980afa6ba7174bf55f8af0ce89dfab4120a1c296b3322b2a4e",
+  "seed": 17,
+  "traces": [
+    {
+      "name": "azure",
+      "format": "azure",
+      "calibration": {
+        "file": "serving/baseline/traces/azure-calibration.csv",
+        "sha256": "c93f0a566dbc896516e10fc046371addc55d320e91298cddf0ea3762e78ad2c1",
+        "planned_rows": 59,
+        "nominal_start": "1700158546.6805900",
+        "nominal_end_exclusive": "1700158576.6805900",
+        "leading_idle_seconds": "0E-7",
+        "trailing_idle_seconds": "0.3139220"
+      },
+      "evaluation": {
+        "file": "serving/baseline/traces/azure-evaluation.csv",
+        "sha256": "df1ebe07e8dd403ef9d8988c7608b90f9eb0fe63d99c5a9732a54fccbc901431",
+        "planned_rows": 132,
+        "nominal_start": "1700158576.6805900",
+        "nominal_end_exclusive": "1700158606.6805900",
+        "leading_idle_seconds": "0.1814990",
+        "trailing_idle_seconds": "0.0064800"
+      }
+    },
+    {
+      "name": "burst",
+      "format": "burstgpt",
+      "calibration": {
+        "file": "serving/baseline/traces/burst-calibration.csv",
+        "sha256": "28c6162d5a4e894a60e92c6626fc04534f02e0b1e8472dff88e9e107f3c89364",
+        "planned_rows": 23,
+        "nominal_start": "553788",
+        "nominal_end_exclusive": "553848",
+        "leading_idle_seconds": "0",
+        "trailing_idle_seconds": "1"
+      },
+      "evaluation": {
+        "file": "serving/baseline/traces/burst-evaluation.csv",
+        "sha256": "aa3433a7c2263689c99c42f1e8888a246ccb7c3321ff93dccb51c272a627dda4",
+        "planned_rows": 23,
+        "nominal_start": "553848",
+        "nominal_end_exclusive": "553908",
+        "leading_idle_seconds": "0",
+        "trailing_idle_seconds": "7"
+      }
+    }
+  ],
+  "trial_order": [
+    {
+      "pair": "2x-1",
+      "multiplier": 1
+    },
+    {
+      "pair": "2x-1",
+      "multiplier": 2
+    },
+    {
+      "pair": "2x-2",
+      "multiplier": 2
+    },
+    {
+      "pair": "2x-2",
+      "multiplier": 1
+    },
+    {
+      "pair": "2x-3",
+      "multiplier": 1
+    },
+    {
+      "pair": "2x-3",
+      "multiplier": 2
+    },
+    {
+      "pair": "4x-1",
+      "multiplier": 4
+    },
+    {
+      "pair": "4x-1",
+      "multiplier": 1
+    },
+    {
+      "pair": "4x-2",
+      "multiplier": 1
+    },
+    {
+      "pair": "4x-2",
+      "multiplier": 4
+    },
+    {
+      "pair": "4x-3",
+      "multiplier": 4
+    },
+    {
+      "pair": "4x-3",
+      "multiplier": 1
+    }
+  ],
+  "calibration_rounds": 3,
+  "quantile": "pooled nearest-rank p99; successful >=2 actual output tokens and finite defined timings only",
+  "calibration_acceptance": "all3 sender-valid/non-aborted; no retry-to-pass; preserve failure/undefined/coalescing counts",
+  "evaluation": "held-out rows; every raw result bound to frozen SLO SHA; invalid pair member prevents accepted paired comparison; per-run/paired median and range",
+  "denominator": "first selected scheduled request through final completion; not whole-window throughput",
+  "sender_rule": "more than1% missing/nonfinite send or lag strictly greater than5ms invalidates all accepted performance",
+  "client_max_inflight": 192,
+  "request_deadline_seconds": 60,
+  "stop_new_trials_seconds": 11700,
+  "guard_max_seconds": 14400,
+  "warmup": [
+    {
+      "input_tokens": 128,
+      "output_tokens": 16
+    },
+    {
+      "input_tokens": 1024,
+      "output_tokens": 32
+    },
+    {
+      "input_tokens": 2048,
+      "output_tokens": 32
+    }
+  ],
+  "server_args": [
+    "--dtype",
+    "bfloat16",
+    "--context-length",
+    "4096",
+    "--mem-fraction-static",
+    "0.80",
+    "--max-running-requests",
+    "8",
+    "--disable-cuda-graph",
+    "--disable-radix-cache",
+    "--attention-backend",
+    "triton",
+    "--sampling-backend",
+    "pytorch",
+    "--load-format",
+    "safetensors",
+    "--random-seed",
+    "17"
+  ],
+  "output_filtering": false,
+  "zero_output_selected_rows": 0,
+  "source_errors_represented_in_measured_subset": false,
+  "trial_boundary": {
+    "endpoint": "POST /flush_cache",
+    "deadline_seconds": 30,
+    "success_status": 200,
+    "retry_status": 400,
+    "placement": "after fixed warmups and every attempted calibration/evaluation trial",
+    "measurement": "outside selected-request interval",
+    "effect": "require scheduler idle, then reset cache and memory pools"
+  }
+}

@@ -1,0 +1,87 @@
+S102 Use of `exec` detected
+  --> docs/evidence/raw/task15-cpu-round1-contract-test.py:27:5
+   |
+25 |     namespace = {"record": {"scan_errors": []}}
+26 |     # Compile the actual source node, never copy scan logic or execute imports/launch.
+27 |     exec(compile(ast.Module(body=[function], type_ignores=[]), str(source), "exec"), namespace)
+   |     ^^^^
+28 |     return namespace["scan"], namespace["record"]["scan_errors"]
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> docs/evidence/raw/task15-cpu-round1-go-monitor.py:2:1
+   |
+ 1 |   """Unexecuted round1 candidate; no future launch approval. Sampling is not a quota."""
+ 2 | / import hashlib
+ 3 | | import json
+ 4 | | import os
+ 5 | | from pathlib import Path
+ 6 | | import resource
+ 7 | | import signal
+ 8 | | import subprocess
+ 9 | | import sys
+10 | | import time
+11 | |
+12 | | from scripts.resource_preflight import project_bytes
+   | |____________________________________________________^
+13 |
+14 |   ROOT = Path.cwd().resolve()
+   |
+help: Organize imports
+   |
+4  | import os
+   - from pathlib import Path
+5  | import resource
+--------------------------------------------------------------------------------
+9  | import time
+10 + from pathlib import Path
+11 |
+   |
+
+PLW1509 `preexec_fn` argument is unsafe when using threads
+   --> docs/evidence/raw/task15-cpu-round1-go-monitor.py:115:58
+    |
+113 |     with PREFIX.with_suffix('.log').open('wb') as log:
+114 |         child = subprocess.Popen(COMMAND, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT,
+115 |                                  start_new_session=True, preexec_fn=bounds)
+    |                                                          ^^^^^^^^^^^^^^^^^
+116 |         record['pid'] = child.pid
+117 |         # Popen has not polled/reaped this leader. If identity cannot be read,
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> docs/evidence/raw/task15-cpu-round1-go-monitor.py:150:8
+    |
+148 |                 raise RuntimeError('leader exited with live descendants')
+149 |             time.sleep(0.25)
+150 | except BaseException as exc:
+    |        ^^^^^^^^^^^^^
+151 |     abort = f'{type(exc).__name__}: {exc}'
+152 |     record['abort'] = abort
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> docs/evidence/raw/task15-cpu-round1-go-monitor.py:180:16
+    |
+178 |             record['exit_code'] = child.wait(timeout=1)
+179 |             record['terminal_group_proved_before_reap'] = True
+180 |         except BaseException as exc:
+    |                ^^^^^^^^^^^^^
+181 |             record['quarantined'] = True
+182 |             record['cleanup_error'] = f'{type(exc).__name__}: {exc}'
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> docs/evidence/raw/task15-cpu-round1-go-monitor.py:186:12
+    |
+184 |     try:
+185 |         record['after'] = disk()
+186 |     except BaseException as exc:
+    |            ^^^^^^^^^^^^^
+187 |         record['final_account_error'] = f'{type(exc).__name__}: {exc}'
+188 |     persist()
+    |
+
+Found 6 errors.
+[*] 1 fixable with `--fix`.
+2 files already formatted

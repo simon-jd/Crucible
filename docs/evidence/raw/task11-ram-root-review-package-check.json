@@ -1,0 +1,23 @@
+{
+  "base": "03a33cc25f50cf5f85a3a676aed6ab8b781f9a5c",
+  "head": "d0e742031e3de2a1c2516d39b4fc96ca3a042b57",
+  "exact_paths_verified": 26,
+  "committed_and_working_hashes_match": true,
+  "index_empty": true,
+  "phase_retained_before_packages": 698751,
+  "packages": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-review-helper.diff",
+      "bytes": 165130,
+      "sha256": "b4e6bb954a9f4ccd2fd7127727021d9f252e6c900cc1fb9e2445e42cd3448a21"
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-review-full.diff",
+      "bytes": 186067,
+      "sha256": "97064c65458d66d1ed288af84329800fc232b581ecbe62ae056580d7b37116b0"
+    }
+  ],
+  "phase_after_packages": 1049948,
+  "review_reserve": 50000,
+  "phase_cap": 2000000
+}

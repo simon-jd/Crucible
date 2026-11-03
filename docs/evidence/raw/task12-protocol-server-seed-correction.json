@@ -1,0 +1,13 @@
+{
+  "live_acquisition_handle": 17692,
+  "all_105_unchanged": true,
+  "edited_inputs_outside_acquisition_freeze": [
+    "/home/postedism/Desktop/Crucible/serving/baseline/protocol.json",
+    "/home/postedism/Desktop/Crucible/serving/baseline/README.md"
+  ],
+  "protocol_before_sha256": "305b1438297486ad10028dbb3e73639930a67684e80c774ca4e809b503953419",
+  "protocol_after_sha256": "cc0f13bdf3f40b2a2f66ac2fde6da0b3cd084ee090769c333f7c93f1c9be03e9",
+  "change": "Explicit pinned SGLang server seed17; client replay seed17 unchanged",
+  "before_any_model_inference": true,
+  "new_test_not_needed": "root-approved configuration correction"
+}

@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 1 item
+
+tests/test_accuracy.py F                                                 [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_accuracy_delta_reported _________________________
+
+    def test_accuracy_delta_reported():
+>       from serving.eval.accuracy import report
+E       ModuleNotFoundError: No module named 'serving.eval.accuracy'
+
+tests/test_accuracy.py:57: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_accuracy.py::test_accuracy_delta_reported - ModuleNotFoundE...
+============================== 1 failed in 0.03s ===============================

@@ -1,0 +1,21 @@
+{
+  "scope": "host permission surface; exact CPU native controller/child identities only",
+  "known_host_PID_exists": {
+    "1176199": false,
+    "1176252": false
+  },
+  "expected_starttimes": {
+    "1176199": 72318317,
+    "1176252": 72318467
+  },
+  "audit_python_PID": 1210046,
+  "port31013_bind_then_closed": true,
+  "new_loan_absent": true,
+  "sandbox_compiler_scope": "original five monitor terminal_group_proved_before_reap and successful exec terminal receipts; numeric namespace PIDs not reinterpreted as host PIDs",
+  "supersedes_cleanup_scope_in": [
+    "task12-wait-root-result-check.json",
+    "task12-wait-root-host-audit-attempt.json"
+  ],
+  "new_GPU_or_container_or_service_started": false,
+  "signals_sent": []
+}

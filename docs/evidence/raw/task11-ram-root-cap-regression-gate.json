@@ -1,0 +1,190 @@
+{
+  "time_utc": "2026-10-25T14:00:29.481116+00:00",
+  "scope": "only previouslyfailed test_cap_and_snapshot_ownership once; fixtureguardorder repaired, productionunchanged; prior28successesnotrepeated",
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "f81c85271d6cf45892378ff1aa861badec429bb5478e92729d07ae8e2ebf6961",
+    "rl/learner/train.py": "9a2fdd334245475dbed2e390d7e035f27201925c18428e5e4b5ee664a95b74a6",
+    "rl/learner/tests/test_state_handoff.py": "d822cdfbdc7221365aa5cd196a746a834082d2fb91b7655b3e73989efde0c59a",
+    "rl/learner/tests/handoff_worker.py": "1477e7cc02c181c7637b07f4ae5f1044bc35851c7b055516458d1a9b78d5bb0a",
+    "scripts/test_ram_handoff_cpu.py": "246824ec69c3adbcee192a2cb2050e197e281b2bfa5a726b7d1527616cacbe00",
+    "rl/learner/README.md": "6c261d1d0fe325281863ced3f2b3548c806117e006645d4c76559139a6ca99bb"
+  },
+  "retained_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 264963
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-brief.md",
+      "bytes": 13837
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-report.md",
+      "bytes": 62364
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 84550
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 19195
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-28.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-28.json",
+      "bytes": 1119
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-compatibility-supervisor.log",
+      "bytes": 154
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-compatibility-v2-supervisor.log",
+      "bytes": 157
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-compatibility-v2.json",
+      "bytes": 7493
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-compatibility-v2.log",
+      "bytes": 473
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-compatibility.json",
+      "bytes": 5281
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-compatibility.log",
+      "bytes": 1198
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-focused-supervisor.log",
+      "bytes": 149
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-focused.json",
+      "bytes": 11566
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-focused.log",
+      "bytes": 7150
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-format-v2.log",
+      "bytes": 23
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-format-v3.log",
+      "bytes": 23
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-format-v4.log",
+      "bytes": 42
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-format.log",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-lint-v2.log",
+      "bytes": 19
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-lint-v3.log",
+      "bytes": 19
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-lint-v4.log",
+      "bytes": 19
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-lint.log",
+      "bytes": 8744
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-compatibility-gate.json",
+      "bytes": 5559
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-compatibility-v2-gate.json",
+      "bytes": 4512
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-fcntl-failure-check.json",
+      "bytes": 3873
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-focused-gate.json",
+      "bytes": 4987
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-focused-result-check.json",
+      "bytes": 8935
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-source-gate.json",
+      "bytes": 3685
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-state-static-context.json",
+      "bytes": 2501
+    },
+    {
+      "path": "docs/evidence/rl-state-handoff.md",
+      "bytes": 3770
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 14207
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 45393
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 8411
+    },
+    {
+      "path": "rl/learner/tests/test_state_handoff.py",
+      "bytes": 17624
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 19830
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 12818
+    }
+  ],
+  "retained_bytes": 646107,
+  "next_three_file_caps": 786432,
+  "growth_reserve": 40000,
+  "retained_projected": 1472539,
+  "sample": {
+    "project_bytes": 13314984904,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304824673,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994824673,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "extra3M_projection": 13997824673,
+  "execution": "exact report cap-regression command once;120+5/emptyCUDA/offlineHF/2GBsampledinclanonymous/scratch1M/fsize262144/core0; stopfailure",
+  "GPU_authorized": false
+}

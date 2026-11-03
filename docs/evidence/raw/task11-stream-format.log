@@ -1,0 +1,16 @@
+{"command": [".venv/bin/ruff", "format", "--no-cache", "rl/learner/handoff_stream.py", "rl/learner/handoff_protocol.py", "rl/learner/state_handoff.py", "rl/learner/train.py", "rl/learner/tests/test_stream_handoff.py", "rl/learner/tests/handoff_worker.py", "scripts/test_ram_handoff_cpu.py"]}
+
+memory allocation of 1520 bytes failed
+errornote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+: Ruff crashed. If you could open an issue at:
+
+    https://github.com/astral-sh/ruff/issues/new?title=%5BPanic%5D
+
+...quoting the executed command, along with the relevant file contents and `pyproject.toml` settings, we'd be very appreciative!
+
+
+thread 'main' (4) panicked at /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rayon-core-1.13.0/src/registry.rs:171:10:
+The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+exit_code=-6

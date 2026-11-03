@@ -1,0 +1,137 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+________ test_canonical_scan_restarts_whole_walk_only_three_times[1-2] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/rescan-red/test_canonical_scan_restarts_w0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c165713c7a0>
+failures = 1, expected_calls = 2
+
+    @pytest.mark.parametrize("failures,expected_calls", [(1, 2), (2, 3), (3, 3)])
+    def test_canonical_scan_restarts_whole_walk_only_three_times(tmp_path, monkeypatch, failures, expected_calls):
+        from serving.baseline import model_snapshot as model
+    
+        calls, events = [], []
+    
+        def unstable(root):
+            calls.append(root)
+            if len(calls) <= failures:
+                raise FileNotFoundError("transient directory disappeared")
+            return 123
+    
+        monkeypatch.setattr(model, "project_bytes", unstable)
+        if failures == 3:
+            with pytest.raises(FileNotFoundError):
+                model.canonical_bytes(tmp_path, events)
+        else:
+>           assert model.canonical_bytes(tmp_path, events) == 123
+                   ^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'serving.baseline.model_snapshot' has no attribute 'canonical_bytes'
+
+serving/baseline/model_snapshot_test.py:319: AttributeError
+________ test_canonical_scan_restarts_whole_walk_only_three_times[2-3] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/rescan-red/test_canonical_scan_restarts_w1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c1656fe6fc0>
+failures = 2, expected_calls = 3
+
+    @pytest.mark.parametrize("failures,expected_calls", [(1, 2), (2, 3), (3, 3)])
+    def test_canonical_scan_restarts_whole_walk_only_three_times(tmp_path, monkeypatch, failures, expected_calls):
+        from serving.baseline import model_snapshot as model
+    
+        calls, events = [], []
+    
+        def unstable(root):
+            calls.append(root)
+            if len(calls) <= failures:
+                raise FileNotFoundError("transient directory disappeared")
+            return 123
+    
+        monkeypatch.setattr(model, "project_bytes", unstable)
+        if failures == 3:
+            with pytest.raises(FileNotFoundError):
+                model.canonical_bytes(tmp_path, events)
+        else:
+>           assert model.canonical_bytes(tmp_path, events) == 123
+                   ^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'serving.baseline.model_snapshot' has no attribute 'canonical_bytes'
+
+serving/baseline/model_snapshot_test.py:319: AttributeError
+________ test_canonical_scan_restarts_whole_walk_only_three_times[3-3] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/rescan-red/test_canonical_scan_restarts_w2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c1656fe7f20>
+failures = 3, expected_calls = 3
+
+    @pytest.mark.parametrize("failures,expected_calls", [(1, 2), (2, 3), (3, 3)])
+    def test_canonical_scan_restarts_whole_walk_only_three_times(tmp_path, monkeypatch, failures, expected_calls):
+        from serving.baseline import model_snapshot as model
+    
+        calls, events = [], []
+    
+        def unstable(root):
+            calls.append(root)
+            if len(calls) <= failures:
+                raise FileNotFoundError("transient directory disappeared")
+            return 123
+    
+        monkeypatch.setattr(model, "project_bytes", unstable)
+        if failures == 3:
+            with pytest.raises(FileNotFoundError):
+>               model.canonical_bytes(tmp_path, events)
+                ^^^^^^^^^^^^^^^^^^^^^
+E               AttributeError: module 'serving.baseline.model_snapshot' has no attribute 'canonical_bytes'
+
+serving/baseline/model_snapshot_test.py:317: AttributeError
+__________ test_canonical_scan_does_not_swallow_other_errors[error0] ___________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/rescan-red/test_canonical_scan_does_not_s0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c1656fe5370>
+error = PermissionError('denied')
+
+    @pytest.mark.parametrize("error", [PermissionError("denied"), OSError("other")])
+    def test_canonical_scan_does_not_swallow_other_errors(tmp_path, monkeypatch, error):
+        from serving.baseline import model_snapshot as model
+    
+        calls = []
+    
+        def unreadable(root):
+            calls.append(root)
+            raise error
+    
+        monkeypatch.setattr(model, "project_bytes", unreadable)
+        with pytest.raises(type(error), match=str(error)):
+>           model.canonical_bytes(tmp_path)
+            ^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'serving.baseline.model_snapshot' has no attribute 'canonical_bytes'
+
+serving/baseline/model_snapshot_test.py:336: AttributeError
+__________ test_canonical_scan_does_not_swallow_other_errors[error1] ___________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/rescan-red/test_canonical_scan_does_not_s1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c1656fe5a00>
+error = OSError('other')
+
+    @pytest.mark.parametrize("error", [PermissionError("denied"), OSError("other")])
+    def test_canonical_scan_does_not_swallow_other_errors(tmp_path, monkeypatch, error):
+        from serving.baseline import model_snapshot as model
+    
+        calls = []
+    
+        def unreadable(root):
+            calls.append(root)
+            raise error
+    
+        monkeypatch.setattr(model, "project_bytes", unreadable)
+        with pytest.raises(type(error), match=str(error)):
+>           model.canonical_bytes(tmp_path)
+            ^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'serving.baseline.model_snapshot' has no attribute 'canonical_bytes'
+
+serving/baseline/model_snapshot_test.py:336: AttributeError
+=========================== short test summary info ============================
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_scan_restarts_whole_walk_only_three_times[1-2]
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_scan_restarts_whole_walk_only_three_times[2-3]
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_scan_restarts_whole_walk_only_three_times[3-3]
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_scan_does_not_swallow_other_errors[error0]
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_scan_does_not_swallow_other_errors[error1]
+5 failed, 12 deselected in 0.07s

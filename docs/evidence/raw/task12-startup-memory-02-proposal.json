@@ -1,0 +1,139 @@
+{
+  "base": "cbe766cda35f3715119069e3a5d53b09aeab754a",
+  "status": "proposed-not-authorized-or-launched",
+  "command": [
+    "scripts/with_gpu.sh",
+    "timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=30s",
+    "180s",
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "serving.baseline.startup_memory",
+    "--lock",
+    "serving/baseline/runtime-lock.json",
+    "--overlay",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+    "--cache-audit",
+    "serving/baseline/cache-audit.json",
+    "--protocol",
+    "serving/baseline/protocol.json",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--model-manifest",
+    "docs/evidence/raw/task12-model-acquisition-02.json",
+    "--token-ids",
+    "docs/evidence/raw/task12-model-token-allowlist.json",
+    "--output",
+    "/home/postedism/Desktop/Crucible/docs/evidence/raw/task12-startup-memory-02",
+    "--port",
+    "31012"
+  ],
+  "command_scoped_environment": {
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp",
+    "PATH": "/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/codex-path:/home/postedism/.local/bin:/home/postedism/.codex/tmp/arg0-linux/codex-arg0Mv1NLj:/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/codex-path:/usr/local/cuda-13.2/bin:/home/postedism/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/postedism/.local/share/JetBrains/Toolbox/scripts",
+    "PYTHONNOUSERSITE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TORCHINDUCTOR_COMPILE_THREADS": "1"
+  },
+  "command_environment_unset": [
+    "TRANSFORMERS_CACHE",
+    "PYTHONPATH"
+  ],
+  "guard_log": "docs/evidence/raw/task12-startup-memory-02-guard.log",
+  "purpose": "one no-generation startup attribution; unchanged BF16 model/context/protocol; not baseline acceptance",
+  "readiness": {
+    "method": "bounded stdout pipe exact log marker, including split reads",
+    "marker": "The server is fired up and ready to roll!",
+    "source": ".cache/task12-baseline/overlay/sglang/srt/entrypoints/http_server.py",
+    "source_sha256": "00733d30128f53d9f297db060e4314f7b1fb2d446a9823b1685626a058f7cb04",
+    "lines": "1558-1566",
+    "http_requests_sent": 0,
+    "correction": "pinned /health generates one token; initial CPU draft removed before launch"
+  },
+  "only_server_argument_addition": [
+    "--skip-server-warmup"
+  ],
+  "resource_plan": {
+    "project_cap": 14000000000,
+    "additional_project_reserve": 680000000,
+    "all_runtime_jit_compiler_temp_cache": 500000000,
+    "code_evidence_git": 100000000,
+    "cleanup": 50000000,
+    "new_download_bytes": 0,
+    "shared_cache_bytes_including_retained303796954B": 23815435170,
+    "shared_cap": 40000000000,
+    "unchanged_aggregate_stat_rss_cap": 16000000000,
+    "early_stop": 10000000000,
+    "target_cadence_seconds": 0.1,
+    "sample_bound": 1200,
+    "owned_pid_bound": 64,
+    "global_proc_bound": 8192,
+    "proc_read_bytes_bound": 8192,
+    "owned_evidence_bytes_bound": 16777216,
+    "terminal_evidence_reserve": 65536,
+    "server_log_pipe_copy_per_iteration": 524288,
+    "resource_checks": "initial canonical project snapshot; roughly one-second existing conservative mutable-root +50MB estimate, no accounting discounts",
+    "limitation": "non-atomic sampling cannot guarantee no transient overshoot; no measured fit inferred; pipe backpressure may affect startup; unread shutdown log tail can be lost",
+    "additional_concurrent_allowances": {
+      "Task13": 10000000,
+      "root_review": 10000000,
+      "this_CPU": 10000000
+    },
+    "planned_service_memory_bytes": 16000000000,
+    "planning_only": "16GB is the enforced cap, not measured fit; 10GB diagnostic early stop unchanged"
+  },
+  "lifecycle": {
+    "fixed_guard_max_seconds": 14400,
+    "outer_foreground_timeout_seconds": 180,
+    "kill_after_seconds": 30,
+    "startup_observation_seconds": 120,
+    "exact_child_TERM_wait_seconds": 15,
+    "exact_child_KILL_wait_seconds": 15,
+    "listener_wait_seconds": 15,
+    "outer_timeout_includes": "full 14-file hashing and native inventory/startup/observation; cleanup envelope can extend through kill grace",
+    "cleanup": "write trigger/error then exact unreaped Popen TERM/KILL/reap; stdout finally close; listener closed; inherited fixed guard final descendant drain before flock release",
+    "original_handle_only": true,
+    "no_restart": true,
+    "source_environment_runtime_frozen_while_live": true
+  },
+  "preflight": "docs/evidence/raw/task12-startup-memory-02-preflight.json",
+  "tests": [
+    "docs/evidence/raw/task12-compile-red.log",
+    "docs/evidence/raw/task12-compile-green.log",
+    "docs/evidence/raw/task12-compile-lint.log"
+  ],
+  "prior_failed_full_attempt": "57885 exit1 at 16277946368B; source frozen identities preserved in archived v2",
+  "remaining_acceptance": "full native smoke, fixed warmups, six calibration and 24 matched evaluation members remain pending; diagnostic does not replace them",
+  "resource_failure_evidence": "complete bounded attribution sample + resource_error repr flushed before same resource exception is re-raised; previous 16MiB and terminal reserve unchanged",
+  "source_checkpoint": "04c1eeaed2953ac8eba20ca5833d5f91d0d4aa5f",
+  "previous_diagnostic": "72048 terminal exit1; a2e358e preserves results; original approval spent, no restart",
+  "compile_control": {
+    "environment": {
+      "TORCHINDUCTOR_COMPILE_THREADS": "1"
+    },
+    "contract": "serving/baseline/compile-pool-source-contract.json",
+    "contract_sha256": "84e48fdc4c3d09f9f5fa536a759291067bc437fb205a49ae4626394597335a15",
+    "uncertainty": "supported source path candidate only; unknown historical modules/effective count remain unmeasured; no saving or fit claim"
+  },
+  "launch_requirements": [
+    "Separate scoped reviewer approval and root one-shot native gate; no execution authorized by this proposal",
+    "Fresh canonical +680M reserve, shared cache/free space, port31012 and absent fresh output/guardlog check",
+    "Rehash every source/artifact and Python/nativePython/timeout identity; apply exact command environment/unset and verify inherited identity variables",
+    "One original handle only; source/runtime/environment frozen queued/live; no duplicate/restart; preserve all terminal/cleanup/raw evidence"
+  ],
+  "read_only_preparation": {
+    "fresh_output_absent": true,
+    "fresh_guardlog_absent": true,
+    "port31012_connect_failed": true,
+    "native_imports_or_execution": false
+  }
+}

@@ -1,0 +1,61 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ test_native_absolute_deadline_interrupts_waiting_headers_and_joins_watchdog __
+
+    def test_native_absolute_deadline_interrupts_waiting_headers_and_joins_watchdog():
+        import http.server
+        import threading
+        import time
+    
+        from serving.baseline.experiment import _native_response
+    
+        release = threading.Event()
+    
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+    
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                release.wait(timeout=2)
+    
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        worker = threading.Thread(target=server.serve_forever)
+        worker.start()
+        before = set(threading.enumerate())
+        began = time.monotonic()
+        try:
+            with pytest.raises(TimeoutError, match="absolute deadline"):
+>               _native_response(f"http://127.0.0.1:{server.server_port}/generate", b"{}", bytearray(), {}, lambda: None, seconds=.1)
+
+serving/baseline/experiment_test.py:467: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+serving/baseline/experiment.py:234: in _native_response
+    with connection.getresponse() as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/http/client.py:1450: in getresponse
+    response.begin()
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/http/client.py:336: in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <http.client.HTTPResponse object at 0x7bcbc4899de0>
+
+    def _read_status(self):
+        line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+        if len(line) > _MAXLINE:
+            raise LineTooLong("status line")
+        if self.debuglevel > 0:
+            print("reply:", repr(line))
+        if not line:
+            # Presumably, the server closed the connection before
+            # sending a valid response.
+>           raise RemoteDisconnected("Remote end closed connection without"
+                                     " response")
+E           http.client.RemoteDisconnected: Remote end closed connection without response
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/http/client.py:305: RemoteDisconnected
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_native_absolute_deadline_interrupts_waiting_headers_and_joins_watchdog
+1 failed, 14 deselected in 0.58s

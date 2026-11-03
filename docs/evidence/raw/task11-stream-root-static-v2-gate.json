@@ -1,0 +1,26 @@
+{
+  "time_utc": "2026-10-25T15:22:55.468385+00:00",
+  "failure_log": "task11-stream-format.log",
+  "first_format_exit": -6,
+  "original_eight_bytes_unchanged": true,
+  "original_seven_AST_same_root_interpreter_match": true,
+  "root_interpreter": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+  "invalid_AST_comparison_system_interpreter": "Python3.14.4 versusROOT3.12.13; differentdump isnot sourcechange",
+  "correction": "RAYON_NUM_THREADS=1; sameAS1GB/20s/core0/fsize65536/exact7paths; distinctv2format+lintlogs; noTorch/tests",
+  "primary_thread_control": "https://docs.rs/rayon/latest/rayon/struct.ThreadPoolBuilder.html#method.num_threads",
+  "resource_sample": {
+    "project_bytes": 13316021866,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305861635,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995861635,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "conservative_future_plus3M": 13998861635,
+  "caps_unchanged": true
+}

@@ -1,0 +1,130 @@
+{
+  "simulation": true,
+  "status": "未在真实多机上验证",
+  "events": [
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "run_start",
+      "at": 0.0,
+      "world_size": 1
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "step_complete",
+      "at": 2.0,
+      "started_at": 0.0,
+      "step": 1
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "step_complete",
+      "at": 4.0,
+      "started_at": 2.0,
+      "step": 2
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "checkpoint_saved",
+      "at": 5.0,
+      "started_at": 4.0,
+      "step": 2,
+      "checkpoint_id": "c2",
+      "full_state": true
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "step_complete",
+      "at": 7.0,
+      "started_at": 5.0,
+      "step": 3
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "failure",
+      "at": 7.0,
+      "reason": "simulated VM loss"
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "restore_start",
+      "at": 10.0,
+      "checkpoint_id": "c2"
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "restore_complete",
+      "at": 14.0,
+      "started_at": 10.0,
+      "checkpoint_id": "c2",
+      "step": 2
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "step_complete",
+      "at": 17.0,
+      "started_at": 14.0,
+      "step": 3
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "checkpoint_saved",
+      "at": 18.0,
+      "started_at": 17.0,
+      "step": 3,
+      "checkpoint_id": "c3",
+      "full_state": true
+    },
+    {
+      "schema": 1,
+      "run_id": "cpu-fixture",
+      "clock_id": "injected-cpu-clock",
+      "rank": 0,
+      "kind": "run_end",
+      "at": 18.0,
+      "checkpoint_id": "c3"
+    }
+  ],
+  "result": {
+    "useful_steps_time": 7.0,
+    "wall_time": 18.0,
+    "goodput": 0.3888888888888889,
+    "lost_steps": 1,
+    "lost_steps_time": 2.0,
+    "completed_attempts": 4,
+    "retained_steps": 3,
+    "recovery_seconds": [
+      4.0
+    ],
+    "final_checkpoint_id": "c3"
+  }
+}

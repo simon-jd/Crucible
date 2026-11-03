@@ -1,0 +1,9 @@
+{
+  "time_utc": "2026-10-25T19:37:59.806190+00:00",
+  "original_handle": 63941,
+  "exit": 1,
+  "stdout": "coord format dict\n",
+  "error": "AssertionError: original native-cache directory treated as leaf because relative inventory Path compared with absolute pool.work. No evidence/result file written by failed check.",
+  "correction": "compare root/inventory_path with absolute pool root/work; only14 other dirs must be empty.",
+  "source_tests_native_GPU_rerun": false
+}

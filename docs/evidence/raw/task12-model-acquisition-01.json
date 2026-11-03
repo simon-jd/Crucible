@@ -1,0 +1,338 @@
+{
+  "schema": 1,
+  "repo": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "plan_sha256": "067ca7df8c06e738b38db2e73634e4d1a4ac411c9ebf59cb10db68e557d06a37",
+  "runtime_lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "preparer_sha256": "fae332fcd06effdcd4efa518a9c535e8cd2af3cf1afdc58cc316596e9709aa49",
+  "expected_total_bytes": 16397459696,
+  "status": "failed",
+  "files": [
+    {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "algorithm": "git-sha1",
+      "upstream_hash": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "downloaded_bytes": 11343,
+      "reused": false,
+      "response": {
+        "scheme": "https",
+        "host": "huggingface.co",
+        "path": "/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/LICENSE",
+        "query_omitted": true
+      },
+      "publication": "no-clobber hardlink then owned unlink",
+      "name": "LICENSE",
+      "blob_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "snapshot_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/LICENSE"
+    },
+    {
+      "bytes": 16660,
+      "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+      "algorithm": "git-sha1",
+      "upstream_hash": "ecc3ebd0849aa08d9484bd911dddfd5261b10d30",
+      "downloaded_bytes": 16660,
+      "reused": false,
+      "response": {
+        "scheme": "https",
+        "host": "huggingface.co",
+        "path": "/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+        "query_omitted": true
+      },
+      "publication": "no-clobber hardlink then owned unlink",
+      "name": "README.md",
+      "blob_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/ecc3ebd0849aa08d9484bd911dddfd5261b10d30",
+      "snapshot_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/README.md"
+    },
+    {
+      "bytes": 728,
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "algorithm": "git-sha1",
+      "upstream_hash": "d46195ac87f837ad233d02b2f80f148bf7c005e0",
+      "downloaded_bytes": 728,
+      "reused": false,
+      "response": {
+        "scheme": "https",
+        "host": "huggingface.co",
+        "path": "/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+        "query_omitted": true
+      },
+      "publication": "no-clobber hardlink then owned unlink",
+      "name": "config.json",
+      "blob_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/d46195ac87f837ad233d02b2f80f148bf7c005e0",
+      "snapshot_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/config.json"
+    },
+    {
+      "bytes": 239,
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+      "algorithm": "git-sha1",
+      "upstream_hash": "20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+      "downloaded_bytes": 239,
+      "reused": false,
+      "response": {
+        "scheme": "https",
+        "host": "huggingface.co",
+        "path": "/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+        "query_omitted": true
+      },
+      "publication": "no-clobber hardlink then owned unlink",
+      "name": "generation_config.json",
+      "blob_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+      "snapshot_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json"
+    },
+    {
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "algorithm": "git-sha1",
+      "upstream_hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "downloaded_bytes": 1671853,
+      "reused": false,
+      "response": {
+        "scheme": "https",
+        "host": "huggingface.co",
+        "path": "/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/merges.txt",
+        "query_omitted": true
+      },
+      "publication": "no-clobber hardlink then owned unlink",
+      "name": "merges.txt",
+      "blob_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "snapshot_path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/merges.txt"
+    }
+  ],
+  "samples": [
+    {
+      "monotonic": 671312.17157925,
+      "project_bytes": 13265977064,
+      "shared_cache_bytes": 7114178520,
+      "remaining_download_bytes": 16397459696,
+      "free_bytes": 285569814528
+    },
+    {
+      "monotonic": 671313.251162303,
+      "project_bytes": 13265977777,
+      "shared_cache_bytes": 7114178520,
+      "remaining_download_bytes": 16397459696,
+      "free_bytes": 285557694464
+    },
+    {
+      "monotonic": 671314.006564493,
+      "project_bytes": 13265978269,
+      "shared_cache_bytes": 7114189863,
+      "remaining_download_bytes": 16397448353,
+      "free_bytes": 285723721728
+    },
+    {
+      "monotonic": 671314.688628461,
+      "project_bytes": 13265978479,
+      "shared_cache_bytes": 7114189863,
+      "remaining_download_bytes": 16397448353,
+      "free_bytes": 285723713536
+    },
+    {
+      "monotonic": 671315.649536849,
+      "project_bytes": 13265979264,
+      "shared_cache_bytes": 7114189863,
+      "remaining_download_bytes": 16397448353,
+      "free_bytes": 285723664384
+    },
+    {
+      "monotonic": 671316.367874407,
+      "project_bytes": 13265979756,
+      "shared_cache_bytes": 7114206523,
+      "remaining_download_bytes": 16397431693,
+      "free_bytes": 285723643904
+    },
+    {
+      "monotonic": 671317.110554934,
+      "project_bytes": 13265979966,
+      "shared_cache_bytes": 7114206523,
+      "remaining_download_bytes": 16397431693,
+      "free_bytes": 285723615232
+    },
+    {
+      "monotonic": 671318.205257325,
+      "project_bytes": 13265980755,
+      "shared_cache_bytes": 7114206523,
+      "remaining_download_bytes": 16397431693,
+      "free_bytes": 285723611136
+    },
+    {
+      "monotonic": 671319.01284622,
+      "project_bytes": 13265981247,
+      "shared_cache_bytes": 7114207251,
+      "remaining_download_bytes": 16397430965,
+      "free_bytes": 285723598848
+    },
+    {
+      "monotonic": 671319.715431641,
+      "project_bytes": 13265981454,
+      "shared_cache_bytes": 7114207251,
+      "remaining_download_bytes": 16397430965,
+      "free_bytes": 285723594752
+    },
+    {
+      "monotonic": 671320.728938135,
+      "project_bytes": 13265982256,
+      "shared_cache_bytes": 7114207251,
+      "remaining_download_bytes": 16397430965,
+      "free_bytes": 285723303936
+    },
+    {
+      "monotonic": 671321.492980373,
+      "project_bytes": 13265982748,
+      "shared_cache_bytes": 7114207490,
+      "remaining_download_bytes": 16397430726,
+      "free_bytes": 285723291648
+    },
+    {
+      "monotonic": 671322.217670419,
+      "project_bytes": 13265982956,
+      "shared_cache_bytes": 7114207490,
+      "remaining_download_bytes": 16397430726,
+      "free_bytes": 285723283456
+    },
+    {
+      "monotonic": 671323.076659473,
+      "project_bytes": 13265983768,
+      "shared_cache_bytes": 7114207490,
+      "remaining_download_bytes": 16397430726,
+      "free_bytes": 285723258880
+    },
+    {
+      "monotonic": 671323.903945071,
+      "project_bytes": 13265984260,
+      "shared_cache_bytes": 7115879343,
+      "remaining_download_bytes": 16395758873,
+      "free_bytes": 285721137152
+    },
+    {
+      "monotonic": 671324.889572235,
+      "project_bytes": 13265984472,
+      "shared_cache_bytes": 7115879343,
+      "remaining_download_bytes": 16395758873,
+      "free_bytes": 285732712448
+    },
+    {
+      "monotonic": 671326.164848392,
+      "project_bytes": 13265985286,
+      "shared_cache_bytes": 7115879343,
+      "remaining_download_bytes": 16395758873,
+      "free_bytes": 285856186368
+    },
+    {
+      "monotonic": 671327.114068176,
+      "project_bytes": 13265985802,
+      "shared_cache_bytes": 7118357150,
+      "remaining_download_bytes": 16393281066,
+      "free_bytes": 285853679616
+    },
+    {
+      "monotonic": 671328.097460283,
+      "project_bytes": 13265986014,
+      "shared_cache_bytes": 7130776222,
+      "remaining_download_bytes": 16380861994,
+      "free_bytes": 285841252352
+    },
+    {
+      "monotonic": 671329.264389527,
+      "project_bytes": 13265986221,
+      "shared_cache_bytes": 7153620123,
+      "remaining_download_bytes": 16358018093,
+      "free_bytes": 285818363904
+    },
+    {
+      "monotonic": 671330.183340597,
+      "project_bytes": 13265986427,
+      "shared_cache_bytes": 7169038529,
+      "remaining_download_bytes": 16342599687,
+      "free_bytes": 285802844160
+    },
+    {
+      "monotonic": 671331.078056118,
+      "project_bytes": 13265986633,
+      "shared_cache_bytes": 7186061505,
+      "remaining_download_bytes": 16325576711,
+      "free_bytes": 285785812992
+    },
+    {
+      "monotonic": 671332.05049427,
+      "project_bytes": 13265986839,
+      "shared_cache_bytes": 7207614727,
+      "remaining_download_bytes": 16304023489,
+      "free_bytes": 285764231168
+    },
+    {
+      "monotonic": 671333.271621568,
+      "project_bytes": 13265987044,
+      "shared_cache_bytes": 7233898357,
+      "remaining_download_bytes": 16277739859,
+      "free_bytes": 285737803776
+    },
+    {
+      "monotonic": 671334.088263703,
+      "project_bytes": 13265987251,
+      "shared_cache_bytes": 7248162271,
+      "remaining_download_bytes": 16263475945,
+      "free_bytes": 285723537408
+    },
+    {
+      "monotonic": 671335.085397663,
+      "project_bytes": 13265987457,
+      "shared_cache_bytes": 7270689035,
+      "remaining_download_bytes": 16240949181,
+      "free_bytes": 285701001216
+    },
+    {
+      "monotonic": 671336.183699071,
+      "project_bytes": 13265987663,
+      "shared_cache_bytes": 7294412003,
+      "remaining_download_bytes": 16217226213,
+      "free_bytes": 285677252608
+    },
+    {
+      "monotonic": 671337.278683366,
+      "project_bytes": 13265987869,
+      "shared_cache_bytes": 7307557325,
+      "remaining_download_bytes": 16204080891,
+      "free_bytes": 285664088064
+    },
+    {
+      "monotonic": 671338.188632958,
+      "project_bytes": 13265988075,
+      "shared_cache_bytes": 7325634881,
+      "remaining_download_bytes": 16186003335,
+      "free_bytes": 285646000128
+    },
+    {
+      "monotonic": 671339.108647817,
+      "project_bytes": 13265988281,
+      "shared_cache_bytes": 7349080385,
+      "remaining_download_bytes": 16162557831,
+      "free_bytes": 285622513664
+    },
+    {
+      "monotonic": 671340.216558367,
+      "project_bytes": 13265988487,
+      "shared_cache_bytes": 7374884797,
+      "remaining_download_bytes": 16136753419,
+      "free_bytes": 285596684288
+    },
+    {
+      "monotonic": 671341.202068425,
+      "project_bytes": 13265989459,
+      "shared_cache_bytes": 7395971807,
+      "remaining_download_bytes": 16115666409,
+      "free_bytes": 285575540736
+    }
+  ],
+  "pending": {
+    "name": "model-00001-of-00005.safetensors",
+    "partial": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/.31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f.task12-3586297f07af4ec8b3dd4a06e9238256.incomplete",
+    "downloaded_bytes": 303796954,
+    "partial_identity": {
+      "device": 66307,
+      "inode": 55843374
+    }
+  },
+  "error": "FileNotFoundError(2, 'No such file or directory')"
+}

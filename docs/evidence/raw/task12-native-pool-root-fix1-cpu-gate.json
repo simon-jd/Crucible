@@ -1,0 +1,68 @@
+{
+  "observed_at_utc": "2026-10-25T12:31:07.712353+00:00",
+  "scope": "exact once isolated actualBASE history-loss RED then conditional15-case GREEN only",
+  "fix_base": "48be911a3f152e1c1b3991399a3e2d6a2b85c82c",
+  "source": {
+    "serving/baseline/native_pool.py": {
+      "bytes": 9080,
+      "sha256": "0f02c526c85904bfaa9b01d4255a992b505ea4d7acfce0aad6dd198bd0c5496d"
+    },
+    "serving/baseline/experiment.py": {
+      "bytes": 57837,
+      "sha256": "5d36897a9a6fedd53664cf38b258d6aa7a455a4ad9433a857e81fad1ccc3f596"
+    },
+    "serving/baseline/native_pool_test.py": {
+      "bytes": 24130,
+      "sha256": "057b2bcf748ba22c7ae34a4b47f394e8c7e04b60880c26eae455931ddb3e0556"
+    },
+    "serving/baseline/README.md": {
+      "bytes": 27724,
+      "sha256": "8eb49fabd7c644c32d4081d90c33ee14e5d4e4104f19215e2be911d801276cc6"
+    }
+  },
+  "report_sha256_at_gate": "b6911e0279b9ac09ab5a5eb2ea0e199dbe13b06908179640ef018cb0a30a5310",
+  "commands": [
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp TASK12_POOL_FIX1_BASELINE=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/baseline .venv/bin/python -B -m pytest -p no:cacheprovider --basetemp=.tmp-task12-native-pool-fix1/red -v 'serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[exhausted]' > docs/evidence/raw/task12-native-pool-fix1-red.log 2>&1",
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE -u TASK12_POOL_FIX1_BASELINE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp .venv/bin/python -B -m pytest -p no:cacheprovider --basetemp=.tmp-task12-native-pool-fix1/green -v serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup serving/baseline/native_pool_test.py::test_pool_history_copy_and_bound_are_explicit serving/baseline/native_pool_test.py::test_pool_scan_errors_retry_only_whole_enoent serving/baseline/native_pool_test.py::test_pool_scan_transient_restarts_whole_count serving/baseline/native_pool_test.py::test_pool_legacy_mode_no_scan_and_rss_still_enforced serving/baseline/output_limits_test.py::test_bounded_utf8_metadata_keeps_prefix_and_never_reports_success serving/baseline/output_limits_test.py::test_final_child_output_cutoff_invalidates_before_pair_publication > docs/evidence/raw/task12-native-pool-fix1-focused.log 2>&1"
+  ],
+  "command_sha256": [
+    "f291b2d467d6ca16419d45759a45fef5b210387b072302e757d31874026d8798",
+    "ea0029e0684752a0104ad4e12206a7eaf136e00cdc4580ae130df779c634984d"
+  ],
+  "executables": {
+    "python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+    "timeout_sha256": "f84e76ea4da1e0c4e92254bd0d7dccdabe2c8b3098e734f27997dae3ee5d8e02",
+    "prlimit_sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4"
+  },
+  "scratch_identity": [
+    66307,
+    55446940
+  ],
+  "scratch_initial_children": [
+    "tmp"
+  ],
+  "scratch_max_bytes": 2000000,
+  "baseline_only": "exclusive read-only Git object extraction of BASE native_pool.py7810B/2526489... and experiment.py57457B/53ca02..., original source unchanged",
+  "pool_resource_sample": {
+    "project_bytes": 13313965635,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13303805404,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13993805404,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "retained_stage_named_bytes": 1023742,
+  "future_CPU_logs_inventory_source_root_bytes": 700288,
+  "stage_total_projection": 1724030,
+  "stage_cap": 2000000,
+  "resource_bounds": "45s+5s/AS2GB virtual address/file256KiB/core0; tiny fixtures/mocked cleanup only, no native/model/service/Go/GPU",
+  "conditional": "RED must actual missing-history assertion, never import/API/resource failure; then GREEN15 exactlyonce. Any unexpected result stops, no retries. Inventory/no-follow/SHA and rootcleanupgate afterterminal.",
+  "next_scope": "No newv2 proposal/freeze, host metadata or Git until separate post-CPU/rootgate; no native authority.",
+  "previous_static_failure": "Ruff initial134 preserved; one supportedthread1formatter0 then lint2RUF100, exactnoqa cleanup thenlintv3exit0; formatter not repeated",
+  "ordinary_report_appends": "historical SHA only, no live-report immutability requirement"
+}

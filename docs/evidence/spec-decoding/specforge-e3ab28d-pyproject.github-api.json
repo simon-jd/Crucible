@@ -1,0 +1,18 @@
+{
+  "name": "pyproject.toml",
+  "path": "pyproject.toml",
+  "sha": "62cf2b7aa3e649419ad80a088889d0c6bb42c2c7",
+  "size": 1313,
+  "url": "https://api.github.com/repos/sgl-project/SpecForge/contents/pyproject.toml?ref=e3ab28d681df457f2a04e59dfac8117c2c4cbfef",
+  "html_url": "https://github.com/sgl-project/SpecForge/blob/e3ab28d681df457f2a04e59dfac8117c2c4cbfef/pyproject.toml",
+  "git_url": "https://api.github.com/repos/sgl-project/SpecForge/git/blobs/62cf2b7aa3e649419ad80a088889d0c6bb42c2c7",
+  "download_url": "https://raw.githubusercontent.com/sgl-project/SpecForge/e3ab28d681df457f2a04e59dfac8117c2c4cbfef/pyproject.toml",
+  "type": "file",
+  "content": "W2J1aWxkLXN5c3RlbV0KcmVxdWlyZXMgPSBbInNldHVwdG9vbHM+PTYxLjAi\nLCAid2hlZWwiXQpidWlsZC1iYWNrZW5kID0gInNldHVwdG9vbHMuYnVpbGRf\nbWV0YSIKCltwcm9qZWN0XQpuYW1lID0gInNwZWNmb3JnZSIKZHluYW1pYyA9\nIFsidmVyc2lvbiJdCnJlYWRtZSA9ICJSRUFETUUubWQiCnJlcXVpcmVzLXB5\ndGhvbiA9ICI+PTMuMTEiCmRlc2NyaXB0aW9uID0gIlNwZWNGb3JnZTogU3Bl\nY3VsYXRpdmUgRGVjb2RpbmcgVHJhaW5pbmcgRnJhbWV3b3JrIgphdXRob3Jz\nID0gW3tuYW1lID0gIlNHTGFuZyBUZWFtIn1dCnVybHMgPSB7SG9tZXBhZ2Ug\nPSAiaHR0cHM6Ly9naXRodWIuY29tL3NnbC1wcm9qZWN0L1NwZWNGb3JnZSJ9\nCmRlcGVuZGVuY2llcyA9IFsKICAgICJ0b3JjaD09Mi4xMy4wIiwKICAgICJ0\ncmFuc2Zvcm1lcnM9PTUuMTIuMSIsCiAgICAiZGF0YXNldHMiLAogICAgInRx\nZG0iLAogICAgImFjY2VsZXJhdGUiLAogICAgImNsaWNrPj04LjAiLAogICAg\nImh1Z2dpbmdmYWNlLWh1YiIsCiAgICAjIERGbGFzaCBkcmFmdHMgZGVmYXVs\ndCB0byBMaWdlciBSTVNOb3JtL1N3aUdMVSBvbiBDVURBLiBJdHMgVHJpdG9u\nCiAgICAjIGRlcGVuZGVuY3kgc2hpcHMgb25seSBMaW51eCB3aGVlbHMuIFRo\nZSByYW5nZSBtYXRjaGVzIExJR0VSX1JFUVVJUkVNRU5UCiAgICAjIGluIHNw\nZWNmb3JnZS9tb2RlbGluZy9kcmFmdC9kZmxhc2hfa2VybmVscy5weS4KICAg\nICJsaWdlci1rZXJuZWw+PTAuOC4zLDwwLjk7IHN5c19wbGF0Zm9ybSA9PSAn\nbGludXgnIiwKICAgICJudW1weSIsCiAgICAib3BlbmFpLWhhcm1vbnkiLAog\nICAgInB5ZGFudGljIiwKICAgICJwc3V0aWwiLAogICAgInB5eWFtbCIsCiAg\nICAic2FmZXRlbnNvcnMiLAogICAgInNnbGFuZz09MC41LjE4IiwKICAgICJy\nZXF1ZXN0cyIsCiAgICAidGVuc29yYm9hcmQiLAogICAgInR5cGluZy1leHRl\nbnNpb25zIiwKICAgICJ3YW5kYiIsCiAgICAieXVuY2hhbmciLApdCgpbcHJv\namVjdC5zY3JpcHRzXQpzcGVjZm9yZ2UgPSAic3BlY2ZvcmdlLmNsaTptYWlu\nIgoKW3Rvb2wuc2V0dXB0b29scy5wYWNrYWdlcy5maW5kXQppbmNsdWRlID0g\nWyJzcGVjZm9yZ2UqIl0KCltwcm9qZWN0Lm9wdGlvbmFsLWRlcGVuZGVuY2ll\nc10KZGF0YSA9IFsib3BlbmFpIl0KZGV2ID0gWwogICAgInByZS1jb21taXQi\nLApdCmZhID0gWyJmbGFzaC1hdHRuIiwgIm5pbmphIiwgInBhY2thZ2luZyJd\nCmxpZ2VyID0gWyJsaWdlci1rZXJuZWw+PTAuOC4zLDwwLjkiXQoKW3Rvb2wu\nc2V0dXB0b29scy5keW5hbWljXQp2ZXJzaW9uID0ge2ZpbGUgPSAidmVyc2lv\nbi50eHQifQo=\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/sgl-project/SpecForge/contents/pyproject.toml?ref=e3ab28d681df457f2a04e59dfac8117c2c4cbfef",
+    "git": "https://api.github.com/repos/sgl-project/SpecForge/git/blobs/62cf2b7aa3e649419ad80a088889d0c6bb42c2c7",
+    "html": "https://github.com/sgl-project/SpecForge/blob/e3ab28d681df457f2a04e59dfac8117c2c4cbfef/pyproject.toml"
+  }
+}

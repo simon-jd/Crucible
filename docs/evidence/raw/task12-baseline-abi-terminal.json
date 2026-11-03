@@ -1,0 +1,11 @@
+{
+  "original_handle": 68892,
+  "authoritative_exec_exit": 0,
+  "matching_owned_processes": [],
+  "no_server_listener_created": true,
+  "outer_guard_exit0_implies_kernel_descendant_drain": true,
+  "note": "NCCL version queried; no distributed process group initialized by this probe",
+  "nccl_process_group_initialized_by_probe": false,
+  "freeze_sha256": "72e0f7d62f8aed6bcb12c2093a8326e160fc4b63c207b4e86c1fcb780f5fa021",
+  "changed_frozen_files": []
+}

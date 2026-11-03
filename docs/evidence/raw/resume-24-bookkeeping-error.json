@@ -1,0 +1,5 @@
+{
+  "scope": "root bookkeeping only; no experiment/source rerun or resource mutation",
+  "error": "Parsed reaper JSONL as a single JSON object: JSONDecodeError Extra data at line2. Following commit attempt failed because pathspec file had not been written; no add/commit occurred.",
+  "correction": "Parse each existing JSONL line, assert exact project absent/action none, then prepare exact commit paths. Preserve original reaper bytes."
+}

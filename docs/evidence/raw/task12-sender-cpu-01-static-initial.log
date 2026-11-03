@@ -1,0 +1,171 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> docs/evidence/raw/task12-sender-cpu-01-fixture-test.py:3:1
+   |
+ 1 |   """Focused preparation only; run after root source gate, never imports native code."""
+ 2 |
+ 3 | / import errno
+ 4 | | import importlib.util
+ 5 | | import json
+ 6 | | import os
+ 7 | | from pathlib import Path
+ 8 | | import queue
+ 9 | | import signal
+10 | | import socket
+11 | | import sys
+12 | | import threading
+13 | | from unittest.mock import patch
+14 | |
+15 | | import pytest
+   | |_____________^
+16 |
+17 |   SOURCE = Path(__file__).with_name("task12-sender-cpu-01-fixture.py")
+   |
+help: Organize imports
+   |
+6  | import os
+   - from pathlib import Path
+7  | import queue
+--------------------------------------------------------------------------------
+11 | import threading
+12 + from pathlib import Path
+13 | from unittest.mock import patch
+   |
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+  --> docs/evidence/raw/task12-sender-cpu-01-fixture-test.py:71:5
+   |
+69 |   ])
+70 |   def test_http_framing_rejects_malformed_and_bounds(headers):
+71 | /     with socket.socketpair()[0] as unused:
+72 | |         # Complete invalid headers need no receive operation.
+73 | |         with pytest.raises(ValueError):
+   | |_______________________________________^
+74 |               f.read_request(unused, b"POST /generate HTTP/1.1\r\n" + headers + b"\r\n\r\n", completed=False)
+   |
+help: Combine `with` statements
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:7:1
+   |
+ 5 |   """
+ 6 |
+ 7 | / import csv
+ 8 | | import errno
+ 9 | | import hashlib
+10 | | import io
+11 | | import json
+12 | | import math
+13 | | import os
+14 | | from pathlib import Path
+15 | | import queue
+16 | | import select
+17 | | import signal
+18 | | import socket
+19 | | import subprocess
+20 | | import threading
+21 | | import time
+   | |___________^
+22 |
+23 |   ROOT = Path(__file__).resolve().parents[3]
+   |
+help: Organize imports
+   |
+13 | import os
+   - from pathlib import Path
+14 | import queue
+--------------------------------------------------------------------------------
+20 | import time
+21 + from pathlib import Path
+22 |
+   |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:232:16
+    |
+230 |         except OwnedSocketClosed:
+231 |             pass  # Defined only by socket_io; never wraps evidence/file operations.
+232 |         except Exception as exc:
+    |                ^^^^^^^^^
+233 |             self.errors.put_nowait({"connection": connection_id, "error": error_text(exc)})
+234 |         finally:
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:278:16
+    |
+276 |                 for row in tcp.splitlines()[1:]
+277 |             )
+278 |         except Exception as exc:
+    |                ^^^^^^^^^
+279 |             port_closed = False
+280 |             errors.append(error_text(exc))
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:332:16
+    |
+330 |                 raise ValueError("initial starttime sample failed")
+331 |             process_sample(child.pid, identity)
+332 |         except Exception as exc:
+    |                ^^^^^^^^^
+333 |             result["identity_error"] = error_text(exc)
+334 |         result["termination_requested"] = True
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:438:12
+    |
+436 |             if ready:
+437 |                 fixture.accept_one()
+438 |     except Exception as exc:
+    |            ^^^^^^^^^
+439 |         failure = error_text(exc)
+440 |         stop_reason = "diagnostic invalid"
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:446:16
+    |
+444 |             save(out / "stop.json", {"reason": stop_reason, "error": failure,
+445 |                                      "elapsed": time.monotonic() - start})
+446 |         except Exception as exc:
+    |                ^^^^^^^^^
+447 |             failure = failure or error_text(exc)
+448 |             cleanup["stop_evidence_error"] = error_text(exc)
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:454:20
+    |
+452 |                 if cleanup["child"].get("identity_error"):
+453 |                     raise ValueError(cleanup["child"]["identity_error"])
+454 |             except Exception as exc:
+    |                    ^^^^^^^^^
+455 |                 cleanup["child_error"] = error_text(exc)
+456 |                 failure = failure or error_text(exc)
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:463:20
+    |
+461 |                 if f["threads_alive"] or f["errors"] or not f["port_listener_absent"]:
+462 |                     raise ValueError("fixture cleanup unproved")
+463 |             except Exception as exc:
+    |                    ^^^^^^^^^
+464 |                 cleanup["fixture_error"] = error_text(exc)
+465 |                 failure = failure or error_text(exc)
+    |
+
+BLE001 Do not catch blind exception: `Exception`
+   --> docs/evidence/raw/task12-sender-cpu-01-fixture.py:474:20
+    |
+472 |                 if not cleanup.get("child", {}).get("reaped"):
+473 |                     raise ValueError("child reap unproved")
+474 |             except Exception as exc:
+    |                    ^^^^^^^^^
+475 |                 cleanup["final_child_error"] = error_text(exc)
+476 |                 failure = failure or error_text(exc)
+    |
+
+Found 11 errors.
+[*] 2 fixable with `--fix`.

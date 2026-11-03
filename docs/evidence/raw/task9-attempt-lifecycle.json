@@ -1,0 +1,81 @@
+{
+  "attempt1": {
+    "command": "bash scripts/test_sync_gpu.sh",
+    "guard_session": 16329,
+    "guard_exitcode": 1,
+    "source_pid": 3514909,
+    "source_exitcode": 1,
+    "vllm_started": false,
+    "failure": "CUDA OOM during real AdamW initialization; unrelated PID3504289 used12.32GiB",
+    "cleanup": "tool session completed; read-only ps/nvidia-smi confirmed source and competing PID absent; exact inactive owned v7 snapshot deleted before retry"
+  },
+  "attempt2": {
+    "command": "bash scripts/test_sync_gpu.sh",
+    "guard_session": 31496,
+    "guard_exitcode": 1,
+    "source_pid": 3518363,
+    "source_exitcode": 0,
+    "vllm_pids": [
+      3519043
+    ],
+    "vllm_exitcodes": [
+      0
+    ],
+    "failure": "original BF16 eager reference atol0.25/rtol0.01 full-logits mismatch",
+    "cleanup": "context manager joined vLLM; guard completed; both complete owned snapshots retained for approved read-only numerical diagnosis"
+  },
+  "diagnostic": {
+    "guard_session": 64412,
+    "guard_exitcode": 0,
+    "test_result": "1 passed in61.88s; numerical diagnostic only",
+    "reference_pids": [
+      3645206,
+      3645476
+    ],
+    "reference_exitcodes": [
+      0,
+      0
+    ],
+    "vllm_pids": [
+      3645792,
+      3646331,
+      3646833,
+      3647349
+    ],
+    "vllm_exitcodes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "load_order": [
+      7,
+      8,
+      7,
+      8
+    ],
+    "rollback_bitwise_full_logits_equal": true
+  },
+  "confirmation": {
+    "guard_session": 95995,
+    "guard_exitcode": 0,
+    "test_result": "1 passed in 37.16s",
+    "protocol_commit": "a999bf6",
+    "reference_pids": [
+      3812780
+    ],
+    "reference_exitcodes": [
+      0
+    ],
+    "vllm_pids": [
+      3814235,
+      3817609
+    ],
+    "vllm_exitcodes": [
+      0,
+      0
+    ],
+    "passed_rows": 12,
+    "failed_coordinates": 0
+  }
+}

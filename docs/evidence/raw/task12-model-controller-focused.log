@@ -1,0 +1,71 @@
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+_________ test_attempted_trial_retains_partial_stdout_and_reaps_child __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/focused/test_attempted_trial_retains_p0')
+
+    def test_attempted_trial_retains_partial_stdout_and_reaps_child(tmp_path):
+        import json
+    
+        from serving.baseline.experiment import execute_trial
+    
+        target = tmp_path / "attempt.json"
+        summary = {"trial": {"pair": "2x-1", "multiplier": 1}, "planned_rows": 23}
+        command = [sys.executable, "-B", "-c", "print('{partial',flush=True)"]
+        with pytest.raises(ValueError, match="JSON"):
+>           execute_trial(command, {}, target, summary, lambda: None)
+
+serving/baseline/experiment_test.py:251: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+serving/baseline/experiment.py:402: in execute_trial
+    result = json.loads(payload)["Run"]
+             ^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x75996d0c3bc0>, s = '{partial\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+>           obj, end = self.scan_once(s, idx)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+E           json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/decoder.py:354: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/focused/test_attempted_trial_retains_p0')
+
+    def test_attempted_trial_retains_partial_stdout_and_reaps_child(tmp_path):
+        import json
+    
+        from serving.baseline.experiment import execute_trial
+    
+        target = tmp_path / "attempt.json"
+        summary = {"trial": {"pair": "2x-1", "multiplier": 1}, "planned_rows": 23}
+        command = [sys.executable, "-B", "-c", "print('{partial',flush=True)"]
+>       with pytest.raises(ValueError, match="JSON"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'JSON'
+E        Input: 'Expecting property name enclosed in double quotes: line 1 column 2 (char 1)'
+
+serving/baseline/experiment_test.py:250: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_attempted_trial_retains_partial_stdout_and_reaps_child
+1 failed, 1 passed, 9 deselected in 1.06s

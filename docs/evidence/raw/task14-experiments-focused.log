@@ -1,0 +1,12 @@
+=== RUN   TestAlternatingColdFixture
+    main_test.go:22: {"label":"cpu-fixture","metadata":"loopback adapter, no weights/model/NVMe/object store","trials":[{"round":0,"source":"object-store","seconds":0.000606195},{"round":0,"source":"nvme","seconds":0.000170095},{"round":1,"source":"nvme","seconds":0.000151114},{"round":1,"source":"object-store","seconds":0.000201595},{"round":2,"source":"object-store","seconds":0.000175876},{"round":2,"source":"nvme","seconds":0.000149427}],"summary":{"nvme":{"Median":0.000151114,"Min":0.000149427,"Max":0.000170095},"object-store":{"Median":0.000201595,"Min":0.000175876,"Max":0.000606195}}}
+--- PASS: TestAlternatingColdFixture (0.00s)
+=== RUN   TestStageIntegrityBoundsAndCleanup
+--- PASS: TestStageIntegrityBoundsAndCleanup (0.01s)
+PASS
+ok  	crucible/serving/experiments	0.015s
+=== RUN   TestFourTimesBurstExperiment
+    controller_test.go:47: {"burst_first_down_seconds_after_load_drop":{"max":240,"median":240,"min":240},"burst_first_up_seconds":{"max":0,"median":0,"min":0},"clock":"injected logical seconds","label":"synthetic-control-policy-only","rounds":3,"trials":[{"Round":0,"Condition":"baseline-1x","FirstUpSeconds":-1,"FirstDownSeconds":110,"Events":[{"Second":300,"Desired":1}]},{"Round":0,"Condition":"burst-4x","FirstUpSeconds":0,"FirstDownSeconds":240,"Events":[{"Second":10,"Desired":3},{"Second":70,"Desired":4},{"Second":130,"Desired":5},{"Second":430,"Desired":4}]},{"Round":1,"Condition":"burst-4x","FirstUpSeconds":0,"FirstDownSeconds":240,"Events":[{"Second":10,"Desired":3},{"Second":70,"Desired":4},{"Second":130,"Desired":5},{"Second":430,"Desired":4}]},{"Round":1,"Condition":"baseline-1x","FirstUpSeconds":-1,"FirstDownSeconds":110,"Events":[{"Second":300,"Desired":1}]},{"Round":2,"Condition":"baseline-1x","FirstUpSeconds":-1,"FirstDownSeconds":110,"Events":[{"Second":300,"Desired":1}]},{"Round":2,"Condition":"burst-4x","FirstUpSeconds":0,"FirstDownSeconds":240,"Events":[{"Second":10,"Desired":3},{"Second":70,"Desired":4},{"Second":130,"Desired":5},{"Second":430,"Desired":4}]}]}
+--- PASS: TestFourTimesBurstExperiment (0.00s)
+PASS
+ok  	crucible/serving/autoscaler	0.002s

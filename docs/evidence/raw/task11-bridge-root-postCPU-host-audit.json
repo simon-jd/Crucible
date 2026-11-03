@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-10-25T18:00:58.921415+00:00",
+  "scope": "read-only postCPU /proc audit matches exactprojectinterpreter or exactworkloadmodule token; no string-inshell-substring matching, no signals/noGPUhardwarequery",
+  "seen": 2,
+  "scoped_runtime_candidates": [],
+  "unknown_entries": [],
+  "unknown_count": 0,
+  "port31012_closed": true,
+  "original_handles": {
+    "8265": {
+      "exit": 125,
+      "cleanup_confirmed": true,
+      "children": []
+    },
+    "59327": {
+      "exit": 0,
+      "cleanup_confirmed": true,
+      "children": []
+    }
+  },
+  "scratch_absent": true,
+  "does_not_claim_globalGPU_or_sharedlock_idle": true
+}

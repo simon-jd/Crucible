@@ -1,0 +1,283 @@
+{
+  "time_utc": "2026-10-25T16:06:13.184665+00:00",
+  "scope": "host-permitted readonly exactcwd+exactCPUmodule or pathbasename argv, after83761terminal0; no signals",
+  "pid_namespace": "pid:[4026531836]",
+  "same_UID_seen": 431,
+  "project_CPU_runtime_candidates": [],
+  "unreadable_or_race_entries": [
+    {
+      "pid": 2560,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2588,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8142,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8324,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8341,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8363,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8824,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8922,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 11726,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13578,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13594,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13610,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13646,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13654,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13661,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13773,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 17558,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 19730,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 21958,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 21960,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 22585,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 22625,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 33796,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 136247,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 441644,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 442158,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1015384,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1015398,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1706996,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1707634,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1743775,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1743777,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1743965,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1763646,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763647,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 1763649,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763812,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1767066,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1828718,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2054050,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2190702,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2401122,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2401131,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2401353,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2401610,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2401813,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2430327,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2431060,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2431067,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2431106,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2431429,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2475315,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2760755,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2898517,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2898521,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2944699,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2944701,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2944746,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2944836,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2944897,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2944906,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2945109,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 2945163,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 3043952,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 3159209,
+      "error": "FileNotFoundError"
+    },
+    {
+      "pid": 3826483,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 4058103,
+      "error": "FileNotFoundError"
+    }
+  ],
+  "original_handles": {
+    "97129": "terminal0/cleanuptrue/noneowned",
+    "83761": "terminal0/cleanuptrue/noneowned"
+  },
+  "metadata_correction": "prior substring matcher selected enclosing bash command-source text, raw parsererror preserved; no workload repeated",
+  "limitation": "unknownentries retained; no globalGPU/lock/container absenceclaim; no GPU/service/container launched thisphase"
+}

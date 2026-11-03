@@ -1,0 +1,152 @@
+{
+  "aborted": true,
+  "baseline_accepted": false,
+  "primary_failure": {
+    "repr": "ValueError('nonregular pool payload')",
+    "observed_utf8_bytes": 37,
+    "truncated": false,
+    "pool_scan_history": {
+      "records": [],
+      "observed_records": 0,
+      "retained_records": 0,
+      "observed_record_utf8_bytes": 0,
+      "truncated": false
+    }
+  },
+  "planned_trials": [
+    {
+      "identity": "azure-calibration-0",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-calibration-1",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-calibration-2",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-0",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-1",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-2",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-3",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-4",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-5",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-6",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-7",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-8",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-9",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-10",
+      "status": "not_run"
+    },
+    {
+      "identity": "azure-evaluation-11",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-calibration-0",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-calibration-1",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-calibration-2",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-0",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-1",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-2",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-3",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-4",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-5",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-6",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-7",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-8",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-9",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-10",
+      "status": "not_run"
+    },
+    {
+      "identity": "burst-evaluation-11",
+      "status": "not_run"
+    }
+  ],
+  "stage": "after_cleanup",
+  "report_errors": [],
+  "cleanup": {
+    "pid": 3062912,
+    "returncode": -15,
+    "returncode_before_cleanup": null,
+    "termination_requested": true,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+    "native_exit_expected": true
+  },
+  "run_completed": false
+}

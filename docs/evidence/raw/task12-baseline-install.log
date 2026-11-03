@@ -1,0 +1,17 @@
+installed 1/62 sgl-kernel project_bytes=12018863613
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 450, in <module>
+    main()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 442, in main
+    install_locked(args.install_lock, args.work, args.output)
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 378, in install_locked
+    installed = install_one(
+                ^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 206, in install_one
+    evidence["hardlinks"] = audit_hardlinks(cache, target, payloads)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 87, in audit_hardlinks
+    raise ValueError(f"payload inode not hardlinked from cache: {relative}")
+ValueError: payload inode not hardlinked from cache: flashinfer_cubin-0.5.0.dist-info/RECORD

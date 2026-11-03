@@ -1,0 +1,136 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 1 item
+
+serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[exhausted] FAILED [100%]
+
+=================================== FAILURES ===================================
+_________ test_pool_history_reaches_terminal_before_cleanup[exhausted] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/red/test_pool_history_reaches_term0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77367df44620>
+scenario = 'exhausted'
+
+    @pytest.mark.parametrize(
+        "scenario",
+        [
+            "exhausted",
+            "later-exhausted",
+            "canonical-exhausted",
+            "permission",
+            "identity",
+            "proc",
+            "rss",
+            "secondary",
+        ],
+    )
+    def test_pool_history_reaches_terminal_before_cleanup(tmp_path, monkeypatch, scenario):
+        pool = _history_pool(tmp_path, monkeypatch)
+        original_scan = native_pool._tree_bytes
+        original_validate = pool.validate
+        calls = {}
+        expected = []
+        raised = []
+        validate_calls = []
+        proc_calls = []
+    
+        def fail(root, attempt, kind=FileNotFoundError):
+            code = errno.ENOENT if kind is FileNotFoundError else errno.EACCES
+            first, second = f"entry-{len(raised)}", f"destination-{len(raised)}"
+            error = kind(code, "distinct accounting failure", first, None, second)
+            raised.append(error)
+            expected.append(
+                {
+                    "root": str(root),
+                    "attempt": attempt,
+                    "errno": code,
+                    "filename": first,
+                    "filename2": second,
+                }
+            )
+            raise error
+    
+        def scan(root, **kwargs):
+            calls[root] = calls.get(root, 0) + 1
+            if root == pool.root and (scenario == "exhausted" or calls[root] == 1):
+                fail(root, calls[root])
+            if root == pool.work and scenario in ("later-exhausted", "permission", "secondary"):
+                kind = PermissionError if scenario == "permission" else FileNotFoundError
+                fail(root, calls[root], kind)
+            return original_scan(root, **kwargs)
+    
+        identity_error = ValueError("pool identity replaced after recovered scan")
+        proc_error = FileNotFoundError(errno.ENOENT, "proc identity vanished", "/proc/fixture/stat")
+    
+        def validate():
+            validate_calls.append(1)
+            if scenario == "identity" and len(validate_calls) == 2:
+                raise identity_error
+            return original_validate()
+    
+        def rss():
+            proc_calls.append(1)
+            if scenario == "proc":
+                raise proc_error
+            return 16_000_000_000 if scenario == "rss" else 0
+    
+        canonical_calls = []
+        if scenario == "canonical-exhausted":
+            from serving.baseline import model_snapshot
+    
+            def canonical_failure(root):
+                canonical_calls.append(1)
+                fail(root, len(canonical_calls))
+    
+            monkeypatch.setattr(model_snapshot, "project_bytes", canonical_failure)
+        monkeypatch.setattr(native_pool, "_tree_bytes", scan)
+        monkeypatch.setattr(pool, "validate", validate)
+        monkeypatch.setattr(experiment, "_owned_rss", rss)
+        samples = []
+        try:
+            # Same append-only-after-success boundary as the controller's inspect.
+            samples.append(experiment.check_resources(pool.work, 0, pool.output, True, pool=pool))
+        except (OSError, ValueError, RuntimeError) as error:
+            failure = error
+        else:
+            pytest.fail("incomplete measurement accepted")
+        assert samples == []
+        assert len(canonical_calls) == (3 if scenario == "canonical-exhausted" else 0)
+        assert calls[pool.root] == (3 if scenario == "exhausted" else 2)
+        if scenario in ("later-exhausted", "secondary", "permission"):
+            assert calls[pool.work] == (1 if scenario == "permission" else 3)
+        if scenario in ("identity", "proc", "rss"):
+            assert len(validate_calls) == 2
+            assert len(proc_calls) == (0 if scenario == "identity" else 1)
+        else:
+            assert len(validate_calls) == 1 and proc_calls == []
+        if scenario == "identity":
+            assert failure is identity_error
+        elif scenario == "proc":
+            assert failure is proc_error
+        elif scenario == "rss":
+            assert type(failure) is RuntimeError and "high-water" in str(failure)
+        else:
+            assert failure is raised[-1]
+>       _persist_history_failure(pool, monkeypatch, failure, expected, scenario == "secondary")
+
+serving/baseline/native_pool_test.py:574: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+serving/baseline/native_pool_test.py:458: in _persist_history_failure
+    check_history(terminal["primary_failure"])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+info = {'observed_utf8_bytes': 51, 'repr': "FileNotFoundError(2, 'distinct accounting failure')", 'truncated': False}
+
+    def check_history(info):
+        assert info["repr"] == experiment.error_info(failure)["repr"]
+>       assert "pool_scan_history" in info, "measurement history missing at terminal boundary"
+E       AssertionError: measurement history missing at terminal boundary
+E       assert 'pool_scan_history' in {'observed_utf8_bytes': 51, 'repr': "FileNotFoundError(2, 'distinct accounting failure')", 'truncated': False}
+
+serving/baseline/native_pool_test.py:418: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[exhausted]
+============================== 1 failed in 0.07s ===============================

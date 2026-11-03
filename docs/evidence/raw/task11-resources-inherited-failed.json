@@ -1,0 +1,11 @@
+{
+  "ok": false,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 13287939933,
+  "free_bytes": 269934350336,
+  "model_cache": "/home/postedism/data/models/huggingface",
+  "errors": [
+    "model cache must be shared: /home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE must use /home/postedism/.cache/huggingface/hub"
+  ]
+}

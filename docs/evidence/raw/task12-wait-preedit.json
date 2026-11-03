@@ -1,0 +1,46 @@
+{
+  "base": "0f4c2e5a420e5598241da4162af8997c91830824",
+  "identities": {
+    "serving/replay/schedule.go": {
+      "bytes": 5790,
+      "sha256": "7d99d4b619dd7aa48186265bdfec7fb55910a8985d411179cfd3ad6e4d0a71da"
+    },
+    "serving/replay/diagnostic.go": {
+      "bytes": 9451,
+      "sha256": "c57c268deb96fb35382f035908ad52c296027006f29747d39c6e283094237402"
+    },
+    "serving/replay/diagnostic_test.go": {
+      "bytes": 9735,
+      "sha256": "6c5368eebe0fbb1d8136fb6707501b9d76a70633a4c3ac56d9b860cd7c45a8c6"
+    },
+    "serving/replay/transport.go": {
+      "bytes": 4213,
+      "sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "bytes": 3205,
+      "sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    },
+    "serving/replay/main.go": {
+      "bytes": 3004,
+      "sha256": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16"
+    },
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2.py": {
+      "bytes": 10978,
+      "sha256": "d906157f263a48f062336c6e4dfade7e76e8fd7b3e643ce95dc772197c1327c3"
+    },
+    ".tools/go/bin/go": {
+      "bytes": 17164222,
+      "sha256": "5f5eb6d0b2fb6aa0bb5d5f8c5f1c944e0de955c925f0111af92a9d8f79680b5b"
+    },
+    ".tools/go/bin/gofmt": {
+      "bytes": 3144728,
+      "sha256": "fd464d1c9098a6714d06bd3fcd2a1fedcdd291e710241160ebb663bf99adf2f8"
+    },
+    ".cache/task12-baseline/bin/replay": {
+      "bytes": 10138001,
+      "sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93"
+    }
+  },
+  "new_loan_absent": true
+}

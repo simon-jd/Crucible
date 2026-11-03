@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "crucible-ml"
+version = "0.1.0"
+description = "Reproducible GPU cluster, async GRPO, and disaggregated serving experiments"
+requires-python = ">=3.12,<3.14"
+dependencies = ["PyYAML>=6.0.2,<7", "sympy>=1.13.3,<2"]
+
+[project.optional-dependencies]
+# CUDA 12.8 wheels; shared Torch ABI candidate for vLLM 0.10.2 / SGLang 0.5.3.post3.
+# Serving engines are installed/validated in their own implementation tasks.
+ml = ["numpy==2.2.6", "torch==2.8.0"]
+
+[dependency-groups]
+dev = ["pytest>=8.3,<9", "ruff>=0.11,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["cluster", "scaling", "rl", "kernels"]
+
+[tool.pytest.ini_options]
+testpaths = ["cluster", "scaling", "rl", "kernels", "serving", "spec", "scripts"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+markers = ["gpu: requires CUDA GPU hardware", "integration: external runtime integration"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+# One-off driver/monitor scripts kept verbatim as run evidence.
+extend-exclude = ["docs/evidence/raw"]

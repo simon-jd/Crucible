@@ -1,0 +1,251 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "completed": [
+    {
+      "name": "sgl-kernel",
+      "wheel_sha256": "3a81ecd6398ec0878f0992bbc7fe9434627cd93d8240808d396c2385f8021c8f",
+      "record": "sgl_kernel-0.3.16.post5.dist-info/RECORD",
+      "record_sha256": "90662b973da476390bdc6a11d820a5851d4e7f52b27de649e37a8380de00bb21",
+      "record_validation": {
+        "hashed_files": 992,
+        "hashed_bytes": 1615587764,
+        "unhashed_files": [
+          "sgl_kernel-0.3.16.post5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "flashinfer-cubin",
+      "wheel_sha256": "f8973487265608ffb05e7a496374dc96544933d44731632b0da2f6ff5376f597",
+      "record": "flashinfer_cubin-0.5.0.dist-info/RECORD",
+      "record_sha256": "34fafe8a3e83484bff57caa30cce2facfabb82f3f102dd5508435a547fa75152",
+      "record_validation": {
+        "hashed_files": 6943,
+        "hashed_bytes": 397855846,
+        "unhashed_files": [
+          "flashinfer_cubin-0.5.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "wheel_sha256": "d7ddc9c1f5bb803718d736c907fac857fc606f1fce630c0b1d741935a72723b9",
+      "record": "nvidia_cutlass_dsl-4.2.1.dist-info/RECORD",
+      "record_sha256": "0f548b1ceb93b56493ce90eb1d7d0ad4d2237f4270a5c880f4125211875e73d6",
+      "record_validation": {
+        "hashed_files": 150,
+        "hashed_bytes": 160981239,
+        "unhashed_files": [
+          "nvidia_cutlass_dsl-4.2.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pyarrow",
+      "wheel_sha256": "b7ae0bbdc8c6674259b25bef5d2a1d6af5d39d7200c819cf99e07f7dfef1c51e",
+      "record": "pyarrow-21.0.0.dist-info/RECORD",
+      "record_sha256": "583dca8bdb7c2c1573911022569e6afc90c427cefd314bcd5a88d64d6404e6b9",
+      "record_validation": {
+        "hashed_files": 748,
+        "hashed_bytes": 141413144,
+        "unhashed_files": [
+          "pyarrow-21.0.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "decord2",
+      "wheel_sha256": "8444c97945a823844fc138d54a1db8377e258db1f887e40ea68c58dc6debb377",
+      "record": "decord2-3.4.0.dist-info/RECORD",
+      "record_sha256": "7ed568b3fd1da8a4301931e5c0ad3850929bc8ebe97ef1deb10a26309fd8fecd",
+      "record_validation": {
+        "hashed_files": 78,
+        "hashed_bytes": 75650462,
+        "unhashed_files": [
+          "decord2-3.4.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pandas",
+      "wheel_sha256": "b3d11d2fda7eb164ef27ffc14b4fcab16a80e1ce67e9f57e19ec0afaf715ba89",
+      "record": "pandas-2.3.3.dist-info/RECORD",
+      "record_sha256": "d3993f2995b0da88794c807b1cdffdcf65d6bf6e9238d7596ef598c1000e28f7",
+      "record_validation": {
+        "hashed_files": 1516,
+        "hashed_bytes": 43279977,
+        "unhashed_files": [
+          "pandas-2.3.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "cuda-bindings",
+      "wheel_sha256": "fda147a344e8eaeca0c6ff113d2851ffca8f7dfc0a6c932374ee5c47caa649c8",
+      "record": "cuda_bindings-12.9.4.dist-info/RECORD",
+      "record_sha256": "3a53e4ccf04cb6e60a61a1d331943375479be0fdfbd07949a4d3b9fc08979874",
+      "record_validation": {
+        "hashed_files": 138,
+        "hashed_bytes": 110594467,
+        "unhashed_files": [
+          "cuda_bindings-12.9.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "transformers",
+      "wheel_sha256": "b10d05da8fa67dc41644dbbf9bc45a44cb86ae33da6f9295f5fbf5b7890bd267",
+      "record": "transformers-4.57.1.dist-info/RECORD",
+      "record_sha256": "5ed3cf7958b692f5527919d40ea9b9861ef1f5329c2dfac9e1891a0dc3da6237",
+      "record_validation": {
+        "hashed_files": 2251,
+        "hashed_bytes": 52167646,
+        "unhashed_files": [
+          "transformers-4.57.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "xgrammar",
+      "wheel_sha256": "47fdbfc6007df47de2142613220292023e88e4a570546b39591f053e4d9ec33f",
+      "record": "xgrammar-0.1.25.dist-info/RECORD",
+      "record_sha256": "8518ed241aebc918b00c6dc5e3c0ce0f54a82723ddcaf45351a3cff34ef9806f",
+      "record_validation": {
+        "hashed_files": 32,
+        "hashed_bytes": 33040920,
+        "unhashed_files": [
+          "xgrammar-0.1.25.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "flashinfer-python",
+      "wheel_sha256": "f02f13c616482617e7bee0031e5777a3328989a0b1842496ce273086f6a5aeab",
+      "record": "flashinfer_python-0.5.0.dist-info/RECORD",
+      "record_sha256": "0861345ab8ed7caa5f0d0d1d01b274e8b1aa4e54a5c4802aee0ca106f5d6ef4e",
+      "record_validation": {
+        "hashed_files": 1844,
+        "hashed_bytes": 40582085,
+        "unhashed_files": [
+          "flashinfer_python-0.5.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "grpcio",
+      "wheel_sha256": "7d4fa6ccc3ec2e68a04f7b883d354d7fea22a34c44ce535a2f0c0049cf626ddf",
+      "record": "grpcio-1.75.1.dist-info/RECORD",
+      "record_sha256": "3b951e83f274d2a5ee7619628ebe67a6c4fe6199112a1f43c4f84eeee466592a",
+      "record_validation": {
+        "hashed_files": 66,
+        "hashed_bytes": 15992885,
+        "unhashed_files": [
+          "grpcio-1.75.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "modelscope",
+      "wheel_sha256": "16fc2d4209d508cd8b511c07ef74d92531aa0ee1f4c303a19e0234f60a7371a9",
+      "record": "modelscope-1.31.0.dist-info/RECORD",
+      "record_sha256": "ee50314847524a4545bacfd05ff99818fc86f0bcbb35294d0778484cc0e0bf44",
+      "record_validation": {
+        "hashed_files": 2860,
+        "hashed_bytes": 21800581,
+        "unhashed_files": [
+          "modelscope-1.31.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "torchao",
+      "wheel_sha256": "bc708910301a9f98344d43f3fe2aa6d5e1fab706d772b6df47ff05087d664145",
+      "record": "torchao-0.9.0.dist-info/RECORD",
+      "record_sha256": "7564379f4ee65447c996bc824a76592a34d0aaaa5d56023110d0c7e8813ce9af",
+      "record_validation": {
+        "hashed_files": 302,
+        "hashed_bytes": 25414095,
+        "unhashed_files": [
+          "torchao-0.9.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "lxml",
+      "wheel_sha256": "90a345bbeaf9d0587a3aaffb7006aa39ccb6ff0e96a57286c0cb2fd1520ea192",
+      "record": "lxml-6.0.2.dist-info/RECORD",
+      "record_sha256": "ccc6273d6d0568bc31129b6b848a4dd65040442728c08f7d00da47a52e8edcaa",
+      "record_validation": {
+        "hashed_files": 177,
+        "hashed_bytes": 11902414,
+        "unhashed_files": [
+          "lxml-6.0.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "jedi",
+      "wheel_sha256": "0fb16d86c4a4c73c37ba518c77419975e30fcc620658a8d14fbb5720cdd34142",
+      "record": "jedi-0.20.1.dist-info/RECORD",
+      "record_sha256": "cf6f6bd61dbdaadfa6d4d5601afd79ccc8f4531a2c566b510b2282441e557de2",
+      "record_validation": {
+        "hashed_files": 5629,
+        "hashed_bytes": 13889723,
+        "unhashed_files": [
+          "jedi-0.20.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "hf-transfer",
+      "wheel_sha256": "cdca9bfb89e6f8f281890cc61a8aff2d3cecaff7e1a4d275574d96ca70098557",
+      "record": "hf_transfer-0.1.9.dist-info/RECORD",
+      "record_sha256": "8d5d98bf6d5266072537dca4bceb150229b3ac40ac67a071dc7080471da9bb0e",
+      "record_validation": {
+        "hashed_files": 9,
+        "hashed_bytes": 9667616,
+        "unhashed_files": [
+          "hf_transfer-0.1.9.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "sglang",
+      "wheel_sha256": "3c57f135ec0a7a5cf6ae4ed5e0b231d7bf7e0fae588bbc1a881560f1c18db995",
+      "record": "sglang-0.5.5.dist-info/RECORD",
+      "record_sha256": "92cd5ffd1ca76215d7e2b47cbb8d6ed288b0b6d1c23851d9f7e5f4ad493136ad",
+      "record_validation": {
+        "hashed_files": 1337,
+        "hashed_bytes": 14184112,
+        "unhashed_files": [
+          "sglang-0.5.5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "tokenizers",
+      "wheel_sha256": "e2ef6063d7a84994129732b47e7915e8710f27f99f3a3260b8a38fc7ccd083f4",
+      "record": "tokenizers-0.22.1.dist-info/RECORD",
+      "record_sha256": "dc61591297a27bcbcab3749eec657e68b753569180f496e8bd2ba372eb74d3a3",
+      "record_validation": {
+        "hashed_files": 31,
+        "hashed_bytes": 10585238,
+        "unhashed_files": [
+          "tokenizers-0.22.1.dist-info/RECORD"
+        ]
+      }
+    }
+  ],
+  "prior_handle": 95867,
+  "prior_exit": 1,
+  "prior_failure_sha256": "87b99897284d2c621b857b4f6243dbe8d82dbf71222cd30f80d161c8f2afcb2b",
+  "pending": {
+    "stage": "wheel-stage-18",
+    "wheel_sha256": "aeb0323409199c785f730645e9f4bb7a7b9ca2c481f2c331a55642b5d13fa52f"
+  },
+  "recovery_audit_sha256": "179d2e7a63b24a9c4ed8c3f4c9a1a13e688498f9e7bfa702e4a3578515cb9f92",
+  "remaining_wheels": 44,
+  "remaining_download_bytes": 18828897,
+  "remaining_expanded_bytes": 69975729,
+  "remaining_guard_reserve": 709669341
+}

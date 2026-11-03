@@ -1,0 +1,133 @@
+# Task 11 base config. Null identities are filled in when the data/plans are pinned.
+id: async_k1
+declared_factor: base
+seed: 17
+model:
+  repo: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+  max_context_tokens: 2048
+schedule:
+  mode: async
+  max_staleness: 1
+  execution: single_gpu_rollout_learner_time_share
+objective:
+  group_size: 8
+  kl: 0.001
+  clip: 0.2
+  scale_by_std: true
+optimizer:
+  learning_rate: 1.0e-05
+  batch_completions: 16
+sampler:
+  temperature: 1.0
+  top_p: 1.0
+  top_k: -1
+  logprobs: raw_model_distribution
+train:
+  dataset: gsm8k
+  split: main/train
+  unique_prompt_ids: 128
+  completions_per_prompt: 16
+  planned_completions: 2048
+  max_context_tokens: 2048
+  max_new_tokens: 256
+  selection_manifest_sha256: null
+  selected_prompt_ids_sha256: null
+evaluation:
+  subsets:
+  - dataset: gsm8k
+    split: main/test
+    count: 64
+  - dataset: math500
+    split: test
+    count: 64
+  phases:
+  - before
+  - after
+  completions_per_problem: 1
+  planned_completions_per_phase: 128
+  max_context_tokens: 2048
+  max_new_tokens: 512
+  heldout_manifest_sha256: null
+  completion_plan_sha256: null
+  same_plan_across_variants: true
+  trusted_grading_verified: false
+datasets:
+  gsm8k:
+    repo: openai/gsm8k
+    revision: 740312add88f781978c0658806c59bc2815b9866
+    metadata_sha256: 6d513d718ca7048f627aed806b6ab7c5e89be142c70eb68ed0427bfe484e956a
+    metadata_url: https://huggingface.co/api/datasets/openai/gsm8k?blobs=true
+    content_verified: false
+    assets:
+      main/test-00000-of-00001.parquet:
+        expected_bytes: 419088
+        expected_lfs_sha256: ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59
+        expected_git_blob_sha1: 861005fb045993f46d198aa797440f4096f9aa17
+        actual_sha256: null
+      main/train-00000-of-00001.parquet:
+        expected_bytes: 2306545
+        expected_lfs_sha256: ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d
+        expected_git_blob_sha1: 61b47c916c27533feaa3763484ae0ea58f92b056
+        actual_sha256: null
+  math500:
+    repo: HuggingFaceH4/MATH-500
+    revision: 6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be
+    metadata_sha256: e11d256ec1e0d7256783adc7654fa795c68544c4ac033cc164eb6c91634afc6a
+    metadata_url: https://huggingface.co/api/datasets/HuggingFaceH4/MATH-500?blobs=true
+    content_verified: false
+    assets:
+      test.jsonl:
+        expected_bytes: 446564
+        expected_git_blob_sha1: 2376b9a194b46c0790e197c91b7249e5f88ac09b
+        actual_sha256: null
+timing:
+  matched_pairs:
+  - pair: 1
+    order: AB
+  - pair: 2
+    order: BA
+  - pair: 3
+    order: AB
+  within_pair_conditions:
+  - same_data
+  - same_seed
+  - same_model_revision
+  - same_budget
+  - same_runtime
+  - same_resources
+  A: base
+  B: comparison_variant
+  measurements: null
+framework:
+  name: crucible
+  strategy: fsdp2
+  runtime_verified: false
+external_baseline_candidate:
+  name: verl
+  tag: v0.4.1
+  revision: 8d9e350ea58c7ad4b50dd14d9dcb50577242c55f
+  backend: hf
+  strategy: fsdp
+  source_manifest: .superpowers/sdd/5-crucible-gpu-ml-plan/task11-verl-v041-source/manifest.json
+  runtime_verified: false
+resources:
+  gpu_count: 1
+  max_session_seconds: 14400
+  project_cap_bytes: 14000000000
+  checkpoint_count_ceiling: 2
+  resident_services_cap_bytes: 16000000000
+  paid_budget_usd: 0
+  feasibility_verified: false
+readiness:
+  datasets_acquired: false
+  tokenizer_length_feasible: false
+  optimizer_ram_snapshot_lifecycle_verified: false
+  baseline_abi_time_memory_verified: false
+  four_hour_execution_verified: false
+  actual_training_complete: false
+  code_experiments_required: true
+  code_data_pin: null
+  code_sandbox_verified: false
+  code_status: blocked_pending_public_tested_code_data_and_actual_isolated_sandbox
+  quality_objective: open_actual_improvement_not_established

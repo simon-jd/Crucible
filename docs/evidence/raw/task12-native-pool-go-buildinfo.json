@@ -1,0 +1,68 @@
+{
+  "command": [
+    ".tools/go/bin/go",
+    "version",
+    "-m",
+    ".tmp-task12-native-03-pool/replay"
+  ],
+  "samples": [
+    {
+      "seconds": 1.9225218599895015,
+      "interval_seconds": 1.9225218599895015,
+      "owned_bytes": 105330021,
+      "rss_bytes": 1318912,
+      "log_bytes": 420
+    }
+  ],
+  "scan_errors": [],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "96a749f67ba3e6084039b2d8d448f4b4316d84d00997689c479e4e482b74fabb",
+  "before": {
+    "canonical_bytes": 13408076613,
+    "owned_bytes": 105330021,
+    "nonloan_bytes": 13302746592,
+    "projected_bytes": 13992746592,
+    "free_bytes": 265448640512,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/tmp"
+  },
+  "pid": 3,
+  "leader_start": "72599773",
+  "exit_code": 0,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 2.1996696499409154,
+  "after": {
+    "canonical_bytes": 13408077033,
+    "owned_bytes": 105330021,
+    "nonloan_bytes": 13302747012,
+    "projected_bytes": 13992747012,
+    "free_bytes": 265448640512,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "observed_at_utc": "2026-10-25T11:42:30.685686+00:00",
+  "scope": "root independent retained history audit; no model-weight reads/import/native launch",
+  "old_freeze_sha256": "43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761",
+  "original_sources_checked": 176,
+  "original_sources_unchanged": 171,
+  "declared_authorized_source_changes": {
+    "serving/baseline/experiment.py": {
+      "original": "ab99c606cdb2317b0dd413f151fd68ae60a5a936be783aeb8a665b0892de4a23",
+      "current": "53ca02d0854f3240af61f8f13cd804c665536631e8581f71b1d0066c956ed196"
+    },
+    "serving/baseline/README.md": {
+      "original": "c18d1ae5657f581bdf5eb64a379d20f92edf8742134a81aa9c5727705b22ad1f",
+      "current": "8338759e38fa1ef0dabaa5db8d0a8cb39534a36f81ac2a69198845f8fc8f8b45"
+    },
+    "serving/replay/schedule.go": {
+      "original": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "current": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    "serving/replay/transport.go": {
+      "original": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "current": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "original": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "current": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    }
+  },
+  "all_original_artifacts_unchanged": 58,
+  "original_executables_verified": {
+    "python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+    "native_python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+    "timeout_sha256": "f84e76ea4da1e0c4e92254bd0d7dccdabe2c8b3098e734f27997dae3ee5d8e02",
+    "prlimit_sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4"
+  },
+  "coordinator_original_files_verified": 100,
+  "coordinator_regular_bytes": 2578786,
+  "original_raw_freeze_authorization_status": "full02v3 actually ran once and failed; old one-shot spent, preserved unchanged",
+  "new_sources_outside_old_freeze": "new Go diagnostic.go/wait.go and native_pool.py/tests need fresh closure in full03; not claiming old176 describes current source closure",
+  "inspection_note": "An earlier read-only schema print attempted dict[:2] and failed after printing freeze metadata; no write/run occurred. Correct dictionary iteration used here."
+}

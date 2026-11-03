@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-10-25T19:04:10.098072+00:00",
+  "child_exit": 1,
+  "ROOT_verified_exact_RED_and_postclose": true,
+  "ROOT_precleanup_two_records_equal_5entries_4empty_contents": true,
+  "scratch_absent": true,
+  "no_GPU": true,
+  "production_source_grant_in": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-ipc-brief.md",
+  "no_commands_until_next_gate": true
+}

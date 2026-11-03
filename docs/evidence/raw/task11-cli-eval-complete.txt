@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "synthetic_fixture": true,
+  "plan_sha256": "9b75b19fa7071008d3fe86535a1a201e9de8551997c47eb2ddb040df0d3eb057",
+  "heldout_manifest_sha256": "be08c38630cf33c9987845aafba0703d5610178b0ddd959238a2613a22314361",
+  "coverage_complete": true,
+  "planned_completions": 4,
+  "attempted_completions": 4,
+  "macro_pass_at_1": 0.5,
+  "problems": [
+    {
+      "id": "a",
+      "n": 1,
+      "c": 1,
+      "pass_at_1": 1.0,
+      "slots": [
+        {
+          "problem_id": "a",
+          "sample_index": 0,
+          "status": "observed",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "n": 3,
+      "c": 0,
+      "pass_at_1": 0.0,
+      "slots": [
+        {
+          "problem_id": "b",
+          "sample_index": 0,
+          "status": "failed"
+        },
+        {
+          "problem_id": "b",
+          "sample_index": 1,
+          "status": "observed",
+          "correct": false
+        },
+        {
+          "problem_id": "b",
+          "sample_index": 2,
+          "status": "failed"
+        }
+      ]
+    }
+  ],
+  "measurement_authenticity": "caller responsibility; schema is not execution evidence"
+}

@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 7113618003,
+  "free_bytes": 385748942848,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": []
+}
+Resolved 35 packages in 0.75ms
+Checked 34 packages in 0.27ms
+torch=2.8.0+cu128 build_cuda=12.8 triton=3.4.0

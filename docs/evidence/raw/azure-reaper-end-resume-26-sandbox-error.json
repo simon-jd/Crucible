@@ -1,0 +1,10 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 scripts/azure_reaper.sh",
+  "exit_code": 1,
+  "stdout_log": "azure-reaper-end-resume-26-sandbox-stdout.log",
+  "stderr_capture": "tool output (455 tokens), display truncated; no full local stderr copy",
+  "error": "OSError: [Errno 30] Read-only file system: '/home/postedism/.azure/az.sess'",
+  "resource_query_completed": false,
+  "cloud_mutation": false,
+  "next": "same fixed-scope default read-only reaper on host permission surface; no --apply"
+}

@@ -1,0 +1,2811 @@
+{
+  "root": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu",
+  "rows": [
+    {
+      "path": ".tmp-task12-native-pool-cpu",
+      "dev": 66307,
+      "inode": 55447018,
+      "mode": 16893,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green",
+      "dev": 66307,
+      "inode": 55447034,
+      "mode": 16832,
+      "nlink": 38,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0",
+      "dev": 66307,
+      "inode": 55447238,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/freeze.json",
+      "dev": 66307,
+      "inode": 55447259,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 3202,
+      "sha256": "44e972b411ae069fcfe505b6471ebeeecd7fd49bd78b4c06f84afcc30a71cb6d"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/output",
+      "dev": 66307,
+      "inode": 55447245,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool",
+      "dev": 66307,
+      "inode": 55447240,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool.json",
+      "dev": 66307,
+      "inode": 55447246,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "d0a62a28cdd5cc4e836d8208342d1a5a0e3362d8165ae79a5a88d10b503c8f7f"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447242,
+      "mode": 16893,
+      "nlink": 11,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/cuda",
+      "dev": 66307,
+      "inode": 55447252,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/datasets",
+      "dev": 66307,
+      "inode": 55447255,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/flashinfer",
+      "dev": 66307,
+      "inode": 55447256,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/hf-modules",
+      "dev": 66307,
+      "inode": 55447254,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/inductor",
+      "dev": 66307,
+      "inode": 55447250,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447243,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/torch",
+      "dev": 66307,
+      "inode": 55447251,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/triton",
+      "dev": 66307,
+      "inode": 55447253,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/native-cache/xdg",
+      "dev": 66307,
+      "inode": 55447257,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/pool/replay",
+      "dev": 66307,
+      "inode": 55447244,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/proposal.json",
+      "dev": 66307,
+      "inode": 55447258,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 982,
+      "sha256": "f380dd0c9bdc2275f764bee251477731776e1a5f3d68ab4d0ae52f8a783eb091"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/serving",
+      "dev": 66307,
+      "inode": 55447247,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/serving/baseline",
+      "dev": 66307,
+      "inode": 55447248,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp0/serving/baseline/cache-audit.json",
+      "dev": 66307,
+      "inode": 55447249,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 125,
+      "sha256": "a2d645a5f08f7384ac8ff99088560af241f6aa1cc505a1fdeb739e90ebcc5cb6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1",
+      "dev": 66307,
+      "inode": 55447260,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/freeze.json",
+      "dev": 66307,
+      "inode": 55447279,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 3042,
+      "sha256": "f143f60f7aba87c1122ac7d77109fbd3028f542f7c8ec65fbb6b0d19e5629174"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/output",
+      "dev": 66307,
+      "inode": 55447265,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool",
+      "dev": 66307,
+      "inode": 55447261,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool.json",
+      "dev": 66307,
+      "inode": 55447266,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "7f03a7a8445241c59ef15b305f299b13ff96e4cd6da85be3ced198f8daf081f0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447262,
+      "mode": 16893,
+      "nlink": 11,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/cuda",
+      "dev": 66307,
+      "inode": 55447272,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/datasets",
+      "dev": 66307,
+      "inode": 55447275,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/flashinfer",
+      "dev": 66307,
+      "inode": 55447276,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/hf-modules",
+      "dev": 66307,
+      "inode": 55447274,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/inductor",
+      "dev": 66307,
+      "inode": 55447270,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447263,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/torch",
+      "dev": 66307,
+      "inode": 55447271,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/triton",
+      "dev": 66307,
+      "inode": 55447273,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/native-cache/xdg",
+      "dev": 66307,
+      "inode": 55447277,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/pool/replay",
+      "dev": 66307,
+      "inode": 55447264,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/proposal.json",
+      "dev": 66307,
+      "inode": 55447278,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 982,
+      "sha256": "ef8951af9c4bff584da8e4ff5e251679e26aa5786b0a05185e4287f025a9fcc2"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/serving",
+      "dev": 66307,
+      "inode": 55447267,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/serving/baseline",
+      "dev": 66307,
+      "inode": 55447268,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp1/serving/baseline/cache-audit.json",
+      "dev": 66307,
+      "inode": 55447269,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 125,
+      "sha256": "a2d645a5f08f7384ac8ff99088560af241f6aa1cc505a1fdeb739e90ebcc5cb6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2",
+      "dev": 66307,
+      "inode": 55447280,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/freeze.json",
+      "dev": 66307,
+      "inode": 55447299,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 3089,
+      "sha256": "1354e3da72d189bfd5009183dc41837191c3b1e0220b362aafe240ab277158e3"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/output",
+      "dev": 66307,
+      "inode": 55447285,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool",
+      "dev": 66307,
+      "inode": 55447281,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool.json",
+      "dev": 66307,
+      "inode": 55447286,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "cc37c4c9f7258a97d6062f4a9cfba5543cd5bafaf1f8601abe352b7a229ad1a9"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447282,
+      "mode": 16893,
+      "nlink": 11,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/cuda",
+      "dev": 66307,
+      "inode": 55447292,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/datasets",
+      "dev": 66307,
+      "inode": 55447295,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/flashinfer",
+      "dev": 66307,
+      "inode": 55447296,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/hf-modules",
+      "dev": 66307,
+      "inode": 55447294,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/inductor",
+      "dev": 66307,
+      "inode": 55447290,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447283,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/torch",
+      "dev": 66307,
+      "inode": 55447291,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/triton",
+      "dev": 66307,
+      "inode": 55447293,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/native-cache/xdg",
+      "dev": 66307,
+      "inode": 55447297,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/pool/replay",
+      "dev": 66307,
+      "inode": 55447284,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/proposal.json",
+      "dev": 66307,
+      "inode": 55447298,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 982,
+      "sha256": "275c1d61d7a61bdb0299e679ad32931f96ef4042e0d59551770496eaef55c539"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/serving",
+      "dev": 66307,
+      "inode": 55447287,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/serving/baseline",
+      "dev": 66307,
+      "inode": 55447288,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp2/serving/baseline/cache-audit.json",
+      "dev": 66307,
+      "inode": 55447289,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 125,
+      "sha256": "a2d645a5f08f7384ac8ff99088560af241f6aa1cc505a1fdeb739e90ebcc5cb6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3",
+      "dev": 66307,
+      "inode": 55447301,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/freeze.json",
+      "dev": 66307,
+      "inode": 55447321,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 3202,
+      "sha256": "11de96b26e7f2092f37cc3f8c9ba2bd817004e5c3791d9ac8a1c309570dda261"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/output",
+      "dev": 66307,
+      "inode": 55447306,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool",
+      "dev": 66307,
+      "inode": 55447302,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool.json",
+      "dev": 66307,
+      "inode": 55447307,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "a17c758c3a4c6c354a762d764a55e6da737c8c39d9d341b1018172910e594acf"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447303,
+      "mode": 16893,
+      "nlink": 10,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/cuda",
+      "dev": 66307,
+      "inode": 55447313,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/datasets",
+      "dev": 66307,
+      "inode": 55447316,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/hf-modules",
+      "dev": 66307,
+      "inode": 55447315,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/inductor",
+      "dev": 66307,
+      "inode": 55447311,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447304,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/torch",
+      "dev": 66307,
+      "inode": 55447312,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/triton",
+      "dev": 66307,
+      "inode": 55447314,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/native-cache/xdg",
+      "dev": 66307,
+      "inode": 55447319,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/pool/replay",
+      "dev": 66307,
+      "inode": 55447305,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/proposal.json",
+      "dev": 66307,
+      "inode": 55447318,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 982,
+      "sha256": "e6aff9d0c0549507533740f9d00c841a8dc592ed501274e2752208eee918af82"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/serving",
+      "dev": 66307,
+      "inode": 55447308,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/serving/baseline",
+      "dev": 66307,
+      "inode": 55447309,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3/serving/baseline/cache-audit.json",
+      "dev": 66307,
+      "inode": 55447310,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 125,
+      "sha256": "a2d645a5f08f7384ac8ff99088560af241f6aa1cc505a1fdeb739e90ebcc5cb6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_full_requires_compcurrent",
+      "dev": 66307,
+      "inode": 55447239,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_launch_full_requires_comp3"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0",
+      "dev": 66307,
+      "inode": 55447193,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/freeze.json",
+      "dev": 66307,
+      "inode": 55447202,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 728,
+      "sha256": "c9b94a2d15f2a70f3be30b76446e7820604864da06958a081ea4947e086e0db5"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/output",
+      "dev": 66307,
+      "inode": 55447199,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/pool",
+      "dev": 66307,
+      "inode": 55447195,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/pool.json",
+      "dev": 66307,
+      "inode": 55447200,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "3f0ac26546fece63cca0980e919f6b794452b7a4c19e1370823d17ea33025f56"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447196,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447197,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/pool/replay",
+      "dev": 66307,
+      "inode": 55447198,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma0/proposal.json",
+      "dev": 66307,
+      "inode": 55447201,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 832,
+      "sha256": "ce233953eb68c7e42dac98e0615af5a9ef56cee4eb96f4181813587d55dfbf82"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1",
+      "dev": 66307,
+      "inode": 55447203,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/freeze.json",
+      "dev": 66307,
+      "inode": 55447211,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 922,
+      "sha256": "42e847cb195c1a437f87f62a42b19ec65fd66e852d5c88912af5d0e6e7b1adbd"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/output",
+      "dev": 66307,
+      "inode": 55447208,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/pool",
+      "dev": 66307,
+      "inode": 55447204,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/pool.json",
+      "dev": 66307,
+      "inode": 55447209,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "53b145a9096a484da270862de09a20c091d38d637729eb34ed287e0afd8a0aaa"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447205,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447206,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/pool/replay",
+      "dev": 66307,
+      "inode": 55447207,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma1/proposal.json",
+      "dev": 66307,
+      "inode": 55447210,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 826,
+      "sha256": "f8c3677101fd0fee82e75c61492ca2f209f33b14378b1fa4b221da6dcd14cd2a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2",
+      "dev": 66307,
+      "inode": 55447212,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/freeze.json",
+      "dev": 66307,
+      "inode": 55447220,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 928,
+      "sha256": "b5e45824f46efa5b195ffd2d76ea19e54ef19a657d06346900f3a7106328314f"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/output",
+      "dev": 66307,
+      "inode": 55447217,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/pool",
+      "dev": 66307,
+      "inode": 55447213,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/pool.json",
+      "dev": 66307,
+      "inode": 55447218,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "49df8e04dfcd2ed57c9851a5d0f7db8e56a6bffdae4a4668c72cd741e85e676b"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447214,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447215,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/pool/replay",
+      "dev": 66307,
+      "inode": 55447216,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma2/proposal.json",
+      "dev": 66307,
+      "inode": 55447219,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 716,
+      "sha256": "382d7a5360ad7bb527cd1ce28935f8e27ec594ae1f00aad0ff8eea9d3baaadef"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3",
+      "dev": 66307,
+      "inode": 55447221,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/freeze.json",
+      "dev": 66307,
+      "inode": 55447229,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 849,
+      "sha256": "e66115a2cc1f2fa216801f160eddc292e3156b9aab12cb6de59fd7a7841666c4"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/output",
+      "dev": 66307,
+      "inode": 55447226,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/pool",
+      "dev": 66307,
+      "inode": 55447222,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/pool.json",
+      "dev": 66307,
+      "inode": 55447227,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "5cd5c3f052807e5a613d4777c17e36abe607fe07dd61f4adf042a0b7ae49874e"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447223,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447224,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/pool/replay",
+      "dev": 66307,
+      "inode": 55447225,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3/proposal.json",
+      "dev": 66307,
+      "inode": 55447228,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 832,
+      "sha256": "e9151be9ccdf1bc52d1a330803ae9bbd43bfcd4704b8454b7bcb2385ec9c7c90"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_mismacurrent",
+      "dev": 66307,
+      "inode": 55447194,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_launch_pool_rejects_misma3"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0",
+      "dev": 66307,
+      "inode": 55447230,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0/output",
+      "dev": 66307,
+      "inode": 55447236,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0/pool",
+      "dev": 66307,
+      "inode": 55447232,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0/pool.json",
+      "dev": 66307,
+      "inode": 55447237,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "53ffb3351f266ad3e82c10412c58b317a64d83609d6136e09b86ddf9694c57fb"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447233,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447234,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0/pool/replay",
+      "dev": 66307,
+      "inode": 55447235,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_launch_pool_valid_bindingcurrent",
+      "dev": 66307,
+      "inode": 55447231,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_launch_pool_valid_binding0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_live_observer_scans_only_0",
+      "dev": 66307,
+      "inode": 55447356,
+      "mode": 16832,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_live_observer_scans_only_current",
+      "dev": 66307,
+      "inode": 55447357,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_live_observer_scans_only_0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0",
+      "dev": 66307,
+      "inode": 55447045,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/output",
+      "dev": 66307,
+      "inode": 55447051,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/outside-client",
+      "dev": 66307,
+      "inode": 55447050,
+      "mode": 33204,
+      "nlink": 2,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool",
+      "dev": 66307,
+      "inode": 55447047,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool-extra",
+      "dev": 66307,
+      "inode": 55447053,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool-extra/.hidden",
+      "dev": 66307,
+      "inode": 55447054,
+      "mode": 33204,
+      "nlink": 2,
+      "bytes": 7,
+      "sha256": "8bb0cf6eb9b17d0f7d22b456f121257dc1254e1f01665370476383ea776df414"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool-extra/link",
+      "dev": 66307,
+      "inode": 55447054,
+      "mode": 33204,
+      "nlink": 2,
+      "bytes": 7,
+      "sha256": "8bb0cf6eb9b17d0f7d22b456f121257dc1254e1f01665370476383ea776df414"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool.json",
+      "dev": 66307,
+      "inode": 55447052,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "fdbfd0797e381de7521d6107c257e50a8ff4e8ba1332e9a009adaa695708c3bb"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447048,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447049,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0/pool/replay",
+      "dev": 66307,
+      "inode": 55447050,
+      "mode": 33204,
+      "nlink": 2,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_hcurrent",
+      "dev": 66307,
+      "inode": 55447046,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_nonpool_exact_exclusion_h0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0",
+      "dev": 66307,
+      "inode": 55447322,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/output",
+      "dev": 66307,
+      "inode": 55447328,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/output/raw",
+      "dev": 66307,
+      "inode": 55447330,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 8,
+      "sha256": "9c56cc51b374c3ba189210d5b6d4bf57790d351c96c47c02190ecf1e430635ab"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/pool",
+      "dev": 66307,
+      "inode": 55447324,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/pool.json",
+      "dev": 66307,
+      "inode": 55447329,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "9638c9eb240557e37e0894401d5d622983196858466df7e9bb16c4e4d9da193e"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447325,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447326,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0/pool/replay",
+      "dev": 66307,
+      "inode": 55447327,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_does_not_recurrent",
+      "dev": 66307,
+      "inode": 55447323,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_output_credit_does_not_re0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0",
+      "dev": 66307,
+      "inode": 55447331,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0/output",
+      "dev": 66307,
+      "inode": 55447337,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0/pool",
+      "dev": 66307,
+      "inode": 55447333,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0/pool.json",
+      "dev": 66307,
+      "inode": 55447338,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "939da1dfa1adacc3de62e0e48dfc8f8e3a0d9f02b60884226eaf02b0e69fa9d0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447334,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447335,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine0/pool/replay",
+      "dev": 66307,
+      "inode": 55447336,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1",
+      "dev": 66307,
+      "inode": 55447339,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/output",
+      "dev": 66307,
+      "inode": 55447344,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/output/raw",
+      "dev": 66307,
+      "inode": 55447346,
+      "mode": 33204,
+      "nlink": 2,
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/outside",
+      "dev": 66307,
+      "inode": 55447346,
+      "mode": 33204,
+      "nlink": 2,
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/pool",
+      "dev": 66307,
+      "inode": 55447340,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/pool.json",
+      "dev": 66307,
+      "inode": 55447345,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "05654cff126657ce86941602bd8a3dab8596d2b16628a053391d0d7bbb55ee23"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447341,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447342,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine1/pool/replay",
+      "dev": 66307,
+      "inode": 55447343,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2",
+      "dev": 66307,
+      "inode": 55447347,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/output",
+      "dev": 66307,
+      "inode": 55447352,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/output/raw",
+      "dev": 66307,
+      "inode": 55447355,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 106,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/outside"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/outside",
+      "dev": 66307,
+      "inode": 55447354,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/pool",
+      "dev": 66307,
+      "inode": 55447348,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/pool.json",
+      "dev": 66307,
+      "inode": 55447353,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "f68f82a00276a80f26d41a6e1cf2487cbb81f392560a77854a2fe08118895176"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447349,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447350,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2/pool/replay",
+      "dev": 66307,
+      "inode": 55447351,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_output_credit_rejects_inecurrent",
+      "dev": 66307,
+      "inode": 55447332,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_output_credit_rejects_ine2"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0",
+      "dev": 66307,
+      "inode": 55447035,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/output",
+      "dev": 66307,
+      "inode": 55447041,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/output/record",
+      "dev": 66307,
+      "inode": 55447044,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 5,
+      "sha256": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/pool",
+      "dev": 66307,
+      "inode": 55447037,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/pool.json",
+      "dev": 66307,
+      "inode": 55447042,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "7d8ba183b3d89d66c8595537102295102c04169ade02fe08977ec810ad31f9e6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447038,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447039,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/pool/native-cache/tmp/payload",
+      "dev": 66307,
+      "inode": 55447043,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 6,
+      "sha256": "bef57ec7f53a6d40beb640a780a639c83bc29ac8a9816f1fc6c5c6dcd93c4721"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0/pool/replay",
+      "dev": 66307,
+      "inode": 55447040,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenccurrent",
+      "dev": 66307,
+      "inode": 55447036,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_client_cache_evidenc0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0",
+      "dev": 66307,
+      "inode": 55447055,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0/output",
+      "dev": 66307,
+      "inode": 55447063,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0/pool.json",
+      "dev": 66307,
+      "inode": 55447064,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "b0bf94532ec4d1263219d3bd618ced2148c473a6d6efa928ac9e448db981011a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0/saved",
+      "dev": 66307,
+      "inode": 55447059,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0/saved/native-cache",
+      "dev": 66307,
+      "inode": 55447060,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0/saved/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447061,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff0/saved/replay",
+      "dev": 66307,
+      "inode": 55447062,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1",
+      "dev": 66307,
+      "inode": 55447065,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/output",
+      "dev": 66307,
+      "inode": 55447070,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/pool",
+      "dev": 66307,
+      "inode": 55447072,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/pool.json",
+      "dev": 66307,
+      "inode": 55447071,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "72ea81eb8dbdd177cec1d5c943caaed8a14ee3297ff4bb86327db6737ac33da6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/saved",
+      "dev": 66307,
+      "inode": 55447066,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/saved/native-cache",
+      "dev": 66307,
+      "inode": 55447067,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/saved/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447068,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff1/saved/replay",
+      "dev": 66307,
+      "inode": 55447069,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2",
+      "dev": 66307,
+      "inode": 55447073,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/output",
+      "dev": 66307,
+      "inode": 55447078,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/pool",
+      "dev": 66307,
+      "inode": 55447080,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 104,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/saved"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/pool.json",
+      "dev": 66307,
+      "inode": 55447079,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "020d6e856c7b45b930a36d8f3186fafc83eacc9cc85c440bf541de604817cc5b"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/saved",
+      "dev": 66307,
+      "inode": 55447074,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/saved/native-cache",
+      "dev": 66307,
+      "inode": 55447075,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/saved/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447076,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff2/saved/replay",
+      "dev": 66307,
+      "inode": 55447077,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3",
+      "dev": 66307,
+      "inode": 55447081,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/output",
+      "dev": 66307,
+      "inode": 55447086,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/pool",
+      "dev": 66307,
+      "inode": 55447082,
+      "mode": 16893,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/pool.json",
+      "dev": 66307,
+      "inode": 55447087,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "bf503bd6c68ce75eca87dbba4c82728ad99dcdf79f73e7180b176d7d76bf4860"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447088,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/pool/replay",
+      "dev": 66307,
+      "inode": 55447085,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/pool/saved-work",
+      "dev": 66307,
+      "inode": 55447083,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff3/pool/saved-work/tmp",
+      "dev": 66307,
+      "inode": 55447084,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4",
+      "dev": 66307,
+      "inode": 55447089,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/output",
+      "dev": 66307,
+      "inode": 55447094,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/pool",
+      "dev": 66307,
+      "inode": 55447090,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/pool.json",
+      "dev": 66307,
+      "inode": 55447095,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "e3a49cc748dfcb04306137c2e394fdced8d541c5f1086fed18c67a34cfb1b812"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447091,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447092,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/pool/replay",
+      "dev": 66307,
+      "inode": 55447096,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff4/pool/saved-client",
+      "dev": 66307,
+      "inode": 55447093,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5",
+      "dev": 66307,
+      "inode": 55447097,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/output",
+      "dev": 66307,
+      "inode": 55447102,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/pool",
+      "dev": 66307,
+      "inode": 55447098,
+      "mode": 16893,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/pool.json",
+      "dev": 66307,
+      "inode": 55447103,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "683e06b5d64848f715356a476298ebb212bcc5374d6d20293420f1ef81778303"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/pool/go-cache",
+      "dev": 66307,
+      "inode": 55447104,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447099,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447100,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff5/pool/replay",
+      "dev": 66307,
+      "inode": 55447101,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6",
+      "dev": 66307,
+      "inode": 55447105,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/output",
+      "dev": 66307,
+      "inode": 55447110,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/pool",
+      "dev": 66307,
+      "inode": 55447106,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/pool.json",
+      "dev": 66307,
+      "inode": 55447111,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "d21328837adff3b3a0a1d55941e2e3fe2741379f0c7fb56c647c3cf28b0de20b"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447107,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/pool/native-cache/escape",
+      "dev": 66307,
+      "inode": 55447112,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447108,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff6/pool/replay",
+      "dev": 66307,
+      "inode": 55447109,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7",
+      "dev": 66307,
+      "inode": 55447113,
+      "mode": 16832,
+      "nlink": 5,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/old-output",
+      "dev": 66307,
+      "inode": 55447118,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/output",
+      "dev": 66307,
+      "inode": 55447120,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/pool",
+      "dev": 66307,
+      "inode": 55447114,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/pool.json",
+      "dev": 66307,
+      "inode": 55447119,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "d479d7862e0796c97d52cd93550ac31d3afd5124dee9e1f67893489952c5f95b"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447115,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447116,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7/pool/replay",
+      "dev": 66307,
+      "inode": 55447117,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoffcurrent",
+      "dev": 66307,
+      "inode": 55447056,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_identity_and_handoff7"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0",
+      "dev": 66307,
+      "inode": 55447149,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0/output",
+      "dev": 66307,
+      "inode": 55447155,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0/pool",
+      "dev": 66307,
+      "inode": 55447151,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0/pool.json",
+      "dev": 66307,
+      "inode": 55447156,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "423412e1fa115c2f675b14936ac13acbea97df59ad18bbc8fd4632f3eb1cfc30"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447152,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447153,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i0/pool/replay",
+      "dev": 66307,
+      "inode": 55447154,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1",
+      "dev": 66307,
+      "inode": 55447157,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1/output",
+      "dev": 66307,
+      "inode": 55447162,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1/pool",
+      "dev": 66307,
+      "inode": 55447158,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1/pool.json",
+      "dev": 66307,
+      "inode": 55447163,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "bf5df25f35a7efa50c64c767c190f8e35b8b964b933ec60ee79a664357a97cbc"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447159,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447160,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i1/pool/replay",
+      "dev": 66307,
+      "inode": 55447161,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2",
+      "dev": 66307,
+      "inode": 55447164,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2/output",
+      "dev": 66307,
+      "inode": 55447169,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2/pool",
+      "dev": 66307,
+      "inode": 55447165,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2/pool.json",
+      "dev": 66307,
+      "inode": 55447170,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "02b13b43ccb0c52d53b94d289340a12f7046b0e87e8d4772b4f9628eb1f54334"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447166,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447167,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i2/pool/replay",
+      "dev": 66307,
+      "inode": 55447168,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3",
+      "dev": 66307,
+      "inode": 55447171,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3/output",
+      "dev": 66307,
+      "inode": 55447176,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3/pool",
+      "dev": 66307,
+      "inode": 55447172,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3/pool.json",
+      "dev": 66307,
+      "inode": 55447177,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "fa519494c44492046ac3e91cc2d9edfe966a0edbbae47ee364035f98b82a031b"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447173,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447174,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i3/pool/replay",
+      "dev": 66307,
+      "inode": 55447175,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4",
+      "dev": 66307,
+      "inode": 55447178,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4/output",
+      "dev": 66307,
+      "inode": 55447183,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4/pool",
+      "dev": 66307,
+      "inode": 55447179,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4/pool.json",
+      "dev": 66307,
+      "inode": 55447184,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "8e2a9500932089f5435f11693ab5ef9632bfa945be9ffcca6787769a3d91ac2c"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447180,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447181,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4/pool/replay",
+      "dev": 66307,
+      "inode": 55447182,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_independent_limits_icurrent",
+      "dev": 66307,
+      "inode": 55447150,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_independent_limits_i4"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0",
+      "dev": 66307,
+      "inode": 55447185,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0/output",
+      "dev": 66307,
+      "inode": 55447191,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0/pool",
+      "dev": 66307,
+      "inode": 55447187,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0/pool.json",
+      "dev": 66307,
+      "inode": 55447192,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "dcc981b96c88fb8d40a595502f8ee02c505ea1bb7867a9083e34e000fabecfe7"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447188,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447189,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0/pool/replay",
+      "dev": 66307,
+      "inode": 55447190,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_current",
+      "dev": 66307,
+      "inode": 55447186,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_legacy_mode_no_scan_0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0",
+      "dev": 66307,
+      "inode": 55447121,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0/output",
+      "dev": 66307,
+      "inode": 55447127,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0/pool",
+      "dev": 66307,
+      "inode": 55447123,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0/pool.json",
+      "dev": 66307,
+      "inode": 55447128,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 289,
+      "sha256": "2e8b9f8648ccb101bf3ea77cf10c02e44e0c1efdfc18c55348f48be9936b9d46"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447124,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447125,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject0/pool/replay",
+      "dev": 66307,
+      "inode": 55447126,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1",
+      "dev": 66307,
+      "inode": 55447129,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1/output",
+      "dev": 66307,
+      "inode": 55447134,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1/pool",
+      "dev": 66307,
+      "inode": 55447130,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1/pool.json",
+      "dev": 66307,
+      "inode": 55447135,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 292,
+      "sha256": "88090ee68b2710e20aeae032b74c6bb3d482e310886386f9e545e71fb4f0f66d"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447131,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447132,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1/pool/replay",
+      "dev": 66307,
+      "inode": 55447133,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_manifest_path_rejectcurrent",
+      "dev": 66307,
+      "inode": 55447122,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_manifest_path_reject1"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0",
+      "dev": 66307,
+      "inode": 55447136,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0/output",
+      "dev": 66307,
+      "inode": 55447142,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0/pool",
+      "dev": 66307,
+      "inode": 55447138,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0/pool.json",
+      "dev": 66307,
+      "inode": 55447143,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 384,
+      "sha256": "20b558ba220cb4a11a55d87a72e0967e73b7ca06b3d9c1b08ee4432f5b93441c"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447139,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447140,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0/pool/replay",
+      "dev": 66307,
+      "inode": 55447141,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overlcurrent",
+      "dev": 66307,
+      "inode": 55447137,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_rejects_output_overl0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_scan_errors_retry_on0",
+      "dev": 66307,
+      "inode": 55447144,
+      "mode": 16832,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_scan_errors_retry_on1",
+      "dev": 66307,
+      "inode": 55447146,
+      "mode": 16832,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_scan_errors_retry_oncurrent",
+      "dev": 66307,
+      "inode": 55447145,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_scan_errors_retry_on1"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_scan_transient_resta0",
+      "dev": 66307,
+      "inode": 55447147,
+      "mode": 16832,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/green/test_pool_scan_transient_restacurrent",
+      "dev": 66307,
+      "inode": 55447148,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 98,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/green/test_pool_scan_transient_resta0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/mutant.py",
+      "dev": 66307,
+      "inode": 55447020,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 7811,
+      "sha256": "67bde404bf7beecea7a3b3a2b9effdfe242dbd2f5fe716f2621d2e131497da39"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red",
+      "dev": 66307,
+      "inode": 55447023,
+      "mode": 16832,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0",
+      "dev": 66307,
+      "inode": 55447024,
+      "mode": 16832,
+      "nlink": 4,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/output",
+      "dev": 66307,
+      "inode": 55447030,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/output/record",
+      "dev": 66307,
+      "inode": 55447033,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 2,
+      "sha256": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/pool",
+      "dev": 66307,
+      "inode": 55447026,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/pool.json",
+      "dev": 66307,
+      "inode": 55447031,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 382,
+      "sha256": "6cdc5238e63359bb977655e49678fa964f1153e88ab0038fa03447a54f254a72"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/pool/native-cache",
+      "dev": 66307,
+      "inode": 55447027,
+      "mode": 16893,
+      "nlink": 3,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/pool/native-cache/tmp",
+      "dev": 66307,
+      "inode": 55447028,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/pool/native-cache/tmp/payload",
+      "dev": 66307,
+      "inode": 55447032,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 3,
+      "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0/pool/replay",
+      "dev": 66307,
+      "inode": 55447029,
+      "mode": 33204,
+      "nlink": 1,
+      "bytes": 10,
+      "sha256": "b44ea687b506d5ca725c434cbe69d0cd3cd0cdae245cd337e6013c6c6ed9017a"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenccurrent",
+      "dev": 66307,
+      "inode": 55447025,
+      "mode": 41471,
+      "nlink": 1,
+      "bytes": 96,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0"
+    },
+    {
+      "path": ".tmp-task12-native-pool-cpu/tmp",
+      "dev": 66307,
+      "inode": 55447019,
+      "mode": 16893,
+      "nlink": 2,
+      "bytes": 4096
+    }
+  ],
+  "entries": 335,
+  "regular_paths": 99,
+  "symlink_paths": 19,
+  "regular_path_bytes": 44287,
+  "unique_regular_inodes": 96,
+  "unique_inode_bytes": 44267,
+  "symlinks_followed": false,
+  "deleted": false
+}

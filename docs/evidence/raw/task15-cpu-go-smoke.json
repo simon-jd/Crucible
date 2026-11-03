@@ -1,0 +1,53 @@
+{
+  "command": [
+    "/usr/bin/true"
+  ],
+  "samples": [],
+  "scan_errors": [],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "f29319324bcb5f753a2b6828276da41b651114beb37b1ced3a701d0d907871cd",
+  "before": {
+    "canonical_bytes": 13288880905,
+    "owned_bytes": 0,
+    "projected_bytes": 13978880905,
+    "free_bytes": 269172498432
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/tmp"
+  },
+  "pid": 5,
+  "leader_start": "68613766",
+  "exit_code": 0,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 0.9665066259913146,
+  "after": {
+    "canonical_bytes": 13288880905,
+    "owned_bytes": 0,
+    "projected_bytes": 13978880905,
+    "free_bytes": 269172482048
+  }
+}

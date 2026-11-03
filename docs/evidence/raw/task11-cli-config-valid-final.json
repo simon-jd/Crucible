@@ -1,0 +1,21 @@
+{
+  "proposal_only": true,
+  "launch_authorized": false,
+  "family_count": 11,
+  "ids": [
+    "async_k1",
+    "sync_k0",
+    "async_k2",
+    "group4",
+    "group16",
+    "kl0",
+    "kl004",
+    "clip01",
+    "clip03",
+    "no_std",
+    "external_verl_sync"
+  ],
+  "planned_train_completions_per_variant": 2048,
+  "planned_eval_completions_per_phase": 128,
+  "runtime_verified": false
+}

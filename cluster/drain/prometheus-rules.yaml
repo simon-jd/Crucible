@@ -1,0 +1,24 @@
+# Controller owns 3-distinct-training-sample policy; time-based Prometheus `for`
+# cannot express 3 training updates, so it is deliberately not duplicated here.
+groups:
+  - name: crucible-hardware
+    rules:
+      - alert: CrucibleGpuXid
+        expr: DCGM_FI_DEV_XID_ERRORS > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: GPU XID reported; controller verifies freshness and ownership before drain
+      - alert: CrucibleLinkDown
+        # Restrict this expression to site-approved fabric NIC names before deployment.
+        expr: node_network_carrier{device=~"ib.*|mlx.*"} == 0
+        labels:
+          severity: critical
+        annotations:
+          summary: Fabric link down; controller uses explicit NIC inventory
+      - alert: CrucibleTrainingMetricsStale
+        expr: time() - crucible_step_sample_timestamp_seconds > 120
+        labels:
+          severity: warning
+        annotations:
+          summary: No new 50-step training report within freshness budget

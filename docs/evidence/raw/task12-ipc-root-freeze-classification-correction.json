@@ -1,0 +1,10 @@
+{
+  "error": "Brief assumed source/artifact path sets disjoint; actualsourcesabsolute/artifactsrelative and allowed two files appear both",
+  "already_allowed_maintained_paths": [
+    "serving/baseline/cache-audit.json",
+    "serving/baseline/runtime_entry_test.py"
+  ],
+  "effect": "Only reconcile same allowed paths in both groups if changed; all other artifacts/externalnativefiles/4executables stay frozen",
+  "old_freeze_unchanged": true,
+  "new_GPU_authority": false
+}

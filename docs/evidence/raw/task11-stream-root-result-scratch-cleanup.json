@@ -1,0 +1,116 @@
+{
+  "time_utc": "2026-10-25T15:27:57.727838+00:00",
+  "scope": "ROOT complete independent pathset+lstat inventory BEFORE exact emptyrmdir; actualstream97129 terminal0",
+  "original_session": 97129,
+  "tests": "44new+1affectedretained=45passed13.64s",
+  "peak_sampled_RSS_plus_4MiB": 1419063296,
+  "cleanup_confirmed": true,
+  "all_nine_executed_code_pins_unchanged": true,
+  "README": "post-test documentedstatusupdate permitted separately",
+  "inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792941991547507421
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/cuda",
+      "dev": 66307,
+      "inode": 56395052,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/cupy",
+      "dev": 66307,
+      "inode": 56395053,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/inductor",
+      "dev": 66307,
+      "inode": 56395048,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/numba",
+      "dev": 66307,
+      "inode": 56395054,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/tmp",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792942005479416549
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/torch",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/triton",
+      "dev": 66307,
+      "inode": 56395049,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/vllm",
+      "dev": 66307,
+      "inode": 56395057,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/xdg",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    }
+  ],
+  "directory_count": 11,
+  "regular_files": 0,
+  "symlinks": 0,
+  "removed": true,
+  "delete_method": "exactemptyrmdir deepestfirst; allraw/failedlogs/runtime/client/sharedcache preserved"
+}

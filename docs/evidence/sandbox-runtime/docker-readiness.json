@@ -1,0 +1,24 @@
+{
+  "name": "postedism-ubuntu-system-selfuse",
+  "server_version": "29.9.1",
+  "cgroup_version": "2",
+  "os": "linux",
+  "arch": "x86_64",
+  "security_options": [
+    "name=apparmor,profile=default",
+    "name=seccomp,profile=builtin",
+    "name=cgroupns"
+  ],
+  "default_runtime": "runc",
+  "runtime_names": [
+    "io.containerd.runc.v2",
+    "nvidia",
+    "runc"
+  ],
+  "endpoint": "unix:///var/run/docker.sock",
+  "kind": "read-only Docker capability inventory",
+  "containers_created": false,
+  "images_created": false,
+  "daemon_configuration_changed": false,
+  "gvisor_execution_verified": false
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "azure",
+    "url": "https://raw.githubusercontent.com/Azure/AzurePublicDataset/215becdacba1ce682c7368642ce97d5a332de7a6/data/AzureLLMInferenceTrace_conv.csv",
+    "revision": "215becdacba1ce682c7368642ce97d5a332de7a6",
+    "read_bound_bytes": 65536,
+    "selection": "header + first 100 complete data rows; no filtering; prefix selection is not representative",
+    "bytes": 3725,
+    "sha256": "0fe0a32c1b7c4293dbe00da14fd6c28332bb4794789db96a74e3bc88ecd0dc1e",
+    "rows": 100,
+    "retrieved_utc_date": "2026-10-24",
+    "hash_scope": "selected prefix bytes only, not full upstream file",
+    "attribution": "Patel et al., Splitwise, ISCA 2024, CC-BY"
+  },
+  {
+    "name": "burstgpt",
+    "url": "https://raw.githubusercontent.com/HPMLL/BurstGPT/d895a53bb7b8ec137d0d2fe203b335835a78c10a/data/BurstGPT_1.csv",
+    "revision": "d895a53bb7b8ec137d0d2fe203b335835a78c10a",
+    "read_bound_bytes": 65536,
+    "selection": "header + first 100 complete data rows; no filtering; prefix selection is not representative",
+    "bytes": 4248,
+    "sha256": "dcf0fb39ab02046f06dcb63252faab1e13e0da647283a87f69e421040deb5a7f",
+    "rows": 100,
+    "retrieved_utc_date": "2026-10-24",
+    "hash_scope": "selected prefix bytes only, not full upstream file",
+    "attribution": "Wang et al., BurstGPT, KDD 2025, CC-BY-4.0"
+  }
+]

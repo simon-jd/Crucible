@@ -1,0 +1,134 @@
+datasets:
+  gsm8k:
+    assets:
+      main/test-00000-of-00001.parquet:
+        actual_sha256: null
+        expected_bytes: 419088
+        expected_git_blob_sha1: 861005fb045993f46d198aa797440f4096f9aa17
+        expected_lfs_sha256: ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59
+      main/train-00000-of-00001.parquet:
+        actual_sha256: null
+        expected_bytes: 2306545
+        expected_git_blob_sha1: 61b47c916c27533feaa3763484ae0ea58f92b056
+        expected_lfs_sha256: ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d
+    content_verified: false
+    metadata_sha256: 6d513d718ca7048f627aed806b6ab7c5e89be142c70eb68ed0427bfe484e956a
+    metadata_url: https://huggingface.co/api/datasets/openai/gsm8k?blobs=true
+    repo: openai/gsm8k
+    revision: 740312add88f781978c0658806c59bc2815b9866
+  math500:
+    assets:
+      test.jsonl:
+        actual_sha256: null
+        expected_bytes: 446564
+        expected_git_blob_sha1: 2376b9a194b46c0790e197c91b7249e5f88ac09b
+    content_verified: false
+    metadata_sha256: e11d256ec1e0d7256783adc7654fa795c68544c4ac033cc164eb6c91634afc6a
+    metadata_url: https://huggingface.co/api/datasets/HuggingFaceH4/MATH-500?blobs=true
+    repo: HuggingFaceH4/MATH-500
+    revision: 6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be
+declared_factor: base
+evaluation:
+  completion_plan_sha256: null
+  completions_per_problem: 1
+  heldout_manifest_sha256: null
+  max_context_tokens: 2048
+  max_new_tokens: 512
+  phases:
+  - before
+  - after
+  planned_completions_per_phase: 128
+  same_plan_across_variants: true
+  subsets:
+  - count: 64
+    dataset: gsm8k
+    split: main/test
+  - count: 64
+    dataset: math500
+    split: test
+  trusted_grading_verified: false
+external_baseline_candidate:
+  backend: hf
+  name: verl
+  revision: 8d9e350ea58c7ad4b50dd14d9dcb50577242c55f
+  runtime_verified: false
+  source_manifest: .superpowers/sdd/5-crucible-gpu-ml-plan/task11-verl-v041-source/manifest.json
+  strategy: fsdp
+  tag: v0.4.1
+framework:
+  name: crucible
+  runtime_verified: false
+  strategy: fsdp2
+id: async_k1
+model:
+  max_context_tokens: 2048
+  repo: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+objective:
+  clip: 0.2
+  group_size: 8
+  kl: 0.001
+  scale_by_std: true
+optimizer:
+  batch_completions: 16
+  learning_rate: 1.0e-05
+proposal_only: true
+readiness:
+  actual_training_complete: false
+  baseline_abi_time_memory_verified: false
+  code_data_pin: null
+  code_experiments_required: true
+  code_sandbox_verified: false
+  code_status: blocked_pending_public_tested_code_data_and_actual_isolated_sandbox
+  datasets_acquired: false
+  four_hour_execution_verified: false
+  launch_authorized: false
+  optimizer_ram_snapshot_lifecycle_verified: false
+  quality_objective: open_actual_improvement_not_established
+  tokenizer_length_feasible: false
+resources:
+  checkpoint_count_ceiling: 2
+  feasibility_verified: false
+  gpu_count: 1
+  max_session_seconds: 14400
+  paid_budget_usd: 0
+  project_cap_bytes: 14000000000
+  resident_services_cap_bytes: 16000000000
+sampler:
+  logprobs: raw_model_distribution
+  temperature: 1.0
+  top_k: -1
+  top_p: 1.0
+schedule:
+  execution: single_gpu_rollout_learner_time_share
+  max_staleness: 1
+  mode: async
+seed: 17
+timing:
+  A: base
+  B: comparison_variant
+  matched_pairs:
+  - order: AB
+    pair: 1
+  - order: BA
+    pair: 2
+  - order: AB
+    pair: 3
+  measurements: null
+  within_pair_conditions:
+  - same_data
+  - same_seed
+  - same_model_revision
+  - same_budget
+  - same_runtime
+  - same_resources
+train:
+  completions_per_prompt: 16
+  dataset: gsm8k
+  max_context_tokens: 2048
+  max_new_tokens: 256
+  planned_completions: 1024
+  selected_prompt_ids_sha256: null
+  selection_manifest_sha256: null
+  split: main/train
+  unique_prompt_ids: 128

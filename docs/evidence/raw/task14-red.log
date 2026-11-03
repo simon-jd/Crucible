@@ -1,0 +1,21 @@
+# crucible/serving/router [crucible/serving/router.test]
+serving/router/router_test.go:8:30: undefined: Router
+serving/router/router_test.go:8:50: undefined: Scope
+serving/router/router_test.go:11:12: undefined: New
+serving/router/router_test.go:11:16: undefined: Config
+serving/router/router_test.go:11:145: undefined: Backend
+serving/router/router_test.go:13:11: undefined: Scope
+serving/router/router_test.go:14:64: undefined: Snapshot
+serving/router/router_test.go:19:26: undefined: Snapshot
+serving/router/router_test.go:19:73: undefined: Prefix
+serving/router/router_test.go:26:26: undefined: Snapshot
+serving/router/router_test.go:26:26: too many errors
+FAIL	crucible/serving/router [build failed]
+# crucible/serving/autoscaler [crucible/serving/autoscaler.test]
+serving/autoscaler/policy_test.go:7:33: undefined: Policy
+serving/autoscaler/policy_test.go:10:9: undefined: NewPolicy
+serving/autoscaler/policy_test.go:10:19: undefined: Config
+serving/autoscaler/policy_test.go:14:44: undefined: Metrics
+serving/autoscaler/policy_test.go:14:61: undefined: Metrics
+FAIL	crucible/serving/autoscaler [build failed]
+FAIL

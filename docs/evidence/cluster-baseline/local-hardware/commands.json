@@ -1,0 +1,63 @@
+[
+  {
+    "argv": [
+      "nvidia-smi",
+      "-L"
+    ],
+    "started_utc": "2026-10-24T02:18:37.156872+00:00",
+    "returncode": 9,
+    "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "nvidia-smi",
+      "--query-gpu=driver_version",
+      "--format=csv,noheader"
+    ],
+    "started_utc": "2026-10-24T02:18:37.165222+00:00",
+    "returncode": 9,
+    "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "nvcc",
+      "--version"
+    ],
+    "started_utc": "2026-10-24T02:18:37.174494+00:00",
+    "returncode": 0,
+    "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Fri_May_08_10:53:34_AM_PDT_2026\nCuda compilation tools, release 13.2, V13.2.86\nBuild cuda_13.2.r13.2/compiler.37953736_0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "ofed_info",
+      "-s"
+    ],
+    "started_utc": "2026-10-24T02:18:37.177123+00:00",
+    "returncode": 127,
+    "stdout": "",
+    "stderr": "FileNotFoundError: [Errno 2] No such file or directory: 'ofed_info'"
+  },
+  {
+    "argv": [
+      "nvidia-smi",
+      "topo",
+      "-m"
+    ],
+    "started_utc": "2026-10-24T02:18:37.177597+00:00",
+    "returncode": 9,
+    "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "ibstat"
+    ],
+    "started_utc": "2026-10-24T02:18:37.186976+00:00",
+    "returncode": 127,
+    "stdout": "",
+    "stderr": "FileNotFoundError: [Errno 2] No such file or directory: 'ibstat'"
+  }
+]

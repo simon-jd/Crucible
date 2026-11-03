@@ -1,0 +1,9 @@
+{
+  "command": "bash scripts/azure_reaper.sh",
+  "exit_code": 1,
+  "scope": "default read-only reaper plan; no Azure mutation",
+  "error": "Azure CLI failed before account_show could finish: [Errno 30] Read-only file system: '/home/postedism/.azure/commands/2026-10-24.12-49-29.account_show.9.log'",
+  "stdout_bytes": 0,
+  "stderr_provenance": "Full Azure CLI traceback remains in the original tool result; this file records the failure summary, not a captured stderr transcript.",
+  "next_action": "Retry the same default read-only plan with host permissions for the existing Azure CLI authentication/log cache."
+}

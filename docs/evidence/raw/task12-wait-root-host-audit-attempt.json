@@ -1,0 +1,19 @@
+{
+  "status": "inconclusive; no signals sent",
+  "attempted_PID_presence_assertion_failed": {
+    "3": true,
+    "1176199": false,
+    "1176252": false
+  },
+  "monitor_PIDs": {
+    "smoke": 3,
+    "red": 3,
+    "focused": 3,
+    "race": 3,
+    "build": 3
+  },
+  "audit_python_PID": 3,
+  "reason": "monitor numeric PIDs are scoped to their execution namespaces; a presence check in a later sandbox cannot prove host identity or absence",
+  "correction": "repeat exact native controller/child and port checks on host permission surface; use original anchored terminal-group proof for sandbox compiler children",
+  "root_result_check_limitation": "raw/task12-wait-root-result-check.json arithmetic and hashes valid; its default-sandbox PID/port check is not standalone host proof"
+}

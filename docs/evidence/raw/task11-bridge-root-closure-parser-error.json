@@ -1,0 +1,1 @@
+{"error": "TypeError: unsupported operand type(s) for /: PosixPath and dict", "scope": "pre-write census parser assumed list[str], actual list[dict]; no source/experiment/commit action", "corrected": "use entry[path] from inspected schema"}

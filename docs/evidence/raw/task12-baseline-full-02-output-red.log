@@ -1,0 +1,100 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+____________ test_real_child_stdout_hard_cap_exec_identity_and_reap ____________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-red/test_real_child_stdout_hard_ca0')
+
+    def test_real_child_stdout_hard_cap_exec_identity_and_reap(tmp_path):
+        target = tmp_path / "stdout"
+        code = "import os; print(os.getpid(),flush=True); os.write(1,b'x'*8192)"
+        with target.open("wb") as out:
+            child = subprocess.Popen(
+>               experiment.capped_command([sys.executable, "-B", "-c", code], 4096),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+                stdout=out, stderr=subprocess.DEVNULL,
+            )
+E           AttributeError: module 'serving.baseline.experiment' has no attribute 'capped_command'
+
+serving/baseline/output_limits_test.py:20: AttributeError
+___ test_guard_launcher_inherits_limit_ignored_signal_and_keeps_private_lock ___
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-red/test_guard_launcher_inherits_l0')
+
+    def test_guard_launcher_inherits_limit_ignored_signal_and_keeps_private_lock(tmp_path):
+        # Real exec child catches EFBIG while holding a private fixture lock, then
+        # proves it was still locked before its explicit drain/exit. No GPU lock.
+        proof = tmp_path / "proof.json"
+        code = f'''import errno,fcntl,json,os,resource,signal
+    from pathlib import Path
+    lock=open({str(tmp_path / 'private.lock')!r},'w')
+    fcntl.flock(lock,fcntl.LOCK_EX)
+    try:
+     while True: os.write(1,b'x'*1024)
+    except OSError as e:
+     assert e.errno==errno.EFBIG
+     other=open(lock.name,'r')
+     try:
+      fcntl.flock(other,fcntl.LOCK_EX|fcntl.LOCK_NB)
+      held=False
+     except BlockingIOError: held=True
+     Path({str(proof)!r}).write_text(json.dumps({{"limit":resource.getrlimit(resource.RLIMIT_FSIZE),"ignored":signal.getsignal(signal.SIGXFSZ)==signal.SIG_IGN,"held_after_EFBIG":held}}))
+    fcntl.flock(lock,fcntl.LOCK_UN)
+    '''
+        launch = (
+            "import os;from pathlib import Path;from serving.baseline.experiment import launch_guard;"
+            f"raise SystemExit(launch_guard({[sys.executable, '-B', '-c', code]!r},dict(os.environ),"
+            f"Path({str(tmp_path / 'guard.log')!r}),Path({str(tmp_path / 'receipt.json')!r}),4096))"
+        )
+        result = subprocess.run([sys.executable, "-B", "-c", launch], timeout=10, capture_output=True)
+        assert result.returncode != 0  # at-cap guard diagnostics invalidate this run
+>       state = json.loads(proof.read_text())
+                           ^^^^^^^^^^^^^^^^^
+
+serving/baseline/output_limits_test.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-red/test_guard_launcher_inherits_l0/proof.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-red/test_guard_launcher_inherits_l0/proof.json'
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1013: FileNotFoundError
+______ test_bounded_utf8_metadata_keeps_prefix_and_never_reports_success _______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-red/test_bounded_utf8_metadata_kee0')
+
+    def test_bounded_utf8_metadata_keeps_prefix_and_never_reports_success(tmp_path):
+        target = tmp_path / "metadata.json"
+>       with pytest.raises(experiment.OutputLimit, match="metadata.json"):
+                           ^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'serving.baseline.experiment' has no attribute 'OutputLimit'
+
+serving/baseline/output_limits_test.py:67: AttributeError
+______ test_full_budget_includes_git_copy_and_reserved_terminal_metadata _______
+
+    def test_full_budget_includes_git_copy_and_reserved_terminal_metadata():
+>       caps = experiment.evidence_caps()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'serving.baseline.experiment' has no attribute 'evidence_caps'
+
+serving/baseline/output_limits_test.py:75: AttributeError
+=========================== short test summary info ============================
+FAILED serving/baseline/output_limits_test.py::test_real_child_stdout_hard_cap_exec_identity_and_reap
+FAILED serving/baseline/output_limits_test.py::test_guard_launcher_inherits_limit_ignored_signal_and_keeps_private_lock
+FAILED serving/baseline/output_limits_test.py::test_bounded_utf8_metadata_keeps_prefix_and_never_reports_success
+FAILED serving/baseline/output_limits_test.py::test_full_budget_includes_git_copy_and_reserved_terminal_metadata
+4 failed in 0.11s

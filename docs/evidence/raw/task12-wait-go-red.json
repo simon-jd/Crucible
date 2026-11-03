@@ -1,0 +1,172 @@
+{
+  "command": [
+    ".tools/go/bin/go",
+    "-C",
+    ".tmp-task12-wait-go-loan/red",
+    "test",
+    "-trimpath",
+    "-p=1",
+    "-count=1",
+    "-timeout=30s",
+    "-v",
+    "-run",
+    "^TestWaitSegmentsBoundAndAbsoluteDue$",
+    "./serving/replay"
+  ],
+  "samples": [
+    {
+      "seconds": 1.9612254759995267,
+      "interval_seconds": 1.9612254759995267,
+      "owned_bytes": 87714,
+      "rss_bytes": 2236416,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 2.2119871040340513,
+      "interval_seconds": 0.2507616280345246,
+      "owned_bytes": 4157204,
+      "rss_bytes": 30445568,
+      "log_bytes": 0,
+      "canonical_bytes": 13308988231,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265659670528,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 4.364226680947468,
+      "interval_seconds": 2.1522395769134164,
+      "owned_bytes": 38807658,
+      "rss_bytes": 114888704,
+      "log_bytes": 0,
+      "canonical_bytes": 13355004842,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265620955136,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 6.4989177120151,
+      "interval_seconds": 2.134691031067632,
+      "owned_bytes": 79126925,
+      "rss_bytes": 41213952,
+      "log_bytes": 0,
+      "canonical_bytes": 13389876132,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265582178304,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 8.675729093956761,
+      "interval_seconds": 2.1768113819416612,
+      "owned_bytes": 114907004,
+      "rss_bytes": 92995584,
+      "log_bytes": 0,
+      "canonical_bytes": 13426240893,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265546866688,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 10.914963355986401,
+      "interval_seconds": 2.2392342620296404,
+      "owned_bytes": 148388691,
+      "rss_bytes": 74739712,
+      "log_bytes": 0,
+      "canonical_bytes": 13459209489,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265517330432,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 13.132391185034066,
+      "interval_seconds": 2.217427829047665,
+      "owned_bytes": 172465387,
+      "rss_bytes": 154480640,
+      "log_bytes": 0,
+      "canonical_bytes": 13493798236,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265473986560,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 15.336029486963525,
+      "interval_seconds": 2.203638301929459,
+      "owned_bytes": 227516543,
+      "rss_bytes": 165830656,
+      "log_bytes": 0,
+      "canonical_bytes": 13528489518,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265458814976,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 17.574624066008255,
+      "interval_seconds": 2.2385945790447295,
+      "owned_bytes": 228301307,
+      "rss_bytes": 31838208,
+      "log_bytes": 0,
+      "canonical_bytes": 13409951608,
+      "nonloan_bytes": 13300614127,
+      "projected_bytes": 13990614127,
+      "free_bytes": 265580503040,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    }
+  ],
+  "scan_errors": [],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "8d06f5ca394d81e81ee419f8b4e91ac6cf4365ede7244b5773809564b3eb524c",
+  "before": {
+    "canonical_bytes": 13300701841,
+    "owned_bytes": 87714,
+    "nonloan_bytes": 13300614127,
+    "projected_bytes": 13990614127,
+    "free_bytes": 265699086336,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/tmp"
+  },
+  "pid": 3,
+  "leader_start": "72273859",
+  "exit_code": 1,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 20.062325445003808,
+  "after": {
+    "canonical_bytes": 13409951608,
+    "owned_bytes": 109335368,
+    "nonloan_bytes": 13300616240,
+    "projected_bytes": 13990616240,
+    "free_bytes": 265580457984,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  }
+}

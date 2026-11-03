@@ -1,0 +1,20 @@
+{
+  "host_permission_read_only": true,
+  "owned_identity_checks": [
+    {
+      "pid": 656903,
+      "expected_starttime": 71623848,
+      "absent": true
+    },
+    {
+      "pid": 656904,
+      "expected_starttime": 71623852,
+      "absent": true
+    }
+  ],
+  "port31013_listeners": [],
+  "no_socket_probe": true,
+  "unrelated_process_cmdline_or_environment_read": false,
+  "signals_sent_by_audit": false,
+  "monotonic_ns": 716370230534765
+}

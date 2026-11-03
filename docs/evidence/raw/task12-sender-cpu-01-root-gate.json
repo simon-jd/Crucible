@@ -1,0 +1,40 @@
+{
+  "time_utc": "2026-10-25T08:53:27.223413+00:00",
+  "decision": "one CPU fixture screen only after original tiny-test resources are terminal and exact scratch cleanup/absence proved; executing agent repeats fresh checks immediately before launch",
+  "source_hashes": {
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": "ad7f88b786fd0bc8e938855f7ab867f6e96ef0e6393e377162396290f576ea24",
+    "docs/evidence/raw/task12-sender-cpu-01-fixture-test.py": "6b1397ea53a7d20cc0bd6a68cb26f5f7fa31e58c1f4d34d4caef10032f7d5b02"
+  },
+  "frozen_original_sources": 176,
+  "frozen_original_artifacts": 58,
+  "original_executables": 4,
+  "mismatches": [],
+  "coordinator_files_unchanged": 100,
+  "project_bytes": 13296937911,
+  "planned_project_bytes": 690000000,
+  "margin_bytes": 13062089,
+  "shared_model_cache_bytes": 23815435170,
+  "free_bytes": 266119327744,
+  "rescans": [],
+  "port31013_bind_check": "available; no TCP/HTTP probe",
+  "output_fresh": true,
+  "tests": "16 new cases passed0.33s; root read names/output, no test repeat",
+  "scope": "single frozen replay binary on immediate loopback fixture, \u226490s total/512MB sampled early-stop/\u22642MB phase files; no native imports/model/GPU/Go build or metrics acceptance",
+  "outer_command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "85s",
+    "/usr/bin/prlimit",
+    "--fsize=262144:262144",
+    "--core=0:0",
+    "--",
+    "env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    ".venv/bin/python",
+    "-B",
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py"
+  ],
+  "failure_rule": "retain invalid result/cleanup and stop; no automatic repeat; StageC not authorized"
+}

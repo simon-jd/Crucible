@@ -1,0 +1,406 @@
+{
+  "time_utc": "2026-10-25T08:26:22.606622+00:00",
+  "scope": "immutable coordinator-added handoff and original full02 actual-run evidence",
+  "files": {
+    "docs/COORDINATOR-RESUME-20261025.txt": {
+      "bytes": 3177,
+      "sha256": "fcca2236f4ff5a5267bdb73dbd53e2da319dc42275174d761c2d051b0d469ca9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-coordinator-latest-20261025.json": {
+      "bytes": 3977,
+      "sha256": "52c726db3525e43ff5e460f8130128f467b36016507bd6f5e0464cfe8678c029"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-environment-replay-20261025.json": {
+      "bytes": 1015,
+      "sha256": "85c4838040eec9eec7fcd41c8a38cefc5903695ce8bb049c9116f870958b0a30"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-guard.log": {
+      "bytes": 690,
+      "sha256": "e5cc630f366f33d81051197de5e272092e7ba89f6fd34c52f7b0dfb943652336"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-launch-precondition-error-20261025.txt": {
+      "bytes": 264,
+      "sha256": "e13e35a5921fbdf8f45b825a369a3cc09a09c36fddc2f256b58c08d53a2188cd"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-launch.json": {
+      "bytes": 1388,
+      "sha256": "0aabc14f82edca6043f4e2453abf97268423f606415caeeca21581835cf40979"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-postflight-user-20261025.json": {
+      "bytes": 2289,
+      "sha256": "f04a96b9c33dd1804a712037de280f9490300c14c1f763ec75b49acf6e179686"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-user-authorization-20261025.json": {
+      "bytes": 810,
+      "sha256": "219678a359583cad13ec478fed767c65c072e3646008a57dac18e03a3f1ae8cd"
+    },
+    "docs/evidence/raw/task12-baseline-full-02-user-preflight-20261025.json": {
+      "bytes": 817,
+      "sha256": "8bc389190ec1d004c5d4c60ae0e6e072af3d3b5da1c8d3f4e01ab71bc7486347"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/abi-reference.json": {
+      "bytes": 229,
+      "sha256": "03cbf01e4ca6cee23af1bfabd1295ed4515fe1d42cc2e9ae5659ebd5dc41fae4"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-0.boundary.json": {
+      "bytes": 453,
+      "sha256": "b2389d7bd09d4f0fb930b9119f1040593ad002b9b8ec838fa5b003cf7d45e654"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-0.json": {
+      "bytes": 50776,
+      "sha256": "d82aff7603745347bf417f56714425d6fa98d9bced05063f03db02c40f73e691"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-0.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-0.summary.json": {
+      "bytes": 1659,
+      "sha256": "545db3088fde4b01b60d420a7d191525f220fcf9c334af5e2b24b03ebb3a8813"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-1.boundary.json": {
+      "bytes": 453,
+      "sha256": "47d89d32788ef23b990cf042896bf7a1c31b6e9f2c0419332905c204d3857a13"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-1.json": {
+      "bytes": 50723,
+      "sha256": "1cf9197a2714607e9495d01979cb4399f4d0f2255b9239c812e7388c3b59ba7c"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-1.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-1.summary.json": {
+      "bytes": 1659,
+      "sha256": "655d48af0d8605f5867002bd3884d086878fe59b4f7b478f03f80a4dceb66baa"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-2.boundary.json": {
+      "bytes": 454,
+      "sha256": "95765954ac5409bd760f4672fcc2fcbe737ca04f456f20de4131b645d5cf80aa"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-2.json": {
+      "bytes": 50713,
+      "sha256": "f9f58fe6e7f48f1094c63a8f7ea542ed77c90ba9327f8aba874981c0b96f0e5f"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-2.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-2.summary.json": {
+      "bytes": 1660,
+      "sha256": "2544afe82e327303a7ae027dac59d91c275af7989ab64985664839c695fc3eae"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-0.boundary.json": {
+      "bytes": 5180,
+      "sha256": "3f5f543cca5419702996abef4dc9d0f23abffd851c6b6f39f50bd78a81d02555"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-0.json": {
+      "bytes": 66208,
+      "sha256": "4b9e780f1e1bb8bfe6e31b9486db460c22a67edb089ca4b97dea13a62d692fe8"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-0.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-0.summary.json": {
+      "bytes": 6976,
+      "sha256": "cf447f0a6bde98227f5e1a37177b67a9aeadf5f68ff188d692e074968f575a68"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-1.boundary.json": {
+      "bytes": 4508,
+      "sha256": "88a857adaa5c8c4243b9f88fdb05e6f44b3183d3f06f220714140c23ae9231a6"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-1.json": {
+      "bytes": 66055,
+      "sha256": "cefc4d2be77c07e3a6aad7f6db82c21f4e451d90fd0a2794d1d44667550deb5a"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-1.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-1.summary.json": {
+      "bytes": 6264,
+      "sha256": "2f945c8277393f54c763507b8545a99ce191f07356e1f4df1b71ac312ffead90"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-10.boundary.json": {
+      "bytes": 5172,
+      "sha256": "ec51acdc65629475f57e3cf712c247ee91b3da69221d82b95108148271da6ed3"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-10.json": {
+      "bytes": 66141,
+      "sha256": "28d9d91a2b525a65d4d519d1367f0d77d9f10159855c65bf7b8232976d7d547d"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-10.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-10.summary.json": {
+      "bytes": 6970,
+      "sha256": "dd7accca0723db7946131405d7e6fe60cde885dc42d7d5f61425ed70d6df68ac"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-11.boundary.json": {
+      "bytes": 5523,
+      "sha256": "5e5b7bafa9b722dac6dcd6d409b3d477b73f40e83909acbbff6b6399d01571c7"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-11.json": {
+      "bytes": 66142,
+      "sha256": "03e9f31dff9dae4af970cc940aabc806daf5c4f0a387425ac6248b7661c48c7e"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-11.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-11.summary.json": {
+      "bytes": 7338,
+      "sha256": "202e6fa6720dd613c80fa2b1ac44de812f396784378d89a9fd7d3e3ea9adb6be"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-2.boundary.json": {
+      "bytes": 4169,
+      "sha256": "1d41933a9fd79c3363f10d48d2e52da94b02af315c299d9136036b2f0489c9e8"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-2.json": {
+      "bytes": 66046,
+      "sha256": "b310b57d64d51a56931473afdb90bcd3ec0eb67d9a4483ec8c736f182c6e938a"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-2.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-2.summary.json": {
+      "bytes": 5905,
+      "sha256": "0a5a3dd2983b85ae1aa2c1024505962c6a6e3265ba8f0a4aa40465f0c97b46d9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-3.boundary.json": {
+      "bytes": 6196,
+      "sha256": "5f29441f4408e13ee31047f72f9d7bac936b01be5337d81bd48e5f47e5643f68"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-3.json": {
+      "bytes": 66158,
+      "sha256": "b11e3ec574666105f4c0234a32673a7f9771c85dc9ac941a35fcaf4b0fce308c"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-3.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-3.summary.json": {
+      "bytes": 8052,
+      "sha256": "4f013198fc5d994d08f66233acd0d0eb71b242770b702b685a52683136a96b97"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-4.boundary.json": {
+      "bytes": 5856,
+      "sha256": "82d774b32ed9dfddf22447b21677cbc81a0fb424f293ebcc8bb02c104ccbfec5"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-4.json": {
+      "bytes": 66086,
+      "sha256": "7f1eb9c540d609d5acd7b5f078eba47ca8672cde9f41204c5b580e91f7ebd781"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-4.stderr": {
+      "bytes": 44,
+      "sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-4.summary.json": {
+      "bytes": 7678,
+      "sha256": "076fa5801b7775e60f0570aa2806c37b7100b9986632632095f1e61ae216d3c2"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-5.boundary.json": {
+      "bytes": 4168,
+      "sha256": "9ec165a281f702c63eb8224b1a14ac115d1c6ba4b953544f62f610d9af5487b2"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-5.json": {
+      "bytes": 66079,
+      "sha256": "47622539e365c311fe611019a8dc0fdcde005f491ecbdd040408941be334e786"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-5.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-5.summary.json": {
+      "bytes": 5904,
+      "sha256": "a09f08880e2ecb5965f34b934b4e079bcce343162102c9d1efee8a51f8ae35f5"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-6.boundary.json": {
+      "bytes": 5184,
+      "sha256": "c054bf85559ad46d2cf37618253c5e923d988a406b2e74c5e10707f42633f9bf"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-6.json": {
+      "bytes": 66085,
+      "sha256": "94013f041b43d7b778dfbd75b55fb1c49e7f15db8bf6a5116ed6b6e663da6a8d"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-6.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-6.summary.json": {
+      "bytes": 6979,
+      "sha256": "373551a817f1fb4a50608ba89ed763b67e891712829b111912c1f7773350027c"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-7.boundary.json": {
+      "bytes": 5525,
+      "sha256": "73ad61f91fd6a316029b595f01eeb534b3d78d5f4796b414d7939a2fc76cb29e"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-7.json": {
+      "bytes": 66143,
+      "sha256": "4cf33d26ea257bc1fd4084e51412f57cec3cbc9a0bb99e13b09547c59f54c561"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-7.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-7.summary.json": {
+      "bytes": 7339,
+      "sha256": "c29efef134f571539557be9083b6e28b6526aef6676a2fc8e4b001244e505629"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-8.boundary.json": {
+      "bytes": 5523,
+      "sha256": "db66ece0df556b6a00389507566341f4e9ec513637175af8dd6015c54fbee2a5"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-8.json": {
+      "bytes": 66125,
+      "sha256": "49a4d209c3a057d3d2168b6f69c5da4f002a90256bba62d5bbd29d8c0b87a8b4"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-8.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-8.summary.json": {
+      "bytes": 7339,
+      "sha256": "6747d42219ddd3d0bb7548065509fd61f05517e2357f95ea738a5477a8ac25c8"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-9.boundary.json": {
+      "bytes": 5517,
+      "sha256": "886e83033e771e28308d216a19a4ff813f8b8732bc31ece3bba6aefdafe07636"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-9.json": {
+      "bytes": 66123,
+      "sha256": "82ec15850cd5732fdb18318a991539709fd0a186ec54346b16af1ff9afe85128"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-9.stderr": {
+      "bytes": 29,
+      "sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-9.summary.json": {
+      "bytes": 7339,
+      "sha256": "e8ab1eccdbb55fe8e929b6cb74bf79ed27abe714484cf2edc3c72215ec0d709f"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-pairs.json": {
+      "bytes": 104945,
+      "sha256": "01e8531f8b93e692123aa2106b4ecc9ff7db24b1b00980b54bbb5a8cdccfc858"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/azure-slo.json": {
+      "bytes": 2911,
+      "sha256": "39dccc550ff82a16b1c5beb7a1c9ea800d69cf1fcd5ed04f6e4d9f35354e215c"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-0.boundary.json": {
+      "bytes": 455,
+      "sha256": "5722ebbfde07f011949eb74aa5876f989e195ef7faeb388762edd7e92bc3f086"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-0.json": {
+      "bytes": 43846,
+      "sha256": "76ce16bbc80f6ce90282a8479fda4033204b507d10ca6948e17de697045b81d2"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-0.stderr": {
+      "bytes": 44,
+      "sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-0.summary.json": {
+      "bytes": 1661,
+      "sha256": "64cf85913b30f9b33598e8b57d74bae9f3522239cb0883c229a608c5719aa55e"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-1.boundary.json": {
+      "bytes": 453,
+      "sha256": "f736f1a11760b0f5761901a63d722c844d1b5a2c10816b0a8e0cf67be9fa6934"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-1.json": {
+      "bytes": 43847,
+      "sha256": "7afb554f81f90b60ab06fbb2ba95b3599375d220f7daf458713fc7e50f45e2fe"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-1.stderr": {
+      "bytes": 44,
+      "sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-1.summary.json": {
+      "bytes": 1659,
+      "sha256": "2770508cbe811aaa00485f275cbf60308920f23df45f52c6feb68ad2a9b38984"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-2.boundary.json": {
+      "bytes": 453,
+      "sha256": "85933c934abbb04401ef48105d2bec58e660a2233e53635b84b08713d4b6964f"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-2.json": {
+      "bytes": 43851,
+      "sha256": "1ae605256701682a1be886013cffad7a5376143891097101c69064d2294370c2"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-2.stderr": {
+      "bytes": 44,
+      "sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-2.summary.json": {
+      "bytes": 1659,
+      "sha256": "ab1c1b8368a11324cdfd6ba0bd6d88e442d4a6be3ba7980d2b16dd50baa7fd6c"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/burst-pairs.json": {
+      "bytes": 3694,
+      "sha256": "bc69f766cb5b908609986ba2905b0222f1aeda05d1c2d8211d19f6de16886b16"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/cleanup.json": {
+      "bytes": 299,
+      "sha256": "a31c9dff1e3c306fe5282463345b63b8e0ac461afdefe1c997a945925ef4de50"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-error.raw": {
+      "bytes": 201,
+      "sha256": "d2e694c4f586941a15f8fe064d35cfc627bbbf3868ee85a400151d8a31dfa0b2"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-multi.raw": {
+      "bytes": 1651,
+      "sha256": "8d8dd139e501b7cfb9d899b5a68c60b74c16d0b54dc76a3046b5ed810d7f1a4b"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-one.raw": {
+      "bytes": 606,
+      "sha256": "4f36e0a2175e5c4c5355050bda613d0a1606a9d4f9613fb2095308717e6d4842"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-zero.raw": {
+      "bytes": 597,
+      "sha256": "65089922cd407f01c8c7efa97858e34b9ef3ae14a025dff0d11a0be28f34356d"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke.json": {
+      "bytes": 2602,
+      "sha256": "a536b5ddf77331a400fbe83e1143a5461ad3369e48e5fd2f283f6f01e5263d7d"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/resource-samples.json": {
+      "bytes": 482971,
+      "sha256": "cbe4dfb01ecdc820ab234bfc12e37a591fc5b44d6fc0dfe2aa7ae3b158370b99"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/server-inventory.json": {
+      "bytes": 40881,
+      "sha256": "c4fd8e0c8f15fac0881e9808d763f35b008008a2186595ae14f18d5a6990a91d"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/server.log": {
+      "bytes": 650080,
+      "sha256": "598c8da34a39f24414ea1920cf4798ad5bd09d6c3e79e960d63bb5841591dfab"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/terminal.json": {
+      "bytes": 3069,
+      "sha256": "75f77b1ec652f1dbb4393f87c64d5ad7c73518a75365bc39187984482d9b539c"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/warmup-0.raw": {
+      "bytes": 5772,
+      "sha256": "394c6ab141907bbbf64a21797cbe9b4acd9d53770ea1096b709af9c20218bc5a"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/warmup-1.raw": {
+      "bytes": 12289,
+      "sha256": "8d345b0ae95a62d131967c76edd61b6e0ccd562b60e5299ce8abc6affd4c926a"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/warmup-2.raw": {
+      "bytes": 12135,
+      "sha256": "320b1e409e420211c0ac955df07bd27a4e40ca7e3b88c966a94a906bde9479f7"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/warmup-boundary.json": {
+      "bytes": 454,
+      "sha256": "a47a9c0e17395e7101cf8ece89e9e5106eba6e98c2aa1b440664bfb1b2890f68"
+    },
+    "docs/evidence/raw/task12-baseline-full-02/warmup.json": {
+      "bytes": 1962,
+      "sha256": "396f1a3b691a23faec61f74efc50fe2eb1e487c46446c73ccb7fcb1596ded05a"
+    }
+  }
+}

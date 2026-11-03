@@ -1,0 +1,37 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+____ test_calibration_lineage_binds_model_runtime_source_and_server_config _____
+
+    def test_calibration_lineage_binds_model_runtime_source_and_server_config():
+        lineage = {"model_manifest_sha256": "model-a", "runtime_sha256": "runtime-a",
+                   "sources_sha256": "source-a", "server_args": ["--dtype", "bfloat16"]}
+>       slo = calibrate([run([record()])] * 3, ["a", "b", "c"], lineage)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: calibrate() takes 2 positional arguments but 3 were given
+
+serving/baseline/experiment_test.py:85: TypeError
+_ test_matched_pairs_keep_invalid_and_missing_members_without_accepted_aggregate _
+
+    def test_matched_pairs_keep_invalid_and_missing_members_without_accepted_aggregate():
+>       from serving.baseline.experiment import matched_pairs
+E       ImportError: cannot import name 'matched_pairs' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:92: ImportError
+_________ test_fixed_warmups_execute_real_http_outside_source_windows __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/pytest-of-postedism/pytest-2/test_fixed_warmups_execute_rea0')
+
+    def test_fixed_warmups_execute_real_http_outside_source_windows(tmp_path):
+        import http.server
+        import json
+        import threading
+    
+>       from serving.baseline.experiment import fixed_warmups
+E       ImportError: cannot import name 'fixed_warmups' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:113: ImportError
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_calibration_lineage_binds_model_runtime_source_and_server_config
+FAILED serving/baseline/experiment_test.py::test_matched_pairs_keep_invalid_and_missing_members_without_accepted_aggregate
+FAILED serving/baseline/experiment_test.py::test_fixed_warmups_execute_real_http_outside_source_windows
+3 failed, 4 deselected in 0.05s

@@ -1,0 +1,38 @@
+=== RUN   TestStreamingCancellationAndAdmission
+--- PASS: TestStreamingCancellationAndAdmission (0.00s)
+=== RUN   TestCompletionFailureAndBodyBounds
+--- PASS: TestCompletionFailureAndBodyBounds (0.50s)
+=== RUN   TestTransportFailureReleasesWithoutRetry
+--- PASS: TestTransportFailureReleasesWithoutRetry (0.00s)
+=== RUN   TestRunnableRouterLifecycle
+--- PASS: TestRunnableRouterLifecycle (1.01s)
+=== RUN   TestSlowConsumerDeadlineAndCancellation
+=== RUN   TestSlowConsumerDeadlineAndCancellation/deadline
+=== RUN   TestSlowConsumerDeadlineAndCancellation/parent-cancel
+--- PASS: TestSlowConsumerDeadlineAndCancellation (0.23s)
+    --- PASS: TestSlowConsumerDeadlineAndCancellation/deadline (0.20s)
+    --- PASS: TestSlowConsumerDeadlineAndCancellation/parent-cancel (0.03s)
+=== RUN   TestRequestBodyLifetimeBudget
+--- PASS: TestRequestBodyLifetimeBudget (0.15s)
+=== RUN   TestDeadlineKeepaliveReuse
+--- PASS: TestDeadlineKeepaliveReuse (0.25s)
+=== RUN   TestDeadlineCapabilityRequired
+--- PASS: TestDeadlineCapabilityRequired (0.00s)
+PASS
+ok  	crucible/serving/router	3.175s
+=== RUN   TestColdMismatchAndTimeoutStillStop
+=== RUN   TestColdMismatchAndTimeoutStillStop/mismatch
+=== RUN   TestColdMismatchAndTimeoutStillStop/timeout
+--- PASS: TestColdMismatchAndTimeoutStillStop (0.03s)
+    --- PASS: TestColdMismatchAndTimeoutStillStop/mismatch (0.00s)
+    --- PASS: TestColdMismatchAndTimeoutStillStop/timeout (0.03s)
+=== RUN   TestExecutableSignalStopsTrial
+=== RUN   TestExecutableSignalStopsTrial/sigterm
+=== RUN   TestExecutableSignalStopsTrial/sigint
+=== RUN   TestExecutableSignalStopsTrial/failed-stop
+--- PASS: TestExecutableSignalStopsTrial (0.03s)
+    --- PASS: TestExecutableSignalStopsTrial/sigterm (0.01s)
+    --- PASS: TestExecutableSignalStopsTrial/sigint (0.01s)
+    --- PASS: TestExecutableSignalStopsTrial/failed-stop (0.01s)
+PASS
+ok  	crucible/serving/experiments	1.081s

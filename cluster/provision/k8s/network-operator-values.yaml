@@ -1,0 +1,12 @@
+# Host OFED is preinstalled and measured by the checker. Operator still manages
+# discovery and the shared RDMA device plugin; adapt PF selection to site NICs.
+ofedDriver:
+  deploy: false
+rdmaSharedDevicePlugin:
+  deploy: true
+  config: |
+    {"configList":[{"resourceName":"rdma_shared_device_a","resourcePrefix":"rdma","rdmaHcaMax":63,"selectors":{"ifNames":["@RDMA_INTERFACE@"]}}]}
+secondaryNetwork:
+  deploy: false
+nfd:
+  enabled: false

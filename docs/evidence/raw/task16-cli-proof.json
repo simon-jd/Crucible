@@ -1,0 +1,39 @@
+[
+  {
+    "case": "missing_inputs",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/check_report_numbers.py"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "<inputs>:1: at least one report input is required\n"
+  },
+  {
+    "case": "dangling_input",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/check_report_numbers.py",
+      "reports/task16-absent.md"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/home/postedism/Desktop/Crucible/reports/task16-absent.md:1: cannot read report: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/reports/task16-absent.md'\n"
+  },
+  {
+    "case": "real_corrected_drafts",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/check_report_numbers.py",
+      "reports/w2-async-grpo.md",
+      "reports/w3-disaggregated-serving.md",
+      "reports/repro/README.md"
+    ],
+    "returncode": 0,
+    "stdout": "PASS: 3 reports; 68 numeric literals checked\n",
+    "stderr": ""
+  }
+]

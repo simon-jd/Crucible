@@ -1,0 +1,167 @@
+{
+  "mode": "host",
+  "script_sha256": "c4c575e43ff43d6bf7f2f52b04e87df1a46ef1184c947ffe989a18f03621c098",
+  "pins": {
+    "serving/baseline/native_pool.py": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90",
+    "serving/baseline/runtime_entry.py": "4270ba9208228e68841448f49a5b54f92b1e334101d90a66fa70adf225def1cd",
+    "serving/baseline/model_snapshot.py": "fbff2794beda16b656fe3f7c23ae02fe15e72393aac8b9dea05b3b7ecf082524",
+    "serving/baseline/prepare_runtime.py": "cf5dcdaa8bdb72d28184f9f4bad5bfb6c7b96c1222b52c4dd685d77cc8a601f1",
+    "scripts/resource_preflight.py": "89deb73ca9915555f2efcabd5ede65bc36347fb729c666c64f8efc8533ec1d23",
+    "serving/baseline/cache-audit.json": "297a0a25e62a15be1ceb3dfa7dc0e9ef03d665a77de959f31a75ddc1f8385d55"
+  },
+  "manifest_sha256": "39ea8ed99a4a4262e2d2d8f52f86d6cba4904015752c85d52e9a1868f1c0f1be",
+  "binding": {
+    "version": 1,
+    "root": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool",
+    "root_identity": [
+      66307,
+      55447049
+    ],
+    "work_identity": [
+      66307,
+      55447088
+    ],
+    "client_identity": [
+      66307,
+      55468959
+    ],
+    "client_bytes": 10160231,
+    "client_mtime_ns": 1792928229568374196,
+    "client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b"
+  },
+  "directory_identities": {
+    "native-cache": [
+      66307,
+      55447088
+    ],
+    "cuda": [
+      66307,
+      55447089
+    ],
+    "datasets": [
+      66307,
+      55447090
+    ],
+    "deep-gemm": [
+      66307,
+      55447091
+    ],
+    "flashinfer": [
+      66307,
+      55447092
+    ],
+    "hf-modules": [
+      66307,
+      55447093
+    ],
+    "inductor": [
+      66307,
+      55447094
+    ],
+    "offline-cubin-source": [
+      66307,
+      55447095
+    ],
+    "outlines": [
+      66307,
+      55447096
+    ],
+    "tmp": [
+      66307,
+      55447097
+    ],
+    "torch": [
+      66307,
+      55447098
+    ],
+    "torch-home": [
+      66307,
+      55447099
+    ],
+    "triton": [
+      66307,
+      55447100
+    ],
+    "tvm-ffi": [
+      66307,
+      55447101
+    ],
+    "xdg": [
+      66307,
+      55447102
+    ]
+  },
+  "resource_sample": {
+    "project_bytes": 13313054764,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13302894533,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13992894533,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "shared_cache_bytes": 23815435170,
+  "free_bytes": 265398951936,
+  "client_bytes": 10160231,
+  "client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "remaining_pool_bytes": 489839769,
+  "derived_native_environment": {
+    "CUDA_CACHE_MAXSIZE": "134217728",
+    "CUDA_CACHE_PATH": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/cuda",
+    "CUDA_HOME": "/usr/local/cuda-13.2",
+    "CUTE_DSL_ARCH": "sm_89",
+    "CUTE_DSL_DISABLE_FILE_CACHING": "1",
+    "CUTE_DSL_KEEP_IR": "0",
+    "CUTE_DSL_LOG_TO_FILE": "0",
+    "FLASHINFER_CUBINS_REPOSITORY": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/offline-cubin-source",
+    "FLASHINFER_DISABLE_JIT": "1",
+    "FLASHINFER_WORKSPACE_BASE": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/flashinfer",
+    "HF_DATASETS_CACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/datasets",
+    "HF_DATASETS_OFFLINE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HF_HUB_DISABLE_XET": "1",
+    "HF_HUB_ENABLE_HF_TRANSFER": "0",
+    "HF_HUB_OFFLINE": "1",
+    "HF_MODULES_CACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/hf-modules",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "MAX_JOBS": "1",
+    "OUTLINES_CACHE_DIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/outlines",
+    "PATH": "/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/codex-path:/home/postedism/.local/bin:/home/postedism/.codex/tmp/arg0-linux/codex-arg0Mv1NLj:/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/codex-path:/usr/local/cuda-13.2/bin:/home/postedism/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/postedism/.local/share/JetBrains/Toolbox/scripts",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "SGLANG_DG_CACHE_DIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/deep-gemm",
+    "SGLANG_USE_MODELSCOPE": "0",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/tmp",
+    "TOKENIZERS_PARALLELISM": "false",
+    "TORCHINDUCTOR_CACHE_DIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/inductor",
+    "TORCHINDUCTOR_COMPILE_THREADS": "1",
+    "TORCH_EXTENSIONS_DIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/torch",
+    "TORCH_HOME": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/torch-home",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TRITON_CACHE_DIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/triton",
+    "TVM_FFI_CACHE_DIR": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/tvm-ffi",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "UV_OFFLINE": "1",
+    "XDG_CACHE_HOME": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/xdg",
+    "XDG_DATA_DIRS": "/usr/share/gnome:/home/postedism/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "XDG_SESSION_CLASS": "user",
+    "XDG_SESSION_ID": "767",
+    "XDG_SESSION_TYPE": "tty"
+  },
+  "inherited_identity_environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "CUDA_HOME": "/usr/local/cuda-13.2",
+    "LD_LIBRARY_PATH": null,
+    "LD_PRELOAD": null
+  },
+  "environment_scope": "only reviewed43 derived keys +4 inherited identity keys; host mode is authoritative",
+  "native_output_absent": true,
+  "native_executed": false,
+  "loan_repaid": false
+}

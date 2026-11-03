@@ -1,0 +1,6 @@
+extends: qwen25_05b_math_code.yaml
+id: async_k2
+declared_factor: schedule
+overrides:
+  schedule:
+    max_staleness: 2

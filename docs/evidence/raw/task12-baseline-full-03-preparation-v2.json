@@ -1,0 +1,70 @@
+{
+  "status": "I1-fix-reviewed-source-awaiting-independent-rereview-no-native",
+  "fix_base": "48be911a3f152e1c1b3991399a3e2d6a2b85c82c",
+  "source_changes": [
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py",
+      "old": "53ca02d0854f3240af61f8f13cd804c665536631e8581f71b1d0066c956ed196",
+      "new": "5d36897a9a6fedd53664cf38b258d6aa7a455a4ad9433a857e81fad1ccc3f596"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/README.md",
+      "old": "8338759e38fa1ef0dabaa5db8d0a8cb39534a36f81ac2a69198845f8fc8f8b45",
+      "new": "8eb49fabd7c644c32d4081d90c33ee14e5d4e4104f19215e2be911d801276cc6"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py",
+      "old": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90",
+      "new": "0f02c526c85904bfaa9b01d4255a992b505ea4d7acfce0aad6dd198bd0c5496d"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/native_pool_test.py",
+      "old": "30a6254e3cb9540562ead6dc911f84069db96a35ce6d02dbf8d42ce7ce1c036b",
+      "new": "057b2bcf748ba22c7ae34a4b47f394e8c7e04b60880c26eae455931ddb3e0556"
+    }
+  ],
+  "sources_unchanged": 179,
+  "old_artifacts_unchanged": 183,
+  "host": {
+    "original_handle": 49820,
+    "authoritative_exit": 0,
+    "terminal_poll_chunk": "9226e8",
+    "log": "docs/evidence/raw/task12-native-pool-fix1-host.log",
+    "receipt": "docs/evidence/raw/task12-native-pool-fix1-host-receipt.json",
+    "receipt_sha256": "9531028b129ea944eb5782144c77e8fa78ce22c255078dbb07be4d72955ced47",
+    "script_sha256": "1966f18e49e0239b7e5882162387ceff5af0659e89c349293f71841618ba7308",
+    "current_environment_matches_historical43plus4": true,
+    "pool_resource_sample": {
+      "project_bytes": 13314064228,
+      "pool_bytes": 10160231,
+      "runtime_cache_bytes": 0,
+      "evidence_bytes": 0,
+      "combined_bytes": 10160231,
+      "nonpool_bytes": 13303903997,
+      "evidence_credit_bytes": 0,
+      "projected_bytes": 13993903997,
+      "canonical_rescans": [],
+      "project_bytes_kind": "canonical",
+      "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+    },
+    "native_executed": false,
+    "repeated": false,
+    "host_tool_snapshot_not_credentials": true
+  },
+  "CPU": {
+    "red_chunk": "c9f5dc",
+    "red_exit": 1,
+    "red_assertion": "measurement history missing at terminal boundary",
+    "green_chunk": "999e18",
+    "green_exit": 0,
+    "passed": 15,
+    "new_cases": 9,
+    "direct_controls": 6
+  },
+  "actual_client_reused_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "no_Go_or_ABI_rerun": true,
+  "unchanged_protocol": "6cal24eval2106planned/5ms/>1%/allfailures/absolute schedule",
+  "budget_correction_reference": "docs/evidence/raw/task12-native-pool-root-review-budget-correction.json",
+  "budget_history": "prior named estimator omitted30394B source-map;1991487 forecast corrected2021881, not measured14GB breach; current explicit budget includes it",
+  "native_authority": false
+}

@@ -1,0 +1,15 @@
+{
+  "what": "curl -fsSL https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/model.safetensors -o .cache/t14/hf-fetch/model.safetensors, bracketed by date +%s.%N in the same shell command; 3 sequential fetches overwriting one file",
+  "bytes": 988097824,
+  "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+  "sha256_matches_hf_lfs_blob": true,
+  "fetches": [
+    {"start": 1793139712.406497909, "end": 1793139732.478580069, "seconds": 20.072},
+    {"start": 1793139738.257817833, "end": 1793139762.316034792, "seconds": 24.058},
+    {"start": 1793139762.331362647, "end": 1793139786.217797802, "seconds": 23.886}
+  ],
+  "median_seconds": 23.886,
+  "nproc": 32,
+  "uptime_after": "15:23:06 up 10 days, 20:25, 3 users, load average: 4.66, 5.46, 5.66",
+  "note": "other projects were running; the T14 GPU pilot was running concurrently on the same host"
+}

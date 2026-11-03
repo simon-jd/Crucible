@@ -1,0 +1,17 @@
+{
+  "checked_entries": 1707,
+  "deleted_regular_paths": 1445,
+  "deleted_empty_directories": 260,
+  "reclaimed_bytes": 95169790,
+  "canonical_before": 13408188361,
+  "canonical_after_before_receipt": 13313018571,
+  "retained_pool_identity": [
+    66307,
+    55447049
+  ],
+  "retained_binary_bytes": 10160231,
+  "retained_binary_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "loan_repaid": false,
+  "native_cache_created": false,
+  "remaining_pool_budget": 489839769
+}

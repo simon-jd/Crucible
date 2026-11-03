@@ -1,0 +1,685 @@
+FFFFFFFFFFFFFFFFFF.                                                      [100%]
+=================================== FAILURES ===================================
+__ test_sentence_period_preserves_whole_exact_literal[False-True--0.25-0.25] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves0')
+literal = '-0.25', changed = '0.25', source_period = False, report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'0.25'} == {'-0.25'}
+E         
+E         Extra items in the left set:
+E         '0.25'
+E         Extra items in the right set:
+E         '-0.25'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+__ test_sentence_period_preserves_whole_exact_literal[False-True-+0.25-0.25] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves1')
+literal = '+0.25', changed = '0.25', source_period = False, report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'0.25'} == {'+0.25'}
+E         
+E         Extra items in the left set:
+E         '0.25'
+E         Extra items in the right set:
+E         '+0.25'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+__ test_sentence_period_preserves_whole_exact_literal[False-True--42MB-42MB] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves2')
+literal = '-42MB', changed = '42MB', source_period = False, report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'42MB'} == {'-42MB'}
+E         
+E         Extra items in the left set:
+E         '42MB'
+E         Extra items in the right set:
+E         '-42MB'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[False-True-66.67%-66.67] __
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves3')
+literal = '66.67%', changed = '66.67', source_period = False
+report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'66.67'} == {'66.67%'}
+E         
+E         Extra items in the left set:
+E         '66.67'
+E         Extra items in the right set:
+E         '66.67%'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[False-True-7,409,397,760B-7,409,397,999B] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves4')
+literal = '7,409,397,760B', changed = '7,409,397,999B', source_period = False
+report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'7,409,397', '760B'} == {'7,409,397,760B'}
+E         
+E         Extra items in the left set:
+E         '7,409,397'
+E         '760B'
+E         Extra items in the right set:
+E         '7,409,397,760B'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[False-True--1,234.50e-3MB-1,234.50e-3MB] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves5')
+literal = '-1,234.50e-3MB', changed = '1,234.50e-3MB', source_period = False
+report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'-1', '234.50e-3MB'} == {'-1,234.50e-3MB'}
+E         
+E         Extra items in the left set:
+E         '-1'
+E         '234.50e-3MB'
+E         Extra items in the right set:
+E         '-1,234.50e-3MB'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+__ test_sentence_period_preserves_whole_exact_literal[True-False--0.25-0.25] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves6')
+literal = '-0.25', changed = '0.25', source_period = True, report_period = False
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'0.25'} == {'-0.25'}
+E         
+E         Extra items in the left set:
+E         '0.25'
+E         Extra items in the right set:
+E         '-0.25'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+__ test_sentence_period_preserves_whole_exact_literal[True-False-+0.25-0.25] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves7')
+literal = '+0.25', changed = '0.25', source_period = True, report_period = False
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'0.25'} == {'+0.25'}
+E         
+E         Extra items in the left set:
+E         '0.25'
+E         Extra items in the right set:
+E         '+0.25'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+__ test_sentence_period_preserves_whole_exact_literal[True-False--42MB-42MB] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves8')
+literal = '-42MB', changed = '42MB', source_period = True, report_period = False
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'42MB'} == {'-42MB'}
+E         
+E         Extra items in the left set:
+E         '42MB'
+E         Extra items in the right set:
+E         '-42MB'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[True-False-66.67%-66.67] __
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves9')
+literal = '66.67%', changed = '66.67', source_period = True
+report_period = False
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'66.67'} == {'66.67%'}
+E         
+E         Extra items in the left set:
+E         '66.67'
+E         Extra items in the right set:
+E         '66.67%'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[True-False-7,409,397,760B-7,409,397,999B] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves10')
+literal = '7,409,397,760B', changed = '7,409,397,999B', source_period = True
+report_period = False
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'7,409,397', '760B'} == {'7,409,397,760B'}
+E         
+E         Extra items in the left set:
+E         '7,409,397'
+E         '760B'
+E         Extra items in the right set:
+E         '7,409,397,760B'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[True-False--1,234.50e-3MB-1,234.50e-3MB] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves11')
+literal = '-1,234.50e-3MB', changed = '1,234.50e-3MB', source_period = True
+report_period = False
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'-1', '234.50e-3MB'} == {'-1,234.50e-3MB'}
+E         
+E         Extra items in the left set:
+E         '-1'
+E         '234.50e-3MB'
+E         Extra items in the right set:
+E         '-1,234.50e-3MB'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+___ test_sentence_period_preserves_whole_exact_literal[True-True--0.25-0.25] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves12')
+literal = '-0.25', changed = '0.25', source_period = True, report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'0.25'} == {'-0.25'}
+E         
+E         Extra items in the left set:
+E         '0.25'
+E         Extra items in the right set:
+E         '-0.25'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+___ test_sentence_period_preserves_whole_exact_literal[True-True-+0.25-0.25] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves13')
+literal = '+0.25', changed = '0.25', source_period = True, report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'0.25'} == {'+0.25'}
+E         
+E         Extra items in the left set:
+E         '0.25'
+E         Extra items in the right set:
+E         '+0.25'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+___ test_sentence_period_preserves_whole_exact_literal[True-True--42MB-42MB] ___
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves14')
+literal = '-42MB', changed = '42MB', source_period = True, report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'42MB'} == {'-42MB'}
+E         
+E         Extra items in the left set:
+E         '42MB'
+E         Extra items in the right set:
+E         '-42MB'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+__ test_sentence_period_preserves_whole_exact_literal[True-True-66.67%-66.67] __
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves15')
+literal = '66.67%', changed = '66.67', source_period = True
+report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'66.67'} == {'66.67%'}
+E         
+E         Extra items in the left set:
+E         '66.67'
+E         Extra items in the right set:
+E         '66.67%'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[True-True-7,409,397,760B-7,409,397,999B] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves16')
+literal = '7,409,397,760B', changed = '7,409,397,999B', source_period = True
+report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'7,409,397', '760B'} == {'7,409,397,760B'}
+E         
+E         Extra items in the left set:
+E         '7,409,397'
+E         '760B'
+E         Extra items in the right set:
+E         '7,409,397,760B'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+_ test_sentence_period_preserves_whole_exact_literal[True-True--1,234.50e-3MB-1,234.50e-3MB] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves17')
+literal = '-1,234.50e-3MB', changed = '1,234.50e-3MB', source_period = True
+report_period = True
+
+    @pytest.mark.parametrize(
+        "literal,changed",
+        [
+            ("-0.25", "0.25"),
+            ("+0.25", "0.25"),
+            ("-42MB", "42MB"),
+            ("66.67%", "66.67"),
+            ("7,409,397,760B", "7,409,397,999B"),
+            ("-1,234.50e-3MB", "1,234.50e-3MB"),
+        ],
+    )
+    @pytest.mark.parametrize("source_period,report_period", [(False, True), (True, False), (True, True)])
+    def test_sentence_period_preserves_whole_exact_literal(
+        project, literal, changed, source_period, report_period
+    ):
+        from scripts.check_report_numbers import literals
+    
+        source = project / "docs/evidence/source.md"
+        source.write_text(
+            f"## Results\n{literal}{'.' if source_period else ''}\n999B\n", encoding="utf-8"
+        )
+>       assert literals(literal + ".") == {literal}
+E       AssertionError: assert {'-1', '234.50e-3MB'} == {'-1,234.50e-3MB'}
+E         
+E         Extra items in the left set:
+E         '-1'
+E         '234.50e-3MB'
+E         Extra items in the right set:
+E         '-1,234.50e-3MB'
+E         Use -v to get more diff
+
+scripts/tests/test_check_report_numbers.py:220: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[False-True--0.25-0.25]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[False-True-+0.25-0.25]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[False-True--42MB-42MB]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[False-True-66.67%-66.67]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[False-True-7,409,397,760B-7,409,397,999B]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[False-True--1,234.50e-3MB-1,234.50e-3MB]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-False--0.25-0.25]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-False-+0.25-0.25]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-False--42MB-42MB]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-False-66.67%-66.67]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-False-7,409,397,760B-7,409,397,999B]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-False--1,234.50e-3MB-1,234.50e-3MB]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-True--0.25-0.25]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-True-+0.25-0.25]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-True--42MB-42MB]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-True-66.67%-66.67]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-True-7,409,397,760B-7,409,397,999B]
+FAILED scripts/tests/test_check_report_numbers.py::test_sentence_period_preserves_whole_exact_literal[True-True--1,234.50e-3MB-1,234.50e-3MB]
+18 failed, 1 passed, 37 deselected in 0.08s

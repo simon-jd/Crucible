@@ -1,0 +1,59 @@
+{
+  "base": "f037c7ac4c61ab0b3a32b9ce4da0dc62756bff1a",
+  "fix_base": "48be911a3f152e1c1b3991399a3e2d6a2b85c82c",
+  "head": "4ec13359b4062f45e64239ba96590247ed83cd63",
+  "required_helper_output": "wrote /home/postedism/Desktop/Crucible/.superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-helper-review.diff: 2 commit(s), 642339 bytes",
+  "archives": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-helper-review.diff.gz",
+      "compressed_bytes": 129263,
+      "sha256": "49e446ec4d69b2676ac2a94978e533bb8de5b757332f5554ff32d71edad4cf56",
+      "decoded_bytes": 642339,
+      "decoded_sha256": "ff0651233e6144ec1cbc218f37db88b370c90694613371ad22961b27b0f8591a"
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-review.diff.gz",
+      "compressed_bytes": 82861,
+      "sha256": "0e08cdb5c9d37c5e5b947d3570759bc0111641d6bcfa935158be1d459a7d3165",
+      "decoded_bytes": 354275,
+      "decoded_sha256": "1492c7964c894b83b3b2a5acd866f1b0dfdd44bab1a45b8a6dd1cb1332c23eba"
+    }
+  ],
+  "task_only_fix_paths": [
+    "serving/baseline/native_pool.py",
+    "serving/baseline/native_pool_test.py",
+    "serving/baseline/experiment.py",
+    "serving/baseline/README.md",
+    "docs/evidence/raw/task12-native-pool-fix1-cleanup.json",
+    "docs/evidence/raw/task12-native-pool-fix1-cpu-inventory.json",
+    "docs/evidence/raw/task12-native-pool-fix1-cpu-preflight.json",
+    "docs/evidence/raw/task12-native-pool-fix1-cpu-result.json",
+    "docs/evidence/raw/task12-native-pool-fix1-final-budget.json",
+    "docs/evidence/raw/task12-native-pool-fix1-final-check.json",
+    "docs/evidence/raw/task12-native-pool-fix1-focused.log",
+    "docs/evidence/raw/task12-native-pool-fix1-format-v2.log",
+    "docs/evidence/raw/task12-native-pool-fix1-format.log",
+    "docs/evidence/raw/task12-native-pool-fix1-host-proposal.json",
+    "docs/evidence/raw/task12-native-pool-fix1-host-receipt.json",
+    "docs/evidence/raw/task12-native-pool-fix1-host-result.json",
+    "docs/evidence/raw/task12-native-pool-fix1-host.log",
+    "docs/evidence/raw/task12-native-pool-fix1-host.py",
+    "docs/evidence/raw/task12-native-pool-fix1-lint-v2.log",
+    "docs/evidence/raw/task12-native-pool-fix1-lint-v3.log",
+    "docs/evidence/raw/task12-native-pool-fix1-next-budget.json",
+    "docs/evidence/raw/task12-native-pool-fix1-red.log",
+    "docs/evidence/raw/task12-native-pool-fix1-source-final.json",
+    "docs/evidence/raw/task12-native-pool-fix1-static-budget.json",
+    "docs/evidence/raw/task12-native-pool-fix1-static-failure.json",
+    "docs/evidence/raw/task12-native-pool-fix1-static-v2-result.json",
+    "docs/evidence/raw/task12-baseline-full-03-proposal-v2.json",
+    "docs/evidence/raw/task12-baseline-full-03-source-freeze-v2.json",
+    "docs/evidence/raw/task12-baseline-full-03-preflight-v2.json",
+    "docs/evidence/raw/task12-baseline-full-03-preparation-v2.json"
+  ],
+  "helper_raw_removed_only_after_full_sha_identity_and_lossless_roundtrip": true,
+  "helper_removed_bytes": 642339,
+  "compressed_total": 212124,
+  "original_initial_review_archives_preserved": true,
+  "tests_or_native_executed": false
+}

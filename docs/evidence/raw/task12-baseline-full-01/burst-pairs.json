@@ -1,0 +1,186 @@
+{
+  "pairs": [
+    {
+      "pair": "2x-1",
+      "multiplier": 2,
+      "members": [
+        {
+          "trial": {
+            "pair": "2x-1",
+            "multiplier": 1
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        },
+        {
+          "trial": {
+            "pair": "2x-1",
+            "multiplier": 2
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        }
+      ],
+      "accepted": false,
+      "goodput_difference": null
+    },
+    {
+      "pair": "2x-2",
+      "multiplier": 2,
+      "members": [
+        {
+          "trial": {
+            "pair": "2x-2",
+            "multiplier": 2
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        },
+        {
+          "trial": {
+            "pair": "2x-2",
+            "multiplier": 1
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        }
+      ],
+      "accepted": false,
+      "goodput_difference": null
+    },
+    {
+      "pair": "2x-3",
+      "multiplier": 2,
+      "members": [
+        {
+          "trial": {
+            "pair": "2x-3",
+            "multiplier": 1
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        },
+        {
+          "trial": {
+            "pair": "2x-3",
+            "multiplier": 2
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        }
+      ],
+      "accepted": false,
+      "goodput_difference": null
+    },
+    {
+      "pair": "4x-1",
+      "multiplier": 4,
+      "members": [
+        {
+          "trial": {
+            "pair": "4x-1",
+            "multiplier": 4
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        },
+        {
+          "trial": {
+            "pair": "4x-1",
+            "multiplier": 1
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        }
+      ],
+      "accepted": false,
+      "goodput_difference": null
+    },
+    {
+      "pair": "4x-2",
+      "multiplier": 4,
+      "members": [
+        {
+          "trial": {
+            "pair": "4x-2",
+            "multiplier": 1
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        },
+        {
+          "trial": {
+            "pair": "4x-2",
+            "multiplier": 4
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        }
+      ],
+      "accepted": false,
+      "goodput_difference": null
+    },
+    {
+      "pair": "4x-3",
+      "multiplier": 4,
+      "members": [
+        {
+          "trial": {
+            "pair": "4x-3",
+            "multiplier": 4
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        },
+        {
+          "trial": {
+            "pair": "4x-3",
+            "multiplier": 1
+          },
+          "status": "not_run",
+          "metrics": {
+            "accepted": false
+          }
+        }
+      ],
+      "accepted": false,
+      "goodput_difference": null
+    }
+  ],
+  "comparisons": {
+    "2x": {
+      "accepted_all_three": false,
+      "accepted_pairs": 0,
+      "planned_pairs": 3,
+      "goodput_difference": null
+    },
+    "4x": {
+      "accepted_all_three": false,
+      "accepted_pairs": 0,
+      "planned_pairs": 3,
+      "goodput_difference": null
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "fix_base": "9059b21d91995678f109119d09a1ee5f994f90c2",
+  "head": "99894940fb3f460ae3855a9f125cd3a9bb59cc04",
+  "expected_helper_bytes": 81360,
+  "expected_helper_sha256": "883a3ddcfade7b1c7a650ab659d8e9597b20cfb8e1f1a0b2b70211d4be1705c5",
+  "initial_review14119_preserved": true,
+  "actual16pathsSHA_indexempty_verified": true,
+  "sample": {
+    "project_bytes": 13317513858,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13307353627,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13997353627,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus2M": 13999353627,
+  "no_effective_RED": true,
+  "singleGREEN3PASS12_47s": true,
+  "no_new_Task12_pack": true
+}

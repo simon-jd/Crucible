@@ -1,0 +1,38 @@
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+   --> serving/baseline/experiment.py:721:41
+    |
+719 |             if sample["owned_rss_bytes"] >= 16_000_000_000:
+720 |                 raise RuntimeError("resource high-water stop: " + json.dumps(sample))
+721 |         except BaseException as error:  # noqa: BLE001 - a proc/RSS failure must retain recovered scan evidence
+    |                                         ^^^^^^^^^^^^^^
+722 |             attach_scan_history(error, sample["canonical_rescans"])
+723 |             raise
+    |
+help: Remove unused `noqa` directive
+    |
+720 |                 raise RuntimeError("resource high-water stop: " + json.dumps(sample))
+    -         except BaseException as error:  # noqa: BLE001 - a proc/RSS failure must retain recovered scan evidence
+721 +         except BaseException as error:
+722 |             attach_scan_history(error, sample["canonical_rescans"])
+    |
+
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+   --> serving/baseline/native_pool.py:180:41
+    |
+178 |         try:
+179 |             return self._measure(canonical, errors)
+180 |         except BaseException as error:  # noqa: BLE001 - carry evidence without replacing the original failure
+    |                                         ^^^^^^^^^^^^^^
+181 |             attach_scan_history(error, errors)
+182 |             raise
+    |
+help: Remove unused `noqa` directive
+    |
+179 |             return self._measure(canonical, errors)
+    -         except BaseException as error:  # noqa: BLE001 - carry evidence without replacing the original failure
+180 +         except BaseException as error:
+181 |             attach_scan_history(error, errors)
+    |
+
+Found 2 errors.
+[*] 2 fixable with `--fix`.

@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 28 items / 25 deselected / 3 selected
+
+serving/baseline/experiment_test.py ...                                  [100%]
+
+======================= 3 passed, 25 deselected in 2.01s =======================

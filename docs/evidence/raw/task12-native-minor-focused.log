@@ -1,0 +1,31 @@
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+____________ test_canonical_rescan_preserves_actual_error_filenames ____________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/minor-focused/test_canonical_rescan_preserve0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ec1b8637f20>
+
+    def test_canonical_rescan_preserves_actual_error_filenames(tmp_path, monkeypatch):
+        from serving.baseline import model_snapshot as model
+    
+        error = FileNotFoundError(2, "missing", "first", None, "second")
+        outcomes = iter([error, 10])
+        def scan(root):
+            value = next(outcomes)
+            if isinstance(value, Exception):
+                raise value
+            return value
+        monkeypatch.setattr(model, "project_bytes", scan)
+        events = []
+        assert model.canonical_bytes(tmp_path, events) == 10
+        assert events[0]["errno"] == 2
+        assert events[0]["filename"] == "first" and events[0]["filename2"] == "second"
+        assert events[0]["error"] == repr(error) and events[0]["message"] == str(error)
+>       assert calls == [tmp_path]
+               ^^^^^
+E       NameError: name 'calls' is not defined
+
+serving/baseline/model_snapshot_test.py:357: NameError
+=========================== short test summary info ============================
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_rescan_preserves_actual_error_filenames
+1 failed, 1 passed, 20 deselected in 0.04s

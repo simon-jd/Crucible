@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 10687109710,
+  "free_bytes": 318023135232,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": []
+}

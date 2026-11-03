@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 13300451354,
+  "free_bytes": 265750519808,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": [],
+  "time_utc": "2026-10-25T10:18:08.638735+00:00",
+  "planned_project_bytes": 690000000,
+  "checkpoints": 0,
+  "service_memory_bytes": 0,
+  "shared_model_cache_bytes": 23815435170,
+  "shared_model_cache_scope": "metadata/inode count only; no weight payload reads",
+  "shared_scan_errors": [],
+  "loan_root_absent": true,
+  "all_known_experiment_commands_terminal": true
+}

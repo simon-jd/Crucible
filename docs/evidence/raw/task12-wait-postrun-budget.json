@@ -1,0 +1,12 @@
+{
+  "authority_handle": 48046,
+  "exit_code": 0,
+  "run_raw_bytes": 175537,
+  "retained_phase_bytes_including_root_paths_source_and_report": 572932,
+  "cap": 2000000,
+  "remaining_bytes": 1427068,
+  "inventory_cap": 270000,
+  "inventory_bytes": 259969,
+  "loan_deleted": false,
+  "native_performance_accepted": false
+}

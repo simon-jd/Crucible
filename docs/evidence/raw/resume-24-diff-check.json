@@ -1,0 +1,22 @@
+{
+  "whole_cached_check_returncode": 2,
+  "diagnostic_stdout_sha256": "f117601a8e9a995c8350a29a0ff54822a96ee033b60aa563cd4c96908cf801d0",
+  "diagnostic_stdout_bytes": 587097,
+  "raw_diagnostics_by_file": {
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-multi.raw": 1,
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-one.raw": 1,
+    "docs/evidence/raw/task12-baseline-full-02/native-smoke-zero.raw": 1,
+    "docs/evidence/raw/task12-baseline-full-02/server.log": 2560,
+    "docs/evidence/raw/task12-baseline-full-02/warmup-0.raw": 1,
+    "docs/evidence/raw/task12-baseline-full-02/warmup-1.raw": 1,
+    "docs/evidence/raw/task12-baseline-full-02/warmup-2.raw": 1
+  },
+  "maintained_paths": [
+    "docs/STATUS.md",
+    "docs/azure-spend.md",
+    "docs/evidence/spec-decoding-review.md",
+    "docs/evidence/serving-baseline.md"
+  ],
+  "maintained_paths_returncode": 0,
+  "decision": "Preserve exact original raw SSE blank terminators and server trailing spaces; scope whitespace gate to maintained docs; no raw normalization or functional code change."
+}

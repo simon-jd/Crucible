@@ -1,0 +1,16 @@
+{
+  "time_utc": "2026-10-25T19:43:43.293632+00:00",
+  "host_permitted_readonly_proc_scope": true,
+  "processes_seen": 1203,
+  "unreadable_or_race": 743,
+  "current_exact_project_native_launch_queue_or_replay_candidates": [],
+  "known_full03_PID_path_exists": {
+    "3061993": false,
+    "3062015": false,
+    "3062912": false
+  },
+  "port31012_listeners": [],
+  "socket_bind_or_GPU_query_or_flock_acquisition": false,
+  "signals_or_foreign_changes": false,
+  "scope_limit": "Current process table sample, unreadable/racing processes retained as limitation; no global GPU idle requirement. Does not map sandboxCPU PIDs4/5 to host. No full04 execution/queue action. Fresh duplicate/listener check mandatory immediately before any newly authorized launch."
+}

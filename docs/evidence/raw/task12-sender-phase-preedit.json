@@ -1,0 +1,31 @@
+{
+  "base": "a3097c5ebaa4416882ed4aecb443cfb9d0f5f460",
+  "paths": {
+    "serving/replay/schedule.go": {
+      "bytes": 3666,
+      "sha256": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "matches_base": true,
+      "edit_authorized": true
+    },
+    "serving/replay/transport.go": {
+      "bytes": 3615,
+      "sha256": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "matches_base": true,
+      "edit_authorized": true
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "bytes": 2763,
+      "sha256": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "matches_base": true,
+      "edit_authorized": true
+    },
+    "serving/replay/main.go": {
+      "bytes": 3004,
+      "sha256": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16",
+      "matches_base": true,
+      "edit_authorized": false
+    }
+  },
+  "old_binary_sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93",
+  "parent_monitor_sha256": "93ab6d84a367c798138c3a49f991ec5b4979a300b13d14585d4bcb6eb9322a3a"
+}

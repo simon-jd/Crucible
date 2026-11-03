@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 218, in launch_full
+    raise ValueError("derived environment changed")
+ValueError: derived environment changed

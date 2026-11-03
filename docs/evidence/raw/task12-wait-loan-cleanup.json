@@ -1,0 +1,14 @@
+{
+  "gate": "task12-wait-root-loan-cleanup-gate.json",
+  "full_recheck_entries": 3719,
+  "regular_files_deleted": 3453,
+  "directories_deleted": 266,
+  "deleted_regular_bytes": 243380070,
+  "before_canonical_bytes": 13544504798,
+  "after_canonical_bytes_before_receipt": 13301124728,
+  "exact_reclaimed_bytes": 243380070,
+  "loan_absent": true,
+  "temporary_binary_deleted_as_planned": true,
+  "original_binary_sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93",
+  "all_raw_retained": true
+}

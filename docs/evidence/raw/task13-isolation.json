@@ -1,0 +1,18 @@
+{
+  "checked_new_paths": [
+    "serving/deploy/pd-1p1d.yaml",
+    "serving/deploy/pd-2p1d.yaml",
+    "serving/deploy/pd-cross-node.yaml",
+    "serving/deploy/task13-README.md",
+    "serving/deploy/task13_validate.py",
+    "serving/eval/accuracy.py",
+    "tests/test_accuracy.py",
+    "tests/test_task13_deploy.py",
+    "docs/evidence/pd-disaggregation.md",
+    ".superpowers/sdd/5-crucible-gpu-ml-plan/task-13-report.md"
+  ],
+  "frozen_sources": 169,
+  "frozen_artifacts": 15,
+  "overlap": [],
+  "git_allocated_start_bytes": 21295104
+}

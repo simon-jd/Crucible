@@ -1,0 +1,16 @@
+{
+  "decision": "allow exact new scratch cleanup after immediate same full recheck",
+  "root": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu",
+  "inventory_sha256": "c48d94e02e954b368163780ea1f00825c4a126ff59389cf97637b88a21f91e4a",
+  "verified_paths": 335,
+  "regular_paths": 99,
+  "unique_regular_inodes": 96,
+  "regular_path_bytes": 44287,
+  "canonical_regular_bytes": 44267,
+  "symlinks": 19,
+  "directories": 217,
+  "symlink_targets_confined": true,
+  "no_external_hardlink_locations": true,
+  "authoritative_test_commands_terminal": true,
+  "never_follow_links_on_delete": true
+}

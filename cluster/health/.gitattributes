@@ -1,0 +1,2 @@
+# Preserve the byte-identical upstream output, including its trailing spaces.
+tests/fixtures/allreduce_upstream.txt whitespace=-blank-at-eol,-blank-at-eof

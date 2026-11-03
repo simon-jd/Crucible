@@ -1,0 +1,219 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> serving/baseline/experiment.py:3:1
+   |
+ 1 |   """Fixed calibration/evaluation protocol and owned native-server lifecycle."""
+ 2 |
+ 3 | / import argparse
+ 4 | | import csv
+ 5 | | import hashlib
+ 6 | | import http.client
+ 7 | | import json
+ 8 | | import math
+ 9 | | import os
+10 | | import resource
+11 | | import signal
+12 | | import socket
+13 | | import statistics
+14 | | import subprocess
+15 | | import threading
+16 | | import time
+17 | | import urllib.error
+18 | | import urllib.parse
+19 | | import urllib.request
+20 | | from pathlib import Path
+21 | |
+22 | | from serving.baseline.model_snapshot import canonical_bytes, load_plan, verify_file
+23 | | from serving.baseline.prepare_runtime import CAP, CLEANUP_RESERVE, sha256
+24 | | from serving.baseline.runtime_entry import ROOT, inventory, runtime_environment
+25 | | from serving.replay.tokenizer_allowlist import build as build_allowlist
+   | |_______________________________________________________________________^
+help: Organize imports
+   |
+26 |
+   -
+27 | # Direct regular files avoid a log-drain dependency during blocking HTTP calls.
+   |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:156:16
+    |
+154 |             print(json.dumps({"original_guard_pid": child.pid}), flush=True)
+155 |             result = child.wait()
+156 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+157 |             failure = error
+158 |             if child.poll() is None:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:170:20
+    |
+168 |             try:
+169 |                 write_json_bounded(receipt_path, receipt, min(64 << 10, limit))
+170 |             except BaseException as error:
+    |                    ^^^^^^^^^^^^^
+171 |                 failure = failure or error
+172 |         if failure is not None:
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+   --> serving/baseline/experiment.py:230:5
+    |
+228 |       # The caller also records the fresh canonical/shared/free preflight immediately
+229 |       # before this entry. These are repeated here without importing native packages.
+230 | /     import shutil
+231 | |     from scripts.resource_preflight import check_limits
+    | |_______________________________________________________^
+232 |
+233 |       shared = Path.home() / ".cache/huggingface"
+    |
+help: Organize imports
+    |
+230 |     import shutil
+231 +
+232 |     from scripts.resource_preflight import check_limits
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:557:16
+    |
+555 |             if not valid:
+556 |                 raise ValueError(f"native contract failed: {name}")
+557 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+558 |             failure = error
+559 |         finally:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:578:20
+    |
+576 |             try:
+577 |                 (output / f"{prefix}-{name}.raw").write_bytes(retained)
+578 |             except BaseException as write_error:
+    |                    ^^^^^^^^^^^^^
+579 |                 failure = failure or write_error
+580 |                 evidence["accepted_contract"] = False
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:585:20
+    |
+583 |             try:
+584 |                 write_json_bounded(output / f"{prefix}.json", results, 64 << 10)
+585 |             except BaseException as report_error:
+    |                    ^^^^^^^^^^^^^
+586 |                 if failure is None:
+587 |                     failure = report_error
+    |
+
+S110 `try`-`except`-`pass` detected, consider logging the exception
+   --> serving/baseline/experiment.py:772:9
+    |
+770 |           try:
+771 |               write_json_bounded(record, summary, SUMMARY_CAP)
+772 | /         except BaseException:
+773 | |             pass
+    | |________________^
+774 |           raise
+775 |       finally:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:772:16
+    |
+770 |         try:
+771 |             write_json_bounded(record, summary, SUMMARY_CAP)
+772 |         except BaseException:
+    |                ^^^^^^^^^^^^^
+773 |             pass
+774 |         raise
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:780:16
+    |
+778 |                 summary["cleanup"] = stop_child(child, None)
+779 |                 summary["returncode"] = child.returncode
+780 |         except BaseException as cleanup_error:
+    |                ^^^^^^^^^^^^^
+781 |             summary["cleanup_error"] = error_info(cleanup_error)
+782 |             if failure is None:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:910:12
+    |
+908 |     try:
+909 |         write_json_bounded(output / "terminal.json", terminal, 64 << 10)
+910 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+911 |         terminal["report_errors"].append(error_info(error))
+912 |         failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:915:12
+    |
+913 |     try:
+914 |         cleanup = stop_child(server, port) if server is not None else {"not_started": True}
+915 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+916 |         cleanup = {"cleanup_error": error_info(error), "confirmed": False}
+917 |         failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:932:16
+    |
+930 |                     comparison["goodput_difference"] = None
+931 |             reports.append((output / f"{name}-pairs.json", pairs, PAIR_CAP))
+932 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+933 |             terminal["report_errors"].append(error_info(error))
+934 |             failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:938:16
+    |
+936 |         try:
+937 |             write_json_bounded(path, data, limit)
+938 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+939 |             terminal["report_errors"].append(error_info(error))
+940 |             failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:950:20
+    |
+948 |                     comparison["goodput_difference"] = None
+949 |                 write_json_bounded(output / f"{name}-pairs.json", pairs, PAIR_CAP)
+950 |             except BaseException as error:
+    |                    ^^^^^^^^^^^^^
+951 |                 terminal["report_errors"].append(error_info(error))
+952 |     if not cleanup.get("not_started") and (
+    |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+  --> serving/baseline/output_limits_test.py:55:14
+   |
+53 |         f"Path({str(tmp_path / 'guard.log')!r}),Path({str(tmp_path / 'receipt.json')!r}),4096))"
+54 |     )
+55 |     result = subprocess.run([sys.executable, "-B", "-c", launch], timeout=10, capture_output=True)
+   |              ^^^^^^^^^^^^^^
+56 |     assert result.returncode != 0  # at-cap guard diagnostics invalidate this run
+57 |     state = json.loads(proof.read_text())
+   |
+help: Add explicit `check=False`
+   |
+54 |     )
+   -     result = subprocess.run([sys.executable, "-B", "-c", launch], timeout=10, capture_output=True)
+55 +     result = subprocess.run([sys.executable, "-B", "-c", launch], check=False, timeout=10, capture_output=True)
+56 |     assert result.returncode != 0  # at-cap guard diagnostics invalidate this run
+   |
+note: This suggestion may be incorrect or produce invalid syntax. It requires manual review and cannot be applied automatically
+
+Found 16 errors.
+[*] 2 fixable with `--fix`.

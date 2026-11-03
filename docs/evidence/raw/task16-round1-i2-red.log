@@ -1,0 +1,139 @@
+FFFFFFFFF...                                                             [100%]
+=================================== FAILURES ===================================
+_______ test_inline_long_backtick_runs_keep_numeric_code_content[999-3] ________
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs0')
+size = 3, body = '999'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs0'), ('```999```' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_______ test_inline_long_backtick_runs_keep_numeric_code_content[999-4] ________
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs1')
+size = 4, body = '999'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs1'), ('````999````' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_______ test_inline_long_backtick_runs_keep_numeric_code_content[999-6] ________
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs2')
+size = 6, body = '999'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs2'), ('``````999``````' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_ test_inline_long_backtick_runs_keep_numeric_code_content[literal` [42](999)-3] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs3')
+size = 3, body = 'literal` [42](999)'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs3'), ('```literal` [42](999)```' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_ test_inline_long_backtick_runs_keep_numeric_code_content[literal` [42](999)-4] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs4')
+size = 4, body = 'literal` [42](999)'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs4'), ('````literal` [42](999)````' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_ test_inline_long_backtick_runs_keep_numeric_code_content[literal` [42](999)-6] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs5')
+size = 6, body = 'literal` [42](999)'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs5'), ('``````literal` [42](999)``````' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_ test_inline_long_backtick_runs_keep_numeric_code_content[literal`` [42](999)-3] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs6')
+size = 3, body = 'literal`` [42](999)'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs6'), ('```literal`` [42](999)```' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_ test_inline_long_backtick_runs_keep_numeric_code_content[literal`` [42](999)-4] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs7')
+size = 4, body = 'literal`` [42](999)'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs7'), ('````literal`` [42](999)````' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+_ test_inline_long_backtick_runs_keep_numeric_code_content[literal`` [42](999)-6] _
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs8')
+size = 6, body = 'literal`` [42](999)'
+
+    @pytest.mark.parametrize("size", [3, 4, 6])
+    @pytest.mark.parametrize("body", ["999", "literal` [42](999)", "literal`` [42](999)"])
+    def test_inline_long_backtick_runs_keep_numeric_code_content(project, size, body):
+        inline = "`" * size + body + "`" * size
+>       assert errors(project, inline + f"\n42 {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs8'), ('``````literal`` [42](999)``````' + '\n42 [evidence: docs/evidence/source.md#results]'))
+
+scripts/tests/test_check_report_numbers.py:238: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[999-3]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[999-4]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[999-6]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[literal` [42](999)-3]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[literal` [42](999)-4]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[literal` [42](999)-6]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[literal`` [42](999)-3]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[literal`` [42](999)-4]
+FAILED scripts/tests/test_check_report_numbers.py::test_inline_long_backtick_runs_keep_numeric_code_content[literal`` [42](999)-6]
+9 failed, 3 passed, 44 deselected in 0.06s

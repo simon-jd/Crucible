@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "purpose": "Pinned Torch compile-pool source contract; CPU/source evidence only",
+  "runtime_lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "torch_version": "2.8.0",
+  "torch_origin": "base-readonly",
+  "record": {
+    "path": ".venv-ml/lib/python3.12/site-packages/torch-2.8.0.dist-info/RECORD",
+    "bytes": 1211825,
+    "sha256": "43acd78ee8b4d317596bb30a934ec5e3c1aed5d68653440322f33d47c9235423",
+    "matches_runtime_lock": true
+  },
+  "sources": [
+    {
+      "path": ".venv-ml/lib/python3.12/site-packages/torch/_inductor/config.py",
+      "bytes": 70345,
+      "sha256": "9c9f68771e08689e8f75a7972c98578403cdbd41065a74ebe8e9f1b0c62333cd",
+      "record_digest": "sha256=nJ9odx4IaJ6PdaeXLJhXhAPNvUEGWnTr6OnxsMYjM80",
+      "record_size": 70345,
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": ".venv-ml/lib/python3.12/site-packages/torch/_inductor/async_compile.py",
+      "bytes": 20040,
+      "sha256": "fe664d214acbd5b8349d378c25ffa8d92fe6405df331ecca6458ff4321c62e91",
+      "record_digest": "sha256=_mZNIUrL1bg0nTeMJf-o2S_mQF3zMezKZFj_QyHGLpE",
+      "record_size": 20040,
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": ".venv-ml/lib/python3.12/site-packages/torch/_inductor/compile_worker/subproc_pool.py",
+      "bytes": 13219,
+      "sha256": "72a8e44a7ea586e8a5274834c4367f62125fa4ff5ea78334398dd36936214fc3",
+      "record_digest": "sha256=cqjkSn6lhuilJ0g0xDZ_YhJfpP9ep4M0OY3TaTYhT8M",
+      "record_size": 13219,
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": ".venv-ml/lib/python3.12/site-packages/torch/_inductor/compile_worker/__main__.py",
+      "bytes": 2245,
+      "sha256": "623d4b9c2bd22567bf63c2d66ab1502dc7aa0a669d717ed186a3fdb814becd80",
+      "record_digest": "sha256=Yj1LnCvSJWe_Y8LWarFQLceqCmadcX7RhqP9uBS-zYA",
+      "record_size": 2245,
+      "matches_installed_RECORD": true
+    },
+    {
+      "path": ".venv-ml/lib/python3.12/site-packages/torch/_inductor/compile_fx.py",
+      "bytes": 102927,
+      "sha256": "44e139ec125ce96d8ac44df157766453a70f7c5b1521ae6f0cc37acf8280b51b",
+      "record_digest": "sha256=ROE57BJc6W2KxE3xV3ZkU6cPfFsVIa5vDMN6z4KAtRs",
+      "record_size": 102927,
+      "matches_installed_RECORD": true
+    }
+  ],
+  "derived_environment": {
+    "TORCHINDUCTOR_COMPILE_THREADS": "1"
+  },
+  "source_contract": [
+    "config.py:768-805 takes TORCHINDUCTOR_COMPILE_THREADS before platform/CPU-count default; MAX_JOBS is not this control.",
+    "compile_fx.py:24 imports async_compile to warm pools; async_compile.py:523-534 can call warm_pool at import.",
+    "async_compile.py:274-291 returns from warm_pool and avoids process_pool at <=1; submit executes synchronously.",
+    "async_compile.py:239-268 default subprocess path creates SubprocPool(n); subproc_pool.py:110-163 launches worker main and :257-283 creates eager fork workers.",
+    "compile_worker/__main__.py imports Torch/Triton helpers and enters SubprocMain with the requested worker count."
+  ],
+  "limitations": [
+    "This source contract does not identify the historical unknown PID2205669 or its 23 children, historical effective compile_threads, or earliest actual SGLang importer.",
+    "No native import, process-pool invocation, measured memory saving, model fit, throughput or backend compatibility is established by these CPU tests.",
+    "The derived environment applies before audited redirector/native imports; the future command also pins the variable. No installed source or package is changed."
+  ]
+}

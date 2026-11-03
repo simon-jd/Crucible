@@ -1,0 +1,45 @@
+{
+  "original_handle": 41145,
+  "original_exit": 1,
+  "original_failure_log_sha256": "b920f76b895ecc8ac30e99997a63415272878b1749b54440d195c5e920f1d4c8",
+  "installer_fix_sha256": "ddcb25768bf4b81dc6bff1e7865ec95df36cb64f4d342e158d89a4ad7643e447",
+  "wheel": {
+    "name": "flashinfer-cubin",
+    "version": "0.5.0",
+    "filename": "flashinfer_cubin-0.5.0-py3-none-any.whl",
+    "url": "https://files.pythonhosted.org/packages/14/b4/7224fdd475cfa4c4a9605a59090807c487e220808c00b03da0b2e7a208d3/flashinfer_cubin-0.5.0-py3-none-any.whl",
+    "sha256": "f8973487265608ffb05e7a496374dc96544933d44731632b0da2f6ff5376f597",
+    "compressed_bytes": 91290874,
+    "metadata_sha256": "0713f469cd8e7c827b773520010438ee38357be0d0aada9c5dc2eea5402e90b9",
+    "expanded_bytes": 399587463
+  },
+  "immutable_large_payloads": {
+    "linked_payload_bytes": 1928789,
+    "files": [
+      {
+        "path": "flashinfer_cubin/cubins/56fea80cb22f8b2ef2a2c6a822a075fb20b36803/batched_gemm-074aec4-cc00b23/include/flashinferMetaInfo.h",
+        "device": 66307,
+        "inode": 56265369,
+        "links": 2,
+        "bytes": 1928789
+      }
+    ]
+  },
+  "rewritten_record": {
+    "bytes": 1732289,
+    "inode": 56266016,
+    "links": 1,
+    "sha256": "34fafe8a3e83484bff57caa30cce2facfabb82f3f102dd5508435a547fa75152"
+  },
+  "record_validation": {
+    "hashed_files": 6943,
+    "hashed_bytes": 397855846,
+    "unhashed_files": [
+      "flashinfer_cubin-0.5.0.dist-info/RECORD"
+    ]
+  },
+  "project_bytes": 12513584207,
+  "overlay_bytes": 2015290930,
+  "stage_path_unique_bytes": 490880581,
+  "scope": "read-only validation only; no cleanup/reinstall/redownload/native imports"
+}

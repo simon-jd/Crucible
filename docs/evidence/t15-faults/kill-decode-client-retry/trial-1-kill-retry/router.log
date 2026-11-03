@@ -1,0 +1,13 @@
+2026/10/28 06:58:17 httputil: ReverseProxy read error during body copy: unexpected EOF
+2026-10-28T13:58:17.670396478Z eject b retried=true: dial tcp 127.0.0.1:31102: connect: connection refused
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+adapter b: invalid or stale snapshot
+router stats ejections=1 dial_retries=1

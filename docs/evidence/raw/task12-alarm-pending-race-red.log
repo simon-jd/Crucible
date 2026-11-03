@@ -1,0 +1,42 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_preexisting_timer_expiring_during_inspection_is_not_stolen ________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c4317b0c3b0>
+
+    def test_preexisting_timer_expiring_during_inspection_is_not_stolen(monkeypatch):
+        import os
+        previous = signal.getsignal(signal.SIGALRM)
+        called = []
+        signal.signal(signal.SIGALRM, lambda *args: called.append(True))
+        def expired_during_inspection(which):
+            os.kill(os.getpid(), signal.SIGALRM)
+            return (0.0, 0.0)
+        monkeypatch.setattr(signal, "getitimer", expired_during_inspection)
+        try:
+>           with pytest.raises(RuntimeError, match="pending"), absolute_deadline(time.monotonic() + 1):
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+serving/baseline/deadline_http_test.py:249: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py:137: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+serving/baseline/deadline_http.py:47: in absolute_deadline
+    signal.pthread_sigmask(signal.SIG_SETMASK, old_mask)
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/signal.py:71: in pthread_sigmask
+    sigs_set = _signal.pthread_sigmask(how, mask)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+signum = 14
+frame = <frame at 0x7c4317a26140, file '/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/signal.py', line 71, code pthread_sigmask>
+
+    def expired(signum, frame):
+>       raise TimeoutError("acquisition absolute deadline exceeded")
+E       TimeoutError: acquisition absolute deadline exceeded
+
+serving/baseline/deadline_http.py:41: TimeoutError
+=========================== short test summary info ============================
+FAILED serving/baseline/deadline_http_test.py::test_preexisting_timer_expiring_during_inspection_is_not_stolen
+1 failed, 12 deselected in 0.04s

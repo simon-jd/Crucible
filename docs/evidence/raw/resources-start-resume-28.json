@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-10-25T13:03:07.677365+00:00",
+  "scope": "continuation28 fresh pool-aware resource gate; Task12 candidate retained; no GPU approval inferred",
+  "sample": {
+    "project_bytes": 13314726830,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304566599,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994566599,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "new_W2_phase_retained_bound": 2000000,
+  "new_W2_CPU_scratch_bound": 1000000,
+  "phase_bound_source": "existing code/evidence and CPU allowances inside unchanged690M; temporarily conservative additional3M double reserve used for admission",
+  "conservative_projection_with_new_phase_bounds": 13997566599,
+  "paid_USD": 0,
+  "new_downloads": 0,
+  "new_checkpoints": 0,
+  "experimental_services": 0,
+  "prior_stage": "03a33cc/4ec1335 Approved phase; fullTask12OPEN",
+  "native_authorized": false
+}

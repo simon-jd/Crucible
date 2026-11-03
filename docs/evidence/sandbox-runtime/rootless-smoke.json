@@ -1,0 +1,24 @@
+{
+  "kind": "trusted echo readiness probe; no candidate code executed",
+  "command": [
+    "/home/postedism/Desktop/Crucible/.tools/gvisor/20261019.0/runsc",
+    "--root",
+    "/home/postedism/Desktop/Crucible/.cache/runsc-smoke",
+    "--rootless",
+    "--network=none",
+    "--platform=systrap",
+    "do",
+    "--quiet",
+    "/bin/echo",
+    "crucible-gvisor-readiness"
+  ],
+  "exit_code": 128,
+  "timed_out": false,
+  "duration_s": 0.004,
+  "stdout": "",
+  "stderr": "Error executing inside namespace: re-executing self: fork/exec /proc/self/exe: permission denied\n",
+  "runtime_passed": false,
+  "model": null,
+  "gpu_used": false,
+  "host_configuration_changed": false
+}

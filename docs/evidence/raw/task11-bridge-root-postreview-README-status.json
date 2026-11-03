@@ -1,0 +1,23 @@
+{
+  "purpose": "ROOT reviewcompletion bookkeeping only after Approved; everyearlierbyte preserved/noPythoncodechange/no testneeded",
+  "readme_changes": {
+    "rl/sync/README.md": {
+      "prefix_bytes": 14535,
+      "prefix_sha256": "41d7579685c08ba7b3cd0b1c95d6369187c0bc56cab515eb87175c8ba5364332",
+      "append_bytes": 167,
+      "final_sha256": "ff8c71eed54ed0d20837389c712025d348e87eebcad0114a356728d5ba29901b"
+    },
+    "rl/learner/README.md": {
+      "prefix_bytes": 21420,
+      "prefix_sha256": "d2548354e5efaf9d18391c20d6b7a442532f415f8b1ee54796211d6af937d13f",
+      "append_bytes": 167,
+      "final_sha256": "77bb219a3f226af2cbf3cd2a9de677187f6dce205b0cf9e10cd3d456e16fb220"
+    },
+    "rl/rollout/README.md": {
+      "prefix_bytes": 9772,
+      "prefix_sha256": "ae7312c780b47a091975e467bc0d1df19587d1b11fc7dcf231b394f8e82d24ff",
+      "append_bytes": 167,
+      "final_sha256": "01a08b7da1d41c23e816ae6544ad7a6cf65d88ff2ffd068a6b455f5b4c683c68"
+    }
+  }
+}

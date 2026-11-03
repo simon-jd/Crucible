@@ -1,0 +1,92 @@
+{
+  "status": "source-candidate-no-build",
+  "HEAD": "f037c7ac4c61ab0b3a32b9ce4da0dc62756bff1a",
+  "dirty_porcelain": [
+    " M docs/STATUS.md",
+    " M docs/azure-spend.md",
+    " M serving/baseline/README.md",
+    " M serving/baseline/experiment.py",
+    "?? docs/evidence/raw/azure-reaper-resume-27.json",
+    "?? docs/evidence/raw/resources-start-resume-27.json",
+    "?? docs/evidence/raw/task12-native-pool-cpu-cleanup.json",
+    "?? docs/evidence/raw/task12-native-pool-cpu-inventory.json",
+    "?? docs/evidence/raw/task12-native-pool-cpu-preflight.json",
+    "?? docs/evidence/raw/task12-native-pool-cpu-result.json",
+    "?? docs/evidence/raw/task12-native-pool-focused.log",
+    "?? docs/evidence/raw/task12-native-pool-go-monitor.py",
+    "?? docs/evidence/raw/task12-native-pool-monitor-preparation-note.json",
+    "?? docs/evidence/raw/task12-native-pool-mutation.json",
+    "?? docs/evidence/raw/task12-native-pool-postcleanup-preflight.json",
+    "?? docs/evidence/raw/task12-native-pool-red.log",
+    "?? docs/evidence/raw/task12-native-pool-root-cpu-gate.json",
+    "?? docs/evidence/raw/task12-native-pool-root-protocol-check.json",
+    "?? docs/evidence/raw/task12-native-pool-root-scratch-cleanup-gate.json",
+    "?? docs/evidence/raw/task12-native-pool-static-complete.log",
+    "?? docs/evidence/raw/task12-native-pool-static-credit.log",
+    "?? docs/evidence/raw/task12-native-pool-static-final.log",
+    "?? docs/evidence/raw/task12-native-pool-static-initial.log",
+    "?? serving/baseline/native_pool.py",
+    "?? serving/baseline/native_pool_test.py"
+  ],
+  "identities": {
+    ".tools/go/bin/go": {
+      "bytes": 17164222,
+      "sha256": "5f5eb6d0b2fb6aa0bb5d5f8c5f1c944e0de955c925f0111af92a9d8f79680b5b"
+    },
+    "docs/evidence/raw/task12-native-pool-go-monitor.py": {
+      "bytes": 10965,
+      "sha256": "96a749f67ba3e6084039b2d8d448f4b4316d84d00997689c479e4e482b74fabb"
+    },
+    "go.mod": {
+      "bytes": 25,
+      "sha256": "e850b635508a57882d71a3e0cf459f999508a5ba757ee3e1631039aeb8d3e829"
+    },
+    "serving/replay/accounting.go": {
+      "bytes": 3472,
+      "sha256": "7e1eb347b2cd0d634316dad36b3d6c450513ec71c35a368c641094e7859fdb4f"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "bytes": 3205,
+      "sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    },
+    "serving/replay/diagnostic.go": {
+      "bytes": 9983,
+      "sha256": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f"
+    },
+    "serving/replay/main.go": {
+      "bytes": 3004,
+      "sha256": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16"
+    },
+    "serving/replay/record.go": {
+      "bytes": 2470,
+      "sha256": "a9f52e5d1dcefadc90a2ad769cfe74767f335915b51c5c1c2822088efe01d569"
+    },
+    "serving/replay/schedule.go": {
+      "bytes": 5582,
+      "sha256": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    "serving/replay/stream.go": {
+      "bytes": 2874,
+      "sha256": "d0fedbd24aaf5c7d42d5841818bec40cde8db4cac00eb707bd3e8358400e4d3a"
+    },
+    "serving/replay/trace.go": {
+      "bytes": 2989,
+      "sha256": "37f97366383e7062379a794c4eb98040b9c11a07ff3ae4fb3bfcc13c5ebf39a9"
+    },
+    "serving/replay/transport.go": {
+      "bytes": 4213,
+      "sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/wait.go": {
+      "bytes": 2437,
+      "sha256": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3"
+    }
+  },
+  "parent_monitor_sha256": "8d06f5ca394d81e81ee419f8b4e91ac6cf4365ede7244b5773809564b3eb524c",
+  "substitutions": {
+    "root_and_exact_name": 2,
+    "prefix": 1
+  },
+  "actual_pool_absent": true,
+  "old33105_sha_is_not_rebuild_requirement": true
+}

@@ -1,0 +1,7 @@
+{
+  "scope": "requiredreviewhelper only; no tests/sourceedit",
+  "first_exit": 126,
+  "cause": "review-package default calls sibling sdd-workspace directly; executable permission denied",
+  "package_created": false,
+  "correction": "invoke same requiredreview-package with explicit fourth OUTFILE in existingverifiedplanworkspace, no permission/filemode changes"
+}

@@ -1,0 +1,22 @@
+# crucible/serving/replay [crucible/serving/replay.test]
+serving/replay/replay_test.go:171:150: not enough arguments in call to send
+	have (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, number)
+	want (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, int, *phaseRequest)
+serving/replay/replay_test.go:181:144: not enough arguments in call to send
+	have (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, number)
+	want (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, int, *phaseRequest)
+serving/replay/transport_test.go:113:117: not enough arguments in call to send
+	have (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, number)
+	want (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, int, *phaseRequest)
+serving/replay/transport_test.go:120:118: not enough arguments in call to send
+	have (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, number)
+	want (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, int, *phaseRequest)
+serving/replay/transport_test.go:174:126: not enough arguments in call to send
+	have (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, number)
+	want (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, int, *phaseRequest)
+serving/replay/transport_test.go:219:127: not enough arguments in call to send
+	have (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, number)
+	want (context.Context, *http.Client, string, []byte, "time".Time, "time".Time, *Record, int, *phaseRequest)
+FAIL	crucible/serving/replay [build failed]
+ok  	crucible/serving/replay/cmd/replay	0.011s
+FAIL

@@ -1,0 +1,17 @@
+{
+  "project_before": 10493594660,
+  "binary_bytes": 10138001,
+  "binary_sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93",
+  "owned_build_executables": [],
+  "removed": [
+    {
+      "path": ".cache/task12-baseline/go-build",
+      "bytes": 94940658
+    },
+    {
+      "path": ".cache/task12-baseline/go-tmp",
+      "bytes": 0
+    }
+  ],
+  "project_after": 10398654002
+}

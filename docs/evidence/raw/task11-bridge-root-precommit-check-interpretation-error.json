@@ -1,0 +1,9 @@
+{
+  "scope": "ROOT metadata-only precommit check error, noGitmutation/workload",
+  "cause": "incorrectly required git diff --no-index --check to exit0 for different files; actualexit1 with empty stdout/stderr means difference only, not whitespace finding",
+  "correction": "accept exit0/1 ONLY when both output streams empty; retain rawbytes and no sourcechanges",
+  "first_path": "rl/learner/handoff_stream.py",
+  "exit": 1,
+  "stdout": "",
+  "stderr": ""
+}

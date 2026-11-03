@@ -1,0 +1,49 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_ownership_shim_broken_error_stream_cannot_release_unconfirmed_lock ____
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f81a74a7860>
+
+    def test_ownership_shim_broken_error_stream_cannot_release_unconfirmed_lock(monkeypatch):
+        state = ownership_shim(monkeypatch, worker=True)
+
+        class ClosedErrorStream:
+            def write(self, _text):
+                raise OSError("shim: diagnostic pipe closed")
+
+            def flush(self):
+                pass
+
+        def advance(seconds):
+            state.clock += seconds
+            if state.clock > 1.1:
+                assert not state.reaped
+                raise StopQuarantine
+
+        monkeypatch.setattr(gpu_guard.sys, "stderr", ClosedErrorStream())
+        monkeypatch.setattr(gpu_guard.time, "sleep", advance)
+        with pytest.raises(StopQuarantine):
+>           gpu_guard._supervise(1, ["fixture"])
+
+scripts/tests/test_gpu_guard.py:350:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts/gpu_guard.py:217: in _supervise
+    confirmed = _cleanup(workload, deadline, grace)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/gpu_guard.py:171: in _cleanup
+    report()
+scripts/gpu_guard.py:146: in report
+    print(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <test_gpu_guard.test_ownership_shim_broken_error_stream_cannot_release_unconfirmed_lock.<locals>.ClosedErrorStream object at 0x7f81a74e4e30>
+_text = 'GPU guard: cleanup_unconfirmed; retaining flock isolation: deadline exceeded'
+
+    def write(self, _text):
+>       raise OSError("shim: diagnostic pipe closed")
+E       OSError: shim: diagnostic pipe closed
+
+scripts/tests/test_gpu_guard.py:336: OSError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_broken_error_stream_cannot_release_unconfirmed_lock
+1 failed, 21 deselected in 0.04s

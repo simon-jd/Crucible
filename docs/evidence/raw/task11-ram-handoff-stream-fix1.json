@@ -1,0 +1,253 @@
+{
+  "mode": "stream-fix1",
+  "command": [
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-v",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/stream-fix1/pytest",
+    "rl/learner/tests/test_stream_handoff.py::test_retirement_registry_interrupt_quarantines_consumed_source",
+    "rl/learner/tests/test_stream_handoff.py::test_initial_output_identity_failure_retains_owned_pending",
+    "rl/learner/tests/test_stream_handoff.py::test_output_acquisition_unknown_result_retains_reservation",
+    "rl/learner/tests/test_stream_handoff.py::test_initial_output_registration_interrupt_tracks_fd",
+    "rl/learner/tests/test_stream_handoff.py::test_continuation_output_identity_failure_retains_pending",
+    "rl/learner/tests/test_stream_handoff.py::test_initial_output_close_uncertainty_preserves_primary",
+    "rl/learner/tests/test_stream_handoff.py::test_source_close_uncertainty_retains_reservation_and_reused_fd",
+    "rl/learner/tests/test_stream_handoff.py::test_primary_and_reap_uncertainty_preserved",
+    "rl/learner/tests/test_stream_handoff.py::test_post_accept_cleanup_failure_retains_pending_handle",
+    "rl/learner/tests/test_stream_handoff.py::test_stream_real_adamw_consumption_and_fresh_inspect"
+  ],
+  "initial_resource": {
+    "project_bytes": 13316382418,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306222187,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996222187,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "8ebe358deab1c02981c546870f85c39d236f31cefb4ac8290e5cbaa88c3ac4c6",
+    "rl/learner/handoff_zip.py": "631ba0699de344bde4191b3a2a0e1c4ab4f290f98e40dbad32fdcb7d0dc1c405",
+    "rl/learner/handoff_stream.py": "ac3452d915f05c0bba8338b70d185c5a293443cf29df113f9c86d4e54be3e44d",
+    "rl/learner/handoff_protocol.py": "687dd2dcce4f5b5d3d1b2da8350c9d11ba36201779a7838103f3d7c0c09d30e5",
+    "rl/learner/tests/test_stream_handoff.py": "277395212f6d110659d1bb73b11b9b92b8b5e0266865d7666693c828ce446f78",
+    "rl/learner/train.py": "4293dd0ff5ac658f5f56e56573f616214cc74a8fbdde4492f67e65cef7d9c3b3",
+    "rl/learner/README.md": "06f051e30d94b2d954a2372a8b3a5224dd30473b592f2055f063609294492aa9",
+    "rl/learner/tests/test_state_handoff.py": "a94a87eb490a7b43ba7779385d04abb5a4f20094cdec592847484188d3f831c7",
+    "rl/learner/tests/handoff_worker.py": "10d1e21ca458a33c444ca7009e264b62a774df187f67e069f1d32cd51ce36c55",
+    "scripts/test_ram_handoff_cpu.py": "12809b59716696c60aabae9e793913e3d3d881a770c2fa4e1b4ede27857f6c5d"
+  },
+  "limits": {
+    "seconds": 120,
+    "cleanup_seconds": 5,
+    "scratch_bytes": 1000000,
+    "aggregate_rss_plus_anonymous": 2000000000,
+    "anonymous_reserve": 4194304,
+    "fsize": 262144
+  },
+  "samples": [
+    {
+      "elapsed": 1.872031448991038,
+      "rss": 43708416,
+      "charged": 47902720,
+      "pids": [
+        2,
+        3
+      ],
+      "scratch_bytes": 0
+    },
+    {
+      "elapsed": 2.8810416699852794,
+      "rss": 611680256,
+      "charged": 615874560,
+      "pids": [
+        2,
+        3
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 3.890811369055882,
+      "rss": 1143435264,
+      "charged": 1147629568,
+      "pids": [
+        2,
+        3,
+        17
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 4.901613106019795,
+      "rss": 702570496,
+      "charged": 706764800,
+      "pids": [
+        2,
+        3,
+        17
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 5.911321711027995,
+      "rss": 1342255104,
+      "charged": 1346449408,
+      "pids": [
+        2,
+        3,
+        19
+      ],
+      "scratch_bytes": 4710
+    },
+    {
+      "elapsed": 6.925540706026368,
+      "rss": 1225773056,
+      "charged": 1229967360,
+      "pids": [
+        2,
+        3,
+        21
+      ],
+      "scratch_bytes": 4710
+    },
+    {
+      "elapsed": 7.938909039017744,
+      "rss": 828743680,
+      "charged": 832937984,
+      "pids": [
+        2,
+        3
+      ],
+      "scratch_bytes": 0
+    }
+  ],
+  "errors": [],
+  "exit_code": 0,
+  "cleanup_confirmed": true,
+  "peak_sampled_charge": 1363451904,
+  "remaining_owned_children": [],
+  "final_resource": {
+    "project_bytes": 13316385345,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306225114,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996225114,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "scratch_bytes": 0,
+  "scratch_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395127,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1",
+      "dev": 66307,
+      "inode": 56395130,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/cuda",
+      "dev": 66307,
+      "inode": 56395141,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/cupy",
+      "dev": 66307,
+      "inode": 56395143,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/inductor",
+      "dev": 66307,
+      "inode": 56395137,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/numba",
+      "dev": 66307,
+      "inode": 56395144,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/tmp",
+      "dev": 66307,
+      "inode": 56395133,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943978406549422
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/torch",
+      "dev": 66307,
+      "inode": 56395136,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/triton",
+      "dev": 66307,
+      "inode": 56395138,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/vllm",
+      "dev": 66307,
+      "inode": 56395146,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/xdg",
+      "dev": 66307,
+      "inode": 56395134,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "time_utc": "2026-10-25T14:40:50.816596+00:00",
+  "review_source": "independent subagent /root/review_task11_ram, not human",
+  "initial_task_commit": "d0e742031e3de2a1c2516d39b4fc96ca3a042b57",
+  "fix1_commit": "4027883ccadd36e64259df1ba52134fa28c75c89",
+  "spec_compliance": "Approved forCPUprerequisite afterI1/I2fix",
+  "task_quality": "Approved forscopedfix",
+  "I1": "ADDRESSED sharedrestoreformula includes2storage staging beforeconsume spawn",
+  "I2": "ADDRESSED boundedEOCD/ZIP64/CD metadata preflight beforeeagerload/saveoutput",
+  "new_Critical_Important_Minor": [],
+  "minor_deferred": {
+    "M1": "RNG fixture activeperturbation coverage, finalwholebranchreview; not closed"
+  },
+  "initial_review_bytes": 16285,
+  "initial_review_sha256": "3e2791a26ee8bee760c86d880fd24ee591cca365beec30a36b5ae2c87784996d",
+  "fix1_review_bytes": 10647,
+  "fix1_review_sha256": "78f59051a251fb0740c8644b28b9f046cd27178be5c9435937be30a36b8f0161",
+  "public_initial_prefix_unchanged": true,
+  "public_combined_bytes": 26939,
+  "public_combined_sha256": "c2c3a4e5174c4abfc7f007ceafb7de25cf099abce9f5b6dd4ae6be04791aae41",
+  "outside_diff_items_resolved": {
+    "committed_paths": "root-review-package-check26 androot-fix1-review-package-check10 committed+workingSHA/indexempty verified",
+    "predelete_inventories": "root-scratch-cleanup42dirs androot-fix1-result-cleanup12dirs fullpathset+lstat before exactrmdir; allrawpreserved",
+    "actual_lifecycle": "all5originalCPUhandles terminal; supervisor receipts cleanuptrue/nochildren; rawactualtrainingevents andkernelreaping assertions",
+    "freshhost": "root-fix1-end-host-audit0scopedCPUcandidates/25unreadable/raceentries; knownowncleanup proof separate; no globalGPUclaim",
+    "frozen_and_coordinator": "root-fix1-frozen-preservation183sources207artifacts4exec/100files2578786B actualhashmatches",
+    "finalresources": "resources-end-resume-28.json fullphaseinventory/pool14leafidentitiesempty/sharedmetadata23815435170B/scratchabsent/reservespass",
+    "Azure": "azure-reaper-end-resume-28-final.json defaultplan/absent/actionnone/$0/protectedRGuntouched"
+  },
+  "unverified_future_acceptance": [
+    "complete0.5B/1.5B aggregate16GBfit",
+    "actualCUDA RNG/FSDPresume",
+    "updatedrolloutweights/exportactivation",
+    "actualend-to-endmatchedtraining/quality/heldout/ablations/timing/externalbaseline/report"
+  ],
+  "CPU_prerequisite_phase_closed": true,
+  "whole_Task11_complete": false,
+  "whole_Goal_complete": false,
+  "new_native_GPU_authorized_or_executed": false,
+  "Task12_full03_v2": "stillnewtrustedexactone-shotauthorizationpending; originalfull02FAILED/spent unchanged"
+}

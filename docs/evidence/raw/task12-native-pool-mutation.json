@@ -1,0 +1,8 @@
+{
+  "source_sha256": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90",
+  "mutant_sha256": "67bde404bf7beecea7a3b3a2b9effdfe242dbd2f5fe716f2621d2e131497da39",
+  "mutation_count": 1,
+  "bytes": 7811,
+  "scratch": "/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu",
+  "mutation": "combined pool_bytes -> cache_bytes; omit client only"
+}

@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-10-25T08:26:00.994983+00:00",
+  "correction": "First audit matched its own parent shell because the inline script contains the searched command strings; original failure preserved. This pass explicitly excludes verified current audit ancestors only.",
+  "scope": "read-only known PID existence, accessible project process ownership, loopback port, matching device/inode proc locks, GPU query; no signals/workloads",
+  "known_run_pids_still_present": [],
+  "project_runtime_candidates": [],
+  "excluded_audit_ancestors_matching_text": [
+    {
+      "pid": 506766,
+      "start_ticks": "71451396",
+      "exe": "/usr/bin/bash",
+      "cwd": "/home/postedism/Desktop/Crucible"
+    }
+  ],
+  "port31012_connect_errno": 111,
+  "port31012_closed": true,
+  "shared_lock_entries": [],
+  "gpu_query_returncode": 0,
+  "project_gpu_processes": [],
+  "gpu_pid_ownership_unresolved": [],
+  "proc_entries_unavailable_or_exited": 782,
+  "limitation": "Unavailable/exited proc entries are not a global all-user process absence proof."
+}

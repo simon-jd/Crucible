@@ -1,0 +1,275 @@
+..............................FF............                             [100%]
+=================================== FAILURES ===================================
+_____________ test_redirect_closes_unbounded_body_and_limits_hops ______________
+
+url = 'http://127.0.0.1:45499/redirect-loop', deadline = 676062.158612591
+allowed = <function _open_download.<locals>.allowed at 0x7c0877d3a200>
+
+    def open_response(url, deadline, allowed):
+        """Verified TLS/default trust, no proxies, no redirect/error body reads."""
+    
+        def factory(cls):
+            def create(host, **kwargs):
+                connection = cls(host, **kwargs)
+                connection._create_connection = lambda address, timeout=None, source_address=None: (
+                    connect(address, deadline, source_address)
+                )
+                return connection
+    
+            return create
+    
+        class HTTP(urllib.request.HTTPHandler):
+            def http_open(self, request):
+                return self.do_open(factory(http.client.HTTPConnection), request)
+    
+        class HTTPS(urllib.request.HTTPSHandler):
+            def https_open(self, request):
+                return self.do_open(
+                    factory(http.client.HTTPSConnection), request, context=self._context
+                )
+    
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({}), HTTP(), HTTPS(), _NoRedirect()
+        )
+        for hop in range(6):
+            parsed = urllib.parse.urlparse(url)
+            if parsed.username or parsed.password or not allowed(parsed):
+                raise ValueError("unreviewed acquisition redirect/host")
+            request = urllib.request.Request(url, headers={"Accept-Encoding": "identity"})
+            try:
+>               response = opener.open(request, timeout=min(30, remaining(deadline)))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+serving/baseline/deadline_http.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0x7c0877e57980>
+req = <urllib.request.Request object at 0x7c0877e56f30>
+fp = <http.client.HTTPResponse object at 0x7c0877e55540>, code = 302
+msg = 'Found', hdrs = <http.client.HTTPMessage object at 0x7c0877e57c80>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 302: Found
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/request.py:639: HTTPError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-final/test_redirect_closes_unbounded0')
+http_bytes = ({'body': b'model-fixture', 'declared': 13, 'location': '/redirect-loop', 'requests': 8}, 'http://127.0.0.1:45499/fixture')
+
+    def test_redirect_closes_unbounded_body_and_limits_hops(tmp_path, http_bytes):
+        import time
+    
+        state, url = http_bytes
+        result = ensure_file(
+            item(state["body"]),
+            tmp_path / "ok",
+            download=True,
+            test_url=url.replace("/fixture", "/redirect"),
+            observe=lambda remaining: None,
+            deadline=time.monotonic() + 2,
+        )
+        assert result["response"]["path"] == "/fixture" and state["requests"] == 2
+        state["location"] = "/redirect-loop"
+        with pytest.raises(ValueError, match="redirect limit"):
+>           ensure_file(
+                item(state["body"]),
+                tmp_path / "loop",
+                download=True,
+                test_url=url.replace("/fixture", "/redirect"),
+                observe=lambda remaining: None,
+            )
+
+serving/baseline/model_snapshot_test.py:248: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+serving/baseline/model_snapshot.py:316: in ensure_file
+    return _ensure_file(
+serving/baseline/model_snapshot.py:271: in _ensure_file
+    response = _download(
+serving/baseline/model_snapshot.py:203: in _download
+    with _open_download(url, deadline, test_origin) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+serving/baseline/model_snapshot.py:188: in _open_download
+    return open_response(url, deadline, allowed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = 'http://127.0.0.1:45499/redirect-loop', deadline = 676062.158612591
+allowed = <function _open_download.<locals>.allowed at 0x7c0877d3a200>
+
+    def open_response(url, deadline, allowed):
+        """Verified TLS/default trust, no proxies, no redirect/error body reads."""
+    
+        def factory(cls):
+            def create(host, **kwargs):
+                connection = cls(host, **kwargs)
+                connection._create_connection = lambda address, timeout=None, source_address=None: (
+                    connect(address, deadline, source_address)
+                )
+                return connection
+    
+            return create
+    
+        class HTTP(urllib.request.HTTPHandler):
+            def http_open(self, request):
+                return self.do_open(factory(http.client.HTTPConnection), request)
+    
+        class HTTPS(urllib.request.HTTPSHandler):
+            def https_open(self, request):
+                return self.do_open(
+                    factory(http.client.HTTPSConnection), request, context=self._context
+                )
+    
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({}), HTTP(), HTTPS(), _NoRedirect()
+        )
+        for hop in range(6):
+            parsed = urllib.parse.urlparse(url)
+            if parsed.username or parsed.password or not allowed(parsed):
+                raise ValueError("unreviewed acquisition redirect/host")
+            request = urllib.request.Request(url, headers={"Accept-Encoding": "identity"})
+            try:
+                response = opener.open(request, timeout=min(30, remaining(deadline)))
+                try:
+                    remaining(deadline)
+                except BaseException:
+                    response.close()
+                    raise
+                return response
+            except urllib.error.HTTPError as response:
+                try:
+                    if response.code not in (301, 302, 303, 307, 308):
+                        raise ValueError(f"acquisition HTTP status {response.code}") from None
+                    if hop == 5 or not response.headers.get("Location"):
+>                       raise ValueError("acquisition redirect bound/location")
+E                       ValueError: acquisition redirect bound/location
+
+serving/baseline/deadline_http.py:165: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-final/test_redirect_closes_unbounded0')
+http_bytes = ({'body': b'model-fixture', 'declared': 13, 'location': '/redirect-loop', 'requests': 8}, 'http://127.0.0.1:45499/fixture')
+
+    def test_redirect_closes_unbounded_body_and_limits_hops(tmp_path, http_bytes):
+        import time
+    
+        state, url = http_bytes
+        result = ensure_file(
+            item(state["body"]),
+            tmp_path / "ok",
+            download=True,
+            test_url=url.replace("/fixture", "/redirect"),
+            observe=lambda remaining: None,
+            deadline=time.monotonic() + 2,
+        )
+        assert result["response"]["path"] == "/fixture" and state["requests"] == 2
+        state["location"] = "/redirect-loop"
+>       with pytest.raises(ValueError, match="redirect limit"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'redirect limit'
+E        Input: 'acquisition redirect bound/location'
+
+serving/baseline/model_snapshot_test.py:247: AssertionError
+__________ test_redirect_rejects_other_origin_without_sending_request __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-final/test_redirect_rejects_other_or0')
+http_bytes = ({'body': b'model-fixture', 'declared': 13, 'location': 'http://127.0.0.1:1/unreviewed', 'requests': 1}, 'http://127.0.0.1:37471/fixture')
+
+    def test_redirect_rejects_other_origin_without_sending_request(tmp_path, http_bytes):
+        state, url = http_bytes
+        state["location"] = "http://127.0.0.1:1/unreviewed"
+        with pytest.raises(ValueError, match="unreviewed model redirect"):
+>           ensure_file(
+                item(state["body"]),
+                tmp_path,
+                download=True,
+                test_url=url.replace("/fixture", "/redirect"),
+                observe=lambda remaining: None,
+            )
+
+serving/baseline/model_snapshot_test.py:262: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+serving/baseline/model_snapshot.py:316: in ensure_file
+    return _ensure_file(
+serving/baseline/model_snapshot.py:271: in _ensure_file
+    response = _download(
+serving/baseline/model_snapshot.py:203: in _download
+    with _open_download(url, deadline, test_origin) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+serving/baseline/model_snapshot.py:188: in _open_download
+    return open_response(url, deadline, allowed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = 'http://127.0.0.1:1/unreviewed', deadline = 676062.665352708
+allowed = <function _open_download.<locals>.allowed at 0x7c0877d18ea0>
+
+    def open_response(url, deadline, allowed):
+        """Verified TLS/default trust, no proxies, no redirect/error body reads."""
+    
+        def factory(cls):
+            def create(host, **kwargs):
+                connection = cls(host, **kwargs)
+                connection._create_connection = lambda address, timeout=None, source_address=None: (
+                    connect(address, deadline, source_address)
+                )
+                return connection
+    
+            return create
+    
+        class HTTP(urllib.request.HTTPHandler):
+            def http_open(self, request):
+                return self.do_open(factory(http.client.HTTPConnection), request)
+    
+        class HTTPS(urllib.request.HTTPSHandler):
+            def https_open(self, request):
+                return self.do_open(
+                    factory(http.client.HTTPSConnection), request, context=self._context
+                )
+    
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({}), HTTP(), HTTPS(), _NoRedirect()
+        )
+        for hop in range(6):
+            parsed = urllib.parse.urlparse(url)
+            if parsed.username or parsed.password or not allowed(parsed):
+>               raise ValueError("unreviewed acquisition redirect/host")
+E               ValueError: unreviewed acquisition redirect/host
+
+serving/baseline/deadline_http.py:150: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-final/test_redirect_rejects_other_or0')
+http_bytes = ({'body': b'model-fixture', 'declared': 13, 'location': 'http://127.0.0.1:1/unreviewed', 'requests': 1}, 'http://127.0.0.1:37471/fixture')
+
+    def test_redirect_rejects_other_origin_without_sending_request(tmp_path, http_bytes):
+        state, url = http_bytes
+        state["location"] = "http://127.0.0.1:1/unreviewed"
+>       with pytest.raises(ValueError, match="unreviewed model redirect"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'unreviewed model redirect'
+E        Input: 'unreviewed acquisition redirect/host'
+
+serving/baseline/model_snapshot_test.py:261: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/model_snapshot_test.py::test_redirect_closes_unbounded_body_and_limits_hops
+FAILED serving/baseline/model_snapshot_test.py::test_redirect_rejects_other_origin_without_sending_request
+2 failed, 42 passed in 24.84s

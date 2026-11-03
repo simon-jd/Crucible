@@ -1,0 +1,41 @@
+{
+  "handle": 17692,
+  "scope": "host process namespace; exact module argv match only",
+  "owned_processes": [
+    {
+      "pid": 1520763,
+      "ppid": 1520759,
+      "start_ticks": 67201248,
+      "comm": "timeout",
+      "argv": [
+        "timeout",
+        "--foreground",
+        "--signal=TERM",
+        "--kill-after=30s",
+        "3660s",
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "serving.baseline.model_snapshot",
+        "--download",
+        "--output",
+        "docs/evidence/raw/task12-model-acquisition-02.json"
+      ]
+    },
+    {
+      "pid": 1520764,
+      "ppid": 1520763,
+      "start_ticks": 67201248,
+      "comm": "python",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "serving.baseline.model_snapshot",
+        "--download",
+        "--output",
+        "docs/evidence/raw/task12-model-acquisition-02.json"
+      ]
+    }
+  ]
+}

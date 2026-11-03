@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 45 items
+
+rl/learner/tests/test_stream_handoff.py::test_stream_real_adamw_consumption_and_fresh_inspect {"kind": "serial-stream-real-adamw", "events": [{"pid": 6, "returncode": 0, "reaped": true, "error": null}, {"stage": "stream-start", "pid": 8, "starttime": 73974718, "source": [1, 1254975], "charge": {"restore": 1002667678, "capture": 1002638848, "vram": 0}}, {"stage": "source-proof", "pid": 8, "child": {"fd_count": 4, "map_count": 344, "source_fds": []}, "parent": {"fd_count": 15, "map_count": 349, "source_fds": [10]}}, {"stage": "source-retired", "pid": 8, "accepted": 0, "weights_slots": 1}, {"stage": "output-granted", "pid": 8, "output": [1, 1255478], "slots": 2}, {"stage": "stream-exit", "pid": 8, "returncode": 0, "reaped": true, "retired": true, "accepted": true}, {"pid": 10, "returncode": 0, "reaped": true, "error": null}], "receipt": {"device": 1, "inode": 1255478, "size": 28830, "sha256": "625c400e66c64087238d1328a751d6217995413012145c5c0f06c493f67d9cf9", "seals": 15, "version": 2, "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}", "cap": 131072, "metadata_cap": 32768, "storage_cap": 8192}, "loss": -0.18994787335395813}
+PASSED
+rl/learner/tests/test_stream_handoff.py::test_manifest_allocation_read_boundary_and_no_cuda_queries PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[bytes] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[offset] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[dtype] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[device] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[shape] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[stride] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[alias] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[extra] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[cpu] PASSED
+rl/learner/tests/test_stream_handoff.py::test_decoded_metadata_limits[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] PASSED
+rl/learner/tests/test_stream_handoff.py::test_decoded_metadata_limits[{"a":0,"a":1}] PASSED
+rl/learner/tests/test_stream_handoff.py::test_decoded_metadata_limits[{"a":9223372036854775808}] PASSED
+rl/learner/tests/test_stream_handoff.py::test_decoded_metadata_limits[{"a":NaN}] PASSED
+rl/learner/tests/test_stream_handoff.py::test_tagged_primitives_roundtrip PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_validation_precedes_mutation[nan] PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_validation_precedes_mutation[step] PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_validation_precedes_mutation[rng] PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_validation_precedes_mutation[config] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os._exit(7)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os.kill(os.getpid(), signal.SIGTERM)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[time.sleep(5)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os.close(fd); p._send(c, p._packet(p.ACK, b'x'*16, r)); time.sleep(5)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[p._send(c, p._packet(p.ACK, n, r)); time.sleep(5)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[import mmap\nm=mmap.mmap(fd,0,access=mmap.ACCESS_READ)\nos.close(fd)\np._send(c,p._packet(p.ACK,n,r)); time.sleep(5)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[p._send(c,p._packet(p.ACK,n,r),fd); time.sleep(5)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os.close(fd); c.send(b'x'); time.sleep(5)-False] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os.close(fd); p._send(c,p._packet(p.ACK,n,r)); p._receive(c); os._exit(7)-True] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os.close(fd); p._send(c,p._packet(p.ACK,n,r)); p._receive(c); time.sleep(5)-True] PASSED
+rl/learner/tests/test_stream_handoff.py::test_protocol_rejections_no_replacement[os.close(fd); p._send(c,p._packet(p.ACK,n,r)); p._receive(c); p._send(c,p._packet(p.ACK,n,r)); time.sleep(5)-True] PASSED
+rl/learner/tests/test_stream_handoff.py::test_grant_transfer_failure_is_irreversible PASSED
+rl/learner/tests/test_stream_handoff.py::test_source_close_uncertainty_retains_reservation_and_reused_fd PASSED
+rl/learner/tests/test_stream_handoff.py::test_primary_and_reap_uncertainty_preserved PASSED
+rl/learner/tests/test_stream_handoff.py::test_budget_weights_slots_and_nonzero_baselines PASSED
+rl/learner/tests/test_stream_handoff.py::test_foreign_process_untouched_by_serial_timeout PASSED
+rl/learner/tests/test_stream_handoff.py::test_stream_restore_missing_budget_fails_phase PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_scm_rights_grant_rejected_and_closed[extra] PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_scm_rights_grant_rejected_and_closed[wrong] PASSED
+rl/learner/tests/test_stream_handoff.py::test_actual_scm_rights_grant_rejected_and_closed[truncated] PASSED
+rl/learner/tests/test_stream_handoff.py::test_ancillary_cleanup_collects_rights_after_unknown_item PASSED
+rl/learner/tests/test_stream_handoff.py::test_destination_allowance_is_checked_before_allocation PASSED
+rl/learner/tests/test_stream_handoff.py::test_post_accept_cleanup_failure_retains_pending_handle PASSED
+rl/learner/tests/test_stream_handoff.py::test_received_right_close_uncertainty_poison_retains_handles PASSED
+rl/learner/tests/test_state_handoff.py::test_original_child_exit_then_fresh_process_adamw_resume {"kind": "actual-cpu-adamw-cross-process-resume", "events": [{"pid": 47, "returncode": 0, "reaped": true, "error": null}, {"pid": 49, "returncode": 0, "reaped": true, "error": null}, {"pid": 51, "returncode": 0, "reaped": true, "error": null}], "receipt": {"device": 1, "inode": 1259763, "size": 17648, "sha256": "1d0ae45d87d8e9816015a3e184ec9eca1beb5f2a8b20bcf13fd0ceb7d202aca4", "seals": 15, "version": 2, "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}", "cap": 131072, "metadata_cap": 32768, "storage_cap": 8192}, "next_loss": -0.18994787335395813}
+PASSED
+
+============================= 45 passed in 13.64s ==============================

@@ -1,0 +1,60 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_native_smoke_retains_bad_stream_and_failure_summary ___________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/native-red/test_native_smoke_retains_bad_0')
+
+    def test_native_smoke_retains_bad_stream_and_failure_summary(tmp_path):
+        import http.server
+        import json
+        import threading
+    
+        from serving.baseline.experiment import native_smoke
+    
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+    
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                body = b"data: {malformed\n\n"
+                self.send_response(200)
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+    
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        worker = threading.Thread(target=server.serve_forever)
+        worker.start()
+        try:
+            with pytest.raises(ValueError):
+                native_smoke(f"http://127.0.0.1:{server.server_port}/generate", [1, 2], 151936, tmp_path)
+>           result = json.loads((tmp_path / "native-smoke.json").read_text())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+serving/baseline/experiment_test.py:433: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/native-red/test_native_smoke_retains_bad_0/native-smoke.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/native-red/test_native_smoke_retains_bad_0/native-smoke.json'
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1013: FileNotFoundError
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_native_smoke_retains_bad_stream_and_failure_summary
+1 failed, 13 deselected in 0.56s

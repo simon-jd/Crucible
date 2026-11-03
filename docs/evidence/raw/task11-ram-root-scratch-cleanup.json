@@ -1,0 +1,401 @@
+{
+  "time_utc": "2026-10-25T14:03:01.070935+00:00",
+  "scope": "ROOT full independent pre-delete inventory/pathset/lstat and6executedsource hashes checked; only own42emptydirs",
+  "inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395020,
+      "mode": 16893,
+      "nlink": 7,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression",
+      "dev": 66307,
+      "inode": 56395048,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/cuda",
+      "dev": 66307,
+      "inode": 56395100,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/cupy",
+      "dev": 66307,
+      "inode": 56395101,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/inductor",
+      "dev": 66307,
+      "inode": 56395096,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/numba",
+      "dev": 66307,
+      "inode": 56395104,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/tmp",
+      "dev": 66307,
+      "inode": 56395093,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936847004015739
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/torch",
+      "dev": 66307,
+      "inode": 56395095,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/triton",
+      "dev": 66307,
+      "inode": 56395099,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/vllm",
+      "dev": 66307,
+      "inode": 56395105,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/cap-regression/xdg",
+      "dev": 66307,
+      "inode": 56395094,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936845443527804
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility",
+      "dev": 66307,
+      "inode": 56395028,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936205178521942
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cuda",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cupy",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/inductor",
+      "dev": 66307,
+      "inode": 56395034,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/numba",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/tmp",
+      "dev": 66307,
+      "inode": 56395029,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205665518693
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/torch",
+      "dev": 66307,
+      "inode": 56395033,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/triton",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/vllm",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/xdg",
+      "dev": 66307,
+      "inode": 56395030,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2",
+      "dev": 66307,
+      "inode": 56395049,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/cuda",
+      "dev": 66307,
+      "inode": 56395059,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/cupy",
+      "dev": 66307,
+      "inode": 56395062,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/inductor",
+      "dev": 66307,
+      "inode": 56395057,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/numba",
+      "dev": 66307,
+      "inode": 56395063,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/tmp",
+      "dev": 66307,
+      "inode": 56395052,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936562490826966
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/torch",
+      "dev": 66307,
+      "inode": 56395054,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/triton",
+      "dev": 66307,
+      "inode": 56395058,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/vllm",
+      "dev": 66307,
+      "inode": 56395068,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/xdg",
+      "dev": 66307,
+      "inode": 56395053,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused",
+      "dev": 66307,
+      "inode": 56395069,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/cuda",
+      "dev": 66307,
+      "inode": 56395079,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/cupy",
+      "dev": 66307,
+      "inode": 56395080,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/inductor",
+      "dev": 66307,
+      "inode": 56395075,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/numba",
+      "dev": 66307,
+      "inode": 56395083,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/tmp",
+      "dev": 66307,
+      "inode": 56395070,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936658509499311
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/torch",
+      "dev": 66307,
+      "inode": 56395074,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/triton",
+      "dev": 66307,
+      "inode": 56395078,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/vllm",
+      "dev": 66307,
+      "inode": 56395084,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/xdg",
+      "dev": 66307,
+      "inode": 56395073,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/static",
+      "dev": 66307,
+      "inode": 56395025,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792935779017365491
+    }
+  ],
+  "regular_files": 0,
+  "symlinks": 0,
+  "regular_bytes": 0,
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "f81c85271d6cf45892378ff1aa861badec429bb5478e92729d07ae8e2ebf6961",
+    "rl/learner/train.py": "9a2fdd334245475dbed2e390d7e035f27201925c18428e5e4b5ee664a95b74a6",
+    "rl/learner/tests/test_state_handoff.py": "d822cdfbdc7221365aa5cd196a746a834082d2fb91b7655b3e73989efde0c59a",
+    "rl/learner/tests/handoff_worker.py": "1477e7cc02c181c7637b07f4ae5f1044bc35851c7b055516458d1a9b78d5bb0a",
+    "scripts/test_ram_handoff_cpu.py": "246824ec69c3adbcee192a2cb2050e197e281b2bfa5a726b7d1527616cacbe00",
+    "rl/learner/README.md": "6c261d1d0fe325281863ced3f2b3548c806117e006645d4c76559139a6ca99bb"
+  },
+  "cleanup_confirmed_by_supervisors": true,
+  "remaining_owned_children": [],
+  "delete_permitted": "exact42directories using rmdir only after freshsame dev/inode/mode check; no raw/logs/runtime/pool/model deletion",
+  "deleted": true,
+  "removed_directories": 42,
+  "completed_utc": "2026-10-25T14:03:01.071737+00:00"
+}

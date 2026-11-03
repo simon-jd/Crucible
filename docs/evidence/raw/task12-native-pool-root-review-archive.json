@@ -1,0 +1,41 @@
+{
+  "observed_at_utc": "2026-10-25T12:13:13.610045+00:00",
+  "scope": "root-generated reconstructable review packages only, after completed independent review; no coordinator/source/raw/build inventory removed",
+  "records": [
+    {
+      "original": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-helper-review.diff",
+      "dev": 66307,
+      "inode": 54046702,
+      "bytes": 400816,
+      "sha256": "e06955935147cad658a8df98327cbfb61270cbcc233b7f38ff10dd6a69117880",
+      "archive": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-helper-review.diff.gz",
+      "gzip_bytes": 84722,
+      "gzip_sha256": "cf9df45bd32a546fd256d6b5dd7fee8c360772b1ea60c8a43d5be2d003e538d9",
+      "roundtrip_identical": true
+    },
+    {
+      "original": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-review.diff",
+      "dev": 66307,
+      "inode": 54046703,
+      "bytes": 608259,
+      "sha256": "aa0c4483ec6f1256abe6221544bc064985f409c06ff82ecebf4c335d7de66319",
+      "archive": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-review.diff.gz",
+      "gzip_bytes": 217427,
+      "gzip_sha256": "bf29012b3393c0b06bb1593ced5a4cee2043cb0692df6c3656179897ae79e3c5",
+      "roundtrip_identical": true
+    }
+  ],
+  "original_bytes": 1009075,
+  "gzip_bytes": 302149,
+  "regular_bytes_reclaimed": 706926,
+  "evidence_preserved_losslessly": true,
+  "restore": "gzip -dc archive reconstructs exact original bytes/SHA; no experiment rerun",
+  "public_review_sha256": "d100bc2bbf21dd790cfdf36b1b33df35ab1284622eb5f5a9f316bec7f536d9ea",
+  "public_review_bytes": 12450,
+  "review_result": "Spec Needs fixes / Quality Needs fixes; one Important I1",
+  "retained_named_bytes_before": 1656792,
+  "conservative_peak_including_publiccopy_4KiBreceipt_16KBbookkeeping": 1991487,
+  "stage_retained_cap": 2000000,
+  "caps_increased": false,
+  "initial_attempt": "250k compression-size estimate assertion failed BEFORE any writes/unlinks; actual302149B now allocated from measured unused same2M stage budget. No source/command/runtime/GPU change."
+}

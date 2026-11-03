@@ -1,0 +1,128 @@
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/rollout/_worker.py:355:28
+    |
+353 |                     try:
+354 |                         channel.close()
+355 |                     except BaseException as error:
+    |                            ^^^^^^^^^^^^^
+356 |                         errors.append(error)
+357 |                 raise WorkerStartupError(self, False) from BaseExceptionGroup(
+    |
+
+SIM102 Use a single `if` statement instead of nested `if` statements
+   --> rl/rollout/ram_loader.py:127:9
+    |
+125 |               if not required <= names:
+126 |                   raise ValueError("missing qkv shard")
+127 | /         if ".gate_up_proj." in target:
+128 | |             if (
+129 | |                 not {target.replace(".gate_up_proj.", f".{s}_proj.") for s in ("gate", "up")}
+130 | |                 <= names
+131 | |             ):
+    | |______________^
+132 |                   raise ValueError("missing gate/up shard")
+133 |       if "lm_head.weight" in tensors and "model.embed_tokens.weight" in tensors:
+    |
+help: Combine `if` statements using `and`
+    |
+126 |                 raise ValueError("missing qkv shard")
+    -         if ".gate_up_proj." in target:
+    -             if (
+    -                 not {target.replace(".gate_up_proj.", f".{s}_proj.") for s in ("gate", "up")}
+    -                 <= names
+    -             ):
+    -                 raise ValueError("missing gate/up shard")
+127 +         if ".gate_up_proj." in target and (
+128 +             not {target.replace(".gate_up_proj.", f".{s}_proj.") for s in ("gate", "up")}
+129 +             <= names
+130 +         ):
+131 +             raise ValueError("missing gate/up shard")
+132 |     if "lm_head.weight" in tensors and "model.embed_tokens.weight" in tensors:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> rl/sync/ram_export.py:3:1
+   |
+ 1 |   """CPU-only owned exporter. Entry is authorized by PhaseBridge, never a GPU task."""
+ 2 |
+ 3 | / import json
+ 4 | | import os
+ 5 | |
+ 6 | | from rl.learner import handoff_stream as stream
+ 7 | | from rl.learner import state_handoff as state
+ 8 | | from rl.sync.ram_weights import (
+ 9 | |     BridgeBudget,
+10 | |     HEADER,
+11 | |     MAGIC,
+12 | |     describe_source,
+13 | |     digest,
+14 | |     encode,
+15 | |     validate_source,
+16 | | )
+   | |_^
+help: Organize imports
+   |
+8  | from rl.sync.ram_weights import (
+   -     BridgeBudget,
+9  |     HEADER,
+10 |     MAGIC,
+11 +     BridgeBudget,
+12 |     describe_source,
+   |
+
+SIM102 Use a single `if` statement instead of nested `if` statements
+   --> rl/sync/ram_weights.py:268:13
+    |
+266 |                   raise ValueError("model kind/persistence")
+267 |               dtype = meta["dtype"]
+268 | /             if dtype.startswith("torch.float") or dtype == "torch.bfloat16":
+269 | |                 if schema[name]["kind"] == "parameter" and dtype != (
+270 | |                     "torch.float32" if kind == "policy" else "torch.bfloat16"
+271 | |                 ):
+    | |__________________^
+272 |                       raise ValueError("FP32 policy/BF16 reference required")
+273 |               distribution = meta["distribution"]
+    |
+help: Combine `if` statements using `and`
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> rl/sync/tests/ram_worker.py:3:1
+   |
+ 1 |   """Trusted tiny CPU workers; no vLLM import or actual-GPU evidence."""
+ 2 |
+ 3 | / import copy
+ 4 | | import contextlib
+ 5 | | import json
+ 6 | | import os
+ 7 | | import random
+ 8 | | import sys
+ 9 | | import time
+10 | | from types import SimpleNamespace
+11 | |
+12 | | import torch
+13 | |
+14 | | from rl.learner import handoff_stream as stream
+15 | | from rl.learner import state_handoff as state
+16 | | from rl.learner.handoff_protocol import retire_input_and_receive_output
+17 | | from rl.learner.tests.handoff_worker import BINDING, Tokenizer, group, summary
+18 | | from rl.learner.train import Learner, LearnerConfig
+19 | | from rl.rollout._rpc import FramedSocket
+20 | | from rl.rollout._worker import VLLMWorker
+21 | | from rl.rollout.ram_loader import iter_weights, target_views, verify_model
+22 | | from rl.sync.ram_weights import describe_source, read_weights
+   | |_____________________________________________________________^
+23 |
+24 |   CAP = 131072
+   |
+help: Organize imports
+  |
+2 |
+3 + import contextlib
+4 | import copy
+  - import contextlib
+5 | import json
+  |
+
+Found 5 errors.
+[*] 2 fixable with `--fix` (1 unsafe fix available with `--fix --unsafe-fixes`).

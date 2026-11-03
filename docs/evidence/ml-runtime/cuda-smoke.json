@@ -1,0 +1,25 @@
+{
+  "kind": "environment-correctness-smoke",
+  "performance_claim": false,
+  "model": null,
+  "device": "cuda",
+  "python": "3.12.13",
+  "torch": "2.8.0+cu128",
+  "triton": "3.4.0",
+  "torch_build_cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "compute_capability": [
+    8,
+    9
+  ],
+  "total_memory_bytes": 25249579008,
+  "nccl": [
+    2,
+    27,
+    3
+  ],
+  "driver": "595.99.02",
+  "dtype": "torch.bfloat16",
+  "forward_ok": true,
+  "backward_ok": true
+}

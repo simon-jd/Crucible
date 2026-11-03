@@ -1,0 +1,32 @@
+{
+  "historical_freeze_sha256": "43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761",
+  "counts": {
+    "sources": 176,
+    "artifacts": 58
+  },
+  "mismatches": {
+    "sources": {
+      "/home/postedism/Desktop/Crucible/serving/replay/schedule.go": {
+        "historical": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+        "current": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+      },
+      "/home/postedism/Desktop/Crucible/serving/replay/transport.go": {
+        "historical": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+        "current": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+      },
+      "/home/postedism/Desktop/Crucible/serving/replay/cmd/replay/main.go": {
+        "historical": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+        "current": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+      }
+    },
+    "artifacts": {}
+  },
+  "executable_matches": {
+    "python_path": true,
+    "native_python_path": true,
+    "timeout_path": true,
+    "prlimit_path": true
+  },
+  "historical_freeze_not_rewritten": true,
+  "no_shared_weight_payload_read": true
+}

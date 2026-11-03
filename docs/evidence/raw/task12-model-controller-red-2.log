@@ -1,0 +1,29 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_________ test_attempted_trial_retains_partial_stdout_and_reaps_child __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/red-2/test_attempted_trial_retains_p0')
+
+    def test_attempted_trial_retains_partial_stdout_and_reaps_child(tmp_path):
+        import json
+    
+>       from serving.baseline.experiment import execute_trial
+E       ImportError: cannot import name 'execute_trial' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:245: ImportError
+_________ test_verified_model_inputs_reject_mutated_blob_or_allowlist __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-controller-tests/red-2/test_verified_model_inputs_rej0')
+
+    def test_verified_model_inputs_reject_mutated_blob_or_allowlist(tmp_path):
+        import hashlib
+        import json
+    
+>       from serving.baseline.experiment import verify_model_inputs
+E       ImportError: cannot import name 'verify_model_inputs' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:262: ImportError
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_attempted_trial_retains_partial_stdout_and_reaps_child
+FAILED serving/baseline/experiment_test.py::test_verified_model_inputs_reject_mutated_blob_or_allowlist
+2 failed, 9 deselected in 0.05s

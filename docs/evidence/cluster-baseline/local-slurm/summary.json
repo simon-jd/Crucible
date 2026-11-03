@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "scheduler": "slurm",
+  "errors": [
+    "command failed (127): srun -N4 --ntasks-per-node=8 --gpus-per-node=8 nvidia-smi -L: FileNotFoundError: [Errno 2] No such file or directory: 'srun'",
+    "lock validation: image digest is missing/unlocked (must be sha256:<64 hex>)"
+  ],
+  "captured_utc": "2026-10-24T02:17:50.737587+00:00",
+  "scope": "real-command execution; synthetic subprocesses only in explicitly labelled tests"
+}

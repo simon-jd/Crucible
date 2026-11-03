@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "source_SHA": {
+    "serving/baseline/native_ipc.py": "91d153fafb016ea7596d078311c0251b2d97e42adc28302a1201bf0b98b8e15e",
+    "serving/baseline/native_ipc_test.py": "503609471d5ac66f3b7c7b873b830cdbb25b9df04477fb31d8ed0fa5c1dcc66b",
+    "serving/baseline/native_pool.py": "2d339a4ad975c104cc22f4a4ce2756ac472f768bc3b01ebef0b9aa93e701e07b",
+    "serving/baseline/runtime_entry.py": "c507496980279dd8be3d7741a6b9c08afda8d1b7c4b92c82b4bc04c0f4e3308b",
+    "serving/baseline/experiment.py": "e2a75067a3d6e2ecef51e25cb460e047172fd1e2fc1b452a9a78f29cfa18f30c",
+    "serving/baseline/cache-audit.json": "2f1c57563292533b54fb7614aba2ef93d1287f4da0a1b85f5e87244fbd6d1c80"
+  },
+  "AS": 1000000000,
+  "FSIZE": 4096,
+  "log_bytes": 0,
+  "log": "",
+  "no_source_writes": true
+}

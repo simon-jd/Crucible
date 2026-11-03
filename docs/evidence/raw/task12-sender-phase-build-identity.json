@@ -1,0 +1,23 @@
+{
+  "original_handle": 1253,
+  "binary": ".tmp-task12-sender-phase-go-loan/replay-phase",
+  "bytes": 10154096,
+  "sha256": "82befd82d993b6c39527681f1a34bc5c5d4e8d21bfffca56449473ea0790ae15",
+  "after": {
+    "canonical_bytes": 13540759883,
+    "owned_bytes": 242783895,
+    "nonloan_bytes": 13297975988,
+    "projected_bytes": 13987975988,
+    "free_bytes": 265541771264,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "max_owned": 232489395,
+  "scan_errors": [],
+  "source_hashes": {
+    "serving/replay/schedule.go": "7d99d4b619dd7aa48186265bdfec7fb55910a8985d411179cfd3ad6e4d0a71da",
+    "serving/replay/transport.go": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b",
+    "serving/replay/diagnostic.go": "c57c268deb96fb35382f035908ad52c296027006f29747d39c6e283094237402",
+    "serving/replay/cmd/replay/main.go": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+  },
+  "timing_run": "not authorized/not launched"
+}

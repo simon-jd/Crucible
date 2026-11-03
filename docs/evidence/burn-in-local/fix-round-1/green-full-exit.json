@@ -1,0 +1,10 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "returncode": 0,
+  "kind": "CPU-only regression and command/proxy shims; not real multi-node/network-partition validation"
+}

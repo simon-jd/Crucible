@@ -1,0 +1,16 @@
+{
+  "time_utc": "2026-10-25T14:35:10.881249+00:00",
+  "scope": "ROOT finalafterfix1 actualhashcheck; no modelpayloadload/rehash",
+  "freeze": "task12-baseline-full-03-source-freeze-v2.json",
+  "freeze_sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a",
+  "sources_verified": 183,
+  "artifacts_verified": 207,
+  "executables_verified": 4,
+  "coordinator_inventory": "coordinator-resume-24-inventory.json",
+  "coordinator_files_verified": 100,
+  "coordinator_bytes_verified": 2578786,
+  "mismatches": [],
+  "originalfull02_actual_failure_preserved": true,
+  "full03_native_authorized_or_executed": false,
+  "whole_project_complete": false
+}

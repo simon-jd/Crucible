@@ -1,0 +1,28 @@
+{
+  "time_utc": "2026-10-25T18:41:46.167615+00:00",
+  "resource_sample": {
+    "project_bytes": 13317652784,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13307492553,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13997492553,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "free_bytes": 263669415936,
+  "CPU_phase_only_closed": true,
+  "whole_Goal_complete": false,
+  "all_agents_completed_source_returned": true,
+  "CPU_original_handles": {
+    "8265": 125,
+    "59327": 0,
+    "47411": 1,
+    "29321": 0
+  },
+  "no_new_tests": true,
+  "new_live_user_one_shot_full03_authority": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task12-full03-v2-human-authorization-20261025.json"
+}

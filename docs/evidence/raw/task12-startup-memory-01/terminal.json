@@ -1,0 +1,27 @@
+{
+  "baseline_accepted": false,
+  "reason": "early-memory-stop",
+  "early_rss_stop_bytes": 10000000000,
+  "unchanged_service_cap_bytes": 16000000000,
+  "samples": 63,
+  "sampling_is_not_an_atomic_quota": true,
+  "initial_resources": {
+    "monotonic": 677131.97475937,
+    "project_bytes": 13321560123,
+    "project_bytes_kind": "conservative mutable-root estimate",
+    "runtime_cache_bytes": 7065,
+    "evidence_bytes": 0,
+    "owned_rss_bytes": 58036224,
+    "canonical_rescans": []
+  },
+  "pid": 2205434,
+  "cleanup": {
+    "pid": 2205434,
+    "returncode": -15,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "elapsed_seconds": 6.284076606971212
+}

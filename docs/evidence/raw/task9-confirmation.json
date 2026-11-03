@@ -1,0 +1,295 @@
+{
+  "protocol_sha256": "a9d94ba329dddb322156549bd1492a26d8387062d7585fb292b3ff0bd7455b4c",
+  "snapshots": {
+    "7": "9eee1e3b599f57c1368bb29a336a132e913b22c70de714a47e7355671a9d3f51",
+    "8": "4d3edc9fbfe4b97581ed36a523b4a1e48a1283f08ed539e281f1ba4c8b640e27"
+  },
+  "rows": [
+    {
+      "version": 7,
+      "prompt_index": 0,
+      "prompt": "The largest planet in the Solar System is",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.28125,
+      "mean_abs": 0.048817895352840424,
+      "rms": 0.060493696480989456,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 7,
+      "prompt_index": 1,
+      "prompt": "A triangle has three",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.3125,
+      "mean_abs": 0.04768001288175583,
+      "rms": 0.06169074401259422,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 7,
+      "prompt_index": 2,
+      "prompt": "The opposite of cold is",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.265625,
+      "mean_abs": 0.03976389020681381,
+      "rms": 0.051319703459739685,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 7,
+      "prompt_index": 3,
+      "prompt": "Two times three equals",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.33984375,
+      "mean_abs": 0.0664047971367836,
+      "rms": 0.08217313885688782,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 7,
+      "prompt_index": 4,
+      "prompt": "Water freezes at a temperature of",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.1875,
+      "mean_abs": 0.029472004622220993,
+      "rms": 0.03853177651762962,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 7,
+      "prompt_index": 5,
+      "prompt": "In a computer, RAM is used to",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.140625,
+      "mean_abs": 0.025209598243236542,
+      "rms": 0.03231640160083771,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 8,
+      "prompt_index": 0,
+      "prompt": "The largest planet in the Solar System is",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.1875,
+      "mean_abs": 0.02464212104678154,
+      "rms": 0.03258711099624634,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 8,
+      "prompt_index": 1,
+      "prompt": "A triangle has three",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.21875,
+      "mean_abs": 0.032092273235321045,
+      "rms": 0.041885413229465485,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 8,
+      "prompt_index": 2,
+      "prompt": "The opposite of cold is",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.1875,
+      "mean_abs": 0.03154158592224121,
+      "rms": 0.04090941697359085,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 8,
+      "prompt_index": 3,
+      "prompt": "Two times three equals",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.1640625,
+      "mean_abs": 0.02701387368142605,
+      "rms": 0.0353173166513443,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 8,
+      "prompt_index": 4,
+      "prompt": "Water freezes at a temperature of",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.166015625,
+      "mean_abs": 0.027681227773427963,
+      "rms": 0.035979922860860825,
+      "failed_coordinates": 0,
+      "passed": true
+    },
+    {
+      "version": 8,
+      "prompt_index": 5,
+      "prompt": "In a computer, RAM is used to",
+      "coordinates": 151936,
+      "finite": true,
+      "max_abs": 0.171875,
+      "mean_abs": 0.027459418401122093,
+      "rms": 0.03548897057771683,
+      "failed_coordinates": 0,
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "7": {
+      "input_ids": [
+        [
+          785,
+          7772,
+          11580,
+          304,
+          279,
+          24446,
+          739,
+          374
+        ],
+        [
+          32,
+          21495,
+          702,
+          2326
+        ],
+        [
+          785,
+          14002,
+          315,
+          9255,
+          374
+        ],
+        [
+          11613,
+          3039,
+          2326,
+          16819
+        ],
+        [
+          28253,
+          93377,
+          518,
+          264,
+          9315,
+          315
+        ],
+        [
+          641,
+          264,
+          6366,
+          11,
+          22038,
+          374,
+          1483,
+          311
+        ]
+      ],
+      "positions": [
+        7,
+        3,
+        4,
+        3,
+        5,
+        7
+      ]
+    },
+    "8": {
+      "input_ids": [
+        [
+          785,
+          7772,
+          11580,
+          304,
+          279,
+          24446,
+          739,
+          374
+        ],
+        [
+          32,
+          21495,
+          702,
+          2326
+        ],
+        [
+          785,
+          14002,
+          315,
+          9255,
+          374
+        ],
+        [
+          11613,
+          3039,
+          2326,
+          16819
+        ],
+        [
+          28253,
+          93377,
+          518,
+          264,
+          9315,
+          315
+        ],
+        [
+          641,
+          264,
+          6366,
+          11,
+          22038,
+          374,
+          1483,
+          311
+        ]
+      ],
+      "positions": [
+        7,
+        3,
+        4,
+        3,
+        5,
+        7
+      ]
+    }
+  },
+  "vocab_size": 151936,
+  "batch_size": 2,
+  "reference_precision": "BF16 SDPA exact published weights",
+  "allow_tf32": false,
+  "matmul_precision": "highest",
+  "reference_process": {
+    "pid": 3812780,
+    "exitcode": 0
+  },
+  "workers": [
+    {
+      "pid": 3814235,
+      "exitcode": 0
+    },
+    {
+      "pid": 3817609,
+      "exitcode": 0
+    }
+  ],
+  "dump_sha256": "93728bd0104655460bca61d70ac6abd2439cf87b94b390c5d2d6d5bbcb8c3f00",
+  "dump_bytes": 6637677,
+  "passed": true
+}

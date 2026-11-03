@@ -1,0 +1,29 @@
+{
+  "observed_at_utc": "2026-10-25T12:57:42.806215+00:00",
+  "review_source": "sub-agent /root/review_task12_native; not human review",
+  "task_head": "4ec13359b4062f45e64239ba96590247ed83cd63",
+  "spec_compliance": "Approved",
+  "task_quality": "Approved",
+  "I1": "ADDRESSED",
+  "new_critical_or_important": [],
+  "minor_deferred": {
+    "id": "M1",
+    "summary": "Capture pre-cleanup history snapshot or callback assertion and assert outside finish_full cleanup exception handler",
+    "reason": "Nonblocking test strengthening per reviewer. Current production writes structured primary failure before cleanup; final evidence and original exception regressions remain meaningful. Do not reopen fix loop or silently alter frozen candidate. Carry to final whole-branch review."
+  },
+  "review_full_bytes": 22242,
+  "review_full_sha256": "6b2468b0938a918af2694120e955d186f6945f628a8acea3444d98d76c2d35a5",
+  "initial_prefix_bytes": 12450,
+  "initial_prefix_sha256": "d100bc2bbf21dd790cfdf36b1b33df35ab1284622eb5f5a9f316bec7f536d9ea",
+  "public_copy_exact": true,
+  "outside_diff_items_resolved": {
+    "full_actual_hashes": "task12-native-pool-root-fix1-proposal-check.json:183source/207artifact/4exec",
+    "predelete_inventory": "task12-native-pool-root-fix1-cleanup-gate.json:144path/75fileSHA/8linktargets before exact cleanup",
+    "cleanup_terminal": "task12-native-pool-fix1-cleanup.json:189487B reclaimed; scratch absent",
+    "host_execution_terminal": "task12-native-pool-fix1-host-result.json:original49820 exit0; metadata-only source reviewed before launch",
+    "fresh_host_scope": "task12-native-pool-root-fix1-end-host-audit.json:0 scoped runtime candidates;31012 bindclose;25 inaccessible/racing entries acknowledged"
+  },
+  "native_authorized_or_executed": false,
+  "whole_task12_complete": false,
+  "whole_goal_complete": false
+}

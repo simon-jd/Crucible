@@ -1,0 +1,6 @@
+extends: qwen25_05b_math_code.yaml
+id: no_std
+declared_factor: scale_by_std
+overrides:
+  objective:
+    scale_by_std: false

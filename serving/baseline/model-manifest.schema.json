@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:crucible:task12:model-manifest:1",
+  "title": "Pinned Qwen3-8B acquisition evidence",
+  "type": "object",
+  "required": [
+    "schema",
+    "repo",
+    "revision",
+    "plan_sha256",
+    "runtime_lock_sha256",
+    "preparer_sha256",
+    "expected_total_bytes",
+    "status",
+    "files",
+    "samples",
+    "pending"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "repo": {
+      "const": "Qwen/Qwen3-8B"
+    },
+    "revision": {
+      "const": "b968826d9c46dd6066d109eabc6255188de91218"
+    },
+    "plan_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "runtime_lock_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "preparer_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "expected_total_bytes": {
+      "const": 16397459696
+    },
+    "status": {
+      "enum": [
+        "running",
+        "failed",
+        "verified"
+      ]
+    },
+    "files": {
+      "type": "array",
+      "maxItems": 14,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "bytes",
+          "sha256",
+          "algorithm",
+          "upstream_hash",
+          "blob_path",
+          "snapshot_path",
+          "downloaded_bytes",
+          "reused"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "algorithm": {
+            "enum": [
+              "sha256",
+              "git-sha1"
+            ]
+          },
+          "upstream_hash": {
+            "type": "string",
+            "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$"
+          },
+          "blob_path": {
+            "type": "string"
+          },
+          "snapshot_path": {
+            "type": "string"
+          },
+          "downloaded_bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reused": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "monotonic",
+          "project_bytes",
+          "shared_cache_bytes",
+          "remaining_download_bytes",
+          "free_bytes"
+        ]
+      }
+    },
+    "pending": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "error": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "files": {
+            "minItems": 14,
+            "maxItems": 14
+          },
+          "pending": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

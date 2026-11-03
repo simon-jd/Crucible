@@ -1,0 +1,48 @@
+{
+  "stage": "E-source-and-two-CPU-commands-only",
+  "base": "f037c7ac4c61ab0b3a32b9ce4da0dc62756bff1a",
+  "source": {
+    "serving/baseline/native_pool.py": {
+      "bytes": 7810,
+      "sha256": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90"
+    },
+    "serving/baseline/native_pool_test.py": {
+      "bytes": 14831,
+      "sha256": "30a6254e3cb9540562ead6dc911f84069db96a35ce6d02dbf8d42ce7ce1c036b"
+    },
+    "serving/baseline/experiment.py": {
+      "bytes": 57457,
+      "sha256": "53ca02d0854f3240af61f8f13cd804c665536631e8581f71b1d0066c956ed196"
+    },
+    "serving/baseline/README.md": {
+      "bytes": 27235,
+      "sha256": "8338759e38fa1ef0dabaa5db8d0a8cb39534a36f81ac2a69198845f8fc8f8b45"
+    }
+  },
+  "report_sha256_at_gate": "ec3fd851f98684d608e2e2a5dac2b975266e2043fec5428c58849adcddbad30d",
+  "commands": [
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/tmp .venv/bin/python -B -c 'import importlib.util,sys; s=importlib.util.spec_from_file_location(\"serving.baseline.native_pool\",\".tmp-task12-native-pool-cpu/mutant.py\"); m=importlib.util.module_from_spec(s); sys.modules[s.name]=m; s.loader.exec_module(m); import pytest; raise SystemExit(pytest.main([\"-p\",\"no:cacheprovider\",\"--basetemp=.tmp-task12-native-pool-cpu/red\",\"-v\",\"serving/baseline/native_pool_test.py::test_pool_client_cache_evidence_and_growth_no_double_count\"]))' > docs/evidence/raw/task12-native-pool-red.log 2>&1",
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/tmp .venv/bin/python -B -m pytest -p no:cacheprovider --basetemp=.tmp-task12-native-pool-cpu/green -v serving/baseline/native_pool_test.py serving/baseline/experiment_test.py::test_live_observer_scans_only_mutable_roots_and_stops_before_reserve > docs/evidence/raw/task12-native-pool-focused.log 2>&1"
+  ],
+  "command_sha256": [
+    "985c553b94b1f36e6cad3319a33e40ecfe0b9a5c9b68c9519ca9dbddb877bd98",
+    "af7d02378b9275dccc761611be9e70d6f127641d9f91bedace48ddf67d9dd0db"
+  ],
+  "project_bytes": 13302612608,
+  "planned_future_bytes": 690000000,
+  "free_bytes": 265587593216,
+  "errors": [],
+  "scratch_absent": true,
+  "scratch_max_bytes": 2000000,
+  "retained_phase_cap": 2000000,
+  "resource_note": "2GB virtual address cap, not a sampled RSS claim; 45s+5s kill grace, bounded files/core0",
+  "allowed": "one isolated omission-of-client mutation RED, then exact focused GREEN only if RED is the intended assertion; no source correction after success without affected checks",
+  "not_admitted": [
+    "Go build",
+    "native fixture",
+    "GPU/model/service",
+    "Git",
+    "retry after unexpected failure"
+  ],
+  "evidence_credit_rule": "original690M includes100M evidence; strict unique generated output sampled before nonpool credits only consumed slot, previous baseline during timed windows"
+}

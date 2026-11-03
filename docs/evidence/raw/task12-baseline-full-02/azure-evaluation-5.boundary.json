@@ -1,0 +1,127 @@
+{
+  "accepted": true,
+  "attempts": [
+    {
+      "status": 400,
+      "started_seconds": 6.969785317778587e-07,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.17194126592949033
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.2220062540145591,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.27401767496485263
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.32409846293739974,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.3891079620225355
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.43917087092995644,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.4925759279867634
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.5426557050086558,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.5983666239771992
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.6484650389757007,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.701358021935448
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.7514203080208972,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.805449579958804
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.8556089550256729,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.9089097760152072
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.9590059230104089,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.0119450580095872
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.062033248017542,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.1137030819663778
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.16373291995842,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.2163721399847418
+    },
+    {
+      "status": 200,
+      "started_seconds": 1.2664819220080972,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.3170681019546464
+    }
+  ],
+  "deadline_seconds": 30,
+  "elapsed_seconds": 1.3170706960372627
+}

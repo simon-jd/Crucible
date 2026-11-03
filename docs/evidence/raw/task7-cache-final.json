@@ -1,0 +1,15 @@
+{
+  "runtime_total_bytes": 619468,
+  "directories": {
+    "cupy": 0,
+    "xdg": 0,
+    "numba": 0,
+    "torch": 359707,
+    "vllm": 0,
+    "triton": 259761,
+    "cuda": 0,
+    "torch-home": 0,
+    "tmp": 0
+  },
+  "previous_default_driver_cache": "may have been written by first two GPU runs; unmeasured and not attributable; not read or deleted"
+}

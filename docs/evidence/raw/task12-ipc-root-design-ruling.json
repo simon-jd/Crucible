@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-10-25T18:59:30.835517+00:00",
+  "initial_report_bytes": 16477,
+  "initial_report_sha256": "aa7ebbe91bc5e8580553f1d4b07a29267aae0ce49f5ed9033f85e93ab3d7ba98",
+  "report93B_planning_exception_within_same1M": true,
+  "report_moved_exact_bytes_to": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-ipc-report.md",
+  "revised_report_final_cap": 24000,
+  "ruling_brief": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-ipc-brief.md",
+  "GPU_authorized": false,
+  "next_stage": "CPU repro/test sources only; no command/production-edit authority yet"
+}

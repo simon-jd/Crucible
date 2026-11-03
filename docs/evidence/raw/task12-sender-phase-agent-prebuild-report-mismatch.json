@@ -1,0 +1,8 @@
+{
+  "status": "stopped-before-smoke-or-Go",
+  "failure": "extra gate report SHA check failed; all seven frozen source and SDK/old binary identity checks passed",
+  "expected_report_sha256": "c055fb3c3129f98ee1bd7c79be9e66e8d147900aca93abd71cbf1e97d1c879f6",
+  "actual_report_sha256": "465c6bcd09443a11b2fce23e3d3d6a1a56b4ef2f977657284cabb3ccaf10b076",
+  "loan_absent": true,
+  "exception": "AssertionError: gate_report False; no preflight child or output receipt created by initial checker"
+}

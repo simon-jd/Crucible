@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-10-25T19:37:10.831683+00:00",
+  "correction_only_no_deletion_or_new_run": true,
+  "original_cleanup_record": "docs/evidence/raw/task12-full03-v2-root-exact-temp-cleanup.json",
+  "original_cleanup_record_sha256": "c3c7bbc8b247380fce6ab03a5608a21e1514b2da08497c77fb9c93b8cde6acca",
+  "predelete_inventory": "docs/evidence/raw/task12-full03-v2-root-postflight-before-cleanup.json",
+  "predelete_inventory_sha256": "7b4242424dff244b842b1152926a7021d32f569069b6e38393371cb95b7c612a",
+  "all12_records_match_original_full_inventory": true,
+  "all12_paths_absent_at_current_sample": true,
+  "actual_removed_counts": {
+    "dir": 5,
+    "file": 5,
+    "socket": 2
+  },
+  "regular_file_bytes": 2355,
+  "zero_length_regular_files": 4,
+  "incorrect_original_summary": {
+    "directory_count": 9,
+    "prose_regular_count": 1
+  },
+  "corrected_summary": "5 regular files (four empty, one2355B),2 stale AF_UNIX sockets,5 directories; total12. Original list/bytes retained unchanged.",
+  "cause": "ROOT summary miscount; original per-path deletion inventory is correct. No stronger retrospective UID/GID/creator claim.",
+  "GPU_authority": false,
+  "full03_authorization": "SPENT, no retry"
+}

@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 10377210996,
+  "free_bytes": 355885072384,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": []
+}
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/postedism/Desktop/Crucible/rl/sync/tests/test_sync_gpu.py", line 86, in _source_process
+    step = learner.step([group])
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 302, in step
+    raise errors[0]
+  File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 287, in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 335, in _execute_records
+    self._optimizer.step()
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/optim/adam.py", line 237, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/optim/adam.py", line 177, in _init_group
+    state["exp_avg"] = torch.zeros_like(
+                       ^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_compile.py", line 53, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/distributed/tensor/_api.py", line 350, in __torch_dispatch__
+    return DTensor._op_dispatcher.dispatch(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/distributed/tensor/_dispatch.py", line 201, in dispatch
+    local_results = op_call(*local_tensor_args, **op_info.local_kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_ops.py", line 829, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 18.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 80.94 MiB is free. Process 22351 has 70.73 MiB memory in use. Process 18172 has 44.09 MiB memory in use. Process 2944731 has 154.61 MiB memory in use. Process 18205 has 12.09 MiB memory in use. Process 2898551 has 138.48 MiB memory in use. Process 3141444 has 29.34 MiB memory in use. Process 3504289 has 12.32 GiB memory in use. Including non-PyTorch memory, this process has 8.25 GiB memory in use. Of the allocated memory 7.17 GiB is allocated by PyTorch, and 178.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+F
+=================================== FAILURES ===================================
+___________________ test_actual_learner_to_vllm_full_logits ____________________
+
+    def test_actual_learner_to_vllm_full_logits():
+        from rl.learner.runtime import configure_runtime
+    
+        configure_runtime()
+        RUN.mkdir(parents=True, exist_ok=True)
+        assert not (RUN / "versions").exists(), "clean only own prior acceptance snapshots first"
+        child = mp.get_context("spawn").Process(target=_source_process)
+        child.start()
+        try:
+            child.join(900)
+>           assert not child.is_alive() and child.exitcode == 0
+E           AssertionError: assert (not False and 1 == 0)
+E            +  where False = is_alive()
+E            +    where is_alive = <SpawnProcess name='SpawnProcess-1' pid=3514909 parent=3514904 stopped exitcode=1>.is_alive
+E            +  and   1 = <SpawnProcess name='SpawnProcess-1' pid=3514909 parent=3514904 stopped exitcode=1>.exitcode
+
+rl/sync/tests/test_sync_gpu.py:190: AssertionError
+=========================== short test summary info ============================
+FAILED rl/sync/tests/test_sync_gpu.py::test_actual_learner_to_vllm_full_logits
+1 failed in 10.85s

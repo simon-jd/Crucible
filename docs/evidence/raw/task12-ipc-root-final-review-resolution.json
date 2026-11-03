@@ -1,0 +1,62 @@
+{
+  "time_utc": "2026-10-25T19:45:45.212588+00:00",
+  "source_commit": "3e43b8446ce71818f304af85aa0a85f3c756e07d",
+  "source_review": {
+    "bytes": 10489,
+    "sha256": "1c0962cebb8a50f3049d2759d9d14df7fbef117c8c2c5e3d6def0501a189c35b",
+    "SPEC": "Compliant",
+    "QUALITY": "Approved"
+  },
+  "metadata_review": {
+    "bytes": 7454,
+    "sha256": "c10730bc1d35d55433731fbff12ad46106145668aa8cdcca03d68f003f96a660",
+    "SPEC": "Approved",
+    "QUALITY": "Approved"
+  },
+  "summary": {
+    "path": "docs/TASK12-FULL04-READY.md",
+    "bytes": 7107,
+    "sha256": "3215ea319637c9ac5af5c9695b95a0d33a9ac0a39e938fe3d90cbd4965ac54f1"
+  },
+  "proposal_sha256": "8ee59a43c252d5725070f05c638b644afd3b49a2dee2ab2a0d80ad631021a9fe",
+  "freeze_sha256": "b26eb969bcf5dc6f567017818b54a73d747ffee6bec1e01340112dc947c862c0",
+  "all_current_frozen_SHA_verified": {
+    "sources": 196,
+    "artifacts": 220,
+    "executables": 4
+  },
+  "old12_protected_SHA_and100coordinator_SHA_verified": true,
+  "source_tests_repeated": false,
+  "resource_sample_candidate_output_no_credit": {
+    "project_bytes": 13318716013,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13308555782,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13998555782,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "phase_initial_project_bytes": 13318058860,
+  "actual_phase_net_growth_bytes": 657153,
+  "same_phase_cap": 1000000,
+  "remaining_phase_bytes": 342847,
+  "reserved_final_Git_increment_upper": 150000,
+  "final_receipt_docs_upper": 30000,
+  "scratch256k_plus_extra244k": 500000,
+  "projected_plus_remaining_phase_scratch_extra": 13999398629,
+  "shared_HF_bytes": 23815435170,
+  "free_bytes": 263153008640,
+  "new_outputs_and_private_CPU_scratch_absent": true,
+  "azure_project_group": "absent/actionnone",
+  "estimated_spend_USD": 0,
+  "host_scope": "raw/task12-ipc-root-final-host-observation.json + classification.json;1ownUIDFileNotFoundError is enumeration disappearance, not live unreadable job; original combined743 includes others; no foreign job action",
+  "GPU_execution_queue_query_lock": false,
+  "full02_and_full03_authority": "SPENT, no retry",
+  "full04_authority": "NOT_GRANTED",
+  "next": "coordinator can review exact7107Bsummary and combine one new human question; no execution before new authority and mandatoryfreshgate",
+  "wholeGoal_complete": false
+}

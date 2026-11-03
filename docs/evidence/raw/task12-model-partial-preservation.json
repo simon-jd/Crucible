@@ -1,0 +1,31 @@
+{
+  "original_acquisition_handle": 53114,
+  "original_exit": 1,
+  "operation": "libc renameat2 AT_FDCWD RENAME_NOREPLACE=1",
+  "returncode": 0,
+  "before": {
+    "path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/blobs/.31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f.task12-3586297f07af4ec8b3dd4a06e9238256.incomplete",
+    "device": 66307,
+    "inode": 55843374,
+    "bytes": 303796954,
+    "sha256": "461ac6027f52b8d8c29d08b47045f043457612288f4b45dfa44f13c529b53286",
+    "scope": "incomplete retained prefix, not full upstream shard"
+  },
+  "after": {
+    "path": "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/.task12-retained-failures/acquisition-53114-shard1-3586297f07af4ec8b3dd4a06e9238256.incomplete",
+    "device": 66307,
+    "inode": 55843374,
+    "bytes": 303796954,
+    "sha256": "461ac6027f52b8d8c29d08b47045f043457612288f4b45dfa44f13c529b53286",
+    "scope": "incomplete retained prefix, not full upstream shard"
+  },
+  "lock_path": "/home/postedism/.cache/huggingface/hub/.locks/models--Qwen--Qwen3-8B/31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f.lock",
+  "lock_retained": true,
+  "deleted_bytes": 0,
+  "retained_bytes": 303796954,
+  "fd_limitation": "Host PID2560 systemd --user UID1000 has protected /proc/2560/fd/0; complete FD exclusion was unavailable. Prior cleanup stopped before deletion. Rename preserves the inode and all bytes, including validity of any pre-existing FD.",
+  "prior_cleanup_log": "docs/evidence/raw/task12-model-owned-partial-cleanup.log",
+  "shared_cache_bytes_before": 7419676297,
+  "shared_cache_bytes_after": 7419676297,
+  "project_bytes_after": 13266080992
+}

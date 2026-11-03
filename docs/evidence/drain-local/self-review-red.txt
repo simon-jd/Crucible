@@ -1,0 +1,20 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_new_fault_not_hidden_by_unchanged_oldest_health_timestamp ________
+
+    def test_new_fault_not_hidden_by_unchanged_oldest_health_timestamp():
+        c = Controller(clock=lambda: 1050)
+        assert c.evaluate({"a": NodeMetrics(1000, 0, True)}) == []
+        # NIC scrape remains at 1000 while GPU has a newly observed XID at 1050.
+        # Inventory adapter retains min=1000 for conservative health freshness.
+        actions = c.evaluate({"a": NodeMetrics(1000, 79, True)})
+>       assert [a.kind for a in actions] == ["drain", "requeue"]
+E       AssertionError: assert [] == ['drain', 'requeue']
+E
+E         Right contains 2 more items, first extra item: 'drain'
+E         Use -v to get more diff
+
+cluster/drain/tests/test_controller.py:454: AssertionError
+=========================== short test summary info ============================
+FAILED cluster/drain/tests/test_controller.py::test_new_fault_not_hidden_by_unchanged_oldest_health_timestamp
+1 failed, 38 deselected in 0.05s

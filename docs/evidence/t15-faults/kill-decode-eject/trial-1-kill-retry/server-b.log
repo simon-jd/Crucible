@@ -1,0 +1,141 @@
+INFO 10-27 20:21:26 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:27 [api_server.py:1896] vLLM API server version 0.10.2
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:27 [utils.py:328] non-default args: {'host': '127.0.0.1', 'port': 31102, 'model': '/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775', 'seed': 17, 'max_model_len': 8192, 'enforce_eager': True, 'served_model_name': ['Qwen/Qwen2.5-0.5B-Instruct'], 'generation_config': 'vllm', 'gpu_memory_utilization': 0.25, 'enable_prefix_caching': False, 'max_num_seqs': 8}
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:27 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775] to model_path [/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775]
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:30 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:30 [__init__.py:1815] Using max model len 8192
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:30 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:30 [__init__.py:3400] Cudagraph is disabled under eager mode
+INFO 10-27 20:21:32 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:33 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:33 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775', speculative_config=None, tokenizer='/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=17, served_model_name=Qwen/Qwen2.5-0.5B-Instruct, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}
+[W1027 20:21:34.250806854 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:34 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=40884)[0;0m WARNING 10-27 20:21:34 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:34 [gpu_model_runner.py:2338] Starting to load model /home/postedism/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775...
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:34 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:34 [cuda.py:362] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=40884)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=40884)[0;0m Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00, 11.73it/s]
+[1;36m(EngineCore_DP0 pid=40884)[0;0m 
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:34 [default_loader.py:268] Loading weights took 0.09 seconds
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:34 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.143269 seconds
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:35 [gpu_worker.py:298] Available KV cache memory: 4.86 GiB
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:35 [kv_cache_utils.py:864] GPU KV cache size: 424,480 tokens
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:35 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 51.82x
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:35 [gpu_worker.py:391] Free memory on device (14.03/23.52 GiB) on startup. Desired GPU memory utilization is (0.25, 5.88 GiB). Actual usage is 0.93 GiB for weight, 0.08 GiB for peak activation, 0.02 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=5058836480` to fit into requested memory, or `--kv-cache-memory=13812971520` to fully utilize gpu memory. Current kv cache memory in use is 5216122880 bytes.
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:35 [core.py:218] init engine (profile, create kv cache, warmup model) took 0.68 seconds
+[1;36m(EngineCore_DP0 pid=40884)[0;0m INFO 10-27 20:21:35 [__init__.py:3400] Cudagraph is disabled under eager mode
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [loggers.py:142] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 26530
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [async_llm.py:180] Torch profiler disabled. AsyncLLM CPU traces will not be collected.
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [api_server.py:1692] Supported_tasks: ['generate']
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [api_server.py:1971] Starting vLLM API server 0 on http://127.0.0.1:31102
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:36] Available routes are:
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /openapi.json, Methods: HEAD, GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /docs, Methods: HEAD, GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /redoc, Methods: HEAD, GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /health, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /load, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /ping, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /ping, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /version, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /classify, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /score, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:35 [launcher.py:44] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=39878)[0;0m INFO:     Started server process [39878]
+[1;36m(APIServer pid=39878)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=39878)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:57850 - "GET /health HTTP/1.1" 200 OK
+[1;36m(EngineCore_DP0 pid=40884)[0;0m WARNING 10-27 20:21:36 [cudagraph_dispatcher.py:102] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:57862 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:57870 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:57876 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:57892 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58160 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58164 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58198 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58210 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58214 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58218 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:46 [loggers.py:123] Engine 000: Avg prompt throughput: 186.2 tokens/s, Avg generation throughput: 40.1 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58232 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58246 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58262 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:58278 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34000 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34018 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34020 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34024 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34038 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34050 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:21:56 [loggers.py:123] Engine 000: Avg prompt throughput: 677.5 tokens/s, Avg generation throughput: 102.7 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34064 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34084 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34088 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:34100 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59556 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59572 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59582 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59588 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59594 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59610 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO 10-27 20:22:06 [loggers.py:123] Engine 000: Avg prompt throughput: 812.8 tokens/s, Avg generation throughput: 186.6 tokens/s, Running: 2 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.4%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59628 - "GET /metrics HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:0 - "POST /v1/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=39878)[0;0m INFO:     127.0.0.1:59632 - "GET /metrics HTTP/1.1" 200 OK

@@ -1,0 +1,13 @@
+# For the site's pinned containerd 1.7.x bundle; review for other major versions.
+version = 2
+[plugins."io.containerd.grpc.v1.cri".containerd]
+  default_runtime_name = "runc"
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  runtime_type = "io.containerd.runc.v2"
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+  SystemdCgroup = true
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia]
+  runtime_type = "io.containerd.runc.v2"
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.nvidia.options]
+  BinaryName = "/usr/bin/nvidia-container-runtime"
+  SystemdCgroup = true

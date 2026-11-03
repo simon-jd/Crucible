@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-10-25T17:50:56.810203+00:00",
+  "basis": "task11-bridge-root-first-failure-inventory.json",
+  "basis_sha256": "247bb9131dd9a7ec3f2dae984a500dbfe1ceca17cf6dd2bcdd7fe42213ff9729",
+  "full_pathset_and_lstat_and_file_content_verified": true,
+  "entries": 16,
+  "ownership": "new scratch absent at authorized gate, created by original8265 now terminal125, cleanuptrue/nochildren; exact generated Torch file content retained in basis",
+  "removed": [
+    ".cache/task11-ram-handoff/bridge/tmp/tmp6ngf6kme/_remote_module_non_scriptable.py",
+    ".cache/task11-ram-handoff/bridge/pytest/test_two_real_cycles_adamw_bf10",
+    ".cache/task11-ram-handoff/bridge/pytest/test_two_real_cycles_adamw_bf1current",
+    ".cache/task11-ram-handoff/bridge/tmp/tmp6ngf6kme",
+    ".cache/task11-ram-handoff/bridge/cuda",
+    ".cache/task11-ram-handoff/bridge/cupy",
+    ".cache/task11-ram-handoff/bridge/inductor",
+    ".cache/task11-ram-handoff/bridge/numba",
+    ".cache/task11-ram-handoff/bridge/pytest",
+    ".cache/task11-ram-handoff/bridge/tmp",
+    ".cache/task11-ram-handoff/bridge/torch",
+    ".cache/task11-ram-handoff/bridge/triton",
+    ".cache/task11-ram-handoff/bridge/vllm",
+    ".cache/task11-ram-handoff/bridge/xdg",
+    ".cache/task11-ram-handoff/bridge",
+    ".cache/task11-ram-handoff"
+  ],
+  "scratch_absent": true
+}

@@ -1,0 +1,131 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 13 items / 11 deselected / 2 selected
+
+serving/baseline/output_limits_test.py FF                                [100%]
+
+=================================== FAILURES ===================================
+______ test_final_child_output_cutoff_invalidates_before_pair_publication ______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-selfreview-red/test_final_child_output_cutoff0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x750566f91a00>
+
+    def test_final_child_output_cutoff_invalidates_before_pair_publication(tmp_path, monkeypatch):
+        summaries = [
+            {"trial": x, "status": "completed", "metrics": {"accepted": True, "goodput": 1}}
+            for x in experiment.trial_order()
+        ]
+        monkeypatch.setattr(experiment, "SERVER_FILE_CAP", 512)
+    
+        def cleanup(child, port):
+            (tmp_path / "server.log").write_bytes(b"x" * 512)
+            return {"listener_closed": True, "forced_kill": False, "reaped": True}
+    
+        monkeypatch.setattr(experiment, "stop_child", cleanup)
+        failure = experiment.finish_full(tmp_path, object(), 1, {"azure": summaries}, [], None)
+>       assert isinstance(failure, experiment.OutputLimit)
+E       AssertionError: assert False
+E        +  where False = isinstance(None, <class 'serving.baseline.experiment.OutputLimit'>)
+E        +    where <class 'serving.baseline.experiment.OutputLimit'> = experiment.OutputLimit
+
+serving/baseline/output_limits_test.py:278: AssertionError
+______ test_trial_hash_failure_cannot_mask_primary_after_real_child_reap _______
+
+command = ['/home/postedism/Desktop/Crucible/.venv/bin/python', '-B', '-c', "print('not JSON')"]
+env = {'ASAN_OPTIONS': 'symbolize=1', 'ASAN_SYMBOLIZER_PATH': '/usr/bin/llvm-symbolizer', 'CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS': '1', 'CODEX_CI': '1', ...}
+target = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-selfreview-red/test_trial_hash_failure_cannot0/trial.json')
+summary = {'cleanup': {'descendant_confirmation': 'required from outer fixed GPU guard before lock release', 'forced_kill': Fals...rved_utf8_bytes': 60, 'repr': "JSONDecodeError('Expecting value: line 1 column 1 (char 0)')", 'truncated': False}, ...}
+inspect = <function test_trial_hash_failure_cannot_mask_primary_after_real_child_reap.<locals>.<lambda> at 0x75056707aa20>
+
+    def execute_trial(command, env, target, summary, inspect):
+        """Kernel-capped direct output; any cutoff invalidates before CLI exit rules."""
+        summary.update(status="running", metrics={"accepted": False, "goodput": None})
+        record = target.with_suffix(".summary.json")
+        write_json_bounded(record, summary, SUMMARY_CAP)
+        child, failure = None, None
+        try:
+            with target.open("wb") as out, target.with_suffix(".stderr").open("wb") as err:
+                child = subprocess.Popen(
+                    capped_command(command, TRIAL_FILE_CAP), env=env, stdout=out, stderr=err
+                )
+                summary["pid"] = child.pid
+                summary["returncode"] = _wait(child, 130, inspect)
+            for path in (target, target.with_suffix(".stderr")):
+                if path.stat().st_size >= TRIAL_FILE_CAP:
+                    raise OutputLimit("trial output at file cap: " + path.name)
+            payload = target.read_bytes()
+>           result = json.loads(payload)["Run"]
+                     ^^^^^^^^^^^^^^^^^^^
+
+serving/baseline/experiment.py:733: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/decoder.py:338: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x7505672b4770>, s = 'not JSON\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/decoder.py:356: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-selfreview-red/test_trial_hash_failure_cannot0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x750566f93b30>
+
+    def test_trial_hash_failure_cannot_mask_primary_after_real_child_reap(tmp_path, monkeypatch):
+        real_hash = experiment.sha256
+    
+        def hash_file(path):
+            if path.name == "trial.json":
+                raise OSError("fixture metadata hash error")
+            return real_hash(path)
+    
+        monkeypatch.setattr(experiment, "sha256", hash_file)
+        summary = {"planned_rows": 1}
+        with pytest.raises(json.JSONDecodeError):
+>           experiment.execute_trial(
+                [sys.executable, "-B", "-c", "print('not JSON')"],
+                dict(os.environ), tmp_path / "trial.json", summary, lambda: None,
+            )
+
+serving/baseline/output_limits_test.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+serving/baseline/experiment.py:786: in execute_trial
+    summary[key + "_sha256"] = sha256(path)
+                               ^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-caps-selfreview-red/test_trial_hash_failure_cannot0/trial.json')
+
+    def hash_file(path):
+        if path.name == "trial.json":
+>           raise OSError("fixture metadata hash error")
+E           OSError: fixture metadata hash error
+
+serving/baseline/output_limits_test.py:290: OSError
+=========================== short test summary info ============================
+FAILED serving/baseline/output_limits_test.py::test_final_child_output_cutoff_invalidates_before_pair_publication
+FAILED serving/baseline/output_limits_test.py::test_trial_hash_failure_cannot_mask_primary_after_real_child_reap
+======================= 2 failed, 11 deselected in 1.08s =======================

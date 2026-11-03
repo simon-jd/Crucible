@@ -1,0 +1,15 @@
+{
+  "reason": "root review: tests must live under serving/eval/tests to be discovered by existing default pytest testpaths",
+  "old_paths": [
+    "tests/test_accuracy.py",
+    "tests/test_task13_deploy.py"
+  ],
+  "new_paths": [
+    "serving/eval/tests/test_accuracy.py",
+    "serving/eval/tests/test_task13_deploy.py"
+  ],
+  "new_paths_frozen_overlap": [],
+  "original_complete_suite_log_preserved": "docs/evidence/raw/task13-cpu-full.log",
+  "old_owned_empty_tests_directory_removed": true,
+  "shared_pyproject_and_initializers_changed": false
+}

@@ -1,0 +1,9 @@
+{
+  "initial_preparation_exec_chunk": "e52b9a",
+  "exit": 1,
+  "error": "AssertionError before any monitor/pool write: prefix substring occurs inside two root names too",
+  "original_root_count": 2,
+  "original_prefix_substring_count": 3,
+  "correction": "assert prefix count after two root substitutions; no policy or command change",
+  "not_a_build_or_test": true
+}

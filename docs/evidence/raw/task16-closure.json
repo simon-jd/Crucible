@@ -1,0 +1,46 @@
+{
+  "phase": "DONE_WITH_CONCERNS CPU checker/drafts only; whole Task16 open",
+  "main_commit": "13f511d7ad15056bb18e10bd6a7b0994375ffdb6",
+  "canonical_argv": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/resource_preflight.py",
+    "--planned-project-bytes",
+    "690000000",
+    "--download-bytes",
+    "0",
+    "--checkpoints",
+    "0",
+    "--service-memory-bytes",
+    "0"
+  ],
+  "canonical_command_scoped_unset": [
+    "XDG_CACHE_HOME",
+    "HF_HOME",
+    "HF_HUB_CACHE",
+    "HUGGINGFACE_HUB_CACHE",
+    "TRANSFORMERS_CACHE"
+  ],
+  "canonical_returncode": 0,
+  "canonical": {
+    "ok": true,
+    "units": "decimal GB = 1,000,000,000 bytes",
+    "project_bytes": 13286995119,
+    "free_bytes": 270122745856,
+    "model_cache": "/home/postedism/.cache/huggingface",
+    "errors": []
+  },
+  "canonical_stderr": "",
+  "remaining_after_690M_bytes": 23004881,
+  "owned_logical_bytes_before_this_receipt": 118724,
+  "git_bytes_after_main_commit": 16732779,
+  "measured_git_growth_main_commit": 50077,
+  "conservative_owned_full_git_duplicate_cumulative_fixtures_100KB_contingency": 350655,
+  "task_allowance_bytes": 10000000,
+  "owned_terminal_fixtures_absent": true,
+  "selected_original_evidence_unchanged": true,
+  "native_gpu_network_install_download_checkpoint_service_actions": 0,
+  "azure_api_rental_spend": 0,
+  "final_tests": "25 passed, no skips; real3reportCLI PASS68 literals; Ruff check/format pass",
+  "limitation": "Point-in-time accounting; receipt, second local Git metadata commit and ignored report append fit100KB contingency. No continuous peak claim or completed scientific experiments."
+}

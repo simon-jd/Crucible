@@ -1,0 +1,225 @@
+"""Finite stdlib CPU-only test supervisor; run only after the separate ROOT gate.
+
+Uses process-ownership helpers, never GPU guard main/run/flock. NativePool is read
+only and its existing output stays absent. Tests write only new owned scratch and
+bounded evidence. Sampled RSS is not a hard kernel memory quota.
+"""
+
+import hashlib
+import json
+import os
+import resource
+import signal
+import stat
+import sys
+import time
+from pathlib import Path
+
+from scripts.gpu_guard import INTERRUPTS, _enable_subreaper, _own_children, _OwnedWorkload
+from serving.baseline.native_pool import NativePool
+
+ROOT = Path(__file__).resolve().parents[1]
+SCRATCH = ROOT / ".cache/task11-ram-handoff"
+RAW = ROOT / "docs/evidence/raw"
+MEMORY_LIMIT = 2_000_000_000
+ANONYMOUS_RESERVE = 2_097_152  # two tiny payloads/maps + staging + bounded pickle/ZIP metadata
+SOURCE_FILES = (
+    "rl/learner/state_handoff.py",
+    "rl/learner/handoff_zip.py",
+    "rl/learner/handoff_stream.py",
+    "rl/learner/handoff_protocol.py",
+    "rl/learner/tests/test_stream_handoff.py",
+    "rl/learner/train.py",
+    "rl/learner/README.md",
+    "rl/learner/tests/test_state_handoff.py",
+    "rl/learner/tests/handoff_worker.py",
+    "scripts/test_ram_handoff_cpu.py",
+)
+BRIDGE_FILES = (
+    "rl/sync/ram_weights.py",
+    "rl/sync/ram_export.py",
+    "rl/sync/phase_bridge.py",
+    "rl/rollout/ram_loader.py",
+    "rl/rollout/_worker.py",
+    "rl/rollout/engine.py",
+    "rl/rollout/_rpc.py",
+    "rl/rollout/sampler.py",
+    "rl/sync/tests/ram_worker.py",
+    "rl/sync/tests/test_ram_weights.py",
+    "rl/sync/tests/test_phase_bridge.py",
+    "rl/rollout/tests/test_ram_loader.py",
+    "rl/sync/README.md",
+    "rl/rollout/README.md",
+    "rl/rollout/tests/test_rpc.py",
+)
+# Per sequential test: <=2*131072 checkpoint payloads (including pending/unknown),
+# <=2*131072 temporary unit byte copies, <=3*8192 storage staging, plus metadata
+# charged in sampled RSS. 8MiB also covers inherited same-storage FD aliases,
+# readback and conservative overhead. No concurrent pytest workers or full model.
+BRIDGE_ANONYMOUS_RESERVE = 8_388_608
+
+
+def sha(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as source:
+        while block := source.read(65536):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def inventory(root):
+    result = []
+    if not root.exists():
+        return result
+    for path in [root, *sorted(root.rglob("*"))]:
+        item = path.lstat()
+        record = {
+            "path": str(path.relative_to(ROOT)),
+            "dev": item.st_dev,
+            "inode": item.st_ino,
+            "mode": item.st_mode,
+            "nlink": item.st_nlink,
+            "size": item.st_size,
+            "mtime_ns": item.st_mtime_ns,
+        }
+        if stat.S_ISREG(item.st_mode):
+            record["sha256"] = sha(path)
+        if stat.S_ISLNK(item.st_mode):
+            record["symlink_target"] = os.readlink(path)
+        result.append(record)
+    return result
+
+
+def scratch_bytes():
+    total = 0
+    if SCRATCH.exists():
+        for path in SCRATCH.rglob("*"):
+            item = path.lstat()
+            if stat.S_ISLNK(item.st_mode):
+                raise ValueError("unexpected scratch symlink")
+            if stat.S_ISREG(item.st_mode):
+                total += item.st_size
+    if total > 1_000_000:
+        raise ValueError("RAM handoff scratch exceeded1,000,000B")
+    return total
+
+
+def rss_tree():
+    """Discover only this supervisor's child tree; /proc race means sampled evidence."""
+    pending, seen, total = [os.getpid()], set(), 0
+    while pending:
+        pid = pending.pop()
+        if pid in seen:
+            continue
+        seen.add(pid)
+        try:
+            total += int(Path(f"/proc/{pid}/statm").read_text().split()[1]) * os.sysconf(
+                "SC_PAGE_SIZE"
+            )
+            for task in Path(f"/proc/{pid}/task").iterdir():
+                pending.extend(int(value) for value in (task / "children").read_text().split())
+        except FileNotFoundError:
+            continue
+        if len(seen) > 12:
+            raise RuntimeError("unexpected CPU test process count")
+    return total, sorted(seen)
+
+
+def cleanup(workload):
+    """One bounded TERM/KILL cleanup using unreaped kernel ownership anchors."""
+    end, kill_at = time.monotonic() + 5, time.monotonic() + 2.5
+    errors, term, kill = [], False, False
+    while time.monotonic() < end:
+        try:
+            if workload.drained():
+                return True, errors
+            if not term:
+                workload.signal(signal.SIGTERM)
+                term = True
+            if time.monotonic() >= kill_at and not kill:
+                workload.signal(signal.SIGKILL)
+                kill = True
+        except BaseException as error:  # noqa: BLE001 - record cleanup uncertainty without losing cause
+            errors.append(f"{type(error).__name__}: {error}")
+            if len(errors) >= 8:
+                break
+        time.sleep(0.02)
+    return False, errors + ["cleanup unconfirmed within5s; no successful resource release claim"]
+
+
+def main():
+    if len(sys.argv) != 2 or sys.argv[1] not in (
+        "compatibility",
+        "compatibility-v2",
+        "focused",
+        "cap-regression",
+        "fix1",
+        "stream",
+        "stream-fix1",
+        "bridge",
+        "bridge-v2",
+        "bridge-fix1-red",
+        "bridge-fix1-green",
+    ):
+        raise ValueError(
+            "expected compatibility, compatibility-v2, focused, cap-regression, fix1, stream, stream-fix1, bridge, bridge-v2, bridge-fix1-red or bridge-fix1-green"
+        )
+    mode = sys.argv[1]
+    fix_mode = mode in ("bridge-fix1-red", "bridge-fix1-green")
+    file_limit = 49152 if fix_mode else 262144
+    log_highwater = 45000 if fix_mode else 250000
+    future_extra = 2_000_000 if fix_mode else 3_000_000
+    anonymous_reserve = 4_194_304 if mode in ("stream", "stream-fix1") else ANONYMOUS_RESERVE
+    if mode in ("bridge", "bridge-v2", "bridge-fix1-red", "bridge-fix1-green"):
+        anonymous_reserve = BRIDGE_ANONYMOUS_RESERVE
+    started = time.monotonic()
+    deadline = started + 120
+    if os.getcwd() != str(ROOT):
+        raise ValueError("run from project root")
+    if os.environ.get("CUDA_VISIBLE_DEVICES") != "":
+        raise ValueError("explicit empty CUDA_VISIBLE_DEVICES required")
+    if os.environ.get("PYTHONDONTWRITEBYTECODE") != "1":
+        raise ValueError("bytecode must be disabled before supervisor imports")
+    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+    resource.setrlimit(resource.RLIMIT_FSIZE, (file_limit, file_limit))
+    _enable_subreaper()
+    try:
+        os.waitid(os.P_ALL, 0, os.WEXITED | os.WNOHANG | os.WNOWAIT)
+    except ChildProcessError:
+        pass
+    else:
+        raise RuntimeError("supervisor must not own any foreign children")
+    absent_output = RAW / "task12-baseline-full-03"
+    if absent_output.exists():
+        raise ValueError("immutable full03 output must remain absent")
+    pool = NativePool(
+        ROOT,
+        RAW / "task12-native-pool-manifest.json",
+        ROOT / ".tmp-task12-native-03-pool/replay",
+        absent_output,
+    )
+    initial = pool.measure(canonical=True)
+    if initial["projected_bytes"] + future_extra > 14_000_000_000:
+        raise ValueError("conservative phase allocation exceeds project budget")
+    run = SCRATCH / mode
+    run.mkdir(parents=True, exist_ok=False)
+    for name in ("tmp", "xdg", "torch", "inductor", "triton", "cuda", "cupy", "numba", "vllm"):
+        (run / name).mkdir()
+    aliases = {
+        "TMPDIR": "tmp",
+        "XDG_CACHE_HOME": "xdg",
+        "TORCH_HOME": "torch",
+        "TORCHINDUCTOR_CACHE_DIR": "inductor",
+        "TRITON_CACHE_DIR": "triton",
+        "CUDA_CACHE_PATH": "cuda",
+        "CUPY_CACHE_DIR": "cupy",
+        "NUMBA_CACHE_DIR": "numba",
+        "VLLM_CACHE_ROOT": "vllm",
+    }
+    os.environ.update({key: str(run / value) for key, value in aliases.items()})
+    os.environ.update(
+        {
+            "HF_HOME": "/home/postedism/.cache/huggingface",
+            "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+            "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+            "HF_HUB_

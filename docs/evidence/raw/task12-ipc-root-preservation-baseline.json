@@ -1,0 +1,56 @@
+{
+  "phase_BASE": "d748447c22867a15013f8de7fc6be969e8dc55f9",
+  "preserve_exact_bytes": {
+    "docs/evidence/raw/task12-baseline-full-03-proposal-v2.json": {
+      "bytes": 21555,
+      "sha256": "c90c71457ea85443b6bb290c72210ccdcc82793c71359620ac796ad7c637b692"
+    },
+    "docs/evidence/raw/task12-baseline-full-03-source-freeze-v2.json": {
+      "bytes": 70609,
+      "sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a"
+    },
+    "docs/TASK12-FULL03-V2-READY.md": {
+      "bytes": 6524,
+      "sha256": "186dbcb0733eb9c23f19a0ad1f9f42f8243edf16a597a6026a76f00bd68e604e"
+    },
+    "docs/evidence/raw/task12-full03-v2-human-authorization-20261025.json": {
+      "bytes": 2150,
+      "sha256": "3cb092769a0a21ac541734cbd21679a3dee3f61d03fbedc6c8396518786aa9a0"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/abi-reference.json": {
+      "bytes": 229,
+      "sha256": "03cbf01e4ca6cee23af1bfabd1295ed4515fe1d42cc2e9ae5659ebd5dc41fae4"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/azure-pairs.json": {
+      "bytes": 3694,
+      "sha256": "bc69f766cb5b908609986ba2905b0222f1aeda05d1c2d8211d19f6de16886b16"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/burst-pairs.json": {
+      "bytes": 3694,
+      "sha256": "bc69f766cb5b908609986ba2905b0222f1aeda05d1c2d8211d19f6de16886b16"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/cleanup.json": {
+      "bytes": 301,
+      "sha256": "b5fe1d42903caf308c69dcb75eae6f2c1dc41f45f4417a16781e9a2c52d7f3fd"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/resource-samples.json": {
+      "bytes": 3328,
+      "sha256": "b0b0d43a33b50734566703c4fab2f63f1402a7b981ef334817540ad124f6a87e"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/server-inventory.json": {
+      "bytes": 40881,
+      "sha256": "c4fd8e0c8f15fac0881e9808d763f35b008008a2186595ae14f18d5a6990a91d"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/server.log": {
+      "bytes": 8885,
+      "sha256": "8d62000ab18a821e2819d2c1f7eb19b59dd41f8229804b54a0c0b564adaa36d2"
+    },
+    "docs/evidence/raw/task12-baseline-full-03/terminal.json": {
+      "bytes": 3182,
+      "sha256": "8bec8abfb76a5b7400efe7b93e34fb85333c3dc76a8d9e847031213613951b94"
+    }
+  },
+  "new_GPU_authority": false,
+  "no_reuse_old_native_outputs": true,
+  "source_only_audit_initial_stage": true
+}

@@ -1,0 +1,35 @@
+unformatted: File would be reformatted
+  --> scripts/check_report_numbers.py:85:24
+   |
+84 |         size = end - start
+   -         closing = next(
+   -             (run for run in re.finditer(r"`+", line[end:]) if len(run[0]) == size), None
+   -         )
+85 +         closing = next((run for run in re.finditer(r"`+", line[end:]) if len(run[0]) == size), None)
+86 |         if closing is None:
+   |
+
+unformatted: File would be reformatted
+   --> scripts/tests/test_check_report_numbers.py:74:10
+    |
+73  |         f"FP32 BF16 Qwen2.5-0.5B-Instruct seed123 2.8.0+cu128 abc123 {CITE}\n"
+    -         f"```json\n{{\"seed\": 42, \"lr\": 1e-5}} {CITE}\n```\n"
+74  +         f'```json\n{{"seed": 42, "lr": 1e-5}} {CITE}\n```\n'
+75  |     )
+--------------------------------------------------------------------------------
+165 | def test_corrected_real_drafts_pass():
+    -     paths = [ROOT / name for name in [
+    -         "reports/w2-async-grpo.md", "reports/w3-disaggregated-serving.md", "reports/repro/README.md"
+    -     ]]
+166 +     paths = [
+167 +         ROOT / name
+168 +         for name in [
+169 +             "reports/w2-async-grpo.md",
+170 +             "reports/w3-disaggregated-serving.md",
+171 +             "reports/repro/README.md",
+172 +         ]
+173 +     ]
+174 |     result = check_reports(paths, project_root=ROOT)
+    |
+
+2 files would be reformatted

@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 10375315306,
+  "free_bytes": 359705227264,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": []
+}
+Using Python 3.12.13 environment at: .venv-ml
+Checked 146 packages in 2ms
+All installed packages are compatible
+vllm==0.10.2
+transformers==4.55.4
+torch==2.8.0
+triton==3.4.0
+numpy==2.2.6

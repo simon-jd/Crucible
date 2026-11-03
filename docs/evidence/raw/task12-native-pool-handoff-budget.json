@@ -1,0 +1,9 @@
+{
+  "actual_retained": 389987,
+  "handoff_evidence_cap": 524288,
+  "future_proposal_freeze_reserve": 100000,
+  "root_report_reserve": 65536,
+  "projected_retained": 1079811,
+  "stage_cap": 2000000,
+  "actual_native_cache_absent": true
+}

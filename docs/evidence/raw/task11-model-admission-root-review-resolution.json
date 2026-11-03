@@ -1,0 +1,65 @@
+{
+  "time_utc": "2026-10-25T20:07:20.856101+00:00",
+  "source_document_commit": "c4516104a9dc15fabe8ae4c00404909f702424da",
+  "document": {
+    "path": "docs/preparation/task11-model-admission.md",
+    "bytes": 11970,
+    "sha256": "43052959037469a2fa35690371f671bdce2ab4d8417d570fc1c676730e382a1c"
+  },
+  "independent_review": {
+    "path": "docs/evidence/rl-model-admission-preparation-review.md",
+    "bytes": 6740,
+    "sha256": "83b262c62934fc800ba1a225bfc1727bbf5adf2c80731ba67a49cb5c047debe0",
+    "SPEC": "PASS",
+    "QUALITY": "Approved for document preparation only",
+    "new_Critical_Important_Minor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "full04_identity_SHA_unchanged": {
+    "proposal": "8ee59a43c252d5725070f05c638b644afd3b49a2dee2ab2a0d80ad631021a9fe",
+    "freeze": "b26eb969bcf5dc6f567017818b54a73d747ffee6bec1e01340112dc947c862c0",
+    "summary": "3215ea319637c9ac5af5c9695b95a0d33a9ac0a39e938fe3d90cbd4965ac54f1"
+  },
+  "full04_all_current_actual_frozen_SHA_verified": {
+    "sources": 196,
+    "artifacts": 220,
+    "executables": 4
+  },
+  "original_pool15_directory_inventory_identities14empty_plus_client": true,
+  "new_full04_output_guard_outer_receipt_absent": true,
+  "no_maintained_source_runtime_cache_model_edit": true,
+  "no_test_native_model_GPU_query_lock_queue_run": true,
+  "human_answer": "no new answer in live input; coordinator will notify; no poll/duplicate question",
+  "new_stage_initial_project_bytes": 13318906783,
+  "new_stage_current_net_growth_bytes": 104975,
+  "new_stage_retained_cap": 200000,
+  "remaining_new_stage_bytes": 95025,
+  "reserved_final_Git_upper": 70000,
+  "final_receipt_STATUS_upper": 10000,
+  "extra_new_conservative": 100000,
+  "closed_old_remaining_and_scratch_extra": 652077,
+  "resource_sample": {
+    "project_bytes": 13319011758,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13308851527,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13998851527,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_all_allowances": 13999698629,
+  "shared_HF_bytes": 23815435170,
+  "free_bytes": 263067996160,
+  "actual_model_runtime_fit_science": "OPEN; source doc only",
+  "full02_full03_authorities": "SPENT",
+  "full04_authority": "stillpending, not inferred from independent preparation",
+  "next": "future owned caller/schema/supervision source integration per approved document; any W2 execution requires separate exact authority/freshresourcegate; no new task now",
+  "wholeGoal_complete": false
+}

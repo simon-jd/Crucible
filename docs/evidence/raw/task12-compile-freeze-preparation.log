@@ -1,0 +1,5 @@
+Initial preparation assertion failed before new freeze publication (exit1): expected only entry/test identity changes, but the intentionally amended README was also part of historical source freeze. Captured stderr:
+Traceback (most recent call last):
+  File "<stdin>", line 41, in <module>
+AssertionError: ['/home/postedism/Desktop/Crucible/serving/baseline/runtime_entry.py', '/home/postedism/Desktop/Crucible/serving/baseline/README.md', '/home/postedism/Desktop/Crucible/serving/baseline/runtime_entry_test.py', 'serving/baseline/runtime_entry_test.py']
+Reviewed exact three authorized changed paths, then rehashed all old entries. No unexpected changes, native execution or old-artifact edits.

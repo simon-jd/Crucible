@@ -1,0 +1,61 @@
+{
+  "historical_unchanged": {
+    "sources": 173,
+    "artifacts": 58
+  },
+  "authorized_source_changes": [
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/schedule.go",
+      "old_sha256": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "current_sha256": "7d99d4b619dd7aa48186265bdfec7fb55910a8985d411179cfd3ad6e4d0a71da"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/transport.go",
+      "old_sha256": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "current_sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/cmd/replay/main.go",
+      "old_sha256": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "current_sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    }
+  ],
+  "unexpected_differences": [],
+  "historical_executables_unchanged": 4,
+  "coordinator_unchanged": 100,
+  "remaining15_execution_identities": {
+    "docs/evidence/raw/task12-sender-phase-driver.py": true,
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": true,
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2.py": true,
+    ".cache/task12-baseline/bin/replay": true,
+    "serving/baseline/traces/burst-calibration.csv": true,
+    "docs/evidence/raw/task12-model-token-allowlist.json": true,
+    "serving/replay/schedule.go": true,
+    "serving/replay/transport.go": true,
+    "serving/replay/diagnostic.go": true,
+    "serving/replay/diagnostic_test.go": true,
+    "serving/replay/cmd/replay/main.go": true,
+    "serving/replay/cmd/replay/diagnostic_test.go": true,
+    "/usr/bin/timeout": true,
+    "/usr/bin/prlimit": true,
+    ".venv/bin/python": true
+  },
+  "temporary_binary_deleted_only_after_terminal16match": true,
+  "loan_absent": true,
+  "full_preflight_argv": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/resource_preflight.py",
+    "--planned-project-bytes",
+    "690000000",
+    "--download-bytes",
+    "0",
+    "--checkpoints",
+    "2",
+    "--service-memory-bytes",
+    "512000000"
+  ],
+  "preflight_exit": 0,
+  "preflight_stdout": "{\n  \"ok\": true,\n  \"units\": \"decimal GB = 1,000,000,000 bytes\",\n  \"project_bytes\": 13298472263,\n  \"free_bytes\": 265763676160,\n  \"model_cache\": \"/home/postedism/.cache/huggingface\",\n  \"errors\": []\n}\n",
+  "preflight_stderr": ""
+}

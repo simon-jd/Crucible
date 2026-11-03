@@ -1,0 +1,47 @@
+{
+  "status": "blocked-by-automatic-approval-before-CreateProcess",
+  "tool_request": {
+    "cmd": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B - <<'PY'\nimport hashlib,json,os,shutil,time\nfrom pathlib import Path\nroot=Path.cwd();raw=root/'docs/evidence/raw'\npfile=raw/'task12-baseline-full-02-proposal-v3.json';ffile=raw/'task12-baseline-full-02-source-freeze-v3.json'\ndef h(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()\nassert h(pfile)=='88bd749a4881bc990108f8513d25aeeb7bc46afe3b81cb1a3555257693a24759'\nassert h(ffile)=='43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761'\np=json.loads(pfile.read_text());f=json.loads(ffile.read_text())\nassert str(root)==p['working_directory']==f['working_directory']\nassert all(p[k]==f[k] for k in ('command','launcher_command','command_scoped_environment','command_environment_unset','launcher'))\nassert {k:os.environ.get(k) for k in f['inherited_identity_environment']}==f['inherited_identity_environment']\nchanged=[path for group in ('sources','artifacts') for path,value in f[group].items() if h(root/path)!=value];assert not changed,changed\nexecutables={key:h(f['identities'][pkey]) for key,pkey in [('python_sha256','python_path'),('native_python_sha256','native_python_path'),('timeout_sha256','timeout_path'),('prlimit_sha256','prlimit_path')]};assert all(v==f[k] for k,v in executables.items())\nassert h(root/'serving/baseline/experiment.py')=='ab99c606cdb2317b0dd413f151fd68ae60a5a936be783aeb8a665b0892de4a23'\nenv=dict(os.environ);env.update(p['command_scoped_environment'])\nfor key in p['command_environment_unset']:env.pop(key,None)\nos.environ.clear();os.environ.update(env)\nfrom serving.baseline.runtime_entry import runtime_environment\nfrom serving.baseline.model_snapshot import canonical_bytes\nfrom serving.baseline.experiment import listener_closed\nfrom scripts.resource_preflight import check_limits\nwork=root/'.cache/task12-baseline/native-cache';derived=runtime_environment(work);audit=json.loads((root/'serving/baseline/cache-audit.json').read_text())\nfor key,value in audit['environment'].items():derived[key]=str((work/value).resolve())\nderived.update(audit['disable_download_environment']);assert {k:derived.get(k) for k in f['derived_native_environment']}==f['derived_native_environment']\nassert not any(k in env for k in p['command_environment_unset'])\nassert shutil.which('timeout',path=env['PATH'])==f['identities']['timeout_path']\noutput=Path(p['command'][p['command'].index('--output')+1]);receipt=raw/'task12-baseline-full-02-launch-preflight.json'\nfor path in [output,root/p['guard_log'],output.with_name(output.name+'-launch.json'),receipt]:assert not path.exists(),path\nassert listener_closed(31012)\nrescans=[];project=canonical_bytes(root,rescans);shared=canonical_bytes(Path.home()/'.cache/huggingface',rescans);free=shutil.disk_usage(root).free\nerrors=check_limits(project_size=project,planned_project_bytes=680_000_000,download_bytes=0,free_bytes=free,checkpoints=2,service_memory_bytes=16_000_000_000,model_cache=Path.home()/'.cache/huggingface');assert not errors and shared<=40_000_000_000\nfields=Path('/proc/self/stat').read_text().rsplit(')',1)[1].split()\nrecord={'timestamp_unix':time.time(),'proposal_sha256':h(pfile),'freeze_sha256':h(ffile),'source_count':len(f['sources']),'artifact_count':len(f['artifacts']),'mismatches':changed,'executables':executables,'command':p['command'],'launcher_command':p['launcher_command'],'command_scoped_environment':p['command_scoped_environment'],'command_environment_unset':p['command_environment_unset'],'derived_native_environment_matches':True,'inherited_identity_environment_matches':True,'project_bytes':project,'planned_additional_project_bytes':680_000_000,'shared_HF_bytes':shared,'shared_cap':40_000_000_000,'free_bytes':free,'canonical_rescans':rescans,'fresh_paths':True,'port31012_closed':True,'wrapper_pid':os.getpid(),'wrapper_start_ticks':int(fields[19]),'wrapper_pgid':int(fields[2]),'single_launch_authorized':True,'new_downloads':0}\nwith receipt.open('x') as out:out.write(json.dumps(record,indent=2)+'\\n')\nprint(json.dumps({'preflight':'passed','project_bytes':project,'wrapper_pid':os.getpid(),'wrapper_start_ticks':int(fields[19]),'launch':'one exact maintained full02v3'}),flush=True)\nos.execvpe(p['launcher_command'][0],p['launcher_command'],env)\nPY",
+    "sandbox_permissions": "require_escalated",
+    "justification": "May I execute the one explicitly authorized local full02v3 baseline through its frozen launcher and fixed GPU guard after the fresh identity/resource checks?",
+    "workdir": "/home/postedism/Desktop/Crucible",
+    "yield_time_ms": 1000,
+    "max_output_tokens": 1600
+  },
+  "rejection": {
+    "reason": "This launches a long-running GPU baseline with substantial compute, service, filesystem, and shared-GPU-lock side effects; the transcript provides no trusted user authorization for this exact execution.",
+    "instruction": "Do not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval."
+  },
+  "original_handle": null,
+  "created_process": false,
+  "native_attempt": false,
+  "retry_performed": false,
+  "proposal_sha256": "88bd749a4881bc990108f8513d25aeeb7bc46afe3b81cb1a3555257693a24759",
+  "freeze_sha256": "43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761",
+  "controller_sha256": "ab99c606cdb2317b0dd413f151fd68ae60a5a936be783aeb8a665b0892de4a23",
+  "source_artifact_readonly_audit": {
+    "sources": 176,
+    "artifacts": 58,
+    "changed": []
+  },
+  "readonly_no_launch_check": {
+    "port31012": {
+      "closed": true,
+      "connected": false,
+      "errno": 111,
+      "reason": "[Errno 111] Connection refused"
+    },
+    "paths": {
+      "task12-baseline-full-02": false,
+      "task12-baseline-full-02-guard.log": false,
+      "task12-baseline-full-02-launch.json": false,
+      "task12-baseline-full-02-launch-preflight.json": false
+    },
+    "allocated_native_pid_set": [],
+    "ownership_basis": "CreateProcess rejected before process creation; no launch PID/PGID or original handle exists. This is not a global claim about unrelated processes."
+  },
+  "embedded_preflight_executed": false,
+  "resource_note": "The rejected tool command never executed its fresh preflight or launcher. Prior root gate resources remain historical point-in-time evidence; this rejection is not a native experiment failure.",
+  "next_step": "Root will request explicit trusted-user one-shot authorization. No retry, alternate escalation, indirect launch or native job is authorized by this receipt.",
+  "bound_bytes": 16384
+}

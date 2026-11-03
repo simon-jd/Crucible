@@ -1,0 +1,2582 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "sources": {
+    "serving/baseline/prepare_runtime.py": "1eed03bc06a03894aa99313104dafcf7ffeff8179f6a8e38400f682a4cd5073b",
+    "scripts/resource_preflight.py": "89deb73ca9915555f2efcabd5ede65bc36347fb729c666c64f8efc8533ec1d23"
+  },
+  "uv_sha256": "abdc39eab8b4ad341dca91f3823a23a343fae94bdb22ebdd9e91694415206f2f",
+  "python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+  "project_initial": 13198389613,
+  "wheels": [
+    {
+      "name": "sgl-kernel",
+      "wheel_sha256": "3a81ecd6398ec0878f0992bbc7fe9434627cd93d8240808d396c2385f8021c8f",
+      "record": "sgl_kernel-0.3.16.post5.dist-info/RECORD",
+      "record_sha256": "90662b973da476390bdc6a11d820a5851d4e7f52b27de649e37a8380de00bb21",
+      "record_validation": {
+        "hashed_files": 992,
+        "hashed_bytes": 1615587764,
+        "unhashed_files": [
+          "sgl_kernel-0.3.16.post5.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "flashinfer-cubin",
+      "wheel_sha256": "f8973487265608ffb05e7a496374dc96544933d44731632b0da2f6ff5376f597",
+      "record": "flashinfer_cubin-0.5.0.dist-info/RECORD",
+      "record_sha256": "34fafe8a3e83484bff57caa30cce2facfabb82f3f102dd5508435a547fa75152",
+      "record_validation": {
+        "hashed_files": 6943,
+        "hashed_bytes": 397855846,
+        "unhashed_files": [
+          "flashinfer_cubin-0.5.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "wheel_sha256": "d7ddc9c1f5bb803718d736c907fac857fc606f1fce630c0b1d741935a72723b9",
+      "record": "nvidia_cutlass_dsl-4.2.1.dist-info/RECORD",
+      "record_sha256": "0f548b1ceb93b56493ce90eb1d7d0ad4d2237f4270a5c880f4125211875e73d6",
+      "record_validation": {
+        "hashed_files": 150,
+        "hashed_bytes": 160981239,
+        "unhashed_files": [
+          "nvidia_cutlass_dsl-4.2.1.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "pyarrow",
+      "wheel_sha256": "b7ae0bbdc8c6674259b25bef5d2a1d6af5d39d7200c819cf99e07f7dfef1c51e",
+      "record": "pyarrow-21.0.0.dist-info/RECORD",
+      "record_sha256": "583dca8bdb7c2c1573911022569e6afc90c427cefd314bcd5a88d64d6404e6b9",
+      "record_validation": {
+        "hashed_files": 748,
+        "hashed_bytes": 141413144,
+        "unhashed_files": [
+          "pyarrow-21.0.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "decord2",
+      "wheel_sha256": "8444c97945a823844fc138d54a1db8377e258db1f887e40ea68c58dc6debb377",
+      "record": "decord2-3.4.0.dist-info/RECORD",
+      "record_sha256": "7ed568b3fd1da8a4301931e5c0ad3850929bc8ebe97ef1deb10a26309fd8fecd",
+      "record_validation": {
+        "hashed_files": 78,
+        "hashed_bytes": 75650462,
+        "unhashed_files": [
+          "decord2-3.4.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "pandas",
+      "wheel_sha256": "b3d11d2fda7eb164ef27ffc14b4fcab16a80e1ce67e9f57e19ec0afaf715ba89",
+      "record": "pandas-2.3.3.dist-info/RECORD",
+      "record_sha256": "d3993f2995b0da88794c807b1cdffdcf65d6bf6e9238d7596ef598c1000e28f7",
+      "record_validation": {
+        "hashed_files": 1516,
+        "hashed_bytes": 43279977,
+        "unhashed_files": [
+          "pandas-2.3.3.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "cuda-bindings",
+      "wheel_sha256": "fda147a344e8eaeca0c6ff113d2851ffca8f7dfc0a6c932374ee5c47caa649c8",
+      "record": "cuda_bindings-12.9.4.dist-info/RECORD",
+      "record_sha256": "3a53e4ccf04cb6e60a61a1d331943375479be0fdfbd07949a4d3b9fc08979874",
+      "record_validation": {
+        "hashed_files": 138,
+        "hashed_bytes": 110594467,
+        "unhashed_files": [
+          "cuda_bindings-12.9.4.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "transformers",
+      "wheel_sha256": "b10d05da8fa67dc41644dbbf9bc45a44cb86ae33da6f9295f5fbf5b7890bd267",
+      "record": "transformers-4.57.1.dist-info/RECORD",
+      "record_sha256": "5ed3cf7958b692f5527919d40ea9b9861ef1f5329c2dfac9e1891a0dc3da6237",
+      "record_validation": {
+        "hashed_files": 2251,
+        "hashed_bytes": 52167646,
+        "unhashed_files": [
+          "transformers-4.57.1.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "xgrammar",
+      "wheel_sha256": "47fdbfc6007df47de2142613220292023e88e4a570546b39591f053e4d9ec33f",
+      "record": "xgrammar-0.1.25.dist-info/RECORD",
+      "record_sha256": "8518ed241aebc918b00c6dc5e3c0ce0f54a82723ddcaf45351a3cff34ef9806f",
+      "record_validation": {
+        "hashed_files": 32,
+        "hashed_bytes": 33040920,
+        "unhashed_files": [
+          "xgrammar-0.1.25.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "flashinfer-python",
+      "wheel_sha256": "f02f13c616482617e7bee0031e5777a3328989a0b1842496ce273086f6a5aeab",
+      "record": "flashinfer_python-0.5.0.dist-info/RECORD",
+      "record_sha256": "0861345ab8ed7caa5f0d0d1d01b274e8b1aa4e54a5c4802aee0ca106f5d6ef4e",
+      "record_validation": {
+        "hashed_files": 1844,
+        "hashed_bytes": 40582085,
+        "unhashed_files": [
+          "flashinfer_python-0.5.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "grpcio",
+      "wheel_sha256": "7d4fa6ccc3ec2e68a04f7b883d354d7fea22a34c44ce535a2f0c0049cf626ddf",
+      "record": "grpcio-1.75.1.dist-info/RECORD",
+      "record_sha256": "3b951e83f274d2a5ee7619628ebe67a6c4fe6199112a1f43c4f84eeee466592a",
+      "record_validation": {
+        "hashed_files": 66,
+        "hashed_bytes": 15992885,
+        "unhashed_files": [
+          "grpcio-1.75.1.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "modelscope",
+      "wheel_sha256": "16fc2d4209d508cd8b511c07ef74d92531aa0ee1f4c303a19e0234f60a7371a9",
+      "record": "modelscope-1.31.0.dist-info/RECORD",
+      "record_sha256": "ee50314847524a4545bacfd05ff99818fc86f0bcbb35294d0778484cc0e0bf44",
+      "record_validation": {
+        "hashed_files": 2860,
+        "hashed_bytes": 21800581,
+        "unhashed_files": [
+          "modelscope-1.31.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "torchao",
+      "wheel_sha256": "bc708910301a9f98344d43f3fe2aa6d5e1fab706d772b6df47ff05087d664145",
+      "record": "torchao-0.9.0.dist-info/RECORD",
+      "record_sha256": "7564379f4ee65447c996bc824a76592a34d0aaaa5d56023110d0c7e8813ce9af",
+      "record_validation": {
+        "hashed_files": 302,
+        "hashed_bytes": 25414095,
+        "unhashed_files": [
+          "torchao-0.9.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "lxml",
+      "wheel_sha256": "90a345bbeaf9d0587a3aaffb7006aa39ccb6ff0e96a57286c0cb2fd1520ea192",
+      "record": "lxml-6.0.2.dist-info/RECORD",
+      "record_sha256": "ccc6273d6d0568bc31129b6b848a4dd65040442728c08f7d00da47a52e8edcaa",
+      "record_validation": {
+        "hashed_files": 177,
+        "hashed_bytes": 11902414,
+        "unhashed_files": [
+          "lxml-6.0.2.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "jedi",
+      "wheel_sha256": "0fb16d86c4a4c73c37ba518c77419975e30fcc620658a8d14fbb5720cdd34142",
+      "record": "jedi-0.20.1.dist-info/RECORD",
+      "record_sha256": "cf6f6bd61dbdaadfa6d4d5601afd79ccc8f4531a2c566b510b2282441e557de2",
+      "record_validation": {
+        "hashed_files": 5629,
+        "hashed_bytes": 13889723,
+        "unhashed_files": [
+          "jedi-0.20.1.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "hf-transfer",
+      "wheel_sha256": "cdca9bfb89e6f8f281890cc61a8aff2d3cecaff7e1a4d275574d96ca70098557",
+      "record": "hf_transfer-0.1.9.dist-info/RECORD",
+      "record_sha256": "8d5d98bf6d5266072537dca4bceb150229b3ac40ac67a071dc7080471da9bb0e",
+      "record_validation": {
+        "hashed_files": 9,
+        "hashed_bytes": 9667616,
+        "unhashed_files": [
+          "hf_transfer-0.1.9.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "sglang",
+      "wheel_sha256": "3c57f135ec0a7a5cf6ae4ed5e0b231d7bf7e0fae588bbc1a881560f1c18db995",
+      "record": "sglang-0.5.5.dist-info/RECORD",
+      "record_sha256": "92cd5ffd1ca76215d7e2b47cbb8d6ed288b0b6d1c23851d9f7e5f4ad493136ad",
+      "record_validation": {
+        "hashed_files": 1337,
+        "hashed_bytes": 14184112,
+        "unhashed_files": [
+          "sglang-0.5.5.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "tokenizers",
+      "wheel_sha256": "e2ef6063d7a84994129732b47e7915e8710f27f99f3a3260b8a38fc7ccd083f4",
+      "record": "tokenizers-0.22.1.dist-info/RECORD",
+      "record_sha256": "dc61591297a27bcbcab3749eec657e68b753569180f496e8bd2ba372eb74d3a3",
+      "record_validation": {
+        "hashed_files": 31,
+        "hashed_bytes": 10585238,
+        "unhashed_files": [
+          "tokenizers-0.22.1.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "py-spy",
+      "target_unique_bytes": 2806631613,
+      "download": {
+        "bytes": 0,
+        "sha256": "aeb0323409199c785f730645e9f4bb7a7b9ca2c481f2c331a55642b5d13fa52f",
+        "reused_pending_wheel": true,
+        "prior_compressed_bytes": 2936518
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-18/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.99ms\nPrepared 1 package in 12ms\nInstalled 1 package in 2ms\n + py-spy==0.4.2 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-18/py_spy-0.4.2-py2.py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.whl)\n",
+        "project_before": 13198399548,
+        "project_after": 13206617369,
+        "copied_script": {
+          "wheel_sha256": "aeb0323409199c785f730645e9f4bb7a7b9ca2c481f2c331a55642b5d13fa52f",
+          "archive_member": "py_spy-0.4.2.data/scripts/py-spy",
+          "payload_sha256": "9b4d1f39b2a47ae44f4c6a46f615dcc0287d7755beba5065f32391951e07d594",
+          "files": [
+            {
+              "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-18/cache/archive-v0/XzhIceeBDUSPD6pA/py_spy-0.4.2.data/scripts/py-spy",
+              "device": 66307,
+              "inode": 56366884,
+              "links": 2,
+              "bytes": 8079336
+            },
+            {
+              "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/bin/py-spy",
+              "device": 66307,
+              "inode": 56366884,
+              "links": 2,
+              "bytes": 8079336
+            }
+          ],
+          "shared_inode": true,
+          "reserved_extra_copy_bytes": 8079336
+        },
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 9,
+        "hashed_bytes": 8214544,
+        "unhashed_files": [
+          "py_spy-0.4.2.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "67045eab8f5c71524bb40dd90d2754eb39e22c6168027ed2f48ed6e5825d878d",
+      "project_after_stage_cleanup": 13203678020
+    },
+    {
+      "name": "grpcio-tools",
+      "target_unique_bytes": 2814432299,
+      "download": {
+        "bytes": 2656424,
+        "sha256": "38c6c7d5d4800f636ee691cd073db1606d1a6a76424ca75c9b709436c9c20439",
+        "seconds": 0.21934360195882618
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-19/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.85ms\nPrepared 1 package in 13ms\nInstalled 1 package in 2ms\n + grpcio-tools==1.75.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-19/grpcio_tools-1.75.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl)\n",
+        "project_before": 13206337704,
+        "project_after": 13214142566,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 7658808,
+          "files": [
+            {
+              "path": "grpc_tools/_protoc_compiler.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56367215,
+              "links": 2,
+              "bytes": 7658808
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 27,
+        "hashed_bytes": 7798014,
+        "unhashed_files": [
+          "grpcio_tools-1.75.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "6a7eb9e5cf44c299b0b9476318d4f2b827c24536ff804597282e17849cdf13b9",
+      "project_after_stage_cleanup": 13211481556
+    },
+    {
+      "name": "timm",
+      "target_unique_bytes": 2822999248,
+      "download": {
+        "bytes": 2485733,
+        "sha256": "a640e58f4ae41e0445517d1133b34be75bb2bd49cdb830d739925ce1fb7d2526",
+        "seconds": 0.17270165507216007
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-20/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 23ms\nInstalled 1 package in 4ms\n + timm==1.0.16 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-20/timm-1.0.16-py3-none-any.whl)\n",
+        "project_before": 13213969766,
+        "project_after": 13222564794,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 1748917,
+          "files": [
+            {
+              "path": "timm/data/_info/imagenet_synset_to_definition.txt",
+              "device": 66307,
+              "inode": 56371996,
+              "links": 2,
+              "bytes": 1748917
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 303,
+        "hashed_bytes": 8541559,
+        "unhashed_files": [
+          "timm-1.0.16.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "355b494675ad28ba6e2a7f0703ce948f8a1f6fc1710d82d48391dc9c8e8889f7",
+      "project_after_stage_cleanup": 13220051815
+    },
+    {
+      "name": "pycryptodomex",
+      "target_unique_bytes": 2829293733,
+      "download": {
+        "bytes": 2272578,
+        "sha256": "f489c4765093fb60e2edafdf223397bc716491b2b69fe74367b70d6999257a5c",
+        "seconds": 0.16280976100824773
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-21/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 16ms\nInstalled 1 package in 5ms\n + pycryptodomex==3.23.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-21/pycryptodomex-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)\n",
+        "project_before": 13222326874,
+        "project_after": 13228655160,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 355,
+        "hashed_bytes": 6262596,
+        "unhashed_files": [
+          "pycryptodomex-3.23.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "251016f63351357534c35e4e2dd9d3bd6cebbd7118cafb6c3b655145a3db4565",
+      "project_after_stage_cleanup": 13226348373
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "target_unique_bytes": 2835421757,
+      "download": {
+        "bytes": 1921824,
+        "sha256": "bbe79e942923ee6cd1576c153a728d40cd590e4fb83f7b55c595c6d1bb50173c",
+        "seconds": 0.2614299179986119
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-22/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 16ms\nInstalled 1 package in 4ms\n + apache-tvm-ffi==0.1.2 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-22/apache_tvm_ffi-0.1.2-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 13228272526,
+        "project_after": 13234420357,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 1085752,
+          "files": [
+            {
+              "path": "tvm_ffi/lib/libtvm_ffi.so",
+              "device": 66307,
+              "inode": 56372990,
+              "links": 2,
+              "bytes": 1085752
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 195,
+        "hashed_bytes": 6109820,
+        "unhashed_files": [
+          "apache_tvm_ffi-0.1.2.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "79ad0e78438dbb9567da329a2003acd17e0acc8be2b91ee4f5f462f2dbaaae96",
+      "project_after_stage_cleanup": 13232478314
+    },
+    {
+      "name": "nvidia-cudnn-frontend",
+      "target_unique_bytes": 2842750346,
+      "download": {
+        "bytes": 1820086,
+        "sha256": "853ac1f343b4b94baf7ea5675824e076dbeba453804149f28766c823f064552e",
+        "seconds": 0.23310374200809747
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-23/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.95ms\nPrepared 1 package in 10ms\nInstalled 1 package in 3ms\n + nvidia-cudnn-frontend==1.14.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-23/nvidia_cudnn_frontend-1.14.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 13234300967,
+        "project_after": 13241639646,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 4989512,
+          "files": [
+            {
+              "path": "cudnn/_compiled_module.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56372851,
+              "links": 2,
+              "bytes": 4989512
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 87,
+        "hashed_bytes": 7320122,
+        "unhashed_files": [
+          "nvidia_cudnn_frontend-1.14.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "1028218958c9bbb366c1aae20301d0354aab1bfd7e08454f823438d3afae72ab",
+      "project_after_stage_cleanup": 13239809040
+    },
+    {
+      "name": "openai",
+      "target_unique_bytes": 2846364192,
+      "download": {
+        "bytes": 1005551,
+        "sha256": "904e4b5254a8416746a2f05649594fa41b19d799843cd134dac86167e094edef",
+        "seconds": 0.3000066040549427
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-24/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 25ms\nInstalled 1 package in 9ms\n + openai==2.6.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-24/openai-2.6.1-py3-none-any.whl)\n",
+        "project_before": 13240817111,
+        "project_after": 13244535489,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 988,
+        "hashed_bytes": 3510791,
+        "unhashed_files": [
+          "openai-2.6.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "5cb92564ac16a903cabbdeb35893d9235aa1815f287806b21b33398d3936a68f",
+      "project_after_stage_cleanup": 13243425094
+    },
+    {
+      "name": "airportsdata",
+      "target_unique_bytes": 2849461060,
+      "download": {
+        "bytes": 931164,
+        "sha256": "d7eaa9a57d373b0adaaae0d52da2af0bb0edf73f7baa170f7c415d3342bf4868",
+        "seconds": 0.12019261601381004
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-25/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.82ms\nPrepared 1 package in 7ms\nInstalled 1 package in 2ms\n + airportsdata==20260905 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-25/airportsdata-20260905-py3-none-any.whl)\n",
+        "project_before": 13244358426,
+        "project_after": 13247457964,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 3077365,
+          "files": [
+            {
+              "path": "airportsdata/airports.csv",
+              "device": 66307,
+              "inode": 56373186,
+              "links": 2,
+              "bytes": 3077365
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 12,
+        "hashed_bytes": 3095715,
+        "unhashed_files": [
+          "airportsdata-20260905.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "534d307682c162494d86942d539fe9e97defc68c0eb11d1ccf08602bf1ce5e6c",
+      "project_after_stage_cleanup": 13246523800
+    },
+    {
+      "name": "wcwidth",
+      "target_unique_bytes": 2853074532,
+      "download": {
+        "bytes": 785946,
+        "sha256": "b185c8b927b23af2721be1783499d1cfa5c028b098b0858951b4ae224477f1c2",
+        "seconds": 0.12063381203915924
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-26/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.90ms\nPrepared 1 package in 8ms\nInstalled 1 package in 2ms\n + wcwidth==0.9.4 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-26/wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl)\n",
+        "project_before": 13247312237,
+        "project_after": 13250932765,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 1934608,
+          "files": [
+            {
+              "path": "wcwidth/_wcwidth_c.abi3.so",
+              "device": 66307,
+              "inode": 56373256,
+              "links": 2,
+              "bytes": 1934608
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 59,
+        "hashed_bytes": 3608054,
+        "unhashed_files": [
+          "wcwidth-0.9.4.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "7f9157e6f5352e13dac4eaf87062a474d7c4f9977ffc71235408ab883ba1d55f",
+      "project_after_stage_cleanup": 13250139367
+    },
+    {
+      "name": "ipython",
+      "target_unique_bytes": 2855052135,
+      "download": {
+        "bytes": 616170,
+        "sha256": "5f77efafc886d2f023442479b8149e7d86547ad0a979e9da9f045d252f648196",
+        "seconds": 0.16575705306604505
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-27/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 10ms\nInstalled 1 package in 5ms\n + ipython==9.6.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-27/ipython-9.6.0-py3-none-any.whl)\n",
+        "project_before": 13250757954,
+        "project_after": 13252753298,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 190,
+        "hashed_bytes": 1961291,
+        "unhashed_files": [
+          "ipython-9.6.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "35b44f0e9264ae3772f106bf578cafdbb54549a7fc9f55439f67fb0cfba9cf38",
+      "project_after_stage_cleanup": 13252119073
+    },
+    {
+      "name": "pytz",
+      "target_unique_bytes": 2856055455,
+      "download": {
+        "bytes": 506342,
+        "sha256": "e658af3757f9e26a9d25dd2aff38335acd92bc9104f890a894b2c1ba28311b03",
+        "seconds": 0.14278706000186503
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-28/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 17ms\nInstalled 1 package in 5ms\n + pytz==2026.5 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-28/pytz-2026.5-py2.py3-none-any.whl)\n",
+        "project_before": 13252627576,
+        "project_after": 13253684846,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 619,
+        "hashed_bytes": 950921,
+        "unhashed_files": [
+          "pytz-2026.5.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "824d4aae4de32fa8b296f6b553c63588d48ed6f8a371fb30b54027882a6d2664",
+      "project_after_stage_cleanup": 13253124236
+    },
+    {
+      "name": "datasets",
+      "target_unique_bytes": 2858068777,
+      "download": {
+        "bytes": 503623,
+        "sha256": "62e4f6899a36be9ec74a7e759a6951253cc85b3fcfa0a759b0efa8353b149dac",
+        "seconds": 0.1346913300221786
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-29/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 4ms\nInstalled 1 package in 3ms\n + datasets==4.1.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-29/datasets-4.1.1-py3-none-any.whl)\n",
+        "project_before": 13253630009,
+        "project_after": 13255657104,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 138,
+        "hashed_bytes": 2001014,
+        "unhashed_files": [
+          "datasets-4.1.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "b3343eb85323d1b889f254704baaf81a25f26583c256155517a41da05264b3fd",
+      "project_after_stage_cleanup": 13255139392
+    },
+    {
+      "name": "torch-memory-saver",
+      "target_unique_bytes": 2859640756,
+      "download": {
+        "bytes": 488722,
+        "sha256": "0cf26332993649f8ea1b95d7307dfba3a95ee6cee53de84a3e561fb21752b584",
+        "seconds": 0.10254069301299751
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-30/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 4ms\nInstalled 1 package in 2ms\n + torch-memory-saver==0.0.9 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-30/torch_memory_saver-0.0.9-cp39-abi3-manylinux2014_x86_64.whl)\n",
+        "project_before": 13255630332,
+        "project_after": 13257205699,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 19,
+        "hashed_bytes": 1570117,
+        "unhashed_files": [
+          "torch_memory_saver-0.0.9.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "68d841214a0bd09cc589395f09a46d64e12ff995c67210ad63c660a2797363ae",
+      "project_after_stage_cleanup": 13256713217
+    },
+    {
+      "name": "prompt-toolkit",
+      "target_unique_bytes": 2861039122,
+      "download": {
+        "bytes": 392288,
+        "sha256": "01c0891d7f9237d5e339f7d3e42cdae80b7534abb1c7c0e3352efba6231492f2",
+        "seconds": 0.12775023700669408
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-31/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.89ms\nPrepared 1 package in 7ms\nInstalled 1 package in 3ms\n + prompt-toolkit==3.0.53 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-31/prompt_toolkit-3.0.53-py3-none-any.whl)\n",
+        "project_before": 13257107749,
+        "project_after": 13258522173,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 155,
+        "hashed_bytes": 1383825,
+        "unhashed_files": [
+          "prompt_toolkit-3.0.53.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "6a816e19cb663ce15d9b56b01987a9f82976a6c16099e04df431546b0d288795",
+      "project_after_stage_cleanup": 13258113497
+    },
+    {
+      "name": "anthropic",
+      "target_unique_bytes": 2862265262,
+      "download": {
+        "bytes": 355035,
+        "sha256": "85c5015fcdbdc728390f11b17642a65a4365d03b12b799b18b6cc57e71fdb327",
+        "seconds": 0.1181267169304192
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-32/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 9ms\nInstalled 1 package in 5ms\n + anthropic==0.71.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-32/anthropic-0.71.0-py3-none-any.whl)\n",
+        "project_before": 13258470735,
+        "project_after": 13259740710,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 412,
+        "hashed_bytes": 1183837,
+        "unhashed_files": [
+          "anthropic-0.71.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "9ff8ffaed3fe2b7743932f0eb3a8404cdc84f86a182fff364602bb173741e1e0",
+      "project_after_stage_cleanup": 13259341520
+    },
+    {
+      "name": "tzdata",
+      "target_unique_bytes": 2862847811,
+      "download": {
+        "bytes": 347996,
+        "sha256": "b683bd1b6659ddcd810ff02ad09ba821d4bf1065072805063eb35c49617905ac",
+        "seconds": 0.13015526090748608
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-33/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 16ms\nInstalled 1 package in 5ms\n + tzdata==2026.5 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-33/tzdata-2026.5-py2.py3-none-any.whl)\n",
+        "project_before": 13259691692,
+        "project_after": 13260330847,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 636,
+        "hashed_bytes": 527488,
+        "unhashed_files": [
+          "tzdata-2026.5.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "cacc6eb61bc0e23b9e3330ae503b8cdd6ded27b7972f76af0d16a8bd16f936c7",
+      "project_after_stage_cleanup": 13259925923
+    },
+    {
+      "name": "outlines-core",
+      "target_unique_bytes": 2863582401,
+      "download": {
+        "bytes": 343201,
+        "sha256": "e86a1bb46adc5cbf6dfd7a7fe4105e0e2a4c6e041732a053126b41c521a1f223",
+        "seconds": 0.11492522701155394
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-34/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.94ms\nPrepared 1 package in 3ms\nInstalled 1 package in 2ms\n + outlines-core==0.1.26 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-34/outlines_core-0.1.26-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)\n",
+        "project_before": 13260271380,
+        "project_after": 13261009155,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 17,
+        "hashed_bytes": 732981,
+        "unhashed_files": [
+          "outlines_core-0.1.26.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "29dd66662aa22b2b62f8f1e0807a7c13d14eac008966d73778ff3cddb3367df6",
+      "project_after_stage_cleanup": 13260662357
+    },
+    {
+      "name": "xxhash",
+      "target_unique_bytes": 2864386065,
+      "download": {
+        "bytes": 193883,
+        "sha256": "49e03e6fe2cac4a1bc64952dd250cf0dbc5ef4ebb7b8d96bce82e2de163c82a2",
+        "seconds": 0.1039401589659974
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-35/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 3ms\nInstalled 1 package in 2ms\n + xxhash==3.6.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-35/xxhash-3.6.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 13260858598,
+        "project_after": 13261665028,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 13,
+        "hashed_bytes": 802516,
+        "unhashed_files": [
+          "xxhash-3.6.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "a55b636e56e8393131e1bcb2a65753af16b166f1294acb20a019d9afb9261dfe",
+      "project_after_stage_cleanup": 13261467939
+    },
+    {
+      "name": "multiprocess",
+      "target_unique_bytes": 2864924328,
+      "download": {
+        "bytes": 146741,
+        "sha256": "fc0544c531920dde3b00c29863377f87e1632601092ea2daca74e4beb40faa2e",
+        "seconds": 0.13309730996843427
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-36/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.98ms\nPrepared 1 package in 3ms\nInstalled 1 package in 3ms\n + multiprocess==0.70.16 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-36/multiprocess-0.70.16-py312-none-any.whl)\n",
+        "project_before": 13261616910,
+        "project_after": 13262161920,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 54,
+        "hashed_bytes": 533038,
+        "unhashed_files": [
+          "multiprocess-0.70.16.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "7afdf7c3432a84630bd560d5477e5d899e5e2856b2efee7fbcb200a06da53e0e",
+      "project_after_stage_cleanup": 13262008100
+    },
+    {
+      "name": "orjson",
+      "target_unique_bytes": 2865222360,
+      "download": {
+        "bytes": 132875,
+        "sha256": "524b765ad888dc5518bbce12c77c2e83dee1ed6b0992c1790cc5fb49bb4b6667",
+        "seconds": 0.08566386392340064
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-37/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.92ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + orjson==3.11.3 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-37/orjson-3.11.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)\n",
+        "project_before": 13262143249,
+        "project_after": 13262443962,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 12,
+        "hashed_bytes": 296934,
+        "unhashed_files": [
+          "orjson-3.11.3.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "1e6573c36b826c8f164e431cde488049f66e890225390a2f7a128c638104ae56",
+      "project_after_stage_cleanup": 13262308008
+    },
+    {
+      "name": "parso",
+      "target_unique_bytes": 2865578049,
+      "download": {
+        "bytes": 107025,
+        "sha256": "a8926eb2a1b915486941fdbd31e86a4baf88fe8c210f25f2f35ecec5b574ca1c",
+        "seconds": 0.07441633299458772
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-38/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.86ms\nPrepared 1 package in 2ms\nInstalled 1 package in 2ms\n + parso==0.8.7 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-38/parso-0.8.7-py2.py3-none-any.whl)\n",
+        "project_before": 13262417234,
+        "project_after": 13262777734,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 40,
+        "hashed_bytes": 352429,
+        "unhashed_files": [
+          "parso-0.8.7.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "a7f993bf8c6a18208dd0ff6af072766a8e39cc754bfa5a295ff90795ac39e8ef",
+      "project_after_stage_cleanup": 13262665580
+    },
+    {
+      "name": "python-dateutil",
+      "target_unique_bytes": 2865911882,
+      "download": {
+        "bytes": 94659,
+        "sha256": "3c79630202e4152c6add678446984236efe4f57e84d8e892aab0637bab82e9fd",
+        "seconds": 0.1002687820000574
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-39/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 2ms\nInstalled 1 package in 2ms\n + python-dateutil==3.0.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-39/python_dateutil-3.0.0-py2.py3-none-any.whl)\n",
+        "project_before": 13262762414,
+        "project_after": 13263100355,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 30,
+        "hashed_bytes": 331246,
+        "unhashed_files": [
+          "python_dateutil-3.0.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "1e71e3a436ed364f5e7c6c128108ae4261fd8a1913cfa36f980c7f7f8c462979",
+      "project_after_stage_cleanup": 13263001250
+    },
+    {
+      "name": "outlines",
+      "target_unique_bytes": 2866184584,
+      "download": {
+        "bytes": 87623,
+        "sha256": "f5a5f2242ed9802d3aab7a92789bf4008d734c576be9258cc0a297f690124727",
+        "seconds": 0.0970655899727717
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-40/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 3ms\nInstalled 1 package in 3ms\n + outlines==0.1.11 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-40/outlines-0.1.11-py3-none-any.whl)\n",
+        "project_before": 13263091073,
+        "project_after": 13263370104,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 57,
+        "hashed_bytes": 267908,
+        "unhashed_files": [
+          "outlines-0.1.11.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "9b08252d576b72a6db1a866189ea0b0d1485c61de0d64009399df4983ca1928a",
+      "project_after_stage_cleanup": 13263275834
+    },
+    {
+      "name": "traitlets",
+      "target_unique_bytes": 2866504890,
+      "download": {
+        "bytes": 86211,
+        "sha256": "f775618166caa0396c8e337099240f2bd3e5e917d203b2e6fbe21a58d3cb1f6b",
+        "seconds": 0.10160272801294923
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-41/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.94ms\nPrepared 1 package in 2ms\nInstalled 1 package in 2ms\n + traitlets==5.16.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-41/traitlets-5.16.1-py3-none-any.whl)\n",
+        "project_before": 13263364211,
+        "project_after": 13263688831,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 32,
+        "hashed_bytes": 317524,
+        "unhashed_files": [
+          "traitlets-5.16.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "8b4cff41cf3015b809d34293144deb000a16dc6c97593482aa5f2738998d6d47",
+      "project_after_stage_cleanup": 13263597986
+    },
+    {
+      "name": "blobfile",
+      "target_unique_bytes": 2866811068,
+      "download": {
+        "bytes": 75413,
+        "sha256": "48ecc3307e622804bd8fe13bf6f40e6463c4439eba7a1f9ad49fd78aa63cc658",
+        "seconds": 0.06012162996921688
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-42/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.89ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + blobfile==3.0.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-42/blobfile-3.0.0-py3-none-any.whl)\n",
+        "project_before": 13263675570,
+        "project_after": 13263984869,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 19,
+        "hashed_bytes": 304594,
+        "unhashed_files": [
+          "blobfile-3.0.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "026ac38b107c0240cb5f266cf6aca1d12bb9554cea1f552a5d4548a97c50ca05",
+      "project_after_stage_cleanup": 13263906019
+    },
+    {
+      "name": "pexpect",
+      "target_unique_bytes": 2867003053,
+      "download": {
+        "bytes": 63772,
+        "sha256": "7236d1e080e4936be2dc3e326cec0af72acf9212a7e1d060210e70a47e253523",
+        "seconds": 0.08076941198669374
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-43/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.98ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + pexpect==4.9.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-43/pexpect-4.9.0-py2.py3-none-any.whl)\n",
+        "project_before": 13263971960,
+        "project_after": 13264167686,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 27,
+        "hashed_bytes": 189789,
+        "unhashed_files": [
+          "pexpect-4.9.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "06ab41d7de814c44a45b06e6a85b41f15562671d1f0b79868f353f55e3c9207b",
+      "project_after_stage_cleanup": 13264099851
+    },
+    {
+      "name": "cuda-pathfinder",
+      "target_unique_bytes": 2867191711,
+      "download": {
+        "bytes": 62594,
+        "sha256": "85a4e708c725d603f576042ef32781a3d1737c51e84c35fe361d2680191af65a",
+        "seconds": 0.06572936405427754
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-44/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.95ms\nPrepared 1 package in 2ms\nInstalled 1 package in 2ms\n + cuda-pathfinder==1.8.4 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-44/cuda_pathfinder-1.8.4-py3-none-any.whl)\n",
+        "project_before": 13264164621,
+        "project_after": 13264359080,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 42,
+        "hashed_bytes": 184374,
+        "unhashed_files": [
+          "cuda_pathfinder-1.8.4.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "7c335771ed92534587a76e4c1b202c284002c3b4fdf53783df4a4c4e8e5e0231",
+      "project_after_stage_cleanup": 13264290355
+    },
+    {
+      "name": "nvidia-ml-py",
+      "target_unique_bytes": 2867542999,
+      "download": {
+        "bytes": 58132,
+        "sha256": "959bf4adf6fe1308e4bd739e722236b0d1ec8392e2cefad33ff70c311380b9b6",
+        "seconds": 0.08950825699139386
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-45/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + nvidia-ml-py==13.615.71 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-45/nvidia_ml_py-13.615.71-py3-none-any.whl)\n",
+        "project_before": 13264350701,
+        "project_after": 13264704370,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 9,
+        "hashed_bytes": 350421,
+        "unhashed_files": [
+          "nvidia_ml_py-13.615.71.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "1ad3009addc73f99c39fc1385e08310b2f1dc4d44d8f9ba302574470fcc72700",
+      "project_after_stage_cleanup": 13264643525
+    },
+    {
+      "name": "tabulate",
+      "target_unique_bytes": 2867694889,
+      "download": {
+        "bytes": 39814,
+        "sha256": "f0b0622e567335c8fabaaa659f1b33bcb6ddfe2e496071b743aa113f8774f2d3",
+        "seconds": 0.079891555942595
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-46/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + tabulate==0.10.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-46/tabulate-0.10.0-py3-none-any.whl)\n",
+        "project_before": 13264685532,
+        "project_after": 13264839908,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 11,
+        "hashed_bytes": 150871,
+        "unhashed_files": [
+          "tabulate-0.10.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "5bed2d3c9175dc0bdcf15ebc2b36760ca412440b76cd6b2835f06768a72afebf",
+      "project_after_stage_cleanup": 13264797290
+    },
+    {
+      "name": "executing",
+      "target_unique_bytes": 2867794693,
+      "download": {
+        "bytes": 29393,
+        "sha256": "736e859c9f8701f11fcf516856f26f562e04776387824b43a35a1dfe21c84122",
+        "seconds": 0.07833653304260224
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-47/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.93ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + executing==2.3.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-47/executing-2.3.0-py3-none-any.whl)\n",
+        "project_before": 13264828846,
+        "project_after": 13264931598,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 16,
+        "hashed_bytes": 98391,
+        "unhashed_files": [
+          "executing-2.3.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "a36df3d95f74513592d3097e4ea91822c28120b97f271684ab4e2694ec78ed27",
+      "project_after_stage_cleanup": 13264898939
+    },
+    {
+      "name": "asttokens",
+      "target_unique_bytes": 2867876234,
+      "download": {
+        "bytes": 28702,
+        "sha256": "9da13157f5b28becde0bd374fc677dcd3c290614264eff096f167c469cd9f933",
+        "seconds": 0.07895117893349379
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-48/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + asttokens==3.0.2 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-48/asttokens-3.0.2-py3-none-any.whl)\n",
+        "project_before": 13264930426,
+        "project_after": 13265015103,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 18,
+        "hashed_bytes": 79940,
+        "unhashed_files": [
+          "asttokens-3.0.2.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "7e68c9d31c40c930eb127cd5b0c52cfddfabe21b380532b1a44d38e20a3678bd",
+      "project_after_stage_cleanup": 13264983075
+    },
+    {
+      "name": "stack-data",
+      "target_unique_bytes": 2867952177,
+      "download": {
+        "bytes": 24521,
+        "sha256": "d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695",
+        "seconds": 0.05509087000973523
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-49/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + stack-data==0.6.3 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-49/stack_data-0.6.3-py3-none-any.whl)\n",
+        "project_before": 13265009839,
+        "project_after": 13265088637,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 15,
+        "hashed_bytes": 74620,
+        "unhashed_files": [
+          "stack_data-0.6.3.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "a8fbf68440533a0ab22f172868dd84d1d34873f87a0d054a31c96968d27f12bd",
+      "project_after_stage_cleanup": 13265060941
+    },
+    {
+      "name": "build",
+      "target_unique_bytes": 2868016325,
+      "download": {
+        "bytes": 23382,
+        "sha256": "7145f0b5061ba90a1500d60bd1b13ca0a8a4cebdd0cc16ed8adf1c0e739f43b4",
+        "seconds": 0.06374248408246785
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-50/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.96ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + build==1.3.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-50/build-1.3.0-py3-none-any.whl)\n",
+        "project_before": 13265086486,
+        "project_after": 13265153964,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 23,
+        "hashed_bytes": 62289,
+        "unhashed_files": [
+          "build-1.3.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "a58b7be755c5d817872fb5eef3b8a8fd03eaecf73f637cdfb9583849a76935aa",
+      "project_after_stage_cleanup": 13265126942
+    },
+    {
+      "name": "grpcio-reflection",
+      "target_unique_bytes": 2868084397,
+      "download": {
+        "bytes": 22697,
+        "sha256": "17ef1504c9efd58662e56090379885e5f3f7985ce481cf30d6b1cb25f55ab0ae",
+        "seconds": 0.07905226806178689
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-51/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.96ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + grpcio-reflection==1.75.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-51/grpcio_reflection-1.75.1-py3-none-any.whl)\n",
+        "project_before": 13265151806,
+        "project_after": 13265223101,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 17,
+        "hashed_bytes": 66357,
+        "unhashed_files": [
+          "grpcio_reflection-1.75.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "0b68e5e9973fb0259ca111c0f8f6b987e478d8a19b881e9562220f2c1514b855",
+      "project_after_stage_cleanup": 13265196845
+    },
+    {
+      "name": "docstring-parser",
+      "target_unique_bytes": 2868158504,
+      "download": {
+        "bytes": 22484,
+        "sha256": "b3fcbed555c47d8479be0796ef7e19c2670d428d72e96da63f3a40122860374b",
+        "seconds": 0.059634563978761435
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-52/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.86ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + docstring-parser==0.18.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-52/docstring_parser-0.18.0-py3-none-any.whl)\n",
+        "project_before": 13265221557,
+        "project_after": 13265298752,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 17,
+        "hashed_bytes": 72530,
+        "unhashed_files": [
+          "docstring_parser-0.18.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "b56792a9f72b504a876c49be40ecae639190b111af27b53fcb27bcc919bc92e6",
+      "project_after_stage_cleanup": 13265272846
+    },
+    {
+      "name": "grpcio-health-checking",
+      "target_unique_bytes": 2868213318,
+      "download": {
+        "bytes": 18921,
+        "sha256": "f9d3eae78c13bfe81105a6433fbf7c4ad04ea1f517e9110fde35391d56ec760e",
+        "seconds": 0.077258839039132
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-53/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + grpcio-health-checking==1.75.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-53/grpcio_health_checking-1.75.1-py3-none-any.whl)\n",
+        "project_before": 13265294003,
+        "project_after": 13265351787,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 15,
+        "hashed_bytes": 53337,
+        "unhashed_files": [
+          "grpcio_health_checking-1.75.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "f82047c8d7456b23f90f84251f2d42c064102c1084932e8d685322ca385090c7",
+      "project_after_stage_cleanup": 13265329550
+    },
+    {
+      "name": "ptyprocess",
+      "target_unique_bytes": 2868253871,
+      "download": {
+        "bytes": 13993,
+        "sha256": "4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35",
+        "seconds": 0.08351894200313836
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-54/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.99ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + ptyprocess==0.7.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-54/ptyprocess-0.7.0-py2.py3-none-any.whl)\n",
+        "project_before": 13265345785,
+        "project_after": 13265388868,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 11,
+        "hashed_bytes": 39559,
+        "unhashed_files": [
+          "ptyprocess-0.7.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "678d306d95b9672062b9d855c837b053f70a40fb4f8ce30853489310094a3dc4",
+      "project_after_stage_cleanup": 13265372017
+    },
+    {
+      "name": "pure-eval",
+      "target_unique_bytes": 2868287551,
+      "download": {
+        "bytes": 11893,
+        "sha256": "96cae060a313cfaad51bb761278bfb0e62dc0248d9315a81173752dc546cd37a",
+        "seconds": 0.0817116319667548
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-55/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.88ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + pure-eval==0.2.4 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-55/pure_eval-0.2.4-py3-none-any.whl)\n",
+        "project_before": 13265386088,
+        "project_after": 13265422544,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 14,
+        "hashed_bytes": 32439,
+        "unhashed_files": [
+          "pure_eval-0.2.4.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "c9fa6d48878622a9c1d0f8c2e0c7961bf5549178b7492a18cbbfc34b68f0bb34",
+      "project_after_stage_cleanup": 13265407557
+    },
+    {
+      "name": "pyproject-hooks",
+      "target_unique_bytes": 2868321401,
+      "download": {
+        "bytes": 10724,
+        "sha256": "5fc53fdac9f7bd63fbcdc868fb5f90b4784d78a53a3d3388cd738b807441a20b",
+        "seconds": 0.18024302902631462
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-56/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.78ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + pyproject-hooks==1.3.3 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-56/pyproject_hooks-1.3.3-py3-none-any.whl)\n",
+        "project_before": 13265420461,
+        "project_after": 13265457004,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 12,
+        "hashed_bytes": 32683,
+        "unhashed_files": [
+          "pyproject_hooks-1.3.3.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "f8e82007018e6ea508635aa535a6b0f7f3992e4d48e73cfe5196c1a96c94b5bd",
+      "project_after_stage_cleanup": 13265443257
+    },
+    {
+      "name": "decorator",
+      "target_unique_bytes": 2868348234,
+      "download": {
+        "bytes": 10365,
+        "sha256": "f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c",
+        "seconds": 0.061761038028635085
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-57/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.83ms\nPrepared 1 package in 0.93ms\nInstalled 1 package in 2ms\n + decorator==5.3.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-57/decorator-5.3.1-py3-none-any.whl)\n",
+        "project_before": 13265455821,
+        "project_after": 13265485198,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 11,
+        "hashed_bytes": 25824,
+        "unhashed_files": [
+          "decorator-5.3.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "d49dc4897f4c6ad1d07a081d3f971d1096889710be9756f107c43961a894b8f2",
+      "project_after_stage_cleanup": 13265471971
+    },
+    {
+      "name": "matplotlib-inline",
+      "target_unique_bytes": 2868370278,
+      "download": {
+        "bytes": 9534,
+        "sha256": "3c821cf1c209f59fb2d2d64abbf5b23b67bcb2210d663f9918dd851c6da1fcf6",
+        "seconds": 0.05000573303550482
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-58/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.84ms\nPrepared 1 package in 0.97ms\nInstalled 1 package in 2ms\n + matplotlib-inline==0.2.2 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-58/matplotlib_inline-0.2.2-py3-none-any.whl)\n",
+        "project_before": 13265483694,
+        "project_after": 13265508441,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 12,
+        "hashed_bytes": 20852,
+        "unhashed_files": [
+          "matplotlib_inline-0.2.2.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "c1c9ce094a8f4988fa8ff2bd8983f9dd978f2a1692f34d755dda2d6e6dcd492a",
+      "project_after_stage_cleanup": 13265495870
+    },
+    {
+      "name": "ipython-pygments-lexers",
+      "target_unique_bytes": 2868394103,
+      "download": {
+        "bytes": 8074,
+        "sha256": "a9462224a505ade19a605f71f8fa63c2048833ce50abc86768a0d81d876dc81c",
+        "seconds": 0.06807102693710476
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-59/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + ipython-pygments-lexers==1.1.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-59/ipython_pygments_lexers-1.1.1-py3-none-any.whl)\n",
+        "project_before": 13265506183,
+        "project_after": 13265532481,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 9,
+        "hashed_bytes": 22845,
+        "unhashed_files": [
+          "ipython_pygments_lexers-1.1.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "dff84d6b550ffe945108dc8f13a80262c636f1add172dae3b707ee2b68e17ded",
+      "project_after_stage_cleanup": 13265521588
+    },
+    {
+      "name": "cuda-python",
+      "target_unique_bytes": 2868411034,
+      "download": {
+        "bytes": 7594,
+        "sha256": "d2cacea882a69863f1e7d27ee71d75f0684f4c76910aff839067e4f89c902279",
+        "seconds": 0.06086750503163785
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-60/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.94ms\nPrepared 1 package in 1ms\nInstalled 1 package in 2ms\n + cuda-python==12.9.4 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-60/cuda_python-12.9.4-py3-none-any.whl)\n",
+        "project_before": 13265531422,
+        "project_after": 13265550681,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 8,
+        "hashed_bytes": 16129,
+        "unhashed_files": [
+          "cuda_python-12.9.4.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "76aeaf8919b11d7ad45b3d30d1e60c8744ff7f6b450a1ddc6bc828f20429b21f",
+      "project_after_stage_cleanup": 13265540435
+    },
+    {
+      "name": "nest-asyncio",
+      "target_unique_bytes": 2868423898,
+      "download": {
+        "bytes": 5195,
+        "sha256": "87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c",
+        "seconds": 0.0657713949913159
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-61/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.96ms\nPrepared 1 package in 1ms\nInstalled 1 package in 8ms\n + nest-asyncio==1.6.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-61/nest_asyncio-1.6.0-py3-none-any.whl)\n",
+        "project_before": 13265547816,
+        "project_after": 13265563071,
+        "copied_script": null,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 9,
+        "hashed_bytes": 11999,
+        "unhashed_files": [
+          "nest_asyncio-1.6.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "b537282f67573ca7e3d00adddad3471eaef3b2d0e371249a5cbd638db271d69b",
+      "project_after_stage_cleanup": 13265555161
+    }
+  ],
+  "continuation_sha256": "127b018b0dd388b78981e3d6a61de7e39c78586514fad8baccfca3c20cba44fa",
+  "status": "installed-awaiting-native-validation",
+  "project_final": 13265557024
+}

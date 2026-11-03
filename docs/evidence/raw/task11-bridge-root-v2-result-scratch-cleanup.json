@@ -1,0 +1,575 @@
+{
+  "time_utc": "2026-10-25T17:56:08.756479+00:00",
+  "scope": "ROOT independently reads complete raw, verifies executed25SHA and fullterminalpathset/lstat/content BEFORE exactowneddeletion",
+  "original_session": 59327,
+  "terminal_exit": 0,
+  "completed46": true,
+  "warning_preserved": "oldRPCcontrol Python3.12 multithreaded fork DeprecationWarning; independentreviewpending",
+  "receipt_sha256": "a676d8f3dfee409938677bd39182f781c965986e338b83c8def8fd53a684552e",
+  "full_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395127,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2",
+      "dev": 66307,
+      "inode": 56395130,
+      "mode": 16893,
+      "nlink": 12,
+      "size": 4096,
+      "mtime_ns": 1792950885010779720
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/cuda",
+      "dev": 66307,
+      "inode": 56395141,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/cupy",
+      "dev": 66307,
+      "inode": 56395143,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/inductor",
+      "dev": 66307,
+      "inode": 56395137,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/numba",
+      "dev": 66307,
+      "inode": 56395144,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest",
+      "dev": 66307,
+      "inode": 56395151,
+      "mode": 16832,
+      "nlink": 17,
+      "size": 4096,
+      "mtime_ns": 1792950915853581031
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-134ce305a8369f97b78fd5dc86e4b9e2a9010832647cf18f3ea3587015f59e98",
+      "dev": 66307,
+      "inode": 56395225,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950915853581031
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-64db668b49262a4aeac9787e7cdd36f4cbf15cc42944a86af648b3bec45a7341",
+      "dev": 66307,
+      "inode": 56395214,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950911412609640
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-a4795cd35ed287c8403ef09963cd77f87d950ada8801262b34d5f92c3012634b",
+      "dev": 66307,
+      "inode": 56395215,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950912693601388
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-e0ed22084aa915b72b5337cbc5fc035ef0be405684940c415783c0deb55e1da1",
+      "dev": 66307,
+      "inode": 56395210,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950911349610045
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-fd948638c20c0008d311d2b3992470493cd29a01dbd5a08010a860ecd85eed8a",
+      "dev": 66307,
+      "inode": 56395211,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950911380609846
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c",
+      "dev": 66307,
+      "inode": 56395197,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950907226636606
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets",
+      "dev": 66307,
+      "inode": 56395202,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950907226636606
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets/config.json",
+      "dev": 66307,
+      "inode": 56395204,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950907228082558,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da",
+      "dev": 66307,
+      "inode": 56395171,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950898719691407
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets",
+      "dev": 66307,
+      "inode": 56395173,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950898719691407
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets/config.json",
+      "dev": 66307,
+      "inode": 56395174,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950898721172870,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215",
+      "dev": 66307,
+      "inode": 56395157,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950893261726567
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets",
+      "dev": 66307,
+      "inode": 56395158,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950893261726567
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json",
+      "dev": 66307,
+      "inode": 56395163,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950893263373384,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0",
+      "dev": 66307,
+      "inode": 56395175,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950900251681538
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets",
+      "dev": 66307,
+      "inode": 56395176,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950900251681538
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets/config.json",
+      "dev": 66307,
+      "inode": 56395179,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950900252838134,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5",
+      "dev": 66307,
+      "inode": 56395180,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950902206668944
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets",
+      "dev": 66307,
+      "inode": 56395181,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950902206668944
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets/config.json",
+      "dev": 66307,
+      "inode": 56395182,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950902208332459,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe",
+      "dev": 66307,
+      "inode": 56395152,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950885018779668
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets",
+      "dev": 66307,
+      "inode": 56395153,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950885018779668
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets/config.json",
+      "dev": 66307,
+      "inode": 56395156,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950885019826866,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8",
+      "dev": 66307,
+      "inode": 56395205,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950908574627922
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets",
+      "dev": 66307,
+      "inode": 56395206,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950908574627922
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets/config.json",
+      "dev": 66307,
+      "inode": 56395209,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2,
+      "mtime_ns": 1792950910726722771,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871",
+      "dev": 66307,
+      "inode": 56395183,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950903676670539
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets",
+      "dev": 66307,
+      "inode": 56395184,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950903676670539
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets/config.json",
+      "dev": 66307,
+      "inode": 56395186,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950903677232012,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9",
+      "dev": 66307,
+      "inode": 56395193,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950905091650359
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets",
+      "dev": 66307,
+      "inode": 56395194,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950905091650359
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets/config.json",
+      "dev": 66307,
+      "inode": 56395196,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950905093176820,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63",
+      "dev": 66307,
+      "inode": 56395166,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950896016708820
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets",
+      "dev": 66307,
+      "inode": 56395167,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950896016708820
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets/config.json",
+      "dev": 66307,
+      "inode": 56395168,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950896018131829,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp",
+      "dev": 66307,
+      "inode": 56395133,
+      "mode": 16893,
+      "nlink": 4,
+      "size": 4096,
+      "mtime_ns": 1792950923209533644
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k",
+      "dev": 66307,
+      "inode": 56395226,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950916568576425
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k/_remote_module_non_scriptable.py",
+      "dev": 66307,
+      "inode": 56395227,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2355,
+      "mtime_ns": 1792950916569670758,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd",
+      "dev": 66307,
+      "inode": 56395222,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950913404596807
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd/_remote_module_non_scriptable.py",
+      "dev": 66307,
+      "inode": 56395223,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2355,
+      "mtime_ns": 1792950913405831330,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/torch",
+      "dev": 66307,
+      "inode": 56395136,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/triton",
+      "dev": 66307,
+      "inode": 56395138,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/vllm",
+      "dev": 66307,
+      "inode": 56395146,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/xdg",
+      "dev": 66307,
+      "inode": 56395134,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    }
+  ],
+  "regular_content_by_sha256": {
+    "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20": {
+      "bytes": 22,
+      "utf8": "{\"model_type\":\"qwen2\"}",
+      "paths": [
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets/config.json",
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets/config.json"
+      ]
+    },
+    "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a": {
+      "bytes": 2,
+      "utf8": "{}",
+      "paths": [
+        ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets/config.json"
+      ]
+    },
+    "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8": {
+      "bytes": 2355,
+      "utf8": "from typing import *\n\nimport torch\nimport torch.distributed.rpc as rpc\nfrom torch import Tensor\nfrom torch._jit_internal import Future\nfrom torch.distributed.rpc import RRef\nfrom typing import Tuple  # pyre-ignore: unused import\n\n\nmodule_interface_cls = None\n\n\ndef forward_async(self, *args, **kwargs):\n    args = (self.module_rref, self.device, self.is_device_map_set, *args)\n    kwargs = {**kwargs}\n    return rpc.rpc_async(\n        self.module_rref.owner(),\n        _remote_forward,\n        args,\n        kwargs,\n    )\n\n\ndef forward(self, *args, **kwargs):\n    args = (self.module_rref, self.device, self.is_device_map_set, *args)\n    kwargs = {**kwargs}\n    ret_fut = rpc.rpc_async(\n        self.module_rref.owner(),\n        _remote_forward,\n        args,\n        kwargs,\n    )\n    return ret_fut.wait()\n\n\n_generated_methods = [\n    forward_async,\n    forward,\n]\n\n\n\n\ndef _remote_forward(\n    module_rref: RRef[module_interface_cls], device: str, is_device_map_set: bool, *args, **kwargs):\n    module = module_rref.local_value()\n    device = torch.device(device)\n\n    if device.type != \"cuda\":\n        return module.forward(*args, **kwargs)\n\n    # If the module is on a cuda device,\n    # move any CPU tensor in args or kwargs to the same cuda device.\n    # Since torch script does not support generator expression,\n    # have to use concatenation instead of\n    # ``tuple(i.to(device) if isinstance(i, Tensor) else i for i in *args)``.\n    args = (*args,)\n    out_args: Tuple[()] = ()\n    for arg in args:\n        arg = (arg.to(device),) if isinstance(arg, Tensor) else (arg,)\n        out_args = out_args + arg\n\n    kwargs = {**kwargs}\n    for k, v in kwargs.items():\n        if isinstance(v, Tensor):\n            kwargs[k] = kwargs[k].to(device)\n\n    if is_device_map_set:\n        return module.forward(*out_args, **kwargs)\n\n    # If the device map is empty, then only CPU tensors are allowed to send over wire,\n    # so have to move any GPU tensor to CPU in the output.\n    # Since torch script does not support generator expression,\n    # have to use concatenation instead of\n    # ``tuple(i.cpu() if isinstance(i, Tensor) else i for i in module.forward(*out_args, **kwargs))``.\n    ret: Tuple[()] = ()\n    for i in module.forward(*out_args, **kwargs):\n        i = (i.cpu(),) if isinstance(i, Tensor) else (i,)\n        ret = ret + i\n    return ret\n",
+      "paths": [
+        ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k/_remote_module_non_scriptable.py",
+        ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd/_remote_module_non_scriptable.py"
+      ]
+    }
+  },
+  "regular_bytes": 4910,
+  "counts": {
+    "dirs": 39,
+    "files": 12
+  },
+  "deleted_paths": [
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets",
+    ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k/_remote_module_non_scriptable.py",
+    ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd/_remote_module_non_scriptable.py",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/loader-134ce305a8369f97b78fd5dc86e4b9e2a9010832647cf18f3ea3587015f59e98",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/loader-64db668b49262a4aeac9787e7cdd36f4cbf15cc42944a86af648b3bec45a7341",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/loader-a4795cd35ed287c8403ef09963cd77f87d950ada8801262b34d5f92c3012634b",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/loader-e0ed22084aa915b72b5337cbc5fc035ef0be405684940c415783c0deb55e1da1",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/loader-fd948638c20c0008d311d2b3992470493cd29a01dbd5a08010a860ecd85eed8a",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9",
+    ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63",
+    ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k",
+    ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd",
+    ".cache/task11-ram-handoff/bridge-v2/cuda",
+    ".cache/task11-ram-handoff/bridge-v2/cupy",
+    ".cache/task11-ram-handoff/bridge-v2/inductor",
+    ".cache/task11-ram-handoff/bridge-v2/numba",
+    ".cache/task11-ram-handoff/bridge-v2/pytest",
+    ".cache/task11-ram-handoff/bridge-v2/tmp",
+    ".cache/task11-ram-handoff/bridge-v2/torch",
+    ".cache/task11-ram-handoff/bridge-v2/triton",
+    ".cache/task11-ram-handoff/bridge-v2/vllm",
+    ".cache/task11-ram-handoff/bridge-v2/xdg",
+    ".cache/task11-ram-handoff/bridge-v2",
+    ".cache/task11-ram-handoff"
+  ],
+  "cleanup_confirmed": true,
+  "owned_children": [],
+  "scratch_absent": true
+}

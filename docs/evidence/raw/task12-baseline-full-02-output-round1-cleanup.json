@@ -1,0 +1,2364 @@
+{
+  "scope": "Only three terminal round1 CPU fixture trees; no shared/runtime/cache cleanup",
+  "all_commands_terminal": true,
+  "red": "8 expected failed assertions; shell command subsequently displayed retained log",
+  "green": "8 passed13deselected2.13s",
+  "related": "9 passed40deselected3.67s",
+  "total_removed_bytes": 250576,
+  "recorded_fixture_pid_values_absent": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    50,
+    51,
+    52,
+    53
+  ],
+  "pid_scope": "Recorded values may include mocked IDs. Actual real Popen cases assert exact reaping/absence; no ownership inferred from mocked IDs. No unrelated process command lines read.",
+  "roots": [
+    {
+      "path": ".cache/task12-baseline/tmp/output-round1-red",
+      "device": 66307,
+      "inode": 56377783,
+      "bytes": 47243,
+      "files": [
+        {
+          "path": "test_requested_native_term_is_0/server.log",
+          "bytes": 5,
+          "sha256": "b24d6d33736ecd5604a4b17bc9c6481039fac362bb7df044ef1c10a2bfd21db6"
+        },
+        {
+          "path": "test_requested_native_term_is_0/terminal.json",
+          "bytes": 2783,
+          "sha256": "365190ee154ca30e5c8f384f2eae2aab3a6994e91c2422b847b12310289da320"
+        },
+        {
+          "path": "test_requested_native_term_is_0/azure-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_requested_native_term_is_0/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_requested_native_term_is_0/burst-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_requested_native_term_is_0/cleanup.json",
+          "bytes": 193,
+          "sha256": "eada3985d3e61fcdacc950332c05ba0231cace4033084652f1fe564ed04a6fde"
+        },
+        {
+          "path": "test_real_http_content_length_1/native-smoke-error.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_1/native-smoke.json",
+          "bytes": 581,
+          "sha256": "476021406f762e6d319c97850758a55c13132ad21bbcc24573f0d82d1994aa66"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/terminal.json",
+          "bytes": 2783,
+          "sha256": "a49fb70f90b71b9de76e6c5a7adb5875ecef968cfbb47d2849090b9906d62afd"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/azure-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/burst-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/cleanup.json",
+          "bytes": 193,
+          "sha256": "7be5129f9514d61dd96af5dd9f4e80384b41bd4d9ae394b76b24afc4bf21571f"
+        },
+        {
+          "path": "test_real_http_content_length_0/native-smoke-zero.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_0/native-smoke.json",
+          "bytes": 580,
+          "sha256": "a71a166e8cf9d4a02b7edfce2cad78b3a8e91a68c610f17ada46df593f80f076"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/terminal.json",
+          "bytes": 2781,
+          "sha256": "7a29086ca499a86a7fe98f5424b86bc7de8f14fa6d713f66dfe36d90522b786c"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/azure-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/burst-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/cleanup.json",
+          "bytes": 191,
+          "sha256": "945a72478495ccb0f3349179d20dc1472688f9230aedb6a589d129b7571f7c8c"
+        },
+        {
+          "path": "test_real_http_content_length_3/native-smoke-error.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_3/native-smoke.json",
+          "bytes": 581,
+          "sha256": "476021406f762e6d319c97850758a55c13132ad21bbcc24573f0d82d1994aa66"
+        },
+        {
+          "path": "test_real_http_content_length_2/native-smoke-zero.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_2/native-smoke.json",
+          "bytes": 580,
+          "sha256": "a71a166e8cf9d4a02b7edfce2cad78b3a8e91a68c610f17ada46df593f80f076"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/terminal.json",
+          "bytes": 2781,
+          "sha256": "2d02aa7fc52a5fdfdab5988aed0e70d410023590ee812fa078282688600004bf"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/azure-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/burst-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/cleanup.json",
+          "bytes": 191,
+          "sha256": "30ed6dedfff86fdd4d9d531167e3836c431c9721ae02790514c43be16b2a28ae"
+        }
+      ],
+      "bounded_fixture_evidence": {
+        "test_requested_native_term_is_0/terminal.json": {
+          "aborted": false,
+          "baseline_accepted": false,
+          "primary_failure": null,
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 8,
+            "returncode": -15,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+          },
+          "run_completed": true
+        },
+        "test_real_http_content_length_1/native-smoke.json": [
+          {
+            "case": "error",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "dc5775d4ee32dcf9ed376f7b3c59f3eeedbe75562734f46cd745efb5afdc4ef3",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": true,
+            "http_body_complete": true,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false
+          }
+        ],
+        "test_late_native_exit_invalida0/terminal.json": {
+          "aborted": false,
+          "baseline_accepted": false,
+          "primary_failure": null,
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 5,
+            "returncode": -25,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+          },
+          "run_completed": true
+        },
+        "test_real_http_content_length_0/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "8d0aa9bf5cfc506e19a8b9521ca6664228b2a60910f43a80291b50d6912161dc",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": true,
+            "http_body_complete": true,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false
+          }
+        ],
+        "test_late_native_exit_invalida2/terminal.json": {
+          "aborted": false,
+          "baseline_accepted": false,
+          "primary_failure": null,
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 7,
+            "returncode": 0,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+          },
+          "run_completed": true
+        },
+        "test_real_http_content_length_3/native-smoke.json": [
+          {
+            "case": "error",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "dc5775d4ee32dcf9ed376f7b3c59f3eeedbe75562734f46cd745efb5afdc4ef3",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": true,
+            "http_body_complete": true,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false
+          }
+        ],
+        "test_real_http_content_length_2/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "8d0aa9bf5cfc506e19a8b9521ca6664228b2a60910f43a80291b50d6912161dc",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": true,
+            "http_body_complete": true,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false
+          }
+        ],
+        "test_late_native_exit_invalida1/terminal.json": {
+          "aborted": false,
+          "baseline_accepted": false,
+          "primary_failure": null,
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 6,
+            "returncode": 7,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+          },
+          "run_completed": true
+        }
+      }
+    },
+    {
+      "path": ".cache/task12-baseline/tmp/output-round1-green",
+      "device": 66307,
+      "inode": 56377951,
+      "bytes": 48598,
+      "files": [
+        {
+          "path": "test_requested_native_term_is_0/server.log",
+          "bytes": 5,
+          "sha256": "b24d6d33736ecd5604a4b17bc9c6481039fac362bb7df044ef1c10a2bfd21db6"
+        },
+        {
+          "path": "test_requested_native_term_is_0/terminal.json",
+          "bytes": 2892,
+          "sha256": "5addc10f221d12c68a16a5ea935b640eb43d09a26c4baad44f73fda5cd746146"
+        },
+        {
+          "path": "test_requested_native_term_is_0/azure-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_requested_native_term_is_0/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_requested_native_term_is_0/burst-pairs.json",
+          "bytes": 4115,
+          "sha256": "4116fc8cd0ee65656018915d91601752a8a9231abe81e73d678aee5bc0883c9e"
+        },
+        {
+          "path": "test_requested_native_term_is_0/cleanup.json",
+          "bytes": 296,
+          "sha256": "c9e6d31fd2b940b4b08b69a7fd81bafa7177bda3f52e07ee8b0b27c59b270cc1"
+        },
+        {
+          "path": "test_real_http_content_length_1/native-smoke-error.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_1/native-smoke.json",
+          "bytes": 868,
+          "sha256": "018bdd66d7ba92e09bbf63c9c96bc4a8fb529c3d578c149d027196f465a70cec"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/terminal.json",
+          "bytes": 3068,
+          "sha256": "b28165ccf529fedc67a557ad91c0168b62069f7bbafcecd04ebfe923fed324d2"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/azure-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/burst-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_late_native_exit_invalida0/cleanup.json",
+          "bytes": 297,
+          "sha256": "7c901f4daa0d08fc1ef87438b1a65fac04105b08d6c745c874ba601a80889fd6"
+        },
+        {
+          "path": "test_real_http_content_length_0/native-smoke-zero.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_0/native-smoke.json",
+          "bytes": 867,
+          "sha256": "7c3f56a022260274104f8bf61213dd689bd721a98aaf63c94046c7047fcba30a"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/terminal.json",
+          "bytes": 3059,
+          "sha256": "259d52058020318014f13ba35a15849784597f19870ffb7074cb34c8f24fdebe"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/azure-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/burst-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_late_native_exit_invalida2/cleanup.json",
+          "bytes": 293,
+          "sha256": "4d4c37be9b68366fd7892eb28c6f770faa6a30c08c989da280b3655667be2fda"
+        },
+        {
+          "path": "test_real_http_content_length_3/native-smoke-error.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_3/native-smoke.json",
+          "bytes": 654,
+          "sha256": "23384fd14d9f16ac327ef48d865724663ef5ab207c8b1aad3e02cd115b02c874"
+        },
+        {
+          "path": "test_real_http_content_length_2/native-smoke-zero.raw",
+          "bytes": 22,
+          "sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64"
+        },
+        {
+          "path": "test_real_http_content_length_2/native-smoke.json",
+          "bytes": 653,
+          "sha256": "1727017fcc20e5e3f8ed54f68b2e935ef6a5fabba9b005636e8b594735b8c0ae"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/terminal.json",
+          "bytes": 3059,
+          "sha256": "f4f971b88430cc6f86dff73c5301299cf71760c6e354eb198b6b7d8d32ac9656"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/azure-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/burst-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_late_native_exit_invalida1/cleanup.json",
+          "bytes": 293,
+          "sha256": "4a15b17fab0f0a1766a8bf951d8d49f7eea4c2ac2c5897b131fb05d98ccea391"
+        }
+      ],
+      "bounded_fixture_evidence": {
+        "test_requested_native_term_is_0/terminal.json": {
+          "aborted": false,
+          "baseline_accepted": false,
+          "primary_failure": null,
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 53,
+            "returncode": -15,
+            "returncode_before_cleanup": null,
+            "termination_requested": true,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+            "native_exit_expected": true
+          },
+          "run_completed": true
+        },
+        "test_real_http_content_length_1/native-smoke.json": [
+          {
+            "case": "error",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "dc5775d4ee32dcf9ed376f7b3c59f3eeedbe75562734f46cd745efb5afdc4ef3",
+            "status": 400,
+            "actual_output": null,
+            "accepted_contract": false,
+            "http_body_complete": false,
+            "http_framing": "content-length",
+            "remaining_content_length": 9,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": true,
+            "retained_prefix_only": false,
+            "error": "IncompleteRead(0 bytes read, 9 more expected)",
+            "error_info": {
+              "repr": "IncompleteRead(0 bytes read, 9 more expected)",
+              "observed_utf8_bytes": 45,
+              "truncated": false
+            }
+          }
+        ],
+        "test_late_native_exit_invalida0/terminal.json": {
+          "aborted": true,
+          "baseline_accepted": false,
+          "primary_failure": {
+            "repr": "RuntimeError('unexpected native exit: returncode=-25, termination_requested=False, before_cleanup=-25')",
+            "observed_utf8_bytes": 103,
+            "truncated": false
+          },
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 50,
+            "returncode": -25,
+            "returncode_before_cleanup": -25,
+            "termination_requested": false,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+            "native_exit_expected": false
+          },
+          "run_completed": false
+        },
+        "test_real_http_content_length_0/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "8d0aa9bf5cfc506e19a8b9521ca6664228b2a60910f43a80291b50d6912161dc",
+            "status": 400,
+            "actual_output": null,
+            "accepted_contract": false,
+            "http_body_complete": false,
+            "http_framing": "content-length",
+            "remaining_content_length": 9,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": true,
+            "retained_prefix_only": false,
+            "error": "IncompleteRead(0 bytes read, 9 more expected)",
+            "error_info": {
+              "repr": "IncompleteRead(0 bytes read, 9 more expected)",
+              "observed_utf8_bytes": 45,
+              "truncated": false
+            }
+          }
+        ],
+        "test_late_native_exit_invalida2/terminal.json": {
+          "aborted": true,
+          "baseline_accepted": false,
+          "primary_failure": {
+            "repr": "RuntimeError('unexpected native exit: returncode=0, termination_requested=False, before_cleanup=0')",
+            "observed_utf8_bytes": 99,
+            "truncated": false
+          },
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 52,
+            "returncode": 0,
+            "returncode_before_cleanup": 0,
+            "termination_requested": false,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+            "native_exit_expected": false
+          },
+          "run_completed": false
+        },
+        "test_real_http_content_length_3/native-smoke.json": [
+          {
+            "case": "error",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "dc5775d4ee32dcf9ed376f7b3c59f3eeedbe75562734f46cd745efb5afdc4ef3",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": true,
+            "http_body_complete": true,
+            "http_framing": "content-length",
+            "remaining_content_length": 0,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false
+          }
+        ],
+        "test_real_http_content_length_2/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "8d0aa9bf5cfc506e19a8b9521ca6664228b2a60910f43a80291b50d6912161dc",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": true,
+            "http_body_complete": true,
+            "http_framing": "content-length",
+            "remaining_content_length": 0,
+            "raw_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "raw_bytes": 22,
+            "observed_bytes": 22,
+            "observed_sha256": "5ca5acff668230ee3cff9e340fa600660d10d555ae5f4cd01734bedd966ebb64",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false
+          }
+        ],
+        "test_late_native_exit_invalida1/terminal.json": {
+          "aborted": true,
+          "baseline_accepted": false,
+          "primary_failure": {
+            "repr": "RuntimeError('unexpected native exit: returncode=7, termination_requested=False, before_cleanup=7')",
+            "observed_utf8_bytes": 99,
+            "truncated": false
+          },
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 51,
+            "returncode": 7,
+            "returncode_before_cleanup": 7,
+            "termination_requested": false,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+            "native_exit_expected": false
+          },
+          "run_completed": false
+        }
+      }
+    },
+    {
+      "path": ".cache/task12-baseline/tmp/output-round1-related",
+      "device": 66307,
+      "inode": 56377997,
+      "bytes": 154735,
+      "files": [
+        {
+          "path": "test_flush_barrier_waits_for_s0/barrier.json",
+          "bytes": 1131,
+          "sha256": "bc7f74df9e35c3c03d25b143d3256ca7ca6ed0012535b3e28d8b60cfd60cfb63"
+        },
+        {
+          "path": "test_primary_failure_and_trigg0/terminal.json",
+          "bytes": 3850,
+          "sha256": "eb5d036a83de8a2e959c62793e5f53fea788c4d60f56bfcd35cad4e83a92ae4f"
+        },
+        {
+          "path": "test_primary_failure_and_trigg0/azure-pairs.json",
+          "bytes": 512,
+          "sha256": "cb1d600fd5a1d41cf3270ad153d9b43cc162da8260fec1f6be45a74ca20eee96"
+        },
+        {
+          "path": "test_primary_failure_and_trigg0/resource-samples.json",
+          "bytes": 512,
+          "sha256": "617a5e543a77488debf611418579aaf53ce503144b36e0fbfa6fdb32be6ed742"
+        },
+        {
+          "path": "test_primary_failure_and_trigg0/burst-pairs.json",
+          "bytes": 512,
+          "sha256": "cb1d600fd5a1d41cf3270ad153d9b43cc162da8260fec1f6be45a74ca20eee96"
+        },
+        {
+          "path": "test_primary_failure_and_trigg0/cleanup.json",
+          "bytes": 295,
+          "sha256": "7722d32c34076658665768da9b5ef55c219cbcacba2f40cbdceaef4493a76cc4"
+        },
+        {
+          "path": "test_real_http_prefix_cutoff_m0/native-smoke-zero.raw",
+          "bytes": 65536,
+          "sha256": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3"
+        },
+        {
+          "path": "test_real_http_prefix_cutoff_m0/native-smoke.json",
+          "bytes": 929,
+          "sha256": "768dfd29dd0060281119963177e7dc1728bb8f39d7c4ab3ee89f53d48705bb10"
+        },
+        {
+          "path": "test_attempted_trial_retains_p0/attempt.json",
+          "bytes": 9,
+          "sha256": "b65a190c804413c18b0cd66e8371fca6e671c0dc30d97d69833b2cef680c550a"
+        },
+        {
+          "path": "test_attempted_trial_retains_p0/attempt.summary.json",
+          "bytes": 1050,
+          "sha256": "d4385f095366e82deaf8828a837988d3bd57d6c5b3c60fb0f98014e288c30ef4"
+        },
+        {
+          "path": "test_attempted_trial_retains_p0/attempt.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_interrupted_trial_reaps_e0/attempt.json",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_interrupted_trial_reaps_e0/attempt.summary.json",
+          "bytes": 948,
+          "sha256": "82a52f8755ca11ca9069bb044f8fc451d499d59026f609a137717f36a835039b"
+        },
+        {
+          "path": "test_interrupted_trial_reaps_e0/attempt.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_partial_http_evidence_nev0/native-smoke-zero.raw",
+          "bytes": 65536,
+          "sha256": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3"
+        },
+        {
+          "path": "test_partial_http_evidence_nev0/native-smoke.json",
+          "bytes": 791,
+          "sha256": "99ac230fe203e8f596af318a7b5217221a672802bba91e380c3ca06e22d8c117"
+        },
+        {
+          "path": "test_native_smoke_retains_bad_0/native-smoke-zero.raw",
+          "bytes": 18,
+          "sha256": "c4272a61f06a61f0460dda020a24fbbab080c76e54748211bd6e69241a21f3c1"
+        },
+        {
+          "path": "test_native_smoke_retains_bad_0/native-smoke.json",
+          "bytes": 965,
+          "sha256": "decffe74d754f75da302fc8ff8c6d3358c24861648d4c23910fc16425fcbb6fb"
+        },
+        {
+          "path": "test_final_child_output_cutoff0/server.log",
+          "bytes": 512,
+          "sha256": "64164443bb63e338ef1cfdb12a57117cd1212270cc935a798f6e8a665cdf4659"
+        },
+        {
+          "path": "test_final_child_output_cutoff0/terminal.json",
+          "bytes": 2809,
+          "sha256": "698a87384182d43da960beafba1854c9c1693e1a9ba488db121edccdcf0d2508"
+        },
+        {
+          "path": "test_final_child_output_cutoff0/azure-pairs.json",
+          "bytes": 3994,
+          "sha256": "4551fa398da489233cc0cbea7e98d3073456dfc657eb2b7f72244238e145ae0e"
+        },
+        {
+          "path": "test_final_child_output_cutoff0/resource-samples.json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "test_final_child_output_cutoff0/cleanup.json",
+          "bytes": 105,
+          "sha256": "22381a9dce525fedbce63ba2f3ffdc7a55e105e61cc0a776cc7dd8f0a550d21a"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/prior-abi.json",
+          "bytes": 17,
+          "sha256": "9af00eda2e0de45fd19ca535e33e7ef417258035208788829f8559dc4ad496ba"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/lock.json",
+          "bytes": 114,
+          "sha256": "3ad61f85a15c1f9ad362c103b47ff10099fa0c056f113ae1ec1a4288b8780b99"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/tokens.json",
+          "bytes": 103,
+          "sha256": "59adcbda1340330b869aa1d3a827b27091bbcbb7ab8373380df6959fce345cff"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/manifest.json",
+          "bytes": 174,
+          "sha256": "9b2a3cf9caace0164d211810eee8b0c035d8c1f12d20cf70a9c0ca41d8a22e39"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/protocol.json",
+          "bytes": 813,
+          "sha256": "9d1098bf12703311435f71e39b90465ad6980cf0274a949e0a9344d9aaf0d6b0"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/out/server.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/out/terminal.json",
+          "bytes": 2892,
+          "sha256": "75fe7619a2b2b29c0473146fcd3aa1064d9fcaa00f03fc74ea2c71fb1485059a"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/out/abi-reference.json",
+          "bytes": 275,
+          "sha256": "a5cc0056969dab1e2354b03de6d021392a5b0b015fda0915f3ce1b371bdde874"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/out/server-inventory.json",
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/out/resource-samples.json",
+          "bytes": 32,
+          "sha256": "3cd1340d6ef61689eaa56b830b359a53611c59c85ced3a133ea8726500e7dc82"
+        },
+        {
+          "path": "test_full_controller_reuses_pr0/out/cleanup.json",
+          "bytes": 296,
+          "sha256": "e3bcd44c7b15c726d52108b14a5b922addaeaf4157fad855a3aa7d2f388ee7cb"
+        }
+      ],
+      "bounded_fixture_evidence": {
+        "test_primary_failure_and_trigg0/terminal.json": {
+          "aborted": true,
+          "baseline_accepted": false,
+          "primary_failure": {
+            "repr": "RuntimeError('primary CPU fixture')",
+            "observed_utf8_bytes": 35,
+            "truncated": false
+          },
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [
+            {
+              "repr": "OutputLimit('resource-samples.json: persisted prefix limit 512; observed 12027 bytes')",
+              "observed_utf8_bytes": 86,
+              "truncated": false
+            },
+            {
+              "repr": "OutputLimit('azure-pairs.json: persisted prefix limit 512; observed 3694 bytes')",
+              "observed_utf8_bytes": 80,
+              "truncated": false
+            },
+            {
+              "repr": "OutputLimit('burst-pairs.json: persisted prefix limit 512; observed 3694 bytes')",
+              "observed_utf8_bytes": 80,
+              "truncated": false
+            },
+            {
+              "repr": "OutputLimit('azure-pairs.json: persisted prefix limit 512; observed 3694 bytes')",
+              "observed_utf8_bytes": 80,
+              "truncated": false
+            },
+            {
+              "repr": "OutputLimit('burst-pairs.json: persisted prefix limit 512; observed 3694 bytes')",
+              "observed_utf8_bytes": 80,
+              "truncated": false
+            }
+          ],
+          "cleanup": {
+            "pid": 7,
+            "returncode": -15,
+            "returncode_before_cleanup": null,
+            "termination_requested": true,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+            "native_exit_expected": true
+          },
+          "run_completed": false
+        },
+        "test_real_http_prefix_cutoff_m0/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "8d0aa9bf5cfc506e19a8b9521ca6664228b2a60910f43a80291b50d6912161dc",
+            "status": 400,
+            "actual_output": 0,
+            "accepted_contract": false,
+            "http_body_complete": true,
+            "http_framing": "content-length",
+            "remaining_content_length": 0,
+            "raw_sha256": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3",
+            "raw_bytes": 65536,
+            "observed_bytes": 81920,
+            "observed_sha256": "ca0324172b8271017224152bc9052447e0d087a485eb8a68b3f945b9d0921bdf",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": true,
+            "output_limit": true,
+            "error": "OutputLimit('native-smoke-zero.raw: HTTP evidence prefix cap')",
+            "error_info": {
+              "repr": "OutputLimit('native-smoke-zero.raw: HTTP evidence prefix cap')",
+              "observed_utf8_bytes": 62,
+              "truncated": false
+            }
+          }
+        ],
+        "test_partial_http_evidence_nev0/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 1,
+            "requested_output": 0,
+            "request_sha256": "8d0aa9bf5cfc506e19a8b9521ca6664228b2a60910f43a80291b50d6912161dc",
+            "status": null,
+            "actual_output": null,
+            "accepted_contract": false,
+            "raw_sha256": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3",
+            "raw_bytes": 65536,
+            "observed_bytes": 71680,
+            "observed_sha256": "db3a0ef7936ee30e337636d7cf96016628424bc03923a4a79337e981734aa1f3",
+            "observed_count_is_lower_bound": true,
+            "retained_prefix_only": true,
+            "output_limit": true,
+            "error": "TimeoutError('primary partial-body timeout')",
+            "error_info": {
+              "repr": "TimeoutError('primary partial-body timeout')",
+              "observed_utf8_bytes": 44,
+              "truncated": false
+            }
+          }
+        ],
+        "test_native_smoke_retains_bad_0/native-smoke.json": [
+          {
+            "case": "zero",
+            "input_tokens": 2,
+            "requested_output": 0,
+            "request_sha256": "cf811581398b411d81b54d86596d90bcf1382b31b4e8d3efb49a7f4dd088c91a",
+            "status": 200,
+            "actual_output": null,
+            "accepted_contract": false,
+            "http_body_complete": true,
+            "http_framing": "content-length",
+            "remaining_content_length": 0,
+            "raw_sha256": "c4272a61f06a61f0460dda020a24fbbab080c76e54748211bd6e69241a21f3c1",
+            "raw_bytes": 18,
+            "observed_bytes": 18,
+            "observed_sha256": "c4272a61f06a61f0460dda020a24fbbab080c76e54748211bd6e69241a21f3c1",
+            "observed_count_is_lower_bound": false,
+            "retained_prefix_only": false,
+            "error": "JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')",
+            "error_info": {
+              "repr": "JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')",
+              "observed_utf8_bytes": 94,
+              "truncated": false
+            }
+          }
+        ],
+        "test_final_child_output_cutoff0/terminal.json": {
+          "aborted": true,
+          "baseline_accepted": false,
+          "primary_failure": {
+            "repr": "OutputLimit('evidence at file cap: server.log')",
+            "observed_utf8_bytes": 47,
+            "truncated": false
+          },
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "listener_closed": true,
+            "forced_kill": false,
+            "reaped": true,
+            "native_exit_expected": false
+          },
+          "run_completed": false
+        },
+        "test_full_controller_reuses_pr0/out/terminal.json": {
+          "aborted": false,
+          "baseline_accepted": false,
+          "primary_failure": null,
+          "planned_trials": [
+            {
+              "identity": "azure-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "azure-evaluation-11",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-calibration-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-0",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-1",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-2",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-3",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-4",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-5",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-6",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-7",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-8",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-9",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-10",
+              "status": "not_run"
+            },
+            {
+              "identity": "burst-evaluation-11",
+              "status": "not_run"
+            }
+          ],
+          "stage": "after_cleanup",
+          "report_errors": [],
+          "cleanup": {
+            "pid": 10,
+            "returncode": -15,
+            "returncode_before_cleanup": null,
+            "termination_requested": true,
+            "forced_kill": false,
+            "reaped": true,
+            "listener_closed": true,
+            "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+            "native_exit_expected": true
+          },
+          "run_completed": true
+        }
+      }
+    }
+  ]
+}

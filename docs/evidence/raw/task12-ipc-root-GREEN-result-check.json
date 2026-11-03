@@ -1,0 +1,36 @@
+{
+  "time_utc": "2026-10-25T19:32:27.853205+00:00",
+  "original_exec_session_id": 18747,
+  "sandbox_PID_warning": "CPU Popen4/pytest5 are sandbox PID namespace identities, not hostPID4/5; never signal or assert hostPID4/5",
+  "terminal0_82passed_pristine": true,
+  "ROOT_actual2precleanup_trees_contents_length_and_owners_verified": true,
+  "actual_socket_records": 2,
+  "regular_content_records": 16,
+  "source6SHA_match_tested": true,
+  "old12frozen_outputs_and_summary_authority_preserved": true,
+  "both_private_scratch_absent": true,
+  "all_43_samples_retained": true,
+  "resource_sample": {
+    "project_bytes": 13318255000,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 64194,
+    "combined_bytes": 10224425,
+    "nonpool_bytes": 13308094769,
+    "evidence_credit_bytes": 64194,
+    "projected_bytes": 13998030575,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "phase_retained_limit": 1000000,
+  "budget_reallocation_within_same_limit": {
+    "code_tests": 80000,
+    "workspace_reports_proposals": 80000,
+    "raw_CPU_future_candidate_metadata": 200000,
+    "single_required_code_review_package": 120000,
+    "ROOT_Git_increments": 520000
+  },
+  "GPU_authorized": false,
+  "Task12_or_Goal_completed": false
+}

@@ -1,0 +1,11 @@
+Initial read-only preflight rejected inherited HF settings before installation/state changes:
+command: .venv/bin/python scripts/resource_preflight.py --planned-project-bytes 100000000 --download-bytes 0 --checkpoints 0 --service-memory-bytes 0
+exit: 1
+project_bytes: 10376452525
+free_bytes: 359220535296
+model_cache: /home/postedism/data/models/huggingface
+errors:
+- model cache must be shared: /home/postedism/.cache/huggingface
+- HF_HUB_CACHE must use /home/postedism/.cache/huggingface/hub
+Corrected by explicit shared HF_HOME/HF_HUB_CACHE and unsetting deprecated variables;
+no download, installation, or shared model modification was needed.

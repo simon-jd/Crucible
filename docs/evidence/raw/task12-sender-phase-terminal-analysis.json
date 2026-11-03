@@ -1,0 +1,636 @@
+{
+  "authority_handle": 57453,
+  "authority_exit": 0,
+  "all16identities_match": {
+    "docs/evidence/raw/task12-sender-phase-driver.py": true,
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": true,
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2.py": true,
+    ".tmp-task12-sender-phase-go-loan/replay-phase": true,
+    ".cache/task12-baseline/bin/replay": true,
+    "serving/baseline/traces/burst-calibration.csv": true,
+    "docs/evidence/raw/task12-model-token-allowlist.json": true,
+    "serving/replay/schedule.go": true,
+    "serving/replay/transport.go": true,
+    "serving/replay/diagnostic.go": true,
+    "serving/replay/diagnostic_test.go": true,
+    "serving/replay/cmd/replay/main.go": true,
+    "serving/replay/cmd/replay/diagnostic_test.go": true,
+    "/usr/bin/timeout": true,
+    "/usr/bin/prlimit": true,
+    ".venv/bin/python": true
+  },
+  "fixture_terminal": {
+    "screen_completed": true,
+    "failure": null,
+    "result": {
+      "sender_valid": false,
+      "late": [
+        {
+          "index": 1,
+          "lag_ms": 6.360351999999693
+        },
+        {
+          "index": 2,
+          "lag_ms": 22.146044000000984
+        }
+      ],
+      "records": 23,
+      "native_performance_accepted": false,
+      "coalesced_fixture": true
+    },
+    "cleanup": {
+      "child": {
+        "pid": 979304,
+        "starttime": 72033486,
+        "termination_requested": false,
+        "pre_cleanup_returncode": 1,
+        "returncode": 1,
+        "reaped": true,
+        "pid_absent": true
+      },
+      "fixture": {
+        "threads_alive": 0,
+        "connections": 13,
+        "listener_closed": true,
+        "port_listener_absent": true,
+        "errors": []
+      }
+    },
+    "elapsed": 59.03919397993013,
+    "native_performance_accepted": false
+  },
+  "phase_valid": true,
+  "sender_valid": false,
+  "phase_requests": [
+    {
+      "index": 0,
+      "connection": 1,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 0.306798,
+      "intervals": {
+        "no_timer_to_send_entry_ns": 17685,
+        "send_entry_to_get_conn_ns": 53504,
+        "get_conn_to_connect_start_ns": 38877,
+        "connect_start_to_connect_done_ns": 92230,
+        "connect_done_to_got_conn_ns": 12495,
+        "got_conn_to_first_write_ns": 49028,
+        "scheduled_to_no_timer_ns": 720
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 4096,
+          "duration_ns": 20491
+        },
+        {
+          "write": 2,
+          "length": 3017,
+          "duration_ns": 10436
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "connection": 2,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 6.360351999999693,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 184,
+        "timer_stopped_to_send_entry_ns": 34526,
+        "send_entry_to_get_conn_ns": 89520,
+        "get_conn_to_connect_start_ns": 43250,
+        "connect_start_to_connect_done_ns": 105047,
+        "connect_done_to_got_conn_ns": 15840,
+        "got_conn_to_first_write_ns": 68558,
+        "scheduled_to_post_select_ns": 5971081
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 307,
+          "duration_ns": 32346
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "connection": 3,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 22.146044000000984,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 782,
+        "timer_stopped_to_send_entry_ns": 81290,
+        "send_entry_to_get_conn_ns": 241234,
+        "get_conn_to_connect_start_ns": 159464,
+        "connect_start_to_connect_done_ns": 341002,
+        "connect_done_to_got_conn_ns": 74898,
+        "got_conn_to_first_write_ns": 106205,
+        "scheduled_to_post_select_ns": 21048895
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2809,
+          "duration_ns": 92274
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "connection": 4,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 1.2366649999967194,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 575,
+        "timer_stopped_to_send_entry_ns": 235862,
+        "send_entry_to_get_conn_ns": 191799,
+        "get_conn_to_connect_start_ns": 86735,
+        "connect_start_to_connect_done_ns": 295667,
+        "connect_done_to_got_conn_ns": 86120,
+        "got_conn_to_first_write_ns": 218753,
+        "scheduled_to_post_select_ns": 39502
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2837,
+          "duration_ns": 81652
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "connection": 5,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 1.9706940000032773,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 621,
+        "timer_stopped_to_send_entry_ns": 42706,
+        "send_entry_to_get_conn_ns": 152186,
+        "get_conn_to_connect_start_ns": 146847,
+        "connect_start_to_connect_done_ns": 314703,
+        "connect_done_to_got_conn_ns": 38855,
+        "got_conn_to_first_write_ns": 81775,
+        "scheduled_to_post_select_ns": 1104688
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2822,
+          "duration_ns": 88313
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "connection": 4,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999016378,
+      "lag_ms": 1.4373780000023544,
+      "intervals": {
+        "no_timer_to_send_entry_ns": 14561,
+        "send_entry_to_get_conn_ns": 128673,
+        "get_conn_to_got_conn_ns": 17045,
+        "got_conn_to_first_write_ns": 59348,
+        "scheduled_to_no_timer_ns": 1123452
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 876,
+          "duration_ns": 94299
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "connection": 6,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 1.364000000001397,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 793,
+        "timer_stopped_to_send_entry_ns": 67805,
+        "send_entry_to_get_conn_ns": 44183,
+        "get_conn_to_connect_start_ns": 28203,
+        "connect_start_to_connect_done_ns": 93939,
+        "connect_done_to_got_conn_ns": 18221,
+        "got_conn_to_first_write_ns": 34083,
+        "scheduled_to_post_select_ns": 1049752
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2829,
+          "duration_ns": 27021
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "connection": 7,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 2.0928060000005644,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 711,
+        "timer_stopped_to_send_entry_ns": 33867,
+        "send_entry_to_get_conn_ns": 132251,
+        "get_conn_to_connect_start_ns": 106140,
+        "connect_start_to_connect_done_ns": 372048,
+        "connect_done_to_got_conn_ns": 67486,
+        "got_conn_to_first_write_ns": 125468,
+        "scheduled_to_post_select_ns": 1100661
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2813,
+          "duration_ns": 154174
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "connection": 7,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 996900597,
+      "lag_ms": 0.5110570000033476,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 910,
+        "timer_stopped_to_send_entry_ns": 30027,
+        "send_entry_to_get_conn_ns": 121571,
+        "get_conn_to_got_conn_ns": 16159,
+        "got_conn_to_first_write_ns": 87261,
+        "scheduled_to_post_select_ns": 143987
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 3060,
+          "duration_ns": 111142
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "connection": 7,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999077720,
+      "lag_ms": 0.3785920000009355,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 604,
+        "timer_stopped_to_send_entry_ns": 18500,
+        "send_entry_to_get_conn_ns": 70653,
+        "get_conn_to_got_conn_ns": 8807,
+        "got_conn_to_first_write_ns": 34620,
+        "scheduled_to_post_select_ns": 187785
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 3072,
+          "duration_ns": 57623
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "connection": 8,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 0.2921550000028219,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 133,
+        "timer_stopped_to_send_entry_ns": 11590,
+        "send_entry_to_get_conn_ns": 40617,
+        "get_conn_to_connect_start_ns": 30622,
+        "connect_start_to_connect_done_ns": 109127,
+        "connect_done_to_got_conn_ns": 17288,
+        "got_conn_to_first_write_ns": 36229,
+        "scheduled_to_post_select_ns": 22221
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 3088,
+          "duration_ns": 24328
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "connection": 9,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 1.977950000000419,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 991,
+        "timer_stopped_to_send_entry_ns": 28366,
+        "send_entry_to_get_conn_ns": 112417,
+        "get_conn_to_connect_start_ns": 93557,
+        "connect_start_to_connect_done_ns": 315835,
+        "connect_done_to_got_conn_ns": 57246,
+        "got_conn_to_first_write_ns": 104575,
+        "scheduled_to_post_select_ns": 1144460
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 3093,
+          "duration_ns": 120503
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "connection": 9,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 998293242,
+      "lag_ms": 1.314672000000428,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 639,
+        "timer_stopped_to_send_entry_ns": 54511,
+        "send_entry_to_get_conn_ns": 121987,
+        "get_conn_to_got_conn_ns": 17407,
+        "got_conn_to_first_write_ns": 66319,
+        "scheduled_to_post_select_ns": 941926
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2574,
+          "duration_ns": 111883
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "connection": 9,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999236534,
+      "lag_ms": 1.4715690000011818,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 787,
+        "timer_stopped_to_send_entry_ns": 32286,
+        "send_entry_to_get_conn_ns": 126556,
+        "get_conn_to_got_conn_ns": 44528,
+        "got_conn_to_first_write_ns": 62435,
+        "scheduled_to_post_select_ns": 1100348
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2583,
+          "duration_ns": 104629
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "connection": 10,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 0.7295929999963846,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 416,
+        "timer_stopped_to_send_entry_ns": 21183,
+        "send_entry_to_get_conn_ns": 86564,
+        "get_conn_to_connect_start_ns": 102960,
+        "connect_start_to_connect_done_ns": 232248,
+        "connect_done_to_got_conn_ns": 26347,
+        "got_conn_to_first_write_ns": 89006,
+        "scheduled_to_post_select_ns": 107436
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2576,
+          "duration_ns": 63433
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "connection": 10,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999550203,
+      "lag_ms": 1.3422579999969457,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 428,
+        "timer_stopped_to_send_entry_ns": 24912,
+        "send_entry_to_get_conn_ns": 92516,
+        "get_conn_to_got_conn_ns": 12609,
+        "got_conn_to_first_write_ns": 45860,
+        "scheduled_to_post_select_ns": 1097801
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2571,
+          "duration_ns": 68132
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "connection": 11,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 1.2190869999976712,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 139,
+        "timer_stopped_to_send_entry_ns": 9992,
+        "send_entry_to_get_conn_ns": 40612,
+        "get_conn_to_connect_start_ns": 27109,
+        "connect_start_to_connect_done_ns": 97818,
+        "connect_done_to_got_conn_ns": 13768,
+        "got_conn_to_first_write_ns": 37975,
+        "scheduled_to_post_select_ns": 970895
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2322,
+          "duration_ns": 20779
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "connection": 11,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999514228,
+      "lag_ms": 1.1268189999973401,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 300,
+        "timer_stopped_to_send_entry_ns": 12300,
+        "send_entry_to_get_conn_ns": 41134,
+        "get_conn_to_got_conn_ns": 5708,
+        "got_conn_to_first_write_ns": 18006,
+        "scheduled_to_post_select_ns": 1030483
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2308,
+          "duration_ns": 18888
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "connection": 11,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999776560,
+      "lag_ms": 1.1814079999967362,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 244,
+        "timer_stopped_to_send_entry_ns": 12908,
+        "send_entry_to_get_conn_ns": 56499,
+        "get_conn_to_got_conn_ns": 7068,
+        "got_conn_to_first_write_ns": 23338,
+        "scheduled_to_post_select_ns": 1042382
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2302,
+          "duration_ns": 38969
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "connection": 11,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 999692821,
+      "lag_ms": 1.1804459999984829,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 157,
+        "timer_stopped_to_send_entry_ns": 14163,
+        "send_entry_to_get_conn_ns": 62082,
+        "get_conn_to_got_conn_ns": 5940,
+        "got_conn_to_first_write_ns": 24866,
+        "scheduled_to_post_select_ns": 1042141
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2297,
+          "duration_ns": 31097
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "connection": 12,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 2.047315999996499,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 809,
+        "timer_stopped_to_send_entry_ns": 32571,
+        "send_entry_to_get_conn_ns": 125485,
+        "get_conn_to_connect_start_ns": 107890,
+        "connect_start_to_connect_done_ns": 369998,
+        "connect_done_to_got_conn_ns": 65427,
+        "got_conn_to_first_write_ns": 141253,
+        "scheduled_to_post_select_ns": 1098731
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2070,
+          "duration_ns": 105152
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "connection": 12,
+      "reused": true,
+      "was_idle": true,
+      "idle_ns": 996826359,
+      "lag_ms": 0.28689999999915017,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 507,
+        "timer_stopped_to_send_entry_ns": 23052,
+        "send_entry_to_get_conn_ns": 87642,
+        "get_conn_to_got_conn_ns": 12014,
+        "got_conn_to_first_write_ns": 39765,
+        "scheduled_to_post_select_ns": 56507
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2070,
+          "duration_ns": 67413
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "connection": 13,
+      "reused": false,
+      "was_idle": false,
+      "idle_ns": 0,
+      "lag_ms": 1.694560999996611,
+      "intervals": {
+        "post_select_to_timer_stopped_ns": 481,
+        "timer_stopped_to_send_entry_ns": 57742,
+        "send_entry_to_get_conn_ns": 101432,
+        "get_conn_to_connect_start_ns": 78585,
+        "connect_start_to_connect_done_ns": 231597,
+        "connect_done_to_got_conn_ns": 30346,
+        "got_conn_to_first_write_ns": 67187,
+        "scheduled_to_post_select_ns": 1074330
+      },
+      "writes": [
+        {
+          "write": 1,
+          "length": 2070,
+          "duration_ns": 52861
+        }
+      ]
+    }
+  ],
+  "max_rss": 60432384,
+  "samples": 582,
+  "last_accounting": {
+    "canonical_bytes": 13540954309,
+    "owned_bytes": 242783895,
+    "nonloan_bytes": 13298170414,
+    "projected_bytes": 13988170414,
+    "free_bytes": 265419980800,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota",
+    "scan_errors": []
+  },
+  "raw_output_bytes": 172169
+}

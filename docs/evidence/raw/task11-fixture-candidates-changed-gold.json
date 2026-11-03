@@ -1,0 +1,14 @@
+[
+  {
+    "id": "a",
+    "question": "Synthetic question a",
+    "source": "fixture/test@v1",
+    "answer": "tampered fixture gold"
+  },
+  {
+    "id": "b",
+    "question": "Synthetic question b",
+    "source": "fixture/test@v1",
+    "answer": "fixture b"
+  }
+]

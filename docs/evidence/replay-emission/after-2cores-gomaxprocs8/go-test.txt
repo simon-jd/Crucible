@@ -1,0 +1,103 @@
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=2/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=3/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=7/400
+    replay_test.go:46: sender-invalid: 7/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=5/400
+    replay_test.go:46: sender-invalid: 5/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=3/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=5/400
+    replay_test.go:46: sender-invalid: 5/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=2/400
+--- PASS: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=3/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=3/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=3/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=2/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=9/400
+    replay_test.go:46: sender-invalid: 9/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=10/400
+    replay_test.go:46: sender-invalid: 10/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=14/400
+    replay_test.go:46: sender-invalid: 14/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=11/400
+    replay_test.go:46: sender-invalid: 11/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=10/400
+    replay_test.go:46: sender-invalid: 10/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=6/400
+    replay_test.go:46: sender-invalid: 6/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=10/400
+    replay_test.go:46: sender-invalid: 10/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=10/400
+    replay_test.go:46: sender-invalid: 10/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=5/400
+    replay_test.go:46: sender-invalid: 5/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+FAIL

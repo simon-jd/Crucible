@@ -1,0 +1,167 @@
+{
+  "accepted": true,
+  "attempts": [
+    {
+      "status": 400,
+      "started_seconds": 1.1277035810053349e-05,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.07327106804586947
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.12333491304889321,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.1716101539786905
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.2216755929403007,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.2801989240106195
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.33039093704428524,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.38854841294232756
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.4387111079413444,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.49225932196713984
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.5424136680085212,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.5947051920229569
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.6448175980476663,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.7015751419821754
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.7516375209670514,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.801504892995581
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.851570421946235,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.9058017550269142
+    },
+    {
+      "status": 400,
+      "started_seconds": 0.9558647359954193,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.0082307549891993
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.0584040329558775,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.1109416269464418
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.1611101740272716,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.2167926169931889
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.266856255941093,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.3181462299544364
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.3682342099491507,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.4211454569594935
+    },
+    {
+      "status": 400,
+      "started_seconds": 1.4712373949587345,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.5250224709743634
+    },
+    {
+      "status": 200,
+      "started_seconds": 1.5750862199347466,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 1.6274127679644153
+    }
+  ],
+  "deadline_seconds": 30,
+  "elapsed_seconds": 1.627415116992779
+}

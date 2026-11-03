@@ -1,0 +1,90 @@
+{
+ "pass_at_1": {
+  "base (grpo_run before)": {
+   "gsm8k": [
+    0.42625,
+    0.0281,
+    50
+   ],
+   "math500": [
+    0.2875,
+    0.0361,
+    162
+   ]
+  },
+  "base (eval_checkpoint)": {
+   "gsm8k": [
+    0.42625,
+    0.0281,
+    50
+   ],
+   "math500": [
+    0.2875,
+    0.0361,
+    162
+   ]
+  },
+  "grpo_run after": {
+   "gsm8k": [
+    0.4475,
+    0.0297,
+    9
+   ],
+   "math500": [
+    0.295,
+    0.0388,
+    96
+   ]
+  },
+  "verl after": {
+   "gsm8k": [
+    0.44,
+    0.0297,
+    13
+   ],
+   "math500": [
+    0.34,
+    0.0423,
+    121
+   ]
+  }
+ },
+ "paired_diff_pp": {
+  "verl after - base (grpo_run before)": {
+   "gsm8k": {
+    "diff_pp": 1.38,
+    "se_pp": 2.39,
+    "problems": 200
+   },
+   "math500": {
+    "diff_pp": 5.25,
+    "se_pp": 2.57,
+    "problems": 100
+   }
+  },
+  "grpo_run after - base (grpo_run before)": {
+   "gsm8k": {
+    "diff_pp": 2.12,
+    "se_pp": 2.32,
+    "problems": 200
+   },
+   "math500": {
+    "diff_pp": 0.75,
+    "se_pp": 3.05,
+    "problems": 100
+   }
+  },
+  "verl after - grpo_run after": {
+   "gsm8k": {
+    "diff_pp": -0.75,
+    "se_pp": 2.41,
+    "problems": 200
+   },
+   "math500": {
+    "diff_pp": 4.5,
+    "se_pp": 2.47,
+    "problems": 100
+   }
+  }
+ }
+}

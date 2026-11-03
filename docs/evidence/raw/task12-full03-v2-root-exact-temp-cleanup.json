@@ -1,0 +1,155 @@
+{
+  "time_utc": "2026-10-25T18:47:24.197379+00:00",
+  "proof": "task12-full03-v2-root-postflight-before-cleanup.json",
+  "entire28_entry_inventory_verified_before_delete": true,
+  "removed_exact_own12_entries": [
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/flashinfer/.cache",
+      "kind": "dir",
+      "dev": 66307,
+      "ino": 55717981,
+      "mode": 16893,
+      "bytes": 4096,
+      "mtime_ns": 1792953897828397285,
+      "nlink": 3
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/flashinfer/.cache/flashinfer",
+      "kind": "dir",
+      "dev": 66307,
+      "ino": 55717984,
+      "mode": 16893,
+      "bytes": 4096,
+      "mtime_ns": 1792953897828397285,
+      "nlink": 3
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/flashinfer/.cache/flashinfer/0.5.0",
+      "kind": "dir",
+      "dev": 66307,
+      "ino": 55717991,
+      "mode": 16893,
+      "bytes": 4096,
+      "mtime_ns": 1792953897828397285,
+      "nlink": 3
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/flashinfer/.cache/flashinfer/0.5.0/89",
+      "kind": "dir",
+      "dev": 66307,
+      "ino": 55718032,
+      "mode": 16893,
+      "bytes": 4096,
+      "mtime_ns": 1792953897828397285,
+      "nlink": 2
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/flashinfer/.cache/flashinfer/0.5.0/89/flashinfer_jit.log",
+      "kind": "file",
+      "dev": 66307,
+      "ino": 55718069,
+      "mode": 33204,
+      "bytes": 0,
+      "mtime_ns": 1792953897828397285,
+      "nlink": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmp48m9d3ci",
+      "kind": "socket",
+      "dev": 66307,
+      "ino": 55492552,
+      "mode": 49661,
+      "bytes": 0,
+      "mtime_ns": 1792953898508392856,
+      "nlink": 1
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmpfhjr_8f9",
+      "kind": "dir",
+      "dev": 66307,
+      "ino": 55717917,
+      "mode": 16832,
+      "bytes": 4096,
+      "mtime_ns": 1792953896218407771,
+      "nlink": 2
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmplse5kl1n",
+      "kind": "file",
+      "dev": 66307,
+      "ino": 55492555,
+      "mode": 33152,
+      "bytes": 0,
+      "mtime_ns": 1792953898310394146,
+      "nlink": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmpmoeqng5j",
+      "kind": "file",
+      "dev": 66307,
+      "ino": 55492556,
+      "mode": 33152,
+      "bytes": 0,
+      "mtime_ns": 1792953898310394146,
+      "nlink": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmppervgsny",
+      "kind": "file",
+      "dev": 66307,
+      "ino": 55492554,
+      "mode": 33152,
+      "bytes": 0,
+      "mtime_ns": 1792953898310394146,
+      "nlink": 1,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmps86njvgs",
+      "kind": "socket",
+      "dev": 66307,
+      "ino": 55492553,
+      "mode": 49661,
+      "bytes": 0,
+      "mtime_ns": 1792953898508392856,
+      "nlink": 1
+    },
+    {
+      "path": ".tmp-task12-native-03-pool/native-cache/tmp/tmpfhjr_8f9/_remote_module_non_scriptable.py",
+      "kind": "file",
+      "dev": 66307,
+      "ino": 55717971,
+      "mode": 33204,
+      "bytes": 2355,
+      "mtime_ns": 1792953896219407765,
+      "nlink": 1,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    }
+  ],
+  "file_bytes_preserved": 2355,
+  "socket_count": 2,
+  "directory_count": 9,
+  "all15_frozen_directory_identities_retained_and14leaves_empty": true,
+  "original_client_retained_and_SHA_verified": true,
+  "resource_sample_after_cleanup": {
+    "project_bytes": 13317942708,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 64194,
+    "combined_bytes": 10224425,
+    "nonpool_bytes": 13307782477,
+    "evidence_credit_bytes": 64194,
+    "projected_bytes": 13997718283,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "shared_HF_bytes": 23815435170,
+  "free_bytes": 263480434688,
+  "automatic_retry": false,
+  "old_full02_untouched": true,
+  "wholeGoal_complete": false
+}

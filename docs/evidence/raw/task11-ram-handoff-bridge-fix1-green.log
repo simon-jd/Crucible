@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 3 items
+
+rl/sync/tests/test_phase_bridge.py::test_known_noop_does_not_spawn_or_retire PASSED
+rl/sync/tests/test_phase_bridge.py::test_mixed_stale_accounting_owned_by_learner_and_submission_retry PASSED
+rl/sync/tests/test_phase_bridge.py::test_invalid_headers_cannot_partially_account_stale_drops PASSED
+
+============================== 3 passed in 12.47s ==============================

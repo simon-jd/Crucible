@@ -1,0 +1,94 @@
+{
+  "time_utc": "2026-10-25T10:05:42.078186+00:00",
+  "scope": "independent parse of original once-run phase/raw/RSS records; no tests or repeated execution",
+  "records": 23,
+  "all_ok": true,
+  "sender_valid": false,
+  "diagnostic_valid": true,
+  "late": [
+    {
+      "index": 1,
+      "lag_ns": 6360352,
+      "scheduled_to_post_select_ns": 5971081,
+      "after_post_select_to_complete_write_ns": 389271,
+      "timer_stop_ns": 184,
+      "timer_stop_to_send_entry_ns": 34526,
+      "connect_ns": 105047,
+      "underlying_write_ns": 32346
+    },
+    {
+      "index": 2,
+      "lag_ns": 22146044,
+      "scheduled_to_post_select_ns": 21048895,
+      "after_post_select_to_complete_write_ns": 1097149,
+      "timer_stop_ns": 782,
+      "timer_stop_to_send_entry_ns": 81290,
+      "connect_ns": 341002,
+      "underlying_write_ns": 92274
+    }
+  ],
+  "rss_samples": 582,
+  "max_sampled_rss": 60432384,
+  "elapsed_seconds": 59.03919397993013,
+  "fixture_cleanup": {
+    "child": {
+      "pid": 979304,
+      "starttime": 72033486,
+      "termination_requested": false,
+      "pre_cleanup_returncode": 1,
+      "returncode": 1,
+      "reaped": true,
+      "pid_absent": true
+    },
+    "fixture": {
+      "threads_alive": 0,
+      "connections": 13,
+      "listener_closed": true,
+      "port_listener_absent": true,
+      "errors": []
+    }
+  },
+  "files": {
+    "fixture.jsonl": {
+      "bytes": 7078,
+      "sha256": "c7ec058e7e93c166828d21e9be90bb6f57085c1ad9ab41c7b6836a84258246b9"
+    },
+    "stderr.log": {
+      "bytes": 44,
+      "sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07"
+    },
+    "terminal.json": {
+      "bytes": 569,
+      "sha256": "2b29ab48de22799b7e85e0f821a029d7c5301f0a527a1eca1a839c82c16769b9"
+    },
+    "provenance.json": {
+      "bytes": 5184,
+      "sha256": "d53977dd7e961f47073ec140afc83d48e5607308efe6a67c6f77761a421b4d8d"
+    },
+    "rss.jsonl": {
+      "bytes": 91005,
+      "sha256": "483e1fb4651b901af6c7b2e0b4be882327fce48104e0c85065ccb4767017383b"
+    },
+    "phase-terminal.json": {
+      "bytes": 10648,
+      "sha256": "78d964978b3d8a4519c89a2cb7e95e6cb64d2d7d38b488c94124166c2a492479"
+    },
+    "stop.json": {
+      "bytes": 93,
+      "sha256": "f9146fe342a9acfa0431da16d02e0a60c5ebe47df21d84d103a9f7bb8ac19030"
+    },
+    "launch.json": {
+      "bytes": 652,
+      "sha256": "7d02d9c281585ea1fcbf33372cbeb1469ca31eb9dc0e00c4fa2958cb6edd3e01"
+    },
+    "stdout.json": {
+      "bytes": 43462,
+      "sha256": "b659371459d94794bab592d3defbb2d4af85e8cc75f8608f9fd01233f9d02929"
+    },
+    "phases.json": {
+      "bytes": 13434,
+      "sha256": "0f53b2bec7429437f50c251e42d402c9396b69997413b3a659d8c7d3b5310be5"
+    }
+  },
+  "interpretation": "same-run majority of late-index2 delay already accumulated before actual post-select observation; later phases measured separately; no historical internal-cause or kernel attribution; no native performance acceptance"
+}

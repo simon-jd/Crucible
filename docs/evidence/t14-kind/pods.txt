@@ -1,0 +1,15 @@
+NAMESPACE            NAME                                                 READY   STATUS    RESTARTS      AGE   IP           NODE                         NOMINATED NODE   READINESS GATES
+crucible             adapter-79dbc4f6d-wzzgm                              1/1     Running   0             72s   10.244.0.5   crucible-t14-control-plane   <none>           <none>
+crucible             fake-0                                               1/1     Running   0             72s   10.244.0.6   crucible-t14-control-plane   <none>           <none>
+crucible             router-946f487c6-z5frn                               1/1     Running   0             72s   10.244.0.7   crucible-t14-control-plane   <none>           <none>
+kube-system          coredns-66bc5c9577-prgsn                             0/1     Running   0             85s   10.244.0.4   crucible-t14-control-plane   <none>           <none>
+kube-system          coredns-66bc5c9577-zchjd                             0/1     Running   0             85s   10.244.0.3   crucible-t14-control-plane   <none>           <none>
+kube-system          etcd-crucible-t14-control-plane                      1/1     Running   0             93s   172.20.0.3   crucible-t14-control-plane   <none>           <none>
+kube-system          kindnet-xh5mn                                        1/1     Running   0             86s   172.20.0.3   crucible-t14-control-plane   <none>           <none>
+kube-system          kube-apiserver-crucible-t14-control-plane            1/1     Running   0             93s   172.20.0.3   crucible-t14-control-plane   <none>           <none>
+kube-system          kube-controller-manager-crucible-t14-control-plane   1/1     Running   0             93s   172.20.0.3   crucible-t14-control-plane   <none>           <none>
+kube-system          kube-proxy-vmsmz                                     0/1     Error     4 (47s ago)   86s   172.20.0.3   crucible-t14-control-plane   <none>           <none>
+kube-system          kube-scheduler-crucible-t14-control-plane            1/1     Running   0             93s   172.20.0.3   crucible-t14-control-plane   <none>           <none>
+local-path-storage   local-path-provisioner-57f858859-wbz8t               1/1     Running   2 (14s ago)   85s   10.244.0.2   crucible-t14-control-plane   <none>           <none>
+2026-10-27T20:20:15-07:00
+ 20:20:15 up 11 days,  1:22,  2 users,  load average: 5.27, 6.38, 5.41

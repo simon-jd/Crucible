@@ -1,0 +1,106 @@
+{
+  "time_utc": "2026-10-25T09:58:06.991173+00:00",
+  "scope": "independent read-only source/build/evidence check; no repeated tests, no diagnostic or GPU launch",
+  "historical_unchanged_counts": {
+    "sources": 173,
+    "artifacts": 58,
+    "executables": 4
+  },
+  "authorized_source_changes": {
+    "serving/replay/schedule.go": {
+      "old": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "new": "7d99d4b619dd7aa48186265bdfec7fb55910a8985d411179cfd3ad6e4d0a71da"
+    },
+    "serving/replay/transport.go": {
+      "old": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "new": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "old": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "new": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    }
+  },
+  "coordinator_files_unchanged": 100,
+  "stageb_fixture_hashes": {
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": "ad7f88b786fd0bc8e938855f7ab867f6e96ef0e6393e377162396290f576ea24",
+    "docs/evidence/raw/task12-sender-cpu-01-fixture-test.py": "6b1397ea53a7d20cc0bd6a68cb26f5f7fa31e58c1f4d34d4caef10032f7d5b02"
+  },
+  "monitored_commands": {
+    "smoke": {
+      "exit_code": 0,
+      "abort": null,
+      "scan_errors": [],
+      "max_owned_sample": 0,
+      "max_rss_sample": 1466368,
+      "receipt_sha256": "ffd46976cf0b848fabe5cab1b3568d3b60bd937254bd6eb4564cdd939174febb"
+    },
+    "red-cli": {
+      "exit_code": -15,
+      "abort": "RuntimeError: disk threshold exceeded",
+      "scan_errors": [],
+      "max_owned_sample": 8337419,
+      "max_rss_sample": 152510464,
+      "receipt_sha256": "cd02471c314655dcc368a175b169670b9b188a0b628a76b03c4c9fda61794f09"
+    },
+    "smoke-v2": {
+      "exit_code": 0,
+      "abort": null,
+      "scan_errors": [],
+      "max_owned_sample": 0,
+      "max_rss_sample": 0,
+      "receipt_sha256": "ca60abfd46cf6b1b6e9474cca571eee51793b6f30801e7e608fb0cd37cea68f9"
+    },
+    "red-cli-v2": {
+      "exit_code": 1,
+      "abort": null,
+      "scan_errors": [],
+      "max_owned_sample": 238656693,
+      "max_rss_sample": 149422080,
+      "receipt_sha256": "eebfd86232c1cde96091f96007e9bf41516da9d5ed8d83643bf0e4b1e08a6a03"
+    },
+    "focused-v2": {
+      "exit_code": 1,
+      "abort": null,
+      "scan_errors": [],
+      "max_owned_sample": 125192198,
+      "max_rss_sample": 2760704,
+      "receipt_sha256": "a01db12829a263fcc01b66c6ce7243356c92725293bb04af193278b5c2c56fef"
+    },
+    "focused-replay-v3": {
+      "exit_code": 0,
+      "abort": null,
+      "scan_errors": [],
+      "max_owned_sample": 138524791,
+      "max_rss_sample": 97333248,
+      "receipt_sha256": "0edc234298a5fc173eab0eb5c707b77a22c52f72a7bf4078f424aa6ef2d718cf"
+    },
+    "race-v2": {
+      "exit_code": 0,
+      "abort": null,
+      "scan_errors": [
+        {
+          "scan": "owned",
+          "attempt": 0,
+          "error": "[Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/tmp/go-build3487930337/b211'"
+        }
+      ],
+      "max_owned_sample": 381837476,
+      "max_rss_sample": 246538240,
+      "receipt_sha256": "b1edefdf01dc8087a7b11d41eb4a0a921ee880073a5b25f23ff67f6c529efe4d"
+    },
+    "build-v2": {
+      "exit_code": 0,
+      "abort": null,
+      "scan_errors": [],
+      "max_owned_sample": 232489395,
+      "max_rss_sample": 3084288,
+      "receipt_sha256": "b86d3c6d523d254c3799a2ee51ad9f4cbcc7589cb06fe486506eb761edd91f7d"
+    }
+  },
+  "binary": {
+    "path": ".tmp-task12-sender-phase-go-loan/replay-phase",
+    "bytes": 10154096,
+    "sha256": "82befd82d993b6c39527681f1a34bc5c5d4e8d21bfffca56449473ea0790ae15"
+  },
+  "finding": "new snapshot optional hooks and bounded monitor compile/test phases passed after retained accounting abort and legacy send signature fix; full Task12 stays open; race recovered one permitted owned ENOENT; no accepted timing/performance claim"
+}

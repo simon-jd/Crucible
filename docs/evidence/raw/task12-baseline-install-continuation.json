@@ -1,0 +1,1276 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "sources": {
+    "serving/baseline/prepare_runtime.py": "2f7f6c6d65f9190aabb1c9cb76c5998c482aed142108d65e56655291111963bf",
+    "scripts/resource_preflight.py": "89deb73ca9915555f2efcabd5ede65bc36347fb729c666c64f8efc8533ec1d23"
+  },
+  "uv_sha256": "abdc39eab8b4ad341dca91f3823a23a343fae94bdb22ebdd9e91694415206f2f",
+  "python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+  "project_initial": 12418492109,
+  "wheels": [
+    {
+      "name": "sgl-kernel",
+      "wheel_sha256": "3a81ecd6398ec0878f0992bbc7fe9434627cd93d8240808d396c2385f8021c8f",
+      "record": "sgl_kernel-0.3.16.post5.dist-info/RECORD",
+      "record_sha256": "90662b973da476390bdc6a11d820a5851d4e7f52b27de649e37a8380de00bb21",
+      "record_validation": {
+        "hashed_files": 992,
+        "hashed_bytes": 1615587764,
+        "unhashed_files": [
+          "sgl_kernel-0.3.16.post5.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "flashinfer-cubin",
+      "wheel_sha256": "f8973487265608ffb05e7a496374dc96544933d44731632b0da2f6ff5376f597",
+      "record": "flashinfer_cubin-0.5.0.dist-info/RECORD",
+      "record_sha256": "34fafe8a3e83484bff57caa30cce2facfabb82f3f102dd5508435a547fa75152",
+      "record_validation": {
+        "hashed_files": 6943,
+        "hashed_bytes": 397855846,
+        "unhashed_files": [
+          "flashinfer_cubin-0.5.0.dist-info/RECORD"
+        ]
+      },
+      "recovered_without_reinstall": true
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "target_unique_bytes": 2176291045,
+      "download": {
+        "bytes": 62230361,
+        "sha256": "d7ddc9c1f5bb803718d736c907fac857fc606f1fce630c0b1d741935a72723b9",
+        "seconds": 1.988059589988552
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-02/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 252ms\nInstalled 1 package in 3ms\n + nvidia-cutlass-dsl==4.2.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-02/nvidia_cutlass_dsl-4.2.1-cp312-cp312-manylinux_2_28_x86_64.whl)\n",
+        "project_before": 12480726244,
+        "project_after": 12641746911,
+        "hardlinks": {
+          "linked_payload_bytes": 154251496,
+          "files": [
+            {
+              "path": "nvidia_cutlass_dsl/lib/libmlir_c_runner_utils.so",
+              "device": 66307,
+              "inode": 56266100,
+              "links": 2,
+              "bytes": 2135672
+            },
+            {
+              "path": "nvidia_cutlass_dsl/lib/libmlir_float16_utils.so",
+              "device": 66307,
+              "inode": 56266102,
+              "links": 2,
+              "bytes": 9055624
+            },
+            {
+              "path": "nvidia_cutlass_dsl/lib/libmlir_runner_utils.so",
+              "device": 66307,
+              "inode": 56266103,
+              "links": 2,
+              "bytes": 1080088
+            },
+            {
+              "path": "nvidia_cutlass_dsl/python_packages/cutlass/_mlir/_mlir_libs/_mlir.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56266118,
+              "links": 2,
+              "bytes": 1197416
+            },
+            {
+              "path": "nvidia_cutlass_dsl/python_packages/cutlass/_mlir/_mlir_libs/libCutlassIRPythonCAPI.so",
+              "device": 66307,
+              "inode": 56266126,
+              "links": 2,
+              "bytes": 140782696
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 150,
+        "hashed_bytes": 160981239,
+        "unhashed_files": [
+          "nvidia_cutlass_dsl-4.2.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "0f548b1ceb93b56493ce90eb1d7d0ad4d2237f4270a5c880f4125211875e73d6",
+      "project_after_stage_cleanup": 12579495620
+    },
+    {
+      "name": "pyarrow",
+      "target_unique_bytes": 2317774991,
+      "download": {
+        "bytes": 42829529,
+        "sha256": "b7ae0bbdc8c6674259b25bef5d2a1d6af5d39d7200c819cf99e07f7dfef1c51e",
+        "seconds": 0.9598419640678912
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-03/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 188ms\nInstalled 1 package in 7ms\n + pyarrow==21.0.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-03/pyarrow-21.0.0-cp312-cp312-manylinux_2_28_x86_64.whl)\n",
+        "project_before": 12622328620,
+        "project_after": 12763885672,
+        "hardlinks": {
+          "linked_payload_bytes": 126864088,
+          "files": [
+            {
+              "path": "pyarrow/_compute.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56266166,
+              "links": 2,
+              "bytes": 1461352
+            },
+            {
+              "path": "pyarrow/_dataset.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56266212,
+              "links": 2,
+              "bytes": 1062952
+            },
+            {
+              "path": "pyarrow/_flight.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56266272,
+              "links": 2,
+              "bytes": 1294488
+            },
+            {
+              "path": "pyarrow/lib.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56266358,
+              "links": 2,
+              "bytes": 4902376
+            },
+            {
+              "path": "pyarrow/libarrow.so.2100",
+              "device": 66307,
+              "inode": 56266363,
+              "links": 2,
+              "bytes": 48850848
+            },
+            {
+              "path": "pyarrow/libarrow_acero.so.2100",
+              "device": 66307,
+              "inode": 56266364,
+              "links": 2,
+              "bytes": 2112288
+            },
+            {
+              "path": "pyarrow/libarrow_compute.so.2100",
+              "device": 66307,
+              "inode": 56266365,
+              "links": 2,
+              "bytes": 19116528
+            },
+            {
+              "path": "pyarrow/libarrow_dataset.so.2100",
+              "device": 66307,
+              "inode": 56266366,
+              "links": 2,
+              "bytes": 2776104
+            },
+            {
+              "path": "pyarrow/libarrow_flight.so.2100",
+              "device": 66307,
+              "inode": 56266367,
+              "links": 2,
+              "bytes": 20280264
+            },
+            {
+              "path": "pyarrow/libarrow_python.so",
+              "device": 66307,
+              "inode": 56266368,
+              "links": 2,
+              "bytes": 2734472
+            },
+            {
+              "path": "pyarrow/libarrow_python.so.2100",
+              "device": 66307,
+              "inode": 56266369,
+              "links": 2,
+              "bytes": 2734472
+            },
+            {
+              "path": "pyarrow/libarrow_python.so.2100.0.0",
+              "device": 66307,
+              "inode": 56266370,
+              "links": 2,
+              "bytes": 2734472
+            },
+            {
+              "path": "pyarrow/libarrow_substrait.so.2100",
+              "device": 66307,
+              "inode": 56266377,
+              "links": 2,
+              "bytes": 5347160
+            },
+            {
+              "path": "pyarrow/libparquet.so.2100",
+              "device": 66307,
+              "inode": 56266378,
+              "links": 2,
+              "bytes": 11456312
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 748,
+        "hashed_bytes": 141413144,
+        "unhashed_files": [
+          "pyarrow-21.0.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "583dca8bdb7c2c1573911022569e6afc90c427cefd314bcd5a88d64d6404e6b9",
+      "project_after_stage_cleanup": 12720982679
+    },
+    {
+      "name": "decord2",
+      "target_unique_bytes": 2393432499,
+      "download": {
+        "bytes": 26627613,
+        "sha256": "8444c97945a823844fc138d54a1db8377e258db1f887e40ea68c58dc6debb377",
+        "seconds": 0.5940931879449636
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-04/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 112ms\nInstalled 1 package in 2ms\n + decord2==3.4.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-04/decord2-3.4.0-cp312-cp312-manylinux_2_28_x86_64.whl)\n",
+        "project_before": 12747615816,
+        "project_after": 12823282007,
+        "hardlinks": {
+          "linked_payload_bytes": 70282901,
+          "files": [
+            {
+              "path": "decord2.libs/libSvtAv1Enc-9393c086.so.4.1.0",
+              "device": 66307,
+              "inode": 56267043,
+              "links": 2,
+              "bytes": 7061777
+            },
+            {
+              "path": "decord2.libs/libasound-c7818c60.so.2.0.0",
+              "device": 66307,
+              "inode": 56267062,
+              "links": 2,
+              "bytes": 1162289
+            },
+            {
+              "path": "decord2.libs/libavcodec-c3f15378.so.62.28.101",
+              "device": 66307,
+              "inode": 56267066,
+              "links": 2,
+              "bytes": 18795033
+            },
+            {
+              "path": "decord2.libs/libavfilter-38c1812d.so.11.14.101",
+              "device": 66307,
+              "inode": 56267073,
+              "links": 2,
+              "bytes": 5456265
+            },
+            {
+              "path": "decord2.libs/libavformat-ec222fac.so.62.12.101",
+              "device": 66307,
+              "inode": 56267074,
+              "links": 2,
+              "bytes": 2974889
+            },
+            {
+              "path": "decord2.libs/libavutil-04440b0f.so.60.26.101",
+              "device": 66307,
+              "inode": 56267075,
+              "links": 2,
+              "bytes": 1107705
+            },
+            {
+              "path": "decord2.libs/libdav1d-f4b27961.so.7.0.0",
+              "device": 66307,
+              "inode": 56267134,
+              "links": 2,
+              "bytes": 2024729
+            },
+            {
+              "path": "decord2.libs/libgnutls-71454fd1.so.30.42.0",
+              "device": 66307,
+              "inode": 56267137,
+              "links": 2,
+              "bytes": 2416425
+            },
+            {
+              "path": "decord2.libs/libswscale-15608d2f.so.9.5.101",
+              "device": 66307,
+              "inode": 56267146,
+              "links": 2,
+              "bytes": 2017409
+            },
+            {
+              "path": "decord2.libs/libunistring-9e529e5a.so.5.2.1",
+              "device": 66307,
+              "inode": 56267147,
+              "links": 2,
+              "bytes": 2045377
+            },
+            {
+              "path": "decord2.libs/libvpx-edb6de90.so.12.0.0",
+              "device": 66307,
+              "inode": 56267149,
+              "links": 2,
+              "bytes": 2344937
+            },
+            {
+              "path": "decord2.libs/libx264-32c8b323.so.165",
+              "device": 66307,
+              "inode": 56267152,
+              "links": 2,
+              "bytes": 2284249
+            },
+            {
+              "path": "decord2.libs/libx265-f5385bb8.so.216",
+              "device": 66307,
+              "inode": 56267153,
+              "links": 2,
+              "bytes": 20591817
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 78,
+        "hashed_bytes": 75650462,
+        "unhashed_files": [
+          "decord2-3.4.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "7ed568b3fd1da8a4301931e5c0ad3850929bc8ebe97ef1deb10a26309fd8fecd",
+      "project_after_stage_cleanup": 12796645355
+    },
+    {
+      "name": "pandas",
+      "target_unique_bytes": 2436858660,
+      "download": {
+        "bytes": 12362693,
+        "sha256": "b3d11d2fda7eb164ef27ffc14b4fcab16a80e1ce67e9f57e19ec0afaf715ba89",
+        "seconds": 0.8712895469507203
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-05/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 2ms\nPrepared 1 package in 83ms\nInstalled 1 package in 12ms\n + pandas==2.3.3 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-05/pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 12809013128,
+        "project_after": 12852588573,
+        "hardlinks": {
+          "linked_payload_bytes": 10970600,
+          "files": [
+            {
+              "path": "pandas/_libs/algos.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267167,
+              "links": 2,
+              "bytes": 2131056
+            },
+            {
+              "path": "pandas/_libs/groupby.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267191,
+              "links": 2,
+              "bytes": 2801960
+            },
+            {
+              "path": "pandas/_libs/hashtable.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267195,
+              "links": 2,
+              "bytes": 2240048
+            },
+            {
+              "path": "pandas/_libs/interval.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267203,
+              "links": 2,
+              "bytes": 1352048
+            },
+            {
+              "path": "pandas/_libs/join.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267205,
+              "links": 2,
+              "bytes": 1384144
+            },
+            {
+              "path": "pandas/_libs/tslibs/offsets.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267250,
+              "links": 2,
+              "bytes": 1061344
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 1516,
+        "hashed_bytes": 43279977,
+        "unhashed_files": [
+          "pandas-2.3.3.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "d3993f2995b0da88794c807b1cdffdcf65d6bf6e9238d7596ef598c1000e28f7",
+      "project_after_stage_cleanup": 12840076198
+    },
+    {
+      "name": "cuda-bindings",
+      "target_unique_bytes": 2547465831,
+      "download": {
+        "bytes": 12151019,
+        "sha256": "fda147a344e8eaeca0c6ff113d2851ffca8f7dfc0a6c932374ee5c47caa649c8",
+        "seconds": 0.6965063690440729
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-06/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.87ms\nPrepared 1 package in 74ms\nInstalled 1 package in 3ms\n + cuda-bindings==12.9.4 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-06/cuda_bindings-12.9.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 12852230874,
+        "project_after": 12962852447,
+        "hardlinks": {
+          "linked_payload_bytes": 96921859,
+          "files": [
+            {
+              "path": "cuda/bindings/cufile.cpp",
+              "device": 66307,
+              "inode": 56267445,
+              "links": 2,
+              "bytes": 2084518
+            },
+            {
+              "path": "cuda/bindings/cydriver.cpp",
+              "device": 66307,
+              "inode": 56267498,
+              "links": 2,
+              "bytes": 1532311
+            },
+            {
+              "path": "cuda/bindings/cyruntime.cpp",
+              "device": 66307,
+              "inode": 56267638,
+              "links": 2,
+              "bytes": 1245949
+            },
+            {
+              "path": "cuda/bindings/driver.cpp",
+              "device": 66307,
+              "inode": 56267706,
+              "links": 2,
+              "bytes": 37317473
+            },
+            {
+              "path": "cuda/bindings/driver.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267713,
+              "links": 2,
+              "bytes": 7889944
+            },
+            {
+              "path": "cuda/bindings/driver.pyx",
+              "device": 66307,
+              "inode": 56267723,
+              "links": 2,
+              "bytes": 2078692
+            },
+            {
+              "path": "cuda/bindings/nvrtc.cpp",
+              "device": 66307,
+              "inode": 56267762,
+              "links": 2,
+              "bytes": 2794280
+            },
+            {
+              "path": "cuda/bindings/runtime.cpp",
+              "device": 66307,
+              "inode": 56267831,
+              "links": 2,
+              "bytes": 27202710
+            },
+            {
+              "path": "cuda/bindings/runtime.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56267835,
+              "links": 2,
+              "bytes": 5525848
+            },
+            {
+              "path": "cuda/bindings/runtime.pyx",
+              "device": 66307,
+              "inode": 56267858,
+              "links": 2,
+              "bytes": 1424771
+            },
+            {
+              "path": "cuda/bindings/_bindings/cydriver.cpp",
+              "device": 66307,
+              "inode": 56267870,
+              "links": 2,
+              "bytes": 5336682
+            },
+            {
+              "path": "cuda/bindings/_bindings/cyruntime.cpp",
+              "device": 66307,
+              "inode": 56268050,
+              "links": 2,
+              "bytes": 2488681
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 138,
+        "hashed_bytes": 110594467,
+        "unhashed_files": [
+          "cuda_bindings-12.9.4.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "3a53e4ccf04cb6e60a61a1d331943375479be0fdfbd07949a4d3b9fc08979874",
+      "project_after_stage_cleanup": 12950686612
+    },
+    {
+      "name": "transformers",
+      "target_unique_bytes": 2599874069,
+      "download": {
+        "bytes": 11990925,
+        "sha256": "b10d05da8fa67dc41644dbbf9bc45a44cb86ae33da6f9295f5fbf5b7890bd267",
+        "seconds": 0.34157719707582146
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-07/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 2ms\nPrepared 1 package in 94ms\nInstalled 1 package in 25ms\n + transformers==4.57.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-07/transformers-4.57.1-py3-none-any.whl)\n",
+        "project_before": 12962682263,
+        "project_after": 13015332468,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 2251,
+        "hashed_bytes": 52167646,
+        "unhashed_files": [
+          "transformers-4.57.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "5ed3cf7958b692f5527919d40ea9b9861ef1f5329c2dfac9e1891a0dc3da6237",
+      "project_after_stage_cleanup": 13003099250
+    },
+    {
+      "name": "xgrammar",
+      "target_unique_bytes": 2632917883,
+      "download": {
+        "bytes": 8712184,
+        "sha256": "47fdbfc6007df47de2142613220292023e88e4a570546b39591f053e4d9ec33f",
+        "seconds": 0.3187407630030066
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-08/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.97ms\nPrepared 1 package in 41ms\nInstalled 1 package in 2ms\n + xgrammar==0.1.25 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-08/xgrammar-0.1.25-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)\n",
+        "project_before": 13011813680,
+        "project_after": 13044861994,
+        "hardlinks": {
+          "linked_payload_bytes": 32901568,
+          "files": [
+            {
+              "path": "xgrammar/xgrammar_bindings.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56269151,
+              "links": 2,
+              "bytes": 32901568
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 32,
+        "hashed_bytes": 33040920,
+        "unhashed_files": [
+          "xgrammar-0.1.25.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "8518ed241aebc918b00c6dc5e3c0ce0f54a82723ddcaf45351a3cff34ef9806f",
+      "project_after_stage_cleanup": 13036144908
+    },
+    {
+      "name": "flashinfer-python",
+      "target_unique_bytes": 2673737799,
+      "download": {
+        "bytes": 6932399,
+        "sha256": "f02f13c616482617e7bee0031e5777a3328989a0b1842496ce273086f6a5aeab",
+        "seconds": 0.2379126779269427
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-09/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 63ms\nInstalled 1 package in 18ms\n + flashinfer-python==0.5.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-09/flashinfer_python-0.5.0-py3-none-any.whl)\n",
+        "project_before": 13043079757,
+        "project_after": 13084138945,
+        "hardlinks": {
+          "linked_payload_bytes": 5717932,
+          "files": [
+            {
+              "path": "flashinfer/data/cutlass/include/cute/arch/mma_sm90_gmma_ext.hpp",
+              "device": 66307,
+              "inode": 56272255,
+              "links": 2,
+              "bytes": 2785259
+            },
+            {
+              "path": "flashinfer/data/cutlass/include/cute/arch/mma_sm90_gmma_sparse_ext.hpp",
+              "device": 66307,
+              "inode": 56272257,
+              "links": 2,
+              "bytes": 2932673
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 1844,
+        "hashed_bytes": 40582085,
+        "unhashed_files": [
+          "flashinfer_python-0.5.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "0861345ab8ed7caa5f0d0d1d01b274e8b1aa4e54a5c4802aee0ca106f5d6ef4e",
+      "project_after_stage_cleanup": 13076966940
+    },
+    {
+      "name": "grpcio",
+      "target_unique_bytes": 2689736358,
+      "download": {
+        "bytes": 6435419,
+        "sha256": "7d4fa6ccc3ec2e68a04f7b883d354d7fea22a34c44ce535a2f0c0049cf626ddf",
+        "seconds": 0.2324372110888362
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-10/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.86ms\nPrepared 1 package in 28ms\nInstalled 1 package in 2ms\n + grpcio==1.75.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-10/grpcio-1.75.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl)\n",
+        "project_before": 13083405123,
+        "project_after": 13099411002,
+        "hardlinks": {
+          "linked_payload_bytes": 15081688,
+          "files": [
+            {
+              "path": "grpc/_cython/cygrpc.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56270591,
+              "links": 2,
+              "bytes": 15081688
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 66,
+        "hashed_bytes": 15992885,
+        "unhashed_files": [
+          "grpcio-1.75.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "3b951e83f274d2a5ee7619628ebe67a6c4fe6199112a1f43c4f84eeee466592a",
+      "project_after_stage_cleanup": 13092967865
+    },
+    {
+      "name": "modelscope",
+      "target_unique_bytes": 2711864920,
+      "download": {
+        "bytes": 5923095,
+        "sha256": "16fc2d4209d508cd8b511c07ef74d92531aa0ee1f4c303a19e0234f60a7371a9",
+        "seconds": 0.2205396619392559
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-11/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 2ms\nPrepared 1 package in 62ms\nInstalled 1 package in 27ms\n + modelscope==1.31.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-11/modelscope-1.31.0-py3-none-any.whl)\n",
+        "project_before": 13098893382,
+        "project_after": 13121351384,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 2860,
+        "hashed_bytes": 21800581,
+        "unhashed_files": [
+          "modelscope-1.31.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "ee50314847524a4545bacfd05ff99818fc86f0bcbb35294d0778484cc0e0bf44",
+      "project_after_stage_cleanup": 13115098527
+    },
+    {
+      "name": "torchao",
+      "target_unique_bytes": 2737309071,
+      "download": {
+        "bytes": 5652091,
+        "sha256": "bc708910301a9f98344d43f3fe2aa6d5e1fab706d772b6df47ff05087d664145",
+        "seconds": 0.23706419800873846
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-12/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 36ms\nInstalled 1 package in 5ms\n + torchao==0.9.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-12/torchao-0.9.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 13120752889,
+        "project_after": 13146228699,
+        "hardlinks": {
+          "linked_payload_bytes": 22850423,
+          "files": [
+            {
+              "path": "torchao/prototype/spinquant/_hadamard_matrices.py",
+              "device": 66307,
+              "inode": 56274367,
+              "links": 2,
+              "bytes": 1975743
+            },
+            {
+              "path": "torchao/_C.abi3.so",
+              "device": 66307,
+              "inode": 56275570,
+              "links": 2,
+              "bytes": 20874680
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 302,
+        "hashed_bytes": 25414095,
+        "unhashed_files": [
+          "torchao-0.9.0.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "7564379f4ee65447c996bc824a76592a34d0aaaa5d56023110d0c7e8813ce9af",
+      "project_after_stage_cleanup": 13140544511
+    },
+    {
+      "name": "lxml",
+      "target_unique_bytes": 2749226804,
+      "download": {
+        "bytes": 5253958,
+        "sha256": "90a345bbeaf9d0587a3aaffb7006aa39ccb6ff0e96a57286c0cb2fd1520ea192",
+        "seconds": 0.21936343202833086
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-13/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.98ms\nPrepared 1 package in 25ms\nInstalled 1 package in 3ms\n + lxml==6.0.2 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-13/lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl)\n",
+        "project_before": 13145801176,
+        "project_after": 13157735995,
+        "hardlinks": {
+          "linked_payload_bytes": 8328168,
+          "files": [
+            {
+              "path": "lxml/etree.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56274208,
+              "links": 2,
+              "bytes": 5395056
+            },
+            {
+              "path": "lxml/objectify.cpython-312-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56274435,
+              "links": 2,
+              "bytes": 2933112
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 177,
+        "hashed_bytes": 11902414,
+        "unhashed_files": [
+          "lxml-6.0.2.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "ccc6273d6d0568bc31129b6b848a4dd65040442728c08f7d00da47a52e8edcaa",
+      "project_after_stage_cleanup": 13152464557
+    },
+    {
+      "name": "jedi",
+      "target_unique_bytes": 2763811743,
+      "download": {
+        "bytes": 4885980,
+        "sha256": "0fb16d86c4a4c73c37ba518c77419975e30fcc620658a8d14fbb5720cdd34142",
+        "seconds": 0.19295836496166885
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-14/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 3ms\nPrepared 1 package in 101ms\nInstalled 1 package in 67ms\n + jedi==0.20.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-14/jedi-0.20.1-py2.py3-none-any.whl)\n",
+        "project_before": 13157353156,
+        "project_after": 13172634862,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 5629,
+        "hashed_bytes": 13889723,
+        "unhashed_files": [
+          "jedi-0.20.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "cf6f6bd61dbdaadfa6d4d5601afd79ccc8f4531a2c566b510b2282441e557de2",
+      "project_after_stage_cleanup": 13167051797
+    },
+    {
+      "name": "hf-transfer",
+      "target_unique_bytes": 2773480228,
+      "download": {
+        "bytes": 3552664,
+        "sha256": "cdca9bfb89e6f8f281890cc61a8aff2d3cecaff7e1a4d275574d96ca70098557",
+        "seconds": 0.20703651092480868
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-15/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.97ms\nPrepared 1 package in 20ms\nInstalled 1 package in 2ms\n + hf-transfer==0.1.9 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-15/hf_transfer-0.1.9-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)\n",
+        "project_before": 13170606672,
+        "project_after": 13180277595,
+        "hardlinks": {
+          "linked_payload_bytes": 9653960,
+          "files": [
+            {
+              "path": "hf_transfer/hf_transfer.abi3.so",
+              "device": 66307,
+              "inode": 56277338,
+              "links": 2,
+              "bytes": 9653960
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 9,
+        "hashed_bytes": 9667616,
+        "unhashed_files": [
+          "hf_transfer-0.1.9.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "8d5d98bf6d5266072537dca4bceb150229b3ac40ac67a071dc7080471da9bb0e",
+      "project_after_stage_cleanup": 13176722091
+    },
+    {
+      "name": "sglang",
+      "target_unique_bytes": 2787828093,
+      "download": {
+        "bytes": 3380526,
+        "sha256": "3c57f135ec0a7a5cf6ae4ed5e0b231d7bf7e0fae588bbc1a881560f1c18db995",
+        "seconds": 0.2285854339133948
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-16/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 35ms\nInstalled 1 package in 15ms\n + sglang==0.5.5 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-16/sglang-0.5.5-py3-none-any.whl)\n",
+        "project_before": 13180105026,
+        "project_after": 13194618121,
+        "hardlinks": {
+          "linked_payload_bytes": 0,
+          "files": []
+        }
+      },
+      "record": {
+        "hashed_files": 1337,
+        "hashed_bytes": 14184112,
+        "unhashed_files": [
+          "sglang-0.5.5.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "92cd5ffd1ca76215d7e2b47cbb8d6ed288b0b6d1c23851d9f7e5f4ad493136ad",
+      "project_after_stage_cleanup": 13191072053
+    },
+    {
+      "name": "tokenizers",
+      "target_unique_bytes": 2798416233,
+      "download": {
+        "bytes": 3250221,
+        "sha256": "e2ef6063d7a84994129732b47e7915e8710f27f99f3a3260b8a38fc7ccd083f4",
+        "seconds": 0.1958857849240303
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-17/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 19ms\nInstalled 1 package in 2ms\n + tokenizers==0.22.1 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-17/tokenizers-0.22.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)\n",
+        "project_before": 13194324486,
+        "project_after": 13204917097,
+        "hardlinks": {
+          "linked_payload_bytes": 10376544,
+          "files": [
+            {
+              "path": "tokenizers/tokenizers.abi3.so",
+              "device": 66307,
+              "inode": 56279156,
+              "links": 2,
+              "bytes": 10376544
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 31,
+        "hashed_bytes": 10585238,
+        "unhashed_files": [
+          "tokenizers-0.22.1.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "dc61591297a27bcbcab3749eec657e68b753569180f496e8bd2ba372eb74d3a3",
+      "project_after_stage_cleanup": 13201662003
+    }
+  ],
+  "continuation_sha256": "dd8efef47b2f06c84ace4648f6b1e7eae148ed5567a9d206e3648edae0c44b64",
+  "status": "failed",
+  "error": "ValueError('large relocated payload needs an explicit audited mapping')",
+  "project_final": 13204600778
+}

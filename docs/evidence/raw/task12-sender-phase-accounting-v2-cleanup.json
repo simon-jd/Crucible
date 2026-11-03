@@ -1,0 +1,385 @@
+{
+  "unit_returncode": 0,
+  "temporary_root": ".tmp-task12-sender-phase-go-loan/accounting-test-temp",
+  "lstat_inventory": [
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp",
+      "dev": 66307,
+      "inode": 54802405,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_full_canonical_cap_is_ind0",
+      "dev": 66307,
+      "inode": 54802450,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_full_canonical_cap_is_ind0/project",
+      "dev": 66307,
+      "inode": 54802452,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_full_canonical_cap_is_ind0/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802453,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_full_canonical_cap_is_indcurrent",
+      "dev": 66307,
+      "inode": 54802451,
+      "mode": 41471,
+      "bytes": 118,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_full_canonical_cap_is_ind0"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mix0",
+      "dev": 66307,
+      "inode": 54802406,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mix0/project",
+      "dev": 66307,
+      "inode": 54802408,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mix0/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802409,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mix0/project/.tmp-task12-sender-phase-go-loan/growing",
+      "dev": 66307,
+      "inode": 54802411,
+      "mode": 33204,
+      "bytes": 1000,
+      "sha256": "44f8354494a5ba03ba1792a8d3e9c534c47a9181980fde7a3f44b06ef2ae7c7f"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mix0/project/outside",
+      "dev": 66307,
+      "inode": 54802410,
+      "mode": 33204,
+      "bytes": 31,
+      "sha256": "0f46e4b0802fee6fed599682a16287d0397699cfd742025482c086a70979e56a"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mixcurrent",
+      "dev": 66307,
+      "inode": 54802407,
+      "mode": 41471,
+      "bytes": 118,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_growing_loan_does_not_mix0"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0",
+      "dev": 66307,
+      "inode": 54802412,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project",
+      "dev": 66307,
+      "inode": 54802414,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.git",
+      "dev": 66307,
+      "inode": 54802418,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.git/hidden",
+      "dev": 66307,
+      "inode": 54802419,
+      "mode": 33204,
+      "bytes": 13,
+      "sha256": "ea156a2c16eb8f24fe98ec6a36b3cb23229dfdb192c100f49828704fed25e43e"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802415,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.tmp-task12-sender-phase-go-loan-similar",
+      "dev": 66307,
+      "inode": 54802416,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.tmp-task12-sender-phase-go-loan-similar/payload",
+      "dev": 66307,
+      "inode": 54802417,
+      "mode": 33204,
+      "bytes": 11,
+      "sha256": "7668d2cd32a37eb45b51f002690d1b9a7c03f2da91791f96227ba9a61952fce8"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.tmp-task12-sender-phase-go-loan/cross",
+      "dev": 66307,
+      "inode": 54802421,
+      "mode": 33204,
+      "bytes": 19,
+      "sha256": "0d0f234feb2d235c5eb111a6a2486e6a710b72e1775926f75855ff7c927345e3"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/cross-outside",
+      "dev": 66307,
+      "inode": 54802421,
+      "mode": 33204,
+      "bytes": 19,
+      "sha256": "0d0f234feb2d235c5eb111a6a2486e6a710b72e1775926f75855ff7c927345e3"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/first",
+      "dev": 66307,
+      "inode": 54802420,
+      "mode": 33204,
+      "bytes": 17,
+      "sha256": "d04fd59f3d9a1fd424c47874ae1dab0dde54fa73ba474245bfac79279afe6df7"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/link-dir",
+      "dev": 66307,
+      "inode": 54802423,
+      "mode": 41471,
+      "bytes": 167,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/.tmp-task12-sender-phase-go-loan-similar"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/link-file",
+      "dev": 66307,
+      "inode": 54802422,
+      "mode": 41471,
+      "bytes": 132,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/first"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0/project/same-inode",
+      "dev": 66307,
+      "inode": 54802420,
+      "mode": 33204,
+      "bytes": 17,
+      "sha256": "d04fd59f3d9a1fd424c47874ae1dab0dde54fa73ba474245bfac79279afe6df7"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinkscurrent",
+      "dev": 66307,
+      "inode": 54802413,
+      "mode": 41471,
+      "bytes": 118,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_hidden_siblings_hardlinks0"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned0",
+      "dev": 66307,
+      "inode": 54802424,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned0/project",
+      "dev": 66307,
+      "inode": 54802426,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned0/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802427,
+      "mode": 41471,
+      "bytes": 126,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned0/project"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned1",
+      "dev": 66307,
+      "inode": 54802428,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned1/project",
+      "dev": 66307,
+      "inode": 54802429,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned1/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802430,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned1/project/another-directory",
+      "dev": 66307,
+      "inode": 54802431,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_ownedcurrent",
+      "dev": 66307,
+      "inode": 54802425,
+      "mode": 41471,
+      "bytes": 118,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_only_verified_exact_owned1"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er0",
+      "dev": 66307,
+      "inode": 54802437,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er0/project",
+      "dev": 66307,
+      "inode": 54802439,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er0/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802440,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er1",
+      "dev": 66307,
+      "inode": 54802441,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er1/project",
+      "dev": 66307,
+      "inode": 54802442,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er1/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802443,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er2",
+      "dev": 66307,
+      "inode": 54802444,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er2/project",
+      "dev": 66307,
+      "inode": 54802445,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er2/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802446,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er3",
+      "dev": 66307,
+      "inode": 54802447,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er3/project",
+      "dev": 66307,
+      "inode": 54802448,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er3/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802449,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_ercurrent",
+      "dev": 66307,
+      "inode": 54802438,
+      "mode": 41471,
+      "bytes": 118,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_rescan_limit_and_other_er3"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_transient_nonloan_enoent_0",
+      "dev": 66307,
+      "inode": 54802432,
+      "mode": 16832,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_transient_nonloan_enoent_0/project",
+      "dev": 66307,
+      "inode": 54802434,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_transient_nonloan_enoent_0/project/.tmp-task12-sender-phase-go-loan",
+      "dev": 66307,
+      "inode": 54802435,
+      "mode": 16893,
+      "bytes": 4096
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_transient_nonloan_enoent_0/project/payload",
+      "dev": 66307,
+      "inode": 54802436,
+      "mode": 33204,
+      "bytes": 7,
+      "sha256": "8bb0cf6eb9b17d0f7d22b456f121257dc1254e1f01665370476383ea776df414"
+    },
+    {
+      "path": ".tmp-task12-sender-phase-go-loan/accounting-test-temp/test_transient_nonloan_enoent_current",
+      "dev": 66307,
+      "inode": 54802433,
+      "mode": 41471,
+      "bytes": 118,
+      "link": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/accounting-test-temp/test_transient_nonloan_enoent_0"
+    }
+  ],
+  "links_not_followed": true,
+  "before_delete_inventory_rechecked": true,
+  "absent_after": true,
+  "scope": "only new function-test temporary tree; original724 files retained"
+}

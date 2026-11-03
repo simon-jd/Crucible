@@ -1,0 +1,14 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_pinned_pth_layout_is_validated_without_executing_startup_code ______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/pytest-of-postedism/pytest-0/test_pinned_pth_layout_is_vali0')
+
+    def test_pinned_pth_layout_is_validated_without_executing_startup_code(tmp_path):
+>       from serving.baseline.runtime_entry import validated_startup_path
+E       ImportError: cannot import name 'validated_startup_path' from 'serving.baseline.runtime_entry' (/home/postedism/Desktop/Crucible/serving/baseline/runtime_entry.py)
+
+serving/baseline/runtime_entry_test.py:43: ImportError
+=========================== short test summary info ============================
+FAILED serving/baseline/runtime_entry_test.py::test_pinned_pth_layout_is_validated_without_executing_startup_code
+1 failed, 2 deselected in 0.02s

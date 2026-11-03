@@ -1,0 +1,63 @@
+{
+  "identities": {
+    "docs/evidence/raw/task12-sender-phase-driver.py": true,
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": true,
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2.py": true,
+    ".tmp-task12-sender-phase-go-loan/replay-phase": true,
+    ".cache/task12-baseline/bin/replay": true,
+    "serving/baseline/traces/burst-calibration.csv": true,
+    "docs/evidence/raw/task12-model-token-allowlist.json": true,
+    "serving/replay/schedule.go": true,
+    "serving/replay/transport.go": true,
+    "serving/replay/diagnostic.go": true,
+    "serving/replay/diagnostic_test.go": true,
+    "serving/replay/cmd/replay/main.go": true,
+    "serving/replay/cmd/replay/diagnostic_test.go": true,
+    "/usr/bin/timeout": true,
+    "/usr/bin/prlimit": true,
+    ".venv/bin/python": true
+  },
+  "accounting": {
+    "canonical_bytes": 13540789574,
+    "owned_bytes": 242783895,
+    "nonloan_bytes": 13298005679,
+    "projected_bytes": 13988005679,
+    "free_bytes": 265423826944,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "scan_errors": [],
+  "go_environment": {
+    "GODEBUG": null,
+    "GOGC": null,
+    "GOMEMLIMIT": null,
+    "GOMAXPROCS": null,
+    "GOTRACEBACK": null,
+    "GO_ENV": null
+  },
+  "port31013_bound_then_closed": true,
+  "output_and_log_fresh": true,
+  "argv": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "85s",
+    "/usr/bin/prlimit",
+    "--fsize=262144:262144",
+    "--core=0:0",
+    "--",
+    "env",
+    "-u",
+    "TRANSFORMERS_CACHE",
+    "PYTHONPATH=.",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "HF_HOME=/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    ".venv/bin/python",
+    "-B",
+    "docs/evidence/raw/task12-sender-phase-driver.py"
+  ],
+  "host_level": true,
+  "proposal_sha256": "00ad24a2e53aba984ab4b36db7f317eb4c352d1c814808b99d217b7558e54840"
+}

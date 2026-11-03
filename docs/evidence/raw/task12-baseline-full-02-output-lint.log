@@ -1,0 +1,93 @@
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+   --> serving/baseline/experiment.py:758:37
+    |
+756 |         )
+757 |         return result
+758 |     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+    |                                     ^^^^^^^^^^^^^^
+759 |         failure = error
+760 |         summary.update(
+    |
+help: Remove unused `noqa` directive
+    |
+757 |         return result
+    -     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+758 +     except BaseException as error:
+759 |         failure = error
+    |
+
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+   --> serving/baseline/experiment.py:847:37
+    |
+845 |                 raise ValueError("unexpected idle barrier HTTP status")
+846 |             time.sleep(min(0.05, max(0, deadline - time.monotonic())))
+847 |     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+    |                                     ^^^^^^^^^^^^^^
+848 |         failure = error
+849 |         report["error"] = error_info(error)["repr"]
+    |
+help: Remove unused `noqa` directive
+    |
+846 |             time.sleep(min(0.05, max(0, deadline - time.monotonic())))
+    -     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+847 +     except BaseException as error:
+848 |         failure = error
+    |
+
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+   --> serving/baseline/experiment.py:864:37
+    |
+862 |     try:
+863 |         return execute_trial(command, env, target, summary, inspect)
+864 |     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+    |                                     ^^^^^^^^^^^^^^
+865 |         failure = error
+866 |         raise
+    |
+help: Remove unused `noqa` directive
+    |
+863 |         return execute_trial(command, env, target, summary, inspect)
+    -     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+864 +     except BaseException as error:
+865 |         failure = error
+    |
+
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+   --> serving/baseline/experiment.py:872:41
+    |
+870 |                 endpoint, target.with_suffix(".boundary.json"), inspect
+871 |             )
+872 |         except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+    |                                         ^^^^^^^^^^^^^^
+873 |             summary["boundary_error"] = error_info(error)["repr"]
+874 |             if failure is None:
+    |
+help: Remove unused `noqa` directive
+    |
+871 |             )
+    -         except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+872 +         except BaseException as error:
+873 |             summary["boundary_error"] = error_info(error)["repr"]
+    |
+
+RUF100 [*] Unused `noqa` directive (unused: `BLE001`)
+    --> serving/baseline/experiment.py:1270:37
+     |
+1268 |                     slo["sha256"] = _digest({k: v for k, v in slo.items() if k != "sha256"})
+1269 |                     write_json_bounded(args.output / f"{trace['name']}-slo.json", slo, 64 << 10)
+1270 |     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+     |                                     ^^^^^^^^^^^^^^
+1271 |         failure = error
+1272 |         raise
+     |
+help: Remove unused `noqa` directive
+     |
+1269 |                     write_json_bounded(args.output / f"{trace['name']}-slo.json", slo, 64 << 10)
+     -     except BaseException as error:  # noqa: BLE001 - preserve primary failure through cleanup
+1270 +     except BaseException as error:
+1271 |         failure = error
+     |
+
+Found 5 errors.
+[*] 5 fixable with `--fix`.
+2 files already formatted

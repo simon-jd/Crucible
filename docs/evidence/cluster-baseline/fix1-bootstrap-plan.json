@@ -1,0 +1,9 @@
+{
+  "mode": "plan",
+  "ready": false,
+  "errors": [
+    "node_image_id is required"
+  ],
+  "packages": [],
+  "files": []
+}

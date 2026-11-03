@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 66 items
+
+rl/sync/tests/test_ram_weights.py::test_export_actual_bf16_source_immutable_and_no_cuda PASSED
+rl/sync/tests/test_ram_weights.py::test_source_contract_rejections[contract] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_contract_rejections[version] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_contract_rejections[alias] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_contract_rejections[optimizer] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_contract_rejections[reference] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_contract_rejections[rng] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_receipt_rejections_before_output[unsealed] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_receipt_rejections_before_output[truncated] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_receipt_rejections_before_output[identity] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_receipt_rejections_before_output[digest] PASSED
+rl/sync/tests/test_ram_weights.py::test_source_receipt_rejections_before_output[cap] PASSED
+rl/sync/tests/test_ram_weights.py::test_budget_includes_future_output_and_baselines[host] PASSED
+rl/sync/tests/test_ram_weights.py::test_budget_includes_future_output_and_baselines[source] PASSED
+rl/sync/tests/test_ram_weights.py::test_budget_includes_future_output_and_baselines[future] PASSED
+rl/sync/tests/test_ram_weights.py::test_budget_includes_future_output_and_baselines[gpu] PASSED
+rl/sync/tests/test_ram_weights.py::test_stream_aggregate_gate_still_precedes_decode PASSED
+rl/sync/tests/test_ram_weights.py::test_actual_numeric_content_rejected[nan] PASSED
+rl/sync/tests/test_ram_weights.py::test_actual_numeric_content_rejected[step] PASSED
+rl/sync/tests/test_ram_weights.py::test_actual_numeric_content_rejected[overflow] PASSED
+rl/sync/tests/test_phase_bridge.py::test_two_real_cycles_adamw_bf16_reference_packed_receiver 

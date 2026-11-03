@@ -1,0 +1,12 @@
+{
+  "inventory_sha256": "43a0dbb1ccfb51764d465198fceca1dc4de70d189db0d3c005b8eba015d590e5",
+  "removed_root": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests",
+  "root_absent": true,
+  "removed_regular_bytes": 73460,
+  "removed_entries": 56,
+  "all_file_hashes_and_lstat_identities_rechecked": true,
+  "symlinks_unlinked_without_following": 6,
+  "ownership": "originating test terminal records prove exact Popen reap; later /proc absence checks are limited to audit process visible namespace, not a host-wide PID assertion",
+  "shared_cache_or_original_raw_removed": false,
+  "monotonic_ns": 716141226335535
+}

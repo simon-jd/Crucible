@@ -1,0 +1,66 @@
+{
+  "scope": "this CPU fix round explicit pytest basetemps only",
+  "terminal_handles": [
+    27318,
+    26850,
+    46545
+  ],
+  "all_tests_terminal": true,
+  "cleanup": [
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-final",
+      "device": 66307,
+      "inode": 56377965,
+      "logical_bytes": 20298
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-additional",
+      "device": 66307,
+      "inode": 56377677,
+      "logical_bytes": 11831
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/fix-final-correction",
+      "device": 66307,
+      "inode": 56278849,
+      "logical_bytes": 1486
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/startup-memory-focused",
+      "device": 66307,
+      "inode": 56377631,
+      "logical_bytes": 3103
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/minor-focused",
+      "device": 66307,
+      "inode": 56377605,
+      "logical_bytes": 0
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/deadline-focused",
+      "device": 66307,
+      "inode": 56377518,
+      "logical_bytes": 16
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/deadline-additional",
+      "device": 66307,
+      "inode": 56377610,
+      "logical_bytes": 0
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/minor-red",
+      "device": 66307,
+      "inode": 56377517,
+      "logical_bytes": 0
+    }
+  ],
+  "removed_logical_bytes": 36734,
+  "remaining_paths": [],
+  "loopback31012_closed": true,
+  "process_evidence": "real child/DNS subprocess tests assert exact reaping; request fixture threads joined; no native process spawned",
+  "historical_failures_preserved": true,
+  "project_bytes_after": 13270393378,
+  "shared_cache_bytes": 23815435170
+}

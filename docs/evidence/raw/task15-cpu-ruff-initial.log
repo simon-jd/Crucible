@@ -1,0 +1,40 @@
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> spec/tests/test_acceptance.py:100:32
+    |
+ 98 |     outcomes["rows"].reverse()
+ 99 |     assert (plan, outcomes) == before
+100 |     assert report["counts"] == dict(planned=2, observed=2, completed=2, failed=0, not_run=0, missing=0)
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+101 |     assert report["counter_statistic"]["acceptance_length"] == 1.75
+102 |     assert report["per_batch"][0]["counter_statistic"] == report["counter_statistic"]
+    |
+help: Rewrite as a literal
+    |
+99  |     assert (plan, outcomes) == before
+    -     assert report["counts"] == dict(planned=2, observed=2, completed=2, failed=0, not_run=0, missing=0)
+100 +     assert report["counts"] == {"planned": 2, "observed": 2, "completed": 2, "failed": 0, "not_run": 0, "missing": 0}
+101 |     assert report["counter_statistic"]["acceptance_length"] == 1.75
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> spec/tests/test_acceptance.py:173:32
+    |
+171 |     outcomes["rows"] = [{"request_id": "synthetic-r1", "status": "failed", "reason": "synthetic fault"}]
+172 |     report = evaluate(plan, outcomes)
+173 |     assert report["counts"] == dict(planned=2, observed=1, completed=0, failed=1, not_run=0, missing=1)
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+174 |     assert report["counter_statistic"]["acceptance_length"] is None
+175 |     assert "spec_verify_ct" not in report["failed_prefixes"][0]
+    |
+help: Rewrite as a literal
+    |
+172 |     report = evaluate(plan, outcomes)
+    -     assert report["counts"] == dict(planned=2, observed=1, completed=0, failed=1, not_run=0, missing=1)
+173 +     assert report["counts"] == {"planned": 2, "observed": 1, "completed": 0, "failed": 1, "not_run": 0, "missing": 1}
+174 |     assert report["counter_statistic"]["acceptance_length"] is None
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 2 errors.
+2 unsafe fixes available with `--fix --unsafe-fixes`.

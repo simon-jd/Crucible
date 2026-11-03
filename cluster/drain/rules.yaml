@@ -1,0 +1,7 @@
+schema: 1
+step_time_ratio: 1.2
+consecutive_checks: 3
+drain_cooldown_seconds: 600
+sample_freshness_seconds: 120
+min_comparison_nodes: 3
+report_every_steps: 50

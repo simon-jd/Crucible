@@ -1,0 +1,215 @@
+{
+ "plan": [
+  [
+   "1-baseline",
+   1,
+   "baseline"
+  ],
+  [
+   "1-candidate",
+   1,
+   "candidate"
+  ],
+  [
+   "2-candidate",
+   2,
+   "candidate"
+  ],
+  [
+   "2-baseline",
+   2,
+   "baseline"
+  ],
+  [
+   "3-baseline",
+   3,
+   "baseline"
+  ],
+  [
+   "3-candidate",
+   3,
+   "candidate"
+  ]
+ ],
+ "mult": 0.25,
+ "trace_dir": "serving/baseline/traces/azure-60s",
+ "servers": [
+  {
+   "block": 0,
+   "precision": "bf16",
+   "command": [
+    "-m",
+    "vllm.entrypoints.openai.api_server",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--served-model-name",
+    "Qwen/Qwen3-8B",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18081",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--seed",
+    "17",
+    "--max-model-len",
+    "8192",
+    "--max-num-seqs",
+    "64",
+    "--no-enable-prefix-caching",
+    "--generation-config",
+    "vllm",
+    "--enforce-eager"
+   ],
+   "startup_s": 16.00442276499234,
+   "warmup_exit": 0,
+   "quality_s": 80.94802033691667,
+   "exit": 0
+  },
+  {
+   "block": 1,
+   "precision": "fp8",
+   "command": [
+    "-m",
+    "vllm.entrypoints.openai.api_server",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--served-model-name",
+    "Qwen/Qwen3-8B",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18081",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--seed",
+    "17",
+    "--max-model-len",
+    "8192",
+    "--max-num-seqs",
+    "64",
+    "--no-enable-prefix-caching",
+    "--generation-config",
+    "vllm",
+    "--enforce-eager",
+    "--quantization",
+    "fp8"
+   ],
+   "startup_s": 14.00652270799037,
+   "warmup_exit": 0,
+   "quality_s": 56.07306422793772,
+   "exit": 0
+  },
+  {
+   "block": 2,
+   "precision": "bf16",
+   "command": [
+    "-m",
+    "vllm.entrypoints.openai.api_server",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--served-model-name",
+    "Qwen/Qwen3-8B",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18081",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--seed",
+    "17",
+    "--max-model-len",
+    "8192",
+    "--max-num-seqs",
+    "64",
+    "--no-enable-prefix-caching",
+    "--generation-config",
+    "vllm",
+    "--enforce-eager"
+   ],
+   "startup_s": 14.002576356986538,
+   "warmup_exit": 0,
+   "exit": 0
+  },
+  {
+   "block": 3,
+   "precision": "fp8",
+   "command": [
+    "-m",
+    "vllm.entrypoints.openai.api_server",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--served-model-name",
+    "Qwen/Qwen3-8B",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18081",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--seed",
+    "17",
+    "--max-model-len",
+    "8192",
+    "--max-num-seqs",
+    "64",
+    "--no-enable-prefix-caching",
+    "--generation-config",
+    "vllm",
+    "--enforce-eager",
+    "--quantization",
+    "fp8"
+   ],
+   "startup_s": 14.003803784027696,
+   "warmup_exit": 0,
+   "exit": 0
+  }
+ ],
+ "runs": [
+  {
+   "id": "1-baseline",
+   "precision": "bf16",
+   "exit": 0,
+   "started_at_ns": 922824563459462,
+   "finished_at_ns": 923071553186606
+  },
+  {
+   "id": "1-candidate",
+   "precision": "fp8",
+   "exit": 0,
+   "started_at_ns": 923173733878536,
+   "finished_at_ns": 923417339836913
+  },
+  {
+   "id": "2-candidate",
+   "precision": "fp8",
+   "exit": 0,
+   "started_at_ns": 923418352402285,
+   "finished_at_ns": 923661981571234
+  },
+  {
+   "id": "2-baseline",
+   "precision": "bf16",
+   "exit": 0,
+   "started_at_ns": 923739679468775,
+   "finished_at_ns": 923986699717920
+  },
+  {
+   "id": "3-baseline",
+   "precision": "bf16",
+   "exit": 0,
+   "started_at_ns": 923987706589744,
+   "finished_at_ns": 924234703344198
+  },
+  {
+   "id": "3-candidate",
+   "precision": "fp8",
+   "exit": 0,
+   "started_at_ns": 924254976334734,
+   "finished_at_ns": 924498615643149
+  }
+ ],
+ "stop_reason": null,
+ "peak_owned_rss_bytes": 6055849984,
+ "peak_runtime_cache_bytes": 10084
+}

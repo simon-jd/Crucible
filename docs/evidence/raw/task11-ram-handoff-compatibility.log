@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... ERROR: found no collectors for /home/postedism/Desktop/Crucible/rl/learner/tests/test_state_handoff.py::test_sealed_memfd_weights_only_mmap_support
+
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+___________ ERROR collecting rl/learner/tests/test_state_handoff.py ____________
+rl/learner/tests/test_state_handoff.py:16: in <module>
+    from rl.learner.state_handoff import (
+rl/learner/state_handoff.py:23: in <module>
+    SEALS = fcntl.F_SEAL_WRITE | fcntl.F_SEAL_GROW | fcntl.F_SEAL_SHRINK | fcntl.F_SEAL_SEAL
+            ^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'fcntl' has no attribute 'F_SEAL_WRITE'
+=========================== short test summary info ============================
+ERROR rl/learner/tests/test_state_handoff.py - AttributeError: module 'fcntl'...
+=============================== 1 error in 0.80s ===============================

@@ -1,0 +1,35 @@
+{
+  "commands": [
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/tmp .venv/bin/python -B -c 'import importlib.util,sys; s=importlib.util.spec_from_file_location(\"serving.baseline.native_pool\",\".tmp-task12-native-pool-cpu/mutant.py\"); m=importlib.util.module_from_spec(s); sys.modules[s.name]=m; s.loader.exec_module(m); import pytest; raise SystemExit(pytest.main([\"-p\",\"no:cacheprovider\",\"--basetemp=.tmp-task12-native-pool-cpu/red\",\"-v\",\"serving/baseline/native_pool_test.py::test_pool_client_cache_evidence_and_growth_no_double_count\"]))' > docs/evidence/raw/task12-native-pool-red.log 2>&1",
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/tmp .venv/bin/python -B -m pytest -p no:cacheprovider --basetemp=.tmp-task12-native-pool-cpu/green -v serving/baseline/native_pool_test.py serving/baseline/experiment_test.py::test_live_observer_scans_only_mutable_roots_and_stops_before_reserve > docs/evidence/raw/task12-native-pool-focused.log 2>&1"
+  ],
+  "source_matches_gate": true,
+  "RED": {
+    "exec_chunk": "6187a7",
+    "exit": 1,
+    "pytest": "1 failed in0.04s",
+    "assertion": "assert5==15; omitted client mutation only",
+    "log": "task12-native-pool-red.log"
+  },
+  "GREEN": {
+    "exec_chunk": "f253c1",
+    "exit": 0,
+    "pytest": "36 passed in0.10s",
+    "new_cases": 35,
+    "old_controls": 1,
+    "log": "task12-native-pool-focused.log"
+  },
+  "authoritative_exec_terminal": true,
+  "long_running_handles": [],
+  "native_processes_launched": false,
+  "test_subprocesses_launched": false,
+  "AS_bytes": 2000000000,
+  "wall_seconds": 45,
+  "kill_grace_seconds": 5,
+  "file_bytes": 262144,
+  "core_bytes": 0,
+  "scratch_unique_inode_bytes": 44267,
+  "inventory_sha256": "c48d94e02e954b368163780ea1f00825c4a126ff59389cf97637b88a21f91e4a",
+  "inventory_bytes": 81735,
+  "cleanup_status": "pending root inventory check; nothing deleted"
+}

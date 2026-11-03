@@ -1,0 +1,10 @@
+{
+  "removed_regular_bytes": 59983454,
+  "removed_symlinks": 1,
+  "absence_after": {
+    ".tmp-task15-go-build": true,
+    ".tmp-task15-go-monitor.py": true,
+    ".tmp-task15-py-red": true,
+    ".tmp-task15-py-green": true
+  }
+}

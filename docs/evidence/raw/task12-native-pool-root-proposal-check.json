@@ -1,0 +1,38 @@
+{
+  "observed_at_utc": "2026-10-25T11:54:51.606636+00:00",
+  "status": "root independent concrete proposal/hash/resource check passed; not native execution approval",
+  "proposal_sha256": "21769b85cae85c07494459720c7f59b2e0eaf0ce7b1b77ed9ffec0b59844a0bb",
+  "freeze_sha256": "84ad1d18a1d0cb6580dea76548a427925c18a021e4a4c207522372215dc024e3",
+  "sources_verified": 183,
+  "artifacts_verified": 183,
+  "executables_verified": 4,
+  "production_Go_sources_exactly_covered": 10,
+  "build_inputs_still_verified": 13,
+  "command_difference_only": [
+    "actual new client",
+    "fresh full03 output",
+    "pool manifest flag"
+  ],
+  "original_protocol_output_caps_lifecycle_unchanged": true,
+  "host_safe_environment_matches_frozen_snapshot": true,
+  "environment_delta": "pooled cache/TMPDIR/TORCH_HOME; safe host snapshot; five explicit Go override unsets preserve ordinary defaults",
+  "manifest_sha256": "39ea8ed99a4a4262e2d2d8f52f86d6cba4904015752c85d52e9a1868f1c0f1be",
+  "pool_sample": {
+    "project_bytes": 13313185309,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13303025078,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13993025078,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "directory_identities_verified": 15,
+  "output_guard_log_launch_receipt_absent": true,
+  "native_execution_authorized": false,
+  "remaining_gate": "independent spec+quality review and fresh trusted exact one-shot authority; original full02 failed/spent",
+  "no_model_weight_payload_reads": true
+}

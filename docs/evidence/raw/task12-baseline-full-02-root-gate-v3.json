@@ -1,0 +1,41 @@
+{
+  "time_utc": "2026-10-24T23:30:46.695452+00:00",
+  "review": "spec and quality Approved for O1/O2 fixround1; full acceptance pending",
+  "proposal_sha256": "88bd749a4881bc990108f8513d25aeeb7bc46afe3b81cb1a3555257693a24759",
+  "freeze_sha256": "43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761",
+  "controller_sha256": "ab99c606cdb2317b0dd413f151fd68ae60a5a936be783aeb8a665b0892de4a23",
+  "source_count": 176,
+  "artifact_count": 58,
+  "executables": 4,
+  "mismatches": [],
+  "inherited_identity_environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "CUDA_HOME": "/usr/local/cuda-13.2",
+    "LD_LIBRARY_PATH": null,
+    "LD_PRELOAD": null
+  },
+  "timeout_resolved": "/usr/bin/timeout",
+  "prlimit_resolved": "/usr/bin/prlimit",
+  "output_paths_absent": [
+    "docs/evidence/raw/task12-baseline-full-02",
+    "docs/evidence/raw/task12-baseline-full-02-guard.log",
+    "docs/evidence/raw/task12-baseline-full-02-launch.json"
+  ],
+  "port": 31012,
+  "port_closed": true,
+  "shared_cache_bytes": 23815435170,
+  "project_preflight": {
+    "ok": true,
+    "units": "decimal GB = 1,000,000,000 bytes",
+    "project_bytes": 13286615015,
+    "free_bytes": 270298329088,
+    "model_cache": "/home/postedism/.cache/huggingface",
+    "errors": []
+  },
+  "project_reserve_bytes": 680000000,
+  "project_plus_reserve_bytes": 13966615015,
+  "headroom_bytes": 33384985,
+  "new_download_bytes": 0,
+  "scope": "read-only files and loopback TCP connect check; no HTTP/native/GPU/model-content reads",
+  "status": "fresh root prelaunch check; authorization separately recorded"
+}

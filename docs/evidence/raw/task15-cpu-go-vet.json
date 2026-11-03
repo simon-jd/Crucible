@@ -1,0 +1,86 @@
+{
+  "command": [
+    ".tools/go/bin/go",
+    "vet",
+    "-p=1",
+    "serving/replay/accounting.go",
+    "serving/replay/accounting_test.go"
+  ],
+  "samples": [
+    {
+      "seconds": 1.1158591950079426,
+      "interval_seconds": 1.1158591950079426,
+      "owned_bytes": 59944890,
+      "rss_bytes": 2609152,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.3850099369883537,
+      "interval_seconds": 0.2691507419804111,
+      "owned_bytes": 60077794,
+      "rss_bytes": 46706688,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.659107947954908,
+      "interval_seconds": 0.2740980109665543,
+      "owned_bytes": 60108092,
+      "rss_bytes": 23441408,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.931915640947409,
+      "interval_seconds": 0.27280769299250096,
+      "owned_bytes": 60215513,
+      "rss_bytes": 33177600,
+      "log_bytes": 0
+    }
+  ],
+  "scan_errors": [],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "f29319324bcb5f753a2b6828276da41b651114beb37b1ced3a701d0d907871cd",
+  "before": {
+    "canonical_bytes": 13348842744,
+    "owned_bytes": 59944890,
+    "projected_bytes": 13978897854,
+    "free_bytes": 269037473792
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/tmp"
+  },
+  "pid": 3,
+  "leader_start": "68619633",
+  "exit_code": 0,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 2.2066926539409906,
+  "after": {
+    "canonical_bytes": 13348872226,
+    "owned_bytes": 59974372,
+    "projected_bytes": 13978897854,
+    "free_bytes": 269036777472
+  }
+}

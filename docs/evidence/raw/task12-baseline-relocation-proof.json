@@ -1,0 +1,65 @@
+{
+  "status": "failed-hardlink-proof",
+  "installer_completed": true,
+  "no_payload_execution": true,
+  "error": "audit_hardlinks rejected target/bin/relocation-probe: uv relocated scripts using distinct inode despite --link-mode hardlink",
+  "files": [
+    {
+      "path": ".cache/task12-baseline/relocation-proof/relocation_proof-0.0.0-py3-none-any.whl",
+      "device": 66307,
+      "inode": 56266080,
+      "links": 1,
+      "bytes": 4195113,
+      "sha256": "575e276d3c343b7f9ea931381c254a47d493b8b2d77d90d0492d2356aeef4bc2"
+    },
+    {
+      "path": ".cache/task12-baseline/relocation-proof/cache/archive-v0/HY3LXLlm9gVnA0MO/relocation_proof-0.0.0.data/scripts/relocation-probe",
+      "device": 66307,
+      "inode": 56278849,
+      "links": 1,
+      "bytes": 4194304,
+      "sha256": "3f75ef09699c15b86b84d7981a9baf57d0d5b905745ce48295612ccfcc067ebd"
+    },
+    {
+      "path": ".cache/task12-baseline/relocation-proof/target/bin/relocation-probe",
+      "device": 66307,
+      "inode": 56366462,
+      "links": 1,
+      "bytes": 4194304,
+      "sha256": "3f75ef09699c15b86b84d7981a9baf57d0d5b905745ce48295612ccfcc067ebd"
+    }
+  ],
+  "project_current": 13218267957,
+  "proof_retained": false,
+  "uv_returncode": 0,
+  "command": [
+    "uv",
+    "--no-config",
+    "--no-python-downloads",
+    "--offline",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-deps",
+    "--require-hashes",
+    "--only-binary",
+    ":all:",
+    "--link-mode",
+    "hardlink",
+    "--python",
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "--target",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/relocation-proof/target",
+    "-r",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/relocation-proof/tmp/requirements.txt"
+  ],
+  "stdout_stderr_capture_limitation": "Captured in ephemeral proof process; not published before inode assertion raised. Exit0 is established by passed returncode assertion before inode audit. No proof rerun.",
+  "cleanup": {
+    "verified_file_identities": true,
+    "active_owned_uses": [],
+    "project_before": 13228163629,
+    "project_after": 13215576624,
+    "reclaimed_unique_bytes": 12587005
+  },
+  "proof_removed_after_identity_and_use_check": true
+}

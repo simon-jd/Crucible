@@ -1,0 +1,4 @@
+/home/postedism/Desktop/Crucible/.venv-specforge/lib/python3.12/site-packages/specforge/modeling/draft/llama3_eagle.py:33: UserWarning: flash_attn is not found, falling back to flex_attention. Please install flash_attn if you want to use the flash attention backend.
+  warnings.warn(
+Set draft model tie_word_embeddings to False
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 13.06it/s]

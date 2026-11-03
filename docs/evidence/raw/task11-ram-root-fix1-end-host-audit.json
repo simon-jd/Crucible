@@ -1,0 +1,111 @@
+{
+  "time_utc": "2026-10-25T14:35:13.781189+00:00",
+  "scope": "fresh afterfix1 original95945terminal; sameUID/exactprojectcwd/exactCPUruntimeargv only, no signals",
+  "inspected_same_uid_entries": 417,
+  "scoped_runtime_candidates": [],
+  "inaccessible_or_racing_entries": [
+    {
+      "pid": 2560,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2588,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8142,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8324,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8341,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8363,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8824,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8922,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 11726,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13578,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13594,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13610,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13646,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13654,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13661,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13773,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 17558,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 19730,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1372196,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763646,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763649,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763812,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1767066,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1828718,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 3826483,
+      "error": "PermissionError"
+    }
+  ],
+  "limitation": "point-in-time scopedmetadata, not globalGPU/lock attestation; recordednamespacechildPIDs notassumedhostPIDs",
+  "all_five_CPU_original_handles_terminal": true,
+  "new_GPU_executed": false
+}

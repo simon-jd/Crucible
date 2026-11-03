@@ -1,0 +1,63 @@
+{
+  "status": "metadata-only-no-native-imports",
+  "prepare_handle": 34991,
+  "prepare_exit": 0,
+  "host_handle": 34348,
+  "host_exit": 0,
+  "manifest_sha256": "39ea8ed99a4a4262e2d2d8f52f86d6cba4904015752c85d52e9a1868f1c0f1be",
+  "host_receipt_sha256": "7bbacf755caeed34dbc23dbf77f3a75f0f39c15a12799c7ef0dbaa02bda08536",
+  "old176_sources_unchanged": 171,
+  "old176_declared_differences": [
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py",
+      "old_sha256": "ab99c606cdb2317b0dd413f151fd68ae60a5a936be783aeb8a665b0892de4a23",
+      "new_sha256": "53ca02d0854f3240af61f8f13cd804c665536631e8581f71b1d0066c956ed196"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/README.md",
+      "old_sha256": "c18d1ae5657f581bdf5eb64a379d20f92edf8742134a81aa9c5727705b22ad1f",
+      "new_sha256": "8338759e38fa1ef0dabaa5db8d0a8cb39534a36f81ac2a69198845f8fc8f8b45"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/schedule.go",
+      "old_sha256": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "new_sha256": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/transport.go",
+      "old_sha256": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "new_sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/cmd/replay/main.go",
+      "old_sha256": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "new_sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    }
+  ],
+  "old58_artifacts_unchanged": 58,
+  "coordinator_files_unchanged": 100,
+  "production_Go_closure": {
+    "serving/replay/wait.go": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3",
+    "serving/replay/record.go": "a9f52e5d1dcefadc90a2ad769cfe74767f335915b51c5c1c2822088efe01d569",
+    "serving/replay/accounting.go": "7e1eb347b2cd0d634316dad36b3d6c450513ec71c35a368c641094e7859fdb4f",
+    "serving/replay/main.go": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16",
+    "serving/replay/diagnostic.go": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f",
+    "serving/replay/stream.go": "d0fedbd24aaf5c7d42d5841818bec40cde8db4cac00eb707bd3e8358400e4d3a",
+    "serving/replay/trace.go": "37f97366383e7062379a794c4eb98040b9c11a07ff3ae4fb3bfcc13c5ebf39a9",
+    "serving/replay/schedule.go": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2",
+    "serving/replay/transport.go": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b",
+    "serving/replay/cmd/replay/main.go": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+  },
+  "new_sources_relative_to_old176": {
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90",
+    "/home/postedism/Desktop/Crucible/serving/replay/wait.go": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3",
+    "/home/postedism/Desktop/Crucible/serving/replay/accounting.go": "7e1eb347b2cd0d634316dad36b3d6c450513ec71c35a368c641094e7859fdb4f",
+    "/home/postedism/Desktop/Crucible/serving/replay/diagnostic.go": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f",
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_pool_test.py": "30a6254e3cb9540562ead6dc911f84069db96a35ce6d02dbf8d42ce7ce1c036b",
+    "/home/postedism/Desktop/Crucible/serving/replay/wait_test.go": "e1958222a428622954432df3aef0274ad7a50c63c37e017ff022538a89d2e148",
+    "/home/postedism/Desktop/Crucible/serving/replay/diagnostic_test.go": "c7c45b7b0b74d33f09bae4c4609bd81c41ff0d859b3809833de3043cd695c761"
+  },
+  "source_count": 183,
+  "host_environment_scope": "current inherited tool snapshot, not login identity/credential attestation",
+  "native_executed": false
+}

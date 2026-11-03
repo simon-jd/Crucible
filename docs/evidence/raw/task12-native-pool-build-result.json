@@ -1,0 +1,27 @@
+{
+  "build_handle": 44921,
+  "buildinfo_handle": 97886,
+  "both_authoritative_exit": 0,
+  "build_terminal_group_proof": true,
+  "buildinfo_terminal_group_proof": true,
+  "binary": {
+    "path": ".tmp-task12-native-03-pool/replay",
+    "bytes": 10160231,
+    "sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b"
+  },
+  "buildinfo_log_sha256": "c6728d3d796e6f50b388a3fc91cce0c593b0ef33af5a84da9df38da52e3ee324",
+  "HEAD": "f037c7ac4c61ab0b3a32b9ce4da0dc62756bff1a",
+  "vcs_modified": true,
+  "entries": 1707,
+  "regular_files": 1446,
+  "regular_bytes": 105330021,
+  "uncompressed_bytes": 310063,
+  "gzip_bytes": 104213,
+  "gzip_sha256": "982ace5429bf911f87ffa8d25fd725c2dd77acd866d41618ac1d89a21e07f7fc",
+  "decoded_sha256": "675fe255c0e8b77f65aa592b94f08ba97c7ec40aff5e6b3872237046b9021bff",
+  "two_full_identity_hash_passes_match": true,
+  "inventory_cap": 270000,
+  "pool_deleted": false,
+  "native_cache_not_created": true,
+  "remaining_native_pool_budget_after_client_only_handoff": 489839769
+}

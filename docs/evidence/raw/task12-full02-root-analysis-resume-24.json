@@ -1,0 +1,684 @@
+{
+  "time_utc": "2026-10-25T08:26:22.606622+00:00",
+  "scope": "root read-only parse of original actual native failure; no new run or model imports",
+  "baseline_accepted": false,
+  "native_attempts_under_one_shot": 1,
+  "native_smoke_contracts": [
+    {
+      "case": "zero",
+      "actual_output": 0,
+      "accepted_contract": true
+    },
+    {
+      "case": "one",
+      "actual_output": 1,
+      "accepted_contract": true
+    },
+    {
+      "case": "multi",
+      "actual_output": 4,
+      "accepted_contract": true
+    },
+    {
+      "case": "error",
+      "actual_output": 0,
+      "accepted_contract": true
+    }
+  ],
+  "planned_trial_status_counts": {
+    "completed": 18,
+    "not_run": 12
+  },
+  "verified_raw_stderr_identities": [
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-0.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-0.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-1.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-1.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-2.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-calibration-2.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-0.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-0.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-1.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-1.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-10.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-10.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-11.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-11.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-2.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-2.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-3.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-3.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-4.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-4.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-5.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-5.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-6.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-6.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-7.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-7.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-8.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-8.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-9.json",
+    "docs/evidence/raw/task12-baseline-full-02/azure-evaluation-9.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-0.json",
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-0.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-1.json",
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-1.stderr",
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-2.json",
+    "docs/evidence/raw/task12-baseline-full-02/burst-calibration-2.stderr"
+  ],
+  "trials": [
+    {
+      "identity": "azure-calibration-0",
+      "records": 59,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [],
+      "late_fraction": 0.0,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 55
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 4
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-calibration-1",
+      "records": 59,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [],
+      "late_fraction": 0.0,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 55
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 4
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-calibration-2",
+      "records": 59,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [],
+      "late_fraction": 0.0,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 55
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 4
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-0",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 73,
+          "scheduled_ms": 17851.492,
+          "sent_ms": 17859.358606,
+          "delay_ms": 7.86660600000323,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 31
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 95
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-1",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 65,
+          "scheduled_ms": 8024.288,
+          "sent_ms": 8030.349294,
+          "delay_ms": 6.061294000000089,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 32
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 94
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-10",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 63,
+          "scheduled_ms": 3980.2055,
+          "sent_ms": 3990.853088,
+          "delay_ms": 10.647587999999814,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 28
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 98
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-11",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 73,
+          "scheduled_ms": 17851.492,
+          "sent_ms": 17858.558527,
+          "delay_ms": 7.066527000002679,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 35
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 91
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-2",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 65,
+          "scheduled_ms": 8024.288,
+          "sent_ms": 8032.017908,
+          "delay_ms": 7.7299080000002505,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 32
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 94
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-3",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 73,
+          "scheduled_ms": 17851.492,
+          "sent_ms": 17861.978842,
+          "delay_ms": 10.48684200000207,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 32
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 94
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-4",
+      "records": 132,
+      "sender_valid": false,
+      "aborted": false,
+      "late": [
+        {
+          "index": 73,
+          "scheduled_ms": 17851.492,
+          "sent_ms": 17875.964082,
+          "delay_ms": 24.472082000000228,
+          "status": "stream_error"
+        },
+        {
+          "index": 74,
+          "scheduled_ms": 17864.03,
+          "sent_ms": 17875.980359,
+          "delay_ms": 11.950359000002209,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.015151515151515152,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 36
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 90
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": true
+    },
+    {
+      "identity": "azure-evaluation-5",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 65,
+          "scheduled_ms": 8024.288,
+          "sent_ms": 8034.264452,
+          "delay_ms": 9.97645200000079,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 32
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 94
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-6",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 63,
+          "scheduled_ms": 3980.2055,
+          "sent_ms": 3987.216809,
+          "delay_ms": 7.011308999999983,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 28
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 98
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-7",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 73,
+          "scheduled_ms": 17851.492,
+          "sent_ms": 17858.36266,
+          "delay_ms": 6.870660000000498,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 35
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 91
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-8",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 73,
+          "scheduled_ms": 17851.492,
+          "sent_ms": 17859.707328,
+          "delay_ms": 8.215328000002046,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 32
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 94
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "azure-evaluation-9",
+      "records": 132,
+      "sender_valid": true,
+      "aborted": false,
+      "late": [
+        {
+          "index": 63,
+          "scheduled_ms": 3980.2055,
+          "sent_ms": 3986.678643,
+          "delay_ms": 6.473143000000164,
+          "status": "stream_error"
+        }
+      ],
+      "late_fraction": 0.007575757575757576,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 28
+        },
+        {
+          "status": "stream_error",
+          "error": "server stream error",
+          "count": 6
+        },
+        {
+          "status": "stream_error",
+          "error": "stream read: context deadline exceeded",
+          "count": 98
+        }
+      ],
+      "summary_accepted": true,
+      "effective_aborted": false
+    },
+    {
+      "identity": "burst-calibration-0",
+      "records": 23,
+      "sender_valid": false,
+      "aborted": false,
+      "late": [
+        {
+          "index": 2,
+          "scheduled_ms": 31000,
+          "sent_ms": 31016.37806,
+          "delay_ms": 16.378059999999095,
+          "status": "ok"
+        }
+      ],
+      "late_fraction": 0.043478260869565216,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 23
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": true
+    },
+    {
+      "identity": "burst-calibration-1",
+      "records": 23,
+      "sender_valid": false,
+      "aborted": false,
+      "late": [
+        {
+          "index": 2,
+          "scheduled_ms": 31000,
+          "sent_ms": 31016.589153,
+          "delay_ms": 16.589153000000806,
+          "status": "ok"
+        }
+      ],
+      "late_fraction": 0.043478260869565216,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 23
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": true
+    },
+    {
+      "identity": "burst-calibration-2",
+      "records": 23,
+      "sender_valid": false,
+      "aborted": false,
+      "late": [
+        {
+          "index": 2,
+          "scheduled_ms": 31000,
+          "sent_ms": 31017.147177,
+          "delay_ms": 17.14717699999892,
+          "status": "ok"
+        }
+      ],
+      "late_fraction": 0.043478260869565216,
+      "statuses": [
+        {
+          "status": "ok",
+          "error": "",
+          "count": 23
+        }
+      ],
+      "summary_accepted": false,
+      "effective_aborted": true
+    }
+  ],
+  "sample_count": 1781,
+  "sampled_duration_seconds": 1352.7998627369525,
+  "sampled_maxima": {
+    "owned_rss_bytes": 6779437056,
+    "project_bytes": 13346186965,
+    "runtime_cache_bytes": 3242665,
+    "evidence_bytes": 2523348
+  },
+  "project_sample_kinds": {
+    "conservative mutable-root estimate": 1763,
+    "canonical": 18
+  },
+  "sampling_limitation": "sample maxima, not continuous peaks; project samples labeled conservative mutable-root estimate",
+  "azure_comparisons": {
+    "2x": {
+      "accepted_all_three": false,
+      "accepted_pairs": 2,
+      "planned_pairs": 3,
+      "goodput_difference": null
+    },
+    "4x": {
+      "accepted_all_three": false,
+      "accepted_pairs": 3,
+      "planned_pairs": 3,
+      "goodput_difference": null
+    }
+  },
+  "primary_failure": {
+    "repr": "ValueError('calibration requires three distinct sender-valid runs')",
+    "observed_utf8_bytes": 67,
+    "truncated": false
+  },
+  "cleanup": {
+    "pid": 291149,
+    "returncode": -9,
+    "returncode_before_cleanup": null,
+    "termination_requested": true,
+    "forced_kill": true,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+    "native_exit_expected": false
+  },
+  "causality": "Same Burst index2 late in all three; request bodies prepared before Run start. Old evidence lacks timer/goroutine/dial/write phase observations; bottom-level cause unproven. Azure evaluation4 also sender-invalid (2/132 late). No accepted full baseline or aggregate uplift."
+}

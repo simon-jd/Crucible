@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+testpaths: cluster, scaling, rl, kernels, serving, spec, scripts
+collected 130 items
+
+cluster/provision/tests/test_baseline.py ............................... [ 23%]
+...........                                                              [ 32%]
+cluster/provision/tests/test_bootstrap.py .......                        [ 37%]
+scripts/tests/test_azure_guards.py ..................................... [ 66%]
+.                                                                        [ 66%]
+scripts/tests/test_experiment_results.py ................                [ 79%]
+scripts/tests/test_gpu_guard.py ............                             [ 88%]
+scripts/tests/test_resource_preflight.py ...............                 [100%]
+
+============================= 130 passed in 10.77s =============================

@@ -1,0 +1,163 @@
+{
+  "time_utc": "2026-10-25T17:47:36.408813+00:00",
+  "scope": "ROOT independent complete terminalFAIL inventory beforeANYdelete; receipt lackedinventory because symlinkcheckfailed",
+  "original_session": 8265,
+  "terminal": 125,
+  "20tests_passed": true,
+  "remaining46cases_not_completed": true,
+  "cleanup_confirmed": true,
+  "remaining_owned_children": [],
+  "executed_source_pins_match": 25,
+  "inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395130,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge",
+      "dev": 66307,
+      "inode": 56395133,
+      "mode": 16893,
+      "nlink": 12,
+      "size": 4096,
+      "mtime_ns": 1792950318557434770
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/cuda",
+      "dev": 66307,
+      "inode": 56395143,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/cupy",
+      "dev": 66307,
+      "inode": 56395144,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/inductor",
+      "dev": 66307,
+      "inode": 56395138,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/numba",
+      "dev": 66307,
+      "inode": 56395146,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/pytest",
+      "dev": 66307,
+      "inode": 56395152,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950318558673380
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/pytest/test_two_real_cycles_adamw_bf10",
+      "dev": 66307,
+      "inode": 56395153,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950318557434770
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/pytest/test_two_real_cycles_adamw_bf1current",
+      "dev": 66307,
+      "inode": 56395156,
+      "mode": 41471,
+      "nlink": 1,
+      "size": 104,
+      "mtime_ns": 1792950318558673380,
+      "symlink_target": "/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge/pytest/test_two_real_cycles_adamw_bf10",
+      "resolved_inside_scratch": true
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/tmp",
+      "dev": 66307,
+      "inode": 56395134,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950317584441068
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/tmp/tmp6ngf6kme",
+      "dev": 66307,
+      "inode": 56395148,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950317584441068
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/tmp/tmp6ngf6kme/_remote_module_non_scriptable.py",
+      "dev": 66307,
+      "inode": 56395151,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2355,
+      "mtime_ns": 1792950317586323872,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8",
+      "content_if_UTF8": "from typing import *\n\nimport torch\nimport torch.distributed.rpc as rpc\nfrom torch import Tensor\nfrom torch._jit_internal import Future\nfrom torch.distributed.rpc import RRef\nfrom typing import Tuple  # pyre-ignore: unused import\n\n\nmodule_interface_cls = None\n\n\ndef forward_async(self, *args, **kwargs):\n    args = (self.module_rref, self.device, self.is_device_map_set, *args)\n    kwargs = {**kwargs}\n    return rpc.rpc_async(\n        self.module_rref.owner(),\n        _remote_forward,\n        args,\n        kwargs,\n    )\n\n\ndef forward(self, *args, **kwargs):\n    args = (self.module_rref, self.device, self.is_device_map_set, *args)\n    kwargs = {**kwargs}\n    ret_fut = rpc.rpc_async(\n        self.module_rref.owner(),\n        _remote_forward,\n        args,\n        kwargs,\n    )\n    return ret_fut.wait()\n\n\n_generated_methods = [\n    forward_async,\n    forward,\n]\n\n\n\n\ndef _remote_forward(\n    module_rref: RRef[module_interface_cls], device: str, is_device_map_set: bool, *args, **kwargs):\n    module = module_rref.local_value()\n    device = torch.device(device)\n\n    if device.type != \"cuda\":\n        return module.forward(*args, **kwargs)\n\n    # If the module is on a cuda device,\n    # move any CPU tensor in args or kwargs to the same cuda device.\n    # Since torch script does not support generator expression,\n    # have to use concatenation instead of\n    # ``tuple(i.to(device) if isinstance(i, Tensor) else i for i in *args)``.\n    args = (*args,)\n    out_args: Tuple[()] = ()\n    for arg in args:\n        arg = (arg.to(device),) if isinstance(arg, Tensor) else (arg,)\n        out_args = out_args + arg\n\n    kwargs = {**kwargs}\n    for k, v in kwargs.items():\n        if isinstance(v, Tensor):\n            kwargs[k] = kwargs[k].to(device)\n\n    if is_device_map_set:\n        return module.forward(*out_args, **kwargs)\n\n    # If the device map is empty, then only CPU tensors are allowed to send over wire,\n    # so have to move any GPU tensor to CPU in the output.\n    # Since torch script does not support generator expression,\n    # have to use concatenation instead of\n    # ``tuple(i.cpu() if isinstance(i, Tensor) else i for i in module.forward(*out_args, **kwargs))``.\n    ret: Tuple[()] = ()\n    for i in module.forward(*out_args, **kwargs):\n        i = (i.cpu(),) if isinstance(i, Tensor) else (i,)\n        ret = ret + i\n    return ret\n"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/torch",
+      "dev": 66307,
+      "inode": 56395137,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/triton",
+      "dev": 66307,
+      "inode": 56395141,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/vllm",
+      "dev": 66307,
+      "inode": 56395147,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge/xdg",
+      "dev": 66307,
+      "inode": 56395136,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950316842445870
+    }
+  ],
+  "removed": false,
+  "regular_bytes": 2355
+}

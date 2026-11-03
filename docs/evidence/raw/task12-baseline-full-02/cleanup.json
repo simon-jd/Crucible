@@ -1,0 +1,11 @@
+{
+  "pid": 291149,
+  "returncode": -9,
+  "returncode_before_cleanup": null,
+  "termination_requested": true,
+  "forced_kill": true,
+  "reaped": true,
+  "listener_closed": true,
+  "descendant_confirmation": "required from outer fixed GPU guard before lock release",
+  "native_exit_expected": false
+}

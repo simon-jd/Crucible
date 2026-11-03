@@ -1,0 +1,32 @@
+=== RUN   TestTransportEmissionIncludesWriteWait
+--- PASS: TestTransportEmissionIncludesWriteWait (0.04s)
+=== RUN   TestNeverEmittedCountsLate
+--- PASS: TestNeverEmittedCountsLate (0.01s)
+=== RUN   TestEmissionFramingAndPartialWrites
+=== RUN   TestEmissionFramingAndPartialWrites/complete
+=== RUN   TestEmissionFramingAndPartialWrites/partial
+=== RUN   TestEmissionFramingAndPartialWrites/short-without-error
+=== RUN   TestEmissionFramingAndPartialWrites/failed
+=== RUN   TestEmissionFramingAndPartialWrites/missing-body
+=== RUN   TestEmissionFramingAndPartialWrites/transfer-encoding
+=== RUN   TestEmissionFramingAndPartialWrites/wrong-length
+--- PASS: TestEmissionFramingAndPartialWrites (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/complete (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/partial (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/short-without-error (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/failed (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/missing-body (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/transfer-encoding (0.00s)
+    --- PASS: TestEmissionFramingAndPartialWrites/wrong-length (0.00s)
+=== RUN   TestObserverIdentityRelease
+--- PASS: TestObserverIdentityRelease (0.00s)
+=== RUN   TestStaleReusedPOSTIsNotRetried
+--- PASS: TestStaleReusedPOSTIsNotRetried (0.00s)
+=== RUN   TestTLSVerificationAndHTTP1Policy
+--- PASS: TestTLSVerificationAndHTTP1Policy (0.01s)
+PASS
+ok  	crucible/serving/replay	0.062s
+=== RUN   TestCLISignalCancellation
+--- PASS: TestCLISignalCancellation (0.00s)
+PASS
+ok  	crucible/serving/replay/cmd/replay	0.006s

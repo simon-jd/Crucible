@@ -1,0 +1,248 @@
+FFFFFFFFF                                                                [100%]
+=================================== FAILURES ===================================
+________________ test_partial_optimizer_failure_poisoned_phase _________________
+
+    def test_partial_optimizer_failure_poisoned_phase():
+        class MutateThenRaise(torch.optim.SGD):
+            def step(self, closure=None):
+                super().step(closure)
+                raise RuntimeError("after real SGD update")
+
+        torch.manual_seed(123)
+        policy = TinyLM()
+        before = copy.deepcopy(policy.state_dict())
+        learner = Learner(policy, copy.deepcopy(policy), Tokenizer(),
+                          MutateThenRaise(policy.parameters(), lr=.1), LearnerConfig(group_size=2),
+                          policy_version=2)
+        with pytest.raises(RuntimeError, match="after real SGD update"):
+            learner.step([group()])
+        assert any(not torch.equal(value, before[key]) for key, value in policy.state_dict().items())
+>       assert_failed_phase(learner)
+
+rl/learner/tests/test_train.py:179:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+learner = <rl.learner.train.Learner object at 0x77a3a0001760>
+
+    def assert_failed_phase(learner):
+>       assert learner.phase_status == "failed"
+               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'Learner' object has no attribute 'phase_status'
+
+rl/learner/tests/test_train.py:153: AttributeError
+___________ test_native_sgd_finite_gradient_overflow_poisoned_phase ____________
+
+    def test_native_sgd_finite_gradient_overflow_poisoned_phase():
+        policy = TinyLM()
+        learner = Learner(policy, copy.deepcopy(policy), Tokenizer(),
+                          torch.optim.SGD(policy.parameters(), lr=1e20), LearnerConfig(group_size=2),
+                          policy_version=2)
+        hook = policy.head.weight.register_hook(lambda grad: torch.full_like(grad, 1e20))
+        try:
+>           with pytest.raises(FloatingPointError, match="policy"):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE <class 'FloatingPointError'>
+
+rl/learner/tests/test_train.py:189: Failed
+________________ test_nonfinite_optimizer_state_poisoned_phase _________________
+
+    def test_nonfinite_optimizer_state_poisoned_phase():
+        class CorruptState(torch.optim.SGD):
+            def step(self, closure=None):
+                super().step(closure)
+                for state in self.state.values():
+                    state["momentum_buffer"].fill_(float("inf"))
+
+        policy = TinyLM()
+        learner = Learner(policy, copy.deepcopy(policy), Tokenizer(),
+                          CorruptState(policy.parameters(), lr=.1, momentum=.9),
+                          LearnerConfig(group_size=2), policy_version=2)
+>       with pytest.raises(FloatingPointError, match="optimizer"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FloatingPointError'>
+
+rl/learner/tests/test_train.py:208: Failed
+_________________ test_reject_nonfinite_initial_state[policy] __________________
+
+target = 'policy'
+
+    @pytest.mark.parametrize("target", ["policy", "reference", "optimizer"])
+    def test_reject_nonfinite_initial_state(target):
+        policy, reference = TinyLM(), TinyLM()
+        optimizer = torch.optim.SGD(policy.parameters(), lr=.1, momentum=.9)
+        with torch.no_grad():
+            if target == "policy":
+                policy.head.weight.fill_(float("inf"))
+            elif target == "reference":
+                reference.head.weight.fill_(float("nan"))
+            else:
+                optimizer.state[policy.head.weight]["momentum_buffer"] = torch.tensor(float("nan"))
+>       with pytest.raises(FloatingPointError, match=target):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FloatingPointError'>
+
+rl/learner/tests/test_train.py:225: Failed
+________________ test_reject_nonfinite_initial_state[reference] ________________
+
+target = 'reference'
+
+    @pytest.mark.parametrize("target", ["policy", "reference", "optimizer"])
+    def test_reject_nonfinite_initial_state(target):
+        policy, reference = TinyLM(), TinyLM()
+        optimizer = torch.optim.SGD(policy.parameters(), lr=.1, momentum=.9)
+        with torch.no_grad():
+            if target == "policy":
+                policy.head.weight.fill_(float("inf"))
+            elif target == "reference":
+                reference.head.weight.fill_(float("nan"))
+            else:
+                optimizer.state[policy.head.weight]["momentum_buffer"] = torch.tensor(float("nan"))
+>       with pytest.raises(FloatingPointError, match=target):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FloatingPointError'>
+
+rl/learner/tests/test_train.py:225: Failed
+________________ test_reject_nonfinite_initial_state[optimizer] ________________
+
+target = 'optimizer'
+
+    @pytest.mark.parametrize("target", ["policy", "reference", "optimizer"])
+    def test_reject_nonfinite_initial_state(target):
+        policy, reference = TinyLM(), TinyLM()
+        optimizer = torch.optim.SGD(policy.parameters(), lr=.1, momentum=.9)
+        with torch.no_grad():
+            if target == "policy":
+                policy.head.weight.fill_(float("inf"))
+            elif target == "reference":
+                reference.head.weight.fill_(float("nan"))
+            else:
+                optimizer.state[policy.head.weight]["momentum_buffer"] = torch.tensor(float("nan"))
+>       with pytest.raises(FloatingPointError, match=target):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FloatingPointError'>
+
+rl/learner/tests/test_train.py:225: Failed
+___________________ test_pre_execution_rejection_is_reusable ___________________
+
+    def test_pre_execution_rejection_is_reusable():
+        policy = TinyLM()
+        learner = trainer(policy, copy.deepcopy(policy), 1)
+        with pytest.raises(ValueError, match="future"):
+            learner.step([group(3)])
+>       assert learner.phase_status == "ready"
+               ^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: 'Learner' object has no attribute 'phase_status'
+
+rl/learner/tests/test_train.py:234: AttributeError
+________ test_cleanup_failure_poisoned_phase_and_attempts_all_restores _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x77a3a009da30>
+
+    def test_cleanup_failure_poisoned_phase_and_attempts_all_restores(monkeypatch):
+        policy = TinyLM()
+        learner = trainer(policy, copy.deepcopy(policy), 2)
+        # Fault-inject the control callbacks only; this is not FSDP/CUDA evidence.
+        learner.fsdp = True
+        sync_calls, last_calls = [], []
+        def sync(value):
+            sync_calls.append(value)
+            if len(sync_calls) == 2:
+                raise RuntimeError("restore sync failed")
+        def last(value):
+            last_calls.append(value)
+        monkeypatch.setattr(policy, "set_requires_gradient_sync", sync, raising=False)
+        monkeypatch.setattr(policy, "set_is_last_backward", last, raising=False)
+        with pytest.raises(RuntimeError, match="restore sync failed"):
+            learner.step([group()])
+        assert sync_calls == [True, True]
+>       assert last_calls == [True, True], "one failed restore must not skip other cleanup"
+E       AssertionError: one failed restore must not skip other cleanup
+E       assert [True] == [True, True]
+E
+E         Right contains one more item: True
+E         Use -v to get more diff
+
+rl/learner/tests/test_train.py:256: AssertionError
+_____________ test_execution_and_cleanup_errors_are_both_preserved _____________
+
+self = DoubleFailure (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.1
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+closure = None
+
+    def step(self, closure=None):
+        super().step(closure)
+>       raise RuntimeError("update failed")
+E       RuntimeError: update failed
+
+rl/learner/tests/test_train.py:265: RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+    def test_execution_and_cleanup_errors_are_both_preserved():
+        class DoubleFailure(torch.optim.SGD):
+            clear_calls = 0
+            def step(self, closure=None):
+                super().step(closure)
+                raise RuntimeError("update failed")
+            def zero_grad(self, *args, **kwargs):
+                self.clear_calls += 1
+                super().zero_grad(*args, **kwargs)
+                if self.clear_calls == 2:
+                    raise RuntimeError("cleanup failed")
+
+        policy = TinyLM()
+        learner = Learner(policy, copy.deepcopy(policy), Tokenizer(),
+                          DoubleFailure(policy.parameters(), lr=.1), LearnerConfig(group_size=2),
+                          policy_version=2)
+        with pytest.raises(BaseExceptionGroup) as caught:
+>           learner.step([group()])
+
+rl/learner/tests/test_train.py:277:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+rl/learner/train.py:227: in step
+    self.optimizer.zero_grad(set_to_none=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = DoubleFailure (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.1
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+args = (), kwargs = {'set_to_none': True}
+
+    def zero_grad(self, *args, **kwargs):
+        self.clear_calls += 1
+        super().zero_grad(*args, **kwargs)
+        if self.clear_calls == 2:
+>           raise RuntimeError("cleanup failed")
+E           RuntimeError: cleanup failed
+
+rl/learner/tests/test_train.py:270: RuntimeError
+=========================== short test summary info ============================
+FAILED rl/learner/tests/test_train.py::test_partial_optimizer_failure_poisoned_phase
+FAILED rl/learner/tests/test_train.py::test_native_sgd_finite_gradient_overflow_poisoned_phase
+FAILED rl/learner/tests/test_train.py::test_nonfinite_optimizer_state_poisoned_phase
+FAILED rl/learner/tests/test_train.py::test_reject_nonfinite_initial_state[policy]
+FAILED rl/learner/tests/test_train.py::test_reject_nonfinite_initial_state[reference]
+FAILED rl/learner/tests/test_train.py::test_reject_nonfinite_initial_state[optimizer]
+FAILED rl/learner/tests/test_train.py::test_pre_execution_rejection_is_reusable
+FAILED rl/learner/tests/test_train.py::test_cleanup_failure_poisoned_phase_and_attempts_all_restores
+FAILED rl/learner/tests/test_train.py::test_execution_and_cleanup_errors_are_both_preserved
+9 failed, 9 deselected in 1.24s

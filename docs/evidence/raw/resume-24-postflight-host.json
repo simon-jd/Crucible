@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-10-25T08:25:40.666861+00:00",
+  "scope": "read-only current known PIDs/argv/port/proc-lock/GPU ownership; no signals or GPU workload; process discovery access failures recorded, not global absence proof",
+  "known_run_pids_still_present": [],
+  "project_runtime_candidates": [
+    {
+      "pid": 505630,
+      "start_ticks": "71449363",
+      "exe": "/usr/bin/bash",
+      "cwd": "/home/postedism/Desktop/Crucible"
+    }
+  ],
+  "port31012_connect_errno": 111,
+  "port31012_closed": true,
+  "shared_lock_entries": [],
+  "gpu_query_returncode": 0,
+  "project_gpu_processes": [],
+  "proc_entries_unavailable_or_exited": 784
+}

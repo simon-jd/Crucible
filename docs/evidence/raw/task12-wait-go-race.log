@@ -1,0 +1,45 @@
+=== RUN   TestDiagnosticActualWakeAndStop
+--- PASS: TestDiagnosticActualWakeAndStop (0.03s)
+=== RUN   TestDiagnosticRealHTTPPhasesAndReuse
+--- PASS: TestDiagnosticRealHTTPPhasesAndReuse (0.08s)
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/segments
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/early-wake
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/delayed-wakes
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/late-first-wake
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/fresh-reset-remainder
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/bookkeeping-crosses-due
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/after-reset-counter-delay
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/stop-crosses-due
+--- PASS: TestWaitSegmentsBoundAndAbsoluteDue (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/segments (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/early-wake (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/delayed-wakes (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/late-first-wake (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/fresh-reset-remainder (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/bookkeeping-crosses-due (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/after-reset-counter-delay (0.00s)
+    --- PASS: TestWaitSegmentsBoundAndAbsoluteDue/stop-crosses-due (0.00s)
+=== RUN   TestWaitZeroAndOverdueCreateNoTimer
+=== RUN   TestWaitZeroAndOverdueCreateNoTimer/0s
+=== RUN   TestWaitZeroAndOverdueCreateNoTimer/-1s
+--- PASS: TestWaitZeroAndOverdueCreateNoTimer (0.00s)
+    --- PASS: TestWaitZeroAndOverdueCreateNoTimer/0s (0.00s)
+    --- PASS: TestWaitZeroAndOverdueCreateNoTimer/-1s (0.00s)
+=== RUN   TestWaitCancellationAmongSegments
+=== RUN   TestWaitCancellationAmongSegments/false
+=== RUN   TestWaitCancellationAmongSegments/true
+--- PASS: TestWaitCancellationAmongSegments (0.00s)
+    --- PASS: TestWaitCancellationAmongSegments/false (0.00s)
+    --- PASS: TestWaitCancellationAmongSegments/true (0.00s)
+=== RUN   TestWaitOptionalCounterSaturationAndDisabled
+--- PASS: TestWaitOptionalCounterSaturationAndDisabled (0.00s)
+=== RUN   TestWaitConcurrentCountersAndSnapshots
+--- PASS: TestWaitConcurrentCountersAndSnapshots (0.00s)
+=== RUN   TestWaitKeepsAbsoluteRequestDeadlineAndLegacySend
+--- PASS: TestWaitKeepsAbsoluteRequestDeadlineAndLegacySend (0.00s)
+PASS
+ok  	crucible/serving/replay	1.117s
+testing: warning: no tests to run
+PASS
+ok  	crucible/serving/replay/cmd/replay	1.010s [no tests to run]

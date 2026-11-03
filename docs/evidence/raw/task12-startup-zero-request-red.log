@@ -1,0 +1,60 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_____________ test_ready_log_stops_without_any_http_request[False] _____________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/ready-log-red/test_ready_log_stops_without_a0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75463b04fdd0>
+split = False
+
+    @pytest.mark.parametrize("split", [False, True])
+    def test_ready_log_stops_without_any_http_request(tmp_path, monkeypatch, split):
+        import http.client
+        calls = []
+        def forbidden(*args, **kwargs):
+            calls.append(args)
+            raise AssertionError("diagnostic must send no health/generate HTTP request")
+        monkeypatch.setattr(http.client, "HTTPConnection", forbidden)
+        marker = b"The server is fired up and ready to roll!"
+        code = (f"import os,time;os.write(1,{marker[:20] if split else marker!r});"
+                + (f"time.sleep(.15);os.write(1,{marker[20:]!r});" if split else "")
+                + "time.sleep(60)")
+        result = run_probe([sys.executable, "-B", "-c", code], {}, tmp_path, 0,
+                           lambda: None, seconds=.8)
+>       assert result["reason"] == "ready-no-generation" and calls == []
+E       AssertionError: assert ('error' == 'ready-no-generation'
+E         
+E         - ready-no-generation
+E         + error)
+
+serving/baseline/startup_memory_test.py:196: AssertionError
+_____________ test_ready_log_stops_without_any_http_request[True] ______________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/ready-log-red/test_ready_log_stops_without_a1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75463add3620>
+split = True
+
+    @pytest.mark.parametrize("split", [False, True])
+    def test_ready_log_stops_without_any_http_request(tmp_path, monkeypatch, split):
+        import http.client
+        calls = []
+        def forbidden(*args, **kwargs):
+            calls.append(args)
+            raise AssertionError("diagnostic must send no health/generate HTTP request")
+        monkeypatch.setattr(http.client, "HTTPConnection", forbidden)
+        marker = b"The server is fired up and ready to roll!"
+        code = (f"import os,time;os.write(1,{marker[:20] if split else marker!r});"
+                + (f"time.sleep(.15);os.write(1,{marker[20:]!r});" if split else "")
+                + "time.sleep(60)")
+        result = run_probe([sys.executable, "-B", "-c", code], {}, tmp_path, 0,
+                           lambda: None, seconds=.8)
+>       assert result["reason"] == "ready-no-generation" and calls == []
+E       AssertionError: assert ('error' == 'ready-no-generation'
+E         
+E         - ready-no-generation
+E         + error)
+
+serving/baseline/startup_memory_test.py:196: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/startup_memory_test.py::test_ready_log_stops_without_any_http_request[False]
+FAILED serving/baseline/startup_memory_test.py::test_ready_log_stops_without_any_http_request[True]
+2 failed, 11 deselected in 0.05s

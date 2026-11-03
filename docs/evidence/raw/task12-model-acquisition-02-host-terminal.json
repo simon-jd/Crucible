@@ -1,0 +1,20 @@
+{
+  "handle": 17692,
+  "scope": "host process namespace",
+  "original_processes": [
+    {
+      "pid": 1520763,
+      "original_start_ticks": 67201248,
+      "original_process_absent": true,
+      "path_absent": true
+    },
+    {
+      "pid": 1520764,
+      "original_start_ticks": 67201248,
+      "original_process_absent": true,
+      "path_absent": true
+    }
+  ],
+  "no_listener_or_native_process_created": true,
+  "no_fd_exclusion_claim_for_retained_prior_failure": true
+}

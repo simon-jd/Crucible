@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "synthetic_fixture": true,
+  "authenticity": "unverified; schema/hash consistency does not establish measurement authenticity",
+  "plan_sha256": "d4c2e7283ccd1ce38b5235c13b4384d3fdbd1c78051e9c04f928a573dd4131b4",
+  "counts": {
+    "completed": 0,
+    "failed": 1,
+    "not_run": 1,
+    "missing": 1,
+    "planned": 3,
+    "observed": 2
+  },
+  "coverage_complete": false,
+  "all_requests_completed": false,
+  "complete_counter_report": false,
+  "counter_statistic": {
+    "scope": "conditional on completed terminal rows only; includes guaranteed token",
+    "completed_requests": 0,
+    "spec_accepted_tokens": 0,
+    "spec_verify_ct": 0,
+    "acceptance_length": null
+  },
+  "per_batch": [
+    {
+      "batch_id": "synthetic-b3",
+      "counter_statistic": {
+        "scope": "conditional on completed terminal rows only; includes guaranteed token",
+        "completed_requests": 0,
+        "spec_accepted_tokens": 0,
+        "spec_verify_ct": 0,
+        "acceptance_length": null
+      }
+    }
+  ],
+  "failed_prefixes": [
+    {
+      "request_id": "synthetic-r0",
+      "prompt_id": "synthetic-p0",
+      "batch_id": "synthetic-b3",
+      "batch_size": 3,
+      "slot": 0,
+      "status": "failed",
+      "reason": "synthetic failure with unknown counters"
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "synthetic-r0",
+      "prompt_id": "synthetic-p0",
+      "batch_id": "synthetic-b3",
+      "batch_size": 3,
+      "slot": 0,
+      "status": "failed",
+      "reason": "synthetic failure with unknown counters"
+    },
+    {
+      "request_id": "synthetic-r1",
+      "prompt_id": "synthetic-p1",
+      "batch_id": "synthetic-b3",
+      "batch_size": 3,
+      "slot": 1,
+      "status": "not_run",
+      "reason": "synthetic planned slot not executed"
+    },
+    {
+      "request_id": "synthetic-r2",
+      "prompt_id": "synthetic-p2",
+      "batch_id": "synthetic-b3",
+      "batch_size": 3,
+      "slot": 2,
+      "status": "missing"
+    }
+  ]
+}

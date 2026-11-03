@@ -1,0 +1,204 @@
+{
+  "time_utc": "2026-10-25T15:54:37.533860+00:00",
+  "scope": "ROOT completeI1I2fixsourceappend49204B+3actualdiffs read; syntax/pins/unchangedinitialreview/reportprefix verified",
+  "eight_source_pins": {
+    "rl/learner/handoff_stream.py": "ac3452d915f05c0bba8338b70d185c5a293443cf29df113f9c86d4e54be3e44d",
+    "rl/learner/handoff_protocol.py": "d8272d496eb95ee28d5029044c8a51645224c7b3ed399c5fba54d515d141842d",
+    "rl/learner/state_handoff.py": "8ebe358deab1c02981c546870f85c39d236f31cefb4ac8290e5cbaa88c3ac4c6",
+    "rl/learner/train.py": "4293dd0ff5ac658f5f56e56573f616214cc74a8fbdde4492f67e65cef7d9c3b3",
+    "rl/learner/tests/test_stream_handoff.py": "8a52b21d7ed8b75792273d779b6ffbe16e35e38837ae49e00259a3406f20dabb",
+    "rl/learner/tests/handoff_worker.py": "10d1e21ca458a33c444ca7009e264b62a774df187f67e069f1d32cd51ce36c55",
+    "scripts/test_ram_handoff_cpu.py": "5a4fc147e0b8ed02c6a02bbbf33a307b86acf6c7a1a539a49090ab86c95c410c",
+    "rl/learner/README.md": "06f051e30d94b2d954a2372a8b3a5224dd30473b592f2055f063609294492aa9"
+  },
+  "seven_AST_before_format": {
+    "rl/learner/handoff_stream.py": "1500467c3059d12d6afd0a821170a0e4fde9047226cbf4a8f96eacd5da65b119",
+    "rl/learner/handoff_protocol.py": "4173d5acac8e9612718ee0666e61626e18b186c64d5b5a5754ccbc14cb6e819e",
+    "rl/learner/state_handoff.py": "77f8d26f19f7e018f7eff39e37a101d8261aaf96d748950f69e019c183367c87",
+    "rl/learner/train.py": "1f49815f789ed09bf66a1d7c31019d2130e43ab0c47e45274038723d1b82f398",
+    "rl/learner/tests/test_stream_handoff.py": "8822b336691c2c637809fc7b46e3939563daebeae4da77605d7254ed88990cc1",
+    "rl/learner/tests/handoff_worker.py": "4cce9089d55b27e63be99ae918f3f63efdfef307d622583713145953c4ba0af1",
+    "scripts/test_ram_handoff_cpu.py": "67a7fef650e9d691a9c92622ea7db5689a58e88f57e9966b330c844a8859d955"
+  },
+  "phase_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 277999
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-brief.md",
+      "bytes": 11645
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-commit-manifest.json",
+      "bytes": 2686
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-fix1-brief.md",
+      "bytes": 7548
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-report.md",
+      "bytes": 49204
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-review-brief.md",
+      "bytes": 5270
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-review.diff",
+      "bytes": 117892
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-review.md",
+      "bytes": 13591
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 90261
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 20048
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-29.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-29.json",
+      "bytes": 1225
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream-supervisor.log",
+      "bytes": 148
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream.json",
+      "bytes": 7929
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream.log",
+      "bytes": 7468
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format-v2.log",
+      "bytes": 400
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format-v3.log",
+      "bytes": 177
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format.log",
+      "bytes": 1054
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-lint-v2.log",
+      "bytes": 2760
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-lint-v3.log",
+      "bytes": 375
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-CPU-gate.json",
+      "bytes": 5382
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-host-end-audit.json",
+      "bytes": 2202
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-preservation-before-source.json",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-preservation-host-after-CPU.json",
+      "bytes": 2642
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-result-scratch-cleanup.json",
+      "bytes": 2954
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-source-static-gate.json",
+      "bytes": 4496
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-static-v2-gate.json",
+      "bytes": 1194
+    },
+    {
+      "path": "docs/evidence/rl-serial-state-handoff-review.md",
+      "bytes": 13591
+    },
+    {
+      "path": "docs/evidence/rl-serial-state-handoff.md",
+      "bytes": 5584
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 19583
+    },
+    {
+      "path": "rl/learner/handoff_protocol.py",
+      "bytes": 24332
+    },
+    {
+      "path": "rl/learner/handoff_stream.py",
+      "bytes": 22384
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 46366
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 10407
+    },
+    {
+      "path": "rl/learner/tests/test_stream_handoff.py",
+      "bytes": 30858
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 20819
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 14811
+    }
+  ],
+  "phase_retained": 847827,
+  "remaining_upperbounds": {
+    "static_logs": 65536,
+    "CPU_logs": 786432,
+    "review_package": 65536,
+    "re_review": 16000,
+    "root_metadata_git": 100000
+  },
+  "phase_forecast": 1881331,
+  "resource_sample": {
+    "project_bytes": 13316366065,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306205834,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996205834,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13999205834,
+  "static_only": "once3fileformat then7filecheck/Rayon1/AS1GB/20s/CORE0/32768Bnewexclusivefix1logs",
+  "CPU_authorized": false,
+  "GPU_authorized": false,
+  "fullsize_fit_admitted": false
+}

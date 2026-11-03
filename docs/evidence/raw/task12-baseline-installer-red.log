@@ -1,0 +1,24 @@
+....FF                                                                   [100%]
+=================================== FAILURES ===================================
+____ test_bounded_real_http_download_rejects_wrong_hash_without_publishing _____
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/pytest-of-postedism/pytest-2/test_bounded_real_http_downloa0')
+
+    def test_bounded_real_http_download_rejects_wrong_hash_without_publishing(tmp_path):
+        import http.server
+        import threading
+>       from serving.baseline.prepare_runtime import download_wheel
+E       ImportError: cannot import name 'download_wheel' from 'serving.baseline.prepare_runtime' (/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py)
+
+serving/baseline/prepare_runtime_test.py:58: ImportError
+____________ test_lock_rejects_unreviewed_host_and_duplicate_wheel _____________
+
+    def test_lock_rejects_unreviewed_host_and_duplicate_wheel():
+>       from serving.baseline.prepare_runtime import validate_lock
+E       ImportError: cannot import name 'validate_lock' from 'serving.baseline.prepare_runtime' (/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py)
+
+serving/baseline/prepare_runtime_test.py:92: ImportError
+=========================== short test summary info ============================
+FAILED serving/baseline/prepare_runtime_test.py::test_bounded_real_http_download_rejects_wrong_hash_without_publishing
+FAILED serving/baseline/prepare_runtime_test.py::test_lock_rejects_unreviewed_host_and_duplicate_wheel
+2 failed, 4 passed in 0.03s

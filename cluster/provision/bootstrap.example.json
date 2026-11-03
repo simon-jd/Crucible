@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "role": "slurm-worker",
+  "node_image_id": null,
+  "artifacts": [
+    {
+      "package": "nvidia-driver-570",
+      "version": "570.133.20-0ubuntu1",
+      "file": "artifacts/nvidia-driver-570.deb",
+      "sha256": null
+    },
+    {
+      "package": "mlnx-ofed-kernel-dkms",
+      "version": "24.10-3.2.5.0",
+      "file": "artifacts/ofed.deb",
+      "sha256": null
+    },
+    {
+      "package": "slurm-smd",
+      "version": "25.05.4-1",
+      "file": "artifacts/slurm.deb",
+      "sha256": null
+    },
+    {
+      "package": "enroot",
+      "version": "4.2.1-1",
+      "file": "artifacts/enroot.deb",
+      "sha256": null
+    },
+    {
+      "package": "nvslurm-plugin-pyxis",
+      "version": "0.21.0-1",
+      "file": "artifacts/pyxis.deb",
+      "sha256": null
+    }
+  ],
+  "files": [
+    {
+      "source": "rendered/slurm.conf",
+      "target": "/etc/slurm/slurm.conf",
+      "mode": "0644"
+    },
+    {
+      "source": "rendered/gres.conf",
+      "target": "/etc/slurm/gres.conf",
+      "mode": "0644"
+    },
+    {
+      "source": "rendered/cgroup.conf",
+      "target": "/etc/slurm/cgroup.conf",
+      "mode": "0644"
+    },
+    {
+      "source": "rendered/plugstack.conf",
+      "target": "/etc/slurm/plugstack.conf",
+      "mode": "0644"
+    },
+    {
+      "source": "rendered/enroot.conf",
+      "target": "/etc/enroot/enroot.conf",
+      "mode": "0644"
+    },
+    {
+      "source": "secrets/munge.key",
+      "target": "/etc/munge/munge.key",
+      "mode": "0400",
+      "secret": true
+    },
+    {
+      "source": "rendered/shared.mount",
+      "target": "/etc/systemd/system/shared.mount",
+      "mode": "0644"
+    }
+  ],
+  "notes": "Package names/revisions are site-build candidates; no real .deb/hash is supplied. Add the entire pinned dependency closure (munge, NFS/RDMA tools, DKMS build/kernel dependencies, Python and utilities). Bootstrap rejects null hashes."
+}

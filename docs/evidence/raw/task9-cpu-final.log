@@ -1,0 +1,17 @@
+........................................................................ [ 12%]
+........................................................................ [ 24%]
+........................................................................ [ 37%]
+........................................................................ [ 49%]
+...s................................s..............................s.... [ 61%]
+........................................................................ [ 74%]
+........................................................................ [ 86%]
+........................................................................ [ 98%]
+......                                                                   [100%]
+=========================== short test summary info ============================
+SKIPPED [1] rl/learner/tests/test_grpo.py:5: could not import 'torch': No module named 'torch'
+SKIPPED [1] rl/learner/tests/test_train.py:8: could not import 'torch': No module named 'torch'
+SKIPPED [1] rl/sync/tests/test_sync.py:9: could not import 'torch': No module named 'torch'
+SKIPPED [1] rl/learner/tests/test_train_gpu.py:27: use scripts/test_learner_gpu.sh under the fixed shared lock
+SKIPPED [1] rl/rollout/tests/test_rollout_gpu.py:30: opt in only inside scripts/with_gpu.sh
+SKIPPED [1] rl/sync/tests/test_sync_gpu.py:443: use scripts/test_sync_gpu.sh under fixed GPU guard
+579 passed, 6 skipped in 66.18s (0:01:06)

@@ -1,0 +1,26 @@
+{
+  "status": "inventory only; loan not deleted",
+  "loan_root": ".tmp-task12-sender-phase-go-loan",
+  "root_identity": [
+    ".tmp-task12-sender-phase-go-loan",
+    66307,
+    54801326,
+    4096,
+    16893,
+    7,
+    null
+  ],
+  "entries": 3730,
+  "files": 3464,
+  "unique_file_bytes": 242783895,
+  "pathname_file_bytes": 242783895,
+  "uncompressed_bytes": 738503,
+  "compressed_bytes": 260739,
+  "gzip_sha256": "93a29fb55d8042fc377d4702f8cbacc05696963208f0a61c3fbc580c6cc0bbb5",
+  "json_sha256": "6ff79c3d97562060fc0560f13878aeea58f823e66fd639b349a4940157af21b8",
+  "all_entries_rechecked_before_publish": true,
+  "no_symlinks": true,
+  "cap": 270000,
+  "cap_ruling": "root reallocated106160 bytes from terminal run unused evidence allowance; original160KiB failure retained",
+  "planned_cleanup": "after root ruling recheck exact full set+dev/inode/size/SHA; remove only listed files and empty directories including temporary binary/loan; preserve all raw/source/old replay/runtime/shared caches"
+}

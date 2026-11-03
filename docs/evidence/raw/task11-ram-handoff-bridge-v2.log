@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 46 items
+
+rl/sync/tests/test_phase_bridge.py::test_two_real_cycles_adamw_bf16_reference_packed_receiver rollout worker pid=9 joined exitcode=0
+rollout worker pid=13 joined exitcode=0
+PASSED
+rl/sync/tests/test_phase_bridge.py::test_known_noop_does_not_spawn_or_retire PASSED
+rl/sync/tests/test_phase_bridge.py::test_unexpected_worker_noop_keeps_irreversible_failure PASSED
+rl/sync/tests/test_phase_bridge.py::test_export_unknown_reservation_poison[acquire] PASSED
+rl/sync/tests/test_phase_bridge.py::test_export_unknown_reservation_poison[identity] PASSED
+rl/sync/tests/test_phase_bridge.py::test_export_unknown_reservation_poison[child] PASSED
+rl/sync/tests/test_phase_bridge.py::test_source_close_uncertain_retains_failure_and_reused_fd PASSED
+rl/sync/tests/test_phase_bridge.py::test_extra_parent_weight_holder_blocks_retirement PASSED
+rl/sync/tests/test_phase_bridge.py::test_post_source_close_registration_interrupt_is_poisoned PASSED
+rl/sync/tests/test_phase_bridge.py::test_changed_assets_before_start_cannot_relabel_checkpoint PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[none] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[q_bias] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[k_weight] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[v_weight] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[gate] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[up] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[buffer] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[tie] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[dtype] PASSED
+rl/rollout/tests/test_ram_loader.py::test_all_coordinate_packed_verification[missing] PASSED
+rl/rollout/tests/test_ram_loader.py::test_missing_packed_input_shard_rejected PASSED
+rl/rollout/tests/test_ram_loader.py::test_sealed_checkpoint_relabel_rejected[base_revision] PASSED
+rl/rollout/tests/test_ram_loader.py::test_sealed_checkpoint_relabel_rejected[model_path] PASSED
+rl/rollout/tests/test_ram_loader.py::test_sealed_checkpoint_relabel_rejected[assets] PASSED
+rl/rollout/tests/test_ram_loader.py::test_sealed_checkpoint_relabel_rejected[source_sha256] PASSED
+rl/rollout/tests/test_ram_loader.py::test_sealed_checkpoint_relabel_rejected[contract] PASSED
+rl/rollout/tests/test_ram_loader.py::test_spawn_reduction_outside_start_forbids_broker PASSED
+rl/rollout/tests/test_ram_loader.py::test_actual_loader_rejects_incomplete_tokenizer_pins PASSED
+rl/rollout/tests/test_ram_loader.py::test_ambiguous_start_without_pid_retains_original_handle PASSED
+rl/rollout/tests/test_ram_loader.py::test_real_spawn_serialization_failure_retains_capability PASSED
+rl/rollout/tests/test_ram_loader.py::test_bad_ack_reaps_original_spawn[wrong] PASSED
+rl/rollout/tests/test_ram_loader.py::test_bad_ack_reaps_original_spawn[partial] PASSED
+rl/rollout/tests/test_ram_loader.py::test_bad_ack_reaps_original_spawn[late] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[bytes] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[offset] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[dtype] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[device] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[shape] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[stride] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[alias] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[extra] PASSED
+rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation[cpu] PASSED
+rl/learner/tests/test_stream_handoff.py::test_manifest_allocation_read_boundary_and_no_cuda_queries PASSED
+rl/learner/tests/test_stream_handoff.py::test_destination_allowance_is_checked_before_allocation PASSED
+rl/learner/tests/test_stream_handoff.py::test_stream_real_adamw_consumption_and_fresh_inspect {"kind": "serial-stream-real-adamw", "events": [{"pid": 42, "returncode": 0, "reaped": true, "error": null}, {"stage": "stream-start", "pid": 44, "starttime": 74867344, "source": [1, 1268182], "charge": {"restore": 1002667678, "capture": 1002638848, "vram": 0}}, {"stage": "source-proof", "pid": 44, "child": {"fd_count": 4, "map_count": 345, "source_fds": []}, "parent": {"fd_count": 16, "map_count": 345, "source_fds": [10]}}, {"stage": "source-retired", "pid": 44, "accepted": 0, "weights_slots": 1}, {"stage": "output-granted", "pid": 44, "output": [1, 1273005], "slots": 2}, {"stage": "stream-exit", "pid": 44, "returncode": 0, "reaped": true, "retired": true, "retirement_phase": "retired", "source_close_confirmed": true, "accepted": true}, {"pid": 46, "returncode": 0, "reaped": true, "error": null}], "receipt": {"device": 1, "inode": 1273005, "size": 28830, "sha256": "625c400e66c64087238d1328a751d6217995413012145c5c0f06c493f67d9cf9", "seals": 15, "version": 2, "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}", "cap": 131072, "metadata_cap": 32768, "storage_cap": 8192}, "loss": -0.18994787335395813}
+PASSED
+rl/rollout/tests/test_rpc.py::test_transport_close_error_cannot_skip_owned_process_cleanup PASSED
+
+=============================== warnings summary ===============================
+rl/rollout/tests/test_rpc.py::test_transport_close_error_cannot_skip_owned_process_cleanup
+  /home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=3) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 46 passed, 1 warning in 39.09s ========================

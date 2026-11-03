@@ -1,0 +1,119 @@
+[
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.eval.accuracy",
+      "docs/evidence/raw/task13-round1-fixture-v2-input.json",
+      "--allow-fixture"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "input_sha256": "01b5d3175ebb4b0184d58de8b23bc8ce02a9c5362ef5405f7ac700328ebe41ab",
+    "stderr": "",
+    "output": "docs/evidence/raw/task13-round1-fixture-v2-report.json",
+    "output_sha256": "6fac29aec9c93a6ef8c6265fb03685208c5d806918355d391f45a93e2571bf7d",
+    "summary": {
+      "schema": 2,
+      "rounds": 4,
+      "performance_valid": true,
+      "throughput": {
+        "baseline": {
+          "median": 19.801980198019802,
+          "min": 19.801980198019802,
+          "max": 19.801980198019802
+        },
+        "candidate": {
+          "median": 19.801980198019802,
+          "min": 19.801980198019802,
+          "max": 19.801980198019802
+        }
+      },
+      "accuracy_delta": -0.5,
+      "absolute_accuracy_difference": 0.5,
+      "duration_s": 0.101
+    }
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.eval.accuracy",
+      "docs/evidence/raw/task13-round1-missing-pair-input.json",
+      "--allow-fixture"
+    ],
+    "exit_code": 1,
+    "expected_exit": 1,
+    "input_sha256": "990367c95f10ec481268e547a78068699b2d7581b136c0d197898fb2e391ab2c",
+    "stderr": "invalid evidence (retain original input): run plan IDs/order must exactly match declared source; no missing/duplicate items\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.eval.accuracy",
+      "docs/evidence/raw/task13-round1-observation-covered-input.json",
+      "--allow-fixture"
+    ],
+    "exit_code": 0,
+    "expected_exit": 0,
+    "input_sha256": "beea0c4da0bbfb8e904a5342b8979839de9587ae7e4f1a047c2f27f1f12c140f",
+    "stderr": "",
+    "output": "docs/evidence/raw/task13-round1-observation-covered-report.json",
+    "output_sha256": "082d82fe8aee9a8d72a4b9b800dc906a1eeb4fa023cad371d35fc9c92d819d39",
+    "summary": {
+      "schema": 2,
+      "rounds": 3,
+      "performance_valid": true,
+      "throughput": {
+        "baseline": {
+          "median": 990.0,
+          "min": 990.0,
+          "max": 990.0
+        },
+        "candidate": {
+          "median": 990.0,
+          "min": 990.0,
+          "max": 990.0
+        }
+      },
+      "accuracy_delta": -0.5,
+      "absolute_accuracy_difference": 0.5,
+      "duration_s": 0.2
+    }
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.eval.accuracy",
+      "docs/evidence/raw/task13-round1-observation-uncovered-input.json",
+      "--allow-fixture"
+    ],
+    "exit_code": 1,
+    "expected_exit": 1,
+    "input_sha256": "13edba38881060ac36c600c2df2c1b8c699812b09be9ea58d98b81cf279596e1",
+    "stderr": "invalid evidence (retain original input): non-aborted observation must cover the entire declared schedule\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.eval.accuracy",
+      "docs/evidence/raw/task13-fixture-input.json",
+      "--allow-fixture"
+    ],
+    "exit_code": 1,
+    "expected_exit": 1,
+    "input_sha256": "821251a7472c48da5b866809ac8b34d5c8c697ad3162fb85a16c8e0ccabc4e1f",
+    "stdout": "",
+    "stderr": "invalid evidence (retain original input): schema 2 required: explicit run plan and observation bounds; schema 1 is not inferred\n"
+  }
+]

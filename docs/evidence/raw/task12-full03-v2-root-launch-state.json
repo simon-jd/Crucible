@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-10-25T18:44:36.231051+00:00",
+  "state": "ROOT_SINGLE_ENTRY_COMMITTED_BEFORE_GUARD_CREATION",
+  "execution_count": 1,
+  "automatic_retry": false,
+  "root_original_wrapper_pid": 3061993,
+  "root_original_wrapper_proc_start_ticks": "75162931",
+  "boot_id": "c29103ef-a3e1-4be8-bf6c-3cacf7ec13a9",
+  "original_tool_handle": "pending_exec_tool_return",
+  "fresh_gate_path": "docs/evidence/raw/task12-full03-v2-root-fresh-preflight-20261025.json",
+  "fresh_gate_sha256": "71adc002b2593cfdcc270fd8a845001d155f2df23e3c28350c190255f6b7ab9d",
+  "human_authority_record": "docs/evidence/raw/task12-full03-v2-human-authorization-20261025.json",
+  "proposal_sha256": "c90c71457ea85443b6bb290c72210ccdcc82793c71359620ac796ad7c637b692",
+  "freeze_sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a",
+  "exact_launcher_command": [
+    ".venv/bin/python",
+    "-B",
+    "-c",
+    "from serving.baseline.experiment import launch_full; raise SystemExit(launch_full('docs/evidence/raw/task12-baseline-full-03-proposal-v2.json', 'docs/evidence/raw/task12-baseline-full-03-source-freeze-v2.json'))"
+  ],
+  "frozen_environment_replayed": true,
+  "XDG767_historical_config_only": true,
+  "guard_state": "not_yet_observed",
+  "limits": "$0/offline/fixed flock/4h incl cleanup/14GB/16GB RSS; failure stop, no retry"
+}

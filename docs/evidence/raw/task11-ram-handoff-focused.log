@@ -1,0 +1,106 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 30 items / 1 deselected / 29 selected
+
+rl/learner/tests/test_state_handoff.py::test_original_child_exit_then_fresh_process_adamw_resume {"kind": "actual-cpu-adamw-cross-process-resume", "events": [{"pid": 7, "returncode": 0, "reaped": true, "error": null}, {"pid": 9, "returncode": 0, "reaped": true, "error": null}, {"pid": 11, "returncode": 0, "reaped": true, "error": null}], "receipt": {"device": 1, "inode": 1233836, "size": 17648, "sha256": "1d0ae45d87d8e9816015a3e184ec9eca1beb5f2a8b20bcf13fd0ceb7d202aca4", "seals": 15, "version": 2, "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}", "cap": 131072, "metadata_cap": 32768, "storage_cap": 8192}, "next_loss": -0.18994787335395813}
+PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[name] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[order] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[shape] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[dtype] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[config] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[version] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[schema] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[aliases] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[options] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[cuda_rng] PASSED
+rl/learner/tests/test_state_handoff.py::test_mapping_rejected_before_mutation[state_key] PASSED
+rl/learner/tests/test_state_handoff.py::test_artifact_validation[wrong_fd] PASSED
+rl/learner/tests/test_state_handoff.py::test_artifact_validation[unsealed] PASSED
+rl/learner/tests/test_state_handoff.py::test_artifact_validation[digest] PASSED
+rl/learner/tests/test_state_handoff.py::test_artifact_validation[truncated] PASSED
+rl/learner/tests/test_state_handoff.py::test_cap_and_snapshot_ownership FAILED
+rl/learner/tests/test_state_handoff.py::test_metadata_cap_prevents_buffer_growth PASSED
+rl/learner/tests/test_state_handoff.py::test_serial_stage_budget_requires_mapping_release PASSED
+rl/learner/tests/test_state_handoff.py::test_child_failure_timeout_reaped_and_closed[raise SystemExit(7)-5.0-exited 7] PASSED
+rl/learner/tests/test_state_handoff.py::test_child_failure_timeout_reaped_and_closed[import time; time.sleep(30)-0.15-deadline] PASSED
+rl/learner/tests/test_state_handoff.py::test_child_failure_timeout_reaped_and_closed[import os,signal; os.kill(os.getpid(), signal.SIGTERM)-5.0-exited] PASSED
+rl/learner/tests/test_state_handoff.py::test_child_failure_timeout_reaped_and_closed[import os; os.write(int(os.environ['CRUCIBLE_HANDOFF_FD']), b'bad')-5.0-seal] PASSED
+rl/learner/tests/test_state_handoff.py::test_restore_failure_poisoned_phase PASSED
+rl/learner/tests/test_state_handoff.py::test_foreign_process_survives_owned_timeout PASSED
+rl/learner/tests/test_state_handoff.py::test_restore_primary_and_cleanup_causes PASSED
+rl/learner/tests/test_state_handoff.py::test_sgd_resume_and_capture_phase_boundaries PASSED
+rl/learner/tests/test_state_handoff.py::test_world1_cpu_dtensor_capture_restore {"kind": "world1-cpu-gloo-dtensor-only", "events": [{"pid": 18, "returncode": 0, "reaped": true, "error": null}, {"pid": 23, "returncode": 0, "reaped": true, "error": null}]}
+PASSED
+rl/learner/tests/test_train.py::test_executing_phase_cannot_be_reentered_or_published PASSED
+
+=================================== FAILURES ===================================
+_______________________ test_cap_and_snapshot_ownership ________________________
+
+    def test_cap_and_snapshot_ownership():
+        learner = make_learner()
+        fd = os.memfd_create("cap-test", os.MFD_ALLOW_SEALING | os.MFD_CLOEXEC)
+        try:
+            with pytest.raises(ValueError, match="cap"):
+                capture_ready_learner(learner, fd, binding=BINDING, budget=CaptureBudget(16, 0))
+            assert os.fstat(fd).st_size == 0
+            writer = _BoundedWriter(4, fd)
+            writer.write(b"123")
+            with pytest.raises(ValueError, match="before write"):
+                writer.write(b"45")
+            assert os.fstat(fd).st_size == 3
+        finally:
+            os.close(fd)
+        with pytest.raises(ValueError, match="RAM"):
+>           CaptureBudget(CAP, 2_000_000_000, ram_limit=2_000_000_000).check(CAP, CAP)
+
+rl/learner/tests/test_state_handoff.py:246: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = CaptureBudget(max_bytes=131072, other_resident_bytes=2000000000, retained_snapshot_bytes=0, mapped_bytes=0, ram_limit=2000000000, metadata_cap=32768, storage_cap=8192)
+payload_bytes = 131072, largest_storage = 131072
+
+    def check(self, payload_bytes, largest_storage):
+        for key, value in asdict(self).items():
+            _integer(value, key)
+        if (
+            not 0 < self.max_bytes
+            or not 0 < self.ram_limit <= MAX_RAM
+            or not 0 < self.metadata_cap <= 8_000_000
+            or self.storage_cap <= 0
+        ):
+            raise ValueError("invalid RAM/capture limit")
+        if largest_storage > self.storage_cap:
+>           raise ValueError("single-storage staging cap exceeded")
+E           ValueError: single-storage staging cap exceeded
+
+rl/learner/state_handoff.py:126: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_cap_and_snapshot_ownership():
+        learner = make_learner()
+        fd = os.memfd_create("cap-test", os.MFD_ALLOW_SEALING | os.MFD_CLOEXEC)
+        try:
+            with pytest.raises(ValueError, match="cap"):
+                capture_ready_learner(learner, fd, binding=BINDING, budget=CaptureBudget(16, 0))
+            assert os.fstat(fd).st_size == 0
+            writer = _BoundedWriter(4, fd)
+            writer.write(b"123")
+            with pytest.raises(ValueError, match="before write"):
+                writer.write(b"45")
+            assert os.fstat(fd).st_size == 3
+        finally:
+            os.close(fd)
+>       with pytest.raises(ValueError, match="RAM"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'RAM'
+E        Input: 'single-storage staging cap exceeded'
+
+rl/learner/tests/test_state_handoff.py:245: AssertionError
+=========================== short test summary info ============================
+FAILED rl/learner/tests/test_state_handoff.py::test_cap_and_snapshot_ownership
+================= 1 failed, 28 passed, 1 deselected in 10.69s ==================

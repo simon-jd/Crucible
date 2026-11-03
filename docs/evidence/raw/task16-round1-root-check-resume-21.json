@@ -1,0 +1,38 @@
+{
+  "time_utc": "2026-10-24T23:57:46.975423+00:00",
+  "head": "ce021cd5ece781393dc812f24f30b2aaa6dcd8a7",
+  "task_paths": [
+    "docs/evidence/raw/task16-round1-accounting.json",
+    "docs/evidence/raw/task16-round1-cleanup.json",
+    "docs/evidence/raw/task16-round1-cli-final.log",
+    "docs/evidence/raw/task16-round1-closure.json",
+    "docs/evidence/raw/task16-round1-focused-green.log",
+    "docs/evidence/raw/task16-round1-format-final.log",
+    "docs/evidence/raw/task16-round1-format-write.log",
+    "docs/evidence/raw/task16-round1-i1-green.log",
+    "docs/evidence/raw/task16-round1-i1-red.log",
+    "docs/evidence/raw/task16-round1-i2-green.log",
+    "docs/evidence/raw/task16-round1-i2-red.log",
+    "docs/evidence/raw/task16-round1-lint-final.log",
+    "docs/evidence/raw/task16-round1-resource-precommit.json",
+    "docs/evidence/raw/task16-round1-resource-start.json",
+    "docs/evidence/raw/task16-round1-tests-final.log",
+    "reports/repro/README.md",
+    "scripts/check_report_numbers.py",
+    "scripts/tests/test_check_report_numbers.py"
+  ],
+  "package": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-16-round1-review.diff",
+  "package_bytes": 142126,
+  "package_sha256": "e2e802dc4e917d9854fbc9d1ffa4465fe4f72d572a0de186f53b227d6aba3d7e",
+  "maintained_sha256": {
+    "reports/repro/README.md": "df2d59aa43b8bd9dae9ffdeb5d88c55c942a67609eeb1917a9e09b3f3be43c90",
+    "scripts/check_report_numbers.py": "6dd01382e810dcf27d01cad2af004767b5d4181b850f5398afe0c605e101381d",
+    "scripts/tests/test_check_report_numbers.py": "7aadb1ce14f8d3f714988d5ee11e2a80e690edbdc1ac9ea1143464cbe75546dc"
+  },
+  "task12_frozen_sources": 176,
+  "task12_frozen_artifacts": 58,
+  "task12_executables": 4,
+  "task12_mismatches": [],
+  "task12_freeze_sha256": "43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761",
+  "scope": "read-only post-fix identity checks; no tests/native/model-content reads/GPU launch"
+}

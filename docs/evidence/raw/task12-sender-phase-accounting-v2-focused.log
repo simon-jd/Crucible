@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 10 items
+
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_growing_loan_does_not_mix_canonical_minus_stale_owned PASSED [ 10%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_hidden_siblings_hardlinks_and_symlinks PASSED [ 20%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_only_verified_exact_owned_root_can_be_pruned[symlink] PASSED [ 30%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_only_verified_exact_owned_root_can_be_pruned[wrong-name] PASSED [ 40%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_transient_nonloan_enoent_restarts_whole_scan PASSED [ 50%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_rescan_limit_and_other_errors_propagate[nonloan-error0-3] PASSED [ 60%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_rescan_limit_and_other_errors_propagate[nonloan-error1-1] PASSED [ 70%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_rescan_limit_and_other_errors_propagate[nonloan-error2-1] PASSED [ 80%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_rescan_limit_and_other_errors_propagate[leader-error3-1] PASSED [ 90%]
+docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py::test_full_canonical_cap_is_independent PASSED [100%]
+
+============================== 10 passed in 0.06s ==============================

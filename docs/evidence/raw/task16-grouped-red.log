@@ -1,0 +1,18 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________________ test_grouped_unit_literal_is_indivisible ___________________
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-fixtures-group-red/test_grouped_unit_literal_is_i0')
+
+    def test_grouped_unit_literal_is_indivisible(project):
+        source = project / "docs/evidence/source.md"
+        source.write_text("## Results\n7,409,397,760B\n999B\n", encoding="utf-8")
+        assert errors(project, f"7,409,397,760B {CITE}") == []
+>       assert errors(project, f"7,409,397,999B {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-fixtures-group-red/test_grouped_unit_literal_is_i0'), '7,409,397,999B [evidence: docs/evidence/source.md#results]')
+
+scripts/tests/test_check_report_numbers.py:178: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_check_report_numbers.py::test_grouped_unit_literal_is_indivisible
+1 failed, 22 deselected in 0.03s

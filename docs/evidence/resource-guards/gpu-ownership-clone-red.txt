@@ -1,0 +1,40 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_ownership_shim_kernel_proof_includes_non_sigchld_clone_children _____
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x713180c90e90>
+capsys = <_pytest.capture.CaptureFixture object at 0x713180c91040>
+
+    def test_ownership_shim_kernel_proof_includes_non_sigchld_clone_children(monkeypatch, capsys):
+        state = ownership_shim(monkeypatch, worker=True)
+        original = gpu_guard.os.waitid
+        monkeypatch.setattr(gpu_guard, "_own_children", lambda: (
+            {71001} if state.started and not state.reaped else set()))
+
+        def peek(kind, pid, flags):
+            if kind == os.P_ALL and state.reaped and not flags & 0x40000000:  # Linux __WALL
+                raise ChildProcessError("shim: default wait hides live non-SIGCHLD clone child")
+            return original(kind, pid, flags)
+
+        def reap(pid, flags):
+            assert pid == 71001
+            state.reaped = True
+            return pid, 0
+
+        def advance(seconds):
+            state.clock += seconds
+            if state.clock > 1.1:
+                assert "cleanup_unconfirmed" in capsys.readouterr().err
+                raise StopQuarantine
+
+        monkeypatch.setattr(gpu_guard.os, "waitid", peek)
+        monkeypatch.setattr(gpu_guard.os, "waitpid", reap)
+        monkeypatch.setattr(gpu_guard.time, "sleep", advance)
+>       with pytest.raises(StopQuarantine):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'test_gpu_guard.StopQuarantine'>
+
+scripts/tests/test_gpu_guard.py:378: Failed
+=========================== short test summary info ============================
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_kernel_proof_includes_non_sigchld_clone_children
+1 failed, 22 deselected in 0.03s

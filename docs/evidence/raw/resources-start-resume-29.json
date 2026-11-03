@@ -1,0 +1,29 @@
+{
+  "time_utc": "2026-10-25T14:49:40.061599+00:00",
+  "scope": "continuation29 freshstart after actualCPUhandoff+fix1+Approved/localcommits; no livehandles",
+  "sample": {
+    "project_bytes": 13315902650,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305742419,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995742419,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "new_phase_retained_cap": 2000000,
+  "new_CPU_scratch_cap": 1000000,
+  "existing_allowances": "unchanged690M total; retainedclient10160231inside500M; remainingfuture679839769B; loanNOTrepaid",
+  "conservative_projection_plus3M": 13998742419,
+  "estimated_cloud_API_GPU_rental_USD": 0,
+  "new_GPU_authorized": false,
+  "fullsize_fit_admitted": false,
+  "new_downloads": 0,
+  "new_checkpoints": 0,
+  "experimental_services": 0,
+  "previous_turn_classification": "PROGRESS: d0e7420+4027883 source/realCPU/tests+independentApproved and764d749metadata; not wait/no-progress",
+  "Goal": "active originalfullscope"
+}

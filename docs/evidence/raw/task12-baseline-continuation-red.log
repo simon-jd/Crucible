@@ -1,0 +1,16 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_explicit_continuation_requires_exact_prefix_and_installed_metadata ____
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/pytest-of-postedism/pytest-10/test_explicit_continuation_req0')
+
+    def test_explicit_continuation_requires_exact_prefix_and_installed_metadata(tmp_path):
+        import base64
+    
+>       from serving.baseline.prepare_runtime import sha256, verify_completed_prefix
+E       ImportError: cannot import name 'verify_completed_prefix' from 'serving.baseline.prepare_runtime' (/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py)
+
+serving/baseline/prepare_runtime_test.py:147: ImportError
+=========================== short test summary info ============================
+FAILED serving/baseline/prepare_runtime_test.py::test_explicit_continuation_requires_exact_prefix_and_installed_metadata
+1 failed, 7 deselected in 0.03s

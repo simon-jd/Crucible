@@ -1,0 +1,171 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "sources": {
+    "serving/baseline/prepare_runtime.py": "81f5f3f23547c8b38016576d92420e7b0843e0e6e92c8afac5c59cc669823af6",
+    "scripts/resource_preflight.py": "89deb73ca9915555f2efcabd5ede65bc36347fb729c666c64f8efc8533ec1d23"
+  },
+  "uv_sha256": "abdc39eab8b4ad341dca91f3823a23a343fae94bdb22ebdd9e91694415206f2f",
+  "python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+  "project_initial": 10403160252,
+  "wheels": [
+    {
+      "name": "sgl-kernel",
+      "target_unique_bytes": 1615702795,
+      "download": {
+        "bytes": 511436168,
+        "sha256": "3a81ecd6398ec0878f0992bbc7fe9434627cd93d8240808d396c2385f8021c8f",
+        "seconds": 56.478881735005416
+      },
+      "install": {
+        "command": [
+          "uv",
+          "--no-config",
+          "--no-python-downloads",
+          "--offline",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary",
+          ":all:",
+          "--link-mode",
+          "hardlink",
+          "--python",
+          "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+          "--target",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+          "-r",
+          "/home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-00/tmp/wheel-requirement.txt"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 1ms\nPrepared 1 package in 2.49s\nInstalled 1 package in 10ms\n + sgl-kernel==0.3.16.post5 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/wheel-stage-00/sgl_kernel-0.3.16.post5-cp310-abi3-manylinux2014_x86_64.whl)\n",
+        "project_before": 10914597358,
+        "project_after": 12530416714,
+        "hardlinks": {
+          "linked_payload_bytes": 1592565832,
+          "files": [
+            {
+              "path": "_mscclpp.cpython-310-x86_64-linux-gnu.so",
+              "device": 66307,
+              "inode": 56144964,
+              "links": 2,
+              "bytes": 3840312
+            },
+            {
+              "path": "deep_gemm/include/cute/arch/mma_sm90_gmma_ext.hpp",
+              "device": 66307,
+              "inode": 56145011,
+              "links": 2,
+              "bytes": 2785259
+            },
+            {
+              "path": "deep_gemm/include/cute/arch/mma_sm90_gmma_sparse_ext.hpp",
+              "device": 66307,
+              "inode": 56145013,
+              "links": 2,
+              "bytes": 2932673
+            },
+            {
+              "path": "lib/libmscclpp_nccl_static.a",
+              "device": 66307,
+              "inode": 56145937,
+              "links": 2,
+              "bytes": 6416606
+            },
+            {
+              "path": "lib/libmscclpp_static.a",
+              "device": 66307,
+              "inode": 56145938,
+              "links": 2,
+              "bytes": 4556422
+            },
+            {
+              "path": "lib/mscclpp.so",
+              "device": 66307,
+              "inode": 56145939,
+              "links": 2,
+              "bytes": 3612528
+            },
+            {
+              "path": "lib/mscclpp.so.0",
+              "device": 66307,
+              "inode": 56145940,
+              "links": 2,
+              "bytes": 3612528
+            },
+            {
+              "path": "lib/mscclpp.so.0.6.0",
+              "device": 66307,
+              "inode": 56145941,
+              "links": 2,
+              "bytes": 3612528
+            },
+            {
+              "path": "lib/mscclpp_nccl.so",
+              "device": 66307,
+              "inode": 56145942,
+              "links": 2,
+              "bytes": 5457112
+            },
+            {
+              "path": "lib/mscclpp_nccl.so.0",
+              "device": 66307,
+              "inode": 56145943,
+              "links": 2,
+              "bytes": 5457112
+            },
+            {
+              "path": "lib/mscclpp_nccl.so.0.6.0",
+              "device": 66307,
+              "inode": 56145944,
+              "links": 2,
+              "bytes": 5457112
+            },
+            {
+              "path": "sgl_kernel/flash_ops.abi3.so",
+              "device": 66307,
+              "inode": 56145961,
+              "links": 2,
+              "bytes": 852276104
+            },
+            {
+              "path": "sgl_kernel/flashmla_ops.abi3.so",
+              "device": 66307,
+              "inode": 56145962,
+              "links": 2,
+              "bytes": 5980944
+            },
+            {
+              "path": "sgl_kernel/sm100/common_ops.abi3.so",
+              "device": 66307,
+              "inode": 56145979,
+              "links": 2,
+              "bytes": 348445256
+            },
+            {
+              "path": "sgl_kernel/sm90/common_ops.abi3.so",
+              "device": 66307,
+              "inode": 56145981,
+              "links": 2,
+              "bytes": 338123336
+            }
+          ]
+        }
+      },
+      "record": {
+        "hashed_files": 992,
+        "hashed_bytes": 1615587764,
+        "unhashed_files": [
+          "sgl_kernel-0.3.16.post5.dist-info/RECORD"
+        ]
+      },
+      "record_sha256": "90662b973da476390bdc6a11d820a5851d4e7f52b27de649e37a8380de00bb21",
+      "project_after_stage_cleanup": 12018863613
+    }
+  ],
+  "status": "failed",
+  "error": "ValueError('payload inode not hardlinked from cache: flashinfer_cubin-0.5.0.dist-info/RECORD')",
+  "project_final": 12511481736
+}

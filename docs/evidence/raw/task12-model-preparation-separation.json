@@ -1,0 +1,15 @@
+{
+  "abi_handle": 68892,
+  "abi_state": "live queued at last authoritative poll",
+  "freeze_sha256": "72e0f7d62f8aed6bcb12c2093a8326e160fc4b63c207b4e86c1fcb780f5fa021",
+  "frozen_sources_verified": 128,
+  "frozen_artifacts_verified": 7,
+  "new_files": [
+    "serving/baseline/model_snapshot.py",
+    "serving/baseline/model_snapshot_test.py",
+    "serving/baseline/model-files.json",
+    "serving/baseline/model-manifest.schema.json",
+    "serving/baseline/model-README.md"
+  ],
+  "overlap": []
+}

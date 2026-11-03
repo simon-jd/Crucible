@@ -1,0 +1,57 @@
+{
+  "time_utc": "2026-10-25T17:53:07.275745+00:00",
+  "scope": "ROOT exactfixture-only3path/static-v3 prerequisite; noCPU authorization",
+  "source_pins": {
+    "rl/sync/tests/test_phase_bridge.py": "a207a953d3e92ba06b649ad0bad8eabec126cdfbcc2d9f0328e4ce86e6c5668a",
+    "rl/rollout/tests/test_ram_loader.py": "df164f7054dfdc247e4d526b16339c650ee60c48d1b2c3914af3df8b76371339",
+    "scripts/test_ram_handoff_cpu.py": "1ac5e0bef7bd9aff0a7d34f8d8d39893c3fda699f64efd42cfccd5a5f5ac7248"
+  },
+  "other22_executed_pins_unchanged": true,
+  "tests_AST_except_new_fixture_and_hashlib_unchanged": true,
+  "report_prior30281_and9998_immutable": true,
+  "strict_no_symlink_guard_unchanged": true,
+  "phase_retained": 675303,
+  "remaining_upperbounds": {
+    "static_unused": 126399,
+    "CPU_new_three_logs": 786432,
+    "review_package": 200000,
+    "independent_review": 16000,
+    "report_to45000": 10289,
+    "rootmetadata_git": 100000
+  },
+  "phase_forecast": 1914423,
+  "resource": {
+    "project_bytes": 13316853855,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306693624,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996693624,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13999693624,
+  "new_paths_absent": [
+    "docs/evidence/raw/task11-bridge-format-v3.log",
+    "docs/evidence/raw/task11-bridge-lint-v3.log",
+    ".cache/task11-ram-handoff",
+    "docs/evidence/raw/task11-ram-handoff-bridge-v2.log",
+    "docs/evidence/raw/task11-ram-handoff-bridge-v2.json",
+    "docs/evidence/raw/task11-ram-handoff-bridge-v2-supervisor.log"
+  ],
+  "static_limits": {
+    "seconds_each": 20,
+    "AS": 1000000000,
+    "CORE": 0,
+    "FSIZE_each": 32768,
+    "RAYON_NUM_THREADS": 1
+  },
+  "once_format_then_lint": [
+    "rl/sync/tests/test_phase_bridge.py",
+    "rl/rollout/tests/test_ram_loader.py",
+    "scripts/test_ram_handoff_cpu.py"
+  ]
+}

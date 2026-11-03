@@ -1,0 +1,37 @@
+{
+  "confirmed_terminal_guard_session": 95995,
+  "guard_exitcode": 0,
+  "source_pids": [
+    3518363
+  ],
+  "reference_pids": [
+    3645206,
+    3645476,
+    3812780
+  ],
+  "worker_pids": [
+    3519043,
+    3645792,
+    3646331,
+    3646833,
+    3647349,
+    3814235,
+    3817609
+  ],
+  "all_owned_processes_observed_joined": true,
+  "verified_snapshot_digests": {
+    "7": "9eee1e3b599f57c1368bb29a336a132e913b22c70de714a47e7355671a9d3f51",
+    "8": "4d3edc9fbfe4b97581ed36a523b4a1e48a1283f08ed539e281f1ba4c8b640e27"
+  },
+  "removed_owned_directory": "/home/postedism/Desktop/Crucible/.cache/task9/acceptance",
+  "removed_logical_bytes": 2013921599,
+  "retained_snapshots": 0,
+  "owned_resident_services": 0,
+  "preserved": [
+    "original logs",
+    "source report",
+    "exact manifest contents",
+    "full logit arrays"
+  ],
+  "shared_HF_and_Task14_caches_untouched": true
+}

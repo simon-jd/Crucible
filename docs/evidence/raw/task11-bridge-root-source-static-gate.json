@@ -1,0 +1,218 @@
+{
+  "time_utc": "2026-10-25T17:36:10.828729+00:00",
+  "scope": "ROOT completefinalsource/report+Python3.12AST sourcegate; no project nativeimport/workload",
+  "fourteen_files": {
+    "rl/learner/handoff_stream.py": {
+      "bytes": 23210,
+      "sha256": "30ce5f1c8081a80dd2bd390e7d3487c33675b832c52b00be1529a80e2e7e556e"
+    },
+    "rl/rollout/_worker.py": {
+      "bytes": 19848,
+      "sha256": "621057254cb3fb70e63865ecbeca1c6c2a3697e73d7032fea8bb080a47a58644"
+    },
+    "rl/sync/ram_weights.py": {
+      "bytes": 16091,
+      "sha256": "467651221fff9b4d5f62ce770b543d893f2097fb1d882f8fe1c2a69b05338d90"
+    },
+    "rl/sync/ram_export.py": {
+      "bytes": 4307,
+      "sha256": "288a58787b88c8bcc6ca8a903974549b497cb8ef1e7a4e17e08dddc947303aa2"
+    },
+    "rl/sync/phase_bridge.py": {
+      "bytes": 14487,
+      "sha256": "4706dbdb5d24fb286d6b8031e54876529d1d11e008130ae91e9158262e2a793c"
+    },
+    "rl/rollout/ram_loader.py": {
+      "bytes": 9053,
+      "sha256": "009cc353b17a9662cb78b861b646c22a19ae0f5d14996e2a798f8b8678fdaaf8"
+    },
+    "rl/sync/tests/ram_worker.py": {
+      "bytes": 7669,
+      "sha256": "1e60f5beb7d97c4ccb421ff094aba753626dcaa1f869a18a51a58b1e40bf1e4e"
+    },
+    "rl/sync/tests/test_ram_weights.py": {
+      "bytes": 7511,
+      "sha256": "278d8eaa349f97a655331c0201bc8024eb843420ab783694cb03f1d0defe1fec"
+    },
+    "rl/sync/tests/test_phase_bridge.py": {
+      "bytes": 8069,
+      "sha256": "881919c6072a399cd446a7a9404836db1e97d65156b5bd2a9a3346df647cfb2e"
+    },
+    "rl/rollout/tests/test_ram_loader.py": {
+      "bytes": 7225,
+      "sha256": "b344cc14bc9c6a82dfcb2121cf4bdc27439e7a391dc784e2da88be6d195a8a84"
+    },
+    "scripts/test_ram_handoff_cpu.py": {
+      "bytes": 16546,
+      "sha256": "97a0d8cdab902ac6242be1b61f9d90cb7f1adb566c78df8d007302a873d3c8c5"
+    },
+    "rl/learner/README.md": {
+      "bytes": 20110,
+      "sha256": "0841c8efcc9fcb29089ffc0cb90e2a01054454ecf593aca8a6bfd3869336edc8"
+    },
+    "rl/sync/README.md": {
+      "bytes": 11045,
+      "sha256": "860bbe3cd888c457869604a0093f6220fad951738f8fc008ef6a8581f80e5a4d"
+    },
+    "rl/rollout/README.md": {
+      "bytes": 8462,
+      "sha256": "58fca9a1c586caaa83e572f2e9dcee1afb2462c0dc14eb19307115614139e994"
+    }
+  },
+  "eleven_AST": {
+    "rl/learner/handoff_stream.py": "deb78b6179b36cdb63471e08ac1d398c4f0fc81277632d8cdd9db4b6f6d07500",
+    "rl/rollout/_worker.py": "ef4b2a2d287cf9645d7f747abc57021c16de626ec7a696783636009d14eb139b",
+    "rl/sync/ram_weights.py": "f084dec11845fe36af912b439d42cee1bee5733ae21aff7e1f9c8896a9286462",
+    "rl/sync/ram_export.py": "6354fcaf3cdcf63e101a2f9329ad8024b1acab03a6cc2b45e0a23a2155d926c7",
+    "rl/sync/phase_bridge.py": "b008521c9cba39d781f7100b458f79e2700b100a0ace006586d8aabd395286f1",
+    "rl/rollout/ram_loader.py": "7ef947e90a0b2d1c825ab03a6e9fa0219ab6e773a0254e5c2251438fc1d58a26",
+    "rl/sync/tests/ram_worker.py": "553999d342a7f93b4e5c81097dfefd526c352d00e563e732dbab12a84d5c7915",
+    "rl/sync/tests/test_ram_weights.py": "fb42a96cb54bd7c05c337b0266d864e06c426135fcafe5bee54d354b03258dba",
+    "rl/sync/tests/test_phase_bridge.py": "e50be24dc5c34b2782c9d1554c4633477ff4de8eb6f974905150d62094b0fa2c",
+    "rl/rollout/tests/test_ram_loader.py": "8bbff12151663bee06ad460da5fc7b74614a122882069b20341eb3c891d98025",
+    "scripts/test_ram_handoff_cpu.py": "41dd4878eb46af1d4b2cfc53f38e29fcc325f4577758acacc560def59b8041a8"
+  },
+  "interpreter": "3.12.13",
+  "initial9998Breportprefix_preserved": true,
+  "report_bytes": 22019,
+  "frozen_overlap": [],
+  "phase_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 283421
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-phase-bridge-brief.md",
+      "bytes": 11881
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-phase-bridge-report.md",
+      "bytes": 22019
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 93826
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 20836
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-30.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-30.json",
+      "bytes": 1045
+    },
+    {
+      "path": "docs/evidence/raw/task11-bridge-root-preservation-before-source.json",
+      "bytes": 564
+    },
+    {
+      "path": "docs/evidence/raw/task11-bridge-root-source-authorization.json",
+      "bytes": 1132
+    },
+    {
+      "path": "docs/evidence/rl-phase-bridge.md",
+      "bytes": 2871
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 20110
+    },
+    {
+      "path": "rl/learner/handoff_stream.py",
+      "bytes": 23210
+    },
+    {
+      "path": "rl/rollout/README.md",
+      "bytes": 8462
+    },
+    {
+      "path": "rl/rollout/_worker.py",
+      "bytes": 19848
+    },
+    {
+      "path": "rl/rollout/ram_loader.py",
+      "bytes": 9053
+    },
+    {
+      "path": "rl/rollout/tests/test_ram_loader.py",
+      "bytes": 7225
+    },
+    {
+      "path": "rl/sync/README.md",
+      "bytes": 11045
+    },
+    {
+      "path": "rl/sync/phase_bridge.py",
+      "bytes": 14487
+    },
+    {
+      "path": "rl/sync/ram_export.py",
+      "bytes": 4307
+    },
+    {
+      "path": "rl/sync/ram_weights.py",
+      "bytes": 16091
+    },
+    {
+      "path": "rl/sync/tests/ram_worker.py",
+      "bytes": 7669
+    },
+    {
+      "path": "rl/sync/tests/test_phase_bridge.py",
+      "bytes": 8069
+    },
+    {
+      "path": "rl/sync/tests/test_ram_weights.py",
+      "bytes": 7511
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 16546
+    }
+  ],
+  "phase_retained": 612672,
+  "remaining_upperbounds": {
+    "staticlogs": 131072,
+    "CPU_three_logs": 786432,
+    "review_package": 200000,
+    "independentreview": 16000,
+    "rootmetadata_git": 100000
+  },
+  "phase_forecast": 1846176,
+  "resource_sample": {
+    "project_bytes": 13316790744,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306630513,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996630513,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13999630513,
+  "authorized_next": "onceformat11thenlint11 only; stoponanynonzero; samewriter no test/GPU/Git",
+  "static_limits": {
+    "seconds_each": 20,
+    "AS": 1000000000,
+    "core": 0,
+    "FSIZE_each": 65536,
+    "RAYON_NUM_THREADS": "1"
+  },
+  "newlogs": [
+    "docs/evidence/raw/task11-bridge-format.log",
+    "docs/evidence/raw/task11-bridge-lint.log"
+  ],
+  "expected_CPU_cases_not_run": 66,
+  "Goal": "active/fullscopeOPEN"
+}

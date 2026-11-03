@@ -1,0 +1,46 @@
+{
+  "time_utc": "2026-10-25T18:13:06.596213+00:00",
+  "scope": "ROOT postfailedstatic complete3truncatedsource copies BEFORE repair; noCPU/Torch/GPU",
+  "failure": "RLIMIT_FSIZE8192 applied to Ruff directsource rewrite; each3source truncated8192; ROOTselected wrongprocesslimit",
+  "original_format_exit": 2,
+  "lint_started": false,
+  "production_unchanged": true,
+  "inventory": [
+    {
+      "source": "rl/sync/tests/test_phase_bridge.py",
+      "source_lstat": {
+        "dev": 66307,
+        "inode": 55596507,
+        "size": 8192
+      },
+      "preserved_copy": "docs/evidence/raw/task11-bridge-fix1-format-truncated-tests.bin",
+      "bytes": 8192,
+      "sha256": "443425b83884d674ec34a679a6be67fc54b046e0400a477de24f28535dfcef34"
+    },
+    {
+      "source": "rl/sync/tests/ram_worker.py",
+      "source_lstat": {
+        "dev": 66307,
+        "inode": 55596490,
+        "size": 8192
+      },
+      "preserved_copy": "docs/evidence/raw/task11-bridge-fix1-format-truncated-worker.bin",
+      "bytes": 8192,
+      "sha256": "7e7c5cdcb6d1a1dbbf497504dcd2405c24182223dd2eff6a21358e3c86347ffe"
+    },
+    {
+      "source": "scripts/test_ram_handoff_cpu.py",
+      "source_lstat": {
+        "dev": 66307,
+        "inode": 54046856,
+        "size": 8192
+      },
+      "preserved_copy": "docs/evidence/raw/task11-bridge-fix1-format-truncated-monitor.bin",
+      "bytes": 8192,
+      "sha256": "bf08ebaa8fbce7c679beb47a8aee9081cfbdbb928a6ad8f0005534fdbd982eb5"
+    }
+  ],
+  "retained_bytes": 24576,
+  "ruling": "samewriter restore exact9059b21 threefiles and reapply its own preservedtests-firstpatch; prove original3prepSHA before newlimit change. Newstatic sourceFSIZE32768 and newCPUfile32768/log30000/receipt32768; fourstatic131072+sixCPU196608 total327680 equals earlier294912+32768, stage2M unchanged",
+  "cost_if_wrong": "boundedsource recovery rework; no workload allowed until exacthash+AST+static gates; preserveallfailedbytes"
+}

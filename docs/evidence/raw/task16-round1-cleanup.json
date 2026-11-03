@@ -1,0 +1,1626 @@
+{
+  "fix_base": "5725dd4f58d9120355489686321e724e587e3488",
+  "trees": [
+    {
+      "root": "docs/evidence/raw/task16-round1-fixtures-i1-red",
+      "regular_bytes": 649,
+      "files": [
+        {
+          "path": "test_sentence_period_does_not_0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_sentence_period_does_not_0/draft.md",
+          "bytes": 46,
+          "sha256": "1cb14c87ddc12570e6e05b1f69a12c4630de9b088d149265d0ee0561ec222c06"
+        },
+        {
+          "path": "test_sentence_period_does_not_current",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_does_not_0"
+        },
+        {
+          "path": "test_sentence_period_preserves0/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "d35be88e586adfcd6e5dbb6202a30829a9886ad3cbddf45d9fe7282db6659375"
+        },
+        {
+          "path": "test_sentence_period_preserves1/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "39e3707ee2a7fce5cbc3a1a3fbe0d2cc03272abcbb268e6ef923e48f055d609f"
+        },
+        {
+          "path": "test_sentence_period_preserves10/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves11/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves12/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves13/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves14/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves15/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves16/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves17/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves2/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "3c9716c4b0ccab73ab887749d8ecc7ec85aff33b8cd08d388c7bd534481622d9"
+        },
+        {
+          "path": "test_sentence_period_preserves3/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "3a5e06b25f2829fd6edbf39631643e6b4bfd5f9c98a24b27ff393a7456c2fd35"
+        },
+        {
+          "path": "test_sentence_period_preserves4/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "e4b4b5549c3cf09f2d2e1efb95d35acf1b177dc909095f893220d32bf4c00897"
+        },
+        {
+          "path": "test_sentence_period_preserves5/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "baee4ca78d9e15b33ab6ad10886d2fa3354e283f6ec23278071b8c53db37d1f1"
+        },
+        {
+          "path": "test_sentence_period_preserves6/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves7/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves8/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves9/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preservescurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-red/test_sentence_period_preserves17"
+        }
+      ],
+      "absent": true
+    },
+    {
+      "root": "docs/evidence/raw/task16-round1-fixtures-i2-red",
+      "regular_bytes": 2119,
+      "files": [
+        {
+          "path": "test_inline_long_backtick_runs0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs0/draft.md",
+          "bytes": 56,
+          "sha256": "074629ef17df63b643c4e10b11ac4fd4c35cdab6030ba288cc12c2729d605eed"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/draft.md",
+          "bytes": 58,
+          "sha256": "1a6d127abeb6eb7eac4457cba439ff8ff4adc2bea836be85416769409c5a9410"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/draft.md",
+          "bytes": 62,
+          "sha256": "4283739771c8665817d98d58cbd6916b98b6742ae2307c0442df0cc9603237cb"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/draft.md",
+          "bytes": 71,
+          "sha256": "ba8a9af37f14d91ead1c4850ec6a77f69b9dec612721f54081986067c2181c88"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/draft.md",
+          "bytes": 73,
+          "sha256": "f500b7ae89548601305a8ae0fd92c84855bfd591f0ed2dabba43a656f8a03821"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/draft.md",
+          "bytes": 77,
+          "sha256": "c78141a871294970e4f25cef7bc7f4c2b299d4c2354476af126903906c68c2a2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/draft.md",
+          "bytes": 72,
+          "sha256": "38df78274c44a695309c511dbd021f1a16dbbec0a1fa283a5292bf00451c068f"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/draft.md",
+          "bytes": 74,
+          "sha256": "6a687bffd85e084291bc6b21254f2fc25b5526f648cf1440823cfd0fd98bd8b7"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/draft.md",
+          "bytes": 78,
+          "sha256": "897453853927aaf96915005780c15ec07237bac7ac145fb53051f9ccf6a08fbe"
+        },
+        {
+          "path": "test_inline_long_backtick_runscurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_inline_long_backtick_runs8"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "c82736430ee683f1e1d7eb97dde87f36a48680fa80c7ad6da9e7af3b637a3e23"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "99946ed20c7e97b6fb8e015c2166a1b31746bbbecf36215fb8d8029f5c03bcf2"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "ac133851e44ae8b9265856a4ad7c324d0d198e2cbdbb64e893eb9f1a80213887"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_andcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-red/test_real_fence_delimiters_and2"
+        }
+      ],
+      "absent": true
+    },
+    {
+      "root": "docs/evidence/raw/task16-round1-fixtures-i1-green",
+      "regular_bytes": 1585,
+      "files": [
+        {
+          "path": "test_sentence_period_does_not_0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_sentence_period_does_not_0/draft.md",
+          "bytes": 46,
+          "sha256": "1cb14c87ddc12570e6e05b1f69a12c4630de9b088d149265d0ee0561ec222c06"
+        },
+        {
+          "path": "test_sentence_period_does_not_current",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-green/test_sentence_period_does_not_0"
+        },
+        {
+          "path": "test_sentence_period_preserves0/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "d35be88e586adfcd6e5dbb6202a30829a9886ad3cbddf45d9fe7282db6659375"
+        },
+        {
+          "path": "test_sentence_period_preserves0/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves1/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "39e3707ee2a7fce5cbc3a1a3fbe0d2cc03272abcbb268e6ef923e48f055d609f"
+        },
+        {
+          "path": "test_sentence_period_preserves1/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves10/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves10/draft.md",
+          "bytes": 58,
+          "sha256": "6740b68709943d6eafac0b7c5b3842d9e7fdb2b0ad1a7390b89f95644e3231b0"
+        },
+        {
+          "path": "test_sentence_period_preserves11/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves11/draft.md",
+          "bytes": 57,
+          "sha256": "ebbffa5f3f448da59172b4c0442f60b3deb0baf1c32db0c12164ac350f564a7e"
+        },
+        {
+          "path": "test_sentence_period_preserves12/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves12/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves13/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves13/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves14/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves14/draft.md",
+          "bytes": 49,
+          "sha256": "a9244aaea4af9fe49519b9e39fba1ef750045899bcaedb58adcb0b79c9e82be4"
+        },
+        {
+          "path": "test_sentence_period_preserves15/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves15/draft.md",
+          "bytes": 50,
+          "sha256": "86673db6ec1ddd7d38f8da65fb147973180ab7fd2808782c32735fef732591e3"
+        },
+        {
+          "path": "test_sentence_period_preserves16/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves16/draft.md",
+          "bytes": 59,
+          "sha256": "5d118b3f1cc6548c0a75a69b9b6b131e1529954bb582dbf8d68e1d90be550bce"
+        },
+        {
+          "path": "test_sentence_period_preserves17/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves17/draft.md",
+          "bytes": 58,
+          "sha256": "be56da08bdd7c624ed38d9ccefd7c64582041459c13e24f0057872d8d820c55a"
+        },
+        {
+          "path": "test_sentence_period_preserves2/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "3c9716c4b0ccab73ab887749d8ecc7ec85aff33b8cd08d388c7bd534481622d9"
+        },
+        {
+          "path": "test_sentence_period_preserves2/draft.md",
+          "bytes": 49,
+          "sha256": "a9244aaea4af9fe49519b9e39fba1ef750045899bcaedb58adcb0b79c9e82be4"
+        },
+        {
+          "path": "test_sentence_period_preserves3/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "3a5e06b25f2829fd6edbf39631643e6b4bfd5f9c98a24b27ff393a7456c2fd35"
+        },
+        {
+          "path": "test_sentence_period_preserves3/draft.md",
+          "bytes": 50,
+          "sha256": "86673db6ec1ddd7d38f8da65fb147973180ab7fd2808782c32735fef732591e3"
+        },
+        {
+          "path": "test_sentence_period_preserves4/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "e4b4b5549c3cf09f2d2e1efb95d35acf1b177dc909095f893220d32bf4c00897"
+        },
+        {
+          "path": "test_sentence_period_preserves4/draft.md",
+          "bytes": 59,
+          "sha256": "5d118b3f1cc6548c0a75a69b9b6b131e1529954bb582dbf8d68e1d90be550bce"
+        },
+        {
+          "path": "test_sentence_period_preserves5/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "baee4ca78d9e15b33ab6ad10886d2fa3354e283f6ec23278071b8c53db37d1f1"
+        },
+        {
+          "path": "test_sentence_period_preserves5/draft.md",
+          "bytes": 58,
+          "sha256": "be56da08bdd7c624ed38d9ccefd7c64582041459c13e24f0057872d8d820c55a"
+        },
+        {
+          "path": "test_sentence_period_preserves6/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves6/draft.md",
+          "bytes": 48,
+          "sha256": "cf858d0db040881f4a836bf5fe6a5ab15466412017d9a537d5a73013752d7dd4"
+        },
+        {
+          "path": "test_sentence_period_preserves7/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves7/draft.md",
+          "bytes": 48,
+          "sha256": "cf858d0db040881f4a836bf5fe6a5ab15466412017d9a537d5a73013752d7dd4"
+        },
+        {
+          "path": "test_sentence_period_preserves8/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves8/draft.md",
+          "bytes": 48,
+          "sha256": "27a4bb96dcb11b9f8c3ce2c7741d45e39a449136d0dd4ee6940a8d69a0c55935"
+        },
+        {
+          "path": "test_sentence_period_preserves9/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves9/draft.md",
+          "bytes": 49,
+          "sha256": "c4f74575961e7fd4b7c964b5665f3567c20ff11ea24aeca4f3f98045124bc4c8"
+        },
+        {
+          "path": "test_sentence_period_preservescurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i1-green/test_sentence_period_preserves17"
+        }
+      ],
+      "absent": true
+    },
+    {
+      "root": "docs/evidence/raw/task16-round1-fixtures-i2-green",
+      "regular_bytes": 1156,
+      "files": [
+        {
+          "path": "test_inline_long_backtick_runs0/docs/evidence/source.md",
+          "bytes": 21,
+          "sha256": "bd3d3671b31ab3f00136edd9112f017baae5c8efca0d7aaa74aafcb1ba226af0"
+        },
+        {
+          "path": "test_inline_long_backtick_runs0/draft.md",
+          "bytes": 53,
+          "sha256": "0ae037edb351d06b303f921cceb4bc47340d2794f9924b69c6dc300f10bd7fb9"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "6c07b9d00f9abc9e4e699db05ad6d0ebae69ccc031df6f6d5fa64375791696f3"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/draft.md",
+          "bytes": 55,
+          "sha256": "4b0735dc017ff207b79df28274fde384657ae41cbfe8e5027325d76fb8c47c74"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/docs/evidence/source.md",
+          "bytes": 27,
+          "sha256": "dadc6c8c098bbecc3831205e61e1f94cf37bca3d59a44965e488f99987c71cbd"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/draft.md",
+          "bytes": 59,
+          "sha256": "d6bc8ff06e94cbbd51e1b769d8f8a784030090e745ce28ca8496be715100cae5"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/docs/evidence/source.md",
+          "bytes": 36,
+          "sha256": "a945fa982d67ca207813a7af7f2ecfbfa6b289a70e2841cd3afb10a66fbadf04"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/draft.md",
+          "bytes": 68,
+          "sha256": "2287915a384203950747052ff45154ebcc5403e1ac848a1f07209df53f13845a"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/docs/evidence/source.md",
+          "bytes": 38,
+          "sha256": "6e1006fef7c2176222a578b458024ae5e8d8d6e2e562e405f81d84f8c4e327ac"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/draft.md",
+          "bytes": 70,
+          "sha256": "91f7a931497fa4e495c839d205b52e9b98196749a17876830860f42cbdf801fe"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/docs/evidence/source.md",
+          "bytes": 42,
+          "sha256": "05c75c11e1acea8369f0ee4fd80e3aedc48b4133d0295ca78215e8e3d5233d90"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/draft.md",
+          "bytes": 74,
+          "sha256": "e9095802ffda1de479b180a0b87d872d8158a9aa3017df08dac68c646c6b771f"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/docs/evidence/source.md",
+          "bytes": 37,
+          "sha256": "5c41b5783ff835b4049c31197a3a894a6c3157483a66ec7a537d06041508dbd2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/draft.md",
+          "bytes": 69,
+          "sha256": "f5000cba5eb32d6ac7dc381622a0ba40a223d7c12ed8b49515215e232f172cf2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/docs/evidence/source.md",
+          "bytes": 39,
+          "sha256": "696811c08bc419ec721e507091ad93c785b7be3aec459c248631c477b89105e9"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/draft.md",
+          "bytes": 71,
+          "sha256": "8900c5ca5cc9ed01d21e8aa90008036e27fe56f4f0b5c392986bea57c3c4971d"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/docs/evidence/source.md",
+          "bytes": 43,
+          "sha256": "8e68769bd2df1f1f9e0412b77e8e35f7af06e7d3d64fd9133343dd026a54c8e6"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/draft.md",
+          "bytes": 75,
+          "sha256": "d6cbd086c7c772f2bbc0c96c618dcf41fe08ae401241129ad78a06446c838bee"
+        },
+        {
+          "path": "test_inline_long_backtick_runscurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-green/test_inline_long_backtick_runs8"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "c82736430ee683f1e1d7eb97dde87f36a48680fa80c7ad6da9e7af3b637a3e23"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "99946ed20c7e97b6fb8e015c2166a1b31746bbbecf36215fb8d8029f5c03bcf2"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "ac133851e44ae8b9265856a4ad7c324d0d198e2cbdbb64e893eb9f1a80213887"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_andcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-i2-green/test_real_fence_delimiters_and2"
+        }
+      ],
+      "absent": true
+    },
+    {
+      "root": "docs/evidence/raw/task16-round1-fixtures-focused-final",
+      "regular_bytes": 2741,
+      "files": [
+        {
+          "path": "test_inline_long_backtick_runs0/docs/evidence/source.md",
+          "bytes": 21,
+          "sha256": "bd3d3671b31ab3f00136edd9112f017baae5c8efca0d7aaa74aafcb1ba226af0"
+        },
+        {
+          "path": "test_inline_long_backtick_runs0/draft.md",
+          "bytes": 53,
+          "sha256": "0ae037edb351d06b303f921cceb4bc47340d2794f9924b69c6dc300f10bd7fb9"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "6c07b9d00f9abc9e4e699db05ad6d0ebae69ccc031df6f6d5fa64375791696f3"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/draft.md",
+          "bytes": 55,
+          "sha256": "4b0735dc017ff207b79df28274fde384657ae41cbfe8e5027325d76fb8c47c74"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/docs/evidence/source.md",
+          "bytes": 27,
+          "sha256": "dadc6c8c098bbecc3831205e61e1f94cf37bca3d59a44965e488f99987c71cbd"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/draft.md",
+          "bytes": 59,
+          "sha256": "d6bc8ff06e94cbbd51e1b769d8f8a784030090e745ce28ca8496be715100cae5"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/docs/evidence/source.md",
+          "bytes": 36,
+          "sha256": "a945fa982d67ca207813a7af7f2ecfbfa6b289a70e2841cd3afb10a66fbadf04"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/draft.md",
+          "bytes": 68,
+          "sha256": "2287915a384203950747052ff45154ebcc5403e1ac848a1f07209df53f13845a"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/docs/evidence/source.md",
+          "bytes": 38,
+          "sha256": "6e1006fef7c2176222a578b458024ae5e8d8d6e2e562e405f81d84f8c4e327ac"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/draft.md",
+          "bytes": 70,
+          "sha256": "91f7a931497fa4e495c839d205b52e9b98196749a17876830860f42cbdf801fe"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/docs/evidence/source.md",
+          "bytes": 42,
+          "sha256": "05c75c11e1acea8369f0ee4fd80e3aedc48b4133d0295ca78215e8e3d5233d90"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/draft.md",
+          "bytes": 74,
+          "sha256": "e9095802ffda1de479b180a0b87d872d8158a9aa3017df08dac68c646c6b771f"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/docs/evidence/source.md",
+          "bytes": 37,
+          "sha256": "5c41b5783ff835b4049c31197a3a894a6c3157483a66ec7a537d06041508dbd2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/draft.md",
+          "bytes": 69,
+          "sha256": "f5000cba5eb32d6ac7dc381622a0ba40a223d7c12ed8b49515215e232f172cf2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/docs/evidence/source.md",
+          "bytes": 39,
+          "sha256": "696811c08bc419ec721e507091ad93c785b7be3aec459c248631c477b89105e9"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/draft.md",
+          "bytes": 71,
+          "sha256": "8900c5ca5cc9ed01d21e8aa90008036e27fe56f4f0b5c392986bea57c3c4971d"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/docs/evidence/source.md",
+          "bytes": 43,
+          "sha256": "8e68769bd2df1f1f9e0412b77e8e35f7af06e7d3d64fd9133343dd026a54c8e6"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/draft.md",
+          "bytes": 75,
+          "sha256": "d6cbd086c7c772f2bbc0c96c618dcf41fe08ae401241129ad78a06446c838bee"
+        },
+        {
+          "path": "test_inline_long_backtick_runscurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-focused-final/test_inline_long_backtick_runs8"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "c82736430ee683f1e1d7eb97dde87f36a48680fa80c7ad6da9e7af3b637a3e23"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "99946ed20c7e97b6fb8e015c2166a1b31746bbbecf36215fb8d8029f5c03bcf2"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "ac133851e44ae8b9265856a4ad7c324d0d198e2cbdbb64e893eb9f1a80213887"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_andcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-focused-final/test_real_fence_delimiters_and2"
+        },
+        {
+          "path": "test_sentence_period_does_not_0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_sentence_period_does_not_0/draft.md",
+          "bytes": 46,
+          "sha256": "1cb14c87ddc12570e6e05b1f69a12c4630de9b088d149265d0ee0561ec222c06"
+        },
+        {
+          "path": "test_sentence_period_does_not_current",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-focused-final/test_sentence_period_does_not_0"
+        },
+        {
+          "path": "test_sentence_period_preserves0/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "d35be88e586adfcd6e5dbb6202a30829a9886ad3cbddf45d9fe7282db6659375"
+        },
+        {
+          "path": "test_sentence_period_preserves0/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves1/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "39e3707ee2a7fce5cbc3a1a3fbe0d2cc03272abcbb268e6ef923e48f055d609f"
+        },
+        {
+          "path": "test_sentence_period_preserves1/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves10/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves10/draft.md",
+          "bytes": 58,
+          "sha256": "6740b68709943d6eafac0b7c5b3842d9e7fdb2b0ad1a7390b89f95644e3231b0"
+        },
+        {
+          "path": "test_sentence_period_preserves11/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves11/draft.md",
+          "bytes": 57,
+          "sha256": "ebbffa5f3f448da59172b4c0442f60b3deb0baf1c32db0c12164ac350f564a7e"
+        },
+        {
+          "path": "test_sentence_period_preserves12/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves12/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves13/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves13/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves14/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves14/draft.md",
+          "bytes": 49,
+          "sha256": "a9244aaea4af9fe49519b9e39fba1ef750045899bcaedb58adcb0b79c9e82be4"
+        },
+        {
+          "path": "test_sentence_period_preserves15/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves15/draft.md",
+          "bytes": 50,
+          "sha256": "86673db6ec1ddd7d38f8da65fb147973180ab7fd2808782c32735fef732591e3"
+        },
+        {
+          "path": "test_sentence_period_preserves16/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves16/draft.md",
+          "bytes": 59,
+          "sha256": "5d118b3f1cc6548c0a75a69b9b6b131e1529954bb582dbf8d68e1d90be550bce"
+        },
+        {
+          "path": "test_sentence_period_preserves17/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves17/draft.md",
+          "bytes": 58,
+          "sha256": "be56da08bdd7c624ed38d9ccefd7c64582041459c13e24f0057872d8d820c55a"
+        },
+        {
+          "path": "test_sentence_period_preserves2/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "3c9716c4b0ccab73ab887749d8ecc7ec85aff33b8cd08d388c7bd534481622d9"
+        },
+        {
+          "path": "test_sentence_period_preserves2/draft.md",
+          "bytes": 49,
+          "sha256": "a9244aaea4af9fe49519b9e39fba1ef750045899bcaedb58adcb0b79c9e82be4"
+        },
+        {
+          "path": "test_sentence_period_preserves3/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "3a5e06b25f2829fd6edbf39631643e6b4bfd5f9c98a24b27ff393a7456c2fd35"
+        },
+        {
+          "path": "test_sentence_period_preserves3/draft.md",
+          "bytes": 50,
+          "sha256": "86673db6ec1ddd7d38f8da65fb147973180ab7fd2808782c32735fef732591e3"
+        },
+        {
+          "path": "test_sentence_period_preserves4/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "e4b4b5549c3cf09f2d2e1efb95d35acf1b177dc909095f893220d32bf4c00897"
+        },
+        {
+          "path": "test_sentence_period_preserves4/draft.md",
+          "bytes": 59,
+          "sha256": "5d118b3f1cc6548c0a75a69b9b6b131e1529954bb582dbf8d68e1d90be550bce"
+        },
+        {
+          "path": "test_sentence_period_preserves5/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "baee4ca78d9e15b33ab6ad10886d2fa3354e283f6ec23278071b8c53db37d1f1"
+        },
+        {
+          "path": "test_sentence_period_preserves5/draft.md",
+          "bytes": 58,
+          "sha256": "be56da08bdd7c624ed38d9ccefd7c64582041459c13e24f0057872d8d820c55a"
+        },
+        {
+          "path": "test_sentence_period_preserves6/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves6/draft.md",
+          "bytes": 48,
+          "sha256": "cf858d0db040881f4a836bf5fe6a5ab15466412017d9a537d5a73013752d7dd4"
+        },
+        {
+          "path": "test_sentence_period_preserves7/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves7/draft.md",
+          "bytes": 48,
+          "sha256": "cf858d0db040881f4a836bf5fe6a5ab15466412017d9a537d5a73013752d7dd4"
+        },
+        {
+          "path": "test_sentence_period_preserves8/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves8/draft.md",
+          "bytes": 48,
+          "sha256": "27a4bb96dcb11b9f8c3ce2c7741d45e39a449136d0dd4ee6940a8d69a0c55935"
+        },
+        {
+          "path": "test_sentence_period_preserves9/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves9/draft.md",
+          "bytes": 49,
+          "sha256": "c4f74575961e7fd4b7c964b5665f3567c20ff11ea24aeca4f3f98045124bc4c8"
+        },
+        {
+          "path": "test_sentence_period_preservescurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-focused-final/test_sentence_period_preserves17"
+        }
+      ],
+      "absent": true
+    },
+    {
+      "root": "docs/evidence/raw/task16-round1-fixtures-final",
+      "regular_bytes": 7024,
+      "files": [
+        {
+          "path": "test_cli_missing_input_and_unc0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_cli_missing_input_and_unc0/draft.md",
+          "bytes": 47,
+          "sha256": "15ba1909810891a33f4eaeb33294a4ceacd5261bf68acb9909a3dcb68d817b2b"
+        },
+        {
+          "path": "test_cli_missing_input_and_unccurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_cli_missing_input_and_unc0"
+        },
+        {
+          "path": "test_dangling_or_malformed_cit0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_dangling_or_malformed_cit0/draft.md",
+          "bytes": 95,
+          "sha256": "3f30d52b3369e7c3d9d5c4c409db030943137a0ab9d64d2ee8c6fdeb079c240b"
+        },
+        {
+          "path": "test_dangling_or_malformed_citcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_dangling_or_malformed_cit0"
+        },
+        {
+          "path": "test_duplicate_anchor_and_head0/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "2f2f86a489c2bcb42e227d4092381f5e94d1352bf131c9cdde91ce2bf4c0f7d7"
+        },
+        {
+          "path": "test_duplicate_anchor_and_head0/draft.md",
+          "bytes": 46,
+          "sha256": "4b77b11f4d0963fe770fb58538f00535cbdcd4e2da2895827aa08ee97aa03849"
+        },
+        {
+          "path": "test_duplicate_anchor_and_headcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_duplicate_anchor_and_head0"
+        },
+        {
+          "path": "test_evidence_markup_cannot_su0/docs/evidence/source.md",
+          "bytes": 116,
+          "sha256": "69f681e978c8f6a97e7d0eae66a275294712ebdba666fde8f1b47347cf5ce3ca"
+        },
+        {
+          "path": "test_evidence_markup_cannot_su0/draft.md",
+          "bytes": 53,
+          "sha256": "893d5506fa88182e7293fc9cbe43b22568f637de75545df0e1f93d97282b0443"
+        },
+        {
+          "path": "test_evidence_markup_cannot_sucurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_evidence_markup_cannot_su0"
+        },
+        {
+          "path": "test_filters_keep_visible_link0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_filters_keep_visible_link0/draft.md",
+          "bytes": 55,
+          "sha256": "8e64613d34169f2da457c1267ae4d317295696990913d6cf8c6654cbbaa1130e"
+        },
+        {
+          "path": "test_filters_keep_visible_linkcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_filters_keep_visible_link0"
+        },
+        {
+          "path": "test_grouped_unit_literal_is_i0/docs/evidence/source.md",
+          "bytes": 26,
+          "sha256": "96502d5e9a44a702390f8b1e611a55809cf46ab2403f8ccda79abbec88b19fe2"
+        },
+        {
+          "path": "test_grouped_unit_literal_is_i0/draft.md",
+          "bytes": 57,
+          "sha256": "ebbffa5f3f448da59172b4c0442f60b3deb0baf1c32db0c12164ac350f564a7e"
+        },
+        {
+          "path": "test_grouped_unit_literal_is_icurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_grouped_unit_literal_is_i0"
+        },
+        {
+          "path": "test_inline_long_backtick_runs0/docs/evidence/source.md",
+          "bytes": 21,
+          "sha256": "bd3d3671b31ab3f00136edd9112f017baae5c8efca0d7aaa74aafcb1ba226af0"
+        },
+        {
+          "path": "test_inline_long_backtick_runs0/draft.md",
+          "bytes": 53,
+          "sha256": "0ae037edb351d06b303f921cceb4bc47340d2794f9924b69c6dc300f10bd7fb9"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "6c07b9d00f9abc9e4e699db05ad6d0ebae69ccc031df6f6d5fa64375791696f3"
+        },
+        {
+          "path": "test_inline_long_backtick_runs1/draft.md",
+          "bytes": 55,
+          "sha256": "4b0735dc017ff207b79df28274fde384657ae41cbfe8e5027325d76fb8c47c74"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/docs/evidence/source.md",
+          "bytes": 27,
+          "sha256": "dadc6c8c098bbecc3831205e61e1f94cf37bca3d59a44965e488f99987c71cbd"
+        },
+        {
+          "path": "test_inline_long_backtick_runs2/draft.md",
+          "bytes": 59,
+          "sha256": "d6bc8ff06e94cbbd51e1b769d8f8a784030090e745ce28ca8496be715100cae5"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/docs/evidence/source.md",
+          "bytes": 36,
+          "sha256": "a945fa982d67ca207813a7af7f2ecfbfa6b289a70e2841cd3afb10a66fbadf04"
+        },
+        {
+          "path": "test_inline_long_backtick_runs3/draft.md",
+          "bytes": 68,
+          "sha256": "2287915a384203950747052ff45154ebcc5403e1ac848a1f07209df53f13845a"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/docs/evidence/source.md",
+          "bytes": 38,
+          "sha256": "6e1006fef7c2176222a578b458024ae5e8d8d6e2e562e405f81d84f8c4e327ac"
+        },
+        {
+          "path": "test_inline_long_backtick_runs4/draft.md",
+          "bytes": 70,
+          "sha256": "91f7a931497fa4e495c839d205b52e9b98196749a17876830860f42cbdf801fe"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/docs/evidence/source.md",
+          "bytes": 42,
+          "sha256": "05c75c11e1acea8369f0ee4fd80e3aedc48b4133d0295ca78215e8e3d5233d90"
+        },
+        {
+          "path": "test_inline_long_backtick_runs5/draft.md",
+          "bytes": 74,
+          "sha256": "e9095802ffda1de479b180a0b87d872d8158a9aa3017df08dac68c646c6b771f"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/docs/evidence/source.md",
+          "bytes": 37,
+          "sha256": "5c41b5783ff835b4049c31197a3a894a6c3157483a66ec7a537d06041508dbd2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs6/draft.md",
+          "bytes": 69,
+          "sha256": "f5000cba5eb32d6ac7dc381622a0ba40a223d7c12ed8b49515215e232f172cf2"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/docs/evidence/source.md",
+          "bytes": 39,
+          "sha256": "696811c08bc419ec721e507091ad93c785b7be3aec459c248631c477b89105e9"
+        },
+        {
+          "path": "test_inline_long_backtick_runs7/draft.md",
+          "bytes": 71,
+          "sha256": "8900c5ca5cc9ed01d21e8aa90008036e27fe56f4f0b5c392986bea57c3c4971d"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/docs/evidence/source.md",
+          "bytes": 43,
+          "sha256": "8e68769bd2df1f1f9e0412b77e8e35f7af06e7d3d64fd9133343dd026a54c8e6"
+        },
+        {
+          "path": "test_inline_long_backtick_runs8/draft.md",
+          "bytes": 75,
+          "sha256": "d6cbd086c7c772f2bbc0c96c618dcf41fe08ae401241129ad78a06446c838bee"
+        },
+        {
+          "path": "test_inline_long_backtick_runscurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_inline_long_backtick_runs8"
+        },
+        {
+          "path": "test_missing_empty_and_each_ze0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_missing_empty_and_each_ze0/draft.md",
+          "bytes": 46,
+          "sha256": "4b77b11f4d0963fe770fb58538f00535cbdcd4e2da2895827aa08ee97aa03849"
+        },
+        {
+          "path": "test_missing_empty_and_each_ze0/empty.md",
+          "bytes": 19,
+          "sha256": "ca7a2968197a1773c03228fc1ed6f0b2859ccc09dc84f46390b5977affc3ba45"
+        },
+        {
+          "path": "test_missing_empty_and_each_zecurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_missing_empty_and_each_ze0"
+        },
+        {
+          "path": "test_multibacktick_code_cannot0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_multibacktick_code_cannot0/draft.md",
+          "bytes": 66,
+          "sha256": "0a2a7e22afec941dd27d7a38a766fd57c9bd9ff3c3f08fc4a9df155a00d81b74"
+        },
+        {
+          "path": "test_multibacktick_code_cannotcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_multibacktick_code_cannot0"
+        },
+        {
+          "path": "test_multiple_claims_tables_si0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_multiple_claims_tables_si0/draft.md",
+          "bytes": 274,
+          "sha256": "38952ac2e280594a056f57612cbc9278e969a8574cdb0edbd38ceab298c6ea88"
+        },
+        {
+          "path": "test_multiple_claims_tables_sicurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_multiple_claims_tables_si0"
+        },
+        {
+          "path": "test_path_escape_rejected____o0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_path_escape_rejected____o0/draft.md",
+          "bytes": 36,
+          "sha256": "3932ff2c7937f6ff9920aca80fa7228f2a41beac14b7dd64b54098659eb8c672"
+        },
+        {
+          "path": "test_path_escape_rejected____ocurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_path_escape_rejected____o0"
+        },
+        {
+          "path": "test_path_escape_rejected__tmp0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_path_escape_rejected__tmp0/draft.md",
+          "bytes": 32,
+          "sha256": "5e40dbb4ab0e82e770882ac994a38ede23facfee437d503f05c8695462dafbd1"
+        },
+        {
+          "path": "test_path_escape_rejected__tmpcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_path_escape_rejected__tmp0"
+        },
+        {
+          "path": "test_path_escape_rejected_docs0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_path_escape_rejected_docs0/draft.md",
+          "bytes": 50,
+          "sha256": "23616d518711892002781d81bb11cfd61dfe0fddbf2a1709a3f4bb0122a01683"
+        },
+        {
+          "path": "test_path_escape_rejected_docscurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_path_escape_rejected_docs0"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "c82736430ee683f1e1d7eb97dde87f36a48680fa80c7ad6da9e7af3b637a3e23"
+        },
+        {
+          "path": "test_real_fence_delimiters_and0/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "99946ed20c7e97b6fb8e015c2166a1b31746bbbecf36215fb8d8029f5c03bcf2"
+        },
+        {
+          "path": "test_real_fence_delimiters_and1/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/docs/evidence/source.md",
+          "bytes": 33,
+          "sha256": "ac133851e44ae8b9265856a4ad7c324d0d198e2cbdbb64e893eb9f1a80213887"
+        },
+        {
+          "path": "test_real_fence_delimiters_and2/draft.md",
+          "bytes": 53,
+          "sha256": "8cfcfc753662bbf086dd726dff2827b472dbbea6344585aff29264990b694fd4"
+        },
+        {
+          "path": "test_real_fence_delimiters_andcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_real_fence_delimiters_and2"
+        },
+        {
+          "path": "test_same_line_required_and_ev0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_same_line_required_and_ev0/draft.md",
+          "bytes": 55,
+          "sha256": "5886e5a49e42005b79a5ebf76a96976b624120366d8839eb01221f713ed8d240"
+        },
+        {
+          "path": "test_same_line_required_and_evcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_same_line_required_and_ev0"
+        },
+        {
+          "path": "test_sentence_period_does_not_0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_sentence_period_does_not_0/draft.md",
+          "bytes": 46,
+          "sha256": "1cb14c87ddc12570e6e05b1f69a12c4630de9b088d149265d0ee0561ec222c06"
+        },
+        {
+          "path": "test_sentence_period_does_not_current",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_sentence_period_does_not_0"
+        },
+        {
+          "path": "test_sentence_period_preserves0/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "d35be88e586adfcd6e5dbb6202a30829a9886ad3cbddf45d9fe7282db6659375"
+        },
+        {
+          "path": "test_sentence_period_preserves0/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves1/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "39e3707ee2a7fce5cbc3a1a3fbe0d2cc03272abcbb268e6ef923e48f055d609f"
+        },
+        {
+          "path": "test_sentence_period_preserves1/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves10/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves10/draft.md",
+          "bytes": 58,
+          "sha256": "6740b68709943d6eafac0b7c5b3842d9e7fdb2b0ad1a7390b89f95644e3231b0"
+        },
+        {
+          "path": "test_sentence_period_preserves11/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves11/draft.md",
+          "bytes": 57,
+          "sha256": "ebbffa5f3f448da59172b4c0442f60b3deb0baf1c32db0c12164ac350f564a7e"
+        },
+        {
+          "path": "test_sentence_period_preserves12/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves12/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves13/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves13/draft.md",
+          "bytes": 49,
+          "sha256": "60da53e66040fb4ae4bcd988031deaa7d7074a231044b6d896aeabc890f93c09"
+        },
+        {
+          "path": "test_sentence_period_preserves14/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves14/draft.md",
+          "bytes": 49,
+          "sha256": "a9244aaea4af9fe49519b9e39fba1ef750045899bcaedb58adcb0b79c9e82be4"
+        },
+        {
+          "path": "test_sentence_period_preserves15/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves15/draft.md",
+          "bytes": 50,
+          "sha256": "86673db6ec1ddd7d38f8da65fb147973180ab7fd2808782c32735fef732591e3"
+        },
+        {
+          "path": "test_sentence_period_preserves16/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "0b7e8f5aa99613ee43157d6624a2722bd7ed2cdf52b20a1c0be12a30f86febae"
+        },
+        {
+          "path": "test_sentence_period_preserves16/draft.md",
+          "bytes": 59,
+          "sha256": "5d118b3f1cc6548c0a75a69b9b6b131e1529954bb582dbf8d68e1d90be550bce"
+        },
+        {
+          "path": "test_sentence_period_preserves17/docs/evidence/source.md",
+          "bytes": 32,
+          "sha256": "89b59acc646d53f59f63202335044e29315ce3b029583113f79b6d7b2045959a"
+        },
+        {
+          "path": "test_sentence_period_preserves17/draft.md",
+          "bytes": 58,
+          "sha256": "be56da08bdd7c624ed38d9ccefd7c64582041459c13e24f0057872d8d820c55a"
+        },
+        {
+          "path": "test_sentence_period_preserves2/docs/evidence/source.md",
+          "bytes": 22,
+          "sha256": "3c9716c4b0ccab73ab887749d8ecc7ec85aff33b8cd08d388c7bd534481622d9"
+        },
+        {
+          "path": "test_sentence_period_preserves2/draft.md",
+          "bytes": 49,
+          "sha256": "a9244aaea4af9fe49519b9e39fba1ef750045899bcaedb58adcb0b79c9e82be4"
+        },
+        {
+          "path": "test_sentence_period_preserves3/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "3a5e06b25f2829fd6edbf39631643e6b4bfd5f9c98a24b27ff393a7456c2fd35"
+        },
+        {
+          "path": "test_sentence_period_preserves3/draft.md",
+          "bytes": 50,
+          "sha256": "86673db6ec1ddd7d38f8da65fb147973180ab7fd2808782c32735fef732591e3"
+        },
+        {
+          "path": "test_sentence_period_preserves4/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "e4b4b5549c3cf09f2d2e1efb95d35acf1b177dc909095f893220d32bf4c00897"
+        },
+        {
+          "path": "test_sentence_period_preserves4/draft.md",
+          "bytes": 59,
+          "sha256": "5d118b3f1cc6548c0a75a69b9b6b131e1529954bb582dbf8d68e1d90be550bce"
+        },
+        {
+          "path": "test_sentence_period_preserves5/docs/evidence/source.md",
+          "bytes": 31,
+          "sha256": "baee4ca78d9e15b33ab6ad10886d2fa3354e283f6ec23278071b8c53db37d1f1"
+        },
+        {
+          "path": "test_sentence_period_preserves5/draft.md",
+          "bytes": 58,
+          "sha256": "be56da08bdd7c624ed38d9ccefd7c64582041459c13e24f0057872d8d820c55a"
+        },
+        {
+          "path": "test_sentence_period_preserves6/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "a2b0c5de64234e0f2274323d243fbc9db6718e83b4179314532303b2b61c9326"
+        },
+        {
+          "path": "test_sentence_period_preserves6/draft.md",
+          "bytes": 48,
+          "sha256": "cf858d0db040881f4a836bf5fe6a5ab15466412017d9a537d5a73013752d7dd4"
+        },
+        {
+          "path": "test_sentence_period_preserves7/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "52eeeb97e840f3156ad6e739ee90caedcc6933bc2bf11c708cceca8ced74f4d0"
+        },
+        {
+          "path": "test_sentence_period_preserves7/draft.md",
+          "bytes": 48,
+          "sha256": "cf858d0db040881f4a836bf5fe6a5ab15466412017d9a537d5a73013752d7dd4"
+        },
+        {
+          "path": "test_sentence_period_preserves8/docs/evidence/source.md",
+          "bytes": 23,
+          "sha256": "b11b057b1590fa41f95744bcfc8adb0519240a70ab0f5424c8c09292d7b2895d"
+        },
+        {
+          "path": "test_sentence_period_preserves8/draft.md",
+          "bytes": 48,
+          "sha256": "27a4bb96dcb11b9f8c3ce2c7741d45e39a449136d0dd4ee6940a8d69a0c55935"
+        },
+        {
+          "path": "test_sentence_period_preserves9/docs/evidence/source.md",
+          "bytes": 24,
+          "sha256": "9ac25f7123dedf328de87033c00c595d069147d386724da42ecadb56de575161"
+        },
+        {
+          "path": "test_sentence_period_preserves9/draft.md",
+          "bytes": 49,
+          "sha256": "c4f74575961e7fd4b7c964b5665f3567c20ff11ea24aeca4f3f98045124bc4c8"
+        },
+        {
+          "path": "test_sentence_period_preservescurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_sentence_period_preserves17"
+        },
+        {
+          "path": "test_signed_unit_literal_canno0/docs/evidence/source.md",
+          "bytes": 17,
+          "sha256": "7804f24aff3fffca3a4960b9e7fa337c106aac9eccf3b3feeb88e3c2a14207c3"
+        },
+        {
+          "path": "test_signed_unit_literal_canno0/draft.md",
+          "bytes": 48,
+          "sha256": "27a4bb96dcb11b9f8c3ce2c7741d45e39a449136d0dd4ee6940a8d69a0c55935"
+        },
+        {
+          "path": "test_signed_unit_literal_cannocurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_signed_unit_literal_canno0"
+        },
+        {
+          "path": "test_symlink_escape_and_eviden0/docs/evidence",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_symlink_escape_and_eviden0/elsewhere"
+        },
+        {
+          "path": "test_symlink_escape_and_eviden0/draft.md",
+          "bytes": 46,
+          "sha256": "4b77b11f4d0963fe770fb58538f00535cbdcd4e2da2895827aa08ee97aa03849"
+        },
+        {
+          "path": "test_symlink_escape_and_eviden0/elsewhere/source.md",
+          "bytes": 14,
+          "sha256": "642a2d6fcaee7218e70ecd2a644f02867c7da58eb1be18a01ca62775014c67ca"
+        },
+        {
+          "path": "test_symlink_escape_and_eviden0/outside.md",
+          "bytes": 14,
+          "sha256": "642a2d6fcaee7218e70ecd2a644f02867c7da58eb1be18a01ca62775014c67ca"
+        },
+        {
+          "path": "test_symlink_escape_and_evidencurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_symlink_escape_and_eviden0"
+        },
+        {
+          "path": "test_uncited_draft_fails_with_0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_uncited_draft_fails_with_0/draft.md",
+          "bytes": 21,
+          "sha256": "59c5446191b10ea2165ab6b51929a5a41d525f44fab327917de497a813f8f86a"
+        },
+        {
+          "path": "test_uncited_draft_fails_with_current",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_uncited_draft_fails_with_0"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa0/draft.md",
+          "bytes": 53,
+          "sha256": "1426d96fd78b882598f8ab1011f258384f090870964a620e8024c39e0be9c3f7"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa1/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa1/draft.md",
+          "bytes": 51,
+          "sha256": "7fe4610d02281fbf632bdd98f3924a00ff6d7daa430e39ad77a36d8663ff5b04"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa2/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa2/draft.md",
+          "bytes": 49,
+          "sha256": "29085a5f007aa1f35179d797bf4b65d0f556785024c16022c88aa93778cf6763"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa3/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_fa3/draft.md",
+          "bytes": 50,
+          "sha256": "3f374d775f046f9401afcc9362168ae402a3c779a2f59fc4c14993994cf8526a"
+        },
+        {
+          "path": "test_unicode_numeric_glyphs_facurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_unicode_numeric_glyphs_fa3"
+        },
+        {
+          "path": "test_valid_citation_and_nested0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_valid_citation_and_nested0/draft.md",
+          "bytes": 61,
+          "sha256": "a2c2ba7f7919df292478e7ce9285047054d778643e7bfb16c2e1703727a91e41"
+        },
+        {
+          "path": "test_valid_citation_and_nestedcurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_valid_citation_and_nested0"
+        },
+        {
+          "path": "test_value_must_be_in_referenc0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_value_must_be_in_referenc0/draft.md",
+          "bytes": 47,
+          "sha256": "57db939f39bc04478169e4493352df44c7bcee3fee9f6f177f02ce518a4cea20"
+        },
+        {
+          "path": "test_value_must_be_in_referenccurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_value_must_be_in_referenc0"
+        },
+        {
+          "path": "test_wrong_or_missing_anchor__0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_wrong_or_missing_anchor__0/draft.md",
+          "bytes": 40,
+          "sha256": "6e453d9b0ac84fa05035c14b14595aead54841f23c535c7c840cb00ce8364e07"
+        },
+        {
+          "path": "test_wrong_or_missing_anchor__current",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_wrong_or_missing_anchor__0"
+        },
+        {
+          "path": "test_wrong_or_missing_anchor_a0/docs/evidence/source.md",
+          "bytes": 138,
+          "sha256": "ea06ad01294cd62a6369201a2399afef48e6106b1fd0140e92e582d617524f5b"
+        },
+        {
+          "path": "test_wrong_or_missing_anchor_a0/draft.md",
+          "bytes": 46,
+          "sha256": "179e741cb43560a876661cb0e220fe0d20af01810d3ecad842c20516cb3d259e"
+        },
+        {
+          "path": "test_wrong_or_missing_anchor_acurrent",
+          "symlink": "/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-round1-fixtures-final/test_wrong_or_missing_anchor_a0"
+        }
+      ],
+      "absent": true
+    }
+  ],
+  "removed_regular_bytes": 15274,
+  "all_absent": true,
+  "old_raw_count": 23,
+  "old_raw_unchanged": true,
+  "scientific_drafts_and_provenance_unchanged": true,
+  "selected_original_evidence_unchanged": {
+    "docs/evidence/fused-logprob.md": true,
+    "docs/evidence/learner.md": true,
+    "docs/evidence/rollout.md": true,
+    "docs/evidence/weight-sync.md": true,
+    "docs/evidence/serving-baseline.md": true,
+    "docs/evidence/serving-baseline-native-review.md": true,
+    "docs/evidence/pd-disaggregation.md": true,
+    "docs/evidence/pd-disaggregation-review.md": true,
+    "docs/evidence/raw/task10-final-source.sha256": true,
+    "docs/evidence/raw/task10-gpu-final.txt": true,
+    "docs/evidence/raw/task12-startup-memory-02-summary.json": true,
+    "docs/evidence/raw/task12-model-acquisition-02.json": true,
+    "docs/evidence/raw/task9-confirmation-protocol.json": true
+  },
+  "final_maintained_sha256": {
+    "scripts/check_report_numbers.py": "6dd01382e810dcf27d01cad2af004767b5d4181b850f5398afe0c605e101381d",
+    "scripts/tests/test_check_report_numbers.py": "7aadb1ce14f8d3f714988d5ee11e2a80e690edbdc1ac9ea1143464cbe75546dc",
+    "reports/repro/README.md": "df2d59aa43b8bd9dae9ffdeb5d88c55c942a67609eeb1917a9e09b3f3be43c90"
+  },
+  "git_bytes_before_round1_metadata": 16799394,
+  "scope": "Only exact six owned terminal CPU pytest basetemp roots removed; CLI subprocesses terminal. No symlink target/shared/runtime/model cleanup; no native/GPU/network/install/download/services/checkpoints or subagents."
+}

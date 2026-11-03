@@ -1,0 +1,9 @@
+python scripts/resource_preflight.py --planned-project-bytes 0 --download-bytes 0 --checkpoints 0 --service-memory-bytes 0
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 314382157,
+  "free_bytes": 173482315776,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": []
+}

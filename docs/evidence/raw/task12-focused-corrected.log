@@ -1,0 +1,16 @@
+=== RUN   TestOpenLoopAdmissionAndCancellation
+--- PASS: TestOpenLoopAdmissionAndCancellation (0.06s)
+=== RUN   TestInputBounds
+--- PASS: TestInputBounds (0.00s)
+=== RUN   TestRealTracePrefixes
+=== RUN   TestRealTracePrefixes/azure
+    trace_test.go:40: rows=100 zero-output=0 sha=0fe0a32c1b7c4293dbe00da14fd6c28332bb4794789db96a74e3bc88ecd0dc1e
+=== RUN   TestRealTracePrefixes/burstgpt
+    trace_test.go:40: rows=100 zero-output=5 sha=dcf0fb39ab02046f06dcb63252faab1e13e0da647283a87f69e421040deb5a7f
+--- PASS: TestRealTracePrefixes (0.00s)
+    --- PASS: TestRealTracePrefixes/azure (0.00s)
+    --- PASS: TestRealTracePrefixes/burstgpt (0.00s)
+=== RUN   TestTraceValidation
+--- PASS: TestTraceValidation (0.00s)
+PASS
+ok  	crucible/serving/replay	0.065s

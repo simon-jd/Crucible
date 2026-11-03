@@ -1,0 +1,12 @@
+{
+  "scope": "immutable prior evidence; source differences separately authorized",
+  "coordinator_files_unchanged": 100,
+  "prior_stageC_paths": 62,
+  "unchanged_stageC_other_paths": 59,
+  "authorized_existing_source_changes": [
+    "serving/replay/diagnostic.go",
+    "serving/replay/diagnostic_test.go",
+    "serving/replay/schedule.go"
+  ],
+  "failures": []
+}

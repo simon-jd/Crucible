@@ -1,0 +1,57 @@
+{
+  "time_utc": "2026-10-25T18:15:52.731641+00:00",
+  "scope": "ROOT recovered3source exactpins/previouspreparedtestsAST/frozenproduction andTask12actual394+100 then STATIConly revisedFSIZE32768",
+  "source_sha256": {
+    "rl/sync/tests/test_phase_bridge.py": "34319f9238f70512c8678d1642ef8b977c40a595db9883025af1acea5594288d",
+    "rl/sync/tests/ram_worker.py": "76c462d9a211bb2ee47af76e32f5362857a95e29b0a2634f3d9e7577e25db235",
+    "scripts/test_ram_handoff_cpu.py": "bf3fd3000b2223016e2693ad7804333f033b371f11c8d22cb73d9454a847d76c"
+  },
+  "AST": {
+    "rl/sync/tests/test_phase_bridge.py": "29a27c53c1cb5200d64062514dcab3ac41e77da0fa30fd999c991bd1fafcc0b7",
+    "rl/sync/tests/ram_worker.py": "13b476873a7ff07faf0035ff25fe0f943b3c2d75f5430f25909eb24670f14f07",
+    "scripts/test_ram_handoff_cpu.py": "a5a742f2dfb931ab2d0335f5df156479d44c5301d39d85cd2fd8ad6d83f31231"
+  },
+  "other23committedpaths_unchanged": true,
+  "Task12_frozen394_match": true,
+  "coordinator100bytes2578786_match": true,
+  "phase_retained_including_git": 1408844,
+  "remaining_upperbounds": {
+    "CPU6files": 196608,
+    "static4files": 131072,
+    "report_to45000": 2501,
+    "fixdiff": 60000,
+    "fixreview_public": 32000,
+    "source_docs_and_Task12summary": 15000,
+    "ROOT_git_growth": 100000
+  },
+  "forecast": 1946025,
+  "cap": 2000000,
+  "sample": {
+    "project_bytes": 13317334841,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13307174610,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13997174610,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus2M": 13999174610,
+  "sharedHFbytes": 23815435170,
+  "newlogs_absent": [
+    "docs/evidence/raw/task11-bridge-fix1-red-format-v2.log",
+    "docs/evidence/raw/task11-bridge-fix1-red-lint-v2.log"
+  ],
+  "once_static_limits": {
+    "seconds": 20,
+    "AS": 1000000000,
+    "CORE": 0,
+    "FSIZE": 32768,
+    "RAYON": 1
+  },
+  "failed_truncated_bytes_preserved": 24576,
+  "CPU_authorized": false
+}

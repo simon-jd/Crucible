@@ -1,0 +1,2 @@
+/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(

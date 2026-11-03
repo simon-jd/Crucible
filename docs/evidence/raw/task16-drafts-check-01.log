@@ -1,0 +1,3 @@
+/home/postedism/Desktop/Crucible/reports/w3-disaggregated-serving.md:13: unsupported literal '7,409,397,760B'
+/home/postedism/Desktop/Crucible/reports/w3-disaggregated-serving.md:15: unsupported literal '16,000,000,000B'
+/home/postedism/Desktop/Crucible/reports/repro/README.md:48: invalid citation [evidence: docs/evidence/<file>#<anchor>]: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/docs/evidence/<file>'

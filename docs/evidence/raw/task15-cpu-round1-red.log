@@ -1,0 +1,812 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 39 items
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-owned] FAILED [  2%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-canonical] FAILED [  5%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-initial_leader] FAILED [  7%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-leader] FAILED [ 10%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-group] FAILED [ 12%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-signal_anchor] FAILED [ 15%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-terminal_group] FAILED [ 17%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-owned] FAILED [ 20%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-canonical] FAILED [ 23%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-initial_leader] FAILED [ 25%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-leader] FAILED [ 28%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-group] FAILED [ 30%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-signal_anchor] FAILED [ 33%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-terminal_group] FAILED [ 35%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-owned] FAILED [ 38%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-canonical] FAILED [ 41%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-initial_leader] FAILED [ 43%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-leader] FAILED [ 46%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-group] FAILED [ 48%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-signal_anchor] FAILED [ 51%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-terminal_group] FAILED [ 53%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-owned] FAILED [ 56%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-canonical] FAILED [ 58%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-initial_leader] FAILED [ 61%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-leader] FAILED [ 64%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-group] FAILED [ 66%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-signal_anchor] FAILED [ 69%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-terminal_group] FAILED [ 71%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_transient_disappearance_rescans_whole_operation[owned] PASSED [ 74%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_transient_disappearance_rescans_whole_operation[canonical] PASSED [ 76%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_repeated_disappearance_is_bounded_and_retained[owned] PASSED [ 79%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_repeated_disappearance_is_bounded_and_retained[canonical] PASSED [ 82%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[initial_leader] FAILED [ 84%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[leader] FAILED [ 87%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[group] FAILED [ 89%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[signal_anchor] FAILED [ 92%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[terminal_group] FAILED [ 94%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[unknown] FAILED [ 97%]
+docs/evidence/raw/task15-cpu-round1-contract-test.py::test_counter_wording_and_eos_stop_limit_in_three_files FAILED [100%]
+
+=================================== FAILURES ===================================
+_________ test_monitor_nontransient_scan_error_aborts[failure0-owned] __________
+
+label = 'owned', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_______ test_monitor_nontransient_scan_error_aborts[failure0-canonical] ________
+
+label = 'canonical', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure0-initial_leader] _____
+
+label = 'initial_leader', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure0-leader] _________
+
+label = 'leader', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure0-group] __________
+
+label = 'group', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure0-signal_anchor] ______
+
+label = 'signal_anchor', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure0-terminal_group] _____
+
+label = 'terminal_group', failure = PermissionError('synthetic denied')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'PermissionError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure1-owned] __________
+
+label = 'owned', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_______ test_monitor_nontransient_scan_error_aborts[failure1-canonical] ________
+
+label = 'canonical', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure1-initial_leader] _____
+
+label = 'initial_leader', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure1-leader] _________
+
+label = 'leader', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure1-group] __________
+
+label = 'group', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure1-signal_anchor] ______
+
+label = 'signal_anchor', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure1-terminal_group] _____
+
+label = 'terminal_group', failure = OSError(5, 'synthetic EIO')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure2-owned] __________
+
+label = 'owned', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_______ test_monitor_nontransient_scan_error_aborts[failure2-canonical] ________
+
+label = 'canonical', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure2-initial_leader] _____
+
+label = 'initial_leader', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure2-leader] _________
+
+label = 'leader', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure2-group] __________
+
+label = 'group', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure2-signal_anchor] ______
+
+label = 'signal_anchor', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure2-terminal_group] _____
+
+label = 'terminal_group', failure = ValueError('synthetic malformed')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure3-owned] __________
+
+label = 'owned', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_______ test_monitor_nontransient_scan_error_aborts[failure3-canonical] ________
+
+label = 'canonical', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure3-initial_leader] _____
+
+label = 'initial_leader', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure3-leader] _________
+
+label = 'leader', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_________ test_monitor_nontransient_scan_error_aborts[failure3-group] __________
+
+label = 'group', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure3-signal_anchor] ______
+
+label = 'signal_anchor', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_____ test_monitor_nontransient_scan_error_aborts[failure3-terminal_group] _____
+
+label = 'terminal_group', failure = RuntimeError('unexpected owned symlink')
+
+    @pytest.mark.parametrize("label", ["owned", "canonical", "initial_leader", "leader", "group", "signal_anchor", "terminal_group"])
+    @pytest.mark.parametrize("failure", [PermissionError("synthetic denied"), OSError(errno.EIO, "synthetic EIO"), ValueError("synthetic malformed"), RuntimeError("unexpected owned symlink")])
+    def test_monitor_nontransient_scan_error_aborts(label, failure):
+        scan, errors = actual_scan()
+        calls = []
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(type(failure)) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:38: Failed
+_ test_monitor_process_identity_disappearance_aborts_immediately[initial_leader] _
+
+label = 'initial_leader'
+
+    @pytest.mark.parametrize("label", ["initial_leader", "leader", "group", "signal_anchor", "terminal_group", "unknown"])
+    def test_monitor_process_identity_disappearance_aborts_immediately(label):
+        scan, errors = actual_scan()
+        calls = []
+        failure = FileNotFoundError("synthetic process identity disappeared")
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(FileNotFoundError) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FileNotFoundError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:97: Failed
+____ test_monitor_process_identity_disappearance_aborts_immediately[leader] ____
+
+label = 'leader'
+
+    @pytest.mark.parametrize("label", ["initial_leader", "leader", "group", "signal_anchor", "terminal_group", "unknown"])
+    def test_monitor_process_identity_disappearance_aborts_immediately(label):
+        scan, errors = actual_scan()
+        calls = []
+        failure = FileNotFoundError("synthetic process identity disappeared")
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(FileNotFoundError) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FileNotFoundError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:97: Failed
+____ test_monitor_process_identity_disappearance_aborts_immediately[group] _____
+
+label = 'group'
+
+    @pytest.mark.parametrize("label", ["initial_leader", "leader", "group", "signal_anchor", "terminal_group", "unknown"])
+    def test_monitor_process_identity_disappearance_aborts_immediately(label):
+        scan, errors = actual_scan()
+        calls = []
+        failure = FileNotFoundError("synthetic process identity disappeared")
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(FileNotFoundError) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FileNotFoundError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:97: Failed
+_ test_monitor_process_identity_disappearance_aborts_immediately[signal_anchor] _
+
+label = 'signal_anchor'
+
+    @pytest.mark.parametrize("label", ["initial_leader", "leader", "group", "signal_anchor", "terminal_group", "unknown"])
+    def test_monitor_process_identity_disappearance_aborts_immediately(label):
+        scan, errors = actual_scan()
+        calls = []
+        failure = FileNotFoundError("synthetic process identity disappeared")
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(FileNotFoundError) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FileNotFoundError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:97: Failed
+_ test_monitor_process_identity_disappearance_aborts_immediately[terminal_group] _
+
+label = 'terminal_group'
+
+    @pytest.mark.parametrize("label", ["initial_leader", "leader", "group", "signal_anchor", "terminal_group", "unknown"])
+    def test_monitor_process_identity_disappearance_aborts_immediately(label):
+        scan, errors = actual_scan()
+        calls = []
+        failure = FileNotFoundError("synthetic process identity disappeared")
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(FileNotFoundError) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FileNotFoundError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:97: Failed
+___ test_monitor_process_identity_disappearance_aborts_immediately[unknown] ____
+
+label = 'unknown'
+
+    @pytest.mark.parametrize("label", ["initial_leader", "leader", "group", "signal_anchor", "terminal_group", "unknown"])
+    def test_monitor_process_identity_disappearance_aborts_immediately(label):
+        scan, errors = actual_scan()
+        calls = []
+        failure = FileNotFoundError("synthetic process identity disappeared")
+    
+        def operation():
+            calls.append("whole operation")
+            if len(calls) == 1:
+                raise failure
+            return "would incorrectly succeed on retry"
+    
+>       with pytest.raises(FileNotFoundError) as caught:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'FileNotFoundError'>
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:97: Failed
+____________ test_counter_wording_and_eos_stop_limit_in_three_files ____________
+
+    def test_counter_wording_and_eos_stop_limit_in_three_files():
+        paths = [ROOT / "spec/eval_acceptance.py", ROOT / "spec/README.md", ROOT / "docs/evidence/spec-decoding.md"]
+        tree = ast.parse(paths[0].read_text())
+        function = next(node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == "acceptance_length")
+        texts = [ast.get_docstring(function), *(path.read_text() for path in paths[1:])]
+        for text in texts:
+>           assert "counter-based acceptance length" in text.lower()
+E           AssertionError: assert 'counter-based acceptance length' in 'mean emitted tokens per verification, including its guaranteed token.\n\nrows are terminal cumulative counters exactly once per request. this is not\ndraft acceptance probability, training accuracy, or an inferred speedup.'
+E            +  where 'mean emitted tokens per verification, including its guaranteed token.\n\nrows are terminal cumulative counters exactly once per request. this is not\ndraft acceptance probability, training accuracy, or an inferred speedup.' = <built-in method lower of str object at 0x74b46eed3880>()
+E            +    where <built-in method lower of str object at 0x74b46eed3880> = 'Mean emitted tokens per verification, including its guaranteed token.\n\nRows are terminal cumulative counters exactly once per request. This is not\ndraft acceptance probability, training accuracy, or an inferred speedup.'.lower
+
+docs/evidence/raw/task15-cpu-round1-contract-test.py:109: AssertionError
+=========================== short test summary info ============================
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-owned]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-canonical]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-initial_leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-signal_anchor]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure0-terminal_group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-owned]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-canonical]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-initial_leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-signal_anchor]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure1-terminal_group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-owned]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-canonical]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-initial_leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-signal_anchor]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure2-terminal_group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-owned]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-canonical]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-initial_leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-signal_anchor]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_nontransient_scan_error_aborts[failure3-terminal_group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[initial_leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[leader]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[signal_anchor]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[terminal_group]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_monitor_process_identity_disappearance_aborts_immediately[unknown]
+FAILED docs/evidence/raw/task15-cpu-round1-contract-test.py::test_counter_wording_and_eos_stop_limit_in_three_files
+========================= 35 failed, 4 passed in 0.19s =========================

@@ -1,0 +1,7 @@
+Original preparation/cleanup tool execution: exit_code=1.
+No cleanup was performed before this assertion. The script rejected pytest's
+internal current symlinks; later scoped identity checks/cleanup are in the JSON receipt.
+Captured original stderr:
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+AssertionError

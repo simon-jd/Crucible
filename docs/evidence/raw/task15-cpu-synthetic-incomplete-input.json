@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "d4c2e7283ccd1ce38b5235c13b4384d3fdbd1c78051e9c04f928a573dd4131b4",
+  "synthetic_fixture": true,
+  "rows": [
+    {
+      "request_id": "synthetic-r0",
+      "status": "failed",
+      "reason": "synthetic failure with unknown counters"
+    },
+    {
+      "request_id": "synthetic-r1",
+      "status": "not_run",
+      "reason": "synthetic planned slot not executed"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "phase": "CPU number checker and truthful drafts only; no experiment acceptance",
+  "base": "f0efcbd040a1e76874a35d08441f93f9a7a3fb1b",
+  "python": "3.12.13",
+  "pytest": "8.4.2",
+  "ruff": "0.17.2",
+  "task10_fixture": {
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "sampling": {
+      "seed": 1010,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": -1,
+      "max_tokens": 8,
+      "max_model_len": 128
+    }
+  },
+  "serving_model": {
+    "repo": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "plan_sha256": "067ca7df8c06e738b38db2e73634e4d1a4ac411c9ebf59cb10db68e557d06a37",
+    "runtime_lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081"
+  },
+  "last_path_commits": {
+    "kernels/ops.py": "41c5f12a24c2c7cd1dfe1a8f61d6b90c574a9d38",
+    "docs/evidence/weight-sync.md": "8d3c2817559be48ebf2a1badcb14932c22863f51",
+    "docs/evidence/pd-disaggregation.md": "cbe766cda35f3715119069e3a5d53b09aeab754a",
+    "docs/evidence/serving-baseline.md": "0def66fde399123e9d7d48a40a3ddb2267e820dc"
+  },
+  "read_sources_sha256": {
+    "docs/evidence/fused-logprob.md": "002df6d9e2578bfe7a028f99f2f42d75e9be9acb9b41f2d5259bed8c4bf0a286",
+    "docs/evidence/learner.md": "f2fd322949924e5b8e059b52efdf248219dd58482e09ec82a571194d4aad02b9",
+    "docs/evidence/rollout.md": "35a53ddec2e45a38d4e1b93c9c84cd354acc3cae23dfb7bb751e8506f1006742",
+    "docs/evidence/weight-sync.md": "86a2af372b8cd0a69cba4e05836ba687583a874f0259c033e6b7598b906912f5",
+    "docs/evidence/serving-baseline.md": "abb1a401ed2c17d7a4861504fb9dcb67930d73ecd747d17f9774bcb2189d90ac",
+    "docs/evidence/serving-baseline-native-review.md": "89aa7a548f7ae53b9f64e2b32bc0947c40b6cccd6d76a7f78fde3e53ed26cfcc",
+    "docs/evidence/pd-disaggregation.md": "e8145ffe0ccfc6e8ceea918a5536badf015e5d92bafb591b375f7e6e95e28b53",
+    "docs/evidence/pd-disaggregation-review.md": "d8293a7ccdca79d673f0d9850c82e944f29cdf05a5e65c8b8af4d0478ea4f573",
+    "docs/evidence/raw/task10-final-source.sha256": "05ab022fbcbbc6398be29b82abac4bed0f00d606a0972904ca9ad336af3984e4",
+    "docs/evidence/raw/task10-gpu-final.txt": "fc5378edeaddbf8df1d22a03b3d9d485422e8a62ddb192818632f608078d5267",
+    "docs/evidence/raw/task12-startup-memory-02-summary.json": "46cfc4e25937afacbb68ad3f61ae984c00bccf2fa6175c67c6054691fb9139e8",
+    "docs/evidence/raw/task12-model-acquisition-02.json": "f1255befc838b4ac8232a7f80816539e45d643387c6a1fb34f5c3a57efc65244",
+    "docs/evidence/raw/task9-confirmation-protocol.json": "a9d94ba329dddb322156549bd1492a26d8387062d7585fb292b3ff0bd7455b4c"
+  },
+  "scope": "Hashes bind selected original evidence bytes; no model content read, no native imports/GPU/network/install/download or service execution."
+}

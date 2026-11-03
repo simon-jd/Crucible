@@ -1,0 +1,55 @@
+PLC0206 Extracting value from dictionary without calling `.items()`
+  --> tests/test_accuracy.py:45:9
+   |
+43 |                                        'kv_transfer_ms': None}]})
+44 |     quality = {}
+45 |     for v in configs:
+   |         ^^^^^^^^^^^^
+46 |         quality[v] = {'config_sha256': digest(configs[v]),
+   |                                               ----------
+47 |                       'conditions_sha256': digest(conditions),
+48 |                       'items': [{'id': 'q1', 'status': 'success', 'answer': '#### 42',
+   |
+help: Use `for v, value in configs.items()` instead
+
+I001 [*] Import block is un-sorted or un-formatted
+   --> tests/test_accuracy.py:110:5
+    |
+108 |                                              ('1,23', None), ('NaN', None), ('1e2', None)])
+109 |   def test_numeric_normalization(answer, expected):
+110 | /     from fractions import Fraction
+111 | |     from serving.eval.accuracy import normalize
+    | |_______________________________________________^
+112 |       assert normalize(answer, 'numeric-final-v1') == (Fraction(expected) if expected else None)
+    |
+help: Organize imports
+    |
+110 |     from fractions import Fraction
+111 +
+112 |     from serving.eval.accuracy import normalize
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+   --> tests/test_accuracy.py:205:5
+    |
+204 |   def test_actual_cli_roundtrip_and_fixture_rejection():
+205 | /     import os
+206 | |     from pathlib import Path
+207 | |     import subprocess
+208 | |     import sys
+    | |______________^
+209 |       root = Path('.cache/task13-cpu')
+210 |       root.mkdir(exist_ok=True)
+    |
+help: Organize imports
+    |
+205 |     import os
+    -     from pathlib import Path
+206 |     import subprocess
+207 |     import sys
+208 +     from pathlib import Path
+209 |     root = Path('.cache/task13-cpu')
+    |
+
+Found 3 errors.
+[*] 2 fixable with `--fix`.

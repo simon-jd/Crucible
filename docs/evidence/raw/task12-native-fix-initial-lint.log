@@ -1,0 +1,102 @@
+RUF059 Unpacked variable `state` is never used
+   --> serving/baseline/deadline_http_test.py:111:5
+    |
+109 | def test_late_wheel_publication_never_becomes_success(tmp_path, trickle_server, monkeypatch):
+110 |     from serving.baseline import prepare_runtime
+111 |     state, origin = trickle_server
+    |     ^^^^^
+112 |     original = prepare_runtime.os.link
+    |
+help: Prefix it with an underscore or any other dummy variable pattern
+    |
+110 |     from serving.baseline import prepare_runtime
+    -     state, origin = trickle_server
+111 +     _state, origin = trickle_server
+112 |     original = prepare_runtime.os.link
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> serving/baseline/startup_memory.py:3:1
+   |
+ 1 |   """Bounded startup attribution only; no generation or performance acceptance."""
+ 2 |
+ 3 | / import argparse
+ 4 | | import http.client
+ 5 | | import json
+ 6 | | import os
+ 7 | | import signal
+ 8 | | import subprocess
+ 9 | | import time
+10 | | from pathlib import Path
+11 | |
+12 | | from serving.baseline.deadline_http import absolute_deadline
+13 | | from serving.baseline.experiment import check_resources, listener_closed, stop_child, verify_model_inputs
+14 | | from serving.baseline.model_snapshot import canonical_bytes, load_plan
+15 | | from serving.baseline.prepare_runtime import sha256
+16 | | from serving.baseline.runtime_entry import ROOT, runtime_environment
+   | |____________________________________________________________________^
+help: Organize imports
+   |
+12 | from serving.baseline.deadline_http import absolute_deadline
+   - from serving.baseline.experiment import check_resources, listener_closed, stop_child, verify_model_inputs
+13 + from serving.baseline.experiment import (
+14 +     check_resources,
+15 +     listener_closed,
+16 +     stop_child,
+17 +     verify_model_inputs,
+18 + )
+19 | from serving.baseline.model_snapshot import canonical_bytes, load_plan
+   |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/startup_memory.py:179:12
+    |
+177 |                 next_sample += .1
+178 |                 time.sleep(max(0, min(next_sample, began + seconds) - time.monotonic()))
+179 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+180 |         result.update(reason="error", error=repr(error))
+181 |     finally:
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> serving/baseline/startup_memory_test.py:1:1
+   |
+ 1 | / import json
+ 2 | | import os
+ 3 | | import subprocess
+ 4 | | import sys
+ 5 | | import time
+ 6 | | from pathlib import Path
+ 7 | |
+ 8 | | import pytest
+ 9 | |
+10 | | from serving.baseline.startup_memory import snapshot, run_probe
+   | |_______________________________________________________________^
+help: Organize imports
+   |
+9  |
+   - from serving.baseline.startup_memory import snapshot, run_probe
+10 + from serving.baseline.startup_memory import run_probe, snapshot
+11 |
+   |
+
+F401 [*] `time` imported but unused
+ --> serving/baseline/startup_memory_test.py:5:8
+  |
+3 | import subprocess
+4 | import sys
+5 | import time
+  |        ^^^^
+6 | from pathlib import Path
+  |
+help: Remove unused import: `time`
+  |
+4 | import sys
+  - import time
+5 | from pathlib import Path
+  |
+
+Found 5 errors.
+[*] 3 fixable with `--fix` (1 unsafe fix available with `--fix --unsafe-fixes`).

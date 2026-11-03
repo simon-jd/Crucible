@@ -1,0 +1,40 @@
+{
+  "time_utc": "2026-10-25T20:03:07.199400+00:00",
+  "BASE": "b85ff66bbcabdb9a0f10b698bffb72356f850187",
+  "document_bytes": 11970,
+  "document_sha256": "43052959037469a2fa35690371f671bdce2ab4d8417d570fc1c676730e382a1c",
+  "report_bytes": 3566,
+  "report_sha256": "e9262c2b41889c155961ea802077a9e537e5ff1fb99061baf80a3a80fc0185e4",
+  "report_original3418_prefix_sha256": "7e3eed76e139d1f4a7a87a48aafcafce492f09ddd14f705d0082b6aa01fcd3dd",
+  "report_root_misplacement": "exactbytes moved to intendedworkspace; sameagent appended148B correction I1/I2fixed M1/M2deferred; no document rewrite",
+  "full04_immutable_summary_proposal_freeze_actual_SHA_verified": true,
+  "all_current_frozen_actual_SHA_counts": {
+    "sources": 196,
+    "artifacts": 220,
+    "executables": 4
+  },
+  "source_or_runtime_modified": false,
+  "tests_or_model_run": false,
+  "GPU_query_lock_queue_run": false,
+  "human_question_sent": false,
+  "original_full04_human_answer": "stillpending, no authority recorded",
+  "new_stage_net_growth_bytes": 25976,
+  "same_new_stage_retained_cap": 200000,
+  "remaining_new_stage_retained_bytes": 174024,
+  "resource_sample": {
+    "project_bytes": 13318932759,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13308772528,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13998772528,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_all_closed_old_and_new_allowances": 13999698629,
+  "next": "exact4pathlocalcommit, requiredonepackage, independentreview; no currentfullmodelacceptance",
+  "wholeGoal_complete": false
+}

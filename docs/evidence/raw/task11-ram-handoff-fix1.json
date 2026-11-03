@@ -1,0 +1,288 @@
+{
+  "mode": "fix1",
+  "command": [
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-v",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/fix1/pytest",
+    "rl/learner/tests/test_state_handoff.py::test_consume_reserves_restore_staging_before_spawn",
+    "rl/learner/tests/test_state_handoff.py::test_restore_rejects_oversized_zip_directory_before_buffering",
+    "rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds",
+    "rl/learner/tests/test_state_handoff.py::test_save_rejects_directory_allowance_before_output",
+    "rl/learner/tests/test_state_handoff.py::test_original_child_exit_then_fresh_process_adamw_resume"
+  ],
+  "initial_resource": {
+    "project_bytes": 13315572640,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305412409,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995412409,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "d3bee5c4bfc678c1eb3fcde8de2d13c6c449fb8d72e3066a843c6cc9b501b0e2",
+    "rl/learner/handoff_zip.py": "631ba0699de344bde4191b3a2a0e1c4ab4f290f98e40dbad32fdcb7d0dc1c405",
+    "rl/learner/train.py": "9a2fdd334245475dbed2e390d7e035f27201925c18428e5e4b5ee664a95b74a6",
+    "rl/learner/README.md": "922cb54b03d85bbceaa55231e72e474fcbfc5f9992051ee59f96166538ae8354",
+    "rl/learner/tests/test_state_handoff.py": "a94a87eb490a7b43ba7779385d04abb5a4f20094cdec592847484188d3f831c7",
+    "rl/learner/tests/handoff_worker.py": "1477e7cc02c181c7637b07f4ae5f1044bc35851c7b055516458d1a9b78d5bb0a",
+    "scripts/test_ram_handoff_cpu.py": "7c1710f0b730ecd0b6e6d176751c34313f7df85852c671d9fb2b56f373e89e1b"
+  },
+  "limits": {
+    "seconds": 120,
+    "cleanup_seconds": 5,
+    "scratch_bytes": 1000000,
+    "aggregate_rss_plus_anonymous": 2000000000,
+    "anonymous_reserve": 2097152,
+    "fsize": 262144
+  },
+  "samples": [
+    {
+      "elapsed": 1.8456901410827413,
+      "rss": 43806720,
+      "charged": 45903872,
+      "pids": [
+        4,
+        5
+      ],
+      "scratch_bytes": 0
+    },
+    {
+      "elapsed": 2.856284328037873,
+      "rss": 603922432,
+      "charged": 606019584,
+      "pids": [
+        4,
+        5
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 3.8690599580295384,
+      "rss": 1186787328,
+      "charged": 1188884480,
+      "pids": [
+        4,
+        5,
+        6
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 4.8862763290526345,
+      "rss": 1017999360,
+      "charged": 1020096512,
+      "pids": [
+        4,
+        5,
+        8
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 5.89624830998946,
+      "rss": 1334157312,
+      "charged": 1336254464,
+      "pids": [
+        4,
+        5,
+        8
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 6.911475516972132,
+      "rss": 1243922432,
+      "charged": 1246019584,
+      "pids": [
+        4,
+        5,
+        10
+      ],
+      "scratch_bytes": 4710
+    },
+    {
+      "elapsed": 7.9271990599809214,
+      "rss": 1182437376,
+      "charged": 1184534528,
+      "pids": [
+        4,
+        5,
+        12
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 8.939884799998254,
+      "rss": 832827392,
+      "charged": 834924544,
+      "pids": [
+        4,
+        5,
+        14
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 9.950088617042638,
+      "rss": 1344057344,
+      "charged": 1346154496,
+      "pids": [
+        4,
+        5,
+        14
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 10.962418981012888,
+      "rss": 1257779200,
+      "charged": 1259876352,
+      "pids": [
+        4,
+        5,
+        16
+      ],
+      "scratch_bytes": 4710
+    }
+  ],
+  "errors": [],
+  "exit_code": 0,
+  "cleanup_confirmed": true,
+  "peak_sampled_charge": 1462386688,
+  "remaining_owned_children": [],
+  "final_resource": {
+    "project_bytes": 13315575260,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305415029,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995415029,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "scratch_bytes": 0,
+  "scratch_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395030,
+      "mode": 16893,
+      "nlink": 4,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1",
+      "dev": 66307,
+      "inode": 56395020,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/cuda",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/cupy",
+      "dev": 66307,
+      "inode": 56395048,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/inductor",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/numba",
+      "dev": 66307,
+      "inode": 56395049,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/tmp",
+      "dev": 66307,
+      "inode": 56395034,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938583940758980
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/torch",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/triton",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/vllm",
+      "dev": 66307,
+      "inode": 56395052,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/fix1/xdg",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938574137823008
+    },
+    {
+      "path": ".cache/task11-ram-handoff/static-fix1",
+      "dev": 66307,
+      "inode": 56395033,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792938464908536445
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "base": "0f4c2e5a420e5598241da4162af8997c91830824",
+  "head": "972a0eef40f72dede70481a7104ea3f9c2854926",
+  "task_paths": 44,
+  "package": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-wait-review-package.diff",
+  "bytes": 643613,
+  "sha256": "fd47ae030e237dc511ad818950d70f65a2868cdbaaa648f14995e4c7028dc745",
+  "root_metadata_excluded": true,
+  "required_helper_also_generated": true
+}

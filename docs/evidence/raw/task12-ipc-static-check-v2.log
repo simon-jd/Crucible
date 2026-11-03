@@ -1,0 +1,97 @@
+SIM102 Use a single `if` statement instead of nested `if` statements
+    --> serving/baseline/experiment.py:1412:13
+     |
+1410 |               )
+1411 |           finally:
+1412 | /             if pool and server is not None and pool.ipc is not None and pool.ipc.server is server:
+1413 | |                 if server.poll() is not None:
+     | |_____________________________________________^
+1414 |                       pool.ipc.confirm_exited(server)
+1415 |               server_log.close()
+     |
+help: Combine `if` statements using `and`
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> serving/baseline/native_ipc_test.py:8:1
+   |
+ 6 |   """
+ 7 |
+ 8 | / import ast
+ 9 | | import contextlib
+10 | | import dataclasses
+11 | | import errno
+12 | | import hashlib
+13 | | import json
+14 | | import os
+15 | | from pathlib import Path
+16 | | import socket
+17 | | import stat
+18 | | import sys
+19 | | import tempfile
+20 | | from types import SimpleNamespace
+21 | |
+22 | | import pytest
+23 | |
+24 | | from serving.baseline import native_ipc as ipc
+25 | | from serving.baseline import native_pool
+   | |________________________________________^
+26 |
+27 |   ROOT = Path(__file__).resolve().parents[2]
+   |
+help: Organize imports
+   |
+14 | import os
+   - from pathlib import Path
+15 | import socket
+16 | import stat
+17 | import sys
+18 | import tempfile
+19 + from pathlib import Path
+20 | from types import SimpleNamespace
+   |
+
+SIM115 Use a context manager for opening files
+   --> serving/baseline/native_ipc_test.py:103:69
+    |
+101 |     namespace = {
+102 |         "__name__": __name__, "dataclasses": dataclasses,
+103 |         "tempfile": SimpleNamespace(NamedTemporaryFile=lambda **kw: tempfile.NamedTemporaryFile(dir=tree.tmp, **kw)),
+    |                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+104 |     }
+105 |     exec(compile(unit, str(path), "exec"), namespace)
+    |
+
+S102 Use of `exec` detected
+   --> serving/baseline/native_ipc_test.py:105:5
+    |
+103 |         "tempfile": SimpleNamespace(NamedTemporaryFile=lambda **kw: tempfile.NamedTemporaryFile(dir=tree.tmp, **kw)),
+104 |     }
+105 |     exec(compile(unit, str(path), "exec"), namespace)
+    |     ^^^^
+106 |     return namespace["PortArgs"].init_new
+    |
+
+SIM117 [*] Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> serving/baseline/native_ipc_test.py:400:5
+    |
+398 |       path.unlink()  # Remove exact own stale name before creating the sole next socket.
+399 |       unknown = tree.tmp / "unknown"
+400 | /     with bound(tree, unknown):
+401 | |         with pytest.raises(ValueError, match="nonregular"):
+    | |___________________________________________________________^
+402 |               tree.pool.measure()
+403 |       assert policy.invalid
+    |
+help: Combine `with` statements
+    |
+399 |     unknown = tree.tmp / "unknown"
+    -     with bound(tree, unknown):
+    -         with pytest.raises(ValueError, match="nonregular"):
+    -             tree.pool.measure()
+400 +     with bound(tree, unknown), pytest.raises(ValueError, match="nonregular"):
+401 +         tree.pool.measure()
+402 |     assert policy.invalid
+    |
+
+Found 5 errors.
+[*] 2 fixable with `--fix`.

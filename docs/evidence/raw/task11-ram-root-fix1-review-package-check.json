@@ -1,0 +1,14 @@
+{
+  "base": "d0e742031e3de2a1c2516d39b4fc96ca3a042b57",
+  "head": "4027883ccadd36e64259df1ba52134fa28c75c89",
+  "exact_paths_verified": 10,
+  "committed_and_working_SHA_match": true,
+  "index_empty": true,
+  "package": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-fix1-review.diff",
+  "package_bytes": 46880,
+  "package_sha256": "38902aa157e8cc4e5e0ff3ddb4fe55d0dddebe4178c62e1c117dca7d1c434167",
+  "initial_review_bytes": 16285,
+  "initial_review_sha256": "3e2791a26ee8bee760c86d880fd24ee591cca365beec30a36b5ae2c87784996d",
+  "review_report_cap": 16000,
+  "no_test_repeat": true
+}

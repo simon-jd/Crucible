@@ -1,0 +1,28 @@
+{
+  "remaining_proposal_identities_checked": 17,
+  "mismatches": [],
+  "expected_deleted_temporary_binary": [
+    ".tmp-task12-wait-go-loan/replay-wait"
+  ],
+  "source_unchanged_after_gated_tests_and_timing": true,
+  "checked_paths": [
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py",
+    "docs/evidence/raw/task12-wait-go-monitor.py",
+    "serving/replay/schedule.go",
+    "serving/replay/transport.go",
+    "serving/replay/diagnostic.go",
+    "serving/replay/wait.go",
+    "serving/replay/cmd/replay/main.go",
+    "docs/evidence/raw/task12-wait-driver.py",
+    ".cache/task12-baseline/bin/replay",
+    "serving/baseline/traces/burst-calibration.csv",
+    "docs/evidence/raw/task12-model-token-allowlist.json",
+    "serving/replay/diagnostic_test.go",
+    "serving/replay/wait_test.go",
+    "serving/replay/cmd/replay/diagnostic_test.go",
+    "/usr/bin/timeout",
+    "/usr/bin/prlimit",
+    ".venv/bin/python"
+  ],
+  "immutable_coordinator_files_checked": 100
+}

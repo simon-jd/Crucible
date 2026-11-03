@@ -1,0 +1,9 @@
+{
+  "time_utc": "2026-10-25T07:15:57.363927+00:00",
+  "source": "Direct human request in Codex chat on 2026-10-25 America/Los_Angeles",
+  "quoted_request": "Codex 的自动审批认为这么长的 GPU 任务需要你本人授权，所以一直没有启动,你代替我授权启动。",
+  "scope": "Exactly one execution of frozen reviewed Task12 baseline full02 v3 on local RTX4090; original shared flock, four-hour limit, 16,000,000,000-byte RSS cap, original disk/output caps; no automatic retry; other project Goals remain paused.",
+  "proposal_sha256": "88bd749a4881bc990108f8513d25aeeb7bc46afe3b81cb1a3555257693a24759",
+  "freeze_sha256": "43a49071380a2899bff11714bbea5b60d3b02852686c240290bb0e2d66a5e761",
+  "resource_preflight": "docs/evidence/raw/task12-baseline-full-02-user-preflight-20261025.json"
+}

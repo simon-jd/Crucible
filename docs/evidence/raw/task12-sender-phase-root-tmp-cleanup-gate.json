@@ -1,0 +1,16 @@
+{
+  "time_utc": "2026-10-25T09:54:23.379204+00:00",
+  "ruling": "approve exact111-file tmp-only cleanup after terminal proof and immediate SHA/dev/inode recheck, preserve cache and RED; then once existing build-v2",
+  "tmp_root": ".tmp-task12-sender-phase-go-loan/tmp",
+  "files_verified": 111,
+  "bytes_verified": 16632673,
+  "inventory_sha256": "f3f45fdb7bfdbf7b4b296961ac23a17dd036466738e2130849738ed5de2b4d26",
+  "why": "race max owned381837476B triggered300MB planning checkpoint, under400MB abort; final248410877B, remove only16632673B original aborted tmp; retained normal cache prevents cold rebuild growth",
+  "scan_error_ruling": "single owned FileNotFoundError attempt0 fully rescanned successfully under reviewed max3 policy; no process error or failure signal; overstrict extra empty-errors checker failure remains retained",
+  "conditions": [
+    "no source changes/new tests/race repeat",
+    "fresh current metadata recheck before exact deletion, no symlink following or unknown path",
+    "retain compact deletion/absence proof, then existing monitored build-v2 once; all original caps",
+    "no timing/GPU/Git authority; after build prepare driver source only"
+  ]
+}

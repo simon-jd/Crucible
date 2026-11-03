@@ -1,0 +1,1 @@
+4 YAML documents parsed; inert deployment, TP+EP, immutable-placeholder and read-only cache assertions passed. No Kubernetes apply/schema validation.

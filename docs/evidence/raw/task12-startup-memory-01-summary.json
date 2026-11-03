@@ -1,0 +1,934 @@
+{
+  "original_handle": 72048,
+  "authoritative_exit": 1,
+  "reason": "early-memory-stop",
+  "baseline_accepted": false,
+  "samples": 63,
+  "max_sampled_aggregate_rss": 11500138496,
+  "early_stop": 10000000000,
+  "unchanged_cap": 16000000000,
+  "new_sampled_16GB_violation": false,
+  "does_not_exclude_unsampled_overshoot": true,
+  "observed_identities": [
+    {
+      "pid": 2204727,
+      "start_ticks": 67711599,
+      "ppid": 2204726,
+      "pgrp": 2204726,
+      "category": "observer"
+    },
+    {
+      "pid": 2205434,
+      "start_ticks": 67713197,
+      "ppid": 2204727,
+      "pgrp": 2204726,
+      "category": "server-entry"
+    },
+    {
+      "pid": 2205669,
+      "start_ticks": 67713627,
+      "ppid": 2205434,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205766,
+      "start_ticks": 67713732,
+      "ppid": 2205434,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205767,
+      "start_ticks": 67713732,
+      "ppid": 2205434,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205768,
+      "start_ticks": 67713733,
+      "ppid": 2205434,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205861,
+      "start_ticks": 67713802,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205863,
+      "start_ticks": 67713802,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205865,
+      "start_ticks": 67713803,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205867,
+      "start_ticks": 67713804,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205869,
+      "start_ticks": 67713804,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205871,
+      "start_ticks": 67713805,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205873,
+      "start_ticks": 67713805,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205875,
+      "start_ticks": 67713806,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205877,
+      "start_ticks": 67713806,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205879,
+      "start_ticks": 67713807,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205881,
+      "start_ticks": 67713808,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205883,
+      "start_ticks": 67713808,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205885,
+      "start_ticks": 67713809,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205887,
+      "start_ticks": 67713810,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205889,
+      "start_ticks": 67713810,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205891,
+      "start_ticks": 67713812,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205893,
+      "start_ticks": 67713812,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205895,
+      "start_ticks": 67713813,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205897,
+      "start_ticks": 67713813,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205899,
+      "start_ticks": 67713814,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205901,
+      "start_ticks": 67713814,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205903,
+      "start_ticks": 67713814,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    },
+    {
+      "pid": 2205905,
+      "start_ticks": 67713815,
+      "ppid": 2205669,
+      "pgrp": 2204726,
+      "category": "unknown-owned-child"
+    }
+  ],
+  "terminal_identity_absence": true,
+  "guard_wrapper_timeout_identity_limit": "guard/wrapper start ticks were not captured while queued; exact launch PIDs and group ID are absent at host terminal, no retrospective starttime is invented",
+  "last_parent_groups": [
+    {
+      "parent": 2204726,
+      "children": 1,
+      "pids": [
+        2204727
+      ],
+      "aggregate_stat_rss": 58036224,
+      "status_anon": 47775744,
+      "status_file": 12107776,
+      "status_shmem": 0,
+      "categories": [
+        "observer"
+      ]
+    },
+    {
+      "parent": 2204727,
+      "children": 1,
+      "pids": [
+        2205434
+      ],
+      "aggregate_stat_rss": 1041629184,
+      "status_anon": 657055744,
+      "status_file": 369909760,
+      "status_shmem": 19591168,
+      "categories": [
+        "server-entry"
+      ]
+    },
+    {
+      "parent": 2205434,
+      "children": 4,
+      "pids": [
+        2205669,
+        2205766,
+        2205767,
+        2205768
+      ],
+      "aggregate_stat_rss": 1608994816,
+      "status_anon": 810414080,
+      "status_file": 803897344,
+      "status_shmem": 0,
+      "categories": [
+        "unknown-owned-child"
+      ]
+    },
+    {
+      "parent": 2205669,
+      "children": 23,
+      "pids": [
+        2205861,
+        2205863,
+        2205865,
+        2205867,
+        2205869,
+        2205871,
+        2205873,
+        2205875,
+        2205877,
+        2205879,
+        2205881,
+        2205883,
+        2205885,
+        2205887,
+        2205889,
+        2205891,
+        2205893,
+        2205895,
+        2205897,
+        2205899,
+        2205901,
+        2205903,
+        2205905
+      ],
+      "aggregate_stat_rss": 8791478272,
+      "status_anon": 7992979456,
+      "status_file": 805511168,
+      "status_shmem": 94208,
+      "categories": [
+        "unknown-owned-child"
+      ]
+    }
+  ],
+  "last_sample": {
+    "monotonic": 677138.175386763,
+    "aggregate_rss_bytes": 11500138496,
+    "processes": [
+      {
+        "pid": 2204727,
+        "ppid": 2204726,
+        "pgrp": 2204726,
+        "start_ticks": 67711599,
+        "rss_bytes": 58036224,
+        "category": "observer",
+        "status_components": {
+          "VmRSS": 59883520,
+          "RssAnon": 47775744,
+          "RssFile": 12107776,
+          "RssShmem": 0
+        },
+        "VmRSS": 59883520,
+        "RssAnon": 47775744,
+        "RssFile": 12107776,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2205434,
+        "ppid": 2204727,
+        "pgrp": 2204726,
+        "start_ticks": 67713197,
+        "rss_bytes": 1041629184,
+        "category": "server-entry",
+        "status_components": {
+          "VmRSS": 1046556672,
+          "RssAnon": 657055744,
+          "RssFile": 369909760,
+          "RssShmem": 19591168
+        },
+        "VmRSS": 1046556672,
+        "RssAnon": 657055744,
+        "RssFile": 369909760,
+        "RssShmem": 19591168
+      },
+      {
+        "pid": 2205669,
+        "ppid": 2205434,
+        "pgrp": 2204726,
+        "start_ticks": 67713627,
+        "rss_bytes": 659251200,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 661909504,
+          "RssAnon": 347533312,
+          "RssFile": 314376192,
+          "RssShmem": 0
+        },
+        "VmRSS": 661909504,
+        "RssAnon": 347533312,
+        "RssFile": 314376192,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2205766,
+        "ppid": 2205434,
+        "pgrp": 2204726,
+        "start_ticks": 67713732,
+        "rss_bytes": 14655488,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 14807040,
+          "RssAnon": 5787648,
+          "RssFile": 9019392,
+          "RssShmem": 0
+        },
+        "VmRSS": 14807040,
+        "RssAnon": 5787648,
+        "RssFile": 9019392,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2205767,
+        "ppid": 2205434,
+        "pgrp": 2204726,
+        "start_ticks": 67713732,
+        "rss_bytes": 443584512,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 445448192,
+          "RssAnon": 216150016,
+          "RssFile": 229298176,
+          "RssShmem": 0
+        },
+        "VmRSS": 445448192,
+        "RssAnon": 216150016,
+        "RssFile": 229298176,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2205768,
+        "ppid": 2205434,
+        "pgrp": 2204726,
+        "start_ticks": 67713733,
+        "rss_bytes": 491503616,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 492146688,
+          "RssAnon": 240943104,
+          "RssFile": 251203584,
+          "RssShmem": 0
+        },
+        "VmRSS": 492146688,
+        "RssAnon": 240943104,
+        "RssFile": 251203584,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2205861,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713802,
+        "rss_bytes": 381992960,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382439424,
+          "RssAnon": 347512832,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382439424,
+        "RssAnon": 347512832,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205863,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713802,
+        "rss_bytes": 382164992,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382439424,
+          "RssAnon": 347512832,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382439424,
+        "RssAnon": 347512832,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205865,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713803,
+        "rss_bytes": 382689280,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 383029248,
+          "RssAnon": 347512832,
+          "RssFile": 35512320,
+          "RssShmem": 4096
+        },
+        "VmRSS": 383029248,
+        "RssAnon": 347512832,
+        "RssFile": 35512320,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205867,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713804,
+        "rss_bytes": 382689280,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 383029248,
+          "RssAnon": 347512832,
+          "RssFile": 35512320,
+          "RssShmem": 4096
+        },
+        "VmRSS": 383029248,
+        "RssAnon": 347512832,
+        "RssFile": 35512320,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205869,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713804,
+        "rss_bytes": 382689280,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 383029248,
+          "RssAnon": 347512832,
+          "RssFile": 35512320,
+          "RssShmem": 4096
+        },
+        "VmRSS": 383029248,
+        "RssAnon": 347512832,
+        "RssFile": 35512320,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205871,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713805,
+        "rss_bytes": 382689280,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382959616,
+          "RssAnon": 347508736,
+          "RssFile": 35446784,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382959616,
+        "RssAnon": 347508736,
+        "RssFile": 35446784,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205873,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713805,
+        "rss_bytes": 382148608,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382435328,
+          "RssAnon": 347508736,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382435328,
+        "RssAnon": 347508736,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205875,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713806,
+        "rss_bytes": 382164992,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382439424,
+          "RssAnon": 347512832,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382439424,
+        "RssAnon": 347512832,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205877,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713806,
+        "rss_bytes": 382164992,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382439424,
+          "RssAnon": 347512832,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382439424,
+        "RssAnon": 347512832,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205879,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713807,
+        "rss_bytes": 381947904,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382439424,
+          "RssAnon": 347512832,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382439424,
+        "RssAnon": 347512832,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205881,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713808,
+        "rss_bytes": 382238720,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382443520,
+          "RssAnon": 347516928,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382443520,
+        "RssAnon": 347516928,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205883,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713808,
+        "rss_bytes": 382177280,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382451712,
+          "RssAnon": 347525120,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382451712,
+        "RssAnon": 347525120,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205885,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713809,
+        "rss_bytes": 382181376,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382451712,
+          "RssAnon": 347525120,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382451712,
+        "RssAnon": 347525120,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205887,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713810,
+        "rss_bytes": 382181376,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205889,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713810,
+        "rss_bytes": 382181376,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205891,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713812,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205893,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713812,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205895,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713813,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205897,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713813,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205899,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713814,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205901,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713814,
+        "rss_bytes": 381878272,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205903,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713814,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      },
+      {
+        "pid": 2205905,
+        "ppid": 2205669,
+        "pgrp": 2204726,
+        "start_ticks": 67713815,
+        "rss_bytes": 382185472,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 382455808,
+          "RssAnon": 347529216,
+          "RssFile": 34922496,
+          "RssShmem": 4096
+        },
+        "VmRSS": 382455808,
+        "RssAnon": 347529216,
+        "RssFile": 34922496,
+        "RssShmem": 4096
+      }
+    ],
+    "events": []
+  },
+  "interval_seconds": {
+    "min": 0.029032916063442826,
+    "median": 0.09998275648104027,
+    "max": 0.17499204899650067
+  },
+  "last_five_samples": [
+    {
+      "relative_seconds": 5.7823224759195,
+      "rss": 1905475584,
+      "pid_count": 6
+    },
+    {
+      "relative_seconds": 5.882005380932242,
+      "rss": 1909854208,
+      "pid_count": 6
+    },
+    {
+      "relative_seconds": 5.983073889976367,
+      "rss": 1934106624,
+      "pid_count": 6
+    },
+    {
+      "relative_seconds": 6.084658893989399,
+      "rss": 5071335424,
+      "pid_count": 13
+    },
+    {
+      "relative_seconds": 6.183592069894075,
+      "rss": 11500138496,
+      "pid_count": 29
+    }
+  ],
+  "resource_samples": [
+    {
+      "monotonic": 677132.991650825,
+      "project_bytes": 13321607341,
+      "project_bytes_kind": "conservative mutable-root estimate",
+      "runtime_cache_bytes": 7065,
+      "evidence_bytes": 47218,
+      "owned_rss_bytes": 575606784,
+      "canonical_rescans": []
+    },
+    {
+      "monotonic": 677134.093576999,
+      "project_bytes": 13321614680,
+      "project_bytes_kind": "conservative mutable-root estimate",
+      "runtime_cache_bytes": 7065,
+      "evidence_bytes": 54557,
+      "owned_rss_bytes": 763875328,
+      "canonical_rescans": []
+    },
+    {
+      "monotonic": 677135.194305408,
+      "project_bytes": 13321624457,
+      "project_bytes_kind": "conservative mutable-root estimate",
+      "runtime_cache_bytes": 9420,
+      "evidence_bytes": 61979,
+      "owned_rss_bytes": 892317696,
+      "canonical_rescans": []
+    },
+    {
+      "monotonic": 677136.292787137,
+      "project_bytes": 13321631880,
+      "project_bytes_kind": "conservative mutable-root estimate",
+      "runtime_cache_bytes": 9420,
+      "evidence_bytes": 69402,
+      "owned_rss_bytes": 944742400,
+      "canonical_rescans": []
+    },
+    {
+      "monotonic": 677137.452313754,
+      "project_bytes": 13321653531,
+      "project_bytes_kind": "conservative mutable-root estimate",
+      "runtime_cache_bytes": 11775,
+      "evidence_bytes": 88698,
+      "owned_rss_bytes": 1849606144,
+      "canonical_rescans": []
+    }
+  ],
+  "resource_error_samples": [],
+  "runtime_cache_bytes_terminal": 9420,
+  "shared_cache_bytes_terminal": 23815435170,
+  "owned_output_bytes": 115168,
+  "cleanup": {
+    "pid": 2205434,
+    "returncode": -15,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "readiness_marker_seen": false,
+  "http_requests_sent": 0,
+  "generation_smoke_warmup_calibration_evaluation_executed": false,
+  "cause_limit": "unknown-owned-child labels are retained; neither module/allocator identity nor a sufficient remedy is measured",
+  "nccl_limit": "no explicit backend destroy_process_group evidence; exact process exits and outer guard drain establish lifecycle cleanup only",
+  "raw_sha256": {
+    "docs/evidence/raw/task12-startup-memory-01/samples.jsonl": "30b24687b4fc2b8170e9c0b0182cb9264a8074a0789965ab5b1384f987545649",
+    "docs/evidence/raw/task12-startup-memory-01/server-inventory.json": "c4fd8e0c8f15fac0881e9808d763f35b008008a2186595ae14f18d5a6990a91d",
+    "docs/evidence/raw/task12-startup-memory-01/server.log": "145950d13c876e96b188118f092fec10ae0d7264cfcdac65b1c2bcde292a13e6",
+    "docs/evidence/raw/task12-startup-memory-01/stop.json": "3a6984273f44dd7eb26439a6f06b20d2e60cc07342482e91e85ff1d705c1c1e0",
+    "docs/evidence/raw/task12-startup-memory-01/terminal.json": "b9581a9c71daefc49948e9ede6606a98de39aef798d60d30b16e3b46b811c4c5"
+  }
+}

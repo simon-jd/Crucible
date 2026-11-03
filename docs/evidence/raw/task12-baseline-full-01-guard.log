@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 899, in <module>
+    main()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 761, in main
+    inspect()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 688, in inspect
+    sample = check_resources(work, base_bytes, args.output, canonical)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 419, in check_resources
+    raise RuntimeError("resource high-water stop: " + json.dumps(sample))
+RuntimeError: resource high-water stop: {"monotonic": 673649.766632158, "project_bytes": 13317074158, "project_bytes_kind": "conservative mutable-root estimate", "runtime_cache_bytes": 9420, "evidence_bytes": 51535, "owned_rss_bytes": 16277946368, "canonical_rescans": []}

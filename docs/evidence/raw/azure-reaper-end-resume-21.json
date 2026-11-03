@@ -1,0 +1,2 @@
+{"event": "scope", "subscription": "<azure-subscription-id>", "resource_group": "rg-crucible-lab", "mode": "plan"}
+{"event": "absent", "resource_group": "rg-crucible-lab", "action": "none"}

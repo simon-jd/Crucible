@@ -1,0 +1,37 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "original_handle": 41145,
+  "original_exit": 1,
+  "original_failure_state_sha256": "844052ec3df8ca47397654fd72d3721b95ee39959faf8d6894c48eea81c02d97",
+  "recovery_audit_sha256": "9b8f1dc8ab854bdc266794972fc7c30751f880e63963388a7d538a91f28d44ef",
+  "completed": [
+    {
+      "name": "sgl-kernel",
+      "wheel_sha256": "3a81ecd6398ec0878f0992bbc7fe9434627cd93d8240808d396c2385f8021c8f",
+      "record": "sgl_kernel-0.3.16.post5.dist-info/RECORD",
+      "record_sha256": "90662b973da476390bdc6a11d820a5851d4e7f52b27de649e37a8380de00bb21"
+    },
+    {
+      "name": "flashinfer-cubin",
+      "wheel_sha256": "f8973487265608ffb05e7a496374dc96544933d44731632b0da2f6ff5376f597",
+      "record": "flashinfer_cubin-0.5.0.dist-info/RECORD",
+      "record_sha256": "34fafe8a3e83484bff57caa30cce2facfabb82f3f102dd5508435a547fa75152"
+    }
+  ],
+  "stage_cleanup": {
+    "path": ".cache/task12-baseline/wheel-stage-01",
+    "owner": {
+      "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+      "wheel": "flashinfer_cubin-0.5.0-py3-none-any.whl"
+    },
+    "project_before": 12509399948,
+    "active_file_descriptors": [],
+    "immutable_large_payload_bytes": 1928789,
+    "project_after": 12416374939,
+    "reclaimed_unique_bytes": 93025009
+  },
+  "remaining_wheels": 60,
+  "remaining_download_bytes": 243936092,
+  "remaining_expanded_bytes": 853091167,
+  "remaining_stage_peak_reserve": 1484705443
+}

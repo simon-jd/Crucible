@@ -1,0 +1,31 @@
+{
+  "time_utc": "2026-10-25T17:51:49.377816+00:00",
+  "scope": "ROOT after firstCPU failure and before fixture static gate; no Torch/GPU imports",
+  "frozen": {
+    "sources": 183,
+    "artifacts": 207
+  },
+  "executables": 4,
+  "coordinator_files": 100,
+  "coordinator_bytes": 2578786,
+  "native_pool_directories": 15,
+  "native14leaves_empty": true,
+  "client_retained_in_original_pool": true,
+  "resource_sample": {
+    "project_bytes": 13316848418,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306688187,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996688187,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13999688187,
+  "shared_cache_bytes": 23815435170,
+  "full03_output_absent": true,
+  "original_full02_failure_preserved": true
+}

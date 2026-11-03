@@ -1,0 +1,120 @@
+{
+  "command": [
+    ".tools/go/bin/go",
+    "-C",
+    ".tmp-task12-sender-phase-go-loan/red",
+    "test",
+    "-trimpath",
+    "-p=1",
+    "-count=1",
+    "-timeout=30s",
+    "-run",
+    "^TestDiagnosticCLIOptionalAndOriginalJSON$",
+    "./serving/replay/cmd/replay"
+  ],
+  "samples": [
+    {
+      "seconds": 0.9129702430218458,
+      "interval_seconds": 0.9129702430218458,
+      "owned_bytes": 52617,
+      "rss_bytes": 1916928,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.1637082550441846,
+      "interval_seconds": 0.2507380120223388,
+      "owned_bytes": 969170,
+      "rss_bytes": 46678016,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.4266664150636643,
+      "interval_seconds": 0.2629581600194797,
+      "owned_bytes": 5070789,
+      "rss_bytes": 64348160,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.6905915479874238,
+      "interval_seconds": 0.2639251329237595,
+      "owned_bytes": 8337419,
+      "rss_bytes": 66207744,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.9562674780609086,
+      "interval_seconds": 0.2656759300734848,
+      "owned_bytes": 8337419,
+      "rss_bytes": 147820544,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 2.2235110530164093,
+      "interval_seconds": 0.26724357495550066,
+      "owned_bytes": 8337419,
+      "rss_bytes": 152510464,
+      "log_bytes": 0
+    }
+  ],
+  "scan_errors": [],
+  "signals": [
+    {
+      "signal": "SIGTERM",
+      "seconds": 3.1645274540642276
+    }
+  ],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "bdda278d30d62802b0c3af8a23c9ff8ae71f9bf77dc8fd8796665e8fbf5809cc",
+  "before": {
+    "canonical_bytes": 13297725277,
+    "owned_bytes": 52617,
+    "projected_bytes": 13987672660,
+    "free_bytes": 265813037056
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/tmp"
+  },
+  "pid": 3,
+  "leader_start": "71912100",
+  "failed_disk_checks": [
+    {
+      "canonical_bytes": 13318870180,
+      "owned_bytes": 8337419,
+      "projected_bytes": 14000532761,
+      "free_bytes": 265786626048
+    }
+  ],
+  "abort": "RuntimeError: disk threshold exceeded",
+  "exit_code": -15,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 3.168148713069968,
+  "after": {
+    "canonical_bytes": 13320934564,
+    "owned_bytes": 23261904,
+    "projected_bytes": 13987672660,
+    "free_bytes": 265786322944
+  }
+}

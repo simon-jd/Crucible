@@ -1,0 +1,1171 @@
+{
+  "source_entries": 175,
+  "artifact_entries": 18,
+  "all_match": true,
+  "executables": {
+    "python_sha256": true,
+    "native_python_sha256": true,
+    "timeout_sha256": true
+  },
+  "checks": [
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/_bootstrap.py",
+      "sha256": "d112d54b7831cf4a818d4841d5ff8003b54df220a6dabafa61f67d7c7a5603f7",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/_bootstrap_external.py",
+      "sha256": "9bde390a6f254cf6641bfdba053084c1d506c7324c142131c695d030662ab63d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/zipimport.py",
+      "sha256": "a96f1d7a7b6aaf421a3cf382b94b1422f4f0ad452fdd0bb61d635b560d7a4e91",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/codecs.py",
+      "sha256": "7b7839e53a77961153240aecfe11edc8054d05b1dedd83894450dae21ec05785",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/encodings/aliases.py",
+      "sha256": "6fdcc49ba23a0203ae6cf28e608f8e6297d7c4d77d52e651db3cb49b9564c6d2",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/encodings/__init__.py",
+      "sha256": "78c4744d407690f321565488710b5aaf6486b5afa8d185637aa1e7633ab59cd8",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/encodings/utf_8.py",
+      "sha256": "ba0cac060269583523ca9506473a755203037c57d466a11aa89a30a5f6756f3d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/abc.py",
+      "sha256": "e558702a95cdce3febd289da021715d2b92bc43995b8a1bc58dfa1c3d8010287",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/io.py",
+      "sha256": "7cec3cb8ac004058dd0a5af246e6d950fb59c7ddd0058fda48bcb3fcb98d8822",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/stat.py",
+      "sha256": "052af0327eae6941b69b05c088b3e748f79995635f80ac4cc7125eb333eb4c77",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/_collections_abc.py",
+      "sha256": "d4945c8410c4bab351741b04bca3de066f7c27ed7e38df89e206a96617102ffb",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/genericpath.py",
+      "sha256": "2b0b35d2206778af4081cf81dd9b513876e72c35a55bec941402e1fa62b1f1aa",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/posixpath.py",
+      "sha256": "03825681086638649a43480954f7f6a16b4da3bd41ece956864ae96e4f795cd9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/os.py",
+      "sha256": "54c43a1fc69c979c70d8f7d097174cee163bfe59937723ee353043dd4a0211e1",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/_sitebuiltins.py",
+      "sha256": "b9388bc1d6d12ed6be12da420ab1feca40f99c0e33ec315d92b1e01cb69b25bc",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/encodings/utf_8_sig.py",
+      "sha256": "1ef3da8d8aa08149e7f274dc64dbfce2155da812e5258ca8e8f832428d3b5c2d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/keyword.py",
+      "sha256": "18c2be738c04ad20ad375f6a71db34b3823c7f40b0340f5294d0e89f3c9b093b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/operator.py",
+      "sha256": "b2af20f67667203c1730e686cc5d0427becc94db4c97f1d3efe3ed2158473f6a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/reprlib.py",
+      "sha256": "e177bc70da83a7fbcde6fd261dc15da34e8a20873b1cccd4f9a1f8f27cca3779",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/collections/__init__.py",
+      "sha256": "7fdb04dd248ab37909f46d2085bfee56b32d7e91e49ad3a2fad99c453295659b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/types.py",
+      "sha256": "345474ef027a1273f353da9bdc1f7c18f65335e72e681bcc0376774cc51f2405",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/functools.py",
+      "sha256": "de4a1d37c795e2a065124b5c49357893433bc6bb111b41277ccc9930ef08d4c9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py",
+      "sha256": "8b7a477f978a8532852fd81e241c78182516bc4975d672d580a5848a76e11eb6",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv/lib/python3.12/site-packages/_virtualenv.py",
+      "sha256": "cfb3db86aaa53bb62b5ff764970bec2d71c9228590a0ebec57f6ec926cc0bf1a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/site.py",
+      "sha256": "b39ab288cc7a6d0cb3bb2655179221411340b22418e4efdee4c20175537a5fa2",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/enum.py",
+      "sha256": "f35e542d8c4c1d2b5e910138d726fa48774925f3c4dc5462793ebcb66aa55501",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/re/_constants.py",
+      "sha256": "fa4fdb200f238f9e7817b63892b0d69833d8165134801e775e10cc113348a375",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/re/_parser.py",
+      "sha256": "a51a85b37cf3f44ba7ff25754da5f31306e4ccfa6eb3c017f9d37bdf4e770840",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/re/_casefix.py",
+      "sha256": "1b12d9136f23db6c3f6f26053fefc15ca964b886838c7b9c1fabf8d2efc1e5c8",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/re/_compiler.py",
+      "sha256": "c75620761098a70ed75b9accef63ef2881d8abb6d4e5cbfd10074bd165eefe4d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/copyreg.py",
+      "sha256": "c8eda41f05c6bf95a4da4726a530409d2485ae060b8d019b3a8034389a15d3e9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/re/__init__.py",
+      "sha256": "8ff3c37c63b917fcf8dc8d50993a502292a3dc159e41de4f4018c72a53d1c07b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/scanner.py",
+      "sha256": "572958017eae8842eeddd0e3d18d3c56cc0a197348224915e1d87ce937841764",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/decoder.py",
+      "sha256": "382cd02af6f7efede5a6d4abbcda1015e5c7a75794b0016022878f9cf32a24f6",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/encoder.py",
+      "sha256": "52bfb1b66029cc70fa3bd7fe11df9f2e03922d413407a341b387a22c987f24f8",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/json/__init__.py",
+      "sha256": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/fnmatch.py",
+      "sha256": "6683da36e47af523f3f41e18ad244d837783e19e98911cc0b7415dea81494ebc",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/warnings.py",
+      "sha256": "6405e281882932205eae641b2d31fba7776f94517a206d289465a1caffbf310e",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/_compression.py",
+      "sha256": "3ad5d60627477a60939ee44fc1bb3a05dbe8fb52f0f75039b8f5d8f1a278b981",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/bz2.py",
+      "sha256": "76ab3252924e71e859d7d90e8d3db13b6554975cfcac0fdadced4de7f8779330",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/lzma.py",
+      "sha256": "58fb9d2fdc8a8af7b25e218f17ea3b51bdfa53bdf40f440ab33c605974ca5c2e",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/shutil.py",
+      "sha256": "f9f0102a9ed087271f914d74b07866464d3e716afe9ee10760a5eb90f7db0f33",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/ntpath.py",
+      "sha256": "6c0d55ee892f98ef87b1ed3c50c9dfc7e267a98d2db47e08d3dc67529af56725",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/ipaddress.py",
+      "sha256": "ba8d3389ff084fcb232b48204ec04f2b3ea4bd0eadf7b18c814947d185de2c64",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/parse.py",
+      "sha256": "e6af7f475262f1de335bb2e41e26adb94d6103977cf5fe1ddc430dc6a3b1623f",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py",
+      "sha256": "10ba48ae8063cfe7589436041d0d4628c05f427c7709cf8e75e486f8930cc32c",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/gettext.py",
+      "sha256": "a5c249a522b6b8e3aa6f1b12a8bcc09508b99ad612b58d2fc973db27ea3b7cc3",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/argparse.py",
+      "sha256": "7cc582dcb3b76e2c957f78a3f74e9809d6c311d6aab7bcaa2c9954d0cbff5f30",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/hashlib.py",
+      "sha256": "6dbdebf270868b391080e21dc9687eddfaf321c965ad979f68d3f5c423c613ab",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/signal.py",
+      "sha256": "0363c964c90ac0b3e515de5749205e6e6454051a1211058375d84d91eab6071a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/collections/abc.py",
+      "sha256": "9cb4208f99128a0489b6c8e6c61637617dd7d4250c59e065491957eda084dd10",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/selectors.py",
+      "sha256": "1eeb102373e18c96311203f30c516e785bd8642275aa0bd66e43a284c9692385",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/socket.py",
+      "sha256": "7d4d4c66e6f4bcc961ab462c4f08002ca97def8713a4be1c7373bdbd970a5274",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/numbers.py",
+      "sha256": "ac381960a3dc1db0498b0bd43d8ef278d6599713121a186b153ff09d9552e0db",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/bisect.py",
+      "sha256": "f1cf7b85fc36b5da249813fc5ab97d9464f8cc1bc817f7146206fa2713e35999",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/random.py",
+      "sha256": "de48263a837339c7e01cf9f3c4d756696e0e0775f7778eb9cf81ad5b00134569",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/decimal.py",
+      "sha256": "c3e37c55ef72b3dd6cb7b466a907b966467b6a9c58d85302193e64cbb5fd53d0",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/fractions.py",
+      "sha256": "d52d1ab9d5be26924e4914a5e40069c992bbfa68f773694c2e5ee8452d0766a0",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/statistics.py",
+      "sha256": "5845851a5833a1436bfdfd19001f7cd6b4d95a438b76c47162897106d29449c6",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/locale.py",
+      "sha256": "3988c5419552d5b9f0bef3695102376f79357f0f440e9cd1f32c501f966e6ef3",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/_weakrefset.py",
+      "sha256": "91895a451d06e9f521a1171b31b9b19bc9740f35af00d4fa106338ab7167c9ac",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/threading.py",
+      "sha256": "846f450ae794e4aab823a163f8c71d27751148af33e91dd3de886686a4e8ebfb",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/subprocess.py",
+      "sha256": "85d29b2bf0249f5436838298c9a60ee93508b1102e9ac43b001f8a7e7ae8f375",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/weakref.py",
+      "sha256": "56f8d313fb74019e53eb9287400702fbce788b7fe30e097b0b6e06296f3f080c",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/tempfile.py",
+      "sha256": "2eea4401f4f29d0d3647ed6fc8bcf6aa1daf879c8aa407a8ea310edac9dfc317",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/response.py",
+      "sha256": "7e6c3b6d7a95f0d74f5968f51a87adae8a51bf42390cdfec98c7a99203e7bb76",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/error.py",
+      "sha256": "d12b3cc66af3f42a8ebe63e1c91d24f92c6237b6a93a3702938dffabd812d77b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/struct.py",
+      "sha256": "9c231f9497caf513a22dee8f790b07f969b0e45854a0bdd6dd84b492e08c2856",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/base64.py",
+      "sha256": "8d1f608dbf030d11d6ec4df9e4c55b73fb68cdfbd9f53a7c91684a93b55564b5",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/__init__.py",
+      "sha256": "e4f46e3414c4602c9abb8b404a45e84412fc49dbe38a3d163f9575132dc7c93e",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/http/__init__.py",
+      "sha256": "17f4f6832cfc84b5b9600414bab80b77e67ccb611bdfed10a3f2beca9d0d568b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/errors.py",
+      "sha256": "dbfb4bbfc85e9d556d3385dc6356518846d8a122bc643b171ea61b6e8dc42c8b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/string.py",
+      "sha256": "24aeae1f0526250f442022022bf98df9a823b1cb330543ee79e70e44907462e9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/quoprimime.py",
+      "sha256": "77b454bd3ba3b5e3776be28ae3a0fd8de5d1e50d5b8ee10dd539c37c2bd68082",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/base64mime.py",
+      "sha256": "e2b4b87a5f42a8c5780e343f675513bbcc6abdd23fa14f8f1a7d4f7d72304770",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/quopri.py",
+      "sha256": "a1cd7f3b22033d32151209886cc855d4b71cc4c83530769f920097582339013a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/encoders.py",
+      "sha256": "690b275529788cc48e8f541a2aef321dc31e92f75764ac7924896db72d8a9555",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/charset.py",
+      "sha256": "a90653f13a4dc5eb3205079dda1d62561a8bf9a7b45585f5dbf90aa31a966680",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/header.py",
+      "sha256": "4d9baa908ad5288dd8fad8cf20b3802ffac77ba1642727804a633b201c56e5ca",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/datetime.py",
+      "sha256": "ef20dc6b3554cd585dddffdc573f1f9a7a54c522f2a3fb4576c44edbb1e14238",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/calendar.py",
+      "sha256": "0010004d32c694e4afa554db2434952040819c09c438e88d465dcf6d9fb63718",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/_parseaddr.py",
+      "sha256": "4308932872acbf4a674312a45a49b870e48026e3dfedc878ee2f512ddf2f30ba",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/utils.py",
+      "sha256": "65d259aded3b7d29609d320decdb59cb0a0f7f0e5c453e1d3c380e8a4a5d61c9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/_policybase.py",
+      "sha256": "284be073d7fe99d1021958e6dbeefe4c98a6c00021ea465d01aac71338d1579f",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/feedparser.py",
+      "sha256": "6046239fcdd6977d1c25841581cabedaeec8046cc5fedcb8ff2d6450a36442bd",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/parser.py",
+      "sha256": "88890ea9994c55ff7d6c1fd570fece2785f51ed407ee95df4aff946e250bcd66",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/_encoded_words.py",
+      "sha256": "4178321600c0a19ca04cfe8542ce44487f339d15d89a473b58cea63c0b230217",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/iterators.py",
+      "sha256": "1080a2d03779176d6d45f6ecd976dbe69f5579f7e4e83b75224c3f92fd258102",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/email/message.py",
+      "sha256": "ba32efea2602ea52e73028a2817afddccccacc4385b9800896556d5c22db2b90",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/ssl.py",
+      "sha256": "db62eeaae59c6e7087dcafb28087cd0bb092087381edc556f97c8cb614484380",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/http/client.py",
+      "sha256": "2fea971530b683129dca0ac2fd7d8f4f0282b01e624f83f046b9091c9452589f",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/urllib/request.py",
+      "sha256": "6ffc7d993de64319a40fad631966bd1fd643d355a5c154c1a8b1821f49e5c470",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/scripts/resource_preflight.py",
+      "sha256": "89deb73ca9915555f2efcabd5ede65bc36347fb729c666c64f8efc8533ec1d23",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/csv.py",
+      "sha256": "46004923196e98a67f87d30da64d070027c81f144f5ac91242fbfae33507dda8",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py",
+      "sha256": "d540b5ac137fcb3e26a8d5f2939649e34373c6685f98a30a9f682cf231be5854",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/_abc.py",
+      "sha256": "80aab7931dc999dee581c8b8b56fcd973fe156335a96ceeaf6acfc03cebf10e8",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/util.py",
+      "sha256": "671f2995653f673f6d5056a1089debef473bc28ae7114f7a8db71475733d6876",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/zipfile/_path/glob.py",
+      "sha256": "64e27d3872da2ea18b901718c91297d32b9610ebdad058de8561344b0a10e8d7",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/zipfile/_path/__init__.py",
+      "sha256": "63fc930890d38a662253bcf7ae50a1bfa06ce38bade19084f9c89f964dcd0e12",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/zipfile/__init__.py",
+      "sha256": "94c53aedba0b0f7d6f71bf8ec34973e666ee0c0e56e6800ff4c26d2e3951987a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py",
+      "sha256": "cf5dcdaa8bdb72d28184f9f4bad5bfb6c7b96c1222b52c4dd685d77cc8a601f1",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/textwrap.py",
+      "sha256": "62867e40cdea6669b361f72af4d7daf0359f207c92cbeddfc7c7506397c1f31c",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/ast.py",
+      "sha256": "b515c23dbbc459329d3b802a3aac742cc456d7472e66f7ed6e9dc97e40596d7d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/opcode.py",
+      "sha256": "192f6008508f28d3273bff42eaea9b01c8394dab1607cd36aea778bdd166c3a6",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/dis.py",
+      "sha256": "44c0b389c96124d8fb5cb0bc41c7a2aa7a6848ef4001b4000dcbd858efa4a1a2",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/machinery.py",
+      "sha256": "d045cd7ecf2a12b6ecbfbef79eb114e87ef2ebd756f5b705f73e6f3266e3dede",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/token.py",
+      "sha256": "1a4d994ce9744f4bfe2d964fc24d112a1e76796a08c2e45a2d73c82a8587f922",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/tokenize.py",
+      "sha256": "026f566ac63e60d69c8185a3880831b657accc5eac984fadf271fc99a5e5825d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/linecache.py",
+      "sha256": "9eb9194707991b49f9fea67a5222b0e6a0e49c865cdffc69fbc80a1f829e77fb",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/inspect.py",
+      "sha256": "5c54ebf0bfdc25397750e5d0f63800751650ee50e65325ff3ea4069c9bfa5f75",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/_functools.py",
+      "sha256": "3ec636fb8aeb297e1155e442d681a9d65075a660bd78a37cf3f7fe6c3f6e3a80",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/_text.py",
+      "sha256": "1c2b0592c66924b7933f734493f9e0ac079755146d4ebb7287d78e001a113f80",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/_adapters.py",
+      "sha256": "de9a880abc4513af1b69ce150cd5a5093201c39131717cdc2ba6b19f4364c163",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/typing.py",
+      "sha256": "be92d60fb8382bb29ead21c128825d7c96d0e8c915b44f840791e49f5a8d554c",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/_meta.py",
+      "sha256": "bd3504040497cd049e6b529bde0b461f63cd2be3070f2d0815d4dd7609b266c8",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/_collections.py",
+      "sha256": "089d0e4c21c88d6034648552e2fa0e440b27d91e11d9c40112d3ec6442690126",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/_itertools.py",
+      "sha256": "72faffdaff0145bc5c225e71e6575fa9d1e3848f188bcb3cca4e741bf9e6ea34",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/resources/abc.py",
+      "sha256": "a726c48590b21ba5532f0c654735991571bc0ecafe88145cb8891d82cd364e5e",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/resources/_adapters.py",
+      "sha256": "be9ac919b51e1db6a35fa5c2b8c3fa27794caea0a2f8ffcc4e5ce225447b8df9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/resources/_common.py",
+      "sha256": "a0de4a899a2aa787b052f92f516b39f80b183c3f0d409d1305cc6dc374f18870",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/resources/_legacy.py",
+      "sha256": "79c566fdf1a61129683e38e8c11a660d6233dd84422456ae5dd230e658a7857f",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/resources/__init__.py",
+      "sha256": "4146e1d00d56a783d4087f15257f0c284fae52e71fa3f20613fa268d911bf6d5",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/abc.py",
+      "sha256": "5f9cb36ca1bce9d5df00bc8d4d7f46b7ea2353dfa99292ad7f099affddfb5d03",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/metadata/__init__.py",
+      "sha256": "1a26dfee8cb302b729501e944626f77e2cbcc4675038f3d18c2d8534751b3e8b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/runpy.py",
+      "sha256": "81e07da29bb2235111079bb64efea7d291639c5d2cf163e7af187d6a38cef389",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/runtime_entry.py",
+      "sha256": "4270ba9208228e68841448f49a5b54f92b1e334101d90a66fa70adf225def1cd",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py",
+      "sha256": "68ca469fe0a247d6d301eff3816cebfc9527d92caddce565e5b0ce247058ae6d",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/platform.py",
+      "sha256": "f5ff83f15c841792be42709a6710dc8d7a9f72791c1ae4cad719b1fb0abe0a05",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/uuid.py",
+      "sha256": "fe357bff7241e9fd6f86ee81567fd20aeec2e17460428ea9b7924bebf57301fc",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot.py",
+      "sha256": "fbff2794beda16b656fe3f7c23ae02fe15e72393aac8b9dea05b3b7ecf082524",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/tokenizer_allowlist.py",
+      "sha256": "1b3493dc646ea6434a07ee306905e114f9bce2c531cbd410f77497bc87fbf411",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/model-README.md",
+      "sha256": "5f8f387e0be445ef5d10a83117a6cefc6ab8499b5379f276af63017252c61a24",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/model_snapshot_test.py",
+      "sha256": "b1a36f028bf7f26fc56d112543838462936cbb916f2adbdc4c55100ac6919055",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/README.md",
+      "sha256": "925fc160b66c52b179ba90d6a43a20dfbcb56111b79a40b7669ec0cf7f703f80",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime_test.py",
+      "sha256": "4cd53d4492636f91916ed0c65bbb2eebcd274b09364490c18f3ca70e59d06c7a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/runtime_entry_test.py",
+      "sha256": "358f24895d51d7fc265a637b19faddcb5d46e707ba20993e6f45f88624257322",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/model-manifest.schema.json",
+      "sha256": "bc7c58ddbd931b9fcb0e9b76076ba7eaf4dd408442ae66f137e61b553def41ce",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/cache-audit.json",
+      "sha256": "297a0a25e62a15be1ceb3dfa7dc0e9ef03d665a77de959f31a75ddc1f8385d55",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/protocol.json",
+      "sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/select_traces_test.py",
+      "sha256": "414ff0be7f55d905bfbb84066f4ea58611e84f2db03001df3df883d31b8a2bed",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/select_traces.py",
+      "sha256": "aa650375da3fd5ab71b9be0308fc33aaf107f3f6936e8253298e7829c3c663d5",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/model-files.json",
+      "sha256": "067ca7df8c06e738b38db2e73634e4d1a4ac411c9ebf59cb10db68e557d06a37",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/experiment_test.py",
+      "sha256": "b7c4a8d6572d6d6c61739d8130ac511e7a8ee3ac800649a567f9ba471db170fa",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/runtime-lock.json",
+      "sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/traces/azure-calibration.csv",
+      "sha256": "c93f0a566dbc896516e10fc046371addc55d320e91298cddf0ea3762e78ad2c1",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/traces/burst-evaluation.csv",
+      "sha256": "aa3433a7c2263689c99c42f1e8888a246ccb7c3321ff93dccb51c272a627dda4",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/traces/azure-evaluation.csv",
+      "sha256": "df1ebe07e8dd403ef9d8988c7608b90f9eb0fe63d99c5a9732a54fccbc901431",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/traces/manifest.json",
+      "sha256": "0708a4f414e00f980afa6ba7174bf55f8af0ce89dfab4120a1c296b3322b2a4e",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/traces/burst-calibration.csv",
+      "sha256": "28c6162d5a4e894a60e92c6626fc04534f02e0b1e8472dff88e9e107f3c89364",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/README.md",
+      "sha256": "29639e101be085292d2af60833ddb497353072d3ec4fd107eda7c642a57c29ef",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/record.go",
+      "sha256": "a9f52e5d1dcefadc90a2ad769cfe74767f335915b51c5c1c2822088efe01d569",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/trace_test.go",
+      "sha256": "18a9ede67fb80dbb55bda79f8bf97e8aab66356129c83d404fc1535cefaf1290",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/main.go",
+      "sha256": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/replay_test.go",
+      "sha256": "8fdcd8602f4c27b4463f9523dfbc2bd834ef6dc549a22366de92759b605aadb3",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/transport_test.go",
+      "sha256": "65a8818076022c59b65ec267227b13eb69227593939429d79577ec5e567834e9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/stream.go",
+      "sha256": "d0fedbd24aaf5c7d42d5841818bec40cde8db4cac00eb707bd3e8358400e4d3a",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/trace.go",
+      "sha256": "37f97366383e7062379a794c4eb98040b9c11a07ff3ae4fb3bfcc13c5ebf39a9",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/stream_test.go",
+      "sha256": "061ba2a9add11da649843c9a4cda5e960d23a9abeffa229101061c9a9fb68f82",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/schedule.go",
+      "sha256": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/tokenizer_allowlist_test.py",
+      "sha256": "18a4d9cb19197301347247a38e296855550e54428e684b0cf0d1eb0615b5aaf7",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/transport.go",
+      "sha256": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/cmd/replay/main_test.go",
+      "sha256": "36d0323effac27b01d2378b853250dd0b23cea6edd43ec14e24f4558dba6a54b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/replay/cmd/replay/main.go",
+      "sha256": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/startup_memory.py",
+      "sha256": "1d36892648a022495b7d582f157eb54ef82069548f5a0ccfbf4ccc94651100b2",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/deadline_http.py",
+      "sha256": "ce948c825df3fc6757e6e16b06ef8b70c7bc78804dfa2630bad70c1f1c99c311",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/deadline_http_test.py",
+      "sha256": "cc51bb7310e73cc9780f3c6e5298400786df4d5d88ed16972724d5e867f9ff53",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/serving/baseline/startup_memory_test.py",
+      "sha256": "84dfc72a1376a109665513a6f47214ac16462752becb4eff4c85fb71e3ea66be",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/entrypoints/http_server.py",
+      "sha256": "00733d30128f53d9f297db060e4314f7b1fb2d446a9823b1685626a058f7cb04",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_inductor/config.py",
+      "sha256": "9c9f68771e08689e8f75a7972c98578403cdbd41065a74ebe8e9f1b0c62333cd",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_inductor/async_compile.py",
+      "sha256": "fe664d214acbd5b8349d378c25ffa8d92fe6405df331ecca6458ff4321c62e91",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_inductor/compile_worker/subproc_pool.py",
+      "sha256": "72a8e44a7ea586e8a5274834c4367f62125fa4ff5ea78334398dd36936214fc3",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_inductor/compile_worker/__main__.py",
+      "sha256": "623d4b9c2bd22567bf63c2d66ab1502dc7aa0a669d717ed186a3fdb814becd80",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_inductor/compile_fx.py",
+      "sha256": "44e139ec125ce96d8ac44df157766453a70f7c5b1521ae6f0cc37acf8280b51b",
+      "matches": true
+    },
+    {
+      "kind": "sources",
+      "path": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch-2.8.0.dist-info/RECORD",
+      "sha256": "43acd78ee8b4d317596bb30a934ec5e3c1aed5d68653440322f33d47c9235423",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "serving/baseline/cache-audit.json",
+      "sha256": "297a0a25e62a15be1ceb3dfa7dc0e9ef03d665a77de959f31a75ddc1f8385d55",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "serving/baseline/runtime-lock.json",
+      "sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "scripts/with_gpu.sh",
+      "sha256": "1faf231f803da1f38b4422e813c3c3e0674b04297d6c8b51b044c7c34dd38bee",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "scripts/gpu_guard.py",
+      "sha256": "caf3726162ab3030e5077452dc673bc18a1e2258b61cb0e88ef5387ebfef4427",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-baseline-installed-record-audit.json",
+      "sha256": "dad754afa2bab71ed2477aa15ab1cfe4dff4a39fa4fae10a866eac32f48f270d",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "serving/baseline/runtime_entry_test.py",
+      "sha256": "358f24895d51d7fc265a637b19faddcb5d46e707ba20993e6f45f88624257322",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "serving/baseline/experiment_test.py",
+      "sha256": "b7c4a8d6572d6d6c61739d8130ac511e7a8ee3ac800649a567f9ba471db170fa",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-model-acquisition-02.json",
+      "sha256": "f1255befc838b4ac8232a7f80816539e45d643387c6a1fb34f5c3a57efc65244",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-model-token-allowlist.json",
+      "sha256": "8e8c8418ca48ed5bb0fe5b810ca1dcf841a56fbe0fd5333ed4babae63926eaa4",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-model-token-allowlist-binding.json",
+      "sha256": "4e9edb837447d6e30c8857346f0f380e50e5edf17afd95895d665939d83895cf",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-baseline-abi-01/abi.json",
+      "sha256": "ba3df4a836f0cdb480399c8ca9c1044b122daff96de8a8e88e2e256193d6ef01",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": ".cache/task12-baseline/bin/replay",
+      "sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "scripts/resource_preflight.py",
+      "sha256": "89deb73ca9915555f2efcabd5ede65bc36347fb729c666c64f8efc8533ec1d23",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "go.mod",
+      "sha256": "e850b635508a57882d71a3e0cf459f999508a5ba757ee3e1631039aeb8d3e829",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "serving/baseline/compile-pool-source-contract.json",
+      "sha256": "84e48fdc4c3d09f9f5fa536a759291067bc437fb205a49ae4626394597335a15",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-startup-memory-02-proposal.json",
+      "sha256": "a66e312a1f6fb4790de3d8f209c87fd648dfe494d0ac7f1952fb6300b5a5174a",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-compile-green.log",
+      "sha256": "54d62a0149f447ee2867b9e102287fade45e0a057ff3b969489678c98884e9ae",
+      "matches": true
+    },
+    {
+      "kind": "artifacts",
+      "path": "docs/evidence/raw/task12-compile-lint.log",
+      "sha256": "afa20b27dacc9bf0aba3c1d265964c21e04ab42f6e39e2dd4769718ceded003a",
+      "matches": true
+    }
+  ],
+  "before_result_report_edit": true
+}

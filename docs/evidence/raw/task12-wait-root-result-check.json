@@ -1,0 +1,249 @@
+{
+  "scope": "independent same-run result arithmetic and current host cleanup; no replay",
+  "records": 23,
+  "all_ok": true,
+  "late_over_5ms": [],
+  "sender_valid": true,
+  "native_performance_accepted": false,
+  "maximum_lag_ms": 1.5086349999983213,
+  "output_tokens_sum": 1556,
+  "write_pairs": 24,
+  "rows": [
+    {
+      "index": 0,
+      "scheduled_ms": 0,
+      "lag_ms": 0.378095,
+      "intermediate_wakes": 0,
+      "post_select_lag_ms": null
+    },
+    {
+      "index": 1,
+      "scheduled_ms": 8000,
+      "lag_ms": 0.8553949999995893,
+      "intermediate_wakes": 79,
+      "post_select_lag_ms": 0.62461600000006
+    },
+    {
+      "index": 2,
+      "scheduled_ms": 31000,
+      "lag_ms": 0.7771509999984119,
+      "intermediate_wakes": 229,
+      "post_select_lag_ms": 0.4771440000004077
+    },
+    {
+      "index": 3,
+      "scheduled_ms": 33000,
+      "lag_ms": 1.5086349999983213,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 1.0843180000010761
+    },
+    {
+      "index": 4,
+      "scheduled_ms": 34000,
+      "lag_ms": 0.8640529999975115,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.6371030000009341
+    },
+    {
+      "index": 5,
+      "scheduled_ms": 34000,
+      "lag_ms": 0.7187120000016876,
+      "intermediate_wakes": 0,
+      "post_select_lag_ms": null
+    },
+    {
+      "index": 6,
+      "scheduled_ms": 36000,
+      "lag_ms": 0.46643200000107754,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 0.24105499999859603
+    },
+    {
+      "index": 7,
+      "scheduled_ms": 38000,
+      "lag_ms": 1.11819000000105,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 0.8421309999976074
+    },
+    {
+      "index": 8,
+      "scheduled_ms": 39000,
+      "lag_ms": 0.7424370000007912,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.6323970000012196
+    },
+    {
+      "index": 9,
+      "scheduled_ms": 40000,
+      "lag_ms": 0.8085159999973257,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.704792999997153
+    },
+    {
+      "index": 10,
+      "scheduled_ms": 42000,
+      "lag_ms": 1.1743770000030054,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 0.872561999996833
+    },
+    {
+      "index": 11,
+      "scheduled_ms": 43000,
+      "lag_ms": 0.3774469999989378,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.2713260000018636
+    },
+    {
+      "index": 12,
+      "scheduled_ms": 44000,
+      "lag_ms": 0.5659060000034515,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.446219999997993
+    },
+    {
+      "index": 13,
+      "scheduled_ms": 45000,
+      "lag_ms": 1.0786930000031134,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.8129610000032699
+    },
+    {
+      "index": 14,
+      "scheduled_ms": 47000,
+      "lag_ms": 0.2981100000033621,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 0.07232099999964703
+    },
+    {
+      "index": 15,
+      "scheduled_ms": 48000,
+      "lag_ms": 0.4007350000028964,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.32605599999806145
+    },
+    {
+      "index": 16,
+      "scheduled_ms": 51000,
+      "lag_ms": 0.4697329999980866,
+      "intermediate_wakes": 29,
+      "post_select_lag_ms": 0.23953400000027614
+    },
+    {
+      "index": 17,
+      "scheduled_ms": 52000,
+      "lag_ms": 1.0125429999970947,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.6410990000003949
+    },
+    {
+      "index": 18,
+      "scheduled_ms": 53000,
+      "lag_ms": 0.39620299999660347,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.3002600000036182
+    },
+    {
+      "index": 19,
+      "scheduled_ms": 54000,
+      "lag_ms": 0.5651530000031926,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 0.4423220000026049
+    },
+    {
+      "index": 20,
+      "scheduled_ms": 56000,
+      "lag_ms": 0.6927240000004531,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 0.48174699999799486
+    },
+    {
+      "index": 21,
+      "scheduled_ms": 57000,
+      "lag_ms": 1.241650000003574,
+      "intermediate_wakes": 9,
+      "post_select_lag_ms": 1.0025779999996303
+    },
+    {
+      "index": 22,
+      "scheduled_ms": 59000,
+      "lag_ms": 0.6579619999974966,
+      "intermediate_wakes": 19,
+      "post_select_lag_ms": 0.27255500000319444
+    }
+  ],
+  "RSS_samples": 585,
+  "max_sampled_RSS_bytes": 62181376,
+  "sampled_span_seconds": 59.001803763909265,
+  "known_pid_start_identities": [
+    [
+      1176199,
+      72318317
+    ],
+    [
+      1176252,
+      72318467
+    ]
+  ],
+  "all_known_pids_absent": true,
+  "port31013_bound_then_closed": true,
+  "raw_files": {
+    "fixture.jsonl": {
+      "bytes": 7210,
+      "sha256": "e382f7b824eaad5711e246282afb1333579700f48af82054a4ae60b2d21d8465"
+    },
+    "stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "terminal.json": {
+      "bytes": 491,
+      "sha256": "5e5c6b12cbac1568bd7f0ceb49ae5850575893d9f064b52dba7bd831733ea845"
+    },
+    "provenance.json": {
+      "bytes": 5324,
+      "sha256": "627dc5981e7109164eab1860fb0854528059555828e4c557bb40707053d615be"
+    },
+    "rss.jsonl": {
+      "bytes": 92676,
+      "sha256": "69eb0e62b8e4e88f4d5b64b8b6b03f2fd4cf92b028063d22c6344539e2cfbc2c"
+    },
+    "phase-terminal.json": {
+      "bytes": 11403,
+      "sha256": "33fb4678dbee2c952b5a52f0d6bd7ad18cfd6cacecde5d9c0b5d4f4542fd16b7"
+    },
+    "stop.json": {
+      "bytes": 94,
+      "sha256": "27a736c71665bbb467ba17715f2f1d7f269eb4ae206735e46e5d86387ad590a0"
+    },
+    "launch.json": {
+      "bytes": 636,
+      "sha256": "c4f51aceef083fafb8da1ff2b09ecc257e976f1f29ae953a0f9547b053ea8489"
+    },
+    "stdout.json": {
+      "bytes": 43472,
+      "sha256": "71fae264c3943cc3bd26ee9ece523f60332506c287c5e4d58f31a18b1dcb7a39"
+    },
+    "phases.json": {
+      "bytes": 14231,
+      "sha256": "3b55fb91fff4576fae0fc2fc05f282fa1dc1a93a90ae1abf38ee9c09ed051aa6"
+    }
+  },
+  "cleanup": {
+    "child": {
+      "pid": 1176252,
+      "starttime": 72318467,
+      "termination_requested": false,
+      "pre_cleanup_returncode": 0,
+      "returncode": 0,
+      "reaped": true,
+      "pid_absent": true
+    },
+    "fixture": {
+      "threads_alive": 0,
+      "connections": 15,
+      "listener_closed": true,
+      "port_listener_absent": true,
+      "errors": []
+    }
+  }
+}

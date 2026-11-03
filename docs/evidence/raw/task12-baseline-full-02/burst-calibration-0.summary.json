@@ -1,0 +1,55 @@
+{
+  "identity": "burst-calibration-0",
+  "trial": {
+    "pair": "calibration-0",
+    "multiplier": 1
+  },
+  "protocol_sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "planned_rows": 23,
+  "requested_input_tokens": 11628,
+  "requested_output_tokens": 1556,
+  "status": "completed",
+  "metrics": {
+    "accepted": false,
+    "goodput": null
+  },
+  "pid": 351771,
+  "returncode": 1,
+  "actual_records": 23,
+  "actual_output_tokens": 1556,
+  "failed_requests": 0,
+  "complete_request_failure_exit": false,
+  "effective_aborted": true,
+  "cleanup": {
+    "pid": 351771,
+    "returncode": 1,
+    "returncode_before_cleanup": 1,
+    "termination_requested": false,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "raw_sha256": "76ce16bbc80f6ce90282a8479fda4033204b507d10ca6948e17de697045b81d2",
+  "raw_bytes": 43846,
+  "stderr_sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07",
+  "stderr_bytes": 44,
+  "boundary": {
+    "accepted": true,
+    "attempts": [
+      {
+        "status": 200,
+        "started_seconds": 1.0830117389559746e-06,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.048691038973629475
+      }
+    ],
+    "deadline_seconds": 30,
+    "elapsed_seconds": 0.04869391396641731
+  }
+}

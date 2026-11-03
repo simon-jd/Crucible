@@ -1,0 +1,6 @@
+=== RUN   TestRealHTTPPartialEmission
+--- PASS: TestRealHTTPPartialEmission (0.00s)
+=== RUN   TestEarlyResponseDoesNotProveWriteReturn
+--- PASS: TestEarlyResponseDoesNotProveWriteReturn (0.00s)
+PASS
+ok  	crucible/serving/replay	0.004s

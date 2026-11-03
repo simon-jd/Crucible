@@ -1,0 +1,9 @@
+{
+  "scope": "ROOT readonly metadata check failed before writing host report; no workload/signals",
+  "error": "AssertionError: substring matcher mistook enclosing bash -c script text for worker argv",
+  "false_candidate_pid": 2433468,
+  "false_candidate_executable": "/usr/bin/bash",
+  "root_cause": "substring within command-source argument, not actual module argument",
+  "correction": "exact argv module names or exact path basenames only; preserve unknowns and repeat readonly audit",
+  "GPU_or_tests_started": false
+}

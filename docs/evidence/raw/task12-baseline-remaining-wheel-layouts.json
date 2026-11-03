@@ -1,0 +1,415 @@
+{
+  "remaining_wheels": 44,
+  "new_network_bytes": 0,
+  "initial_audit_error": "torch-memory-saver uses retained range-3.bin, not central.bin; recovered from existing metadata without new reads",
+  "wheels": [
+    {
+      "name": "py-spy",
+      "wheel_sha256": "aeb0323409199c785f730645e9f4bb7a7b9ca2c481f2c331a55642b5d13fa52f",
+      "central_file": ".cache/task12-real-plan/py-spy-central.bin",
+      "central_sha256": "0c76053874e7f1f5cd1d26f22553e3f37a799932e25af59872610370f3168c80",
+      "entries": 6,
+      "expanded_bytes": 8214742,
+      "relocated_members": [
+        {
+          "name": "py_spy-0.4.2.data/scripts/py-spy",
+          "bytes": 8079336,
+          "large": true
+        }
+      ]
+    },
+    {
+      "name": "grpcio-tools",
+      "wheel_sha256": "38c6c7d5d4800f636ee691cd073db1606d1a6a76424ca75c9b709436c9c20439",
+      "central_file": ".cache/task12-real-plan/grpcio-tools-central.bin",
+      "central_sha256": "c2904f8288b648b68c1045dcbfb78435214dde512672ebed86d5a4a7768b18c2",
+      "entries": 29,
+      "expanded_bytes": 7799580,
+      "relocated_members": []
+    },
+    {
+      "name": "timm",
+      "wheel_sha256": "a640e58f4ae41e0445517d1133b34be75bb2bd49cdb830d739925ce1fb7d2526",
+      "central_file": ".cache/task12-real-plan/timm-central.bin",
+      "central_sha256": "ff1509a50d92e96f5faf5379af2634f9d5a590625fcf489824adc6bf1574b820",
+      "entries": 300,
+      "expanded_bytes": 8566332,
+      "relocated_members": []
+    },
+    {
+      "name": "pycryptodomex",
+      "wheel_sha256": "f489c4765093fb60e2edafdf223397bc716491b2b69fe74367b70d6999257a5c",
+      "central_file": ".cache/task12-real-plan/pycryptodomex-central.bin",
+      "central_sha256": "e0316a15c5db2045f0ccb56ba154f112f75fbc212392192a583fd922f2dc2cff",
+      "entries": 373,
+      "expanded_bytes": 6294136,
+      "relocated_members": []
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "wheel_sha256": "bbe79e942923ee6cd1576c153a728d40cd590e4fb83f7b55c595c6d1bb50173c",
+      "central_file": ".cache/task12-real-plan/apache-tvm-ffi-central.bin",
+      "central_sha256": "e1b6fe1111372aba34d36b19f25e0fe20b3a71497acfbe7563779cdb4f888f96",
+      "entries": 220,
+      "expanded_bytes": 6126675,
+      "relocated_members": []
+    },
+    {
+      "name": "nvidia-cudnn-frontend",
+      "wheel_sha256": "853ac1f343b4b94baf7ea5675824e076dbeba453804149f28766c823f064552e",
+      "central_file": ".cache/task12-real-plan/nvidia-cudnn-frontend-central.bin",
+      "central_sha256": "5ce873f37926ce8c3b405355ecda2088b29957c607919c37200107f3ac600d2a",
+      "entries": 94,
+      "expanded_bytes": 7327928,
+      "relocated_members": []
+    },
+    {
+      "name": "openai",
+      "wheel_sha256": "904e4b5254a8416746a2f05649594fa41b19d799843cd134dac86167e094edef",
+      "central_file": ".cache/task12-real-plan/openai-central.bin",
+      "central_sha256": "438fa7d7bb7ef9ba91dd4ce8eb02d0d80850f75e82c06c1a51297639cfa931b5",
+      "entries": 984,
+      "expanded_bytes": 3612830,
+      "relocated_members": []
+    },
+    {
+      "name": "airportsdata",
+      "wheel_sha256": "d7eaa9a57d373b0adaaae0d52da2af0bb0edf73f7baa170f7c415d3342bf4868",
+      "central_file": ".cache/task12-real-plan/airportsdata-central.bin",
+      "central_sha256": "9de486cc1e55ca90b4675ebea71b58dc2a53f1f44e52aa0a7a4aadf659042d5c",
+      "entries": 9,
+      "expanded_bytes": 3096202,
+      "relocated_members": []
+    },
+    {
+      "name": "wcwidth",
+      "wheel_sha256": "b185c8b927b23af2721be1783499d1cfa5c028b098b0858951b4ae224477f1c2",
+      "central_file": ".cache/task12-real-plan/wcwidth-central.bin",
+      "central_sha256": "229119a1e6005a562a9d664a7007675d81eeef43389d88be3aaff1ba037f2b59",
+      "entries": 60,
+      "expanded_bytes": 3612860,
+      "relocated_members": []
+    },
+    {
+      "name": "ipython",
+      "wheel_sha256": "5f77efafc886d2f023442479b8149e7d86547ad0a979e9da9f045d252f648196",
+      "central_file": ".cache/task12-real-plan/ipython-central.bin",
+      "central_sha256": "88d0e07d4d390a62d6453a91378fd97f1668a0268a36708c28b5f09e3aea7fc5",
+      "entries": 185,
+      "expanded_bytes": 1976179,
+      "relocated_members": [
+        {
+          "name": "ipython-9.6.0.data/data/share/man/man1/ipython.1",
+          "bytes": 2058,
+          "large": false
+        }
+      ]
+    },
+    {
+      "name": "pytz",
+      "wheel_sha256": "e658af3757f9e26a9d25dd2aff38335acd92bc9104f890a894b2c1ba28311b03",
+      "central_file": ".cache/task12-real-plan/pytz-central.bin",
+      "central_sha256": "1d8dffc66064cb1db63688b30a1f58646380ca487d6484840179e270160adaab",
+      "entries": 616,
+      "expanded_bytes": 1002699,
+      "relocated_members": []
+    },
+    {
+      "name": "datasets",
+      "wheel_sha256": "62e4f6899a36be9ec74a7e759a6951253cc85b3fcfa0a759b0efa8353b149dac",
+      "central_file": ".cache/task12-real-plan/datasets-central.bin",
+      "central_sha256": "d0665904830afb0b7948b8fbf4afd174fd94b1ea03f3beeff10e900e55f8f7d2",
+      "entries": 134,
+      "expanded_bytes": 2012270,
+      "relocated_members": []
+    },
+    {
+      "name": "torch-memory-saver",
+      "wheel_sha256": "0cf26332993649f8ea1b95d7307dfba3a95ee6cee53de84a3e561fb21752b584",
+      "central_file": ".cache/task12-real-plan/torch-memory-saver-range-3.bin",
+      "central_sha256": "063dca8b24b24782fdbd2c4aa5f0a874a2aa8fe268aafffa43dc5d3328720135",
+      "entries": 16,
+      "expanded_bytes": 1571279,
+      "relocated_members": []
+    },
+    {
+      "name": "prompt-toolkit",
+      "wheel_sha256": "01c0891d7f9237d5e339f7d3e42cdae80b7534abb1c7c0e3352efba6231492f2",
+      "central_file": ".cache/task12-real-plan/prompt-toolkit-central.bin",
+      "central_sha256": "b9e358892ae84e381939b58d58f428dbbe81f07c145a7f1af84a60db96be1c57",
+      "entries": 152,
+      "expanded_bytes": 1397699,
+      "relocated_members": []
+    },
+    {
+      "name": "anthropic",
+      "wheel_sha256": "85c5015fcdbdc728390f11b17642a65a4365d03b12b799b18b6cc57e71fdb327",
+      "central_file": ".cache/task12-real-plan/anthropic-central.bin",
+      "central_sha256": "1f6934f97449e753075bdd38c0ea4b63f538a872a0f8abe8be10ad60adddd9cf",
+      "entries": 409,
+      "expanded_bytes": 1225498,
+      "relocated_members": []
+    },
+    {
+      "name": "tzdata",
+      "wheel_sha256": "b683bd1b6659ddcd810ff02ad09ba821d4bf1065072805063eb35c49617905ac",
+      "central_file": ".cache/task12-real-plan/tzdata-central.bin",
+      "central_sha256": "904b50084f85678c34d58ee71cf230ead16e442f0ff5fc95696e82308cf82795",
+      "entries": 633,
+      "expanded_bytes": 581918,
+      "relocated_members": []
+    },
+    {
+      "name": "outlines-core",
+      "wheel_sha256": "e86a1bb46adc5cbf6dfd7a7fe4105e0e2a4c6e041732a053126b41c521a1f223",
+      "central_file": ".cache/task12-real-plan/outlines-core-central.bin",
+      "central_sha256": "e13d5410ac5fd340f61da24f66b26b3f9b37ebbbe8cca1eb78c0d0df5759f2e5",
+      "entries": 17,
+      "expanded_bytes": 733900,
+      "relocated_members": []
+    },
+    {
+      "name": "xxhash",
+      "wheel_sha256": "49e03e6fe2cac4a1bc64952dd250cf0dbc5ef4ebb7b8d96bce82e2de163c82a2",
+      "central_file": ".cache/task12-real-plan/xxhash-central.bin",
+      "central_sha256": "87ca51ff4ef884cb7af5718a15964e015ada6b33ade0cd75ee8d004f777117fc",
+      "entries": 13,
+      "expanded_bytes": 802988,
+      "relocated_members": []
+    },
+    {
+      "name": "multiprocess",
+      "wheel_sha256": "fc0544c531920dde3b00c29863377f87e1632601092ea2daca74e4beb40faa2e",
+      "central_file": ".cache/task12-real-plan/multiprocess-central.bin",
+      "central_sha256": "d0274e9101095290de06bfafb57419525a4c1aa91766a7292375f8cc4a0efd1d",
+      "entries": 51,
+      "expanded_bytes": 537600,
+      "relocated_members": []
+    },
+    {
+      "name": "orjson",
+      "wheel_sha256": "524b765ad888dc5518bbce12c77c2e83dee1ed6b0992c1790cc5fb49bb4b6667",
+      "central_file": ".cache/task12-real-plan/orjson-central.bin",
+      "central_sha256": "7b3d25e96337b2d386c6834679bb9ff5f01208943e5ccda28c008afaa9f3eca1",
+      "entries": 9,
+      "expanded_bytes": 297363,
+      "relocated_members": []
+    },
+    {
+      "name": "parso",
+      "wheel_sha256": "a8926eb2a1b915486941fdbd31e86a4baf88fe8c210f25f2f35ecec5b574ca1c",
+      "central_file": ".cache/task12-real-plan/parso-central.bin",
+      "central_sha256": "61d4e9834ec95e3734eea0e7778400c8caac8fb56029edc84d79dfdacdce54e5",
+      "entries": 37,
+      "expanded_bytes": 355069,
+      "relocated_members": []
+    },
+    {
+      "name": "python-dateutil",
+      "wheel_sha256": "3c79630202e4152c6add678446984236efe4f57e84d8e892aab0637bab82e9fd",
+      "central_file": ".cache/task12-real-plan/python-dateutil-central.bin",
+      "central_sha256": "75384dbc9f5f6a5afe2777cd2617b84ec37a3e66e8c6b6352b54815f51afcc90",
+      "entries": 27,
+      "expanded_bytes": 333162,
+      "relocated_members": []
+    },
+    {
+      "name": "outlines",
+      "wheel_sha256": "f5a5f2242ed9802d3aab7a92789bf4008d734c576be9258cc0a297f690124727",
+      "central_file": ".cache/task12-real-plan/outlines-central.bin",
+      "central_sha256": "ccb089f8514e1775c5c42259e62dec468aa4b0b4f984f7f62150c4f096b1a001",
+      "entries": 54,
+      "expanded_bytes": 272065,
+      "relocated_members": []
+    },
+    {
+      "name": "traitlets",
+      "wheel_sha256": "f775618166caa0396c8e337099240f2bd3e5e917d203b2e6fbe21a58d3cb1f6b",
+      "central_file": ".cache/task12-real-plan/traitlets-central.bin",
+      "central_sha256": "411b3f0ed6ff5f1ef4c0532a15ec4524326273c6f8bfa429a7d76b54b7c747a6",
+      "entries": 29,
+      "expanded_bytes": 319664,
+      "relocated_members": []
+    },
+    {
+      "name": "blobfile",
+      "wheel_sha256": "48ecc3307e622804bd8fe13bf6f40e6463c4439eba7a1f9ad49fd78aa63cc658",
+      "central_file": ".cache/task12-real-plan/blobfile-central.bin",
+      "central_sha256": "13c102d30586e213ab2931da538e9a97ee8b2dda03b73ae905490ac515ed4d54",
+      "entries": 16,
+      "expanded_bytes": 305546,
+      "relocated_members": []
+    },
+    {
+      "name": "pexpect",
+      "wheel_sha256": "7236d1e080e4936be2dc3e326cec0af72acf9212a7e1d060210e70a47e253523",
+      "central_file": ".cache/task12-real-plan/pexpect-central.bin",
+      "central_sha256": "a9f9981bf6614118c86a7cb97bd09d0dd62d667057279c9d9adcb5d57cd8c549",
+      "entries": 24,
+      "expanded_bytes": 191354,
+      "relocated_members": []
+    },
+    {
+      "name": "cuda-pathfinder",
+      "wheel_sha256": "85a4e708c725d603f576042ef32781a3d1737c51e84c35fe361d2680191af65a",
+      "central_file": ".cache/task12-real-plan/cuda-pathfinder-central.bin",
+      "central_sha256": "e774440efa2a58e4e43b7f8237abdc5459f4ca71d5eb330964f2f330bd2236e8",
+      "entries": 39,
+      "expanded_bytes": 187991,
+      "relocated_members": []
+    },
+    {
+      "name": "nvidia-ml-py",
+      "wheel_sha256": "959bf4adf6fe1308e4bd739e722236b0d1ec8392e2cefad33ff70c311380b9b6",
+      "central_file": ".cache/task12-real-plan/nvidia-ml-py-central.bin",
+      "central_sha256": "172e92b1e7ff48e484fc71d234d0f26a9f12f2cf526a000eaf5120a66620e84f",
+      "entries": 6,
+      "expanded_bytes": 350617,
+      "relocated_members": []
+    },
+    {
+      "name": "tabulate",
+      "wheel_sha256": "f0b0622e567335c8fabaaa659f1b33bcb6ddfe2e496071b743aa113f8774f2d3",
+      "central_file": ".cache/task12-real-plan/tabulate-central.bin",
+      "central_sha256": "9dfbf65ef2eade8199e596a4a3a8cd29ce1325becee50ff9928bddd32a558ad7",
+      "entries": 7,
+      "expanded_bytes": 150857,
+      "relocated_members": []
+    },
+    {
+      "name": "executing",
+      "wheel_sha256": "736e859c9f8701f11fcf516856f26f562e04776387824b43a35a1dfe21c84122",
+      "central_file": ".cache/task12-real-plan/executing-central.bin",
+      "central_sha256": "a3616248ecda94e6e974d98e460a789a411e6374e1bfd6a7cc1680c0dce4b70b",
+      "entries": 13,
+      "expanded_bytes": 99167,
+      "relocated_members": []
+    },
+    {
+      "name": "asttokens",
+      "wheel_sha256": "9da13157f5b28becde0bd374fc677dcd3c290614264eff096f167c469cd9f933",
+      "central_file": ".cache/task12-real-plan/asttokens-central.bin",
+      "central_sha256": "7eb4916f7f63991938d2e90ce5934cb9c9441f3f06e90e4bcd5095acc7255c1c",
+      "entries": 15,
+      "expanded_bytes": 80904,
+      "relocated_members": []
+    },
+    {
+      "name": "stack-data",
+      "wheel_sha256": "d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695",
+      "central_file": ".cache/task12-real-plan/stack-data-central.bin",
+      "central_sha256": "e474db8346ff4361b2a7b30c0614677fb0e81b04a0489d57a72375a638213e91",
+      "entries": 12,
+      "expanded_bytes": 75301,
+      "relocated_members": []
+    },
+    {
+      "name": "build",
+      "wheel_sha256": "7145f0b5061ba90a1500d60bd1b13ca0a8a4cebdd0cc16ed8adf1c0e739f43b4",
+      "central_file": ".cache/task12-real-plan/build-central.bin",
+      "central_sha256": "2cb069db38bf172311b442cc051864728fb2dc5dc673a495d4b6e4cb72497254",
+      "entries": 19,
+      "expanded_bytes": 63112,
+      "relocated_members": []
+    },
+    {
+      "name": "grpcio-reflection",
+      "wheel_sha256": "17ef1504c9efd58662e56090379885e5f3f7985ce481cf30d6b1cb25f55ab0ae",
+      "central_file": ".cache/task12-real-plan/grpcio-reflection-central.bin",
+      "central_sha256": "787db1f53acb779596355930c5fac8909a9d86e898ff5fc37923bfc0690e2b45",
+      "entries": 14,
+      "expanded_bytes": 67390,
+      "relocated_members": []
+    },
+    {
+      "name": "docstring-parser",
+      "wheel_sha256": "b3fcbed555c47d8479be0796ef7e19c2670d428d72e96da63f3a40122860374b",
+      "central_file": ".cache/task12-real-plan/docstring-parser-central.bin",
+      "central_sha256": "781e2e2ae34020aa6b39f5b909211a3da08fd885e9d9c93b8689a62d9c7f702a",
+      "entries": 14,
+      "expanded_bytes": 73430,
+      "relocated_members": []
+    },
+    {
+      "name": "grpcio-health-checking",
+      "wheel_sha256": "f9d3eae78c13bfe81105a6433fbf7c4ad04ea1f517e9110fde35391d56ec760e",
+      "central_file": ".cache/task12-real-plan/grpcio-health-checking-central.bin",
+      "central_sha256": "2c5c4bd4a0da1caf9a0e4758943df1a34897411fa2be4fa911e48091ea79ce5b",
+      "entries": 12,
+      "expanded_bytes": 54108,
+      "relocated_members": []
+    },
+    {
+      "name": "ptyprocess",
+      "wheel_sha256": "4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35",
+      "central_file": ".cache/task12-real-plan/ptyprocess-central.bin",
+      "central_sha256": "9621a0d65e2b91f1b523569524d980e1a7bebf79aac1d2085434a275bab720ed",
+      "entries": 8,
+      "expanded_bytes": 39907,
+      "relocated_members": []
+    },
+    {
+      "name": "pure-eval",
+      "wheel_sha256": "96cae060a313cfaad51bb761278bfb0e62dc0248d9315a81173752dc546cd37a",
+      "central_file": ".cache/task12-real-plan/pure-eval-central.bin",
+      "central_sha256": "3045853ce23b33259499da0a7fa8a8295b477c089cce5a47a020dcbff3beee53",
+      "entries": 11,
+      "expanded_bytes": 33043,
+      "relocated_members": []
+    },
+    {
+      "name": "pyproject-hooks",
+      "wheel_sha256": "5fc53fdac9f7bd63fbcdc868fb5f90b4784d78a53a3d3388cd738b807441a20b",
+      "central_file": ".cache/task12-real-plan/pyproject-hooks-central.bin",
+      "central_sha256": "ba096674ef7ba49f5f264f626c94033711cd7f2cfec290a43a1b0e6fd77be325",
+      "entries": 9,
+      "expanded_bytes": 33192,
+      "relocated_members": []
+    },
+    {
+      "name": "decorator",
+      "wheel_sha256": "f47fe6fdbd2edd623ecfe36875d37aba411624e2670dd395dddae1358689bb3c",
+      "central_file": ".cache/task12-real-plan/decorator-central.bin",
+      "central_sha256": "1812e16c125d9652d6ea24efadea49a92a4c81f4381b69b0573b7e3adcac4a25",
+      "entries": 8,
+      "expanded_bytes": 26196,
+      "relocated_members": []
+    },
+    {
+      "name": "matplotlib-inline",
+      "wheel_sha256": "3c821cf1c209f59fb2d2d64abbf5b23b67bcb2210d663f9918dd851c6da1fcf6",
+      "central_file": ".cache/task12-real-plan/matplotlib-inline-central.bin",
+      "central_sha256": "56e3a9ad5fccf3a4c0ecca25965904120978ff8b61e87c23195da6829744326d",
+      "entries": 9,
+      "expanded_bytes": 21367,
+      "relocated_members": []
+    },
+    {
+      "name": "ipython-pygments-lexers",
+      "wheel_sha256": "a9462224a505ade19a605f71f8fa63c2048833ce50abc86768a0d81d876dc81c",
+      "central_file": ".cache/task12-real-plan/ipython-pygments-lexers-central.bin",
+      "central_sha256": "2d7588d5addb27d1ebf86d0a1b0e6ce6a26147fc3edce09e54be9b2d05afbc2f",
+      "entries": 6,
+      "expanded_bytes": 23118,
+      "relocated_members": []
+    },
+    {
+      "name": "cuda-python",
+      "wheel_sha256": "d2cacea882a69863f1e7d27ee71d75f0684f4c76910aff839067e4f89c902279",
+      "central_file": ".cache/task12-real-plan/cuda-python-central.bin",
+      "central_sha256": "a6c1c9eed39604b4dffc22cf2c5d61a69160d5e414fd98f587071ab6132440c5",
+      "entries": 5,
+      "expanded_bytes": 16279,
+      "relocated_members": []
+    },
+    {
+      "name": "nest-asyncio",
+      "wheel_sha256": "87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c",
+      "central_file": ".cache/task12-real-plan/nest-asyncio-central.bin",
+      "central_sha256": "1f275528cd88b93fded2583f4c4747e687b97ff3fc72e485f99af3cffa496112",
+      "entries": 6,
+      "expanded_bytes": 12212,
+      "relocated_members": []
+    }
+  ]
+}

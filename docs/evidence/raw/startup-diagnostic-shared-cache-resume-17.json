@@ -1,0 +1,9 @@
+{
+  "shared_model_cache": "/home/postedism/.cache/huggingface",
+  "shared_model_cache_bytes": 23815435170,
+  "shared_model_cache_cap_bytes": 40000000000,
+  "loopback_port": 31012,
+  "listener_closed": true,
+  "planned_download_bytes": 0,
+  "model_fit_not_proven": true
+}

@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "units": "decimal GB = 1,000,000,000 bytes",
+  "project_bytes": 10708226889,
+  "free_bytes": 306974605312,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": []
+}
+{"phase": "gpu_preflight", "free_bytes": 22078881792, "total_bytes": 25249579008, "device": "NVIDIA GeForce RTX 4090", "cuda": "12.8", "nccl": [2, 27, 3], "versions": {"torch": "2.8.0", "triton": "3.4.0", "transformers": "4.55.4", "vllm": "0.10.2", "numpy": "2.2.6"}, "driver": "595.99.02", "environment": {"CUDA_CACHE_PATH": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/cuda", "XDG_CACHE_HOME": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/xdg", "TORCH_HOME": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/torch-home", "TORCHINDUCTOR_CACHE_DIR": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/torch", "TRITON_CACHE_DIR": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/triton", "CUPY_CACHE_DIR": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/cupy", "NUMBA_CACHE_DIR": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/numba", "VLLM_CACHE_ROOT": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/vllm", "TMPDIR": "/home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp", "HF_HOME": "/home/postedism/.cache/huggingface", "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub", "HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1"}, "seed": 1010}
+In file included from /home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/Python.h:12,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmp3u8mzc0k/cuda_utils.c:5:
+/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/pyconfig.h:1877:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1877 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmp3u8mzc0k/cuda_utils.c:1:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/Python.h:12,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmpuffh0go1/__triton_launcher.c:4:
+/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/pyconfig.h:1877:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1877 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmpuffh0go1/__triton_launcher.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/Python.h:12,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmpq8ml4c95/__triton_launcher.c:4:
+/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/pyconfig.h:1877:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1877 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmpq8ml4c95/__triton_launcher.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/Python.h:12,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmphq9u28ee/__triton_launcher.c:4:
+/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/pyconfig.h:1877:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1877 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmphq9u28ee/__triton_launcher.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+In file included from /home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/Python.h:12,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmpir9loxi8/__triton_launcher.c:4:
+/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/include/python3.12/pyconfig.h:1877:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1877 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /home/postedism/Desktop/Crucible/.cache/task8/runtime/tmp/tmpir9loxi8/__triton_launcher.c:2:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~
+.............
+13 passed, 21 deselected in 3.04s

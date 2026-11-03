@@ -1,0 +1,57 @@
+{
+  "command": [
+    "/usr/bin/true"
+  ],
+  "samples": [],
+  "scan_errors": [],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "8d06f5ca394d81e81ee419f8b4e91ac6cf4365ede7244b5773809564b3eb524c",
+  "before": {
+    "canonical_bytes": 13300608351,
+    "owned_bytes": 0,
+    "nonloan_bytes": 13300608351,
+    "projected_bytes": 13990608351,
+    "free_bytes": 265699610624,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan/tmp"
+  },
+  "pid": 3,
+  "leader_start": "72271606",
+  "exit_code": 0,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 1.880038451985456,
+  "after": {
+    "canonical_bytes": 13300608351,
+    "owned_bytes": 0,
+    "nonloan_bytes": 13300608351,
+    "projected_bytes": 13990608351,
+    "free_bytes": 265699672064,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  }
+}

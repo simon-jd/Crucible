@@ -1,0 +1,253 @@
+{
+  "time_utc": "2026-10-25T16:09:06.716595+00:00",
+  "scope": "ROOT sequential canonicalproject incl.git/ignored+fullphaseinventory+sharedHF, no quota/continuouspeakclaim",
+  "sample": {
+    "project_bytes": 13316536239,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306376008,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996376008,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "remaining_future_bytes": 679839769,
+  "client_loan_repaid": false,
+  "conservative_future_plus3M": 13999376008,
+  "shared_HF_cache_bytes": 23815435170,
+  "shared_HF_cap": 40000000000,
+  "phase_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 279626
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-brief.md",
+      "bytes": 11645
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-commit-manifest.json",
+      "bytes": 2686
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-fix1-brief.md",
+      "bytes": 7548
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-fix1-commit-manifest.json",
+      "bytes": 1938
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-fix1-review-brief.md",
+      "bytes": 7481
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-fix1-review.diff",
+      "bytes": 41552
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-fix1-review.md",
+      "bytes": 7947
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-report.md",
+      "bytes": 54388
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-review-brief.md",
+      "bytes": 5270
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-review.diff",
+      "bytes": 117892
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-review.md",
+      "bytes": 13591
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 91291
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 20520
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-end-resume-29.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-29.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-29.json",
+      "bytes": 1225
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream-fix1-supervisor.log",
+      "bytes": 153
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream-fix1.json",
+      "bytes": 7362
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream-fix1.log",
+      "bytes": 2927
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream-supervisor.log",
+      "bytes": 148
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream.json",
+      "bytes": 7929
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-stream.log",
+      "bytes": 7468
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-fix1-format.log",
+      "bytes": 189
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-fix1-lint.log",
+      "bytes": 299
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format-v2.log",
+      "bytes": 400
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format-v3.log",
+      "bytes": 177
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format.log",
+      "bytes": 1054
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-lint-v2.log",
+      "bytes": 2760
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-lint-v3.log",
+      "bytes": 375
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-CPU-gate.json",
+      "bytes": 5382
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-CPU-gate.json",
+      "bytes": 6802
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-CPU-preflight-parser-error.json",
+      "bytes": 423
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-end-host-audit.json",
+      "bytes": 5292
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-host-audit-parser-error.json",
+      "bytes": 524
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-preservation-end.json",
+      "bytes": 2263
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-result-scratch-cleanup.json",
+      "bytes": 2957
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-fix1-source-static-gate.json",
+      "bytes": 6579
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-host-end-audit.json",
+      "bytes": 2202
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-preservation-before-source.json",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-preservation-host-after-CPU.json",
+      "bytes": 2642
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-result-scratch-cleanup.json",
+      "bytes": 2954
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-source-static-gate.json",
+      "bytes": 4496
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-static-v2-gate.json",
+      "bytes": 1194
+    },
+    {
+      "path": "docs/evidence/rl-serial-state-handoff-review.md",
+      "bytes": 21699
+    },
+    {
+      "path": "docs/evidence/rl-serial-state-handoff.md",
+      "bytes": 6930
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 19583
+    },
+    {
+      "path": "rl/learner/handoff_protocol.py",
+      "bytes": 24310
+    },
+    {
+      "path": "rl/learner/handoff_stream.py",
+      "bytes": 22384
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 46366
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 10407
+    },
+    {
+      "path": "rl/learner/tests/test_stream_handoff.py",
+      "bytes": 30970
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 20819
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 14811
+    }
+  ],
+  "phase_retained": 960575,
+  "remaining_root_git_and_finalrecords_upperbound": 100000,
+  "phase_forecast": 1060575,
+  "phase_cap": 2000000,
+  "CPU_scratch_absent": true,
+  "new_checkpoints": 0,
+  "experimental_services": 0,
+  "new_GPU_authorized": false,
+  "Goal": "active originalfullscope"
+}

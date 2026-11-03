@@ -1,0 +1,9 @@
+{
+  "mode": "plan",
+  "ready": false,
+  "applied": false,
+  "nodes": [],
+  "errors": [
+    "image digest is missing/unlocked (must be sha256:<64 hex>)"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "scope": "isolated current source copy; mutation RED, not historical baseline",
+  "root": ".tmp-task12-wait-go-loan/red",
+  "files": {
+    "go.mod": {
+      "bytes": 25,
+      "sha256": "e850b635508a57882d71a3e0cf459f999508a5ba757ee3e1631039aeb8d3e829"
+    },
+    "serving/replay/accounting.go": {
+      "bytes": 3472,
+      "sha256": "7e1eb347b2cd0d634316dad36b3d6c450513ec71c35a368c641094e7859fdb4f"
+    },
+    "serving/replay/accounting_test.go": {
+      "bytes": 4955,
+      "sha256": "64dddb982213b9007e0d86831949f4e0655f880454098ee78f9e597016e15d8a"
+    },
+    "serving/replay/cmd/replay/diagnostic_test.go": {
+      "bytes": 2981,
+      "sha256": "02c6cf795ed6f7961620bba8b633be4c6c5b1ab4bd0aea37d45e2d632f954f8d"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "bytes": 3205,
+      "sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    },
+    "serving/replay/cmd/replay/main_test.go": {
+      "bytes": 2351,
+      "sha256": "36d0323effac27b01d2378b853250dd0b23cea6edd43ec14e24f4558dba6a54b"
+    },
+    "serving/replay/diagnostic.go": {
+      "bytes": 9983,
+      "sha256": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f"
+    },
+    "serving/replay/diagnostic_test.go": {
+      "bytes": 9844,
+      "sha256": "c7c45b7b0b74d33f09bae4c4609bd81c41ff0d859b3809833de3043cd695c761"
+    },
+    "serving/replay/main.go": {
+      "bytes": 3004,
+      "sha256": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16"
+    },
+    "serving/replay/record.go": {
+      "bytes": 2470,
+      "sha256": "a9f52e5d1dcefadc90a2ad769cfe74767f335915b51c5c1c2822088efe01d569"
+    },
+    "serving/replay/replay_test.go": {
+      "bytes": 6180,
+      "sha256": "8fdcd8602f4c27b4463f9523dfbc2bd834ef6dc549a22366de92759b605aadb3"
+    },
+    "serving/replay/schedule.go": {
+      "bytes": 5582,
+      "sha256": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    "serving/replay/stream.go": {
+      "bytes": 2874,
+      "sha256": "d0fedbd24aaf5c7d42d5841818bec40cde8db4cac00eb707bd3e8358400e4d3a"
+    },
+    "serving/replay/stream_test.go": {
+      "bytes": 1170,
+      "sha256": "061ba2a9add11da649843c9a4cda5e960d23a9abeffa229101061c9a9fb68f82"
+    },
+    "serving/replay/trace.go": {
+      "bytes": 2989,
+      "sha256": "37f97366383e7062379a794c4eb98040b9c11a07ff3ae4fb3bfcc13c5ebf39a9"
+    },
+    "serving/replay/trace_test.go": {
+      "bytes": 2192,
+      "sha256": "18a9ede67fb80dbb55bda79f8bf97e8aab66356129c83d404fc1535cefaf1290"
+    },
+    "serving/replay/transport.go": {
+      "bytes": 4213,
+      "sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/transport_test.go": {
+      "bytes": 7910,
+      "sha256": "65a8818076022c59b65ec267227b13eb69227593939429d79577ec5e567834e9"
+    },
+    "serving/replay/wait.go": {
+      "original_sha256": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3",
+      "mutation": "only segment cap100ms ->1hour",
+      "bytes": 2424,
+      "sha256": "8da55a3a0f2edfa539a2a194516271d79d2e6aa475c9d541a3b2d3438e9ab715"
+    },
+    "serving/replay/wait_test.go": {
+      "bytes": 9890,
+      "sha256": "e1958222a428622954432df3aef0274ad7a50c63c37e017ff022538a89d2e148"
+    }
+  },
+  "bytes": 87714
+}

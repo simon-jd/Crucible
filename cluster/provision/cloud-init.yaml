@@ -1,0 +1,21 @@
+#cloud-config
+# Template only. render.py emits complete user-data after lock and site validation.
+# Use an approved minimal Ubuntu 24.04 image. The explicit operator bootstrap.py
+# entrypoint installs pinned Debian bundles, configuration and services.
+# No driver/package installation is performed by this optional helper file.
+package_update: false
+package_upgrade: false
+mounts:
+  - ['@NFS_EXPORT@', /shared, nfs4, 'rw,hard,_netdev,vers=4.1', '0', '0']
+write_files:
+  - path: /etc/crucible/versions.lock
+    permissions: '0644'
+    content: |
+      @LOCK_JSON@
+  - path: /etc/crucible/baseline-state
+    permissions: '0644'
+    content: 'UNVERIFIED: run check_baseline.sh from the controller after deployment'
+runcmd:
+  - [mkdir, -p, /shared]
+  - [mount, /shared]
+  - [findmnt, --mountpoint, /shared]

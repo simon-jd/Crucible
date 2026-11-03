@@ -1,0 +1,239 @@
+# OFFLINE ONLY. Replicas stay zero; no deployment authorization.
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: pd-cross-node-offline-contract
+  data:
+    contract.json: "{\n  \"layout\": \"pd-cross-node\",\n  \"phase\": \"OFFLINE_ONLY\"\
+      ,\n  \"source_commit\": \"0c006b8809cd99e1f95926401a2823dd952641c8\",\n  \"\
+      comparison\": {\n    \"total_gpus\": 3,\n    \"colocated_total_gpus\": 3,\n\
+      \    \"colocated_plan\": \"three independent one-GPU replicas; verify identical\
+      \ model/workload/SLO/sampling and capacity\",\n    \"model_revision\": \"REPLACE_MODEL_REVISION\"\
+      ,\n    \"slo_sha256\": \"REPLACE_BF16_SLO_SHA256\"\n  },\n  \"connections\"\
+      : {\n    \"prefill\": [\n      {\n        \"http\": \"http://pd-cross-node-prefill-1:30000\"\
+      ,\n        \"bootstrap\": \"pd-cross-node-prefill-1:8998\"\n      }\n    ],\n\
+      \    \"decode\": [\n      {\n        \"http\": \"http://pd-cross-node-decode-1:30000\"\
+      \n      }\n    ]\n  },\n  \"router\": {\n    \"image\": \"REPLACE_ROUTER_IMAGE@sha256:REPLACE_ROUTER_DIGEST\"\
+      ,\n    \"command\": [\n      \"python3\",\n      \"-m\",\n      \"sglang_router.launch_router\"\
+      \n    ],\n    \"contract\": \"Pinned router parser: repeated --prefill URL BOOTSTRAP_PORT;\
+      \ repeated --decode URL; Rust runtime/image unverified\",\n    \"request_handoff\"\
+      : [\n      \"bootstrap_host\",\n      \"bootstrap_port\",\n      \"bootstrap_room\"\
+      \n    ],\n    \"args\": [\n      \"--pd-disaggregation\",\n      \"--host\"\
+      ,\n      \"0.0.0.0\",\n      \"--port\",\n      \"30080\",\n      \"--policy\"\
+      ,\n      \"round_robin\",\n      \"--prefill\",\n      \"http://pd-cross-node-prefill-1:30000\"\
+      ,\n      \"8998\",\n      \"--decode\",\n      \"http://pd-cross-node-decode-1:30000\"\
+      \n    ],\n    \"source_commit\": \"0c006b8809cd99e1f95926401a2823dd952641c8\"\
+      \n  },\n  \"prerequisites\": {\n    \"driver_cuda_nccl_ofed\": \"REPLACE_VERIFIED_DRIVER_CUDA_NCCL_OFED\"\
+      ,\n    \"rdma_resource_mapping\": \"REPLACE_VERIFIED_RDMA_DEVICE_PLUGIN_AND_NETWORK\"\
+      ,\n    \"model_metadata\": \"REPLACE_VERIFIED_MODEL_HEADS_TP_REVISION\",\n \
+      \   \"router_revision\": \"REPLACE_VERIFIED_ROUTER_REVISION\",\n    \"network_checks\"\
+      : \"REPLACE_VERIFIED_NODE_REACHABILITY_GPUDIRECT_RDMA\"\n  },\n  \"kv_transfer_latency\"\
+      : \"UNMEASURED\",\n  \"physical_validation\": \"\\u672a\\u5728\\u771f\\u5b9e\\\
+      u591a\\u673a\\u4e0a\\u9a8c\\u8bc1\"\n}"
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: pd-cross-node-prefill-1
+  spec:
+    replicas: 0
+    selector:
+      matchLabels: &id001
+        app: pd-cross-node-prefill-1
+        task13-role: prefill
+    template:
+      metadata:
+        labels: *id001
+      spec:
+        nodeSelector:
+          kubernetes.io/hostname: REPLACE_PREFILL_NODE
+        containers:
+        - name: engine
+          image: REPLACE_SGLANG_IMAGE@sha256:REPLACE_IMAGE_DIGEST
+          command:
+          - python3
+          - -m
+          - sglang.launch_server
+          args:
+          - --model-path
+          - REPLACE_LOCAL_MODEL_PATH
+          - --revision
+          - REPLACE_MODEL_REVISION
+          - --host
+          - 0.0.0.0
+          - --port
+          - '30000'
+          - --tensor-parallel-size
+          - '2'
+          - --dtype
+          - bfloat16
+          - --disaggregation-mode
+          - prefill
+          - --disaggregation-transfer-backend
+          - mooncake
+          - --disaggregation-ib-device
+          - REPLACE_RDMA_DEVICE
+          - --disaggregation-decode-tp
+          - '1'
+          - --disaggregation-bootstrap-port
+          - '8998'
+          ports:
+          - name: http
+            containerPort: 30000
+          - name: bootstrap
+            containerPort: 8998
+          resources:
+            requests:
+              nvidia.com/gpu: 2
+            limits:
+              nvidia.com/gpu: 2
+          env:
+          - name: HF_HUB_OFFLINE
+            value: '1'
+          volumeMounts:
+          - name: model
+            mountPath: REPLACE_LOCAL_MODEL_PATH
+            readOnly: true
+        volumes:
+        - name: model
+          hostPath:
+            path: REPLACE_LOCAL_MODEL_PATH
+            type: Directory
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: pd-cross-node-prefill-1
+  spec:
+    clusterIP: None
+    selector: *id001
+    ports:
+    - name: http
+      port: 30000
+      targetPort: 30000
+    - name: bootstrap
+      port: 8998
+      targetPort: 8998
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: pd-cross-node-decode-1
+  spec:
+    replicas: 0
+    selector:
+      matchLabels: &id002
+        app: pd-cross-node-decode-1
+        task13-role: decode
+    template:
+      metadata:
+        labels: *id002
+      spec:
+        nodeSelector:
+          kubernetes.io/hostname: REPLACE_DECODE_NODE
+        containers:
+        - name: engine
+          image: REPLACE_SGLANG_IMAGE@sha256:REPLACE_IMAGE_DIGEST
+          command:
+          - python3
+          - -m
+          - sglang.launch_server
+          args:
+          - --model-path
+          - REPLACE_LOCAL_MODEL_PATH
+          - --revision
+          - REPLACE_MODEL_REVISION
+          - --host
+          - 0.0.0.0
+          - --port
+          - '30000'
+          - --tensor-parallel-size
+          - '1'
+          - --dtype
+          - bfloat16
+          - --disaggregation-mode
+          - decode
+          - --disaggregation-transfer-backend
+          - mooncake
+          - --disaggregation-ib-device
+          - REPLACE_RDMA_DEVICE
+          - --disaggregation-prefill-pp
+          - '1'
+          ports:
+          - name: http
+            containerPort: 30000
+          resources:
+            requests:
+              nvidia.com/gpu: 1
+            limits:
+              nvidia.com/gpu: 1
+          env:
+          - name: HF_HUB_OFFLINE
+            value: '1'
+          volumeMounts:
+          - name: model
+            mountPath: REPLACE_LOCAL_MODEL_PATH
+            readOnly: true
+        volumes:
+        - name: model
+          hostPath:
+            path: REPLACE_LOCAL_MODEL_PATH
+            type: Directory
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: pd-cross-node-decode-1
+  spec:
+    clusterIP: None
+    selector: *id002
+    ports:
+    - name: http
+      port: 30000
+      targetPort: 30000
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: pd-cross-node-router
+  spec:
+    replicas: 0
+    selector:
+      matchLabels: &id003
+        app: pd-cross-node-router
+        task13-role: router
+    template:
+      metadata:
+        labels: *id003
+      spec:
+        containers:
+        - name: router
+          image: REPLACE_ROUTER_IMAGE@sha256:REPLACE_ROUTER_DIGEST
+          command:
+          - python3
+          - -m
+          - sglang_router.launch_router
+          args:
+          - --pd-disaggregation
+          - --host
+          - 0.0.0.0
+          - --port
+          - '30080'
+          - --policy
+          - round_robin
+          - --prefill
+          - http://pd-cross-node-prefill-1:30000
+          - '8998'
+          - --decode
+          - http://pd-cross-node-decode-1:30000
+          ports:
+          - name: http
+            containerPort: 30080
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: pd-cross-node-router
+  spec:
+    selector: *id003
+    ports:
+    - name: http
+      port: 30080
+      targetPort: 30080

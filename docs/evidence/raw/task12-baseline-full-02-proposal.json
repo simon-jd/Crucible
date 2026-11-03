@@ -1,0 +1,155 @@
+{
+  "base": "a61798c86a0b254a0cd3d5b96b124e9fde9517ba",
+  "status": "proposed-not-authorized-or-launched",
+  "command": [
+    "scripts/with_gpu.sh",
+    "timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=30s",
+    "14100s",
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "serving.baseline.experiment",
+    "--lock",
+    "serving/baseline/runtime-lock.json",
+    "--overlay",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+    "--cache-audit",
+    "serving/baseline/cache-audit.json",
+    "--protocol",
+    "serving/baseline/protocol.json",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--model-manifest",
+    "docs/evidence/raw/task12-model-acquisition-02.json",
+    "--token-ids",
+    "docs/evidence/raw/task12-model-token-allowlist.json",
+    "--binary",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/bin/replay",
+    "--abi-evidence",
+    "docs/evidence/raw/task12-baseline-abi-01/abi.json",
+    "--abi-evidence-sha256",
+    "ba3df4a836f0cdb480399c8ca9c1044b122daff96de8a8e88e2e256193d6ef01",
+    "--port",
+    "31012",
+    "--output",
+    "/home/postedism/Desktop/Crucible/docs/evidence/raw/task12-baseline-full-02"
+  ],
+  "command_scoped_environment": {
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp",
+    "PATH": "/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/codex-path:/home/postedism/.local/bin:/home/postedism/.codex/tmp/arg0-linux/codex-arg0Mv1NLj:/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/codex-path:/usr/local/cuda-13.2/bin:/home/postedism/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/postedism/.local/share/JetBrains/Toolbox/scripts",
+    "PYTHONNOUSERSITE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "TORCHINDUCTOR_COMPILE_THREADS": "1"
+  },
+  "guard_log": "docs/evidence/raw/task12-baseline-full-02-guard.log",
+  "resource_plan": {
+    "project_cap": 14000000000,
+    "planned_additional_project_bytes": 680000000,
+    "runtime_all_cache_jit_compiler_tmp": 500000000,
+    "code_evidence_git": 100000000,
+    "cleanup": 50000000,
+    "new_download_bytes": 0,
+    "shared_cache_actual_including_retained_partial": 23815435170,
+    "service_memory_cap": 16000000000,
+    "service_estimates_only": {
+      "server": 9500000000,
+      "replay": 5500000000,
+      "controller": 500000000,
+      "note": "original planning estimates; startup02 evidence is readiness only, concurrent replay/generation peaks remain unmeasured"
+    },
+    "observer_stops": {
+      "project_at": 13950000000,
+      "runtime_cache_at": 400000000,
+      "runtime_plus_evidence_at": 450000000,
+      "owned_aggregate_rss_at": 16000000000
+    },
+    "counts": "canonical full scan between timed trials; conservative owned mutable-root estimate during trials; whole scan retry only FileNotFoundError <=3 attempts",
+    "additional_allowances": {
+      "Task13": 10000000,
+      "root_review": 10000000,
+      "CPU_including_this_preparation": 10000000
+    },
+    "runtime_cache_existing_bytes": 43333,
+    "persisted_evidence_bound_status": "unresolved; see preparation launch_review_conditions; no quota/upper-bound claim from stream-read bounds"
+  },
+  "lifecycle": {
+    "fixed_guard_seconds_including_cleanup": 14400,
+    "foreground_timeout_seconds": 14100,
+    "kill_after_seconds": 30,
+    "stop_new_trials_after_controller_seconds": 11700,
+    "server_readiness_seconds": 900,
+    "native_request_seconds": 30,
+    "flush_boundary_seconds": 30,
+    "trial_child_seconds": 130,
+    "owned_child_TERM_grace_seconds": 15,
+    "listener_close_grace_seconds": 15,
+    "queue": "one original handle only; no duplicate/restart; source/env freeze while queued/live",
+    "cleanup": "exact Popen child terminate/reap and port closure; inherited fixed-guard group/subreaper final descendant drain before flock release; inspect exact host identities and final resources; no blind PGID signal after reap"
+  },
+  "sequence": [
+    "verify 14 actual model files against plan/upstream and actual manifest; regenerate allowlist offline",
+    "reuse prior successful ABI evidence without rerun; validate metadata inventory",
+    "start single pinned loopback server; pinned startup warmup before readiness",
+    "native zero/one/multi/error prompt/delta contract smoke",
+    "three fixed preparation warmups; confirmed idle cache/pool reset",
+    "Azure three 1x calibration rounds with every-trial idle boundary; freeze/hash empirical p99 SLO",
+    "Azure 12 fixed matched evaluation members; every-trial idle boundary",
+    "Burst three 1x calibration rounds with every-trial idle boundary; freeze/hash empirical p99 SLO",
+    "Burst 12 fixed matched evaluation members; every-trial idle boundary",
+    "server and descendant cleanup, host process/listener and resource audit"
+  ],
+  "acceptance": "all failures and sender-invalid runs retained, no retry-to-pass; source-overflow rows not truncated; missing planned members retained; three accepted pairs required per aggregate comparison",
+  "not_proven": "generation/native prompt-delta compatibility, concurrent workload/RSS/TTFT/TPOT/SLO/goodput; startup readiness only is evidenced; inert container image/multihost remain unverified",
+  "pre_output_checkpoint": "1e255e6+a7d4d37 original; later approved deadline/observer/env changes through04c1eea/ac2fa75; actual readiness result a61798c; no source changes in this proposal phase",
+  "controller_exit_contract": "exit1 is expected request failure only for exact bounded stderr line, complete planned records, explicit non-aborted and sender-valid run, and actual failed rows; actual returncode/stderr/raw preserved; all other nonzero exits invalid",
+  "focused_evidence": {
+    "RED": "task12-trial-exit-contract-red.log:1 failed8passed19deselected9.08s",
+    "GREEN": "task12-trial-exit-contract-focused.log:11passed17deselected10.06s",
+    "lint": "task12-trial-exit-contract-lint.log",
+    "rerun_this_phase": false
+  },
+  "command_environment_unset": [
+    "TRANSFORMERS_CACHE",
+    "PYTHONPATH"
+  ],
+  "preparation": "docs/evidence/raw/task12-baseline-full-02-preparation.json",
+  "preflight": "docs/evidence/raw/task12-baseline-full-02-preflight.json",
+  "launch_conditions": [
+    {
+      "source": "serving/baseline/experiment.py:470-478,741-756",
+      "finding": "Go stdout/stderr and server.log are direct file redirections; 8MiB JSON check is post-exit, not a write-time cap. Existing source cannot prove 100MB code/evidence upper bound or bound inter-sample log growth.",
+      "effect": "Do not treat 30x8MiB=251658240 as a guaranteed persisted bound; even this post-read envelope exceeds100MB. No new execution or cap relaxation authorized."
+    },
+    {
+      "source": "serving/replay/stream.go:101; record.go:17; cmd/replay/main.go:81",
+      "finding": "Native unsuccessful finish type is embedded in Record.Error, then JSON-escaped. Stream/event byte bounds limit read/memory but do not imply small persisted records; no per-record error byte cap.",
+      "effect": "The modest fixed-row forecast below is conditional, not a hard upper limit."
+    },
+    {
+      "source": "serving/baseline/experiment.py:240-250,686-691,415-417",
+      "finding": "Resource samples accumulate and serialize repeatedly; native read1 invokes inspect each read, not at a capped sampling rate. Observer stops runtime>=400MB or runtime+evidence>=450MB/project>=13.95GB, not evidence>=100MB.",
+      "effect": "No separate strict evidence/sample-count bound demonstrated; polling is not a guaranteed file-write quota."
+    }
+  ],
+  "readiness_evidence": {
+    "summary": "docs/evidence/raw/task12-startup-memory-02-summary.json",
+    "summary_sha256": "46cfc4e25937afacbb68ad3f61ae984c00bccf2fa6175c67c6054691fb9139e8",
+    "terminal": "docs/evidence/raw/task12-startup-memory-02/terminal.json",
+    "host_cleanup": "docs/evidence/raw/task12-startup-memory-02-host-terminal.json",
+    "original_handle": 79950,
+    "outer_exit": 0,
+    "max_sampled_RSS": 7409397760,
+    "no_generation": true,
+    "baseline_accepted": false
+  },
+  "full_vs_diagnostic": "Full experiment has pinned startup warmup, existing /health readiness endpoint (which can generate one token), smoke/fixedwarmups/cal/eval. No --skip-server-warmup in command or protocol. Diagnostic100ms/10GBearly/120s/16MiBevidence limits do not apply to full controller; full original limits above unchanged."
+}

@@ -1,0 +1,125 @@
+{
+  "time_utc": "2026-10-25T15:20:32.700620+00:00",
+  "scope": "ROOT read allsource+complete19510Breport before one sourceformat/lint; noTorch/tests yet",
+  "eight_source_pins": {
+    "rl/learner/handoff_stream.py": "c44967acd40c04627d4d6a51c5122dd746e295474d94e2e110b557f2da054f58",
+    "rl/learner/handoff_protocol.py": "60ff8dc1cc6973288688d8b888bc30763b48316c03c5ae936ce3cbf9b9e4a8b5",
+    "rl/learner/state_handoff.py": "6ae5891ef4200b2276d9077e529e5186b606d5a0a0ebfc653d213beefa1efbd5",
+    "rl/learner/train.py": "854f697051ce8ca4d1299e2c451281d9ea14b1a2662fb915d8d3f2c7a08e64cf",
+    "rl/learner/tests/test_stream_handoff.py": "7b9683578669182cb12cbb24cdee1ffbf2566cc68ef4520ca4320cdd98d69182",
+    "rl/learner/tests/handoff_worker.py": "882aed61859c104368670b7a58c713976cb73150afbb2ec69f4395ce90b7217a",
+    "scripts/test_ram_handoff_cpu.py": "a064f38f9592d48a51a916d32d82cca3cd94cefd82f8db80b15369b4393a1003",
+    "rl/learner/README.md": "3152d38a83285619f21e0fb2121c49e2d577c508d1f76eecfe2204ef36ac7ca4"
+  },
+  "seven_Python_AST": {
+    "rl/learner/handoff_stream.py": "1500467c3059d12d6afd0a821170a0e4fde9047226cbf4a8f96eacd5da65b119",
+    "rl/learner/handoff_protocol.py": "17c7d76e872f155afb3870310858e428e4ead76231bc11c51baeef9126d0d78c",
+    "rl/learner/state_handoff.py": "77f8d26f19f7e018f7eff39e37a101d8261aaf96d748950f69e019c183367c87",
+    "rl/learner/train.py": "1f49815f789ed09bf66a1d7c31019d2130e43ab0c47e45274038723d1b82f398",
+    "rl/learner/tests/test_stream_handoff.py": "97d95cab2d112f60c8c72bf518a9658e9cfaf1f9598d698d33659bebdba03dfa",
+    "rl/learner/tests/handoff_worker.py": "4cce9089d55b27e63be99ae918f3f63efdfef307d622583713145953c4ba0af1",
+    "scripts/test_ram_handoff_cpu.py": "31ddbd484185e1ea24daaccd22a5fb3ae59c402acff33e580e32d1b0648c702a"
+  },
+  "phase_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 274535
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-brief.md",
+      "bytes": 11645
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-report.md",
+      "bytes": 19510
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 88696
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 20048
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-29.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-29.json",
+      "bytes": 1225
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-preservation-before-source.json",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/evidence/rl-serial-state-handoff.md",
+      "bytes": 3324
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 18704
+    },
+    {
+      "path": "rl/learner/handoff_protocol.py",
+      "bytes": 18609
+    },
+    {
+      "path": "rl/learner/handoff_stream.py",
+      "bytes": 21218
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 46379
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 10254
+    },
+    {
+      "path": "rl/learner/tests/test_stream_handoff.py",
+      "bytes": 21449
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 20727
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 13836
+    }
+  ],
+  "phase_retained_bytes": 592701,
+  "future_upper_bounds": {
+    "static_logs": 131072,
+    "CPU_3_logs": 786432,
+    "review_packages": 250000,
+    "review_report_and_brief": 40000,
+    "root_remaining_metadata_and_git": 180000
+  },
+  "phase_conservative_total": 1980205,
+  "phase_cap": 2000000,
+  "resource_sample": {
+    "project_bytes": 13316012882,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305852651,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995852651,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "conservative_future_plus3M": 13998852651,
+  "static_authorization": "samewriter once Ruff format+thencheck7Pythonfiles/no-cache/20s each/65536B eachlog/AS1GB/core0; no runtime probes",
+  "CPU_authorized": false,
+  "GPU_authorized": false,
+  "fullsize_fit_admitted": false
+}

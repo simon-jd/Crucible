@@ -1,0 +1,113 @@
+{
+  "status": "proposal-only; unresolved persisted-evidence upper-bound review condition",
+  "base": "a61798c86a0b254a0cd3d5b96b124e9fde9517ba",
+  "source_runtime_changed": false,
+  "tests_or_native_runs": 0,
+  "model_weight_rehash_outside_guard": false,
+  "source_entries_verified": 175,
+  "artifact_entries_verified": 18,
+  "executables_verified": 3,
+  "protocol_sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+  "fixed_workload": [
+    {
+      "trace": "azure",
+      "phase": "calibration",
+      "rows": 59,
+      "runs": 3,
+      "planned_requests": 177,
+      "input_tokens_per_run": 42939,
+      "requested_output_tokens_per_run": 7212,
+      "over_context_rows_per_run": 4,
+      "zero_output_rows": 0
+    },
+    {
+      "trace": "azure",
+      "phase": "evaluation",
+      "rows": 132,
+      "runs": 12,
+      "planned_requests": 1584,
+      "input_tokens_per_run": 129060,
+      "requested_output_tokens_per_run": 37017,
+      "over_context_rows_per_run": 6,
+      "zero_output_rows": 0
+    },
+    {
+      "trace": "burst",
+      "phase": "calibration",
+      "rows": 23,
+      "runs": 3,
+      "planned_requests": 69,
+      "input_tokens_per_run": 11628,
+      "requested_output_tokens_per_run": 1556,
+      "over_context_rows_per_run": 0,
+      "zero_output_rows": 0
+    },
+    {
+      "trace": "burst",
+      "phase": "evaluation",
+      "rows": 23,
+      "runs": 12,
+      "planned_requests": 276,
+      "input_tokens_per_run": 10851,
+      "requested_output_tokens_per_run": 3036,
+      "over_context_rows_per_run": 0,
+      "zero_output_rows": 0
+    }
+  ],
+  "all_trial_requests": 2106,
+  "calibration_runs": 6,
+  "evaluation_runs": 24,
+  "limits_and_forecasts": {
+    "runtime_all_cache_JIT_compiler_tmp_planned_bytes": 500000000,
+    "runtime_existing_bytes": 43333,
+    "code_evidence_Git_planned_bytes": 100000000,
+    "cleanup_planned_bytes": 50000000,
+    "smoke_warmup_raw_upper_bytes": 29360135,
+    "smoke_warmup_count": 7,
+    "normal_record_forecast_assumed_bytes_each": 2048,
+    "normal_trial_envelope_forecast_bytes_each": 65536,
+    "normal_trial_forecast_bytes": 6279168,
+    "normal_forecast_condition": "Every persisted record including errors <=2048B and each envelope <=65536B; source does not enforce these assumptions. Streaming token text/IDs are not retained by Go; per-request summary is.",
+    "postexit_JSON_read_limit_each": 8388608,
+    "postexit_limits_across30": 251658240,
+    "hard_evidence_total_upper_bytes": null,
+    "remaining_100MB_after_smoke_raw_and_conditional_trial_forecast": 64360697,
+    "remaining_allocation_must_cover": [
+      "server/guard/stderr logs",
+      "resource-samples array",
+      "31idle boundaries with attempts and duplicated trial/pair summaries",
+      "SLO/native summary/inventory/reference/cleanup files",
+      "Git copies/metadata and preparation"
+    ]
+  },
+  "launch_review_conditions": [
+    {
+      "source": "serving/baseline/experiment.py:470-478,741-756",
+      "finding": "Go stdout/stderr and server.log are direct file redirections; 8MiB JSON check is post-exit, not a write-time cap. Existing source cannot prove 100MB code/evidence upper bound or bound inter-sample log growth.",
+      "effect": "Do not treat 30x8MiB=251658240 as a guaranteed persisted bound; even this post-read envelope exceeds100MB. No new execution or cap relaxation authorized."
+    },
+    {
+      "source": "serving/replay/stream.go:101; record.go:17; cmd/replay/main.go:81",
+      "finding": "Native unsuccessful finish type is embedded in Record.Error, then JSON-escaped. Stream/event byte bounds limit read/memory but do not imply small persisted records; no per-record error byte cap.",
+      "effect": "The modest fixed-row forecast below is conditional, not a hard upper limit."
+    },
+    {
+      "source": "serving/baseline/experiment.py:240-250,686-691,415-417",
+      "finding": "Resource samples accumulate and serialize repeatedly; native read1 invokes inspect each read, not at a capped sampling rate. Observer stops runtime>=400MB or runtime+evidence>=450MB/project>=13.95GB, not evidence>=100MB.",
+      "effect": "No separate strict evidence/sample-count bound demonstrated; polling is not a guaranteed file-write quota."
+    }
+  ],
+  "existing_lineage_binding": {
+    "source": "serving/baseline/experiment.py:781-801",
+    "mechanism": "runtime_lineage.sources_sha256=_digest({relative_path:sha256(path) for experiment.py,runtime_entry.py,cache-audit.json}); merged with model/ABI/inventory/lock/protocol/token/serverargs/replay identities into per-trace lineage; calibrate stores lineage, evaluate requires exact equality and SLO hash",
+    "runtime_entry_sha256": "4270ba9208228e68841448f49a5b54f92b1e334101d90a66fa70adf225def1cd",
+    "new_environment_control": "TORCHINDUCTOR_COMPILE_THREADS=1 is bound via unchanged reviewed runtime_entry source plus this explicit frozen environment; no controller change"
+  },
+  "historical_preparation_errors": [
+    {
+      "command": "read-only CSV accounting snippet",
+      "terminal": "SyntaxError: expected else after if expression (else12 typo); no files written/native imports",
+      "correction": "corrected inline whitespace only; read-only exact CSV count completed, no test suite run"
+    }
+  ]
+}

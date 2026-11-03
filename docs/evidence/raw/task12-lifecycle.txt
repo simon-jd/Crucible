@@ -1,0 +1,14 @@
+Initial boundary run (exec session35543) hung in httptest.Server.Close after the
+fixture handler waited for request cancellation without draining POST body.
+Raw warning preserved in task12-focused-boundaries-initial-hang.log.
+Interrupted exec returned exit130. This did NOT terminate all children.
+Approved host audit found PID414061 executable exactly:
+/home/postedism/Desktop/Crucible/.cache/task12/tmp/go-build366100790/b001/replay.test
+Scoped cleanup rechecked that executable, recorded socket FD socket:[239864884],
+sent SIGTERM only to PID414061, and verified /proc/414061/exe absent afterward.
+This is forced cleanup of a failed fixture run, not a normal-cleanup pass.
+Fixture fix consumes the request body before waiting for cancellation. Corrected
+focused run with -timeout=30s exited normally (task12-focused-corrected.log).
+Final host audit after normal/race gates: no executable under .cache/task12 and
+no historical socket inode239864884 in TCP/UDP tables. See task12-final-lifecycle.json.
+Owned .cache/task12 removed only after that audit.

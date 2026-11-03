@@ -1,0 +1,69 @@
+# Offline templates, NOT applied. Replace every REPLACE_* with verified values.
+# v0.5.5 source contract: 0c006b8809cd99e1f95926401a2823dd952641c8.
+# Runtime image/CUDA/driver ABI and model compatibility remain unverified.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crucible-sglang-single
+spec:
+  replicas: 0  # Deliberately inert; local baseline runs under shared flock instead.
+  selector:
+    matchLabels: {app: crucible-sglang-single}
+  template:
+    metadata:
+      labels: {app: crucible-sglang-single}
+    spec:
+      containers:
+        - name: sglang
+          image: REPLACE_VERIFIED_SGLANG_IMAGE_DIGEST
+          command: [python3, -m, sglang.launch_server]
+          args: [--model-path, Qwen/Qwen3-8B, --revision, REPLACE_MODEL_COMMIT,
+                 --host, 0.0.0.0, --port, '8000', --tp-size, '1',
+                 --mem-fraction-static, '0.80', --context-length, '4096',
+                 --disable-radix-cache, --stream-interval, '1']
+          env:
+            - {name: HF_HOME, value: /model-cache}
+            - {name: HF_HUB_OFFLINE, value: '1'}
+          resources:
+            limits: {nvidia.com/gpu: '1', memory: 16Gi}
+          ports: [{containerPort: 8000}]
+          readinessProbe:
+            httpGet: {path: /health_generate, port: 8000}
+          volumeMounts:
+            - {name: model-cache, mountPath: /model-cache, readOnly: true}
+      volumes:
+        - name: model-cache
+          persistentVolumeClaim: {claimName: crucible-model-cache}
+---
+# User-paused 235B/8xH100 TP+EP plan. 未在真实多机上验证.
+# Memory/FP8 quality, TP+EP backend and hardware feasibility NOT verified.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crucible-sglang-235b-paused
+spec:
+  replicas: 0
+  selector:
+    matchLabels: {app: crucible-sglang-235b-paused}
+  template:
+    metadata:
+      labels: {app: crucible-sglang-235b-paused}
+    spec:
+      nodeSelector: {crucible-gpu: REPLACE_VERIFIED_8XH100_NODE}
+      containers:
+        - name: sglang
+          image: REPLACE_VERIFIED_SGLANG_IMAGE_DIGEST
+          command: [python3, -m, sglang.launch_server]
+          args: [--model-path, Qwen/Qwen3-235B-A22B-FP8, --revision, REPLACE_MODEL_COMMIT,
+                 --host, 0.0.0.0, --port, '8000', --tp-size, '8', --ep-size, '8',
+                 --mem-fraction-static, '0.80', --disable-radix-cache, --stream-interval, '1']
+          env:
+            - {name: HF_HOME, value: /model-cache}
+            - {name: HF_HUB_OFFLINE, value: '1'}
+          resources:
+            limits: {nvidia.com/gpu: '8'}
+          volumeMounts:
+            - {name: model-cache, mountPath: /model-cache, readOnly: true}
+      volumes:
+        - name: model-cache
+          persistentVolumeClaim: {claimName: crucible-model-cache}

@@ -1,0 +1,13 @@
+{
+  "gate_sha256": "26455f002509b5ac49543f3ce86187b1196192c3f692c59af7fa143b0734abfb",
+  "inventory_sha256": "f3f45fdb7bfdbf7b4b296961ac23a17dd036466738e2130849738ed5de2b4d26",
+  "original_race_handle": 73709,
+  "authoritative_monitor_exit": 0,
+  "terminal_group_proved_before_reap": true,
+  "rechecked_files": 111,
+  "deleted_files": 111,
+  "deleted_bytes": 16632673,
+  "tmp_retained_empty": true,
+  "cache_red_loan_retained": true,
+  "owned_after": 231778204
+}

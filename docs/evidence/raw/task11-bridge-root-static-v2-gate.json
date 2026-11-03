@@ -1,0 +1,67 @@
+{
+  "time_utc": "2026-10-25T17:38:46.741514+00:00",
+  "scope": "ROOT initialstaticFAILretained/11formatASTunchanged; exactly5manualstylefixes thenonefinitev2",
+  "source_SHA_postformat": {
+    "rl/learner/handoff_stream.py": "30ce5f1c8081a80dd2bd390e7d3487c33675b832c52b00be1529a80e2e7e556e",
+    "rl/rollout/_worker.py": "45ed6a25afbd8c21ec8a297b1c5685fca88be1d7db9bed2b5820935f7dcda2b6",
+    "rl/sync/ram_weights.py": "5e199763ee9d99ad03748685c7755ce14ab92945278962cb36e89f9011b6bdcb",
+    "rl/sync/ram_export.py": "6bc8c58f7f44beae6276cdfa9b74e05c89c4c839ef9fc014e26c85cd389c53b7",
+    "rl/sync/phase_bridge.py": "05a764acee9b74262fb5a9d09165b9a1ca01df1e5eddb11c8007030949f0efc8",
+    "rl/rollout/ram_loader.py": "2d34f6458d946632afa22659fea5e087f91f60d93c1c487507b3a0299c9deb53",
+    "rl/sync/tests/ram_worker.py": "f671e419e0b75c4950ec45fe8bd4a3ad339eafadcc5dc28919111c9335a7eb19",
+    "rl/sync/tests/test_ram_weights.py": "86c49b1b0b077b40ed8498022aa2a629ba457d0d4bc29f5eff7d1af2acc398d6",
+    "rl/sync/tests/test_phase_bridge.py": "e13d074e867dcd75b688ae27be77dc4eea53f1458a4972f508a9af9f8e02ed9b",
+    "rl/rollout/tests/test_ram_loader.py": "51d80923d0298d3471dd8782f57e79bce20fd55a9bf70dd2f298cdc98fc52914",
+    "scripts/test_ram_handoff_cpu.py": "c9518d7a577177b836bfbc9bc79f71ba95948e5f535e151d1afa71d31f9dc978"
+  },
+  "all11_AST_unchanged": true,
+  "normalized_AST_before_manualstyle": {
+    "rl/learner/handoff_stream.py": "14dbeab85a670f604932498cf55c8d390e0b9a6d167a4f5e05b75f6fee7cd95c",
+    "rl/rollout/_worker.py": "62ccf5d2d958d2d910647f117dccffb9c2cb86298f2bd1b1901a650ccf73d569",
+    "rl/sync/ram_weights.py": "b2cf77e02025615abd3d2249ac88394f33a59f02ea045e9acdb4d093dce677ed",
+    "rl/sync/ram_export.py": "75b595619cced58deb42dd48a68944b32d1bb0c12e9c752a9920769e44a20a49",
+    "rl/sync/phase_bridge.py": "e429bf23bf08daf53d6eb1d79468bd04dc3a5683fe255e6ef135a0f7bddfd507",
+    "rl/rollout/ram_loader.py": "4a320b06c3feb218a930704677031d5986f3af3a128095b3ff7cd1686c4cf715",
+    "rl/sync/tests/ram_worker.py": "217fe25dd0f6ba9e0700c5ff3ebaf0aed580238ccc0d096b03c3f27e4faa1338",
+    "rl/sync/tests/test_ram_weights.py": "56641a6eccea7c46d3b73af15d99ad2bd2c4ee80176afb3577a123415f42e495",
+    "rl/sync/tests/test_phase_bridge.py": "08e226a32061c612e0e699582c6652f53a2681a2b689a9199b7ebd8dfe2eb3a3",
+    "rl/rollout/tests/test_ram_loader.py": "32b2663a044235c07765c79a4a907a68bace86944ebb6d93e6ba5ea57d128ac2",
+    "scripts/test_ram_handoff_cpu.py": "7a174cd7e734de1767def85a2c037cfea597a282c824600655f643033f361992"
+  },
+  "normalization": "samePython3.12 sortmoduleimports/importnames; nestedifshortcircuitANDflatten; no otherbehaviorchange",
+  "manualfix_scope": [
+    "oneBLE001explanatorycleanupnoqa in_worker",
+    "SIM102 combinegate_up condition",
+    "SIM102 combinefloatingparameterdtype condition",
+    "ram_export same-module importsort",
+    "ram_worker independentstdlib importsort"
+  ],
+  "staticlog_bytes_used": 4610,
+  "static_cap": 131072,
+  "newlogs": [
+    "docs/evidence/raw/task11-bridge-format-v2.log",
+    "docs/evidence/raw/task11-bridge-lint-v2.log"
+  ],
+  "v2limits": {
+    "seconds_each": 20,
+    "AS": 1000000000,
+    "core": 0,
+    "FSIZE_each": 32768,
+    "RAYON_NUM_THREADS": "1"
+  },
+  "resource_sample": {
+    "project_bytes": 13316810411,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306650180,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996650180,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13999650180,
+  "test_GPU_Git_authorized": false
+}

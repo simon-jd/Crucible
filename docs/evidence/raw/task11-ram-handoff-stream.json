@@ -1,0 +1,334 @@
+{
+  "mode": "stream",
+  "command": [
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-v",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/stream/pytest",
+    "rl/learner/tests/test_stream_handoff.py",
+    "rl/learner/tests/test_state_handoff.py::test_original_child_exit_then_fresh_process_adamw_resume"
+  ],
+  "initial_resource": {
+    "project_bytes": 13316045276,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305885045,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995885045,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "8ebe358deab1c02981c546870f85c39d236f31cefb4ac8290e5cbaa88c3ac4c6",
+    "rl/learner/handoff_zip.py": "631ba0699de344bde4191b3a2a0e1c4ab4f290f98e40dbad32fdcb7d0dc1c405",
+    "rl/learner/handoff_stream.py": "ac3452d915f05c0bba8338b70d185c5a293443cf29df113f9c86d4e54be3e44d",
+    "rl/learner/handoff_protocol.py": "f72a884d61fb88f47c983ce91a47a2bce45cecefe6e3ffb90e758ff80ff9df4a",
+    "rl/learner/tests/test_stream_handoff.py": "9a1b689e37e5256d8f5f5c8ab01e0486f51789c09ed31a863f521c4b69b1a858",
+    "rl/learner/train.py": "4293dd0ff5ac658f5f56e56573f616214cc74a8fbdde4492f67e65cef7d9c3b3",
+    "rl/learner/README.md": "3152d38a83285619f21e0fb2121c49e2d577c508d1f76eecfe2204ef36ac7ca4",
+    "rl/learner/tests/test_state_handoff.py": "a94a87eb490a7b43ba7779385d04abb5a4f20094cdec592847484188d3f831c7",
+    "rl/learner/tests/handoff_worker.py": "10d1e21ca458a33c444ca7009e264b62a774df187f67e069f1d32cd51ce36c55",
+    "scripts/test_ram_handoff_cpu.py": "a064f38f9592d48a51a916d32d82cca3cd94cefd82f8db80b15369b4393a1003"
+  },
+  "limits": {
+    "seconds": 120,
+    "cleanup_seconds": 5,
+    "scratch_bytes": 1000000,
+    "aggregate_rss_plus_anonymous": 2000000000,
+    "anonymous_reserve": 4194304,
+    "fsize": 262144
+  },
+  "samples": [
+    {
+      "elapsed": 1.8560425019823015,
+      "rss": 43773952,
+      "charged": 47968256,
+      "pids": [
+        3,
+        4
+      ],
+      "scratch_bytes": 0
+    },
+    {
+      "elapsed": 2.8648495549568906,
+      "rss": 667709440,
+      "charged": 671903744,
+      "pids": [
+        3,
+        4
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 3.874837189912796,
+      "rss": 1245601792,
+      "charged": 1249796096,
+      "pids": [
+        3,
+        4,
+        6
+      ],
+      "scratch_bytes": 4710
+    },
+    {
+      "elapsed": 4.884505148977041,
+      "rss": 1202917376,
+      "charged": 1207111680,
+      "pids": [
+        3,
+        4,
+        8
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 5.894990860018879,
+      "rss": 1078042624,
+      "charged": 1082236928,
+      "pids": [
+        3,
+        4,
+        10
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 6.907550445990637,
+      "rss": 1343176704,
+      "charged": 1347371008,
+      "pids": [
+        3,
+        4,
+        10
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 7.921510670916177,
+      "rss": 725430272,
+      "charged": 729624576,
+      "pids": [
+        3,
+        4,
+        16
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 8.936869626981206,
+      "rss": 708145152,
+      "charged": 712339456,
+      "pids": [
+        3,
+        4,
+        28
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 9.949639300932176,
+      "rss": 725921792,
+      "charged": 730116096,
+      "pids": [
+        3,
+        4,
+        30
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 10.974226620979607,
+      "rss": 737607680,
+      "charged": 741801984,
+      "pids": [
+        3,
+        4,
+        40,
+        42
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 11.989817193942145,
+      "rss": 1228881920,
+      "charged": 1233076224,
+      "pids": [
+        3,
+        4,
+        47
+      ],
+      "scratch_bytes": 4710
+    },
+    {
+      "elapsed": 13.001535121933557,
+      "rss": 1198026752,
+      "charged": 1202221056,
+      "pids": [
+        3,
+        4,
+        49
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 14.013497113017365,
+      "rss": 778285056,
+      "charged": 782479360,
+      "pids": [
+        3,
+        4,
+        51
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 15.026204257970676,
+      "rss": 1251352576,
+      "charged": 1255546880,
+      "pids": [
+        3,
+        4,
+        51
+      ],
+      "scratch_bytes": 4710
+    },
+    {
+      "elapsed": 16.038033219985664,
+      "rss": 813576192,
+      "charged": 817770496,
+      "pids": [
+        3,
+        4
+      ],
+      "scratch_bytes": 0
+    }
+  ],
+  "errors": [],
+  "exit_code": 0,
+  "cleanup_confirmed": true,
+  "peak_sampled_charge": 1419063296,
+  "remaining_owned_children": [],
+  "final_resource": {
+    "project_bytes": 13316052744,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305892513,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995892513,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "scratch_bytes": 0,
+  "scratch_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792941991547507421
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/cuda",
+      "dev": 66307,
+      "inode": 56395052,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/cupy",
+      "dev": 66307,
+      "inode": 56395053,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/inductor",
+      "dev": 66307,
+      "inode": 56395048,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/numba",
+      "dev": 66307,
+      "inode": 56395054,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/tmp",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792942005479416549
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/torch",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/triton",
+      "dev": 66307,
+      "inode": 56395049,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/vllm",
+      "dev": 66307,
+      "inode": 56395057,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream/xdg",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792941991548507414
+    }
+  ]
+}

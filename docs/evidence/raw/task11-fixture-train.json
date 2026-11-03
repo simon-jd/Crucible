@@ -1,0 +1,8 @@
+[
+  {
+    "id": "train",
+    "question": "Synthetic training question",
+    "source": "fixture/train@v1",
+    "answer": "fixture gold"
+  }
+]

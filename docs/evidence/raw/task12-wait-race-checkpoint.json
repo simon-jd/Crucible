@@ -1,0 +1,18 @@
+{
+  "race_original_handle": 24009,
+  "exit": 0,
+  "terminal_group_proved_before_reap": true,
+  "sample_peak": 367130967,
+  "terminal_owned": 233076045,
+  "parts": {
+    "gopath": 0,
+    "cache": 232988331,
+    "mod": 0,
+    "red": 87714,
+    "tmp": 0
+  },
+  "retained_proof_bytes": 96783,
+  "proof_allowance": 300000,
+  "next_plan": "pause at300M planning checkpoint; propose once warm build using current cache, no cache deletion; no artifact above400M early stop; source unchanged",
+  "CLI_race": "no tests matched reviewed regex; no claim of CLI race coverage in this stage"
+}

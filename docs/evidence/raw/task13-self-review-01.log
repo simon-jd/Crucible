@@ -1,0 +1,7 @@
+Self-review command: subprocess.run(['git','diff','--no-index','--check','/dev/null','serving/eval/accuracy.py'], capture_output=True, text=True)
+Observed returncode=1, stdout='', stderr=''.
+Harness assertion incorrectly required returncode==0 for an added file.
+Traceback (most recent call last):
+  File "<stdin>", line 22, in <module>
+AssertionError: (PosixPath('serving/eval/accuracy.py'), '', '')
+The cleanup/isolation receipt was already written before this harness failure.

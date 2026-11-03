@@ -1,0 +1,28 @@
+# Offline node-local read-only shared-cache binding; no download/init container.
+# Target node/path/capacity must be verified; not created or applied here.
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: crucible-model-cache
+spec:
+  capacity: {storage: 40G}
+  accessModes: [ReadOnlyMany]
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ''
+  local: {path: /home/postedism/.cache/huggingface}
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - {key: kubernetes.io/hostname, operator: In, values: [REPLACE_VERIFIED_NODE]}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: crucible-model-cache
+spec:
+  accessModes: [ReadOnlyMany]
+  storageClassName: ''
+  volumeName: crucible-model-cache
+  resources:
+    requests: {storage: 40G}

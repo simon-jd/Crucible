@@ -1,0 +1,106 @@
+{
+  "scheduler": "slurm",
+  "lock": "versions.lock",
+  "nodes": [
+    {
+      "host": "operator@head.example",
+      "manifest": "site/controller.json"
+    },
+    {
+      "host": "operator@gpu1.example",
+      "manifest": "site/worker.json"
+    },
+    {
+      "host": "operator@gpu2.example",
+      "manifest": "site/worker.json"
+    },
+    {
+      "host": "operator@gpu3.example",
+      "manifest": "site/worker.json"
+    },
+    {
+      "host": "operator@gpu4.example",
+      "manifest": "site/worker.json"
+    }
+  ],
+  "kubeconfig": "secrets/kubeconfig",
+  "helm_releases": [
+    {
+      "name": "gpu-operator",
+      "namespace": "nvidia-gpu-operator",
+      "version": "v25.3.2",
+      "chart": {
+        "file": "charts/gpu-operator.tgz",
+        "sha256": null
+      },
+      "values": [
+        {
+          "file": "rendered/gpu-operator-values.yaml",
+          "sha256": null
+        },
+        {
+          "file": "site/gpu-images.yaml",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "name": "network-operator",
+      "namespace": "nvidia-network-operator",
+      "version": "25.4.0",
+      "chart": {
+        "file": "charts/network-operator.tgz",
+        "sha256": null
+      },
+      "values": [
+        {
+          "file": "rendered/network-operator-values.yaml",
+          "sha256": null
+        },
+        {
+          "file": "site/network-images.yaml",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "name": "kueue",
+      "namespace": "kueue-system",
+      "version": "0.13.4",
+      "chart": {
+        "file": "charts/kueue.tgz",
+        "sha256": null
+      },
+      "values": [
+        {
+          "file": "site/kueue-images.yaml",
+          "sha256": null
+        }
+      ]
+    }
+  ],
+  "manifests_before_helm": [
+    {
+      "file": "site/cni.yaml",
+      "sha256": null
+    },
+    {
+      "file": "rendered/namespace.yaml",
+      "sha256": null
+    },
+    {
+      "file": "rendered/runtimeclass.yaml",
+      "sha256": null
+    }
+  ],
+  "manifests_after_helm": [
+    {
+      "file": "rendered/probe-configmap.json",
+      "sha256": null
+    },
+    {
+      "file": "rendered/resources.yaml",
+      "sha256": null
+    }
+  ]
+}

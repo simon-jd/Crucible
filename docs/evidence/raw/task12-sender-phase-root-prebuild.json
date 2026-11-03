@@ -1,0 +1,132 @@
+{
+  "time_utc": "2026-10-25T09:38:04.464776+00:00",
+  "scope": "root source/read and bounded CPU build/test gate only; no timing diagnostic or GPU permission",
+  "source_base": "a3097c5ebaa4416882ed4aecb443cfb9d0f5f460",
+  "project_bytes": 13297656814,
+  "free_bytes": 265823776768,
+  "reserve_bytes": 690000000,
+  "loan_root": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan",
+  "loan_bytes": 500000000,
+  "source_sha256": {
+    "docs/evidence/raw/task12-sender-phase-go-monitor.py": "bdda278d30d62802b0c3af8a23c9ff8ae71f9bf77dc8fd8796665e8fbf5809cc",
+    "serving/replay/cmd/replay/diagnostic_test.go": "02c6cf795ed6f7961620bba8b633be4c6c5b1ab4bd0aea37d45e2d632f954f8d",
+    "serving/replay/cmd/replay/main.go": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670",
+    "serving/replay/diagnostic.go": "c57c268deb96fb35382f035908ad52c296027006f29747d39c6e283094237402",
+    "serving/replay/diagnostic_test.go": "6c5368eebe0fbb1d8136fb6707501b9d76a70633a4c3ac56d9b860cd7c45a8c6",
+    "serving/replay/schedule.go": "3a8a33e7b0bed56afdab1bb897898c06fd8593d741921b15cfc724905380df55",
+    "serving/replay/transport.go": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+  },
+  "report_sha256_at_gate": "c055fb3c3129f98ee1bd7c79be9e66e8d147900aca93abd71cbf1e97d1c879f6",
+  "go_sdk_executable_sha256": "5f5eb6d0b2fb6aa0bb5d5f8c5f1c944e0de955c925f0111af92a9d8f79680b5b",
+  "commands": [
+    [
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      ".venv/bin/python",
+      "-B",
+      "docs/evidence/raw/task12-sender-phase-go-monitor.py",
+      "red-cli",
+      ".tools/go/bin/go",
+      "-C",
+      ".tmp-task12-sender-phase-go-loan/red",
+      "test",
+      "-trimpath",
+      "-p=1",
+      "-count=1",
+      "-timeout=30s",
+      "-run",
+      "^TestDiagnosticCLIOptionalAndOriginalJSON$",
+      "./serving/replay/cmd/replay"
+    ],
+    [
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      ".venv/bin/python",
+      "-B",
+      "docs/evidence/raw/task12-sender-phase-go-monitor.py",
+      "focused",
+      ".tools/go/bin/go",
+      "test",
+      "-trimpath",
+      "-p=1",
+      "-count=1",
+      "-timeout=30s",
+      "-run",
+      "^(TestDiagnostic.*|TestTransportEmissionIncludesWriteWait|TestObserverIdentityRelease|TestStaleReusedPOSTIsNotRetried|TestCLISignalCancellation)$",
+      "./serving/replay",
+      "./serving/replay/cmd/replay"
+    ],
+    [
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      ".venv/bin/python",
+      "-B",
+      "docs/evidence/raw/task12-sender-phase-go-monitor.py",
+      "race",
+      ".tools/go/bin/go",
+      "test",
+      "-trimpath",
+      "-race",
+      "-p=1",
+      "-count=1",
+      "-timeout=30s",
+      "-run",
+      "^TestDiagnostic",
+      "./serving/replay",
+      "./serving/replay/cmd/replay"
+    ],
+    [
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      ".venv/bin/python",
+      "-B",
+      "docs/evidence/raw/task12-sender-phase-go-monitor.py",
+      "build",
+      ".tools/go/bin/go",
+      "build",
+      "-trimpath",
+      "-p=1",
+      "-o",
+      ".tmp-task12-sender-phase-go-loan/replay-phase",
+      "./serving/replay/cmd/replay"
+    ]
+  ],
+  "additional_once_monitor_command": [
+    "/usr/bin/true"
+  ],
+  "additional_control": "TestEarlyResponseDoesNotProveWriteReturn may be added to the focused ordinary regex because capture pair now precedes emission.observe",
+  "historical_unchanged_counts": {
+    "sources": 173,
+    "artifacts": 58,
+    "executables": 4
+  },
+  "authorized_source_changes": {
+    "serving/replay/schedule.go": {
+      "historical": "341cc8848b189b31593a308085d405e072b38110e9030641fd5422fbcf469dd2",
+      "current": "3a8a33e7b0bed56afdab1bb897898c06fd8593d741921b15cfc724905380df55"
+    },
+    "serving/replay/transport.go": {
+      "historical": "2831f8ef18a0b535c4141b7d3159fffb6703f8664efcf9a833acafcd94fb79c0",
+      "current": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "historical": "0f14d9183b4baf57764c1b7c4fb24f9ea1556b59c89553b3fae327a36cdc2521",
+      "current": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    }
+  },
+  "coordinator_files_unchanged": 100,
+  "conditions": [
+    "source SHA must match before first Go command, otherwise stop and report",
+    "RED only isolated BASE Go source snapshot plus new CLI test under loan/red; preserve copied file size/SHA, disabled must pass and enabled must fail unknown flag",
+    "then each exact focused/race/build command once; preserve all failures, no unchanged success repeats",
+    "monitor180s/400MB early-stop/RSS2GB/64MiB child file/1MiB log, max500MB loan inside existing690MB",
+    "if occupancy reaches300MB planning checkpoint, do not start next command; propose cache-only inventory/cleanup after authoritative terminal proof",
+    "binary+cache+testtemp remain in loan; no GPU or timing launch yet",
+    "no full690MB guard while loan nonempty; use190MB+max(0,500MB-owned) future formula",
+    "quarantine or unknown cleanup stops further commands; no outside/unproved cleanup"
+  ],
+  "pre_receipt_readonly_schema_errors": [
+    "first exploratory schema query assumed top-level executables key and raised KeyError; no output mutation",
+    "first gate construction treated logical executable key python as path and raised FileNotFoundError before receipt/loan creation; corrected to record.path; no test/build launched"
+  ]
+}

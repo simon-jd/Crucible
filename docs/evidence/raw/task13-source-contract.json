@@ -1,0 +1,42 @@
+{
+  "commit": "0c006b8809cd99e1f95926401a2823dd952641c8",
+  "version": "0.5.5",
+  "sources": [
+    {
+      "path": "docs/evidence/raw/task13-sglang-server_args.py.txt",
+      "sha256": "4d54c4741b3b03b829dfc3bbca58c730ed39a5e803b39883cdf3cfd09441a3e9",
+      "url": "https://github.com/sgl-project/sglang/blob/0c006b8809cd99e1f95926401a2823dd952641c8/python/sglang/srt/server_args.py",
+      "bytes": 176638
+    },
+    {
+      "path": "docs/evidence/raw/task13-sglang-transfer_engine.py.txt",
+      "sha256": "3be5d1990dd0c03e91ba2c91830e19a214ab164b8f769a55fde0c13145e7d239",
+      "url": "https://github.com/sgl-project/sglang/blob/0c006b8809cd99e1f95926401a2823dd952641c8/python/sglang/srt/disaggregation/mooncake/transfer_engine.py",
+      "bytes": 5884
+    },
+    {
+      "path": "docs/evidence/raw/task13-sglang-io_struct.py.txt",
+      "sha256": "1519d5575d4ee98e6c137cb79a1078eb1c3dfcb65a3632ee37bc49035583d580",
+      "url": "https://github.com/sgl-project/sglang/blob/0c006b8809cd99e1f95926401a2823dd952641c8/python/sglang/srt/managers/io_struct.py",
+      "bytes": 54179
+    },
+    {
+      "path": "docs/evidence/raw/task13-sglang-decode.py.txt",
+      "sha256": "ed3fc4df5317b8d4768a231c641c922e6f6773eb4299529658ef3c6c7984f4c2",
+      "url": "https://github.com/sgl-project/sglang/blob/0c006b8809cd99e1f95926401a2823dd952641c8/python/sglang/srt/disaggregation/decode.py",
+      "bytes": 41384
+    },
+    {
+      "path": "docs/evidence/raw/task13-sglang-mini_lb.py.txt",
+      "sha256": "258dae09e50cdd993715d1969824016372de889e453353e5aea016f302534c72",
+      "url": "https://github.com/sgl-project/sglang/blob/0c006b8809cd99e1f95926401a2823dd952641c8/python/sglang/srt/disaggregation/mini_lb.py",
+      "bytes": 395
+    },
+    {
+      "path": "docs/evidence/raw/task13-sglang-test_disaggregation_utils.py.txt",
+      "sha256": "93f57fbf0eaa084c37899c947ae8e8ccc0645201917c25b190bc826fd92d21b9",
+      "url": "https://github.com/sgl-project/sglang/blob/0c006b8809cd99e1f95926401a2823dd952641c8/python/sglang/test/test_disaggregation_utils.py",
+      "bytes": 5588
+    }
+  ]
+}

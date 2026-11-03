@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 1413, in <module>
+    main()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 1274, in main
+    inspect()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 1188, in inspect
+    check_resources(work, base_bytes, args.output, canonical, pool=pool)
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 716, in check_resources
+    sample = pool.measure(canonical)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py", line 179, in measure
+    return self._measure(canonical, errors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py", line 186, in _measure
+    pool_bytes = _scan(self.root, errors, strict=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py", line 97, in _scan
+    return _tree_bytes(root, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py", line 84, in _tree_bytes
+    raise ValueError("nonregular pool payload")
+ValueError: nonregular pool payload

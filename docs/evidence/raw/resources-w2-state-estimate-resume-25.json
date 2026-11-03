@@ -1,0 +1,20 @@
+{
+  "time_utc": "2026-10-25T09:21:30.973404+00:00",
+  "kind": "static storage estimate for future W2 planning, not measured checkpoint/RSS",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "read_scope": "8-byte safetensors length plus bounded JSON header only; weight payload not read/rehashed; existing verified model manifest retained",
+  "header_bytes": 32280,
+  "header_sha256": "bd808652be103f0e4e29786b9aa8829e0f38607880486926c7246ee2de577a76",
+  "tensor_count": 290,
+  "stored_tensor_elements": 494032768,
+  "bf16_payload_bytes": 988065536,
+  "factory_source": "rl/learner/train.py",
+  "factory_sha256": "5ee36ce0ea35185f4916eedd08475be10dba778acfff90a9ef673934dcace62e",
+  "factory_contract": "policy loads FP32, reference BF16, AdamW; all policy parameters trainable in supported factory",
+  "fp32_policy_bytes": 1976131072,
+  "two_fp32_adam_moments_bytes": 3952262144,
+  "policy_plus_two_moments_storage_floor_bytes": 5928393216,
+  "excludes": "serialization metadata, optimizer scalar steps, aliases/buffers, RNG, gradients, staging copies, reference, activations; no new checkpoint or model load",
+  "implication": "Full FP32 policy+Adam checkpoint cannot be added to current ~13.3GB project under14GB. Need concrete release of project-owned space or resident-memory phase handoff with preserved optimizer state, not optimizer reset or hiding updated state in shared model cache."
+}

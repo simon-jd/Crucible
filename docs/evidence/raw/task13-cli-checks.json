@@ -1,0 +1,63 @@
+[
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.deploy.task13_validate",
+      "serving/deploy/pd-1p1d.yaml"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"layout\": \"pd-1p1d\",\n  \"offline_valid\": true,\n  \"execution_ready\": false,\n  \"total_gpus\": 3,\n  \"physical_validation\": \"未在真实多机上验证\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.deploy.task13_validate",
+      "serving/deploy/pd-2p1d.yaml"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"layout\": \"pd-2p1d\",\n  \"offline_valid\": true,\n  \"execution_ready\": false,\n  \"total_gpus\": 3,\n  \"physical_validation\": \"未在真实多机上验证\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.deploy.task13_validate",
+      "serving/deploy/pd-cross-node.yaml"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"layout\": \"pd-cross-node\",\n  \"offline_valid\": true,\n  \"execution_ready\": false,\n  \"total_gpus\": 3,\n  \"physical_validation\": \"未在真实多机上验证\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.deploy.task13_validate",
+      "serving/deploy/pd-1p1d.yaml",
+      "--execution-ready"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "invalid layout: execution rejected: unresolved images/model/router/node/RDMA; native gates pending\n"
+  },
+  {
+    "command": [
+      "/home/postedism/Desktop/Crucible/.venv/bin/python",
+      "-B",
+      "-m",
+      "serving.eval.accuracy",
+      "docs/evidence/raw/task13-fixture-input.json"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "invalid evidence (retain original input): fixture requires --allow-fixture\n"
+  }
+]

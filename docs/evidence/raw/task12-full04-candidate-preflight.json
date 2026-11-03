@@ -1,0 +1,72 @@
+{
+  "time_utc": "2026-10-25T19:41:57.613641+00:00",
+  "status": "CPU_METADATA_PREPARATION_ONLY_NOT_LAUNCH_FRESH_GATE",
+  "reviewed_source_commit": "3e43b8446ce71818f304af85aa0a85f3c756e07d",
+  "old_freeze_sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a",
+  "old_frozen_delta_exactly": {
+    "sources": [
+      "serving/baseline/runtime_entry.py",
+      "serving/baseline/experiment.py",
+      "serving/baseline/cache-audit.json",
+      "serving/baseline/native_pool.py"
+    ],
+    "artifacts": [
+      "serving/baseline/cache-audit.json"
+    ]
+  },
+  "new_frozen_sources": [
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_ipc.py",
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_ipc_test.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/launch_server.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/server_args.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/entrypoints/engine.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/managers/tokenizer_manager.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/managers/detokenizer_manager.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/managers/scheduler.py",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/sglang/srt/utils/common.py",
+    "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/zmq/backend/__init__.py",
+    "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/zmq/sugar/socket.py",
+    "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/zmq/backend/cython/_zmq.py",
+    "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/zmq/backend/cffi/socket.py"
+  ],
+  "old_unchanged_counts": {
+    "sources": 179,
+    "artifacts": 206,
+    "executables": 4
+  },
+  "all_current_source_artifact_executable_SHA_actually_read": true,
+  "derived43_and_inherited4_replay_equal": true,
+  "historical_XDG767_not_login_identity": true,
+  "candidate_output_guard_receipt_absent": true,
+  "resource_sample_new_output_no_credit": {
+    "project_bytes": 13318586796,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13308426565,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13998426565,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "remaining_phase_and_scratch_extra_bound": 1500000,
+  "conservative_future_upper_from_initial_phase_gate": 13999334435,
+  "free_bytes": 263171616768,
+  "shared_cache_last_CPU_sample": "task12-ipc-root-review-resource-preservation.json",
+  "model14_actual_hashes": "prior full03 fresh actual verification retained; mandatory actual14 reverify immediately before any newly authorized full04, not rerun in this CPU phase",
+  "mandatory_after_new_authority": [
+    "exact current freeze/proposal/source/artifact/4exec/161package and runtimeaudit",
+    "all14 actualmodel/upstream and tokenallowlist offline",
+    "pool15diridentity14emptyleaves/client",
+    "command43derived4identity/unsets",
+    "fresh14GB/shared40GB/free/checkpoint<=2/aggregate16GBstop",
+    "host no duplicate full04 originalhandle;port31012closed; fixedflockqueue onlyoriginalhandle",
+    "record unique originalhandle/PID/precommit beforeguard; failures no retry; exactowncleanup beforeflockrelease"
+  ],
+  "GPU_authority": false,
+  "GPU_queue_run_query_lock": false,
+  "full02_and_full03": "FAILED/SPENT, not reset",
+  "wholeGoal_complete": false
+}

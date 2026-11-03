@@ -1,0 +1,16 @@
+{
+  "command": [
+    "bash",
+    ".cache/task14/fix1-focused.sh"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 9.334487196058035,
+  "project_bytes_before": 10689005010,
+  "project_bytes_after": 10706958337,
+  "sampling": "0.25s requested interval plus scan time; transient peaks may be missed",
+  "scope": "wrapper and descendants RSS; task14 caches/temp only; CPU-only",
+  "sampled_tree_rss_bytes": 199499776,
+  "sampled_task14_cache_bytes": 317038656,
+  "sampled_tmp_bytes": 13776452,
+  "samples": 31
+}

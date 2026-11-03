@@ -1,0 +1,151 @@
+{
+  "time_utc": "2026-10-25T00:52:58.294029+00:00",
+  "scope": "pause audit only; no signals/container mutations; infrastructure excluded; no secret environment values recorded",
+  "project_scoped_processes": [
+    {
+      "pid": 3072641,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "68495962",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node_repl",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3072642,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "68495964",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": true
+    },
+    {
+      "pid": 3072723,
+      "ppid": 3072642,
+      "state": "S",
+      "start_ticks": "68495967",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node_repl",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3258183,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "68685059",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node_repl",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3258184,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "68685060",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": true
+    },
+    {
+      "pid": 3258267,
+      "ppid": 3258184,
+      "state": "S",
+      "start_ticks": "68685065",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node_repl",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3304713,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "68733126",
+      "executable": "/usr/bin/bash",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": true
+    },
+    {
+      "pid": 3961633,
+      "ppid": 3961610,
+      "state": "S",
+      "start_ticks": "60540535",
+      "executable": "/usr/bin/fish",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3961817,
+      "ppid": 3961633,
+      "state": "S",
+      "start_ticks": "60540537",
+      "executable": "/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/bin/codex",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": true
+    },
+    {
+      "pid": 3963424,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "60541744",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node_repl",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3963481,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "60541744",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": true
+    },
+    {
+      "pid": 3963983,
+      "ppid": 3963481,
+      "state": "S",
+      "start_ticks": "60541748",
+      "executable": "/usr/lib/chatgpt/resources/cua_node/bin/node_repl",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    },
+    {
+      "pid": 3966617,
+      "ppid": 3961817,
+      "state": "S",
+      "start_ticks": "60545329",
+      "executable": "/home/postedism/.codex/packages/standalone/releases/0.163.0-x86_64-unknown-linux-musl/bin/codex-code-mode-host",
+      "cwd": "/home/postedism/Desktop/Crucible",
+      "known_project_job": false,
+      "infrastructure": false
+    }
+  ],
+  "known_project_jobs": [],
+  "gpu": {
+    "exit_code": 0,
+    "project_processes": [],
+    "other_gpu_process_count": 8
+  },
+  "containers": {
+    "docker_available": true,
+    "project_containers": [],
+    "query_exit_code": 0
+  },
+  "project_gpu_jobs": [],
+  "signals_sent": [],
+  "classification_note": "All13 scoped rows are Codex/CUA node_repl/node/code-mode-host, user fish shell, or the audit shell; these platform/terminal processes are not project experiment services and were not signalled.",
+  "pause_goal_status": "paused"
+}

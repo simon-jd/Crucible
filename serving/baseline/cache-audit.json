@@ -1,0 +1,136 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "native_imports_performed": false,
+  "native_downloads_disabled": true,
+  "source_files": [
+    {
+      "path": "flashinfer/jit/env.py",
+      "sha256": "f0ccf6265c3501b300312dfd3fede1e6509fc34a0ab8895b0222ebf2e30fb332"
+    },
+    {
+      "path": "flashinfer/jit/core.py",
+      "sha256": "5eaf0cde72cea006fbbcccfa147807e047bf2a7b70c78b63092206af2a1c34bc"
+    },
+    {
+      "path": "flashinfer/jit/cubin_loader.py",
+      "sha256": "7b740e901cf15db935ca197872455a4d1926870b3af017eb74ffcc7fcf3d7f44"
+    },
+    {
+      "path": "flashinfer/compilation_context.py",
+      "sha256": "e920b574e1c5bf80fe912b9964e478c44a5caebadbcb031e4255e361e798e1d1"
+    },
+    {
+      "path": "flashinfer_cubin/__init__.py",
+      "sha256": "4083819667661c56fa05bd7839da5f61d35587e0bb52fdcd52533eec4a434652"
+    },
+    {
+      "path": "tvm_ffi/_optional_torch_c_dlpack.py",
+      "sha256": "00f70694eb7b2d45bb606c6607ef7446fdda7779bdabdad9e07f115eb8568fc5"
+    },
+    {
+      "path": "tvm_ffi/cpp/extension.py",
+      "sha256": "6624d36d55f0182cfdeaee9c90890f6a2ac92f6a50e58688b14c32f39133fbd9"
+    },
+    {
+      "path": "nvidia_cutlass_dsl/python_packages/cutlass/base_dsl/env_manager.py",
+      "sha256": "efef9300ace9b7fc4c4e720343770805da1b90d78131f3bdb1c8b609d11f514b"
+    },
+    {
+      "path": "nvidia_cutlass_dsl/python_packages/cutlass/base_dsl/cache_helpers.py",
+      "sha256": "3b88fad0a88257466a46a6de8ea66828ea4d5c6326e74a16aa352a1bba434aa2"
+    },
+    {
+      "path": "nvidia_cutlass_dsl/python_packages/cutlass/base_dsl/dsl.py",
+      "sha256": "8fb278705b4ef04862cda51c07ae53074db4d4318518fbb1e13ed31feb5874d3"
+    },
+    {
+      "path": "nvidia_cutlass_dsl/python_packages/cutlass/cutlass_dsl/cutlass.py",
+      "sha256": "d4d652e250898432a581bed9259f97b3a5090f6e956d6cc7e01c7f24d9bd5ff7"
+    },
+    {
+      "path": "sglang/srt/environ.py",
+      "sha256": "307e8c58481b630a90eba364052c32776e4cc2cb96243bb04d8c765740fac885"
+    },
+    {
+      "path": "sglang/srt/utils/hf_transformers_utils.py",
+      "sha256": "fa5bc1ab9a8bb310d3b7b479c160fc641f7c2b8ffbbce6bce45b15273251a0a6"
+    },
+    {
+      "path": "outlines/caching.py",
+      "sha256": "5b17c595d6c8370d0c06db07847239d67ba0b201fb743a58c8f7f4ec0e98bf61"
+    },
+    {
+      "path": "nvidia_cutlass_dsl.pth",
+      "sha256": "ca9b44371adda32f6ee6e3bf090becc1b87f1c4a5602f1db535e616bf3fdf4fb"
+    },
+    {
+      "path": "_cuda_bindings_redirector.pth",
+      "sha256": "28d86507e791da835cf8b9dd21fe98b579b77b3ca27e3ad27bae6239bc94f769"
+    },
+    {
+      "path": "_cuda_bindings_redirector.py",
+      "sha256": "5f8d62dee92921479aaa624ab14051909e5b858be6280f8798a2d2864c3ebcc4"
+    },
+    {
+      "path": "sglang/srt/utils/common.py",
+      "sha256": "1b89bb1054b0778ec93eabf6b7f9653a46e8c8a48aec479c1180947436e4d625"
+    },
+    {
+      "path": "sglang/launch_server.py",
+      "sha256": "3391dcd10d17b7a733a779fccf28c315e96abbf50ed8d042166666457f2fb27b"
+    },
+    {
+      "path": "sglang/srt/server_args.py",
+      "sha256": "4d54c4741b3b03b829dfc3bbca58c730ed39a5e803b39883cdf3cfd09441a3e9"
+    },
+    {
+      "path": "sglang/srt/entrypoints/http_server.py",
+      "sha256": "00733d30128f53d9f297db060e4314f7b1fb2d446a9823b1685626a058f7cb04"
+    },
+    {
+      "path": "sglang/srt/entrypoints/engine.py",
+      "sha256": "d6d207e94aea7334b6e2ac2d7ec3ad6336d5568da4b752b0c630e347814a0f33"
+    },
+    {
+      "path": "sglang/srt/managers/tokenizer_manager.py",
+      "sha256": "e108a772872607ced5715154b87e37b32b33cf8b4e003ec7d2eaa5a92f542e08"
+    },
+    {
+      "path": "sglang/srt/managers/detokenizer_manager.py",
+      "sha256": "3cc4f363acfa6810849a75aa0ea2d6f6d40f51c1a9ad012a65bbc20c98854645"
+    },
+    {
+      "path": "sglang/srt/managers/scheduler.py",
+      "sha256": "a64ccf38556c55f975efc848da450e8df7ffc4a323dea237de74af29e2f2f92f"
+    },
+    {
+      "path": "transformers/utils/hub.py",
+      "sha256": "bc8f49e9360b904c4382c830b58b5b70d7df5ed66fd90b298bfb0edc23e2e846"
+    }
+  ],
+  "environment": {
+    "FLASHINFER_WORKSPACE_BASE": "flashinfer",
+    "FLASHINFER_CUBINS_REPOSITORY": "offline-cubin-source",
+    "TVM_FFI_CACHE_DIR": "tvm-ffi",
+    "SGLANG_DG_CACHE_DIR": "deep-gemm",
+    "OUTLINES_CACHE_DIR": "outlines"
+  },
+  "disable_download_environment": {
+    "FLASHINFER_DISABLE_JIT": "1",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK": "1",
+    "CUTE_DSL_DISABLE_FILE_CACHING": "1",
+    "CUTE_DSL_KEEP_IR": "0",
+    "CUTE_DSL_LOG_TO_FILE": "0",
+    "CUTE_DSL_ARCH": "sm_89"
+  },
+  "findings": [
+    "FLASHINFER_WORKSPACE_BASE controls .cache/flashinfer beneath the supplied project-owned directory. Installed flashinfer_cubin package has priority over FLASHINFER_CUBIN_DIR; existing cubins remain in verified overlay.",
+    "FLASHINFER_CUBINS_REPOSITORY is a supported local path. If a requested cubin is absent, download_file first checks local existence, then requests.Session.get receives an absolute filesystem path with no scheme: requests raises MissingSchema; no network URL exists. Source retries four times with5/10/20-second backoff, then returns false; get_cubin returns empty bytes when local cubin remains absent. The native prerequisite must fail if this path is required. A destination lock may be created in the overlay cubin directory; no successful native fallback is assumed.",
+    "FLASHINFER_DISABLE_JIT makes any missing AOT module build raise MissingJITCacheError before ninja. No cache/version/checksum bypass is enabled.",
+    "TVM_FFI_DISABLE_TORCH_C_DLPACK=1 skips optional torch addon import/build and CUDA probing in that helper. TVM_FFI_CACHE_DIR covers other supported extension cache paths.",
+    "CUTE_DSL_DISABLE_FILE_CACHING=1 bypasses loading and dumping hardcoded /tmp/<user>/cutlass_python_cache. KEEP_IR and LOG_TO_FILE remain disabled. Cutlass in-memory compilation, if unexpectedly required, is not claimed verified.",
+    "Local immutable model path plus HF_HUB_OFFLINE/TRANSFORMERS_OFFLINE prevents model fetch. No remote-code trust is requested. Other optional code paths are not declared exhaustively audited.",
+    "Only exact nvidia_cutlass_dsl/python_packages .pth path and hash-audited _cuda_bindings_redirector module are activated by runtime_entry; arbitrary .pth code is never evaluated.",
+    "SGLANG_USE_MODELSCOPE=0 disables its alternative downloader; HF modules/datasets caches are project-local and dataset offline is explicit. CUDA_CACHE_MAXSIZE is conservatively set to134217728 bytes; all runtime roots share the500MB budget."
+  ]
+}

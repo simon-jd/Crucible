@@ -1,0 +1,361 @@
+{
+  "time_utc": "2026-10-25T13:59:41.345870+00:00",
+  "scope": "ROOT complete actualfocusedlog/report/32entryscratchinventory checked; no deletion",
+  "test_exit": 1,
+  "selected": 29,
+  "passed": 28,
+  "failed": 1,
+  "failure": "test RAM fixture requests131072B largeststorage against8192B cap, so expectedRAMregexnotreached; no productionguardgap shown",
+  "actual_crossprocess_events": [
+    {
+      "kind": "actual-cpu-adamw-cross-process-resume",
+      "events": [
+        {
+          "pid": 7,
+          "returncode": 0,
+          "reaped": true,
+          "error": null
+        },
+        {
+          "pid": 9,
+          "returncode": 0,
+          "reaped": true,
+          "error": null
+        },
+        {
+          "pid": 11,
+          "returncode": 0,
+          "reaped": true,
+          "error": null
+        }
+      ],
+      "receipt": {
+        "device": 1,
+        "inode": 1233836,
+        "size": 17648,
+        "sha256": "1d0ae45d87d8e9816015a3e184ec9eca1beb5f2a8b20bcf13fd0ceb7d202aca4",
+        "seals": 15,
+        "version": 2,
+        "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}",
+        "cap": 131072,
+        "metadata_cap": 32768,
+        "storage_cap": 8192
+      },
+      "next_loss": -0.18994787335395813
+    },
+    {
+      "kind": "world1-cpu-gloo-dtensor-only",
+      "events": [
+        {
+          "pid": 18,
+          "returncode": 0,
+          "reaped": true,
+          "error": null
+        },
+        {
+          "pid": 23,
+          "returncode": 0,
+          "reaped": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "cleanup_confirmed": true,
+  "remaining_owned_children": [],
+  "peak_sampled_charge": 1370574848,
+  "scratch_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395020,
+      "mode": 16893,
+      "nlink": 6,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility",
+      "dev": 66307,
+      "inode": 56395028,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936205178521942
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cuda",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cupy",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/inductor",
+      "dev": 66307,
+      "inode": 56395034,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/numba",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/tmp",
+      "dev": 66307,
+      "inode": 56395029,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205665518693
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/torch",
+      "dev": 66307,
+      "inode": 56395033,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/triton",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/vllm",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/xdg",
+      "dev": 66307,
+      "inode": 56395030,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2",
+      "dev": 66307,
+      "inode": 56395049,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/cuda",
+      "dev": 66307,
+      "inode": 56395059,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/cupy",
+      "dev": 66307,
+      "inode": 56395062,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/inductor",
+      "dev": 66307,
+      "inode": 56395057,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/numba",
+      "dev": 66307,
+      "inode": 56395063,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/tmp",
+      "dev": 66307,
+      "inode": 56395052,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936562490826966
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/torch",
+      "dev": 66307,
+      "inode": 56395054,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/triton",
+      "dev": 66307,
+      "inode": 56395058,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/vllm",
+      "dev": 66307,
+      "inode": 56395068,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/xdg",
+      "dev": 66307,
+      "inode": 56395053,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused",
+      "dev": 66307,
+      "inode": 56395069,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/cuda",
+      "dev": 66307,
+      "inode": 56395079,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/cupy",
+      "dev": 66307,
+      "inode": 56395080,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/inductor",
+      "dev": 66307,
+      "inode": 56395075,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/numba",
+      "dev": 66307,
+      "inode": 56395083,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/tmp",
+      "dev": 66307,
+      "inode": 56395070,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936658509499311
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/torch",
+      "dev": 66307,
+      "inode": 56395074,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/triton",
+      "dev": 66307,
+      "inode": 56395078,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/vllm",
+      "dev": 66307,
+      "inode": 56395084,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/focused/xdg",
+      "dev": 66307,
+      "inode": 56395073,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936647216574519
+    },
+    {
+      "path": ".cache/task11-ram-handoff/static",
+      "dev": 66307,
+      "inode": 56395025,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792935779017365491
+    }
+  ],
+  "scratch_regular_bytes": 0,
+  "repair_ruling": "onlylargeststoragefixture8192 + cap-regressionselector; preserveallsuccessfulcase evidence, rerunonlyfailedcase aftergate",
+  "GPU_executed": false,
+  "fullsize_fit_admitted": false
+}

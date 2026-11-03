@@ -1,0 +1,4 @@
+Self-review helper lint before final freeze returned exit1:
+TRY004 tokenizer_allowlist.py:36: prefer TypeError for non-dictionary vocab.
+PIE810 tokenizer_allowlist.py:50,59: combine endswith checks into tuples.
+All three findings corrected manually, then helper files formatted before final gate.

@@ -1,0 +1,234 @@
+{
+  "fix_base": "a2b138d1a2b33e3c1f0cc38d7e249c2fea112740",
+  "original_raw_count": 35,
+  "original_raw_files": [
+    {
+      "path": "docs/evidence/raw/task15-cpu-cleanup-first-failure.log",
+      "bytes": 701,
+      "sha256": "5e571ec7e5bf401158a401fc10b25688c4dc42f1657fcf91f5fad2538bf8ab19",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cleanup-recovery.log",
+      "bytes": 229,
+      "sha256": "19cf8c1a5705b37b60868f475fe199970d32f768d575ee96fb270b228787cac4",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cleanup.py",
+      "bytes": 4035,
+      "sha256": "6e1564327459990a45640e8492f5dcf1a578a772fd23c90eb3172ad43f4ed6c3",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cli-commands.json",
+      "bytes": 1029,
+      "sha256": "f88aca9ea8f74627873bb3bc5b464422d6652fb81e0eb2c50541067262a0e27e",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cli-incomplete.json",
+      "bytes": 1983,
+      "sha256": "957176c300149f775d4dd4b0d67c89771fc2679ab5d268a1665e0131bd6a8389",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cli-rejection.json",
+      "bytes": 127,
+      "sha256": "1861e9db9a573ab483ee2637314e26df02be3b2689c6dc4bcf6091462cc8c94f",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cli-resources.json",
+      "bytes": 197,
+      "sha256": "77555902eea309c21c947a29b221db673186c4d577f4086cee43751227197860",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-cli-valid.json",
+      "bytes": 1809,
+      "sha256": "8e405c7573c937124355c2d96df4c36cd23c1e346cee998dea7a697bc7b20f08",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-fixture-generation.py",
+      "bytes": 1947,
+      "sha256": "e2acb22a2ddb5fc79000b54880049e9236aab5d0eede08301dcb2b9d9326e403",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-green.json",
+      "bytes": 2064,
+      "sha256": "c494c0dacfdfdd16dad06eab35aed6958a0ab6d7c3e306abfbab36da193cf0fc",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-green.log",
+      "bytes": 2616,
+      "sha256": "835ae8c2c899acfc955549cc91410cbcd5048306e5c72014f3981a1dd6348bb6",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-monitor-v1-unexecuted.py",
+      "bytes": 7064,
+      "sha256": "bdb016dc899eba0eb4bf1d01e2a5ed887db69aaf361dfd4a6059968dafaa49d5",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-monitor-v2-unexecuted.py",
+      "bytes": 8912,
+      "sha256": "30d1352edb66c9003773d71d7de93e965dfbe9d8284d0f2ae807aa944a2d2944",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-monitor.py",
+      "bytes": 9081,
+      "sha256": "f29319324bcb5f753a2b6828276da41b651114beb37b1ced3a701d0d907871cd",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-red.json",
+      "bytes": 5317,
+      "sha256": "e3f3a2566b8ce60d84a457c51f17c41bb2b66b125960ba4c8a6e946d87e9102f",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-red.log",
+      "bytes": 790,
+      "sha256": "e06e3f55322ca57cf66dbc23ee17592778232afb5fad44e43a7e0b1c9f5b07fd",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-smoke.json",
+      "bytes": 1692,
+      "sha256": "f576b88d82052123b92394fac178b79cf57666226049b86d6b0e1342e9fc417c",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-smoke.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-vet.json",
+      "bytes": 2517,
+      "sha256": "e1acc0fb02ac759218e5f36a892c3d471552a1c3b435f34a6a88dd27f57d150d",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-go-vet.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-gofmt-check.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-owned-cleanup.json",
+      "bytes": 213428,
+      "sha256": "d3aca8969fa6461fd913c523e71831b96bfbda471a9fd65d9869d0f07c7711c1",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-post-go-clean-resources.json",
+      "bytes": 197,
+      "sha256": "858d54c3ea332af6fbf7151ff6790bfb08d922d451f9d318bef32539b6d73440",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-post-go-resources.json",
+      "bytes": 240,
+      "sha256": "9535bd09fbd06ed3ae27ba8d7e4bd535683886056e9ac5c32dcf26d437665553",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-precommit-resources.json",
+      "bytes": 197,
+      "sha256": "b1b609332a1ddc11c85890f54a10a3b6dec7e1d809bca813f6def38c8ddfd146",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-python-green-resources.json",
+      "bytes": 197,
+      "sha256": "b5c8e1e0cfd35af3dcfd16762805ae23517628f5abb4beee5391e7590d9a073b",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-python-green.log",
+      "bytes": 5679,
+      "sha256": "1df49fa4660d798e0a2ea84efdb948b81dd297127594b4a0a5762da9f4c95930",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-python-red.log",
+      "bytes": 1346,
+      "sha256": "b8ec987d45d7d7fc033f642c501a6a3b326d0960762989fdf6d8080b0cc36c79",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-ruff-format.log",
+      "bytes": 20,
+      "sha256": "96a977f329ec3c59092d40e041a019b49dcf03ca04055e177aa0ccb8c27234df",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-ruff-green.log",
+      "bytes": 45,
+      "sha256": "afa20b27dacc9bf0aba3c1d265964c21e04ab42f6e39e2dd4769718ceded003a",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-ruff-initial.log",
+      "bytes": 2180,
+      "sha256": "1b7860ac1a7b8aabe860bc2649401f8c4cf3c989a22fc19a0d3e1a91b1c36876",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-synthetic-incomplete-input.json",
+      "bytes": 419,
+      "sha256": "e89f499148131cd27a1caa526f32eb0a5edaab1b55fd8c009b8e48a72ed943fe",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-synthetic-plan.json",
+      "bytes": 3815,
+      "sha256": "b7920464bbfc423962485eb4bd3c3146c3f01e22746b5ab6c5fb147c400d273c",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-synthetic-rejection-input.json",
+      "bytes": 567,
+      "sha256": "3afa4a892b48dabb504ffee08115f23545dd9592fb91a58ae74aea34bdb4107e",
+      "matches_fix_base_bytes": true
+    },
+    {
+      "path": "docs/evidence/raw/task15-cpu-synthetic-valid-input.json",
+      "bytes": 567,
+      "sha256": "ebe4f0e0bfed67bd7b04b8b749f2b821c882944d3c994f6f0fd0e3c40e75d45e",
+      "matches_fix_base_bytes": true
+    }
+  ],
+  "owned_cleanup": [
+    {
+      "path": ".tmp-task15-round1-red",
+      "absent": true,
+      "regular_files": [],
+      "symlinks": [],
+      "cleanup": "not created: isolated tests use no temporary files"
+    },
+    {
+      "path": ".tmp-task15-round1-green",
+      "absent": true,
+      "regular_files": [],
+      "symlinks": [],
+      "cleanup": "not created: isolated tests use no temporary files"
+    }
+  ],
+  "go_build_or_launch_executed": false,
+  "loan_bytes_consumed": 0
+}

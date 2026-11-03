@@ -1,0 +1,71 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_____________ test_flush_barrier_waits_for_supported_idle_success ______________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-boundary-tests/red/test_flush_barrier_waits_for_s0')
+flush_server = ({'calls': [], 'statuses': [400, 400, 200]}, 'http://127.0.0.1:43613')
+
+    def test_flush_barrier_waits_for_supported_idle_success(tmp_path, flush_server):
+>       from serving.baseline.experiment import flush_barrier
+E       ImportError: cannot import name 'flush_barrier' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:517: ImportError
+_ test_flush_barrier_stops_on_perpetual_busy_or_unexpected_status[400-TimeoutError] _
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-boundary-tests/red/test_flush_barrier_stops_on_pe0')
+flush_server = ({'calls': [], 'statuses': [400, 400, 200]}, 'http://127.0.0.1:44455')
+status = 400, exception = <class 'TimeoutError'>
+
+    @pytest.mark.parametrize("status,exception", [(400, TimeoutError), (500, ValueError)])
+    def test_flush_barrier_stops_on_perpetual_busy_or_unexpected_status(tmp_path, flush_server, status, exception):
+        import json
+    
+>       from serving.baseline.experiment import flush_barrier
+E       ImportError: cannot import name 'flush_barrier' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:529: ImportError
+_ test_flush_barrier_stops_on_perpetual_busy_or_unexpected_status[500-ValueError] _
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-boundary-tests/red/test_flush_barrier_stops_on_pe1')
+flush_server = ({'calls': [], 'statuses': [400, 400, 200]}, 'http://127.0.0.1:39055')
+status = 500, exception = <class 'ValueError'>
+
+    @pytest.mark.parametrize("status,exception", [(400, TimeoutError), (500, ValueError)])
+    def test_flush_barrier_stops_on_perpetual_busy_or_unexpected_status(tmp_path, flush_server, status, exception):
+        import json
+    
+>       from serving.baseline.experiment import flush_barrier
+E       ImportError: cannot import name 'flush_barrier' from 'serving.baseline.experiment' (/home/postedism/Desktop/Crucible/serving/baseline/experiment.py)
+
+serving/baseline/experiment_test.py:529: ImportError
+___ test_trial_boundary_preserves_completed_current_outcome_before_stopping ____
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-boundary-tests/red/test_trial_boundary_preserves_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x761b516cfb90>
+
+    def test_trial_boundary_preserves_completed_current_outcome_before_stopping(tmp_path, monkeypatch):
+        import json
+    
+        from serving.baseline import experiment
+    
+        target = tmp_path / "trial.json"
+        summary = {"planned_rows": 1}
+        payload = json.dumps({"Run": run([record()])})
+        command = [sys.executable, "-B", "-c", "import sys;print(sys.argv[1])", payload]
+    
+        def failed_boundary(*args, **kwargs):
+            saved = json.loads(target.with_suffix(".summary.json").read_text())
+            assert saved["status"] == "completed" and saved["actual_records"] == 1
+            assert saved["raw_sha256"] and saved["cleanup"]["reaped"]
+            raise TimeoutError("server remained busy")
+    
+>       monkeypatch.setattr(experiment, "flush_barrier", failed_boundary)
+E       AttributeError: <module 'serving.baseline.experiment' from '/home/postedism/Desktop/Crucible/serving/baseline/experiment.py'> has no attribute 'flush_barrier'
+
+serving/baseline/experiment_test.py:558: AttributeError
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_flush_barrier_waits_for_supported_idle_success
+FAILED serving/baseline/experiment_test.py::test_flush_barrier_stops_on_perpetual_busy_or_unexpected_status[400-TimeoutError]
+FAILED serving/baseline/experiment_test.py::test_flush_barrier_stops_on_perpetual_busy_or_unexpected_status[500-ValueError]
+FAILED serving/baseline/experiment_test.py::test_trial_boundary_preserves_completed_current_outcome_before_stopping
+4 failed, 15 deselected in 1.56s

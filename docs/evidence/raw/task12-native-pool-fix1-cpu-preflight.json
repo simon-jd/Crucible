@@ -1,0 +1,30 @@
+{
+  "source_and_commands_match": true,
+  "executables_match": true,
+  "sample": {
+    "project_bytes": 13313970861,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13303810630,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13993810630,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "scratch_plus_projection": 13995810630,
+  "baseline": {
+    "native_pool.py": {
+      "bytes": 7810,
+      "sha256": "2526489bd9493bdaf8c364efb297a3846d2e0a6da221aee64a7474846dab9a90"
+    },
+    "experiment.py": {
+      "bytes": 57457,
+      "sha256": "53ca02d0854f3240af61f8f13cd804c665536631e8581f71b1d0066c956ed196"
+    }
+  },
+  "rayon_absent": true,
+  "tests_not_started": true
+}

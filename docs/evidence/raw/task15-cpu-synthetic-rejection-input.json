@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "synthetic_fixture": true,
+  "rows": [
+    {
+      "request_id": "synthetic-r0",
+      "status": "completed",
+      "spec_accepted_tokens": 6,
+      "spec_verify_ct": 2
+    },
+    {
+      "request_id": "synthetic-r1",
+      "status": "completed",
+      "spec_accepted_tokens": 0,
+      "spec_verify_ct": 3
+    },
+    {
+      "request_id": "synthetic-r2",
+      "status": "completed",
+      "spec_accepted_tokens": 0,
+      "spec_verify_ct": 3
+    }
+  ]
+}

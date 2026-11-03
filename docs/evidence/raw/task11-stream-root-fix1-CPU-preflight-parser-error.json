@@ -1,0 +1,7 @@
+{
+  "scope": "ROOT metadata preflight only, no test/native/Torch/memfd execution",
+  "error": "AssertionError comparing latest JSON block which was preformat; postformat pins were new plain-text block",
+  "correction": "parse latest repeated SHA lines and compare ALL8actual files, same-interpreterAST stillmatch",
+  "initialreport_andreview_preserved": true,
+  "first_script_created_CPU_gate_or_started_workload": false
+}

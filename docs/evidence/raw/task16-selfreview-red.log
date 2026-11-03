@@ -1,0 +1,28 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_____________ test_multibacktick_code_cannot_hide_linklike_numbers _____________
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-fixtures-selfreview-red/test_multibacktick_code_cannot0')
+
+    def test_multibacktick_code_cannot_hide_linklike_numbers(project):
+>       assert errors(project, f"``literal` [42](999)`` {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-fixtures-selfreview-red/test_multibacktick_code_cannot0'), '``literal` [42](999)`` [evidence: docs/evidence/source.md#results]')
+
+scripts/tests/test_check_report_numbers.py:185: AssertionError
+__________________ test_signed_unit_literal_cannot_lose_sign ___________________
+
+project = PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-fixtures-selfreview-red/test_signed_unit_literal_canno0')
+
+    def test_signed_unit_literal_cannot_lose_sign(project):
+        (project / "docs/evidence/source.md").write_text("## Results\n-42MB\n", encoding="utf-8")
+        assert errors(project, f"-42MB {CITE}") == []
+>       assert errors(project, f"42MB {CITE}")
+E       AssertionError: assert []
+E        +  where [] = errors(PosixPath('/home/postedism/Desktop/Crucible/docs/evidence/raw/task16-fixtures-selfreview-red/test_signed_unit_literal_canno0'), '42MB [evidence: docs/evidence/source.md#results]')
+
+scripts/tests/test_check_report_numbers.py:191: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_check_report_numbers.py::test_multibacktick_code_cannot_hide_linklike_numbers
+FAILED scripts/tests/test_check_report_numbers.py::test_signed_unit_literal_cannot_lose_sign
+2 failed, 23 deselected in 0.03s

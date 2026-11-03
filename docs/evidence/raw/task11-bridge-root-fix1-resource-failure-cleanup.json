@@ -1,0 +1,234 @@
+{
+  "time_utc": "2026-10-25T18:22:41.789810+00:00",
+  "original_session": 47411,
+  "terminal_exit": 1,
+  "classification": "RESOURCE/fixture failure OSError27 initialmemfd capture BEFOREcounterassertions; no meaningfulRED",
+  "receipt_sha256": "06d3dcf2399a3ad5a008c1cc448869861365b57461a0d45c024008662bd78877",
+  "all25sourcepins_verified": true,
+  "cleanup_confirmed": true,
+  "remaining_children": [],
+  "fullpredelete_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395152,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792952262644921831
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red",
+      "dev": 66307,
+      "inode": 56395153,
+      "mode": 16893,
+      "nlink": 12,
+      "size": 4096,
+      "mtime_ns": 1792952263844914128
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/cuda",
+      "dev": 66307,
+      "inode": 56395167,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262645921825
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/cupy",
+      "dev": 66307,
+      "inode": 56395168,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262645921825
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/inductor",
+      "dev": 66307,
+      "inode": 56395163,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262645921825
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/numba",
+      "dev": 66307,
+      "inode": 56395171,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262646515044
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest",
+      "dev": 66307,
+      "inode": 56395176,
+      "mode": 16832,
+      "nlink": 5,
+      "size": 4096,
+      "mtime_ns": 1792952266515896984
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a",
+      "dev": 66307,
+      "inode": 56395182,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792952265181905547
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a/assets",
+      "dev": 66307,
+      "inode": 56395183,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952265181905547
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a/assets/config.json",
+      "dev": 66307,
+      "inode": 56395184,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792952265182992139,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e",
+      "dev": 66307,
+      "inode": 56395186,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792952266515896984
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e/assets",
+      "dev": 66307,
+      "inode": 56395193,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952266515896984
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e/assets/config.json",
+      "dev": 66307,
+      "inode": 56395194,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792952266516693098,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215",
+      "dev": 66307,
+      "inode": 56395179,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792952263846069829
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets",
+      "dev": 66307,
+      "inode": 56395180,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952263846069829
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json",
+      "dev": 66307,
+      "inode": 56395181,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792952263846238932,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/tmp",
+      "dev": 66307,
+      "inode": 56395156,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952268071886996
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/torch",
+      "dev": 66307,
+      "inode": 56395158,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262645921825
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/triton",
+      "dev": 66307,
+      "inode": 56395166,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262645921825
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/vllm",
+      "dev": 66307,
+      "inode": 56395173,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262646515044
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-fix1-red/xdg",
+      "dev": 66307,
+      "inode": 56395157,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792952262645921825
+    }
+  ],
+  "regular_utf8_content": {
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a/assets/config.json": "{\"model_type\":\"qwen2\"}",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e/assets/config.json": "{\"model_type\":\"qwen2\"}",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json": "{\"model_type\":\"qwen2\"}"
+  },
+  "regular_bytes": 66,
+  "deleted_exact": [
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a/assets",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e/assets",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215",
+    ".cache/task11-ram-handoff/bridge-fix1-red/cuda",
+    ".cache/task11-ram-handoff/bridge-fix1-red/cupy",
+    ".cache/task11-ram-handoff/bridge-fix1-red/inductor",
+    ".cache/task11-ram-handoff/bridge-fix1-red/numba",
+    ".cache/task11-ram-handoff/bridge-fix1-red/pytest",
+    ".cache/task11-ram-handoff/bridge-fix1-red/tmp",
+    ".cache/task11-ram-handoff/bridge-fix1-red/torch",
+    ".cache/task11-ram-handoff/bridge-fix1-red/triton",
+    ".cache/task11-ram-handoff/bridge-fix1-red/vllm",
+    ".cache/task11-ram-handoff/bridge-fix1-red/xdg",
+    ".cache/task11-ram-handoff/bridge-fix1-red",
+    ".cache/task11-ram-handoff"
+  ],
+  "scratch_absent": true
+}

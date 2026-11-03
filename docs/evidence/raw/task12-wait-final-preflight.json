@@ -1,0 +1,18 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/resource_preflight.py",
+    "--planned-project-bytes",
+    "690000000",
+    "--download-bytes",
+    "0",
+    "--checkpoints",
+    "2",
+    "--service-memory-bytes",
+    "2000000000"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"units\": \"decimal GB = 1,000,000,000 bytes\",\n  \"project_bytes\": 13301125245,\n  \"free_bytes\": 265685254144,\n  \"model_cache\": \"/home/postedism/.cache/huggingface\",\n  \"errors\": []\n}\n",
+  "stderr": ""
+}

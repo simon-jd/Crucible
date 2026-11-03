@@ -1,0 +1,2 @@
+nproc 4
+ 00:28:08 up 16 days,  6:30,  5 users,  load average: 2.74, 2.41, 2.07

@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 1 item
+
+serving/eval/tests/test_accuracy.py F                                    [100%]
+
+=================================== FAILURES ===================================
+___________ test_planned_four_rounds_missing_trailing_pair_rejected ____________
+
+    def test_planned_four_rounds_missing_trailing_pair_rejected():
+        from serving.eval.accuracy import report
+    
+        b = fixture(rounds=4)
+        b['runs'] = b['runs'][:-2]
+>       with pytest.raises(ValueError, match='run plan'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+serving/eval/tests/test_accuracy.py:455: Failed
+=========================== short test summary info ============================
+FAILED serving/eval/tests/test_accuracy.py::test_planned_four_rounds_missing_trailing_pair_rejected
+============================== 1 failed in 0.04s ===============================

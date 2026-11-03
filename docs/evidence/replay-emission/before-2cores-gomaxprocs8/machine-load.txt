@@ -1,0 +1,4 @@
+nproc 32
+start  06:06:15 up 11 days, 11:08,  3 users,  load average: 6.79, 4.09, 2.68
+count=30 hogs=6 cores=30,31 gomaxprocs=8
+end  06:07:15 up 11 days, 11:09,  3 users,  load average: 11.94, 6.01, 3.44

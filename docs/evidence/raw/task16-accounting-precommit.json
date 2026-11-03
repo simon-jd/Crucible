@@ -1,0 +1,153 @@
+{
+  "owned_paths_at_measurement": [
+    {
+      "path": "scripts/check_report_numbers.py",
+      "bytes": 8280,
+      "sha256": "8835e8c9276a5a751c995cb77a40701293a78943def4f7c64f57ca6a00e52a6a"
+    },
+    {
+      "path": "scripts/tests/test_check_report_numbers.py",
+      "bytes": 7237,
+      "sha256": "d4c1e246753ba8ce2f9dbea7a0ad68126179ea0903b47875792805a4906927f2"
+    },
+    {
+      "path": "reports/w2-async-grpo.md",
+      "bytes": 3944,
+      "sha256": "38ae2d8bd0a15a78f541d001afb520404560b1ac955f1391afc23a2d0c846e9d"
+    },
+    {
+      "path": "reports/w3-disaggregated-serving.md",
+      "bytes": 3511,
+      "sha256": "5e5aeffcd18d2eccd536bec3858c1a9908062aee6a01f45cf327fbe91a3d5113"
+    },
+    {
+      "path": "reports/repro/README.md",
+      "bytes": 7147,
+      "sha256": "5d8a896f2de9fc9b813a0fa08708cb99440f6e0a87fceb4ba3ddece91346716f"
+    },
+    {
+      "path": "docs/evidence/report-numbers.md",
+      "bytes": 4092,
+      "sha256": "b1147c836bd5501dba3f59615241d6c09a002b39c0a558dbd25c677b3a370757"
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-16-report.md",
+      "bytes": 13368,
+      "sha256": "697369c72c37f8f22ccbe7040f45548ade47871b485d9e9edf75db46f3a1589e"
+    },
+    {
+      "path": "docs/evidence/raw/task16-cleanup.json",
+      "bytes": 47398,
+      "sha256": "4f683c113d560df7c97d91bfd3ef53ea66ac0506aca31df8458691b352164f5f"
+    },
+    {
+      "path": "docs/evidence/raw/task16-cli-proof.json",
+      "bytes": 1014,
+      "sha256": "8195ddde75c3f953dc243f24c20c854d14865ed84f19d6d28cd169b0d33ae58b"
+    },
+    {
+      "path": "docs/evidence/raw/task16-drafts-check-01.log",
+      "bytes": 435,
+      "sha256": "3bfb5fb6ed8bcb9f6c3d662521f425490a5fb024f6d073a72dfcc64f534674a5"
+    },
+    {
+      "path": "docs/evidence/raw/task16-drafts-green.log",
+      "bytes": 45,
+      "sha256": "eb0571e191564de65f6f37069005d16e5946ebb2b5ce8e325d58d967a1a11045"
+    },
+    {
+      "path": "docs/evidence/raw/task16-drafts-red.log",
+      "bytes": 380,
+      "sha256": "2b4492328e0e9ead64590926c6036d30800699a95badb57e8e603d26ef8829ec"
+    },
+    {
+      "path": "docs/evidence/raw/task16-focused-green.log",
+      "bytes": 113,
+      "sha256": "3749d4f46b3add56e2057c6c13c9b8c457f8f7ac15c037c23fa25b0f0dd577e6"
+    },
+    {
+      "path": "docs/evidence/raw/task16-format-01.log",
+      "bytes": 1375,
+      "sha256": "8943d6fac2f9d8394829a549ab29dbe869bb491c30b637666505ea39986da594"
+    },
+    {
+      "path": "docs/evidence/raw/task16-format-final.log",
+      "bytes": 26,
+      "sha256": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+    },
+    {
+      "path": "docs/evidence/raw/task16-format-fix.log",
+      "bytes": 20,
+      "sha256": "96a977f329ec3c59092d40e041a019b49dcf03ca04055e177aa0ccb8c27234df"
+    },
+    {
+      "path": "docs/evidence/raw/task16-grouped-green.log",
+      "bytes": 113,
+      "sha256": "2482eba3e1ffd424e295cf3647540469057d38fe96cf7d992970da0d5631664f"
+    },
+    {
+      "path": "docs/evidence/raw/task16-grouped-red.log",
+      "bytes": 1209,
+      "sha256": "557eb6818957173d54101f226126718920526798a30acfdca0737a284d7dd014"
+    },
+    {
+      "path": "docs/evidence/raw/task16-lint-01.log",
+      "bytes": 520,
+      "sha256": "bc42ec3d8c586979a0ab6f7381132060f20b50c51a63bcab92d80d33f541bc43"
+    },
+    {
+      "path": "docs/evidence/raw/task16-lint-final.log",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "docs/evidence/raw/task16-provenance.json",
+      "bytes": 2762,
+      "sha256": "d591dc433387ae29351a38e4f059e1269e33b3812de77a2a90783f92469ef0ac"
+    },
+    {
+      "path": "docs/evidence/raw/task16-red.log",
+      "bytes": 1027,
+      "sha256": "03e56ce7b234bd1247756681897b1e4838ec889ad3b88971c5a1029d03c0a09d"
+    },
+    {
+      "path": "docs/evidence/raw/task16-resource-precommit.json",
+      "bytes": 197,
+      "sha256": "81ff667a3c32c7d7d06f00c6d91273d461d8cad08a69589a933444d1d1e3e93e"
+    },
+    {
+      "path": "docs/evidence/raw/task16-resource-start.json",
+      "bytes": 197,
+      "sha256": "9c04d941cf92d11918bbad30aa4e31008eed2e271b7ba445505d019bb62d43c3"
+    },
+    {
+      "path": "docs/evidence/raw/task16-selfreview-green.log",
+      "bytes": 113,
+      "sha256": "baeecf3e955324e45ab26b6bb89b06ff2729a88ce5d5a8811c3b5c0c93955cf3"
+    },
+    {
+      "path": "docs/evidence/raw/task16-selfreview-red.log",
+      "bytes": 1941,
+      "sha256": "21794971c3986f88067d80ef47b1fb4859bb39a7f957c38a56867b4727438aa9"
+    },
+    {
+      "path": "docs/evidence/raw/task16-tests-final-verified.log",
+      "bytes": 3011,
+      "sha256": "96221a9ddf78bd0dac4cbb58c7148608f5f0be446aedfa356f65ce22f554e8cd"
+    },
+    {
+      "path": "docs/evidence/raw/task16-tests-final.log",
+      "bytes": 99,
+      "sha256": "a15ead4e7e3ad56fe8773c8504b41229914a60731ea6590fe70297c607ca6c20"
+    }
+  ],
+  "owned_logical_bytes": 109593,
+  "retained_fixtures_bytes": 0,
+  "cumulative_removed_fixture_regular_bytes": 13207,
+  "conservative_owned_plus_git_duplicate_plus_cumulative_fixtures_plus_100KB_metadata": 332393,
+  "task_allowance_bytes": 10000000,
+  "git_bytes_before_task_commit": 16682702,
+  "original_selected_sources_unchanged": true,
+  "all_owned_basetemps_absent": true,
+  "notes": "Point-in-time canonical plus unchanged full690M reservation, no peak claim. Accounting receipt/final report appends and final Git metadata measured separately after commit; 100KB contingency included here. Root21 metadata excluded task delta; no native/shared/runtime cleanup."
+}

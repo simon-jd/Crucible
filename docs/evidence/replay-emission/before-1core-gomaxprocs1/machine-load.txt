@@ -1,0 +1,4 @@
+nproc 32
+start  06:05:14 up 11 days, 11:07,  3 users,  load average: 4.70, 3.20, 2.32
+count=20 hogs=3 core=31
+end  06:05:54 up 11 days, 11:08,  3 users,  load average: 6.25, 3.80, 2.56

@@ -1,0 +1,129 @@
+{
+  "status": "proposed-not-authorized-or-launched",
+  "argv": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "85s",
+    "/usr/bin/prlimit",
+    "--fsize=262144:262144",
+    "--core=0:0",
+    "--",
+    "env",
+    "-u",
+    "TRANSFORMERS_CACHE",
+    "PYTHONPATH=.",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "HF_HOME=/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    ".venv/bin/python",
+    "-B",
+    "docs/evidence/raw/task12-wait-driver.py"
+  ],
+  "outer_log": "docs/evidence/raw/task12-wait-cpu-01-outer.log",
+  "output": "docs/evidence/raw/task12-wait-cpu-01",
+  "port": 31013,
+  "execution_level": "same host permission surface as original StageB; no GPU",
+  "identities": {
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": {
+      "bytes": 24553,
+      "sha256": "ad7f88b786fd0bc8e938855f7ab867f6e96ef0e6393e377162396290f576ea24"
+    },
+    "docs/evidence/raw/task12-wait-go-monitor.py": {
+      "bytes": 10954,
+      "sha256": "8d06f5ca394d81e81ee419f8b4e91ac6cf4365ede7244b5773809564b3eb524c"
+    },
+    ".tmp-task12-wait-go-loan/replay-wait": {
+      "bytes": 10160231,
+      "sha256": "33105f112395f2dda307979f169395b6ff9d3f3d56d4b20e492b0d3fa241e210"
+    },
+    "serving/replay/schedule.go": {
+      "bytes": 5582,
+      "sha256": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    "serving/replay/transport.go": {
+      "bytes": 4213,
+      "sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/diagnostic.go": {
+      "bytes": 9983,
+      "sha256": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f"
+    },
+    "serving/replay/wait.go": {
+      "bytes": 2437,
+      "sha256": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "bytes": 3205,
+      "sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    },
+    "docs/evidence/raw/task12-wait-driver.py": {
+      "bytes": 12223,
+      "sha256": "4e9593e1025405d7213ef1e86fcadfca972ad49a4b36db65755aa6a32f27d21c"
+    },
+    ".cache/task12-baseline/bin/replay": {
+      "bytes": 10138001,
+      "sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93"
+    },
+    "serving/baseline/traces/burst-calibration.csv": {
+      "bytes": 877,
+      "sha256": "28c6162d5a4e894a60e92c6626fc04534f02e0b1e8472dff88e9e107f3c89364"
+    },
+    "docs/evidence/raw/task12-model-token-allowlist.json": {
+      "bytes": 24004,
+      "sha256": "8e8c8418ca48ed5bb0fe5b810ca1dcf841a56fbe0fd5333ed4babae63926eaa4"
+    },
+    "serving/replay/diagnostic_test.go": {
+      "bytes": 9844,
+      "sha256": "c7c45b7b0b74d33f09bae4c4609bd81c41ff0d859b3809833de3043cd695c761"
+    },
+    "serving/replay/wait_test.go": {
+      "bytes": 9890,
+      "sha256": "e1958222a428622954432df3aef0274ad7a50c63c37e017ff022538a89d2e148"
+    },
+    "serving/replay/cmd/replay/diagnostic_test.go": {
+      "bytes": 2981,
+      "sha256": "02c6cf795ed6f7961620bba8b633be4c6c5b1ab4bd0aea37d45e2d632f954f8d"
+    },
+    "/usr/bin/timeout": {
+      "bytes": 11807104,
+      "sha256": "f84e76ea4da1e0c4e92254bd0d7dccdabe2c8b3098e734f27997dae3ee5d8e02"
+    },
+    "/usr/bin/prlimit": {
+      "bytes": 27616,
+      "sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4"
+    },
+    ".venv/bin/python": {
+      "bytes": 30905176,
+      "sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7"
+    }
+  },
+  "bounds": {
+    "outer_seconds": 85,
+    "kill_grace_seconds": 5,
+    "controller_seconds": 75,
+    "child_seconds": 70,
+    "RSS_sample_cap": 512000000,
+    "child_file_bytes": 65536,
+    "sidecar_bytes": 61440,
+    "outer_file_bytes": 262144,
+    "future_run_and_outer_max_bytes": 1302528,
+    "phase_retained_cap": 2000000,
+    "loan_max": 500000000,
+    "project_cap": 14000000000,
+    "future_nonloan_reserve": 690000000,
+    "cleanup_inventory_holdback": 270000,
+    "root_reporting_holdback": 65536
+  },
+  "accounting": "independent nonloan full inode walk +690M, independent actual canonical14GB; no scan loop during timing; before+after and bounded immutable fixture output",
+  "prior_build_handle": 25010,
+  "loan_repaid": false,
+  "no_retry": true,
+  "runtime_environment": "reject any nonempty GODEBUG/GOGC/GOMEMLIMIT/GOMAXPROCS/GOTRACEBACK/GO_ENV; no build GOMAXPROCS2 normalization",
+  "validation": "same original raw23 fixture validation, plus bounded capture/probs/uniqueindices/phaseorder/writepair/connectionidentity/finalWrite-Sent within1ns; diagnostic validity separate from sender/native performance; sidecar v2, intermediate_wakes exact int (not bool),0..65535,no_timer count0; retain count per row",
+  "limitations": "instrumentation perturbs same run; no historical root-cause reconstruction or performance acceptance; final actual wake can precede due if Stop/bookkeeping crosses due, with no rebased timer or early send",
+  "baseline": "0f4c2e5a420e5598241da4162af8997c91830824",
+  "historical_results_unchanged": true
+}

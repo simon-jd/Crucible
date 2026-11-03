@@ -1,0 +1,41 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_______ test_native_environment_removes_inherited_deprecated_cache_alias _______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/minor-red/test_native_environment_remove0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x78f38bab35f0>
+
+    def test_native_environment_removes_inherited_deprecated_cache_alias(tmp_path, monkeypatch):
+        monkeypatch.setenv("TRANSFORMERS_CACHE", "/unreviewed/inherited")
+        env = runtime_environment(tmp_path)
+>       assert "TRANSFORMERS_CACHE" not in env
+E       AssertionError: assert 'TRANSFORMERS_CACHE' not in {'ASAN_OPTIONS': 'symbolize=1', 'ASAN_SYMBOLIZER_PATH': '/usr/bin/llvm-symbolizer', 'CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS': '1', 'CODEX_CI': '1', ...}
+
+serving/baseline/runtime_entry_test.py:45: AssertionError
+____________ test_canonical_rescan_preserves_actual_error_filenames ____________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/minor-red/test_canonical_rescan_preserve0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x78f38bb55940>
+
+    def test_canonical_rescan_preserves_actual_error_filenames(tmp_path, monkeypatch):
+        from serving.baseline import model_snapshot as model
+    
+        error = FileNotFoundError(2, "missing", "first", None, "second")
+        outcomes = iter([error, 10])
+        def scan(root):
+            value = next(outcomes)
+            if isinstance(value, Exception):
+                raise value
+            return value
+        monkeypatch.setattr(model, "project_bytes", scan)
+        events = []
+        assert model.canonical_bytes(tmp_path, events) == 10
+>       assert events[0]["errno"] == 2
+               ^^^^^^^^^^^^^^^^^^
+E       KeyError: 'errno'
+
+serving/baseline/model_snapshot_test.py:354: KeyError
+=========================== short test summary info ============================
+FAILED serving/baseline/runtime_entry_test.py::test_native_environment_removes_inherited_deprecated_cache_alias
+FAILED serving/baseline/model_snapshot_test.py::test_canonical_rescan_preserves_actual_error_filenames
+2 failed, 20 deselected in 0.04s

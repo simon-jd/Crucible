@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "docs/evidence/raw/task12-sender-phase-go-monitor.py": true,
+    "serving/replay/cmd/replay/diagnostic_test.go": true,
+    "serving/replay/cmd/replay/main.go": true,
+    "serving/replay/diagnostic.go": true,
+    "serving/replay/diagnostic_test.go": true,
+    "serving/replay/schedule.go": true,
+    "serving/replay/transport.go": true,
+    ".tools/go/bin/go": true,
+    ".tools/go/bin/gofmt": true,
+    ".tools/go/VERSION": true,
+    ".cache/task12-baseline/bin/replay": true
+  },
+  "argv": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/resource_preflight.py",
+    "--planned-project-bytes",
+    "690000000",
+    "--download-bytes",
+    "0",
+    "--checkpoints",
+    "2",
+    "--service-memory-bytes",
+    "2000000000"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"units\": \"decimal GB = 1,000,000,000 bytes\",\n  \"project_bytes\": 13297664708,\n  \"free_bytes\": 265813676032,\n  \"model_cache\": \"/home/postedism/.cache/huggingface\",\n  \"errors\": []\n}\n",
+  "stderr": "",
+  "loan_absent": true,
+  "report_mismatch_ruling": "Root read appended static freeze/preflight section and explicitly confirmed gate remains valid; report may append, sources/commands unchanged."
+}

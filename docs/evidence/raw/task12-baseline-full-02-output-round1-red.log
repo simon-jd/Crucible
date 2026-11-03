@@ -1,0 +1,316 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 21 items / 13 deselected / 8 selected
+
+serving/baseline/output_limits_test.py FFFFFFFF                          [100%]
+
+=================================== FAILURES ===================================
+_________ test_late_native_exit_invalidates_both_comparisons[SIGXFSZ] __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_late_native_exit_invalida0')
+exit_kind = 'SIGXFSZ'
+
+    @pytest.mark.parametrize("exit_kind", ["SIGXFSZ", "nonzero", "zero"])
+    def test_late_native_exit_invalidates_both_comparisons(tmp_path, exit_kind):
+        code = "import os,resource,signal;resource.setrlimit(resource.RLIMIT_CORE,(0,0));"
+        code += {
+            "SIGXFSZ": "signal.signal(signal.SIGXFSZ,signal.SIG_DFL);os.kill(os.getpid(),signal.SIGXFSZ)",
+            "nonzero": "raise SystemExit(7)",
+            "zero": "raise SystemExit(0)",
+        }[exit_kind]
+        with (tmp_path / "server.log").open("wb") as log:
+            child = subprocess.Popen([sys.executable, "-B", "-c", code], stdout=log, stderr=log)
+            child.wait(timeout=5)
+        summaries = [
+            {"trial": row, "status": "completed", "metrics": {"accepted": True, "goodput": 1}}
+            for row in experiment.trial_order()
+        ]
+        failure = experiment.finish_full(
+            tmp_path, child, None, {"azure": summaries, "burst": summaries}, [], None
+        )
+>       assert isinstance(failure, RuntimeError)
+E       assert False
+E        +  where False = isinstance(None, RuntimeError)
+
+serving/baseline/output_limits_test.py:325: AssertionError
+_________ test_late_native_exit_invalidates_both_comparisons[nonzero] __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_late_native_exit_invalida1')
+exit_kind = 'nonzero'
+
+    @pytest.mark.parametrize("exit_kind", ["SIGXFSZ", "nonzero", "zero"])
+    def test_late_native_exit_invalidates_both_comparisons(tmp_path, exit_kind):
+        code = "import os,resource,signal;resource.setrlimit(resource.RLIMIT_CORE,(0,0));"
+        code += {
+            "SIGXFSZ": "signal.signal(signal.SIGXFSZ,signal.SIG_DFL);os.kill(os.getpid(),signal.SIGXFSZ)",
+            "nonzero": "raise SystemExit(7)",
+            "zero": "raise SystemExit(0)",
+        }[exit_kind]
+        with (tmp_path / "server.log").open("wb") as log:
+            child = subprocess.Popen([sys.executable, "-B", "-c", code], stdout=log, stderr=log)
+            child.wait(timeout=5)
+        summaries = [
+            {"trial": row, "status": "completed", "metrics": {"accepted": True, "goodput": 1}}
+            for row in experiment.trial_order()
+        ]
+        failure = experiment.finish_full(
+            tmp_path, child, None, {"azure": summaries, "burst": summaries}, [], None
+        )
+>       assert isinstance(failure, RuntimeError)
+E       assert False
+E        +  where False = isinstance(None, RuntimeError)
+
+serving/baseline/output_limits_test.py:325: AssertionError
+___________ test_late_native_exit_invalidates_both_comparisons[zero] ___________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_late_native_exit_invalida2')
+exit_kind = 'zero'
+
+    @pytest.mark.parametrize("exit_kind", ["SIGXFSZ", "nonzero", "zero"])
+    def test_late_native_exit_invalidates_both_comparisons(tmp_path, exit_kind):
+        code = "import os,resource,signal;resource.setrlimit(resource.RLIMIT_CORE,(0,0));"
+        code += {
+            "SIGXFSZ": "signal.signal(signal.SIGXFSZ,signal.SIG_DFL);os.kill(os.getpid(),signal.SIGXFSZ)",
+            "nonzero": "raise SystemExit(7)",
+            "zero": "raise SystemExit(0)",
+        }[exit_kind]
+        with (tmp_path / "server.log").open("wb") as log:
+            child = subprocess.Popen([sys.executable, "-B", "-c", code], stdout=log, stderr=log)
+            child.wait(timeout=5)
+        summaries = [
+            {"trial": row, "status": "completed", "metrics": {"accepted": True, "goodput": 1}}
+            for row in experiment.trial_order()
+        ]
+        failure = experiment.finish_full(
+            tmp_path, child, None, {"azure": summaries, "burst": summaries}, [], None
+        )
+>       assert isinstance(failure, RuntimeError)
+E       assert False
+E        +  where False = isinstance(None, RuntimeError)
+
+serving/baseline/output_limits_test.py:325: AssertionError
+_______ test_requested_native_term_is_expected_and_retains_exit_identity _______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_requested_native_term_is_0')
+
+    def test_requested_native_term_is_expected_and_retains_exit_identity(tmp_path):
+        import signal
+        import time
+    
+        with (tmp_path / "server.log").open("wb") as log:
+            child = subprocess.Popen(
+                [sys.executable, "-B", "-c", "import os,time;os.write(1,b'ready');time.sleep(30)"],
+                stdout=log, stderr=log,
+            )
+            try:
+                deadline = time.monotonic() + 5
+                while not (tmp_path / "server.log").stat().st_size and time.monotonic() < deadline:
+                    time.sleep(0.01)
+                assert child.poll() is None
+                summaries = [
+                    {"trial": row, "status": "completed", "metrics": {"accepted": True, "goodput": 1}}
+                    for row in experiment.trial_order()
+                ]
+                failure = experiment.finish_full(
+                    tmp_path, child, None, {"azure": summaries, "burst": summaries}, [], None
+                )
+            finally:
+                if child.poll() is None:
+                    child.kill()
+                child.wait(timeout=5)
+        assert failure is None
+        terminal = json.loads((tmp_path / "terminal.json").read_text())
+        assert terminal["run_completed"] and not terminal["aborted"]
+>       assert terminal["cleanup"]["termination_requested"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'termination_requested'
+
+serving/baseline/output_limits_test.py:368: KeyError
+_________ test_real_http_content_length_completion_required[True-zero] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_real_http_content_length_0')
+case = 'zero', truncated = True
+
+    @pytest.mark.parametrize("case", ["zero", "error"])
+    @pytest.mark.parametrize("truncated", [True, False])
+    def test_real_http_content_length_completion_required(tmp_path, case, truncated):
+        import http.client
+        import http.server
+        import threading
+    
+        body = b"small server rejection"
+    
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+    
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                self.send_response(400)
+                self.send_header("Content-Length", str(len(body) + (9 if truncated else 0)))
+                self.end_headers()
+                self.wfile.write(body)
+                self.close_connection = True
+    
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            endpoint = f"http://127.0.0.1:{server.server_port}/generate"
+            if truncated:
+>               with pytest.raises(http.client.IncompleteRead):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               Failed: DID NOT RAISE <class 'http.client.IncompleteRead'>
+
+serving/baseline/output_limits_test.py:405: Failed
+________ test_real_http_content_length_completion_required[True-error] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_real_http_content_length_1')
+case = 'error', truncated = True
+
+    @pytest.mark.parametrize("case", ["zero", "error"])
+    @pytest.mark.parametrize("truncated", [True, False])
+    def test_real_http_content_length_completion_required(tmp_path, case, truncated):
+        import http.client
+        import http.server
+        import threading
+    
+        body = b"small server rejection"
+    
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+    
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                self.send_response(400)
+                self.send_header("Content-Length", str(len(body) + (9 if truncated else 0)))
+                self.end_headers()
+                self.wfile.write(body)
+                self.close_connection = True
+    
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            endpoint = f"http://127.0.0.1:{server.server_port}/generate"
+            if truncated:
+>               with pytest.raises(http.client.IncompleteRead):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               Failed: DID NOT RAISE <class 'http.client.IncompleteRead'>
+
+serving/baseline/output_limits_test.py:405: Failed
+________ test_real_http_content_length_completion_required[False-zero] _________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_real_http_content_length_2')
+case = 'zero', truncated = False
+
+    @pytest.mark.parametrize("case", ["zero", "error"])
+    @pytest.mark.parametrize("truncated", [True, False])
+    def test_real_http_content_length_completion_required(tmp_path, case, truncated):
+        import http.client
+        import http.server
+        import threading
+    
+        body = b"small server rejection"
+    
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+    
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                self.send_response(400)
+                self.send_header("Content-Length", str(len(body) + (9 if truncated else 0)))
+                self.end_headers()
+                self.wfile.write(body)
+                self.close_connection = True
+    
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            endpoint = f"http://127.0.0.1:{server.server_port}/generate"
+            if truncated:
+                with pytest.raises(http.client.IncompleteRead):
+                    experiment._native_cases(endpoint, [(case, [0], 0)], tmp_path, "native-smoke")
+            else:
+                experiment._native_cases(endpoint, [(case, [0], 0)], tmp_path, "native-smoke")
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
+        assert not thread.is_alive()
+        row = json.loads((tmp_path / "native-smoke.json").read_text())[0]
+        assert row["accepted_contract"] is not truncated
+        assert row.get("http_body_complete", False) is not truncated
+        assert row["observed_count_is_lower_bound"] is truncated
+        assert row["observed_bytes"] == len(body)
+>       assert row["remaining_content_length"] == (9 if truncated else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'remaining_content_length'
+
+serving/baseline/output_limits_test.py:419: KeyError
+________ test_real_http_content_length_completion_required[False-error] ________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/output-round1-red/test_real_http_content_length_3')
+case = 'error', truncated = False
+
+    @pytest.mark.parametrize("case", ["zero", "error"])
+    @pytest.mark.parametrize("truncated", [True, False])
+    def test_real_http_content_length_completion_required(tmp_path, case, truncated):
+        import http.client
+        import http.server
+        import threading
+    
+        body = b"small server rejection"
+    
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+    
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                self.send_response(400)
+                self.send_header("Content-Length", str(len(body) + (9 if truncated else 0)))
+                self.end_headers()
+                self.wfile.write(body)
+                self.close_connection = True
+    
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Handler)
+        thread = threading.Thread(target=server.serve_forever)
+        thread.start()
+        try:
+            endpoint = f"http://127.0.0.1:{server.server_port}/generate"
+            if truncated:
+                with pytest.raises(http.client.IncompleteRead):
+                    experiment._native_cases(endpoint, [(case, [0], 0)], tmp_path, "native-smoke")
+            else:
+                experiment._native_cases(endpoint, [(case, [0], 0)], tmp_path, "native-smoke")
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join(timeout=2)
+        assert not thread.is_alive()
+        row = json.loads((tmp_path / "native-smoke.json").read_text())[0]
+        assert row["accepted_contract"] is not truncated
+        assert row.get("http_body_complete", False) is not truncated
+        assert row["observed_count_is_lower_bound"] is truncated
+        assert row["observed_bytes"] == len(body)
+>       assert row["remaining_content_length"] == (9 if truncated else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'remaining_content_length'
+
+serving/baseline/output_limits_test.py:419: KeyError
+=========================== short test summary info ============================
+FAILED serving/baseline/output_limits_test.py::test_late_native_exit_invalidates_both_comparisons[SIGXFSZ]
+FAILED serving/baseline/output_limits_test.py::test_late_native_exit_invalidates_both_comparisons[nonzero]
+FAILED serving/baseline/output_limits_test.py::test_late_native_exit_invalidates_both_comparisons[zero]
+FAILED serving/baseline/output_limits_test.py::test_requested_native_term_is_expected_and_retains_exit_identity
+FAILED serving/baseline/output_limits_test.py::test_real_http_content_length_completion_required[True-zero]
+FAILED serving/baseline/output_limits_test.py::test_real_http_content_length_completion_required[True-error]
+FAILED serving/baseline/output_limits_test.py::test_real_http_content_length_completion_required[False-zero]
+FAILED serving/baseline/output_limits_test.py::test_real_http_content_length_completion_required[False-error]
+======================= 8 failed, 13 deselected in 2.18s =======================

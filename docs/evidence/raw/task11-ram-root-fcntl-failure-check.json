@@ -1,0 +1,151 @@
+{
+  "time_utc": "2026-10-25T13:51:44.778246+00:00",
+  "scope": "read-only fcntl constant diagnosis; ROOT full failed scratch inventory check; no memfd creation",
+  "actual_runtime_constants": {
+    "F_ADD_SEALS": null,
+    "F_GET_SEALS": null,
+    "F_SEAL_SEAL": null,
+    "F_SEAL_SHRINK": null,
+    "F_SEAL_GROW": null,
+    "F_SEAL_WRITE": null
+  },
+  "uname": [
+    "Linux",
+    "postedism-ubuntu-system-selfuse",
+    "7.0.0-38-generic",
+    "#38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026",
+    "x86_64"
+  ],
+  "headers_sha256": {
+    "/usr/include/linux/fcntl.h": "97a6f7544099b95d90b217acd59ec32301ef9f950d12532deed07eea50ab2356",
+    "/usr/include/asm-generic/fcntl.h": "03e8984563abd4be432fbe172fd136215a9edac05112dc29cff0f658890fabc4"
+  },
+  "header_values": {
+    "F_LINUX_SPECIFIC_BASE": 1024,
+    "F_ADD_SEALS": 1033,
+    "F_GET_SEALS": 1034,
+    "F_SEAL_SEAL": 1,
+    "F_SEAL_SHRINK": 2,
+    "F_SEAL_GROW": 4,
+    "F_SEAL_WRITE": 8
+  },
+  "primary_sources": [
+    "https://docs.python.org/3.12/library/fcntl.html",
+    "https://man7.org/linux/man-pages/man2/F_ADD_SEALS.2const.html"
+  ],
+  "original_exit": 4,
+  "original_testbody_ran": false,
+  "cleanup_confirmed": true,
+  "root_full_inventory_verified": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395020,
+      "mode": 16893,
+      "nlink": 4,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility",
+      "dev": 66307,
+      "inode": 56395028,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936205178521942
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cuda",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cupy",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/inductor",
+      "dev": 66307,
+      "inode": 56395034,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/numba",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/tmp",
+      "dev": 66307,
+      "inode": 56395029,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205665518693
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/torch",
+      "dev": 66307,
+      "inode": 56395033,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/triton",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/vllm",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/xdg",
+      "dev": 66307,
+      "inode": 56395030,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/static",
+      "dev": 66307,
+      "inode": 56395025,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792935779017365491
+    }
+  ],
+  "cleanup_authorized": false,
+  "limits_unchanged": true
+}

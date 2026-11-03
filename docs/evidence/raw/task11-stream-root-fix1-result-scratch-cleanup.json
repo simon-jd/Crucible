@@ -1,0 +1,117 @@
+{
+  "time_utc": "2026-10-25T16:01:24.234463+00:00",
+  "scope": "ROOT fullindependent predelete inventory/pathset/lstat after actualfix1CPU12pass; only exactemptydirs",
+  "original_session": 83761,
+  "tests": "8new+3affecteduncertainty+1realstream=12PASS5.54s",
+  "all10_executed_source_pins_match": true,
+  "peak_sampled_RSS_plus4MiB": 1363451904,
+  "cleanup_confirmed": true,
+  "errors": [],
+  "remaining_owned_children": [],
+  "inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395127,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1",
+      "dev": 66307,
+      "inode": 56395130,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/cuda",
+      "dev": 66307,
+      "inode": 56395141,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/cupy",
+      "dev": 66307,
+      "inode": 56395143,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/inductor",
+      "dev": 66307,
+      "inode": 56395137,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/numba",
+      "dev": 66307,
+      "inode": 56395144,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/tmp",
+      "dev": 66307,
+      "inode": 56395133,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943978406549422
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/torch",
+      "dev": 66307,
+      "inode": 56395136,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/triton",
+      "dev": 66307,
+      "inode": 56395138,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/vllm",
+      "dev": 66307,
+      "inode": 56395146,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    },
+    {
+      "path": ".cache/task11-ram-handoff/stream-fix1/xdg",
+      "dev": 66307,
+      "inode": 56395134,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792943972578587392
+    }
+  ],
+  "directories": 11,
+  "regular_files": 0,
+  "symlinks": 0,
+  "removed": true,
+  "preserved": "allraw/initial45/failures/reviews/runtime/client/sharedcache"
+}

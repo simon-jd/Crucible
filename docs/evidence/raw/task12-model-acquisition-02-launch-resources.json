@@ -1,0 +1,12 @@
+{
+  "unchanged_frozen_identities": 105,
+  "sample": {
+    "monotonic": 672009.331200989,
+    "project_bytes": 13266115727,
+    "shared_cache_bytes": 7419676297,
+    "remaining_download_bytes": 16395758873,
+    "free_bytes": 285346680832,
+    "canonical_rescans": []
+  },
+  "retained_failed_partial_bytes_in_shared_total": 303796954
+}

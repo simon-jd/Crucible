@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "nodes": [
+    {
+      "name": "n0",
+      "ssh": "operator@n0.example.invalid",
+      "address": "n0.example.invalid",
+      "gpus": [
+        {
+          "index": 0,
+          "pci_bus_id": "0000:10:00.0",
+          "numa_node": 0
+        },
+        {
+          "index": 1,
+          "pci_bus_id": "0000:11:00.0",
+          "numa_node": 1
+        }
+      ],
+      "hcas": [
+        {
+          "name": "mlx5_0",
+          "port": 1,
+          "numa_node": 0,
+          "gpu_index": 0,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        },
+        {
+          "name": "mlx5_1",
+          "port": 1,
+          "numa_node": 1,
+          "gpu_index": 1,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        }
+      ]
+    },
+    {
+      "name": "n1",
+      "ssh": "operator@n1.example.invalid",
+      "address": "n1.example.invalid",
+      "gpus": [
+        {
+          "index": 0,
+          "pci_bus_id": "0000:10:00.0",
+          "numa_node": 0
+        },
+        {
+          "index": 1,
+          "pci_bus_id": "0000:11:00.0",
+          "numa_node": 1
+        }
+      ],
+      "hcas": [
+        {
+          "name": "mlx5_0",
+          "port": 1,
+          "numa_node": 0,
+          "gpu_index": 0,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        },
+        {
+          "name": "mlx5_1",
+          "port": 1,
+          "numa_node": 1,
+          "gpu_index": 1,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        }
+      ]
+    },
+    {
+      "name": "n2",
+      "ssh": "operator@n2.example.invalid",
+      "address": "n2.example.invalid",
+      "gpus": [
+        {
+          "index": 0,
+          "pci_bus_id": "0000:10:00.0",
+          "numa_node": 0
+        },
+        {
+          "index": 1,
+          "pci_bus_id": "0000:11:00.0",
+          "numa_node": 1
+        }
+      ],
+      "hcas": [
+        {
+          "name": "mlx5_0",
+          "port": 1,
+          "numa_node": 0,
+          "gpu_index": 0,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        },
+        {
+          "name": "mlx5_1",
+          "port": 1,
+          "numa_node": 1,
+          "gpu_index": 1,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        }
+      ]
+    },
+    {
+      "name": "n3",
+      "ssh": "operator@n3.example.invalid",
+      "address": "n3.example.invalid",
+      "gpus": [
+        {
+          "index": 0,
+          "pci_bus_id": "0000:10:00.0",
+          "numa_node": 0
+        },
+        {
+          "index": 1,
+          "pci_bus_id": "0000:11:00.0",
+          "numa_node": 1
+        }
+      ],
+      "hcas": [
+        {
+          "name": "mlx5_0",
+          "port": 1,
+          "numa_node": 0,
+          "gpu_index": 0,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        },
+        {
+          "name": "mlx5_1",
+          "port": 1,
+          "numa_node": 1,
+          "gpu_index": 1,
+          "link_gbps": null,
+          "ideal_read_latency_us": null
+        }
+      ]
+    }
+  ],
+  "shared_root": "/shared/crucible",
+  "nccl_bin": "/opt/nccl-tests/build",
+  "remote_inventory": "/shared/site/inventory.json",
+  "runtime": {
+    "driver": null,
+    "cuda_toolkit": null,
+    "nccl_library": null,
+    "ofed": null,
+    "dcgm": null,
+    "perftest": null,
+    "openmpi": null,
+    "node_image_id": null,
+    "node_image_sha256": null,
+    "image_digest": null,
+    "nccl_tests_revision": null
+  },
+  "nccl_theory": {},
+  "baseline_summary": null,
+  "dcgm_required_tests": [
+    "diagnostic",
+    "pcie",
+    "memory",
+    "sm stress",
+    "targeted stress",
+    "targeted power"
+  ],
+  "note": "SYNTHETIC topology only, not H100/4090/NIC observations. Replace all site fields; execution disabled. 未在真实多机上验证"
+}

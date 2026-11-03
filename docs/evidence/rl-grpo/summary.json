@@ -1,0 +1,236 @@
+[
+ {
+  "run": "async-k1",
+  "staleness": 1,
+  "kl": 0.001,
+  "eval": {
+   "gsm8k": {
+    "before": 0.42625,
+    "after": 0.44375,
+    "problems": 200,
+    "samples_per_problem": 4,
+    "truncated": {
+     "before": 50,
+     "after": 7
+    },
+    "delta": 0.0175,
+    "stderr": 0.02231216965184839,
+    "improved": 55,
+    "worse": 48
+   },
+   "math500": {
+    "before": 0.2875,
+    "after": 0.31,
+    "problems": 100,
+    "samples_per_problem": 4,
+    "truncated": {
+     "before": 162,
+     "after": 106
+    },
+    "delta": 0.0225,
+    "stderr": 0.029536614839240062,
+    "improved": 28,
+    "worse": 19
+   }
+  },
+  "steps": {
+   "wall_s": {
+    "median": 5.928963168000337,
+    "min": 5.3322550860466436,
+    "max": 8.843576396000572
+   },
+   "rollout_s": {
+    "median": 1.8443104359321296,
+    "min": 1.482044648961164,
+    "max": 2.427556390990503
+   },
+   "learn_s": {
+    "median": 2.949021957523655,
+    "min": 2.6454297970049083,
+    "max": 5.880109467078
+   },
+   "sync_s": {
+    "median": 0.018884960503783077,
+    "min": 0.017932274960912764,
+    "max": 0.20234219601843506
+   },
+   "gpu_idle_share": {
+    "median": 0.1833547134905011,
+    "min": 0.11472477857328706,
+    "max": 0.2244138889389355
+   },
+   "dropped_stale": 0,
+   "reward_first10": 0.4125,
+   "reward_last10": 0.5484375,
+   "steps": 100
+  },
+  "totals": {
+   "generated": 6464,
+   "trained": 6400,
+   "dropped_stale": 0,
+   "flags": {
+    "no_boxed_answer": 635,
+    "truncated": 682,
+    "multiple_boxed_answers": 11
+   }
+  },
+  "peak_cuda_allocated_bytes": 14798099456,
+  "wall_s": 752.3585100800265
+ },
+ {
+  "run": "sync-k0",
+  "staleness": 0,
+  "kl": 0.001,
+  "eval": {
+   "gsm8k": {
+    "before": 0.42625,
+    "after": 0.4075,
+    "problems": 200,
+    "samples_per_problem": 4,
+    "truncated": {
+     "before": 50,
+     "after": 703
+    },
+    "delta": -0.01875,
+    "stderr": 0.02549371165936522,
+    "improved": 55,
+    "worse": 68
+   },
+   "math500": {
+    "before": 0.2875,
+    "after": 0.2875,
+    "problems": 100,
+    "samples_per_problem": 4,
+    "truncated": {
+     "before": 162,
+     "after": 335
+    },
+    "delta": 0.0,
+    "stderr": 0.026352313834736497,
+    "improved": 20,
+    "worse": 21
+   }
+  },
+  "steps": {
+   "wall_s": {
+    "median": 5.841352518997155,
+    "min": 5.57691923098173,
+    "max": 6.405944675090723
+   },
+   "rollout_s": {
+    "median": 1.9120339170331135,
+    "min": 1.7676073970505968,
+    "max": 2.16482874203939
+   },
+   "learn_s": {
+    "median": 2.8159167314879596,
+    "min": 2.6953104119747877,
+    "max": 3.1694103920599446
+   },
+   "sync_s": {
+    "median": 0.0181496879667975,
+    "min": 0.017340509919449687,
+    "max": 0.0216000999789685
+   },
+   "gpu_idle_share": {
+    "median": 0.18287696204117562,
+    "min": 0.16269853246610677,
+    "max": 0.22772681073525003
+   },
+   "dropped_stale": 0,
+   "reward_first10": 0.4015625,
+   "reward_last10": 0.59375,
+   "steps": 100
+  },
+  "totals": {
+   "generated": 6400,
+   "trained": 6400,
+   "dropped_stale": 0,
+   "flags": {
+    "no_boxed_answer": 544,
+    "truncated": 2612,
+    "multiple_boxed_answers": 74
+   }
+  },
+  "peak_cuda_allocated_bytes": 14800766464,
+  "wall_s": 731.3800720010186
+ },
+ {
+  "run": "async-k1-kl0",
+  "staleness": 1,
+  "kl": 0.0,
+  "eval": {
+   "gsm8k": {
+    "before": 0.42625,
+    "after": 0.4375,
+    "problems": 200,
+    "samples_per_problem": 4,
+    "truncated": {
+     "before": 50,
+     "after": 9
+    },
+    "delta": 0.01125,
+    "stderr": 0.023463961193165402,
+    "improved": 57,
+    "worse": 48
+   },
+   "math500": {
+    "before": 0.2875,
+    "after": 0.32,
+    "problems": 100,
+    "samples_per_problem": 4,
+    "truncated": {
+     "before": 162,
+     "after": 109
+    },
+    "delta": 0.0325,
+    "stderr": 0.03049569434752017,
+    "improved": 23,
+    "worse": 16
+   }
+  },
+  "steps": {
+   "wall_s": {
+    "median": 5.736723806010559,
+    "min": 5.2499079630943015,
+    "max": 6.449679295998067
+   },
+   "rollout_s": {
+    "median": 1.8460578140220605,
+    "min": 1.4982546519022435,
+    "max": 2.1972136029507965
+   },
+   "learn_s": {
+    "median": 2.76027868851088,
+    "min": 2.613683997071348,
+    "max": 3.185051887994632
+   },
+   "sync_s": {
+    "median": 0.01817583554657176,
+    "min": 0.017311342991888523,
+    "max": 0.020628742058761418
+   },
+   "gpu_idle_share": {
+    "median": 0.1886614693997401,
+    "min": 0.16612701911708838,
+    "max": 0.22710867108847577
+   },
+   "dropped_stale": 0,
+   "reward_first10": 0.384375,
+   "reward_last10": 0.646875,
+   "steps": 100
+  },
+  "totals": {
+   "generated": 6464,
+   "trained": 6400,
+   "dropped_stale": 0,
+   "flags": {
+    "no_boxed_answer": 592,
+    "truncated": 648,
+    "multiple_boxed_answers": 17
+   }
+  },
+  "peak_cuda_allocated_bytes": 14793249280,
+  "wall_s": 705.4487597760744
+ }
+]

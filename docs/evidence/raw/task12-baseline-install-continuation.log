@@ -1,0 +1,32 @@
+installed 3/62 nvidia-cutlass-dsl project_bytes=12579495620
+installed 4/62 pyarrow project_bytes=12720982679
+installed 5/62 decord2 project_bytes=12796645355
+installed 6/62 pandas project_bytes=12840076198
+installed 7/62 cuda-bindings project_bytes=12950686612
+installed 8/62 transformers project_bytes=13003099250
+installed 9/62 xgrammar project_bytes=13036144908
+installed 10/62 flashinfer-python project_bytes=13076966940
+installed 11/62 grpcio project_bytes=13092967865
+installed 12/62 modelscope project_bytes=13115098527
+installed 13/62 torchao project_bytes=13140544511
+installed 14/62 lxml project_bytes=13152464557
+installed 15/62 jedi project_bytes=13167051797
+installed 16/62 hf-transfer project_bytes=13176722091
+installed 17/62 sglang project_bytes=13191072053
+installed 18/62 tokenizers project_bytes=13201662003
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 493, in <module>
+    main()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 485, in main
+    install_locked(args.install_lock, args.work, args.output, args.continue_from)
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 420, in install_locked
+    installed = install_one(
+                ^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 162, in install_one
+    payloads = verify_wheel(wheel, expected)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py", line 148, in verify_wheel
+    raise ValueError("large relocated payload needs an explicit audited mapping")
+ValueError: large relocated payload needs an explicit audited mapping

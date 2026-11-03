@@ -1,0 +1,4 @@
+baseline valid: True descendant still alive: True
+Traceback (most recent call last):
+  File "<stdin>", line 22, in <module>
+AssertionError: leader-only wait falsely accepted surviving descendant

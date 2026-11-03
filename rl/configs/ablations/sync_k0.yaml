@@ -1,0 +1,7 @@
+extends: qwen25_05b_math_code.yaml
+id: sync_k0
+declared_factor: schedule
+overrides:
+  schedule:
+    mode: sync
+    max_staleness: 0

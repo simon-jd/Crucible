@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 25 items
+
+scripts/tests/test_check_report_numbers.py::test_valid_citation_and_nested_section PASSED [  4%]
+scripts/tests/test_check_report_numbers.py::test_uncited_draft_fails_with_report_line PASSED [  8%]
+scripts/tests/test_check_report_numbers.py::test_wrong_or_missing_anchor[absent] PASSED [ 12%]
+scripts/tests/test_check_report_numbers.py::test_wrong_or_missing_anchor[] PASSED [ 16%]
+scripts/tests/test_check_report_numbers.py::test_value_must_be_in_referenced_section PASSED [ 20%]
+scripts/tests/test_check_report_numbers.py::test_multiple_claims_tables_sign_decimal_scientific_and_identifiers PASSED [ 24%]
+scripts/tests/test_check_report_numbers.py::test_same_line_required_and_every_claim_covered PASSED [ 28%]
+scripts/tests/test_check_report_numbers.py::test_filters_keep_visible_link_text_and_code_values PASSED [ 32%]
+scripts/tests/test_check_report_numbers.py::test_evidence_markup_cannot_supply_values PASSED [ 36%]
+scripts/tests/test_check_report_numbers.py::test_dangling_or_malformed_citation_fails_even_without_claims PASSED [ 40%]
+scripts/tests/test_check_report_numbers.py::test_path_escape_rejected[../outside.md] PASSED [ 44%]
+scripts/tests/test_check_report_numbers.py::test_path_escape_rejected[docs/evidence/../outside.md] PASSED [ 48%]
+scripts/tests/test_check_report_numbers.py::test_path_escape_rejected[/tmp/x.md] PASSED [ 52%]
+scripts/tests/test_check_report_numbers.py::test_symlink_escape_and_evidence_root_symlink_rejected PASSED [ 56%]
+scripts/tests/test_check_report_numbers.py::test_duplicate_anchor_and_heading_in_fence PASSED [ 60%]
+scripts/tests/test_check_report_numbers.py::test_unicode_numeric_glyphs_fail_clearly[\uff14\uff12] PASSED [ 64%]
+scripts/tests/test_check_report_numbers.py::test_unicode_numeric_glyphs_fail_clearly[\u0664\u0662] PASSED [ 68%]
+scripts/tests/test_check_report_numbers.py::test_unicode_numeric_glyphs_fail_clearly[\xb2] PASSED [ 72%]
+scripts/tests/test_check_report_numbers.py::test_unicode_numeric_glyphs_fail_clearly[\u2163] PASSED [ 76%]
+scripts/tests/test_check_report_numbers.py::test_missing_empty_and_each_zero_claim_input_fail PASSED [ 80%]
+scripts/tests/test_check_report_numbers.py::test_cli_missing_input_and_uncited_failure_then_corrected_pass PASSED [ 84%]
+scripts/tests/test_check_report_numbers.py::test_corrected_real_drafts_pass PASSED [ 88%]
+scripts/tests/test_check_report_numbers.py::test_grouped_unit_literal_is_indivisible PASSED [ 92%]
+scripts/tests/test_check_report_numbers.py::test_multibacktick_code_cannot_hide_linklike_numbers PASSED [ 96%]
+scripts/tests/test_check_report_numbers.py::test_signed_unit_literal_cannot_lose_sign PASSED [100%]
+
+============================== 25 passed in 0.16s ==============================

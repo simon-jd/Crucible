@@ -1,0 +1,194 @@
+{
+  "command": [
+    ".tools/go/bin/go",
+    "test",
+    "-p=1",
+    "-vet=off",
+    "-run",
+    "^TestAccountingNoSilentLoss$",
+    "-count=1",
+    "-v",
+    "serving/replay/accounting.go",
+    "serving/replay/accounting_test.go"
+  ],
+  "samples": [
+    {
+      "seconds": 0.99664475210011,
+      "interval_seconds": 0.99664475210011,
+      "owned_bytes": 0,
+      "rss_bytes": 0,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.2470277620013803,
+      "interval_seconds": 0.25038300990127027,
+      "owned_bytes": 615761,
+      "rss_bytes": 28086272,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.5066403300734237,
+      "interval_seconds": 0.25961256807204336,
+      "owned_bytes": 4443119,
+      "rss_bytes": 33411072,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 1.7680808670120314,
+      "interval_seconds": 0.2614405369386077,
+      "owned_bytes": 6158942,
+      "rss_bytes": 73318400,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 2.0314225730253384,
+      "interval_seconds": 0.263341706013307,
+      "owned_bytes": 7990322,
+      "rss_bytes": 123305984,
+      "log_bytes": 0,
+      "canonical_bytes": 13296873756,
+      "projected_bytes": 13978883434,
+      "free_bytes": 269159342080
+    },
+    {
+      "seconds": 3.3647523790132254,
+      "interval_seconds": 1.333329805987887,
+      "owned_bytes": 20546560,
+      "rss_bytes": 277303296,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 3.6277722500963137,
+      "interval_seconds": 0.2630198710830882,
+      "owned_bytes": 36340061,
+      "rss_bytes": 64413696,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 3.8934794350061566,
+      "interval_seconds": 0.2657071849098429,
+      "owned_bytes": 40155239,
+      "rss_bytes": 111005696,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 4.158378456020728,
+      "interval_seconds": 0.2648990210145712,
+      "owned_bytes": 45131835,
+      "rss_bytes": 47865856,
+      "log_bytes": 0,
+      "canonical_bytes": 13334861776,
+      "projected_bytes": 13979729941,
+      "free_bytes": 269102977024
+    },
+    {
+      "seconds": 5.372807644074783,
+      "interval_seconds": 1.214429188054055,
+      "owned_bytes": 68034935,
+      "rss_bytes": 47144960,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 5.640393770998344,
+      "interval_seconds": 0.2675861269235611,
+      "owned_bytes": 72378905,
+      "rss_bytes": 52240384,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 5.908706153044477,
+      "interval_seconds": 0.2683123820461333,
+      "owned_bytes": 78350452,
+      "rss_bytes": 20115456,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 6.178255067090504,
+      "interval_seconds": 0.26954891404602677,
+      "owned_bytes": 81500825,
+      "rss_bytes": 30523392,
+      "log_bytes": 0,
+      "canonical_bytes": 13370978291,
+      "projected_bytes": 13979477466,
+      "free_bytes": 269064810496
+    },
+    {
+      "seconds": 7.43088678305503,
+      "interval_seconds": 1.252631715964526,
+      "owned_bytes": 103773776,
+      "rss_bytes": 66736128,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 7.706733289989643,
+      "interval_seconds": 0.275846506934613,
+      "owned_bytes": 109701215,
+      "rss_bytes": 47525888,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 7.982009699102491,
+      "interval_seconds": 0.27527640911284834,
+      "owned_bytes": 113571514,
+      "rss_bytes": 101728256,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 8.255807030014694,
+      "interval_seconds": 0.2737973309122026,
+      "owned_bytes": 116446351,
+      "rss_bytes": 78929920,
+      "log_bytes": 0,
+      "canonical_bytes": 13348586554,
+      "projected_bytes": 13922140203,
+      "free_bytes": 269105676288
+    }
+  ],
+  "scan_errors": [],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "f29319324bcb5f753a2b6828276da41b651114beb37b1ced3a701d0d907871cd",
+  "before": {
+    "canonical_bytes": 13288883434,
+    "owned_bytes": 0,
+    "projected_bytes": 13978883434,
+    "free_bytes": 269170159616
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task15-go-build/tmp"
+  },
+  "pid": 3,
+  "leader_start": "68614835",
+  "exit_code": 1,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 9.499647921998985,
+  "after": {
+    "canonical_bytes": 13348586554,
+    "owned_bytes": 59702330,
+    "projected_bytes": 13978884224,
+    "free_bytes": 269105659904
+  }
+}

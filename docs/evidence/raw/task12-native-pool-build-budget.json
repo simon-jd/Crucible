@@ -1,0 +1,11 @@
+{
+  "actual_retained_bytes_including_root_proof_and_whole_touched_files": 248883,
+  "future_build_proof_cap": 300000,
+  "future_complete_inventory_cap": 270000,
+  "root_review_reporting_holdback": 65536,
+  "future_handoff_proposal_freeze_holdback": 100000,
+  "projected_retained_bytes": 984419,
+  "cap": 2000000,
+  "actual_pool_absent": true,
+  "native_run_authorized": false
+}

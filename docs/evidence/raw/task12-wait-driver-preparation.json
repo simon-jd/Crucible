@@ -1,0 +1,15 @@
+{
+  "status": "source-only-proposed-not-authorized-or-launched",
+  "driver_sha256": "4e9593e1025405d7213ef1e86fcadfca972ad49a4b36db65755aa6a32f27d21c",
+  "proposal_sha256": "3c81fe628704757cc52c6d14c0d1800ec83e3d88713abdd472e1f3dceb256001",
+  "retained_before_this_receipt": 122089,
+  "receipt_max_allowance": 4096,
+  "run_cap": 1302528,
+  "inventory_cap": 270000,
+  "root_holdback": 65536,
+  "projected_with_receipt": 1764249,
+  "cap": 2000000,
+  "driver_static_ast_parse": true,
+  "build_handle": 25010,
+  "build_exit": 0
+}

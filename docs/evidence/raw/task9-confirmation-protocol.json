@@ -1,0 +1,41 @@
+{
+  "purpose": "independent confirmation after backend-alignment diagnosis; not held-out task quality",
+  "reference": "Transformers4.55.4 BF16 exact published weights, attn_implementation=sdpa matching learner; TF32 disabled; highest FP32 matmul precision",
+  "actual": "vLLM0.10.2 V1 BF16 raw_logits, complete model vocabulary for final real prompt position",
+  "versions": [
+    7,
+    8
+  ],
+  "snapshot_digests": {
+    "7": "9eee1e3b599f57c1368bb29a336a132e913b22c70de714a47e7355671a9d3f51",
+    "8": "4d3edc9fbfe4b97581ed36a523b4a1e48a1283f08ed539e281f1ba4c8b640e27"
+  },
+  "prompts": [
+    "The largest planet in the Solar System is",
+    "A triangle has three",
+    "The opposite of cold is",
+    "Two times three equals",
+    "Water freezes at a temperature of",
+    "In a computer, RAM is used to"
+  ],
+  "acceptance_per_prompt_per_version": {
+    "all_model_vocab_coordinates": true,
+    "finite": true,
+    "absolute_tolerance": 0.375,
+    "relative_tolerance": 0.01,
+    "relative_reference": "HF BF16 SDPA; abs(actual-reference) <= atol + rtol*abs(reference)",
+    "maximum_rms_error": 0.1,
+    "maximum_mean_absolute_error": 0.08,
+    "exact_input_ids_and_final_position": true
+  },
+  "basis": "empirical compatibility bound calibrated from two prior diagnostic prompts (SDPA maxima 0.28125/0.21875, RMS 0.06844/0.03938); independent inputs must confirm it. Not a universal BF16 error guarantee.",
+  "failure_policy": "retain original failure and this protocol; no silent widening, prompt deletion, or switch to argmax/selected-token metrics after seeing confirmation data",
+  "original_failed_comparison": {
+    "reference": "HF BF16 eager",
+    "absolute_tolerance": 0.25,
+    "relative_tolerance": 0.01,
+    "preserve": true
+  },
+  "lifecycle": "reuse only two complete snapshots; no learner rerun or third snapshot; reference processes exit before vLLM; fixed shared flock and headroom guard; verified worker cleanup",
+  "scope": "complete weight transfer/content and full logits compatibility for this fixed model/runtime/input suite; no multi-GPU NCCL, throughput or held-out quality claim"
+}

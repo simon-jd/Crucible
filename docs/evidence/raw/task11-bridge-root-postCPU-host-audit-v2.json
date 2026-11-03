@@ -1,0 +1,1090 @@
+{
+  "time_utc": "2026-10-25T18:01:51.072008+00:00",
+  "scope": "host-permitted read-only /proc exactprojectinterpreter/exactmodule tokens; no signals orGPUquery; unknowns retained",
+  "namespace": "pid:[4026531836]",
+  "seen": 1159,
+  "scoped_runtime_candidates": [],
+  "unknown_entries": [
+    {
+      "pid": 1,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 685,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 728,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 732,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 737,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2161,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2162,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2165,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2166,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2172,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2175,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2183,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2189,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2192,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2194,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2195,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2198,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2200,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2207,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2209,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2210,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2248,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2303,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2305,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2309,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2321,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2368,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2435,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2506,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2532,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2556,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2560,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2562,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2588,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2606,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2896,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3018,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3478,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3512,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 4962,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 5635,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7289,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7321,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7329,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7356,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7378,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7472,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7497,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7505,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7545,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7561,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7585,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7595,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7669,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7694,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7728,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7744,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7762,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7780,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7783,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7805,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7855,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7923,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7949,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 7976,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8001,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8015,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8018,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8039,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8070,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8092,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8132,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8142,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8144,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8164,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8180,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8218,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8267,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8323,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8324,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8341,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8363,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8476,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8518,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8589,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8597,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8625,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8633,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8672,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8697,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8766,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8772,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8817,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8824,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8871,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8897,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8922,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8976,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8977,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 8999,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 9000,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 9001,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 9186,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 9258,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 9451,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 9681,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10088,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10096,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10131,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10173,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10214,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10218,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10249,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10250,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10417,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10459,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10472,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10490,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 10858,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11414,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11726,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11737,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11762,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11853,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11860,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 11974,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12004,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12018,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12036,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12062,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12093,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12124,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12151,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12170,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12212,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12244,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12258,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12275,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12283,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12291,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12324,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12353,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12369,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12391,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12416,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12448,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12472,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12479,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12511,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12537,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12569,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12607,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12651,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12660,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12795,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12862,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12889,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12892,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12903,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12904,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12934,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12935,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 12936,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13069,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13140,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13172,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13207,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13224,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13578,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13594,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13610,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13646,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13654,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13661,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 13773,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 15607,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 15608,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 15609,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 15647,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 16294,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 17078,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 17558,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 19730,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 22037,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25013,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25651,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25678,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25773,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25796,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25822,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25845,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25890,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25914,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25957,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 25986,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26003,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26018,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26035,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26083,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26088,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26093,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26098,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 26862,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 119949,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 305858,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 305868,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 305870,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 986761,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691464,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691467,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691493,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691494,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691496,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691498,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691515,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691516,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691517,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691518,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691521,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691524,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691559,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691560,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691637,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691641,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691648,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691737,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691780,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691786,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691804,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1691812,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692013,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692046,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692049,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692051,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692086,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692114,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1692498,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1763646,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1763649,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1763812,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 1767066,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2190702,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2553596,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2569684,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2717649,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2740857,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2759412,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2766140,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2766290,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2766810,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2771992,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2774935,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2787420,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2804147,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2807767,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2808116,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2808709,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2839187,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2855132,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2860486,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 2860510,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3162412,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3162414,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3162804,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3162805,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3163007,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3740835,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3826439,
+      "reason": "PermissionError"
+    },
+    {
+      "pid": 3826483,
+      "reason": "PermissionError"
+    }
+  ],
+  "unknown_count": 269,
+  "port31012_closed": true,
+  "scratch_absent": true,
+  "prior_default_audit_scope_correction": "task11-bridge-root-postCPU-host-audit.json sawonly2sandbox-visibleprocesses; retained asnamespace-only, not hostexhaustiveness",
+  "no_global_GPU_or_sharedlock_idle_claim": true
+}

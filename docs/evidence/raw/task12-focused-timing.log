@@ -1,0 +1,9 @@
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:28: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestRecordsTTFTandTPOT
+--- PASS: TestRecordsTTFTandTPOT (0.02s)
+=== RUN   TestInvalidatesLaggingRun
+--- PASS: TestInvalidatesLaggingRun (0.00s)
+PASS
+ok  	crucible/serving/replay	2.032s

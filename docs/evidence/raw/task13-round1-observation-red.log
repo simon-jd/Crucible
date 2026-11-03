@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 1 item
+
+serving/eval/tests/test_accuracy.py F                                    [100%]
+
+=================================== FAILURES ===================================
+_________ test_missing_trailing_schedule_outside_observation_rejected __________
+
+    def test_missing_trailing_schedule_outside_observation_rejected():
+        from serving.eval.accuracy import report
+    
+>       with pytest.raises(ValueError, match='observation.*schedule'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+serving/eval/tests/test_accuracy.py:482: Failed
+=========================== short test summary info ============================
+FAILED serving/eval/tests/test_accuracy.py::test_missing_trailing_schedule_outside_observation_rejected
+============================== 1 failed in 0.05s ===============================

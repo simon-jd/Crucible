@@ -1,0 +1,16 @@
+{
+  "command": [
+    "bash",
+    ".cache/task14/fix1-red.sh"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 4.135637273080647,
+  "project_bytes_before": 10687119907,
+  "project_bytes_after": 10688992629,
+  "sampling": "0.25s requested interval plus scan time; transient peaks may be missed",
+  "scope": "wrapper and descendants RSS; task14 caches/temp only; CPU-only",
+  "sampled_tree_rss_bytes": 196939776,
+  "sampled_task14_cache_bytes": 294403111,
+  "sampled_tmp_bytes": 9799399,
+  "samples": 14
+}

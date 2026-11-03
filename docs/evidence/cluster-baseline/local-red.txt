@@ -1,0 +1,1 @@
+FAIL: missing required scheduler: srun

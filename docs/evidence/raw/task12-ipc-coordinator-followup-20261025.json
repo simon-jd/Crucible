@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-25T18:56:28.221397+00:00",
+  "source": "Latest user message relaying coordinator independent checks, recorded by ROOT; not an independent signature or new GPU authorization",
+  "user_message_verbatim": "协调者独立核验：本次wrapper3061993/guard3062015/server3062912均已不存在，31012关闭；终态sha8bec8abf…且30trial全not_run。本次授权已在monitor标为耗用，禁止重跑。失败现场两项是native-cache/tmp/tmp48m9d3ci与tmps86njvgs，均UNIX socket、uid/gid1000；不要泛化放行全部特殊文件或改发送门槛。请完成原始清理证据后，仅有界CPU核对这些IPC的实际来源和精确兼容修正/复审。另采锁EAGAIN应区分其他当前持锁作业，不能据此杀他人或误称旧guard仍持锁；不要求所有其他项目停GPU。新候选真就绪再给精确摘要，不先请求人反复确认。",
+  "original_authority_spent": true,
+  "new_GPU_authority": false,
+  "CPU_source_and_narrow_fix_review_authorized": true,
+  "socket_uid_gid_provenance": "Coordinator supplied observation; ROOT earlier lstat inventory omitted uid/gid, so no retroactive ROOT observation claim."
+}

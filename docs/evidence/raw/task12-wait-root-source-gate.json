@@ -1,0 +1,65 @@
+{
+  "stage": "D-source-command-gate",
+  "base": "0f4c2e5a420e5598241da4162af8997c91830824",
+  "source_freeze_sha256": "91032f16f5ba3fb7bb43f8a156d9e111c31f746ec5152295bc0e87f2ba06280a",
+  "report_sha256_at_gate": "0f6b06d513b593cf1ce08e9e385aaf172b117e07cafac3cd76068e9f4d084f28",
+  "checked": {
+    "serving/replay/schedule.go": {
+      "bytes": 5582,
+      "sha256": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    "serving/replay/diagnostic.go": {
+      "bytes": 9983,
+      "sha256": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f"
+    },
+    "serving/replay/diagnostic_test.go": {
+      "bytes": 9844,
+      "sha256": "c7c45b7b0b74d33f09bae4c4609bd81c41ff0d859b3809833de3043cd695c761"
+    },
+    "serving/replay/wait.go": {
+      "bytes": 2437,
+      "sha256": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3"
+    },
+    "serving/replay/wait_test.go": {
+      "bytes": 9890,
+      "sha256": "e1958222a428622954432df3aef0274ad7a50c63c37e017ff022538a89d2e148"
+    },
+    "docs/evidence/raw/task12-wait-go-monitor.py": {
+      "bytes": 10954,
+      "sha256": "8d06f5ca394d81e81ee419f8b4e91ac6cf4365ede7244b5773809564b3eb524c"
+    },
+    ".tools/go/bin/go": {
+      "bytes": 17164222,
+      "sha256": "5f5eb6d0b2fb6aa0bb5d5f8c5f1c944e0de955c925f0111af92a9d8f79680b5b"
+    },
+    ".tools/go/bin/gofmt": {
+      "bytes": 3144728,
+      "sha256": "fd464d1c9098a6714d06bd3fcd2a1fedcdd291e710241160ebb663bf99adf2f8"
+    },
+    ".cache/task12-baseline/bin/replay": {
+      "bytes": 10138001,
+      "sha256": "68bb43b4aee08ca371d05a75b467a1f163c1fe8e959ccb534811740b63dffa93"
+    }
+  },
+  "monitor_exact_three_substitutions": true,
+  "new_loan_absent": true,
+  "project_bytes": 13300604993,
+  "planned_bytes": 690000000,
+  "free_bytes": 265700884480,
+  "errors": [],
+  "allowed": [
+    "once smoke true",
+    "isolated only-segment-cap mutation RED",
+    "focused command in report",
+    "new race command in report",
+    "build command in report"
+  ],
+  "not_yet_admitted": "CPU timing or GPU/native run",
+  "loan_inside_existing_reserve": 500000000,
+  "owned_early_stop": 400000000,
+  "planning_checkpoint": 300000000,
+  "retained_evidence_cap": 2000000,
+  "cleanup_inventory_reserve": 270000,
+  "root_review_reserve": 65536,
+  "semantic_note": "Version2 final wake may precede due if time crosses due during bookkeeping; return observes absolute due and does not perform another wait."
+}

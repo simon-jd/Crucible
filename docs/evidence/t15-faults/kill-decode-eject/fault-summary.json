@@ -1,0 +1,281 @@
+{
+ "trials": [
+  {
+   "index": 0,
+   "condition": "kill",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 258,
+    "Failed": 2,
+    "Retried": 0,
+    "FailureStatuses": {
+     "http_error": 1,
+     "stream_error": 1
+    }
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 258,
+   "failed": 2,
+   "failure_statuses": {
+    "stream_error": 1,
+    "http_error": 1
+   },
+   "kill_s": 30.036137580871582,
+   "first_failure_after_kill_s": -1.2211495808715824,
+   "last_failure_after_kill_s": 0.37070741912841854,
+   "router": {
+    "ejections": 1,
+    "dial_retries": 0,
+    "eject_lines": 1,
+    "kill_to_first_eject_s": 0.4393296241760254
+   }
+  },
+  {
+   "index": 1,
+   "condition": "kill-retry",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 259,
+    "Failed": 1,
+    "Retried": 0,
+    "FailureStatuses": {
+     "stream_error": 1
+    }
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 259,
+   "failed": 1,
+   "failure_statuses": {
+    "stream_error": 1
+   },
+   "kill_s": 30.03480577468872,
+   "first_failure_after_kill_s": -1.0702337746887203,
+   "last_failure_after_kill_s": -1.0702337746887203,
+   "router": {
+    "ejections": 1,
+    "dial_retries": 1,
+    "eject_lines": 1,
+    "kill_to_first_eject_s": 0.4399380683898926
+   }
+  },
+  {
+   "index": 2,
+   "condition": "none",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 260,
+    "Failed": 0,
+    "Retried": 0,
+    "FailureStatuses": {}
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 260,
+   "failed": 0,
+   "failure_statuses": {},
+   "kill_s": null,
+   "first_failure_after_kill_s": null,
+   "last_failure_after_kill_s": null,
+   "router": {
+    "ejections": 0,
+    "dial_retries": 0,
+    "eject_lines": 0,
+    "kill_to_first_eject_s": null
+   }
+  },
+  {
+   "index": 3,
+   "condition": "none",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 260,
+    "Failed": 0,
+    "Retried": 0,
+    "FailureStatuses": {}
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 260,
+   "failed": 0,
+   "failure_statuses": {},
+   "kill_s": null,
+   "first_failure_after_kill_s": null,
+   "last_failure_after_kill_s": null,
+   "router": {
+    "ejections": 0,
+    "dial_retries": 0,
+    "eject_lines": 0,
+    "kill_to_first_eject_s": null
+   }
+  },
+  {
+   "index": 4,
+   "condition": "kill-retry",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 260,
+    "Failed": 0,
+    "Retried": 0,
+    "FailureStatuses": {}
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 260,
+   "failed": 0,
+   "failure_statuses": {},
+   "kill_s": 30.03751230239868,
+   "first_failure_after_kill_s": null,
+   "last_failure_after_kill_s": null,
+   "router": {
+    "ejections": 1,
+    "dial_retries": 1,
+    "eject_lines": 1,
+    "kill_to_first_eject_s": 0.43970823287963867
+   }
+  },
+  {
+   "index": 5,
+   "condition": "kill",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 258,
+    "Failed": 2,
+    "Retried": 0,
+    "FailureStatuses": {
+     "http_error": 1,
+     "stream_error": 1
+    }
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 258,
+   "failed": 2,
+   "failure_statuses": {
+    "stream_error": 1,
+    "http_error": 1
+   },
+   "kill_s": 30.036030054092407,
+   "first_failure_after_kill_s": -1.2210420540924076,
+   "last_failure_after_kill_s": 0.37081494590759334,
+   "router": {
+    "ejections": 1,
+    "dial_retries": 0,
+    "eject_lines": 1,
+    "kill_to_first_eject_s": 0.4592165946960449
+   }
+  },
+  {
+   "index": 6,
+   "condition": "kill",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 257,
+    "Failed": 3,
+    "Retried": 0,
+    "FailureStatuses": {
+     "http_error": 1,
+     "stream_error": 2
+    }
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 257,
+   "failed": 3,
+   "failure_statuses": {
+    "stream_error": 2,
+    "http_error": 1
+   },
+   "kill_s": 30.038025617599487,
+   "first_failure_after_kill_s": -1.2230376175994877,
+   "last_failure_after_kill_s": 1.178579382400514,
+   "router": {
+    "ejections": 1,
+    "dial_retries": 0,
+    "eject_lines": 1,
+    "kill_to_first_eject_s": 1.2498929500579834
+   }
+  },
+  {
+   "index": 7,
+   "condition": "kill-retry",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 259,
+    "Failed": 1,
+    "Retried": 0,
+    "FailureStatuses": {
+     "stream_error": 1
+    }
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 259,
+   "failed": 1,
+   "failure_statuses": {
+    "stream_error": 1
+   },
+   "kill_s": 30.032878160476685,
+   "first_failure_after_kill_s": -1.217890160476685,
+   "last_failure_after_kill_s": -1.217890160476685,
+   "router": {
+    "ejections": 1,
+    "dial_retries": 1,
+    "eject_lines": 1,
+    "kill_to_first_eject_s": 0.4444308280944824
+   }
+  },
+  {
+   "index": 8,
+   "condition": "none",
+   "accounting": {
+    "Planned": 260,
+    "Completed": 260,
+    "Failed": 0,
+    "Retried": 0,
+    "FailureStatuses": {}
+   },
+   "sender_valid": true,
+   "planned": 260,
+   "ok": 260,
+   "failed": 0,
+   "failure_statuses": {},
+   "kill_s": null,
+   "first_failure_after_kill_s": null,
+   "last_failure_after_kill_s": null,
+   "router": {
+    "ejections": 0,
+    "dial_retries": 0,
+    "eject_lines": 0,
+    "kill_to_first_eject_s": null
+   }
+  }
+ ],
+ "order": [
+  "kill",
+  "kill-retry",
+  "none",
+  "none",
+  "kill-retry",
+  "kill",
+  "kill",
+  "kill-retry",
+  "none"
+ ],
+ "phases": [
+  [
+   90.0,
+   1.0
+  ]
+ ],
+ "base_rps": 3.0,
+ "kill_at_s": 30.0,
+ "peak_owned_rss_bytes": 5893222400,
+ "nproc": 32,
+ "loadavg_end": [
+  4.68896484375,
+  5.6279296875,
+  5.96337890625
+ ]
+}

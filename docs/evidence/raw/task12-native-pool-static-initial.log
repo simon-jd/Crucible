@@ -1,0 +1,287 @@
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> serving/baseline/native_pool.py:71:17
+   |
+69 |           except FileNotFoundError as error:
+70 |               errors.append(
+71 | /                 dict(
+72 | |                     root=str(root),
+73 | |                     attempt=attempt,
+74 | |                     error=repr(error),
+75 | |                     errno=error.errno,
+76 | |                     filename=error.filename,
+77 | |                     filename2=error.filename2,
+78 | |                 )
+   | |_________________^
+79 |               )
+80 |               if attempt == 3:
+   |
+help: Rewrite as a literal
+   |
+70 |             errors.append(
+   -                 dict(
+   -                     root=str(root),
+   -                     attempt=attempt,
+   -                     error=repr(error),
+   -                     errno=error.errno,
+   -                     filename=error.filename,
+   -                     filename2=error.filename2,
+   -                 )
+71 +                 {
+72 +                     "root": str(root),
+73 +                     "attempt": attempt,
+74 +                     "error": repr(error),
+75 +                     "errno": error.errno,
+76 +                     "filename": error.filename,
+77 +                     "filename2": error.filename2,
+78 +                 }
+79 |             )
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> serving/baseline/native_pool.py:164:18
+    |
+162 |               current = nonpool + pool_bytes + max(0, evidence - self.evidence_baseline) + 50_000_000
+163 |           self.validate()
+164 |           sample = dict(
+    |  __________________^
+165 | |             project_bytes=current,
+166 | |             pool_bytes=pool_bytes,
+167 | |             runtime_cache_bytes=cache_bytes,
+168 | |             evidence_bytes=evidence,
+169 | |             combined_bytes=pool_bytes + evidence,
+170 | |             nonpool_bytes=nonpool,
+171 | |             projected_bytes=nonpool + RESERVE,
+172 | |             canonical_rescans=errors,
+173 | |             project_bytes_kind="canonical"
+174 | |             if canonical
+175 | |             else "nonpool baseline + mutable pool/output growth +50M",
+176 | |             accounting="sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota",
+177 | |         )
+    | |_________^
+178 |           if (
+179 |               current >= PROJECT_CAP - 50_000_000
+    |
+help: Rewrite as a literal
+    |
+163 |         self.validate()
+    -         sample = dict(
+    -             project_bytes=current,
+    -             pool_bytes=pool_bytes,
+    -             runtime_cache_bytes=cache_bytes,
+    -             evidence_bytes=evidence,
+    -             combined_bytes=pool_bytes + evidence,
+    -             nonpool_bytes=nonpool,
+    -             projected_bytes=nonpool + RESERVE,
+    -             canonical_rescans=errors,
+    -             project_bytes_kind="canonical"
+164 +         sample = {
+165 +             "project_bytes": current,
+166 +             "pool_bytes": pool_bytes,
+167 +             "runtime_cache_bytes": cache_bytes,
+168 +             "evidence_bytes": evidence,
+169 +             "combined_bytes": pool_bytes + evidence,
+170 +             "nonpool_bytes": nonpool,
+171 +             "projected_bytes": nonpool + RESERVE,
+172 +             "canonical_rescans": errors,
+173 +             "project_bytes_kind": "canonical"
+174 |             if canonical
+175 |             else "nonpool baseline + mutable pool/output growth +50M",
+    -             accounting="sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota",
+    -         )
+176 +             "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota",
+177 +         }
+178 |         if (
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> serving/baseline/native_pool_test.py:23:15
+   |
+21 |       output.mkdir()
+22 |       identity = lambda p: [p.stat().st_dev, p.stat().st_ino]
+23 |       binding = dict(
+   |  _______________^
+24 | |         version=1,
+25 | |         root=str(root),
+26 | |         root_identity=identity(root),
+27 | |         work_identity=identity(work),
+28 | |         client_identity=identity(binary),
+29 | |         client_bytes=binary.stat().st_size,
+30 | |         client_mtime_ns=binary.stat().st_mtime_ns,
+31 | |         client_sha256=hashlib.sha256(binary.read_bytes()).hexdigest(),
+32 | |     )
+   | |_____^
+33 |       manifest = tmp_path / "pool.json"
+34 |       manifest.write_text(json.dumps(binding))
+   |
+help: Rewrite as a literal
+   |
+22 |     identity = lambda p: [p.stat().st_dev, p.stat().st_ino]
+   -     binding = dict(
+   -         version=1,
+   -         root=str(root),
+   -         root_identity=identity(root),
+   -         work_identity=identity(work),
+   -         client_identity=identity(binary),
+   -         client_bytes=binary.stat().st_size,
+   -         client_mtime_ns=binary.stat().st_mtime_ns,
+   -         client_sha256=hashlib.sha256(binary.read_bytes()).hexdigest(),
+   -     )
+23 +     binding = {
+24 +         "version": 1,
+25 +         "root": str(root),
+26 +         "root_identity": identity(root),
+27 +         "work_identity": identity(work),
+28 +         "client_identity": identity(binary),
+29 +         "client_bytes": binary.stat().st_size,
+30 +         "client_mtime_ns": binary.stat().st_mtime_ns,
+31 +         "client_sha256": hashlib.sha256(binary.read_bytes()).hexdigest(),
+32 +     }
+33 |     manifest = tmp_path / "pool.json"
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> serving/baseline/native_pool_test.py:212:15
+    |
+210 |     pool = fixture(tmp_path)
+211 |     monkeypatch.setattr(experiment, "ROOT", tmp_path)
+212 |     binding = dict(manifest=str(pool.manifest), sha256=experiment.sha256(pool.manifest))
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+213 |     command = [
+214 |         "scripts/with_gpu.sh",
+    |
+help: Rewrite as a literal
+    |
+211 |     monkeypatch.setattr(experiment, "ROOT", tmp_path)
+    -     binding = dict(manifest=str(pool.manifest), sha256=experiment.sha256(pool.manifest))
+212 +     binding = {"manifest": str(pool.manifest), "sha256": experiment.sha256(pool.manifest)}
+213 |     command = [
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> serving/baseline/native_pool_test.py:222:16
+    |
+220 |           str(pool.output),
+221 |       ]
+222 |       proposal = dict(
+    |  ________________^
+223 | |         command=command,
+224 | |         native_pool=binding,
+225 | |         command_scoped_environment={"TMPDIR": str(pool.work / "tmp")},
+226 | |         command_environment_unset=[],
+227 | |     )
+    | |_____^
+228 |       freeze = dict(proposal, artifacts={str(pool.manifest.relative_to(tmp_path)): binding["sha256"]})
+229 |       if fault == "binding":
+    |
+help: Rewrite as a literal
+    |
+221 |     ]
+    -     proposal = dict(
+    -         command=command,
+    -         native_pool=binding,
+    -         command_scoped_environment={"TMPDIR": str(pool.work / "tmp")},
+    -         command_environment_unset=[],
+    -     )
+222 +     proposal = {
+223 +         "command": command,
+224 +         "native_pool": binding,
+225 +         "command_scoped_environment": {"TMPDIR": str(pool.work / "tmp")},
+226 +         "command_environment_unset": [],
+227 +     }
+228 |     freeze = dict(proposal, artifacts={str(pool.manifest.relative_to(tmp_path)): binding["sha256"]})
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> serving/baseline/native_pool_test.py:249:15
+    |
+247 |     pool = fixture(tmp_path)
+248 |     monkeypatch.setattr(experiment, "ROOT", tmp_path)
+249 |     binding = dict(manifest=str(pool.manifest), sha256=experiment.sha256(pool.manifest))
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+250 |     proposal = dict(
+251 |         command=[
+    |
+help: Rewrite as a literal
+    |
+248 |     monkeypatch.setattr(experiment, "ROOT", tmp_path)
+    -     binding = dict(manifest=str(pool.manifest), sha256=experiment.sha256(pool.manifest))
+249 +     binding = {"manifest": str(pool.manifest), "sha256": experiment.sha256(pool.manifest)}
+250 |     proposal = dict(
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> serving/baseline/native_pool_test.py:250:16
+    |
+248 |       monkeypatch.setattr(experiment, "ROOT", tmp_path)
+249 |       binding = dict(manifest=str(pool.manifest), sha256=experiment.sha256(pool.manifest))
+250 |       proposal = dict(
+    |  ________________^
+251 | |         command=[
+252 | |             "--pool-manifest",
+253 | |             str(pool.manifest),
+254 | |             "--binary",
+255 | |             str(pool.binary),
+256 | |             "--output",
+257 | |             str(pool.output),
+258 | |         ],
+259 | |         native_pool=binding,
+260 | |         command_scoped_environment={"TMPDIR": str(pool.work / "tmp")},
+261 | |     )
+    | |_____^
+262 |       freeze = dict(
+263 |           native_pool=binding, artifacts={str(pool.manifest.relative_to(tmp_path)): binding["sha256"]}
+    |
+help: Rewrite as a literal
+    |
+249 |     binding = dict(manifest=str(pool.manifest), sha256=experiment.sha256(pool.manifest))
+    -     proposal = dict(
+    -         command=[
+250 +     proposal = {
+251 +         "command": [
+252 |             "--pool-manifest",
+--------------------------------------------------------------------------------
+258 |         ],
+    -         native_pool=binding,
+    -         command_scoped_environment={"TMPDIR": str(pool.work / "tmp")},
+    -     )
+259 +         "native_pool": binding,
+260 +         "command_scoped_environment": {"TMPDIR": str(pool.work / "tmp")},
+261 +     }
+262 |     freeze = dict(
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> serving/baseline/native_pool_test.py:262:14
+    |
+260 |           command_scoped_environment={"TMPDIR": str(pool.work / "tmp")},
+261 |       )
+262 |       freeze = dict(
+    |  ______________^
+263 | |         native_pool=binding, artifacts={str(pool.manifest.relative_to(tmp_path)): binding["sha256"]}
+264 | |     )
+    | |_____^
+265 |       selected = experiment.launch_pool(proposal, freeze)
+266 |       assert selected.work == pool.work and selected.binary == pool.binary
+    |
+help: Rewrite as a literal
+    |
+261 |     )
+    -     freeze = dict(
+    -         native_pool=binding, artifacts={str(pool.manifest.relative_to(tmp_path)): binding["sha256"]}
+    -     )
+262 +     freeze = {
+263 +         "native_pool": binding, "artifacts": {str(pool.manifest.relative_to(tmp_path)): binding["sha256"]}
+264 +     }
+265 |     selected = experiment.launch_pool(proposal, freeze)
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 8 errors.
+8 unsafe fixes available with `--fix --unsafe-fixes`.

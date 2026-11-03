@@ -1,0 +1,231 @@
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/state_handoff.py:312:20
+    |
+310 |                 else:
+311 |                     process.wait(timeout=0)
+312 |             except BaseException as cleanup:
+    |                    ^^^^^^^^^^^^^
+313 |                 cleanup_errors.append(cleanup)
+314 |                 self.failed = True
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/state_handoff.py:401:24
+    |
+399 |                 try:
+400 |                     os.close(fd)
+401 |                 except BaseException as cleanup:
+    |                        ^^^^^^^^^^^^^
+402 |                     self.failed = True
+403 |                     raise BaseExceptionGroup(
+    |
+
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+   --> rl/learner/state_handoff.py:979:26
+    |
+977 |             ranges.append((str(tensor.device), tensor.data_ptr(), tensor.data_ptr() + size))
+978 |     ranges.sort()
+979 |     for first, second in zip(ranges, ranges[1:]):
+    |                          ^^^
+980 |         if first[0] == second[0] and first[2] > second[1]:
+981 |             raise ValueError("unexpected cross-state tensor storage alias")
+    |
+help: Replace `zip()` with `itertools.pairwise()`
+    |
+20  | from types import SimpleNamespace
+21  + import itertools
+22  |
+--------------------------------------------------------------------------------
+979 |     ranges.sort()
+    -     for first, second in zip(ranges, ranges[1:]):
+980 +     for first, second in itertools.pairwise(ranges):
+981 |         if first[0] == second[0] and first[2] > second[1]:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> rl/learner/tests/test_state_handoff.py:3:1
+   |
+ 1 |   """Tiny real CPU handoff evidence; no full-model, CUDA or quality readiness claim."""
+ 2 |
+ 3 | / import copy
+ 4 | | import fcntl
+ 5 | | import json
+ 6 | | import io
+ 7 | | import os
+ 8 | | import subprocess
+ 9 | | import sys
+10 | | from contextlib import contextmanager
+11 | | from dataclasses import asdict, replace
+12 | |
+13 | | import pytest
+14 | |
+15 | | import torch
+16 | |
+17 | | from rl.learner.state_handoff import (
+18 | |     SEALS,
+19 | |     CaptureBudget,
+20 | |     Receipt,
+21 | |     SnapshotOwner,
+22 | |     _BoundedWriter,
+23 | |     _MetadataSink,
+24 | |     _assert_unmapped,
+25 | |     _digest,
+26 | |     _payload,
+27 | |     _save,
+28 | |     capture_ready_learner,
+29 | | )
+30 | | from rl.learner.tests.handoff_worker import BINDING, CAP, group, make_learner, summary
+   | |______________________________________________________________________________________^
+help: Organize imports
+   |
+4  | import fcntl
+5  + import io
+6  | import json
+   - import io
+7  | import os
+--------------------------------------------------------------------------------
+13 | import pytest
+   -
+14 | import torch
+--------------------------------------------------------------------------------
+20 |     SnapshotOwner,
+   -     _BoundedWriter,
+   -     _MetadataSink,
+21 |     _assert_unmapped,
+22 +     _BoundedWriter,
+23 |     _digest,
+24 +     _MetadataSink,
+25 |     _payload,
+   |
+
+SIM115 Use a context manager for opening files
+  --> rl/learner/tests/test_state_handoff.py:88:21
+   |
+86 |         address = loaded["value"].data_ptr()
+87 |         matches = []
+88 |         for line in open("/proc/self/maps"):
+   |                     ^^^^
+89 |             interval, permissions, *_ = line.split()
+90 |             low, high = (int(value, 16) for value in interval.split("-"))
+   |
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> rl/learner/tests/test_state_handoff.py:240:9
+    |
+238 |           with pytest.raises(ValueError, match="two"):
+239 |               owner.capture(command("capture"), version=1, binding=BINDING)
+240 | /         with SnapshotOwner(max_bytes=CAP, other_resident_bytes=0) as foreign:
+241 | |             with pytest.raises(ValueError, match="owned"):
+    | |__________________________________________________________^
+242 |                   foreign.release(first)
+243 |           owner.release(first)
+    |
+help: Combine `with` statements
+
+SIM117 [*] Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> rl/learner/tests/test_state_handoff.py:335:5
+    |
+334 |       monkeypatch.setattr(optimizer, "zero_grad", fail_cleanup)
+335 | /     with artifact(payload) as (fd, receipt):
+336 | |         with pytest.raises(RuntimeError) as caught:
+    | |___________________________________________________^
+337 |               learner.restore_handoff(fd, receipt, expected_version=1, binding=BINDING)
+338 |       assert caught.value is original
+    |
+help: Combine `with` statements
+    |
+334 |     monkeypatch.setattr(optimizer, "zero_grad", fail_cleanup)
+    -     with artifact(payload) as (fd, receipt):
+    -         with pytest.raises(RuntimeError) as caught:
+    -             learner.restore_handoff(fd, receipt, expected_version=1, binding=BINDING)
+335 +     with artifact(payload) as (fd, receipt), pytest.raises(RuntimeError) as caught:
+336 +         learner.restore_handoff(fd, receipt, expected_version=1, binding=BINDING)
+337 |     assert caught.value is original
+    |
+
+SIM117 [*] Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> rl/learner/tests/test_state_handoff.py:369:5
+    |
+368 |       monkeypatch.setattr(learner.optimizer, "zero_grad", fail)
+369 | /     with artifact(payload) as (fd, receipt):
+370 | |         with pytest.raises(BaseExceptionGroup) as caught:
+    | |_________________________________________________________^
+371 |               learner.restore_handoff(fd, receipt, expected_version=1, binding=BINDING)
+372 |       assert isinstance(caught.value.exceptions[0], ValueError)
+    |
+help: Combine `with` statements
+    |
+368 |     monkeypatch.setattr(learner.optimizer, "zero_grad", fail)
+    -     with artifact(payload) as (fd, receipt):
+    -         with pytest.raises(BaseExceptionGroup) as caught:
+    -             learner.restore_handoff(fd, receipt, expected_version=1, binding=BINDING)
+369 +     with artifact(payload) as (fd, receipt), pytest.raises(BaseExceptionGroup) as caught:
+370 +         learner.restore_handoff(fd, receipt, expected_version=1, binding=BINDING)
+371 |     assert isinstance(caught.value.exceptions[0], ValueError)
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> scripts/test_ram_handoff_cpu.py:8:1
+   |
+ 6 |   """
+ 7 |
+ 8 | / import hashlib
+ 9 | | import json
+10 | | import os
+11 | | import resource
+12 | | import signal
+13 | | import stat
+14 | | import sys
+15 | | import time
+16 | | from pathlib import Path
+17 | |
+18 | | from scripts.gpu_guard import INTERRUPTS, _enable_subreaper, _OwnedWorkload, _own_children
+19 | | from serving.baseline.native_pool import NativePool
+   | |___________________________________________________^
+20 |
+21 |   ROOT = Path(__file__).resolve().parents[1]
+   |
+help: Organize imports
+   |
+17 |
+   - from scripts.gpu_guard import INTERRUPTS, _enable_subreaper, _OwnedWorkload, _own_children
+18 + from scripts.gpu_guard import INTERRUPTS, _enable_subreaper, _own_children, _OwnedWorkload
+19 | from serving.baseline.native_pool import NativePool
+   |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> scripts/test_ram_handoff_cpu.py:116:16
+    |
+114 |                 workload.signal(signal.SIGKILL)
+115 |                 kill = True
+116 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+117 |             errors.append(f"{type(error).__name__}: {error}")
+118 |             if len(errors) >= 8:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> scripts/test_ram_handoff_cpu.py:282:12
+    |
+280 |                     break
+281 |                 time.sleep(0.05)
+282 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+283 |         receipt["errors"].append(f"{type(error).__name__}: {error}")
+284 |         receipt["exit_code"] = 125
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> scripts/test_ram_handoff_cpu.py:306:16
+    |
+304 |             if receipt["final_resource"]["projected_bytes"] + 3_000_000 > 14_000_000_000:
+305 |                 raise ValueError("final phase projection exceeds project limit")
+306 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+307 |             receipt["errors"].append(f"terminal check: {type(error).__name__}: {error}")
+308 |             receipt["exit_code"] = 125
+    |
+
+Found 12 errors.
+[*] 4 fixable with `--fix` (1 unsafe fix available with `--fix --unsafe-fixes`).

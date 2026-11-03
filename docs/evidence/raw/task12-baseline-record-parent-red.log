@@ -1,0 +1,38 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_rewritten_large_record_is_metadata_but_large_license_is_payload _____
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/pytest-of-postedism/pytest-8/test_rewritten_large_record_is0')
+
+    def test_rewritten_large_record_is_metadata_but_large_license_is_payload(tmp_path):
+        import zipfile
+    
+        from serving.baseline.prepare_runtime import sha256, verify_wheel
+    
+        wheel = tmp_path / "x.whl"
+        members = {
+            "x-1.dist-info/METADATA": b"Metadata-Version: 2.1\nName: x\nVersion: 1\n",
+            "x-1.dist-info/RECORD": b"x" * (1 << 20),
+            "x-1.dist-info/licenses/LICENSE": b"l" * (1 << 20),
+            "other-1.dist-info/RECORD": b"r" * (1 << 20),
+            "x/payload.bin": b"p" * (1 << 20),
+        }
+        with zipfile.ZipFile(wheel, "w") as archive:
+            for name, value in members.items():
+                archive.writestr(name, value)
+        expected = {
+            "compressed_bytes": wheel.stat().st_size,
+            "expanded_bytes": sum(map(len, members.values())),
+            "sha256": sha256(wheel),
+        }
+>       assert verify_wheel(wheel, expected) == ["x-1.dist-info/licenses/LICENSE", "other-1.dist-info/RECORD", "x/payload.bin"]
+E       AssertionError: assert ['x-1.dist-in.../payload.bin'] == ['x-1.dist-in.../payload.bin']
+E         
+E         At index 1 diff: 'x/payload.bin' != 'other-1.dist-info/RECORD'
+E         Right contains one more item: 'x/payload.bin'
+E         Use -v to get more diff
+
+serving/baseline/prepare_runtime_test.py:141: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/prepare_runtime_test.py::test_rewritten_large_record_is_metadata_but_large_license_is_payload
+1 failed, 6 deselected in 0.03s

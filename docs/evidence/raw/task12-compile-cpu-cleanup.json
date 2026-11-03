@@ -1,0 +1,30 @@
+{
+  "initial_cleanup_attempt": "AssertionError from rejecting all fixture symlinks before deletion; no fixture deleted in that attempt. Read-only inspection identified only pytest current links within the two owned roots.",
+  "removed_owned_fixtures": [
+    {
+      "path": ".cache/task12-baseline/tmp/compile-cpu",
+      "file_bytes": 377,
+      "pytest_current_symlinks": {
+        "test_compile_threads_override_current": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu/test_compile_threads_override_2",
+        "test_compile_threads_applied_bcurrent": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu/test_compile_threads_applied_b0"
+      },
+      "scope": "terminal synchronous pytest CPU fixtures; no subprocess fixture or native import"
+    },
+    {
+      "path": ".cache/task12-baseline/tmp/compile-cpu-green",
+      "file_bytes": 1758,
+      "pytest_current_symlinks": {
+        "test_pinned_pth_layout_is_valicurrent": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu-green/test_pinned_pth_layout_is_vali0",
+        "test_runtime_environment_keepscurrent": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu-green/test_runtime_environment_keeps0",
+        "test_compile_threads_override_current": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu-green/test_compile_threads_override_2",
+        "test_overlay_precedence_is_checurrent": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu-green/test_overlay_precedence_is_che0",
+        "test_compile_threads_applied_bcurrent": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu-green/test_compile_threads_applied_b0",
+        "test_native_environment_removecurrent": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/compile-cpu-green/test_native_environment_remove0"
+      },
+      "scope": "terminal synchronous pytest CPU fixtures; no subprocess fixture or native import"
+    }
+  ],
+  "method": "rmtree only exact nonsymlink owned roots, never follows child symlinks; all links verified internal pytest current aliases",
+  "other_caches_touched": false,
+  "native_execution": false
+}

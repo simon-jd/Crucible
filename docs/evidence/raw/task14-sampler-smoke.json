@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/bin/true"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.04069345002062619,
+  "project_bytes_before": 12517975112,
+  "project_bytes_after": 12517975112,
+  "sampling": "0.25s requested interval plus scan time; transient peaks may be missed",
+  "scope": "wrapper and descendants RSS; task14 caches/temp only; CPU-only",
+  "sampled_tree_rss_bytes": 24190976,
+  "sampled_task14_cache_bytes": 113801944,
+  "sampled_tmp_bytes": 0,
+  "samples": 1
+}

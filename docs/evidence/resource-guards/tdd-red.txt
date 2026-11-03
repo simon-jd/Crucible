@@ -1,0 +1,27 @@
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting scripts/tests/test_gpu_guard.py _______________
+ImportError while importing test module '/home/postedism/Desktop/Crucible/scripts/tests/test_gpu_guard.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/tests/test_gpu_guard.py:10: in <module>
+    from scripts.gpu_guard import LOCK_PATH, MAX_SECONDS, _run_locked, validate_command
+E   ModuleNotFoundError: No module named 'scripts.gpu_guard'
+__________ ERROR collecting scripts/tests/test_resource_preflight.py ___________
+ImportError while importing test module '/home/postedism/Desktop/Crucible/scripts/tests/test_resource_preflight.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/tests/test_resource_preflight.py:5: in <module>
+    from scripts.resource_preflight import GB, check_limits, project_bytes
+E   ModuleNotFoundError: No module named 'scripts.resource_preflight'
+=========================== short test summary info ============================
+ERROR scripts/tests/test_gpu_guard.py
+ERROR scripts/tests/test_resource_preflight.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+2 errors in 0.06s

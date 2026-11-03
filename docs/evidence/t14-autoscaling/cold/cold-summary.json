@@ -1,0 +1,103 @@
+{
+ "trials": [
+  {
+   "pair": 0,
+   "condition": "warm",
+   "start_to_ready_s": 11.067754030227661,
+   "load_log": [
+    "\u001b[1;36m(EngineCore_DP0 pid=2664938)\u001b[0;0m INFO 10-27 16:22:41 [default_loader.py:268] Loading weights took 0.11 seconds",
+    "\u001b[1;36m(EngineCore_DP0 pid=2664938)\u001b[0;0m INFO 10-27 16:22:41 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.160881 seconds"
+   ],
+   "loadavg": [
+    2.01318359375,
+    3.7119140625,
+    4.203125
+   ]
+  },
+  {
+   "pair": 0,
+   "condition": "cold",
+   "start_to_ready_s": 11.263029336929321,
+   "load_log": [
+    "\u001b[1;36m(EngineCore_DP0 pid=2665494)\u001b[0;0m INFO 10-27 16:22:53 [default_loader.py:268] Loading weights took 0.37 seconds",
+    "\u001b[1;36m(EngineCore_DP0 pid=2665494)\u001b[0;0m INFO 10-27 16:22:53 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.423451 seconds"
+   ],
+   "loadavg": [
+    2.13916015625,
+    3.65966796875,
+    4.17724609375
+   ]
+  },
+  {
+   "pair": 1,
+   "condition": "cold",
+   "start_to_ready_s": 11.050145626068115,
+   "load_log": [
+    "\u001b[1;36m(EngineCore_DP0 pid=2666111)\u001b[0;0m INFO 10-27 16:23:05 [default_loader.py:268] Loading weights took 0.36 seconds",
+    "\u001b[1;36m(EngineCore_DP0 pid=2666111)\u001b[0;0m INFO 10-27 16:23:05 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.417102 seconds"
+   ],
+   "loadavg": [
+    1.9638671875,
+    3.57177734375,
+    4.14306640625
+   ]
+  },
+  {
+   "pair": 1,
+   "condition": "warm",
+   "start_to_ready_s": 10.842919826507568,
+   "load_log": [
+    "\u001b[1;36m(EngineCore_DP0 pid=2666708)\u001b[0;0m INFO 10-27 16:23:16 [default_loader.py:268] Loading weights took 0.08 seconds",
+    "\u001b[1;36m(EngineCore_DP0 pid=2666708)\u001b[0;0m INFO 10-27 16:23:16 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.136057 seconds"
+   ],
+   "loadavg": [
+    2.12353515625,
+    3.55224609375,
+    4.13037109375
+   ]
+  },
+  {
+   "pair": 2,
+   "condition": "warm",
+   "start_to_ready_s": 11.045214653015137,
+   "load_log": [
+    "\u001b[1;36m(EngineCore_DP0 pid=2667288)\u001b[0;0m INFO 10-27 16:23:28 [default_loader.py:268] Loading weights took 0.08 seconds",
+    "\u001b[1;36m(EngineCore_DP0 pid=2667288)\u001b[0;0m INFO 10-27 16:23:28 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.137345 seconds"
+   ],
+   "loadavg": [
+    2.0302734375,
+    3.484375,
+    4.1015625
+   ]
+  },
+  {
+   "pair": 2,
+   "condition": "cold",
+   "start_to_ready_s": 11.644076585769653,
+   "load_log": [
+    "\u001b[1;36m(EngineCore_DP0 pid=2667942)\u001b[0;0m INFO 10-27 16:23:40 [default_loader.py:268] Loading weights took 0.39 seconds",
+    "\u001b[1;36m(EngineCore_DP0 pid=2667942)\u001b[0;0m INFO 10-27 16:23:40 [gpu_model_runner.py:2392] Model loading took 0.9267 GiB and 0.447430 seconds"
+   ],
+   "loadavg": [
+    2.1591796875,
+    3.44384765625,
+    4.07763671875
+   ]
+  }
+ ],
+ "summary": {
+  "warm": {
+   "median": 11.045214653015137,
+   "min": 10.842919826507568,
+   "max": 11.067754030227661,
+   "n": 3
+  },
+  "cold": {
+   "median": 11.263029336929321,
+   "min": 11.050145626068115,
+   "max": 11.644076585769653,
+   "n": 3
+  }
+ },
+ "nproc": 32
+}

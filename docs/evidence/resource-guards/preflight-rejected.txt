@@ -1,0 +1,12 @@
+python scripts/resource_preflight.py --planned-project-bytes 0 --download-bytes 0 --checkpoints 0 --service-memory-bytes 0
+{
+  "ok": false,
+  "project_bytes": 314348426,
+  "free_bytes": 173662195712,
+  "model_cache": "/home/postedism/.cache/huggingface",
+  "errors": [
+    "model cache must be shared: /home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE must use /home/postedism/.cache/huggingface/hub"
+  ]
+}
+make: *** [Makefile:38: resource-preflight] Error 1

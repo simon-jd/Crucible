@@ -1,0 +1,67 @@
+{
+  "time_utc": "2026-10-25T18:28:31.851881+00:00",
+  "scope": "ROOT exact5pin/productionI1diff and target-check/fullsourcebelow32k prerequisite STATIC-only",
+  "source_sha256": {
+    "rl/sync/phase_bridge.py": "fbf78f1e9e027ffb2e582f5ca3753469ba4b444d8a5e65f481b530d38695c374",
+    "rl/sync/tests/test_phase_bridge.py": "90501941cf120690030600915e8aab435635b392494afde194ef578cf46e304d",
+    "rl/sync/tests/ram_worker.py": "439bbcba5b16273b119c8c953d62e166545f2951a1c7c8a3221f03d887976a0b",
+    "scripts/test_ram_handoff_cpu.py": "03c483c18e404d2be4adb9c8e274fd21ded3fe8b471b01f405c0fdc5fab3e435",
+    "rl/sync/README.md": "65f7f4be54916a40675d3ff1ab0ddba1f39bbba8623ab27d921ec658ab225235"
+  },
+  "AST": {
+    "rl/sync/phase_bridge.py": "ec51fd4ed613120f70ed82c5a7ccb55a68ca3eba9264017486fcac97b6bbb13f",
+    "rl/sync/tests/test_phase_bridge.py": "8cd6e17124ba2a3c54c751508a306e93cdf3c96760675b8153a1b41456b5f566",
+    "rl/sync/tests/ram_worker.py": "13b476873a7ff07faf0035ff25fe0f943b3c2d75f5430f25909eb24670f14f07",
+    "scripts/test_ram_handoff_cpu.py": "e616a167a6475a91e265639e8ff54ff7a64d0a24379aba7427cfe7cf4c4684eb"
+  },
+  "phase_retained_includinggit_Task12summary": 1477670,
+  "remaining": {
+    "singleGREEN3files": 196608,
+    "static2files": 65536,
+    "report_to45000": 1477,
+    "fixdiff": 60000,
+    "fixreview_public": 32000,
+    "source_docs_growth": 2000,
+    "root_git_growth": 100000
+  },
+  "forecast": 1935291,
+  "cap": 2000000,
+  "sample": {
+    "project_bytes": 13317403667,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13307243436,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13997243436,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus2M": 13999243436,
+  "newpaths_absent": [
+    "docs/evidence/raw/task11-bridge-fix1-green-format.log",
+    "docs/evidence/raw/task11-bridge-fix1-green-lint.log",
+    ".cache/task11-ram-handoff",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-green.log",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-green.json",
+    "docs/evidence/raw/task11-ram-handoff-bridge-fix1-green-supervisor.log"
+  ],
+  "once_static": {
+    "format_then_check": [
+      "rl/sync/phase_bridge.py",
+      "rl/sync/tests/test_phase_bridge.py",
+      "rl/sync/tests/ram_worker.py",
+      "scripts/test_ram_handoff_cpu.py"
+    ],
+    "seconds": 20,
+    "AS": 1000000000,
+    "CORE": 0,
+    "FSIZE": 32768,
+    "RAYON": 1
+  },
+  "effective_assertionRED": false,
+  "no_moreRED": true,
+  "CPU_authorized": false
+}

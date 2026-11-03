@@ -1,0 +1,80 @@
+{
+  "observed_at_utc": "2026-10-25T07:46:13.267499+00:00",
+  "baseline_accepted": false,
+  "attempts_this_authorization": 1,
+  "automatic_retry": false,
+  "calibration": [
+    {
+      "trial": "burst-calibration-0.json",
+      "planned_records": 23,
+      "sender_valid": false,
+      "aborted": false,
+      "SenderValid": false,
+      "scalar_run_fields": {
+        "SenderValid": false,
+        "Aborted": false,
+        "DurationMs": 60013.79911
+      },
+      "sent_more_than_5ms_late": 1,
+      "max_sent_delay_ms": 16.378059999999095,
+      "stderr": "sender-invalid run; no accepted performance"
+    },
+    {
+      "trial": "burst-calibration-1.json",
+      "planned_records": 23,
+      "sender_valid": false,
+      "aborted": false,
+      "SenderValid": false,
+      "scalar_run_fields": {
+        "SenderValid": false,
+        "Aborted": false,
+        "DurationMs": 60013.798634
+      },
+      "sent_more_than_5ms_late": 1,
+      "max_sent_delay_ms": 16.589153000000806,
+      "stderr": "sender-invalid run; no accepted performance"
+    },
+    {
+      "trial": "burst-calibration-2.json",
+      "planned_records": 23,
+      "sender_valid": false,
+      "aborted": false,
+      "SenderValid": false,
+      "scalar_run_fields": {
+        "SenderValid": false,
+        "Aborted": false,
+        "DurationMs": 60013.844523
+      },
+      "sent_more_than_5ms_late": 1,
+      "max_sent_delay_ms": 17.14717699999892,
+      "stderr": "sender-invalid run; no accepted performance"
+    }
+  ],
+  "sampled_peaks": {
+    "owned_rss_bytes": 6779437056,
+    "project_bytes": 13346186965,
+    "runtime_cache_bytes": 3242665,
+    "evidence_bytes": 2523348
+  },
+  "sample_count": 1781,
+  "peak_note": "sampled maximum, not continuously measured peak",
+  "sampled_duration_seconds": 1352.7998627369525,
+  "frozen_mismatches": [],
+  "frozen_counts": {
+    "sources": 176,
+    "artifacts": 58
+  },
+  "known_pids_still_present": [],
+  "project_runtime_candidates": [],
+  "port31012_closed": true,
+  "shared_lock_holders": [],
+  "final_project_bytes": 13296190701,
+  "executable_hash_checks": {
+    "python_path": true,
+    "native_python_path": true,
+    "timeout_path": true,
+    "prlimit": true
+  },
+  "project_gpu_processes": [],
+  "postflight_updated_at_utc": "2026-10-25T07:47:18.052743+00:00"
+}

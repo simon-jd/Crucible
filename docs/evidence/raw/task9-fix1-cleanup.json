@@ -1,0 +1,20 @@
+{
+  "cpu_only": true,
+  "tests_terminal_exit": 0,
+  "owned_resident_services": 0,
+  "retained_model_checkpoints": 0,
+  "removed": [
+    {
+      "path": "/tmp/pytest-of-postedism/pytest-201",
+      "logical_bytes": 6315,
+      "files": 50,
+      "removed": true
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task9/fix1-tmp",
+      "logical_bytes": 33668,
+      "files": 274,
+      "removed": true
+    }
+  ]
+}

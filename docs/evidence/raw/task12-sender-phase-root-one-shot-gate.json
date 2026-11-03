@@ -1,0 +1,41 @@
+{
+  "time_utc": "2026-10-25T10:01:55.946724+00:00",
+  "permission": "exactly one bounded CPU phase diagnostic using reviewed driver and original fixture; no native model or GPU",
+  "proposal_sha256": "00ad24a2e53aba984ab4b36db7f317eb4c352d1c814808b99d217b7558e54840",
+  "driver_sha256": "f273cb2a6f21d33bd894a00e284be129848dbb028a86a6346d60b09aca2970bc",
+  "identities_verified": 16,
+  "accounting": {
+    "canonical_bytes": 13540787544,
+    "owned_bytes": 242783895,
+    "nonloan_bytes": 13298003649,
+    "projected_bytes": 13988003649,
+    "free_bytes": 265429417984,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "port31013_bind_available_then_closed": true,
+  "go_runtime_overrides": {
+    "GODEBUG": null,
+    "GOGC": null,
+    "GOMEMLIMIT": null,
+    "GOMAXPROCS": null,
+    "GOTRACEBACK": null,
+    "GO_ENV": null
+  },
+  "retained_evidence": {
+    "current_bytes": 397859,
+    "future_run_cap": 1302528,
+    "cleanup_compressed_inventory_holdback": 163840,
+    "root_review_reporting_holdback": 65536,
+    "this_gate_allowance": 16384,
+    "projected_max_bytes": 1946147,
+    "cap_bytes": 2000000
+  },
+  "conditions": [
+    "one original authority exec handle; record before polling, no duplicate launch or retry regardless validity",
+    "exact proposal command host surface as originalStageB; no compiler/monitor during timing",
+    "full raw Run/phase outcome and nonreproduction retained; no old-cause or accepted performance claim",
+    "build/cache loan stays active through diagnostic; after authoritative terminal/reap prepare full compressed inventory<=160KiB and exact recheck before new-only loan cleanup; root can reallocate unused actual evidence allowance later if needed",
+    "no Go source/driver/inputs modifications after gate; no GPU or native services",
+    "if automatic approval rejects do not retry indirectly; preserve rejection and stop dependent launch"
+  ]
+}

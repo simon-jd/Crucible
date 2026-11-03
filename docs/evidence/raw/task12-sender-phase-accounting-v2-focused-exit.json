@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "env",
+    "-u",
+    "TRANSFORMERS_CACHE",
+    "PYTHONPATH=.",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1",
+    "HF_HOME=/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    "/usr/bin/timeout",
+    "--foreground",
+    "--kill-after=5s",
+    "25s",
+    "/usr/bin/prlimit",
+    "--fsize=262144:262144",
+    "--core=0:0",
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-v",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=.tmp-task12-sender-phase-go-loan/accounting-test-temp",
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py"
+  ],
+  "returncode": 0
+}

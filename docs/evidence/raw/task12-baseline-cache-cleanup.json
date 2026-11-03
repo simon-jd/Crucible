@@ -1,0 +1,36 @@
+{
+  "time_ns": 1792869433603815370,
+  "before": 10733517814,
+  "targets": [
+    {
+      "path": ".cache/task14",
+      "file_count": 4196,
+      "unique_bytes": 303262204,
+      "single_link_bytes": 303262204,
+      "active_matches": [],
+      "inaccessible_owned_processes": [],
+      "inventory_sha256": "52364923dc7993445089532462041327855e5061a9595023b88a992790dae117",
+      "action": "removed approved completed cache",
+      "canonical_before": 10733517814,
+      "canonical_after": 10430255610,
+      "actual_reclaimed": 303262204
+    },
+    {
+      "path": ".cache/uv",
+      "file_count": 2812,
+      "unique_bytes": 106891236,
+      "single_link_bytes": 43870397,
+      "active_matches": [],
+      "inaccessible_owned_processes": [],
+      "inventory_sha256": "cdf4df9aa97ba4b6b3596facdaca58fc85d1e055026e5e5893cb2a0a50a40fc8",
+      "action": "removed approved completed cache",
+      "canonical_before": 10430255610,
+      "canonical_after": 10386385213,
+      "actual_reclaimed": 43870397
+    }
+  ],
+  "base_file_count": 37546,
+  "base_identity_sha256": "f84e688a0108e04f1ed4b629ee9055ee54bc2a67e4baf93ed5e392eb8be55332",
+  "base_identity_unchanged": true,
+  "after": 10386385213
+}

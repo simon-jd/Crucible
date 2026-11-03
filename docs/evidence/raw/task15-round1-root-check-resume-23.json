@@ -1,0 +1,40 @@
+{
+  "time_utc": "2026-10-25T00:50:18.640174+00:00",
+  "base": "a2b138d1a2b33e3c1f0cc38d7e249c2fea112740",
+  "head": "f733662ad412485799be179ac3f2860a215e9df4",
+  "task_paths": [
+    "docs/evidence/raw/task15-cpu-round1-contract-test.py",
+    "docs/evidence/raw/task15-cpu-round1-format.log",
+    "docs/evidence/raw/task15-cpu-round1-go-monitor.py",
+    "docs/evidence/raw/task15-cpu-round1-green-resources.json",
+    "docs/evidence/raw/task15-cpu-round1-green.log",
+    "docs/evidence/raw/task15-cpu-round1-history-cleanup.json",
+    "docs/evidence/raw/task15-cpu-round1-history-cleanup.log",
+    "docs/evidence/raw/task15-cpu-round1-history-proof.py",
+    "docs/evidence/raw/task15-cpu-round1-precommit-resources.json",
+    "docs/evidence/raw/task15-cpu-round1-red-resources.json",
+    "docs/evidence/raw/task15-cpu-round1-red.log",
+    "docs/evidence/raw/task15-cpu-round1-ruff-green.log",
+    "docs/evidence/raw/task15-cpu-round1-ruff-initial.log",
+    "docs/evidence/spec-decoding.md",
+    "spec/README.md",
+    "spec/eval_acceptance.py"
+  ],
+  "package": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-15-round1-review.diff",
+  "package_bytes": 92898,
+  "package_sha256": "d2f97badccfa8c3c624866f7bc4d990207c44435bd32c3b687dd8a5e06317483",
+  "maintained_sha256": {
+    "docs/evidence/spec-decoding.md": "7cd7813d3285ec3ac58b6bd0020a4819be31058f2f2b0af3c1cc8908f152008a",
+    "spec/README.md": "7f5fb625f27e80ce2f83c86b91215ddebdc7c760e84417cf574388c98a2643be",
+    "spec/eval_acceptance.py": "142198747f124b507ac71c468af6437e015cb578d426bf877be0439af79c5180"
+  },
+  "corrected_monitor_sha256": "93ab6d84a367c798138c3a49f991ec5b4979a300b13d14585d4bcb6eb9322a3a",
+  "historical_monitor_sha256": "f29319324bcb5f753a2b6828276da41b651114beb37b1ced3a701d0d907871cd",
+  "original_task15_raw_files": 35,
+  "original_task15_raw_changes": [],
+  "task12_frozen_sources": 176,
+  "task12_frozen_artifacts": 58,
+  "task12_executables": 4,
+  "task12_mismatches": [],
+  "scope": "read-only identities; no tests/native/model-content reads/GPU launch; original executed evidence unchanged"
+}

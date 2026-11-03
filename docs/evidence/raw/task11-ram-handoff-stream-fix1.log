@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 12 items
+
+rl/learner/tests/test_stream_handoff.py::test_retirement_registry_interrupt_quarantines_consumed_source[before-delete] PASSED
+rl/learner/tests/test_stream_handoff.py::test_retirement_registry_interrupt_quarantines_consumed_source[after-delete] PASSED
+rl/learner/tests/test_stream_handoff.py::test_initial_output_identity_failure_retains_owned_pending[OSError] PASSED
+rl/learner/tests/test_stream_handoff.py::test_initial_output_identity_failure_retains_owned_pending[KeyboardInterrupt] PASSED
+rl/learner/tests/test_stream_handoff.py::test_output_acquisition_unknown_result_retains_reservation PASSED
+rl/learner/tests/test_stream_handoff.py::test_initial_output_registration_interrupt_tracks_fd PASSED
+rl/learner/tests/test_stream_handoff.py::test_continuation_output_identity_failure_retains_pending PASSED
+rl/learner/tests/test_stream_handoff.py::test_initial_output_close_uncertainty_preserves_primary PASSED
+rl/learner/tests/test_stream_handoff.py::test_source_close_uncertainty_retains_reservation_and_reused_fd PASSED
+rl/learner/tests/test_stream_handoff.py::test_primary_and_reap_uncertainty_preserved PASSED
+rl/learner/tests/test_stream_handoff.py::test_post_accept_cleanup_failure_retains_pending_handle PASSED
+rl/learner/tests/test_stream_handoff.py::test_stream_real_adamw_consumption_and_fresh_inspect {"kind": "serial-stream-real-adamw", "events": [{"pid": 17, "returncode": 0, "reaped": true, "error": null}, {"stage": "stream-start", "pid": 19, "starttime": 74172871, "source": [1, 1246488], "charge": {"restore": 1002667678, "capture": 1002638848, "vram": 0}}, {"stage": "source-proof", "pid": 19, "child": {"fd_count": 4, "map_count": 345, "source_fds": []}, "parent": {"fd_count": 15, "map_count": 345, "source_fds": [10]}}, {"stage": "source-retired", "pid": 19, "accepted": 0, "weights_slots": 1}, {"stage": "output-granted", "pid": 19, "output": [1, 1262786], "slots": 2}, {"stage": "stream-exit", "pid": 19, "returncode": 0, "reaped": true, "retired": true, "retirement_phase": "retired", "source_close_confirmed": true, "accepted": true}, {"pid": 21, "returncode": 0, "reaped": true, "error": null}], "receipt": {"device": 1, "inode": 1262786, "size": 28830, "sha256": "625c400e66c64087238d1328a751d6217995413012145c5c0f06c493f67d9cf9", "seals": 15, "version": 2, "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}", "cap": 131072, "metadata_cap": 32768, "storage_cap": 8192}, "loss": -0.18994787335395813}
+PASSED
+
+============================== 12 passed in 5.54s ==============================

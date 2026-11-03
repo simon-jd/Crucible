@@ -1,0 +1,30 @@
+{
+  "time_utc": "2026-10-25T17:58:51.275240+00:00",
+  "scope": "ROOT postcommit/pre-review exacthelperforecast; original690M remains, only alreadyspentphase part removed from extra conservatism",
+  "base": "b5f28730592c7489c784a958437b7d5280ee1a4c",
+  "head": "9059b21d91995678f109119d09a1ee5f994f90c2",
+  "expected_helper_bytes": 168896,
+  "expected_helper_sha256": "cee380f2fcb73131c2a2c5678183e3b8f67df04c1761c5a7a96c94e33502c67a",
+  "helper_cap": 200000,
+  "review_report_cap": 16000,
+  "phase_retained_before_helper": 764090,
+  "phase_cap": 2000000,
+  "remaining_phase_upperbound": 1235910,
+  "scratch_future_upperbound": 1000000,
+  "sample": {
+    "project_bytes": 13317057348,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306897117,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996897117,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus_remaining_phase_and1Mscratch": 13999133027,
+  "entire690M_nativepool_reserve_unchanged": true,
+  "client_loan_repaid": false
+}

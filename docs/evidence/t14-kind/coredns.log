@@ -1,0 +1,12 @@
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.32.3/tools/cache/reflector.go:251: failed to list *v1.EndpointSlice: Get "https://10.96.0.1:443/apis/discovery.k8s.io/v1/endpointslices?limit=500&resourceVersion=0": dial tcp 10.96.0.1:443: i/o timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[INFO] plugin/ready: Still waiting on: "kubernetes"
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.32.3/tools/cache/reflector.go:251: failed to list *v1.Service: Get "https://10.96.0.1:443/api/v1/services?limit=500&resourceVersion=0": dial tcp 10.96.0.1:443: i/o timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[INFO] plugin/ready: Still waiting on: "kubernetes"
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.32.3/tools/cache/reflector.go:251: failed to list *v1.Service: Get "https://10.96.0.1:443/api/v1/services?limit=500&resourceVersion=0": dial tcp 10.96.0.1:443: i/o timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[INFO] plugin/ready: Still waiting on: "kubernetes"
+[INFO] plugin/kubernetes: pkg/mod/k8s.io/client-go@v0.32.3/tools/cache/reflector.go:251: failed to list *v1.EndpointSlice: Get "https://10.96.0.1:443/apis/discovery.k8s.io/v1/endpointslices?limit=500&resourceVersion=0": dial tcp 10.96.0.1:443: i/o timeout
+[ERROR] plugin/kubernetes: Unhandled Error
+[INFO] plugin/ready: Still waiting on: "kubernetes"

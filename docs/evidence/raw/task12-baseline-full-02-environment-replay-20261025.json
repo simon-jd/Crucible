@@ -1,0 +1,14 @@
+{
+  "time_utc": "2026-10-25T07:19:25.443434+00:00",
+  "hostname": "postedism-ubuntu-system-selfuse",
+  "observed_current_desktop_environment": {
+    "XDG_DATA_DIRS": "/home/postedism/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "XDG_SESSION_ID": "1122"
+  },
+  "frozen_desktop_values_replayed_for_command": {
+    "XDG_DATA_DIRS": "/usr/share/gnome:/home/postedism/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "XDG_SESSION_ID": "767"
+  },
+  "note": "The frozen launcher also compares desktop session variables. Explicitly replay these two noncredential process environment values. XDG_SESSION_ID=767 is a historical environment value, not the actual current SSH/login session. Source, executable, GPU, resource and permission gates remain unchanged. No earlier guard log, receipt or native output exists.",
+  "all_existing_launcher_preconditions_passed": true
+}

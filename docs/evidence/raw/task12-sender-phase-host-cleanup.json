@@ -1,0 +1,19 @@
+{
+  "authority_handle": 57453,
+  "authority_exit": 0,
+  "owned_processes": [
+    {
+      "pid": 979302,
+      "observed_starttime": 72033331,
+      "absent": true
+    },
+    {
+      "pid": 979304,
+      "observed_starttime": 72033486,
+      "absent": true
+    }
+  ],
+  "all_exact_pids_absent": true,
+  "port31013_bind_available_then_closed": true,
+  "no_unrelated_cmdline_or_signals": true
+}

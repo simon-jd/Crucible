@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "synthetic_fixture": true,
+  "plan_sha256": "9b75b19fa7071008d3fe86535a1a201e9de8551997c47eb2ddb040df0d3eb057",
+  "outcomes": [
+    {
+      "problem_id": "a",
+      "sample_index": 0,
+      "status": "observed",
+      "correct": true
+    },
+    {
+      "problem_id": "b",
+      "sample_index": 0,
+      "status": "failed"
+    },
+    {
+      "problem_id": "b",
+      "sample_index": 1,
+      "status": "observed",
+      "correct": false
+    },
+    {
+      "problem_id": "b",
+      "sample_index": 2,
+      "status": "failed"
+    },
+    {
+      "problem_id": "a",
+      "sample_index": 0,
+      "status": "observed",
+      "correct": true
+    }
+  ]
+}

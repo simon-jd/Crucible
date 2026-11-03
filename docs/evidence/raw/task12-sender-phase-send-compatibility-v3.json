@@ -1,0 +1,17 @@
+{
+  "path": "serving/replay/schedule.go",
+  "old_sha256": "3a8a33e7b0bed56afdab1bb897898c06fd8593d741921b15cfc724905380df55",
+  "new_sha256": "7d99d4b619dd7aa48186265bdfec7fb55910a8985d411179cfd3ad6e4d0a71da",
+  "diff": "--- reviewed-schedule.go\n+++ wrapper-compatible-schedule.go\n@@ -71,7 +71,7 @@\n \t\t\t\t}\n \t\t\t\tdefer wg.Done()\n \t\t\t\tdefer func() { <-slots }()\n-\t\t\t\tsend(ctx, client, c.URL, bodies[i], due.Add(c.Timeout), start, &result.Records[i], trace[i].OutTokens, phase)\n+\t\t\t\tsendWithDiagnostics(ctx, client, c.URL, bodies[i], due.Add(c.Timeout), start, &result.Records[i], trace[i].OutTokens, phase)\n \t\t\t}(i, due)\n \t\tdefault:\n \t\t\tif phase != nil {\n@@ -89,7 +89,11 @@\n \treturn result, nil\n }\n func ms(d time.Duration) float64 { return float64(d) / float64(time.Millisecond) }\n-func send(parent context.Context, client *http.Client, url string, body []byte, deadline, start time.Time, r *Record, expected int, phase *phaseRequest) {\n+func send(parent context.Context, client *http.Client, url string, body []byte, deadline, start time.Time, r *Record, expected int) {\n+\tsendWithDiagnostics(parent, client, url, body, deadline, start, r, expected, nil)\n+}\n+\n+func sendWithDiagnostics(parent context.Context, client *http.Client, url string, body []byte, deadline, start time.Time, r *Record, expected int, phase *phaseRequest) {\n \tctx, cancel := context.WithDeadline(parent, deadline)\n \tdefer cancel()\n \tobserver := newEmission(start, len(body))\n",
+  "unchanged_checks": {
+    "docs/evidence/raw/task12-sender-phase-go-monitor.py": true,
+    "serving/replay/cmd/replay/diagnostic_test.go": true,
+    "serving/replay/cmd/replay/main.go": true,
+    "serving/replay/diagnostic.go": true,
+    "serving/replay/diagnostic_test.go": true,
+    "serving/replay/transport.go": true,
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2.py": true,
+    "docs/evidence/raw/task12-sender-phase-go-monitor-v2-test.py": true,
+    ".tools/go/bin/go": true
+  }
+}

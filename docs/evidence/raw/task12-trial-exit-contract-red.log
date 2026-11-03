@@ -1,0 +1,52 @@
+F........                                                                [100%]
+=================================== FAILURES ===================================
+______ test_trial_distinguishes_complete_request_failure_exit[known-True] ______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/exit-contract-red/test_trial_distinguishes_compl0')
+variant = 'known', expected_failure_exit = True
+
+    @pytest.mark.parametrize(
+        "variant,expected_failure_exit",
+        [("known", True), ("unknown", False), ("code2", False), ("signal", False),
+         ("partial", False), ("aborted", False), ("invalid_sender", False),
+         ("no_failed_rows", False), ("oversized_stderr", False)],
+    )
+    def test_trial_distinguishes_complete_request_failure_exit(tmp_path, variant, expected_failure_exit):
+        import json
+        import signal
+    
+        from serving.baseline.experiment import execute_trial
+    
+        result = run([record(), {**record(status="http_error", tokens=0), "Error": "HTTP 400"}])
+        stderr = "run contains failed requests\n"
+        code = 1
+        if variant == "unknown":
+            stderr = "unexpected execution failure\n"
+        elif variant == "code2":
+            code = 2
+        elif variant == "partial":
+            result["Records"].pop()
+        elif variant == "aborted":
+            result["Aborted"] = True
+        elif variant == "invalid_sender":
+            result["Records"][0]["SentMs"] = -1
+        elif variant == "no_failed_rows":
+            result["Records"][1] = record()
+        elif variant == "oversized_stderr":
+            stderr += "x" * 4096
+        source = (
+            "import os,signal,sys;"
+            f"print({json.dumps({'Run': result})!r},flush=True);"
+            f"sys.stderr.write({stderr!r});sys.stderr.flush();"
+            + ("os.kill(os.getpid(),signal.SIGTERM)" if variant == "signal" else f"sys.exit({code})")
+        )
+        target = tmp_path / "trial.json"
+        summary = {"planned_rows": 2}
+        actual = execute_trial([sys.executable, "-B", "-c", source], {}, target, summary, lambda: None)
+>       assert actual["Aborted"] is not expected_failure_exit
+E       assert True is not True
+
+serving/baseline/experiment_test.py:320: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/experiment_test.py::test_trial_distinguishes_complete_request_failure_exit[known-True]
+1 failed, 8 passed, 19 deselected in 9.08s

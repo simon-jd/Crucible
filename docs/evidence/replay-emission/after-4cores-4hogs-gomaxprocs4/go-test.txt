@@ -1,0 +1,91 @@
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=1/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:44: 200 rps: late=0/400
+--- PASS: TestReplayTimingAccuracy (2.01s)
+PASS

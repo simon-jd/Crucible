@@ -1,0 +1,126 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_________ test_initial_first_failure_stops_all_later_tasks[affinity-1] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-72/test_initial_first_failure_sto0')
+group = 'affinity', expected = 1
+
+    @pytest.mark.parametrize("group,expected", [("affinity", 1), ("dcgm", 5)])
+    def test_initial_first_failure_stops_all_later_tasks(tmp_path, group, expected):
+        plan = site(tmp_path)
+
+        class FailsFirst(CpuShims):
+            def run(self, argv, timeout):
+                if f"{group}_" in " ".join(argv):
+                    self.calls.append(argv)
+                    return Result(argv, 9, "", "SYNTHETIC first failure")
+                return super().run(argv, timeout)
+
+        runner = FailsFirst(plan["inventory"])
+        results = execute(plan, runner)
+>       assert len(results) == expected
+E       AssertionError: assert 8 == 1
+E        +  where 8 = len([{'commands': [{'argv': ['ssh', '-oBatchMode=yes', '-oStrictHostKeyChecking=yes', 'operator@n0.example.invalid', 'pyth...assed': True, 'report': {'DCGM GPU Diagnostic': {'test_categories': [{'category': 'Hardware', 'tests': [...]}]}}}, ...])
+
+cluster/health/tests/test_review_fixes.py:33: AssertionError
+___________ test_initial_first_failure_stops_all_later_tasks[dcgm-5] ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-72/test_initial_first_failure_sto1')
+group = 'dcgm', expected = 5
+
+    @pytest.mark.parametrize("group,expected", [("affinity", 1), ("dcgm", 5)])
+    def test_initial_first_failure_stops_all_later_tasks(tmp_path, group, expected):
+        plan = site(tmp_path)
+
+        class FailsFirst(CpuShims):
+            def run(self, argv, timeout):
+                if f"{group}_" in " ".join(argv):
+                    self.calls.append(argv)
+                    return Result(argv, 9, "", "SYNTHETIC first failure")
+                return super().run(argv, timeout)
+
+        runner = FailsFirst(plan["inventory"])
+        results = execute(plan, runner)
+>       assert len(results) == expected
+E       AssertionError: assert 8 == 5
+E        +  where 8 = len([{'commands': [{'argv': ['/home/postedism/Desktop/Crucible/.venv/bin/python', '-c', 'import sys;sys.stdout.write(sys.a...rr': 'SYNTHETIC first failure', 'stdout': '', ...}], 'error': 'command failed', 'id': 'dcgm:n1', 'passed': False}, ...])
+
+cluster/health/tests/test_review_fixes.py:33: AssertionError
+________________ test_ib_ready_consumes_same_absolute_deadline _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-72/test_ib_ready_consumes_same_ab0')
+
+    def test_ib_ready_consumes_same_absolute_deadline(tmp_path):
+        plan = site(tmp_path)
+        stop_at = time.time() + 0.15
+
+        class Process:
+            def wait_ready(self, timeout):
+                time.sleep(0.2)
+                return True
+
+            def terminate(self):
+                pass
+
+            def finish(self, timeout):
+                return Result(["CPU server"], 124, "", "expired", True)
+
+        class Runner:
+            def __init__(self):
+                self.calls = []
+
+            def start(self, argv):
+                self.calls.append(argv)
+                return Process()
+
+            def run(self, argv, timeout):
+                self.calls.append(argv)
+                token = argv[-1].split()[-1]
+                return Result(argv, 0, json.dumps({"token": token, "verified": True}), "")
+
+        runner = Runner()
+>       result = run_pair(build_pairs(plan["inventory"])[0], plan["inventory"], runner,
+                          timeout=10, deadline_epoch=stop_at)
+E       TypeError: run_pair() got an unexpected keyword argument 'deadline_epoch'
+
+cluster/health/tests/test_review_fixes.py:70: TypeError
+______ test_disconnected_proxy_does_not_extend_worker_descendant_deadline ______
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-72/test_disconnected_proxy_does_n0')
+
+    def test_disconnected_proxy_does_not_extend_worker_descendant_deadline(tmp_path):
+        """The proxy exits without signalling the detached worker, like a lost connection."""
+        token = "d" * 32
+        deadline = time.time() + 0.7
+        descendant_file = tmp_path / "descendant.json"
+        proxy_info = tmp_path / "proxy.json"
+        payload = ("import json,os,subprocess,time,pathlib; "
+                   "p=subprocess.Popen(['sleep','60']); "
+                   f"pathlib.Path({str(descendant_file)!r}).write_text(json.dumps([os.getpid(),p.pid])); "
+                   "time.sleep(60)")
+        worker = [sys.executable, remote_worker.__file__, "run", "--token", token,
+                  "--deadline-epoch", str(deadline), "--state-dir", str(tmp_path), "--",
+                  sys.executable, "-c", payload]
+        proxy = ("import subprocess,json,pathlib,sys; "
+                 "p=subprocess.Popen(json.loads(sys.argv[1]),start_new_session=True,"
+                 "stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL); "
+                 f"pathlib.Path({str(proxy_info)!r}).write_text(str(p.pid))")
+        subprocess.run([sys.executable, "-c", proxy, json.dumps(worker)], check=True, timeout=2)
+        worker_pid = int(proxy_info.read_text())
+        wait_until = time.monotonic() + 3
+        try:
+            while not descendant_file.exists() and time.monotonic() < wait_until:
+                time.sleep(0.01)
+>           assert descendant_file.exists(), "detached worker never launched its CPU payload"
+E           AssertionError: detached worker never launched its CPU payload
+E           assert False
+E            +  where False = exists()
+E            +    where exists = PosixPath('/tmp/pytest-of-postedism/pytest-72/test_disconnected_proxy_does_n0/descendant.json').exists
+
+cluster/health/tests/test_review_fixes.py:106: AssertionError
+=========================== short test summary info ============================
+FAILED cluster/health/tests/test_review_fixes.py::test_initial_first_failure_stops_all_later_tasks[affinity-1]
+FAILED cluster/health/tests/test_review_fixes.py::test_initial_first_failure_stops_all_later_tasks[dcgm-5]
+FAILED cluster/health/tests/test_review_fixes.py::test_ib_ready_consumes_same_absolute_deadline
+FAILED cluster/health/tests/test_review_fixes.py::test_disconnected_proxy_does_not_extend_worker_descendant_deadline
+4 failed in 3.17s

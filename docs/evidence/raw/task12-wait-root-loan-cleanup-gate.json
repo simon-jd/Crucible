@@ -1,0 +1,22 @@
+{
+  "decision": "allow deletion of exact new loan tree only after immediate full inventory recheck",
+  "root": "/home/postedism/Desktop/Crucible/.tmp-task12-wait-go-loan",
+  "gzip_sha256": "44369ba62c39edd4f4c78d126930ce8fdeeb638780d01e3406b785853e48069a",
+  "decoded_sha256": "a81c33ad8edc225ff5ec0615fe8de6ac3dc21eb792e7c870d906cac4833e0312",
+  "verified_entries": 3719,
+  "verified_regular_files": 3453,
+  "verified_bytes": 243380070,
+  "root_metadata": [
+    ".tmp-task12-wait-go-loan",
+    66307,
+    55205474,
+    4096,
+    16893,
+    7,
+    null
+  ],
+  "known_controller_and_child_absent": true,
+  "binary_intentionally_removed_with_loan": true,
+  "old_binary_runtime_HF_raw_immutable": true,
+  "restore_full_690M_gate_after_absence": true
+}

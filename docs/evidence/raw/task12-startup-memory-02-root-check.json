@@ -1,0 +1,9 @@
+{
+  "scope": "root independent readonly pre-review hash check; no test/native import/model file rehash",
+  "sources": 175,
+  "artifacts": 18,
+  "proposal_sha256": "a66e312a1f6fb4790de3d8f209c87fd648dfe494d0ac7f1952fb6300b5a5174a",
+  "freeze_sha256": "be95186a260dddc1cf14f2ef8a4178541e1d2a520764787177574683c1846689",
+  "changes": [],
+  "native_execution": false
+}

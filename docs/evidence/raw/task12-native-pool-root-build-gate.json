@@ -1,0 +1,75 @@
+{
+  "decision": "allow exactly one build then one read-only buildinfo command, no tests/native/GPU",
+  "HEAD": "f037c7ac4c61ab0b3a32b9ce4da0dc62756bff1a",
+  "vcs_modified": true,
+  "verified": {
+    ".tools/go/bin/go": {
+      "bytes": 17164222,
+      "sha256": "5f5eb6d0b2fb6aa0bb5d5f8c5f1c944e0de955c925f0111af92a9d8f79680b5b"
+    },
+    "docs/evidence/raw/task12-native-pool-go-monitor.py": {
+      "bytes": 10965,
+      "sha256": "96a749f67ba3e6084039b2d8d448f4b4316d84d00997689c479e4e482b74fabb"
+    },
+    "go.mod": {
+      "bytes": 25,
+      "sha256": "e850b635508a57882d71a3e0cf459f999508a5ba757ee3e1631039aeb8d3e829"
+    },
+    "serving/replay/accounting.go": {
+      "bytes": 3472,
+      "sha256": "7e1eb347b2cd0d634316dad36b3d6c450513ec71c35a368c641094e7859fdb4f"
+    },
+    "serving/replay/cmd/replay/main.go": {
+      "bytes": 3205,
+      "sha256": "aed7288c3e9367797598aa6f4d98cbfad3af771818ae6a6fb4bed543f3904670"
+    },
+    "serving/replay/diagnostic.go": {
+      "bytes": 9983,
+      "sha256": "4c781f1a17627f968c21490c6b90bc5a9da78ccfa7ff9b7cfa61d6e0e201b02f"
+    },
+    "serving/replay/main.go": {
+      "bytes": 3004,
+      "sha256": "bf98648129f6bc435a4757f68361b7b5996592a4206a7cd575378047997a0b16"
+    },
+    "serving/replay/record.go": {
+      "bytes": 2470,
+      "sha256": "a9f52e5d1dcefadc90a2ad769cfe74767f335915b51c5c1c2822088efe01d569"
+    },
+    "serving/replay/schedule.go": {
+      "bytes": 5582,
+      "sha256": "5298bdd52aa578a55775fc38d003380563caf437947059babf6feb71ea1ca7e2"
+    },
+    "serving/replay/stream.go": {
+      "bytes": 2874,
+      "sha256": "d0fedbd24aaf5c7d42d5841818bec40cde8db4cac00eb707bd3e8358400e4d3a"
+    },
+    "serving/replay/trace.go": {
+      "bytes": 2989,
+      "sha256": "37f97366383e7062379a794c4eb98040b9c11a07ff3ae4fb3bfcc13c5ebf39a9"
+    },
+    "serving/replay/transport.go": {
+      "bytes": 4213,
+      "sha256": "7f8f876dc930c75a352f5e12d465283ba38ec11d65bb954afa64d385be7cb34b"
+    },
+    "serving/replay/wait.go": {
+      "bytes": 2437,
+      "sha256": "c92ccf294510b6f8964ab0179e14b6af1834be1f948119f23ab2ead2ca9a7ee3"
+    }
+  },
+  "monitor_exact_three_substitutions": true,
+  "commands": [
+    "PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B docs/evidence/raw/task12-native-pool-go-monitor.py build .tools/go/bin/go build -trimpath -p=1 -o .tmp-task12-native-03-pool/replay ./serving/replay/cmd/replay",
+    "PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B docs/evidence/raw/task12-native-pool-go-monitor.py buildinfo .tools/go/bin/go version -m .tmp-task12-native-03-pool/replay"
+  ],
+  "project_bytes": 13302736258,
+  "free_bytes": 265561464832,
+  "future_reserve": 690000000,
+  "errors": [],
+  "resource_pool_inside_original_500M": true,
+  "observed_stop_bytes": 400000000,
+  "planning_checkpoint_bytes": 300000000,
+  "limits_unchanged": true,
+  "actual_binary_sha_after_build_required": true,
+  "historical33105_not_an_expected_rebuild_hash": true,
+  "cleanup_requires_new_inventory_gate": true
+}

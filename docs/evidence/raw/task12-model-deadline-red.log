@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______________ test_hash_finishing_after_deadline_cannot_publish _______________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-model-tests/deadline-red/test_hash_finishing_after_dead0')
+http_bytes = ({'body': b'model-fixture', 'declared': 13, 'requests': 1}, 'http://127.0.0.1:35585/fixture')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x74ce7b81b710>
+
+    def test_hash_finishing_after_deadline_cannot_publish(tmp_path, http_bytes, monkeypatch):
+        from serving.baseline import model_snapshot as model
+    
+        state, url = http_bytes
+        expected = item(state["body"])
+        clock = [model.time.monotonic()]
+        deadline = clock[0] + 10
+        original_verify = model.verify_file
+    
+        def late_hash(*args):
+            result = original_verify(*args)
+            clock[0] = deadline + 1
+            return result
+    
+        monkeypatch.setattr(model.time, "monotonic", lambda: clock[0])
+        monkeypatch.setattr(model, "verify_file", late_hash)
+>       with pytest.raises(TimeoutError, match="deadline"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'TimeoutError'>
+
+serving/baseline/model_snapshot_test.py:279: Failed
+=========================== short test summary info ============================
+FAILED serving/baseline/model_snapshot_test.py::test_hash_finishing_after_deadline_cannot_publish
+1 failed, 11 deselected in 0.54s

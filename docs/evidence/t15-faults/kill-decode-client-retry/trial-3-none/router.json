@@ -1,0 +1,1 @@
+{"Scope": {"Model": "Qwen/Qwen2.5-0.5B-Instruct", "Revision": "7ae557604adf67be50417f59c2c2f167def9a775", "Adapter": "base"}, "Backends": [{"ID": "a", "URL": "http://127.0.0.1:31101", "MetricsURL": "http://127.0.0.1:31190/snapshot/a"}, {"ID": "b", "URL": "http://127.0.0.1:31102", "MetricsURL": "http://127.0.0.1:31190/snapshot/b"}]}

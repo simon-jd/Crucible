@@ -1,0 +1,55 @@
+{
+  "identity": "azure-calibration-1",
+  "trial": {
+    "pair": "calibration-1",
+    "multiplier": 1
+  },
+  "protocol_sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "planned_rows": 59,
+  "requested_input_tokens": 42939,
+  "requested_output_tokens": 7212,
+  "status": "completed",
+  "metrics": {
+    "accepted": false,
+    "goodput": null
+  },
+  "pid": 295109,
+  "returncode": 1,
+  "actual_records": 59,
+  "actual_output_tokens": 6968,
+  "failed_requests": 4,
+  "complete_request_failure_exit": true,
+  "effective_aborted": false,
+  "cleanup": {
+    "pid": 295109,
+    "returncode": 1,
+    "returncode_before_cleanup": 1,
+    "termination_requested": false,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "raw_sha256": "1cf9197a2714607e9495d01979cb4399f4d0f2255b9239c812e7388c3b59ba7c",
+  "raw_bytes": 50723,
+  "stderr_sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9",
+  "stderr_bytes": 29,
+  "boundary": {
+    "accepted": true,
+    "attempts": [
+      {
+        "status": 200,
+        "started_seconds": 9.139766916632652e-07,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.04818044207058847
+      }
+    ],
+    "deadline_seconds": 30,
+    "elapsed_seconds": 0.04818311205599457
+  }
+}

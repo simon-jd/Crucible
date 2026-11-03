@@ -1,0 +1,213 @@
+{
+  "command": [
+    ".tools/go/bin/go",
+    "test",
+    "-trimpath",
+    "-race",
+    "-p=1",
+    "-count=1",
+    "-timeout=30s",
+    "-run",
+    "^TestDiagnostic",
+    "./serving/replay",
+    "./serving/replay/cmd/replay"
+  ],
+  "samples": [
+    {
+      "seconds": 1.9307697010226548,
+      "interval_seconds": 1.9307697010226548,
+      "owned_bytes": 128070352,
+      "rss_bytes": 2236416,
+      "log_bytes": 0
+    },
+    {
+      "seconds": 2.2193016529781744,
+      "interval_seconds": 0.2885319519555196,
+      "owned_bytes": 132111198,
+      "rss_bytes": 41975808,
+      "log_bytes": 0,
+      "canonical_bytes": 13433409325,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265655832576,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 4.401901084929705,
+      "interval_seconds": 2.1825994319515303,
+      "owned_bytes": 148219150,
+      "rss_bytes": 246538240,
+      "log_bytes": 0,
+      "canonical_bytes": 13481153807,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265607389184,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 6.5688930510077626,
+      "interval_seconds": 2.166991966078058,
+      "owned_bytes": 192310485,
+      "rss_bytes": 51441664,
+      "log_bytes": 0,
+      "canonical_bytes": 13514470793,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265572802560,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 8.8411053159507,
+      "interval_seconds": 2.2722122649429366,
+      "owned_bytes": 220905483,
+      "rss_bytes": 62935040,
+      "log_bytes": 0,
+      "canonical_bytes": 13544062462,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265542815744,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 11.129738110001199,
+      "interval_seconds": 2.2886327940505,
+      "owned_bytes": 252064485,
+      "rss_bytes": 79671296,
+      "log_bytes": 0,
+      "canonical_bytes": 13567944804,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265516904448,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 13.423600359936245,
+      "interval_seconds": 2.293862249935046,
+      "owned_bytes": 273332619,
+      "rss_bytes": 51425280,
+      "log_bytes": 0,
+      "canonical_bytes": 13598008446,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265486897152,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 15.674838674953207,
+      "interval_seconds": 2.2512383150169626,
+      "owned_bytes": 300191904,
+      "rss_bytes": 49967104,
+      "log_bytes": 0,
+      "canonical_bytes": 13614025706,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265464971264,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 17.92577228299342,
+      "interval_seconds": 2.2509336080402136,
+      "owned_bytes": 329569273,
+      "rss_bytes": 53944320,
+      "log_bytes": 0,
+      "canonical_bytes": 13646307005,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265437777920,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 20.216102630947717,
+      "interval_seconds": 2.2903303479542956,
+      "owned_bytes": 361540214,
+      "rss_bytes": 160174080,
+      "log_bytes": 0,
+      "canonical_bytes": 13679640011,
+      "nonloan_bytes": 13297944678,
+      "projected_bytes": 13987944678,
+      "free_bytes": 265403138048,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 22.498596039018594,
+      "interval_seconds": 2.282493408070877,
+      "owned_bytes": 381837476,
+      "rss_bytes": 32362496,
+      "log_bytes": 0,
+      "canonical_bytes": 13680130127,
+      "nonloan_bytes": 13297945625,
+      "projected_bytes": 13987945625,
+      "free_bytes": 265401446400,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    },
+    {
+      "seconds": 24.77705006301403,
+      "interval_seconds": 2.2784540239954367,
+      "owned_bytes": 370725302,
+      "rss_bytes": 70107136,
+      "log_bytes": 0,
+      "canonical_bytes": 13546356538,
+      "nonloan_bytes": 13297945661,
+      "projected_bytes": 13987945661,
+      "free_bytes": 265538387968,
+      "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+    }
+  ],
+  "scan_errors": [
+    {
+      "scan": "owned",
+      "attempt": 0,
+      "error": "[Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/tmp/go-build3487930337/b211'"
+    }
+  ],
+  "signals": [],
+  "sampling": "requested owned/RSS interval0.25s; canonical2s, plus scan duration; not a quota",
+  "limits": {
+    "owned_abort": 400000000,
+    "loan": 500000000,
+    "rss_abort": 2000000000,
+    "deadline_seconds": 180,
+    "file_bytes": 67108864,
+    "core_bytes": 0,
+    "log_abort_bytes": 1048576
+  },
+  "monitor_sha256": "d906157f263a48f062336c6e4dfade7e76e8fd7b3e643ce95dc772197c1327c3",
+  "before": {
+    "canonical_bytes": 13425998726,
+    "owned_bytes": 128054048,
+    "nonloan_bytes": 13297944678,
+    "projected_bytes": 13987944678,
+    "free_bytes": 265664102400,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HOME": "/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE": "/home/postedism/.cache/huggingface/hub",
+    "GOENV": "off",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOFLAGS": "",
+    "GOMAXPROCS": "2",
+    "GOCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/cache",
+    "GOPATH": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/gopath",
+    "GOMODCACHE": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/mod",
+    "GOTMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/tmp",
+    "TMPDIR": "/home/postedism/Desktop/Crucible/.tmp-task12-sender-phase-go-loan/tmp"
+  },
+  "pid": 3,
+  "leader_start": "71967636",
+  "exit_code": 0,
+  "terminal_group_proved_before_reap": true,
+  "elapsed_seconds": 27.11628135596402,
+  "after": {
+    "canonical_bytes": 13546356585,
+    "owned_bytes": 248410877,
+    "nonloan_bytes": 13297945708,
+    "projected_bytes": 13987945708,
+    "free_bytes": 265538297856,
+    "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota"
+  }
+}

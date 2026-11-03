@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "project_bytes": 13283175965,
+  "free_bytes": 272903962624,
+  "planned_project_bytes": 680000000,
+  "reserve_breakdown": {
+    "native": 650000000,
+    "Task13": 10000000,
+    "root_review": 10000000,
+    "this_CPU": 10000000
+  },
+  "download_bytes": 0,
+  "service_memory_bytes": 0,
+  "checkpoints": 0,
+  "errors": [],
+  "method": "scripts/resource_preflight.py canonical counter; captured before this round writes; decimal bytes; shared HF aliases set explicitly"
+}

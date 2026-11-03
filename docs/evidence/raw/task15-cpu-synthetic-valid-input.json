@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "d4c2e7283ccd1ce38b5235c13b4384d3fdbd1c78051e9c04f928a573dd4131b4",
+  "synthetic_fixture": true,
+  "rows": [
+    {
+      "request_id": "synthetic-r0",
+      "status": "completed",
+      "spec_accepted_tokens": 6,
+      "spec_verify_ct": 2
+    },
+    {
+      "request_id": "synthetic-r1",
+      "status": "completed",
+      "spec_accepted_tokens": 0,
+      "spec_verify_ct": 3
+    },
+    {
+      "request_id": "synthetic-r2",
+      "status": "completed",
+      "spec_accepted_tokens": 0,
+      "spec_verify_ct": 3
+    }
+  ]
+}

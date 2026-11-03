@@ -1,0 +1,13 @@
+=== RUN   TestAlternatingColdFixture
+    main_test.go:22: {"label":"cpu-fixture","metadata":"loopback adapter, no weights/model/NVMe/object store","trials":[{"round":0,"source":"object-store","seconds":0.000570142},{"round":0,"source":"nvme","seconds":0.000139979},{"round":1,"source":"nvme","seconds":0.000176179},{"round":1,"source":"object-store","seconds":0.000135494},{"round":2,"source":"object-store","seconds":0.000130508},{"round":2,"source":"nvme","seconds":0.000136749}],"summary":{"nvme":{"Median":0.000139979,"Min":0.000136749,"Max":0.000176179},"object-store":{"Median":0.000135494,"Min":0.000130508,"Max":0.000570142}}}
+--- PASS: TestAlternatingColdFixture (0.00s)
+=== RUN   TestStageIntegrityBoundsAndCleanup
+--- PASS: TestStageIntegrityBoundsAndCleanup (0.01s)
+PASS
+ok  	crucible/serving/experiments	0.015s
+# crucible/serving/autoscaler [crucible/serving/autoscaler.test]
+serving/autoscaler/controller.go:71:8: undefined: time
+serving/autoscaler/controller.go:72:97: undefined: time
+serving/autoscaler/controller.go:81:16: undefined: time
+FAIL	crucible/serving/autoscaler [build failed]
+FAIL

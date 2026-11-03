@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "scheduler": "k8s",
+  "errors": [
+    "command failed (127): kubectl -n crucible-baseline get pods -l component=gpu -o json: FileNotFoundError: [Errno 2] No such file or directory: 'kubectl'",
+    "lock validation: image digest is missing/unlocked (must be sha256:<64 hex>)"
+  ],
+  "captured_utc": "2026-10-24T02:17:50.776980+00:00",
+  "scope": "real-command execution; synthetic subprocesses only in explicitly labelled tests"
+}

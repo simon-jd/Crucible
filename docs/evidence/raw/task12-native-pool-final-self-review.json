@@ -1,0 +1,13 @@
+{
+  "status": "static-self-review-passed-no-execution",
+  "sources_verified": 183,
+  "artifacts_verified": 183,
+  "executables_verified": 4,
+  "mismatches": [],
+  "original_output_caps_lifecycle_sequence_acceptance_equal": true,
+  "proposal_freeze_common_fields_equal": true,
+  "proposal_sha256": "21769b85cae85c07494459720c7f59b2e0eaf0ce7b1b77ed9ffec0b59844a0bb",
+  "freeze_sha256": "84ad1d18a1d0cb6580dea76548a427925c18a021e4a4c207522372215dc024e3",
+  "source_edits_or_tests_or_native_run": false,
+  "budget_display_note": "Frozen proposal additional_allowances itemization totals old30M; declared total and implemented measurement use690M, whose remaining existing allowance beyond500M pool+100M code/evidence+50M cleanup is40M. No total-budget change. Root notified; external note preserves frozen identities."
+}

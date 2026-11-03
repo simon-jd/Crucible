@@ -1,0 +1,29 @@
+{
+  "time_utc": "2026-10-25T17:10:49.889076+00:00",
+  "scope": "ROOT designruling/newsourcepreponly noexecution",
+  "initialreport_bytes": 9998,
+  "initialreport_sha256": "f4a41f2990ca06618937441597903a68bc4457877e66f697c9f87c78b6f642a5",
+  "resource_sample": {
+    "project_bytes": 13316681813,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306521582,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996521582,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13999521582,
+  "stage_retained_cap": 2000000,
+  "scratch_cap": 1000000,
+  "chosen": "newRAMweights/PhaseBridge/CPUperstorageexport/customBaseModelLoaderbeforeprofiling/actualpackedtargetACK",
+  "old_disk_and_training_semantics": "preserve",
+  "approved_actions": [
+    "maintainedsource/tests/docs/monitor preparation only"
+  ],
+  "runtime_static_CPU_GPU_authorized": false,
+  "Goal": "active/fullscopeopen"
+}

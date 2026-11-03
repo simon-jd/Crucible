@@ -1,0 +1,35 @@
+{
+  "observed_at_utc": "2026-10-25T11:41:25.385160+00:00",
+  "status": "root-independent-full-inventory-and-source-check-passed",
+  "inventory_sha256": "982ace5429bf911f87ffa8d25fd725c2dd77acd866d41618ac1d89a21e07f7fc",
+  "decoded_sha256": "675fe255c0e8b77f65aa592b94f08ba97c7ec40aff5e6b3872237046b9021bff",
+  "entries_checked": 1707,
+  "regular_files": 1446,
+  "directories": 261,
+  "regular_bytes": 105330021,
+  "build_source_identities_checked": 13,
+  "tested_source_identities_checked": 4,
+  "pool_identity": {
+    "dev": 66307,
+    "inode": 55447049
+  },
+  "preserve": [
+    ".tmp-task12-native-03-pool",
+    ".tmp-task12-native-03-pool/replay"
+  ],
+  "client_bytes": 10160231,
+  "client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "authorized_cleanup_only_top_children": [
+    "cache",
+    "gopath",
+    "mod",
+    "tmp"
+  ],
+  "deletable_paths": 1705,
+  "reclaim_regular_bytes": 95169790,
+  "required_before_unlink": "Immediate complete path/metadata/SHA recheck; unlink only inventoried regular files, then bottom-up empty directories; retain root/client. Stop on any mismatch.",
+  "next_scope": "Prepare precise handoff directory list, manifest/source and short host-only allowlist metadata/pureCPU pool validation command; wait for source gate before execution. No GPU/service/lock/native import or Git.",
+  "remaining_pool_budget_after_client": 489839769,
+  "whole_project_cap": 14000000000,
+  "cleanup_executed_by_root": false
+}

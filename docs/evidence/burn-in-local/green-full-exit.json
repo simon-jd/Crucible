@@ -1,0 +1,10 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "returncode": 0,
+  "kind": "CPU-only tests and explicitly synthetic command shims; not multi-node acceptance"
+}

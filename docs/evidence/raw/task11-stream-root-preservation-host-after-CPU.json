@@ -1,0 +1,105 @@
+{
+  "time_utc": "2026-10-25T15:34:01.250690+00:00",
+  "scope": "ROOT outside-diff actual preservation/kernel-ownedruntime audit while independentreview read-only",
+  "Task12_sources": 183,
+  "Task12_artifacts": 207,
+  "executables": {
+    "python_path": true,
+    "native_python_path": true,
+    "timeout_path": true,
+    "prlimit_path": true
+  },
+  "Task12_mismatches": [],
+  "coordinator_files": 100,
+  "coordinator_bytes": 2578786,
+  "coordinator_mismatches": [],
+  "pool15_directory_identities": {
+    "native-cache": {
+      "dev": 66307,
+      "inode": 55447088,
+      "empty": null
+    },
+    "cuda": {
+      "dev": 66307,
+      "inode": 55447089,
+      "empty": true
+    },
+    "datasets": {
+      "dev": 66307,
+      "inode": 55447090,
+      "empty": true
+    },
+    "deep-gemm": {
+      "dev": 66307,
+      "inode": 55447091,
+      "empty": true
+    },
+    "flashinfer": {
+      "dev": 66307,
+      "inode": 55447092,
+      "empty": true
+    },
+    "hf-modules": {
+      "dev": 66307,
+      "inode": 55447093,
+      "empty": true
+    },
+    "inductor": {
+      "dev": 66307,
+      "inode": 55447094,
+      "empty": true
+    },
+    "offline-cubin-source": {
+      "dev": 66307,
+      "inode": 55447095,
+      "empty": true
+    },
+    "outlines": {
+      "dev": 66307,
+      "inode": 55447096,
+      "empty": true
+    },
+    "tmp": {
+      "dev": 66307,
+      "inode": 55447097,
+      "empty": true
+    },
+    "torch": {
+      "dev": 66307,
+      "inode": 55447098,
+      "empty": true
+    },
+    "torch-home": {
+      "dev": 66307,
+      "inode": 55447099,
+      "empty": true
+    },
+    "triton": {
+      "dev": 66307,
+      "inode": 55447100,
+      "empty": true
+    },
+    "tvm-ffi": {
+      "dev": 66307,
+      "inode": 55447101,
+      "empty": true
+    },
+    "xdg": {
+      "dev": 66307,
+      "inode": 55447102,
+      "empty": true
+    }
+  },
+  "client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "client_loan_repaid": false,
+  "full03_output_absent": true,
+  "original_CPU_handle": 97129,
+  "supervisor_cleanup_confirmed": true,
+  "scratch_absent": true,
+  "host_same_UID_seen": 3,
+  "host_exactcwd_runtime_candidates": [],
+  "host_unreadable_or_race": [],
+  "host_note": "point-in-time scopedCPU argv/cwd observation; unknownentriesacknowledged; not globalGPU/lock ownershipclaim; no processes signaled",
+  "new_GPU_or_service_or_container_started": false,
+  "proc_view_scope": "This first audit used the current sandbox /proc view; separate host-permitted audit is task11-stream-root-host-end-audit.json (435UIDobserved/25unreadable-race), never infer global absence from sandboxview."
+}

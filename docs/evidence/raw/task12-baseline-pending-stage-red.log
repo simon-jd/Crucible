@@ -1,0 +1,16 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_pending_stage_requires_exact_receipt_and_unmodified_owned_contents ____
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/pytest-of-postedism/pytest-14/test_pending_stage_requires_ex0')
+
+    def test_pending_stage_requires_exact_receipt_and_unmodified_owned_contents(tmp_path):
+        import json
+    
+>       from serving.baseline.prepare_runtime import validate_pending_stage
+E       ImportError: cannot import name 'validate_pending_stage' from 'serving.baseline.prepare_runtime' (/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime.py)
+
+serving/baseline/prepare_runtime_test.py:238: ImportError
+=========================== short test summary info ============================
+FAILED serving/baseline/prepare_runtime_test.py::test_pending_stage_requires_exact_receipt_and_unmodified_owned_contents
+1 failed, 9 deselected in 0.03s

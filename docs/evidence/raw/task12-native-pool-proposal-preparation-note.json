@@ -1,0 +1,29 @@
+{
+  "status": "metadata-only-correction-unexecuted",
+  "root_ruling": "Ruling27",
+  "initial_proposal_sha256": "21769b85cae85c07494459720c7f59b2e0eaf0ce7b1b77ed9ffec0b59844a0bb",
+  "initial_freeze_sha256": "84ad1d18a1d0cb6580dea76548a427925c18a021e4a4c207522372215dc024e3",
+  "proposal_sha256": "a288fcbdf15945bd38b8c5536635dbcfab74b587eab216d4d747bf475242d1ee",
+  "freeze_sha256": "6efc95908755d150e74293732c3ab19eacbc16eabbf037c21e2f6d162b8842a2",
+  "delta": {
+    "proposal.resource_plan.additional_allowances": {
+      "before": {
+        "Task13": 10000000,
+        "root_review": 10000000,
+        "CPU_including_this_preparation": 10000000
+      },
+      "after": {
+        "Task13": 10000000,
+        "root_review": 10000000,
+        "CPU_including_this_preparation": 10000000,
+        "other_existing_reserve": 10000000
+      }
+    },
+    "freeze.artifacts.docs/evidence/raw/task12-baseline-full-03-proposal.json": "updated proposal SHA only"
+  },
+  "total_reserve_bytes_unchanged": 690000000,
+  "sum": "500000000 pool +100000000 code/evidence +50000000 cleanup +40000000 existing allowances",
+  "source_command_environment_limits_unchanged": true,
+  "initial_self_review_is_historical": true,
+  "test_or_native_execution": false
+}

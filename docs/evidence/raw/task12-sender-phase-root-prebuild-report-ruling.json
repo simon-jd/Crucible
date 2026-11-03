@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-10-25T09:42:22.958048+00:00",
+  "ruling": "continue the already approved CPU commands; appended report is live documentation and its at_gate hash is historical provenance, not an immutable execution input",
+  "reason": "root read appended candidate freeze and preflight paragraph and both receipts; all7source/monitor SHAs and all4exact proposed commands unchanged",
+  "gate_report_sha256": "c055fb3c3129f98ee1bd7c79be9e66e8d147900aca93abd71cbf1e97d1c879f6",
+  "report_sha256_now": "465c6bcd09443a11b2fce23e3d3d6a1a56b4ef2f977657284cabb3ccaf10b076",
+  "old_gate_unchanged": true,
+  "preserve": "agent mismatch check retained; no command or loan had started at that boundary",
+  "scope": "same once smoke/RED/focused/race/build only; no timing or GPU launch"
+}

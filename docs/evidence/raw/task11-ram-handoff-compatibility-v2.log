@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 1 item
+
+rl/learner/tests/test_state_handoff.py::test_sealed_memfd_weights_only_mmap_support PASSED
+
+============================== 1 passed in 1.15s ===============================

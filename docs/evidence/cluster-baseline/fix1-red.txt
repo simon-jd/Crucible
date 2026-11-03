@@ -1,0 +1,137 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+_____________ test_default_bootstrap_plan_does_not_run_installers ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-16/test_default_bootstrap_plan_do0')
+
+    def test_default_bootstrap_plan_does_not_run_installers(tmp_path):
+        result = subprocess.run([sys.executable, str(ROOT / "bootstrap.py"), "--manifest",
+                                 str(ROOT / "bootstrap.example.json")],
+                                capture_output=True, text=True, check=False)
+>       assert result.returncode == 1
+E       assert 2 == 1
+E        +  where 2 = CompletedProcess(args=['/home/postedism/Desktop/Crucible/.venv/bin/python', '/home/postedism/Desktop/Crucible/cluster/...'t open file '/home/postedism/Desktop/Crucible/cluster/provision/bootstrap.py': [Errno 2] No such file or directory\n").returncode
+
+cluster/provision/tests/test_bootstrap.py:16: AssertionError
+_________ test_synthetic_bootstrap_is_idempotent_without_host_changes __________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-16/test_synthetic_bootstrap_is_id0')
+
+    def test_synthetic_bootstrap_is_idempotent_without_host_changes(tmp_path):
+        spec = importlib.util.spec_from_file_location("bootstrap", ROOT / "bootstrap.py")
+        module = importlib.util.module_from_spec(spec)
+>       spec.loader.exec_module(module)
+
+cluster/provision/tests/test_bootstrap.py:26:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x73173b7a3500>
+path = '/home/postedism/Desktop/Crucible/cluster/provision/bootstrap.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/cluster/provision/bootstrap.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_____ test_real_probe_subprocess_preserves_diagnostics_after_late_failure ______
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-16/test_real_probe_subprocess_pre0')
+
+    def test_real_probe_subprocess_preserves_diagnostics_after_late_failure(tmp_path):
+        """Actual node_probe subprocess; command fixtures are explicitly synthetic."""
+        for name, source in {
+            "nvidia-smi": "import sys; print('TOPOLOGY-SYNTHETIC' if 'topo' in sys.argv else 'GPU-fixture, NVIDIA H100, 570.133.20')",
+            "ibstat": "print('FABRIC-SYNTHETIC State: Active')",
+            "ofed_info": "import sys; print('OFED-LATE-FAILURE', file=sys.stderr); sys.exit(7)",
+        }.items():
+            path = tmp_path / name
+            path.write_text(f"#!{sys.executable}\n{source}\n")
+            path.chmod(0o755)
+        result = subprocess.run([sys.executable, str(ROOT / "node_probe.py"), "host"],
+                                env=dict(os.environ, PATH=str(tmp_path)), text=True,
+                                capture_output=True, check=False)
+        assert result.returncode == 1
+>       report = load_module("baseline").reports(result.stdout)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+cluster/provision/tests/test_baseline.py:534:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+cluster/provision/baseline.py:149: in reports
+    require(bool(result), "probe emitted no reports")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, message = 'probe emitted no reports'
+
+    def require(condition, message):
+        if not condition:
+>           raise BaselineError(message)
+E           baseline.BaselineError: probe emitted no reports
+
+cluster/provision/baseline.py:27: BaselineError
+_________ test_slurm_nonzero_archives_healthy_and_partial_host_reports _________
+
+fixture_cluster = (PosixPath('/tmp/pytest-of-postedism/pytest-16/test_slurm_nonzero_archives_he0'), PosixPath('/tmp/pytest-of-postedism/...time', 'nccl': 22501, ...}, {'cuda_runtime': 12080, 'cuda_toolkit': '12.8.1', 'kind': 'runtime', 'nccl': 22501, ...}]})
+
+    def test_slurm_nonzero_archives_healthy_and_partial_host_reports(fixture_cluster):
+        directory = fixture_cluster[0]
+        shim = directory / "srun"
+        shim.write_text(shim.read_text().replace('else:\n    for runtime',
+            '    sys.exit(7)\nelse:\n    for runtime'))
+        result, summary, output = run_fixture(fixture_cluster)
+        assert result.returncode == 1
+        assert not summary["passed"]
+>       assert len(list(output.glob("node-*-topology.txt"))) == 4
+E       AssertionError: assert 0 == 4
+E        +  where 0 = len([])
+E        +    where [] = list(<generator object Path.glob at 0x73173b6b08c0>)
+E        +      where <generator object Path.glob at 0x73173b6b08c0> = glob('node-*-topology.txt')
+E        +        where glob = PosixPath('/tmp/pytest-of-postedism/pytest-16/test_slurm_nonzero_archives_he0/evidence').glob
+
+cluster/provision/tests/test_baseline.py:549: AssertionError
+_______ test_k8s_later_host_failure_keeps_prior_and_partial_diagnostics ________
+
+fixture_k8s = (PosixPath('/tmp/pytest-of-postedism/pytest-16/test_k8s_later_host_failure_ke0'), PosixPath('/tmp/pytest-of-postedism/...us=locked only after review. No model is used in baseline; later workloads must also pin model revisions.', ...}, ...})
+
+    def test_k8s_later_host_failure_keeps_prior_and_partial_diagnostics(fixture_k8s):
+        directory = fixture_k8s[0]
+        shim = directory / "kubectl"
+        shim.write_text(shim.read_text().replace('print("CRUCIBLE_PROBE="+json.dumps(report))',
+            'print("CRUCIBLE_PROBE="+json.dumps(report),flush=True)\n    if name=="host-2": sys.exit(9)'))
+        result, summary, output = run_k8s_fixture(fixture_k8s)
+        assert result.returncode == 1
+        assert not summary["passed"]
+>       assert len(list(output.glob("node-*-topology.txt"))) == 3
+E       AssertionError: assert 0 == 3
+E        +  where 0 = len([])
+E        +    where [] = list(<generator object Path.glob at 0x73173b6b0e10>)
+E        +      where <generator object Path.glob at 0x73173b6b0e10> = glob('node-*-topology.txt')
+E        +        where glob = PosixPath('/tmp/pytest-of-postedism/pytest-16/test_k8s_later_host_failure_ke0/evidence').glob
+
+cluster/provision/tests/test_baseline.py:562: AssertionError
+=========================== short test summary info ============================
+FAILED cluster/provision/tests/test_bootstrap.py::test_default_bootstrap_plan_does_not_run_installers
+FAILED cluster/provision/tests/test_bootstrap.py::test_synthetic_bootstrap_is_idempotent_without_host_changes
+FAILED cluster/provision/tests/test_baseline.py::test_real_probe_subprocess_preserves_diagnostics_after_late_failure
+FAILED cluster/provision/tests/test_baseline.py::test_slurm_nonzero_archives_healthy_and_partial_host_reports
+FAILED cluster/provision/tests/test_baseline.py::test_k8s_later_host_failure_keeps_prior_and_partial_diagnostics
+5 failed, 39 deselected in 0.46s
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_deployment_default_is_offline_and_unprovided_artifacts_fail_closed ____
+
+    def test_deployment_default_is_offline_and_unprovided_artifacts_fail_closed():
+        result = subprocess.run([sys.executable, str(ROOT / "deploy.py"), "--inventory",
+                                 str(ROOT / "deploy.example.json")],
+                                capture_output=True, text=True, check=False)
+>       assert result.returncode == 1
+E       assert 2 == 1
+E        +  where 2 = CompletedProcess(args=['/home/postedism/Desktop/Crucible/.venv/bin/python', '/home/postedism/Desktop/Crucible/cluster/...can't open file '/home/postedism/Desktop/Crucible/cluster/provision/deploy.py': [Errno 2] No such file or directory\n").returncode
+
+cluster/provision/tests/test_bootstrap.py:64: AssertionError
+=========================== short test summary info ============================
+FAILED cluster/provision/tests/test_bootstrap.py::test_deployment_default_is_offline_and_unprovided_artifacts_fail_closed
+1 failed, 2 deselected in 0.02s

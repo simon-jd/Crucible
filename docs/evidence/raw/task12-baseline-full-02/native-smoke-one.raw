@@ -1,0 +1,4 @@
+data: {"text":" )*","output_ids":[89401],"meta_info":{"id":"d2397501366b48efb22925b33ef21294","finish_reason":{"type":"length","length":1},"prompt_tokens":8,"weight_version":"default","total_retractions":0,"queue_time":0.00010605598799884319,"prefill_delay":0.0003317520022392273,"prefill_latency":0.007679939968511462,"completion_tokens":1,"cached_tokens":0,"e2e_latency":0.02070784568786621,"request_received_ts":1792912817.1563878,"request_scheduled_ts":1792912817.1564906,"decode_finished_ts":1792912817.1770957,"forward_time":0.02034554595593363,"response_sent_ts":1792912817.1771414}}
+
+data: [DONE]
+

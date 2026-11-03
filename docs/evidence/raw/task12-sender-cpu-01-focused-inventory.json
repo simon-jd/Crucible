@@ -1,0 +1,866 @@
+{
+  "scope": "exact completed tiny-CPU pytest fixtures only",
+  "root": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests",
+  "root_dev": 66307,
+  "root_inode": 56395181,
+  "bytes_regular": 73460,
+  "entry_count": 56,
+  "entries": [
+    {
+      "path": "test_bounded_writer_refuses_be0",
+      "dev": 66307,
+      "inode": 56395186,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918290990923121,
+      "kind": "directory"
+    },
+    {
+      "path": "test_bounded_writer_refuses_becurrent",
+      "dev": 66307,
+      "inode": 56395187,
+      "mode": 41471,
+      "size": 95,
+      "mtime_ns": 1792918290990923121,
+      "kind": "pytest-owned-inroot-symlink",
+      "target": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests/test_bounded_writer_refuses_be0"
+    },
+    {
+      "path": "test_duplicate_or_unknown_body0",
+      "dev": 66307,
+      "inode": 56395237,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918291261335779,
+      "kind": "directory"
+    },
+    {
+      "path": "test_duplicate_or_unknown_body1",
+      "dev": 66307,
+      "inode": 56395240,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918291264599998,
+      "kind": "directory"
+    },
+    {
+      "path": "test_duplicate_or_unknown_bodycurrent",
+      "dev": 66307,
+      "inode": 56395238,
+      "mode": 41471,
+      "size": 95,
+      "mtime_ns": 1792918291264263264,
+      "kind": "pytest-owned-inroot-symlink",
+      "target": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests/test_duplicate_or_unknown_body1"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0",
+      "dev": 66307,
+      "inode": 56395189,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918290991762228,
+      "kind": "directory"
+    },
+    {
+      "path": "test_fast_normal_stub_keepalivcurrent",
+      "dev": 66307,
+      "inode": 56395190,
+      "mode": 41471,
+      "size": 95,
+      "mtime_ns": 1792918290991512985,
+      "kind": "pytest-owned-inroot-symlink",
+      "target": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests/test_fast_normal_stub_keepaliv0"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0",
+      "dev": 66307,
+      "inode": 56395219,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918291246884064,
+      "kind": "directory"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1",
+      "dev": 66307,
+      "inode": 56395228,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918291253800717,
+      "kind": "directory"
+    },
+    {
+      "path": "test_first_or_later_proc_failucurrent",
+      "dev": 66307,
+      "inode": 56395220,
+      "mode": 41471,
+      "size": 95,
+      "mtime_ns": 1792918291253231970,
+      "kind": "pytest-owned-inroot-symlink",
+      "target": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests/test_first_or_later_proc_failu1"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0",
+      "dev": 66307,
+      "inode": 56395209,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918291219888894,
+      "kind": "directory"
+    },
+    {
+      "path": "test_real_child_hard_cap_signacurrent",
+      "dev": 66307,
+      "inode": 56395210,
+      "mode": 41471,
+      "size": 95,
+      "mtime_ns": 1792918291219888894,
+      "kind": "pytest-owned-inroot-symlink",
+      "target": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests/test_real_child_hard_cap_signa0"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0",
+      "dev": 66307,
+      "inode": 56395199,
+      "mode": 16832,
+      "size": 4096,
+      "mtime_ns": 1792918291041040475,
+      "kind": "directory"
+    },
+    {
+      "path": "test_timeout_stub_is_terminatecurrent",
+      "dev": 66307,
+      "inode": 56395200,
+      "mode": 41471,
+      "size": 95,
+      "mtime_ns": 1792918291040127682,
+      "kind": "pytest-owned-inroot-symlink",
+      "target": "/home/postedism/Desktop/Crucible/.cache/task12-sender-cpu-tests/test_timeout_stub_is_terminate0"
+    },
+    {
+      "path": "test_bounded_writer_refuses_be0/bounded",
+      "dev": 66307,
+      "inode": 56395188,
+      "mode": 33204,
+      "size": 4,
+      "mtime_ns": 1792918290991043163,
+      "kind": "file",
+      "sha256": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout",
+      "dev": 66307,
+      "inode": 56395201,
+      "mode": 16893,
+      "size": 4096,
+      "mtime_ns": 1792918291217888903,
+      "kind": "directory"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/fixture.jsonl",
+      "dev": 66307,
+      "inode": 56395202,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291041040475,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/launch.json",
+      "dev": 66307,
+      "inode": 56395206,
+      "mode": 33204,
+      "size": 327,
+      "mtime_ns": 1792918291043183075,
+      "kind": "file",
+      "sha256": "b9e2805a8087745ce693e2bb11e1297f20c1806c64b1acf252d4099052a26690"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/rss.jsonl",
+      "dev": 66307,
+      "inode": 56395203,
+      "mode": 33204,
+      "size": 298,
+      "mtime_ns": 1792918291143889221,
+      "kind": "file",
+      "sha256": "5c3dbac3e17b5ddfd06c659dee63f295077bf91d91a66bdbcc8ae5dc5ba72a8b"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/stderr.log",
+      "dev": 66307,
+      "inode": 56395205,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291041040475,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/stdout.json",
+      "dev": 66307,
+      "inode": 56395204,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291041040475,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/stop.json",
+      "dev": 66307,
+      "inode": 56395207,
+      "mode": 33204,
+      "size": 108,
+      "mtime_ns": 1792918291205510585,
+      "kind": "file",
+      "sha256": "8de0885885f8019599baf7a48962b89bb7005dbe0c298703c3dbf811515bba95"
+    },
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/terminal.json",
+      "dev": 66307,
+      "inode": 56395208,
+      "mode": 33204,
+      "size": 423,
+      "mtime_ns": 1792918291218887041,
+      "kind": "file",
+      "sha256": "a37f4664fa1b9e9081cbeb0f456083882e4f88aae695be441152a394104f8005"
+    },
+    {
+      "path": "test_duplicate_or_unknown_body1/events",
+      "dev": 66307,
+      "inode": 56395241,
+      "mode": 33204,
+      "size": 333,
+      "mtime_ns": 1792918291264732899,
+      "kind": "file",
+      "sha256": "d10b5878f216f83a3fa549e302804b3b407558cf716ca23f1a1458acdfa1ef89"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap",
+      "dev": 66307,
+      "inode": 56395211,
+      "mode": 16893,
+      "size": 4096,
+      "mtime_ns": 1792918291244888786,
+      "kind": "directory"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/fixture.jsonl",
+      "dev": 66307,
+      "inode": 56395212,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291219888894,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/launch.json",
+      "dev": 66307,
+      "inode": 56395216,
+      "mode": 33204,
+      "size": 701,
+      "mtime_ns": 1792918291223278311,
+      "kind": "file",
+      "sha256": "c2ffa18ea5dda35552f0fedaaead181a02013e5b24cb5040dacbcc144fe38bd1"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/rss.jsonl",
+      "dev": 66307,
+      "inode": 56395213,
+      "mode": 33204,
+      "size": 149,
+      "mtime_ns": 1792918291223278311,
+      "kind": "file",
+      "sha256": "ec37548e1f3460f919550d916e41208f4bff6c5608b0f033aa34c0e5fd62127e"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/stderr.log",
+      "dev": 66307,
+      "inode": 56395215,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291220888890,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/stdout.json",
+      "dev": 66307,
+      "inode": 56395214,
+      "mode": 33204,
+      "size": 65536,
+      "mtime_ns": 1792918291234888829,
+      "kind": "file",
+      "sha256": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/stop.json",
+      "dev": 66307,
+      "inode": 56395217,
+      "mode": 33204,
+      "size": 155,
+      "mtime_ns": 1792918291243679504,
+      "kind": "file",
+      "sha256": "6bf6a827606cf37a9fc229d15857992d8012e7f750b26530f7bb9716790b22ae"
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/terminal.json",
+      "dev": 66307,
+      "inode": 56395218,
+      "mode": 33204,
+      "size": 570,
+      "mtime_ns": 1792918291246149852,
+      "kind": "file",
+      "sha256": "ff1fa18646ab2ed3423c32fab0df266870f50f2ab00e1aeb7c583e302d181fb4"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2",
+      "dev": 66307,
+      "inode": 56395229,
+      "mode": 16893,
+      "size": 4096,
+      "mtime_ns": 1792918291258888726,
+      "kind": "directory"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/fixture.jsonl",
+      "dev": 66307,
+      "inode": 56395230,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291253800717,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/launch.json",
+      "dev": 66307,
+      "inode": 56395234,
+      "mode": 33204,
+      "size": 328,
+      "mtime_ns": 1792918291254941905,
+      "kind": "file",
+      "sha256": "69ec773cd36625cf77b66d023424a752c9ca173fc803b2cb67aaa28611958514"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/rss.jsonl",
+      "dev": 66307,
+      "inode": 56395231,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291253800717,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/stderr.log",
+      "dev": 66307,
+      "inode": 56395233,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291253800717,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/stdout.json",
+      "dev": 66307,
+      "inode": 56395232,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291253800717,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/stop.json",
+      "dev": 66307,
+      "inode": 56395235,
+      "mode": 33204,
+      "size": 118,
+      "mtime_ns": 1792918291255057894,
+      "kind": "file",
+      "sha256": "0b338258c66d70ec6dfbaf3cc4b5216f8cdabed507fe1908a2743a1b10fdd84e"
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/terminal.json",
+      "dev": 66307,
+      "inode": 56395236,
+      "mode": 33204,
+      "size": 572,
+      "mtime_ns": 1792918291259974887,
+      "kind": "file",
+      "sha256": "2f7677d75a7732976dd8777c5a8e107d17cab7b235a6004138db714cba7100b1"
+    },
+    {
+      "path": "test_duplicate_or_unknown_body0/events",
+      "dev": 66307,
+      "inode": 56395239,
+      "mode": 33204,
+      "size": 333,
+      "mtime_ns": 1792918291261511643,
+      "kind": "file",
+      "sha256": "c132b7eb6a75960f6173887516f0f65467c058eb46b89c2b02463c83eeb43477"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal",
+      "dev": 66307,
+      "inode": 56395191,
+      "mode": 16893,
+      "size": 4096,
+      "mtime_ns": 1792918291038889674,
+      "kind": "directory"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/fixture.jsonl",
+      "dev": 66307,
+      "inode": 56395192,
+      "mode": 33204,
+      "size": 601,
+      "mtime_ns": 1792918291012889786,
+      "kind": "file",
+      "sha256": "54e5183ffe530cabe9fe64920ed46e3b2dd8f2175b661253460639cd989ab71e"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/launch.json",
+      "dev": 66307,
+      "inode": 56395196,
+      "mode": 33204,
+      "size": 1288,
+      "mtime_ns": 1792918290992496230,
+      "kind": "file",
+      "sha256": "079b936265566286d3500bf1cdae51f4f92844df7ce337a2e6e0c641421b8621"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/rss.jsonl",
+      "dev": 66307,
+      "inode": 56395193,
+      "mode": 33204,
+      "size": 149,
+      "mtime_ns": 1792918290992496230,
+      "kind": "file",
+      "sha256": "74d53be1fd4a1e0f136097ea591e984b3eb40d78d5420720d9913422f8887f9d"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/stderr.log",
+      "dev": 66307,
+      "inode": 56395195,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918290991762228,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/stdout.json",
+      "dev": 66307,
+      "inode": 56395194,
+      "mode": 33204,
+      "size": 198,
+      "mtime_ns": 1792918291012889786,
+      "kind": "file",
+      "sha256": "d2103ddc5876be7ccc2316f72af3651bfe33f3ddaddca699f515ab36603eb087"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/stop.json",
+      "dev": 66307,
+      "inode": 56395197,
+      "mode": 33204,
+      "size": 95,
+      "mtime_ns": 1792918291034071576,
+      "kind": "file",
+      "sha256": "aa05162a8b79988a3496c7266e396388b6e574ba777142e4db4147becb17aca1"
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/terminal.json",
+      "dev": 66307,
+      "inode": 56395198,
+      "mode": 33204,
+      "size": 485,
+      "mtime_ns": 1792918291039502865,
+      "kind": "file",
+      "sha256": "b4313bb0fde974d396c5e9dcdf9b67e37f0fc93ff7ce1dfc7320aad10a4e6bd2"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1",
+      "dev": 66307,
+      "inode": 56395221,
+      "mode": 16893,
+      "size": 4096,
+      "mtime_ns": 1792918291251888756,
+      "kind": "directory"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/fixture.jsonl",
+      "dev": 66307,
+      "inode": 56395222,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291246884064,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/rss.jsonl",
+      "dev": 66307,
+      "inode": 56395223,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291246884064,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/stderr.log",
+      "dev": 66307,
+      "inode": 56395225,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291246884064,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/stdout.json",
+      "dev": 66307,
+      "inode": 56395224,
+      "mode": 33204,
+      "size": 0,
+      "mtime_ns": 1792918291246884064,
+      "kind": "file",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/stop.json",
+      "dev": 66307,
+      "inode": 56395226,
+      "mode": 33204,
+      "size": 118,
+      "mtime_ns": 1792918291247995674,
+      "kind": "file",
+      "sha256": "f459ab78f048878bf1a4702f05b1424e65bb09a8a7b560191989cb1ce92e2e15"
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/terminal.json",
+      "dev": 66307,
+      "inode": 56395227,
+      "mode": 33204,
+      "size": 571,
+      "mtime_ns": 1792918291252877843,
+      "kind": "file",
+      "sha256": "34c97c3b86b9f94818d1e8edc573be3bc60814a83b65736022ee52035143b7bf"
+    }
+  ],
+  "preserved_terminals": [
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/terminal.json",
+      "value": {
+        "screen_completed": false,
+        "failure": "TimeoutError('CPU screen deadline')",
+        "result": null,
+        "cleanup": {
+          "child": {
+            "pid": 7,
+            "starttime": 71604413,
+            "termination_requested": true,
+            "pre_cleanup_returncode": null,
+            "returncode": -15,
+            "reaped": true,
+            "pid_absent": true
+          },
+          "fixture": {
+            "threads_alive": 0,
+            "connections": 0,
+            "listener_closed": true,
+            "port_listener_absent": true,
+            "errors": []
+          }
+        },
+        "elapsed": 0.17734215199016035,
+        "native_performance_accepted": false
+      }
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/terminal.json",
+      "value": {
+        "screen_completed": false,
+        "failure": "ValueError(\"child output at hard cap: {'stdout.json': 65536, 'stderr.log': 0}\")",
+        "result": null,
+        "cleanup": {
+          "child": {
+            "pid": 8,
+            "starttime": 71604431,
+            "termination_requested": false,
+            "pre_cleanup_returncode": 0,
+            "returncode": 0,
+            "reaped": true,
+            "pid_absent": true
+          },
+          "fixture": {
+            "threads_alive": 0,
+            "connections": 0,
+            "listener_closed": true,
+            "port_listener_absent": true,
+            "errors": []
+          },
+          "final_child_error": "ValueError(\"child output at hard cap: {'stdout.json': 65536, 'stderr.log': 0}\")"
+        },
+        "elapsed": 0.024818522040732205,
+        "native_performance_accepted": false
+      }
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/terminal.json",
+      "value": {
+        "screen_completed": false,
+        "failure": "PermissionError('owned proc sample denied')",
+        "result": null,
+        "cleanup": {
+          "child": {
+            "pid": 10,
+            "starttime": 71604434,
+            "termination_requested": true,
+            "pre_cleanup_returncode": null,
+            "identity_error": "PermissionError('owned proc sample denied')",
+            "returncode": -15,
+            "reaped": true,
+            "pid_absent": true
+          },
+          "child_error": "ValueError(\"PermissionError('owned proc sample denied')\")",
+          "fixture": {
+            "threads_alive": 0,
+            "connections": 0,
+            "listener_closed": true,
+            "port_listener_absent": true,
+            "errors": []
+          }
+        },
+        "elapsed": 0.005813339026644826,
+        "native_performance_accepted": false
+      }
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/terminal.json",
+      "value": {
+        "screen_completed": true,
+        "failure": null,
+        "result": {
+          "sender_valid": true,
+          "late": [],
+          "records": 2,
+          "native_performance_accepted": false,
+          "coalesced_fixture": true
+        },
+        "cleanup": {
+          "child": {
+            "pid": 5,
+            "starttime": 71604408,
+            "termination_requested": false,
+            "pre_cleanup_returncode": 0,
+            "returncode": 0,
+            "reaped": true,
+            "pid_absent": true
+          },
+          "fixture": {
+            "threads_alive": 0,
+            "connections": 1,
+            "listener_closed": true,
+            "port_listener_absent": true,
+            "errors": []
+          }
+        },
+        "elapsed": 0.04753681400325149,
+        "native_performance_accepted": false
+      }
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/terminal.json",
+      "value": {
+        "screen_completed": false,
+        "failure": "PermissionError('owned proc sample denied')",
+        "result": null,
+        "cleanup": {
+          "child": {
+            "pid": 9,
+            "starttime": null,
+            "termination_requested": true,
+            "pre_cleanup_returncode": null,
+            "identity_error": "ValueError('initial starttime sample failed')",
+            "returncode": -15,
+            "reaped": true,
+            "pid_absent": true
+          },
+          "child_error": "ValueError(\"ValueError('initial starttime sample failed')\")",
+          "fixture": {
+            "threads_alive": 0,
+            "connections": 0,
+            "listener_closed": true,
+            "port_listener_absent": true,
+            "errors": []
+          }
+        },
+        "elapsed": 0.005661858012899756,
+        "native_performance_accepted": false
+      }
+    }
+  ],
+  "preserved_stops": [
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/stop.json",
+      "value": {
+        "reason": "diagnostic invalid",
+        "error": "TimeoutError('CPU screen deadline')",
+        "elapsed": 0.16397019906435162
+      }
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/stop.json",
+      "value": {
+        "reason": "diagnostic invalid",
+        "error": "ValueError(\"child output at hard cap: {'stdout.json': 65536, 'stderr.log': 0}\")",
+        "elapsed": 0.022350006038323045
+      }
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/stop.json",
+      "value": {
+        "reason": "diagnostic invalid",
+        "error": "PermissionError('owned proc sample denied')",
+        "elapsed": 0.0009029200300574303
+      }
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/stop.json",
+      "value": {
+        "reason": "child exited; original result retained",
+        "error": null,
+        "elapsed": 0.04215303703676909
+      }
+    },
+    {
+      "path": "test_first_or_later_proc_failu0/identity-1/stop.json",
+      "value": {
+        "reason": "diagnostic invalid",
+        "error": "PermissionError('owned proc sample denied')",
+        "elapsed": 0.0008058530511334538
+      }
+    }
+  ],
+  "preserved_launches": [
+    {
+      "path": "test_timeout_stub_is_terminate0/timeout/launch.json",
+      "value": {
+        "command": [
+          "/home/postedism/Desktop/Crucible/.venv/bin/python",
+          "-B",
+          "-c",
+          "import time; time.sleep(10)"
+        ],
+        "pid": 7,
+        "starttime": 71604413,
+        "prlimit_sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4",
+        "hard_fsize": 65536,
+        "hard_core": 0,
+        "inherited_sigxfsz": "SIG_IGN",
+        "restore_signals": false,
+        "fixture_port": 32929
+      }
+    },
+    {
+      "path": "test_real_child_hard_cap_signa0/cap/launch.json",
+      "value": {
+        "command": [
+          "/home/postedism/Desktop/Crucible/.venv/bin/python",
+          "-B",
+          "-c",
+          "\nimport errno, os, resource, signal\nassert resource.getrlimit(resource.RLIMIT_FSIZE) == (65536,65536)\nassert resource.getrlimit(resource.RLIMIT_CORE) == (0,0)\nassert signal.getsignal(signal.SIGXFSZ) == signal.SIG_IGN\nos.write(1, b\"x\" * 65536)\ntry:\n    os.write(1, b\"!\")\nexcept OSError as e:\n    assert e.errno == errno.EFBIG\nelse:\n    raise AssertionError(\"hard limit not enforced\")\n"
+        ],
+        "pid": 8,
+        "starttime": 71604431,
+        "prlimit_sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4",
+        "hard_fsize": 65536,
+        "hard_core": 0,
+        "inherited_sigxfsz": "SIG_IGN",
+        "restore_signals": false,
+        "fixture_port": 45157
+      }
+    },
+    {
+      "path": "test_first_or_later_proc_failu1/identity-2/launch.json",
+      "value": {
+        "command": [
+          "/home/postedism/Desktop/Crucible/.venv/bin/python",
+          "-B",
+          "-c",
+          "import time; time.sleep(10)"
+        ],
+        "pid": 10,
+        "starttime": 71604434,
+        "prlimit_sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4",
+        "hard_fsize": 65536,
+        "hard_core": 0,
+        "inherited_sigxfsz": "SIG_IGN",
+        "restore_signals": false,
+        "fixture_port": 32903
+      }
+    },
+    {
+      "path": "test_fast_normal_stub_keepaliv0/normal/launch.json",
+      "value": {
+        "command": [
+          "/home/postedism/Desktop/Crucible/.venv/bin/python",
+          "-B",
+          "-c",
+          "\nimport http.client, json\nc = http.client.HTTPConnection(\"127.0.0.1\", 40471, timeout=2)\nc.request(\"POST\", \"/generate\", body=b'{\"input_ids\":[1],\"stream\":true,\"sampling_params\":{\"ignore_eos\":true,\"max_new_tokens\":2,\"temperature\":0}}', headers={\"Content-Type\":\"application/json\"})\nr = c.getresponse()\nb = r.read()\nassert r.status == 200 and b.count(b\"data:\") == 2 and b\"[DONE]\" in b\nassert b'\"completion_tokens\":2' in b and b'\"output_ids\":[0,0]' in b\nfd = c.sock.fileno()\nc.request(\"POST\", \"/generate\", body=b'{\"input_ids\":[2],\"stream\":true,\"sampling_params\":{\"ignore_eos\":true,\"max_new_tokens\":2,\"temperature\":0}}', headers={\"Content-Type\":\"application/json\"})\nr = c.getresponse()\nassert r.status == 200 and b\"[DONE]\" in r.read() and c.sock.fileno() == fd\nc.close()\nprint(json.dumps({\"Run\":{\"Aborted\":False,\"SenderValid\":True,\"Records\":[{\"Status\":\"ok\",\"OutputTokens\":2,\"ScheduledMs\":0,\"SentMs\":0}] * 2}}))\n"
+        ],
+        "pid": 5,
+        "starttime": 71604408,
+        "prlimit_sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4",
+        "hard_fsize": 65536,
+        "hard_core": 0,
+        "inherited_sigxfsz": "SIG_IGN",
+        "restore_signals": false,
+        "fixture_port": 40471
+      }
+    }
+  ],
+  "owned_process_checks": [
+    {
+      "pid": 7,
+      "starttime": 71604413,
+      "currently_absent": true
+    },
+    {
+      "pid": 8,
+      "starttime": 71604431,
+      "currently_absent": true
+    },
+    {
+      "pid": 10,
+      "starttime": 71604434,
+      "currently_absent": true
+    },
+    {
+      "pid": 5,
+      "starttime": 71604408,
+      "currently_absent": true
+    },
+    {
+      "pid": 9,
+      "starttime": null,
+      "currently_absent": true
+    }
+  ],
+  "owned_ports_no_listener": [
+    32903,
+    32929,
+    40471,
+    45157
+  ],
+  "test_exit_code": 0,
+  "test_result": "16 passed in 0.33s",
+  "symlinks": "lstat/readlink only; known pytest current names; lexical in-root targets; no following"
+}

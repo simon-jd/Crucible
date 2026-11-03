@@ -1,0 +1,56 @@
+{
+  "time_utc": "2026-10-25T19:25:39.483215+00:00",
+  "command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "15s",
+    "/usr/bin/prlimit",
+    "--as=1000000000:1000000000",
+    "--fsize=1048576:1048576",
+    "--core=0:0",
+    "--",
+    ".venv/bin/ruff",
+    "format",
+    "--no-cache",
+    "--quiet",
+    "serving/baseline/native_ipc.py",
+    "serving/baseline/native_ipc_test.py",
+    "serving/baseline/native_pool.py",
+    "serving/baseline/runtime_entry.py",
+    "serving/baseline/experiment.py"
+  ],
+  "returncode": 0,
+  "log_bytes": 0,
+  "source_FSIZE_1MiB_max_before_bytes": 58285,
+  "normalized_AST_exact_unchanged_all5": {
+    "serving/baseline/native_ipc.py": true,
+    "serving/baseline/native_ipc_test.py": true,
+    "serving/baseline/native_pool.py": true,
+    "serving/baseline/runtime_entry.py": true,
+    "serving/baseline/experiment.py": true
+  },
+  "before_SHA": {
+    "serving/baseline/native_ipc.py": "8b64e20d874d80d06ba1777be10bed7a3ea9584ad0dc0655f5d0691555b9e3d8",
+    "serving/baseline/native_ipc_test.py": "481122fbe12e80321e339c4bc2bb51dbf73bc3fa99457481b546eb41a71c6c6c",
+    "serving/baseline/native_pool.py": "2d339a4ad975c104cc22f4a4ce2756ac472f768bc3b01ebef0b9aa93e701e07b",
+    "serving/baseline/runtime_entry.py": "c507496980279dd8be3d7741a6b9c08afda8d1b7c4b92c82b4bc04c0f4e3308b",
+    "serving/baseline/experiment.py": "e2a75067a3d6e2ecef51e25cb460e047172fd1e2fc1b452a9a78f29cfa18f30c"
+  },
+  "after_SHA": {
+    "serving/baseline/native_ipc.py": "91d153fafb016ea7596d078311c0251b2d97e42adc28302a1201bf0b98b8e15e",
+    "serving/baseline/native_ipc_test.py": "503609471d5ac66f3b7c7b873b830cdbb25b9df04477fb31d8ed0fa5c1dcc66b",
+    "serving/baseline/native_pool.py": "2d339a4ad975c104cc22f4a4ce2756ac472f768bc3b01ebef0b9aa93e701e07b",
+    "serving/baseline/runtime_entry.py": "c507496980279dd8be3d7741a6b9c08afda8d1b7c4b92c82b4bc04c0f4e3308b",
+    "serving/baseline/experiment.py": "e2a75067a3d6e2ecef51e25cb460e047172fd1e2fc1b452a9a78f29cfa18f30c"
+  },
+  "all_after_bytes": {
+    "serving/baseline/native_ipc.py": 21115,
+    "serving/baseline/native_ipc_test.py": 29069,
+    "serving/baseline/native_pool.py": 10016,
+    "serving/baseline/runtime_entry.py": 10250,
+    "serving/baseline/experiment.py": 58285
+  },
+  "no_GPU": true
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/home/postedism/Desktop/Crucible/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "returncode": 2
+}

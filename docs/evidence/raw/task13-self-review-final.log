@@ -1,0 +1,3 @@
+Checked 30 new Task13 files with git diff --no-index --check /dev/null FILE.
+All exit statuses 0/1 and all stdout/stderr empty: no whitespace errors.
+Full CPU suite was not rerun for this self-review harness correction.

@@ -1,0 +1,51 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_ownership_shim_proc_error_still_escalates_only_anchored_group ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x73c211997620>
+capsys = <_pytest.capture.CaptureFixture object at 0x73c211996690>
+
+    def test_ownership_shim_proc_error_still_escalates_only_anchored_group(monkeypatch, capsys):
+        state = ownership_shim(monkeypatch, worker=True)
+
+        def children():
+            if not state.started:
+                return set()
+            raise PermissionError("shim: own-child discovery unavailable")
+
+        def advance(seconds):
+            state.clock += seconds
+            if state.clock > 1.1:
+                assert "cleanup_unconfirmed" in capsys.readouterr().err
+                assert any(sig == signal.SIGKILL for _, sig, _ in state.signals)
+                assert all(pid == 71001 and not reaped for pid, _, reaped in state.signals)
+                raise StopQuarantine
+
+        monkeypatch.setattr(gpu_guard, "_own_children", children)
+        monkeypatch.setattr(gpu_guard.time, "sleep", advance)
+        with pytest.raises(StopQuarantine):
+>           gpu_guard._supervise(1, ["fixture"])
+
+scripts/tests/test_gpu_guard.py:311:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts/gpu_guard.py:207: in _supervise
+    confirmed = _cleanup(workload, deadline, grace)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/gpu_guard.py:169: in _cleanup
+    time.sleep(0.01)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+seconds = 0.01
+
+    def advance(seconds):
+        state.clock += seconds
+        if state.clock > 1.1:
+            assert "cleanup_unconfirmed" in capsys.readouterr().err
+>           assert any(sig == signal.SIGKILL for _, sig, _ in state.signals)
+E           assert False
+E            +  where False = any(<generator object test_ownership_shim_proc_error_still_escalates_only_anchored_group.<locals>.advance.<locals>.<genexpr> at 0x73c2117b26c0>)
+
+scripts/tests/test_gpu_guard.py:304: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_proc_error_still_escalates_only_anchored_group
+1 failed, 19 deselected in 0.03s

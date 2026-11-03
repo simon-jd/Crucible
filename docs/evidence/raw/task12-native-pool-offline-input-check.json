@@ -1,0 +1,28 @@
+{
+  "read_only": true,
+  "old_work": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/native-cache",
+  "regular_file_count": 157,
+  "regular_path_bytes_by_top_root": {
+    "triton": 2588893,
+    "inductor": 630222,
+    "flashinfer": 0,
+    "tmp": 23550
+  },
+  "offline_cubin_source_entries": [],
+  "pinned_sources_verified": [
+    {
+      "path": ".cache/task12-baseline/overlay/flashinfer/jit/env.py",
+      "sha256": "f0ccf6265c3501b300312dfd3fede1e6509fc34a0ab8895b0222ebf2e30fb332"
+    },
+    {
+      "path": ".cache/task12-baseline/overlay/flashinfer/jit/cubin_loader.py",
+      "sha256": "7b740e901cf15db935ca197872455a4d1926870b3af017eb74ffcc7fcf3d7f44"
+    },
+    {
+      "path": ".cache/task12-baseline/overlay/flashinfer_cubin/__init__.py",
+      "sha256": "4083819667661c56fa05bd7839da5f61d35587e0bb52fdcd52533eec4a434652"
+    }
+  ],
+  "copy_plan": "none; fixed installed cubin package remains in verified overlay; offline-cubin-source was and remains an empty fail-closed repository path",
+  "limitations": "No native import or package payload rehash; cold new cache may expose missing prerequisite and must fail, never copy/download/fallback without review."
+}

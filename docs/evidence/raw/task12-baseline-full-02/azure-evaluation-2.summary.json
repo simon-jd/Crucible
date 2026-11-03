@@ -1,0 +1,173 @@
+{
+  "identity": "azure-evaluation-2",
+  "trial": {
+    "pair": "2x-2",
+    "multiplier": 2
+  },
+  "protocol_sha256": "301bb8c4137c1b565fb7e3aca282ec14dc61cafd4a751b3333dcc9e50e117f61",
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "planned_rows": 132,
+  "requested_input_tokens": 129060,
+  "requested_output_tokens": 37017,
+  "status": "completed",
+  "metrics": {
+    "accepted": true,
+    "goodput": 0.14684908870182622,
+    "good": 11,
+    "planned": 132,
+    "failed": 100,
+    "undefined": 98,
+    "coalesced": 0,
+    "slo_sha256": "acdd1c368336bc89b18493b530656c4b3b6efbae32bb903573999ca11bf95a02",
+    "duration_seconds": 74.906831886,
+    "denominator": "first selected scheduled request through final completion"
+  },
+  "pid": 310048,
+  "returncode": 1,
+  "actual_records": 132,
+  "actual_output_tokens": 7891,
+  "failed_requests": 100,
+  "complete_request_failure_exit": true,
+  "effective_aborted": false,
+  "cleanup": {
+    "pid": 310048,
+    "returncode": 1,
+    "returncode_before_cleanup": 1,
+    "termination_requested": false,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "raw_sha256": "b310b57d64d51a56931473afdb90bcd3ec0eb67d9a4483ec8c736f182c6e938a",
+  "raw_bytes": 66046,
+  "stderr_sha256": "b0b1d748c720d70a834f58a9988544845377c7d3da457bdab3f7ad17d2c085c9",
+  "stderr_bytes": 29,
+  "boundary": {
+    "accepted": true,
+    "attempts": [
+      {
+        "status": 400,
+        "started_seconds": 8.329516276717186e-07,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.07724073599092662
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.1273086479632184,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.31194676202721894
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.3620138430269435,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.42270198196638376
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.4727638659533113,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.5334927039220929
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.5835562299471349,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.6786421079887077
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.72870629793033,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.7825948829995468
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.8326774479355663,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.8836033039260656
+      },
+      {
+        "status": 400,
+        "started_seconds": 0.9336370750097558,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 0.9862694389885291
+      },
+      {
+        "status": 400,
+        "started_seconds": 1.0363760279724374,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.0914417619351298
+      },
+      {
+        "status": 400,
+        "started_seconds": 1.1415055459365249,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.1931464259978384
+      },
+      {
+        "status": 400,
+        "started_seconds": 1.2432622929336503,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.2959000050323084
+      },
+      {
+        "status": 200,
+        "started_seconds": 1.3459302239352837,
+        "http_body_complete": true,
+        "http_framing": "content-length",
+        "remaining_content_length": 0,
+        "bytes": 142,
+        "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+        "elapsed_seconds": 1.397062976961024
+      }
+    ],
+    "deadline_seconds": 30,
+    "elapsed_seconds": 1.3970654039876536
+  }
+}

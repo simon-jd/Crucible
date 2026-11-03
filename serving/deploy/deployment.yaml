@@ -1,0 +1,87 @@
+# OFFLINE CANDIDATE ONLY. Replace every REPLACE_* field before any deployment.
+# No image digest/model revision/backend adapter has been verified for this file.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: model
+  namespace: serving
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: model}
+  template:
+    metadata:
+      labels: {app: model}
+    spec:
+      nodeSelector:
+        crucible.example/nvme-model-cache: "true"
+      initContainers:
+        - name: verified-cache-fill
+          image: REPLACE_CRUCIBLE_IMAGE_AT_SHA256_DIGEST
+          command: [/usr/local/bin/serving-experiments]
+          args: [-mode, stage, -object-uri, REPLACE_IMMUTABLE_OBJECT_URL, -destination, /weights/REPLACE_SHA256.safetensors, -sha256, REPLACE_SHA256, -max-bytes, "REPLACE_FILE_BYTES"]
+          volumeMounts:
+            - {name: weights, mountPath: /weights}
+          resources:
+            requests: {cpu: "100m", memory: 64Mi}
+            limits: {cpu: "1", memory: 256Mi}
+      containers:
+        - name: model
+          image: REPLACE_MODEL_SERVER_IMAGE_AT_SHA256_DIGEST
+          # Image must implement the documented string-prompt streaming contract
+          # and load this immutable artifact; its entrypoint is not invented here.
+          env:
+            - {name: WEIGHTS_PATH, value: /weights/REPLACE_SHA256.safetensors}
+            - {name: MODEL_REVISION, value: REPLACE_MODEL_REVISION}
+          ports: [{containerPort: 8000}]
+          volumeMounts:
+            - {name: weights, mountPath: /weights, readOnly: true}
+          resources:
+            requests: {cpu: "1", memory: 2Gi, nvidia.com/gpu: "1"}
+            limits: {cpu: "4", memory: 8Gi, nvidia.com/gpu: "1"}
+      volumes:
+        - name: weights
+          hostPath: {path: /mnt/nvme/crucible-models, type: Directory}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata: {name: serving-autoscaler, namespace: serving}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata: {name: scale-model-only, namespace: serving}
+rules:
+  - apiGroups: [apps]
+    resources: [deployments/scale]
+    resourceNames: [model]
+    verbs: [get, update]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: {name: scale-model-only, namespace: serving}
+subjects:
+  - {kind: ServiceAccount, name: serving-autoscaler, namespace: serving}
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: scale-model-only}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: serving-autoscaler, namespace: serving}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: serving-autoscaler}
+  template:
+    metadata:
+      labels: {app: serving-autoscaler}
+    spec:
+      serviceAccountName: serving-autoscaler
+      containers:
+        - name: controller
+          image: REPLACE_CRUCIBLE_IMAGE_AT_SHA256_DIGEST
+          command: [/usr/local/bin/serving-autoscaler]
+          # Dry-run intentionally: explicit authorization/configuration required
+          # to append -apply. Replica upper bound is 1 for current single GPU.
+          args: [-metrics-url, REPLACE_AGGREGATE_ADAPTER_URL, -api-server, "https://kubernetes.default.svc", -namespace, serving, -deployment, model, -token-file, /var/run/secrets/kubernetes.io/serviceaccount/token, -ca-file, /var/run/secrets/kubernetes.io/serviceaccount/ca.crt, -min, "1", -max, "1"]
+          resources:
+            requests: {cpu: "50m", memory: 32Mi}
+            limits: {cpu: "500m", memory: 128Mi}

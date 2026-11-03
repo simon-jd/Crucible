@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 39 items
+
+rl/eval/tests/test_experiments.py ............                           [ 30%]
+rl/eval/tests/test_heldout.py ...........                                [ 58%]
+rl/eval/tests/test_pass_at_1.py ................                         [100%]
+
+============================== 39 passed in 0.20s ==============================

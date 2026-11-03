@@ -1,0 +1,16 @@
+{
+  "time_utc": "2026-10-25T08:23:13.618467+00:00",
+  "head": "8f69112c8d71602175040394d8ef47af20e4334f",
+  "task12_sources": 176,
+  "task12_artifacts": 58,
+  "task12_executables": 4,
+  "task12_mismatches": [],
+  "task15_historical_files": 35,
+  "task15_historical_changes": [],
+  "task15_round1_package": {
+    "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-15-round1-review.diff",
+    "bytes": 92898,
+    "sha256": "d2f97badccfa8c3c624866f7bc4d990207c44435bd32c3b687dd8a5e06317483"
+  },
+  "scope": "read-only hashes; no tests/model weights/imports/GPU"
+}

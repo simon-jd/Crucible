@@ -1,0 +1,647 @@
+{
+  "time_utc": "2026-10-25T12:58:44.280643+00:00",
+  "ok": true,
+  "units": "decimal GB =1000000000B",
+  "scope": "root fresh end27 CPU-only resource metadata; no native launch",
+  "initial_attempt": "Guessed nonexistent root-fix1-host-receipt filename; stopped before writing. Correct current receipt is task12-native-pool-fix1-host-receipt.json.",
+  "pool_sample": {
+    "project_bytes": 13314598394,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304438163,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994438163,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "remaining_future_project_bytes": 679839769,
+  "project_and_remaining_future": 13994438163,
+  "remaining_project_margin_bytes": 5561837,
+  "client_inside_original500M": true,
+  "client_bytes": 10160231,
+  "remaining_absolute_pool_bytes": 489839769,
+  "pool_loan_repaid": false,
+  "all14_cache_dirs_identity_and_empty_checked": true,
+  "scratch_absent": true,
+  "shared_HF_metadata_bytes": 23815435170,
+  "shared_cap_bytes": 40000000000,
+  "shared_rescans": [],
+  "free_bytes": 265287544832,
+  "new_download_bytes": 0,
+  "retained_project_checkpoints_declared": 0,
+  "checkpoint_basis": "no checkpoint-producing command this stage; prior retained0 unchanged",
+  "experimental_service_RSS_declared": 0,
+  "service_basis": "all stage CPU/build/metadata handles terminal; own-UID/cwd/exact-runtime marker hostaudit0; not global allprocess/GPU/lock attestation",
+  "phase_conservative_inventory_before_this_record": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 259101,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-full03-source-map.json",
+      "bytes": 30394,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-brief.md",
+      "bytes": 8412,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-build-brief.md",
+      "bytes": 4870,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-brief.md",
+      "bytes": 8909,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-helper-review.diff.gz",
+      "bytes": 129263,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-report.md",
+      "bytes": 26843,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-review-brief.md",
+      "bytes": 8026,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-review.diff.gz",
+      "bytes": 82861,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-fix1-task-manifest.json",
+      "bytes": 5881,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-helper-review.diff.gz",
+      "bytes": 84722,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-progress.md",
+      "bytes": 488,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-report.md",
+      "bytes": 30525,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-review-brief.md",
+      "bytes": 6739,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-review.diff.gz",
+      "bytes": 217427,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-review.md",
+      "bytes": 22242,
+      "unique": true
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-native-pool-task-manifest.json",
+      "bytes": 9055,
+      "unique": true
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 81033,
+      "unique": true
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 18812,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-end-resume-27.json",
+      "bytes": 203,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-27.json",
+      "bytes": 203,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-27.json",
+      "bytes": 197,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-preflight-v2.json",
+      "bytes": 905,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-preflight.json",
+      "bytes": 888,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-preparation-v2.json",
+      "bytes": 3108,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-preparation.json",
+      "bytes": 4023,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-proposal-initial.json",
+      "bytes": 20521,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-proposal-v2.json",
+      "bytes": 21555,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-proposal.json",
+      "bytes": 20563,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-source-freeze-initial.json",
+      "bytes": 66483,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-source-freeze-v2.json",
+      "bytes": 70609,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-baseline-full-03-source-freeze.json",
+      "bytes": 66483,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-agent-prebuild.json",
+      "bytes": 1869,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-build-budget.json",
+      "bytes": 378,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-build-cleanup.json",
+      "bytes": 501,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-build-inventory.json.gz",
+      "bytes": 104213,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-build-result.json",
+      "bytes": 1022,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-build-source.json",
+      "bytes": 3761,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-client-retained-budget.json",
+      "bytes": 380,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-cpu-cleanup.json",
+      "bytes": 328,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-cpu-inventory.json",
+      "bytes": 81735,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-cpu-preflight.json",
+      "bytes": 539,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-cpu-result.json",
+      "bytes": 2713,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-final-self-review.json",
+      "bytes": 817,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-cleanup.json",
+      "bytes": 969,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-cpu-inventory.json",
+      "bytes": 47474,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-cpu-preflight.json",
+      "bytes": 909,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-cpu-result.json",
+      "bytes": 3219,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-final-budget.json",
+      "bytes": 12297,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-final-check.json",
+      "bytes": 1004,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-focused.log",
+      "bytes": 2052,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-format-v2.log",
+      "bytes": 23,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-format.log",
+      "bytes": 116,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-host-proposal.json",
+      "bytes": 2778,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-host-receipt.json",
+      "bytes": 7130,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-host-result.json",
+      "bytes": 1028,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-host.log",
+      "bytes": 95,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-host.py",
+      "bytes": 6571,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-lint-v2.log",
+      "bytes": 1736,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-lint-v3.log",
+      "bytes": 19,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-next-budget.json",
+      "bytes": 10181,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-red.log",
+      "bytes": 6246,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-source-final.json",
+      "bytes": 1774,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-static-budget.json",
+      "bytes": 8281,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-static-failure.json",
+      "bytes": 1170,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-fix1-static-v2-result.json",
+      "bytes": 4366,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-focused.log",
+      "bytes": 4348,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-go-build.json",
+      "bytes": 5466,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-go-build.log",
+      "bytes": 0,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-go-buildinfo.json",
+      "bytes": 2410,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-go-buildinfo.log",
+      "bytes": 420,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-go-monitor.py",
+      "bytes": 10965,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-handoff-budget.json",
+      "bytes": 237,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-handoff-host.log",
+      "bytes": 162,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-handoff-prepare.log",
+      "bytes": 165,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-handoff-proposal.json",
+      "bytes": 2960,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-handoff-receipt.json",
+      "bytes": 6446,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-handoff.py",
+      "bytes": 8205,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-host-receipt.json",
+      "bytes": 6443,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-manifest.json",
+      "bytes": 401,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-monitor-preparation-note.json",
+      "bytes": 368,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-mutation.json",
+      "bytes": 364,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-offline-input-check.json",
+      "bytes": 1182,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-postbuild-budget.json",
+      "bytes": 260,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-postcleanup-preflight.json",
+      "bytes": 515,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-proposal-preparation-note.json",
+      "bytes": 1241,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-red.log",
+      "bytes": 1635,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-build-cleanup-gate.json",
+      "bytes": 1476,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-build-gate.json",
+      "bytes": 2999,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-cpu-gate.json",
+      "bytes": 3633,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-cleanup-gate.json",
+      "bytes": 1439,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-coordinator-check.json",
+      "bytes": 388,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-cpu-gate.json",
+      "bytes": 5226,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-end-host-audit.json",
+      "bytes": 713,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-host-gate.json",
+      "bytes": 3955,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-proposal-check.json",
+      "bytes": 2676,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-review-gate.json",
+      "bytes": 15564,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-review-package.json",
+      "bytes": 3188,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-review-resolution.json",
+      "bytes": 1849,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-fix1-static-v2-gate.json",
+      "bytes": 4274,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-handoff-gate.json",
+      "bytes": 3311,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-history-check.json",
+      "bytes": 2465,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-host-audit.json",
+      "bytes": 943,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-proposal-check-v2.json",
+      "bytes": 1653,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-proposal-check.json",
+      "bytes": 1729,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-protocol-check.json",
+      "bytes": 1078,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-review-archive.json",
+      "bytes": 2071,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-review-budget-correction.json",
+      "bytes": 1369,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-root-scratch-cleanup-gate.json",
+      "bytes": 602,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-static-complete.log",
+      "bytes": 19,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-static-credit.log",
+      "bytes": 19,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-static-final.log",
+      "bytes": 19,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/raw/task12-native-pool-static-initial.log",
+      "bytes": 11380,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/serving-native-pool-review.md",
+      "bytes": 22242,
+      "unique": true
+    },
+    {
+      "path": "docs/evidence/serving-native-pool.md",
+      "bytes": 9507,
+      "unique": true
+    },
+    {
+      "path": "serving/baseline/README.md",
+      "bytes": 27724,
+      "unique": true
+    },
+    {
+      "path": "serving/baseline/experiment.py",
+      "bytes": 57837,
+      "unique": true
+    },
+    {
+      "path": "serving/baseline/native_pool.py",
+      "bytes": 9080,
+      "unique": true
+    },
+    {
+      "path": "serving/baseline/native_pool_test.py",
+      "bytes": 24130,
+      "unique": true
+    }
+  ],
+  "phase_retained_unique_bytes_before_this_record": 1907789,
+  "phase_final_receipt_docs_manifest_ledger_growth_reserve": 48000,
+  "phase_retained_projected_bytes": 1955789,
+  "phase_retained_cap": 2000000,
+  "historical_estimator_correction": "task12-native-pool-root-review-budget-correction.json",
+  "azure_end27": "rg-crucible-lab absent/actionnone; unchanged since last defaultreadonly check",
+  "estimated_cumulative_cloud_API_GPU_rental_USD": 0,
+  "whole_task12_complete": false,
+  "whole_goal_complete": false,
+  "native_authorized_or_executed": false,
+  "errors": [],
+  "measurement_limit": "sequential non-atomic sampled inode accounting, not continuous quota or future disk guarantee"
+}

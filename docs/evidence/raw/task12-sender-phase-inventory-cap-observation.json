@@ -1,0 +1,10 @@
+{
+  "failure": "AssertionError: inventory cap, compressed bytes260739 >163840; occurred before writing gzip or deleting anything",
+  "actual_retained_bytes_before_this_receipt": 592923,
+  "proposed_inventory_cap": 270000,
+  "retained_plus_proposed_inventory_plus_remaining_review_holdback": 928459,
+  "phase_cap": 2000000,
+  "request": "reallocate106160 bytes from unused actual run allowance into compressed full inventory; no loss of entries/SHA, no deletion yet",
+  "host_cleanup": "979302/979304 absent;31013 bound then closed; host-cleanup.json",
+  "no_retry_or_new_execution": true
+}

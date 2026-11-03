@@ -1,0 +1,25 @@
+.F                                                                       [100%]
+=================================== FAILURES ===================================
+_______ test_k8s_replacement_on_other_known_fault_node_is_not_confirmed ________
+
+    def test_k8s_replacement_on_other_known_fault_node_is_not_confirmed():
+        class WrongReplacement(K8sRunner):
+            def pod(self, name, replacement=False):
+                pod = super().pod(name, replacement)
+                if replacement:
+                    pod["spec"]["nodeName"] = "b"
+                return pod
+        runner = WrongReplacement({"train-a": "a"})
+        results = SchedulerExecutor("k8s", {"a", "b"}, "owner", dry_run=False, runner=runner).execute(
+            [Action("a", "requeue", "fault"), Action("b", "drain", "fault"),
+             Action("a", "drain", "fault")], k8s_jobs(("a",)))
+>       assert results[0]["status"] == "failed"
+E       AssertionError: assert 'requeued' == 'failed'
+E
+E         - failed
+E         + requeued
+
+cluster/drain/tests/test_review_fixes.py:223: AssertionError
+=========================== short test summary info ============================
+FAILED cluster/drain/tests/test_review_fixes.py::test_k8s_replacement_on_other_known_fault_node_is_not_confirmed
+1 failed, 1 passed, 25 deselected in 0.04s

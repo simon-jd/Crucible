@@ -1,0 +1,15 @@
+{
+  "observed_at_utc": "2026-10-25T12:52:55.867446+00:00",
+  "surface": "actual host permission, read-only process metadata and immediate bind/close31012",
+  "project_runtime_candidates": [],
+  "own_uid_processes_examined": 439,
+  "inaccessible_or_racing_proc_entries": 25,
+  "scope_limit": "Visible own-UID processes with cwd under this project and exact runtime argv markers; self/ancestors excluded. Not a global GPU/shared-lock/process absence claim.",
+  "port31012_bind_close_succeeded": true,
+  "native_gpu_launches_this_stage": 0,
+  "last_host_original_handle": 49820,
+  "last_host_authoritative_exit": 0,
+  "audit_signals_sent": 0,
+  "shared_lock_acquired": false,
+  "foreign_resources_modified": false
+}

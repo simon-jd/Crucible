@@ -1,0 +1,10 @@
+{
+  "scope": "ROOT metadata prerequisite failed BEFORE NativePool measure/newpaths/gatewrite/workload",
+  "error": "AssertionError rl/rollout/_worker.py source SHA mismatch",
+  "cause": "regex required two spaces and selected prior report pin groups; final superseding block uses one space",
+  "correction": "parse only explicit Final maintained source pins block with arbitrary horizontal whitespace; compare all14 actual bytes",
+  "source_changed_by_check": false,
+  "CPU_test_or_GPU_launched": false,
+  "condition_waived": false,
+  "raw_report_preserved": true
+}

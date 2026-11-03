@@ -1,0 +1,6 @@
+extends: qwen25_05b_math_code.yaml
+id: kl004
+declared_factor: kl
+overrides:
+  objective:
+    kl: 0.04

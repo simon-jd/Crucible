@@ -1,0 +1,5 @@
+dfb787f8ff8d5b1222f4ab52475bce8d9dda1941
+ serving/replay/schedule.go       |  2 +-
+ serving/replay/transport.go      | 34 ++++++++++++++++++++++++--
+ serving/replay/transport_test.go | 53 ++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 86 insertions(+), 3 deletions(-)

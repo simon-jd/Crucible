@@ -1,0 +1,196 @@
+{
+  "comparisons": {
+    "7:bf16_sdpa:fp32_oracle": {
+      "max_abs": 0.6090059280395508,
+      "mean_abs": 0.05362569913268089,
+      "rms": 0.07027990370988846,
+      "failed_coords_original_tolerance": 529,
+      "coordinates": 303872
+    },
+    "7:bf16_sdpa:bf16_eager": {
+      "max_abs": 0.4375,
+      "mean_abs": 0.06804370880126953,
+      "rms": 0.08675660192966461,
+      "failed_coords_original_tolerance": 721,
+      "coordinates": 303872
+    },
+    "7:bf16_sdpa:vllm": {
+      "max_abs": 0.28125,
+      "mean_abs": 0.0560050792992115,
+      "rms": 0.06843921542167664,
+      "failed_coords_original_tolerance": 3,
+      "coordinates": 303872
+    },
+    "7:fp32_oracle:bf16_eager": {
+      "max_abs": 0.5708599090576172,
+      "mean_abs": 0.0847197100520134,
+      "rms": 0.10842686891555786,
+      "failed_coords_original_tolerance": 4711,
+      "coordinates": 303872
+    },
+    "7:fp32_oracle:vllm": {
+      "max_abs": 0.5237517356872559,
+      "mean_abs": 0.06481143832206726,
+      "rms": 0.08329285681247711,
+      "failed_coords_original_tolerance": 1102,
+      "coordinates": 303872
+    },
+    "7:bf16_eager:vllm": {
+      "max_abs": 0.46875,
+      "mean_abs": 0.07972260564565659,
+      "rms": 0.10040928423404694,
+      "failed_coords_original_tolerance": 2154,
+      "coordinates": 303872
+    },
+    "8:bf16_sdpa:fp32_oracle": {
+      "max_abs": 0.4438636302947998,
+      "mean_abs": 0.04030252993106842,
+      "rms": 0.05297067388892174,
+      "failed_coords_original_tolerance": 73,
+      "coordinates": 303872
+    },
+    "8:bf16_sdpa:bf16_eager": {
+      "max_abs": 0.4765625,
+      "mean_abs": 0.060139574110507965,
+      "rms": 0.07822173833847046,
+      "failed_coords_original_tolerance": 565,
+      "coordinates": 303872
+    },
+    "8:bf16_sdpa:vllm": {
+      "max_abs": 0.21875,
+      "mean_abs": 0.030905790627002716,
+      "rms": 0.0393710732460022,
+      "failed_coords_original_tolerance": 0,
+      "coordinates": 303872
+    },
+    "8:fp32_oracle:bf16_eager": {
+      "max_abs": 0.45102500915527344,
+      "mean_abs": 0.062486521899700165,
+      "rms": 0.08122674375772476,
+      "failed_coords_original_tolerance": 1045,
+      "coordinates": 303872
+    },
+    "8:fp32_oracle:vllm": {
+      "max_abs": 0.3969886302947998,
+      "mean_abs": 0.042363785207271576,
+      "rms": 0.05436556786298752,
+      "failed_coords_original_tolerance": 43,
+      "coordinates": 303872
+    },
+    "8:bf16_eager:vllm": {
+      "max_abs": 0.521484375,
+      "mean_abs": 0.0686066523194313,
+      "rms": 0.08800423890352249,
+      "failed_coords_original_tolerance": 1349,
+      "coordinates": 303872
+    }
+  },
+  "input_ids": [
+    [
+      785,
+      6722,
+      315,
+      9625,
+      374
+    ],
+    [
+      3966,
+      5519,
+      825,
+      374
+    ]
+  ],
+  "positions": [
+    4,
+    3
+  ],
+  "vocab_size": 151936,
+  "snapshots": {
+    "7": "9eee1e3b599f57c1368bb29a336a132e913b22c70de714a47e7355671a9d3f51",
+    "8": "4d3edc9fbfe4b97581ed36a523b4a1e48a1283f08ed539e281f1ba4c8b640e27"
+  },
+  "reference_phases": [
+    {
+      "precision": "bf16_sdpa",
+      "pid": 3645206,
+      "exitcode": 0
+    },
+    {
+      "precision": "fp32_oracle",
+      "pid": 3645476,
+      "exitcode": 0
+    }
+  ],
+  "workers": [
+    {
+      "pid": 3645792,
+      "exitcode": 0
+    },
+    {
+      "pid": 3646331,
+      "exitcode": 0
+    },
+    {
+      "pid": 3646833,
+      "exitcode": 0
+    },
+    {
+      "pid": 3647349,
+      "exitcode": 0
+    }
+  ],
+  "load_order": [
+    7,
+    8,
+    7,
+    8
+  ],
+  "rollback_bitwise_full_logits_equal": true,
+  "original_tolerance": {
+    "atol": 0.25,
+    "rtol": 0.01
+  },
+  "fp32_matmul_precision": "highest",
+  "fp32_allow_tf32": false,
+  "dump_sha256": "6f6d6e87d4e536441a17f8a6a9ded34175b8c71c7faad901d9330d8d5d7e06a9",
+  "dump_bytes": 5563276,
+  "source": {
+    "source_pid": 3518363,
+    "source_step": {
+      "dropped_stale": 0,
+      "accepted_samples": 2,
+      "effective_tokens": 2,
+      "optimizer_steps": 1,
+      "policy_version": 8,
+      "loss": 0.0
+    },
+    "parameter_count": 494032768,
+    "unique_tensors": 290,
+    "dtype": "explicit FP32 master -> BF16 inference",
+    "tensor_bytes_per_snapshot": 988065536,
+    "largest_tensor_bytes": 272269312,
+    "push_seconds": [
+      5.165212737978436,
+      5.06199585692957
+    ],
+    "parameter_max_change": 0.00010120868682861328,
+    "full_logits_max_change": 18.53125,
+    "mixed_compute_vs_published_bf16_max_abs": {
+      "The capital of France is": 0.3125,
+      "One plus one is": 0.4765625
+    },
+    "failed_learner_publication_rejected": true,
+    "peak_allocated_bytes": 10089074176,
+    "peak_reserved_bytes": 12924747776,
+    "host_peak_rss_bytes": 4121722880,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "nccl": [
+      2,
+      27,
+      3
+    ],
+    "device": "NVIDIA GeForce RTX 4090"
+  },
+  "numerical_acceptance": "pending; diagnostic only"
+}

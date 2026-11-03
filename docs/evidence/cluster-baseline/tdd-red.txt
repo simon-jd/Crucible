@@ -1,0 +1,89 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+___________________ test_local_missing_scheduler_is_archived ___________________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-7/test_local_missing_scheduler_i0')
+
+    def test_local_missing_scheduler_is_archived(tmp_path):
+        env = dict(os.environ, PATH=str(tmp_path), BASELINE_PYTHON=sys.executable)
+        result = subprocess.run(["/bin/bash", str(ROOT / "check_baseline.sh"),
+                                 "--output", str(tmp_path / "evidence")], env=env,
+                                text=True, capture_output=True)
+        assert result.returncode == 1
+>       summary = json.loads((tmp_path / "evidence" / "summary.json").read_text())
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+cluster/provision/tests/test_baseline.py:27:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = PosixPath('/tmp/pytest-of-postedism/pytest-7/test_local_missing_scheduler_i0/evidence/summary.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-postedism/pytest-7/test_local_missing_scheduler_i0/evidence/summary.json'
+
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py:1013: FileNotFoundError
+___________ test_unique_gpu_count_rejects_repeated_or_missing_cards ____________
+
+    def test_unique_gpu_count_rejects_repeated_or_missing_cards():
+>       baseline = load_module("baseline")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+cluster/provision/tests/test_baseline.py:37:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+cluster/provision/tests/test_baseline.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x792b6edccbf0>
+path = '/home/postedism/Desktop/Crucible/cluster/provision/baseline.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/cluster/provision/baseline.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+_____________________ test_candidate_lock_is_not_accepted ______________________
+
+    def test_candidate_lock_is_not_accepted():
+>       baseline = load_module("baseline")
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+cluster/provision/tests/test_baseline.py:44:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+cluster/provision/tests/test_baseline.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:995: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1132: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x792b6ec05850>
+path = '/home/postedism/Desktop/Crucible/cluster/provision/baseline.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/home/postedism/Desktop/Crucible/cluster/provision/baseline.py'
+
+<frozen importlib._bootstrap_external>:1190: FileNotFoundError
+=========================== short test summary info ============================
+FAILED cluster/provision/tests/test_baseline.py::test_local_missing_scheduler_is_archived
+FAILED cluster/provision/tests/test_baseline.py::test_unique_gpu_count_rejects_repeated_or_missing_cards
+FAILED cluster/provision/tests/test_baseline.py::test_candidate_lock_is_not_accepted
+3 failed in 0.03s

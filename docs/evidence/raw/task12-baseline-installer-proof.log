@@ -1,0 +1,48 @@
+{
+  "command": [
+    "uv",
+    "--no-config",
+    "--no-python-downloads",
+    "--offline",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-deps",
+    "--require-hashes",
+    "--only-binary",
+    ":all:",
+    "--link-mode",
+    "hardlink",
+    "--python",
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "--target",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/link-proof/target",
+    "-r",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/link-proof/tmp/wheel-requirement.txt"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Using CPython 3.12.13 interpreter at: .venv-ml/bin/python\nResolved 1 package in 0.80ms\nPrepared 1 package in 4ms\nInstalled 1 package in 2ms\n + crucible-link-proof==0.0.0 (from file:///home/postedism/Desktop/Crucible/.cache/task12-baseline/link-proof/crucible_link_proof-0.0.0-py3-none-any.whl)\n",
+  "project_before": 10497781317,
+  "project_after": 10501978729,
+  "hardlinks": {
+    "linked_payload_bytes": 4194304,
+    "files": [
+      {
+        "path": "crucible_link_proof/payload.bin",
+        "device": 66307,
+        "inode": 56145610,
+        "links": 2,
+        "bytes": 4194304
+      }
+    ]
+  },
+  "target_survives_cache_cleanup": true,
+  "wheel": {
+    "compressed_bytes": 4195092,
+    "sha256": "193031b6c7f1d1d22925175a573dc20dcf55902dac3bd6fed6eba07a6a989dcd",
+    "expanded_bytes": 4194450
+  },
+  "proof_removed": true,
+  "project_after_cleanup": 10493586029
+}

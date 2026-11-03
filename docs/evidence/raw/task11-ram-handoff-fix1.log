@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 16 items
+
+rl/learner/tests/test_state_handoff.py::test_consume_reserves_restore_staging_before_spawn PASSED
+rl/learner/tests/test_state_handoff.py::test_restore_rejects_oversized_zip_directory_before_buffering[False] PASSED
+rl/learner/tests/test_state_handoff.py::test_restore_rejects_oversized_zip_directory_before_buffering[True] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[valid32] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[valid64] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[central64] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[count] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[extent] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[name] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[extra] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[comment] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[zip64_extent] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[zip64_disagreement] PASSED
+rl/learner/tests/test_state_handoff.py::test_zip_preflight_structural_bounds[missing_locator] PASSED
+rl/learner/tests/test_state_handoff.py::test_save_rejects_directory_allowance_before_output PASSED
+rl/learner/tests/test_state_handoff.py::test_original_child_exit_then_fresh_process_adamw_resume {"kind": "actual-cpu-adamw-cross-process-resume", "events": [{"pid": 12, "returncode": 0, "reaped": true, "error": null}, {"pid": 14, "returncode": 0, "reaped": true, "error": null}, {"pid": 16, "returncode": 0, "reaped": true, "error": null}], "receipt": {"device": 1, "inode": 1250563, "size": 17648, "sha256": "1d0ae45d87d8e9816015a3e184ec9eca1beb5f2a8b20bcf13fd0ceb7d202aca4", "seals": 15, "version": 2, "binding": "{\"external_state\":\"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy\",\"model\":\"tiny-cpu-fixture-v1\",\"tokenizer\":\"tiny-tokenizer-v1\"}", "cap": 131072, "metadata_cap": 32768, "storage_cap": 8192}, "next_loss": -0.18994787335395813}
+PASSED
+
+============================== 16 passed in 9.51s ==============================

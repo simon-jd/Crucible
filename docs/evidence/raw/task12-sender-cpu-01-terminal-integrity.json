@@ -1,0 +1,15 @@
+{
+  "paths_verified": 339,
+  "original_sources": 176,
+  "original_artifacts": 58,
+  "executables": 4,
+  "coordinator_files": 100,
+  "diagnostic_sources": {
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py": "ad7f88b786fd0bc8e938855f7ab867f6e96ef0e6393e377162396290f576ea24",
+    "docs/evidence/raw/task12-sender-cpu-01-fixture-test.py": "6b1397ea53a7d20cc0bd6a68cb26f5f7fa31e58c1f4d34d4caef10032f7d5b02"
+  },
+  "changed": [],
+  "original_exec_session": 15879,
+  "authoritative_outer_exit_code": 0,
+  "no_retry": true
+}

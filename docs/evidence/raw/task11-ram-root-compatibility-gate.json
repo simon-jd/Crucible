@@ -1,0 +1,142 @@
+{
+  "time_utc": "2026-10-25T13:49:45.410764+00:00",
+  "scope": "root exact lint repair source/diff/logs read; compatibility CPU test ONLY admitted, focused NOT yet",
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "879c8d22a7c1cf514a4fc14b34ff02638c6af0c6628178c97de98acb3dd41c32",
+    "rl/learner/train.py": "9a2fdd334245475dbed2e390d7e035f27201925c18428e5e4b5ee664a95b74a6",
+    "rl/learner/tests/test_state_handoff.py": "5c144d7e8b173d331cd82613fa11ff68ba92e2258bc97ea0f9cf774069455e89",
+    "rl/learner/tests/handoff_worker.py": "1477e7cc02c181c7637b07f4ae5f1044bc35851c7b055516458d1a9b78d5bb0a",
+    "scripts/test_ram_handoff_cpu.py": "c890c9b409b5bc6b2e405c0d517c9a761fa9e8a5d34c00dc6831ff8fede94a67",
+    "rl/learner/README.md": "6c261d1d0fe325281863ced3f2b3548c806117e006645d4c76559139a6ca99bb"
+  },
+  "AST_all5": true,
+  "task12_frozen_actual_hashes_verified": 394,
+  "retained_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 263876,
+      "sha256": "bea5b297683c2676b3ba6d85b922b4cfd62306d997480242f172129c7f843170"
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241,
+      "sha256": "8bbbe20542edf2274e0196ca1f1b3a5cfa4dcf2b1b44b6dc318f9fb1161ba444"
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-brief.md",
+      "bytes": 13837,
+      "sha256": "5d1e36fa11e65dad4678c58b12fc9bec5206507e09f448acfdeaf51c8d8d8a89"
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-report.md",
+      "bytes": 35677,
+      "sha256": "bb7067d32d8d54eeb76551b78c25ee4cdc580150b5367202fea1191207dae337"
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 84101,
+      "sha256": "81bca77bae03962cc5dcfa1f3cfef24a198b72ba6337bcb2ad92e6bd57a9304e"
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 19195,
+      "sha256": "1978ae2608ba106285cfac6a5944e0ffc651e9b645a5fa209961c9059988f583"
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-28.json",
+      "bytes": 203,
+      "sha256": "990d1bfa9ee47b4f99a1cb2330dba62f01766bd731f62f687f6a702a3d3af1c2"
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-28.json",
+      "bytes": 1119,
+      "sha256": "7ac072c26c01350a7d386f3d452fdc9f708f50f4f6230291042660a8e8bc77f7"
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-format-v2.log",
+      "bytes": 23,
+      "sha256": "257e2056c07d2caeafd1fe2ade777c2fe7d25f1092cd23bdcf4cf6c416daac14"
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-format.log",
+      "bytes": 20,
+      "sha256": "a68018e0301d06e8ccd1518cd8a969c43dde8ed9a317509ad15bbc8d7198ea0f"
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-lint-v2.log",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-handoff-lint.log",
+      "bytes": 8744,
+      "sha256": "aa92a472b1f1cdc95b253cf9e1822aad72d3ebe01743bf864b9ea386048d6f4f"
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-root-source-gate.json",
+      "bytes": 3685,
+      "sha256": "316d94cd6268d9a3f177c9677eb411435b3b3d9d6535332f3230dc90f6cd7a4b"
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-state-static-context.json",
+      "bytes": 2501,
+      "sha256": "18e3560d6c3b8f3fce464567586e8145ec083aa17d04e8057d9fbd0b7648aace"
+    },
+    {
+      "path": "docs/evidence/rl-state-handoff.md",
+      "bytes": 2897,
+      "sha256": "e1bf1feec14b42b8f38417ba4377f47d2bb88222e940d26cf1a45ed4aefb6a84"
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 14207,
+      "sha256": "6c261d1d0fe325281863ced3f2b3548c806117e006645d4c76559139a6ca99bb"
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 44766,
+      "sha256": "879c8d22a7c1cf514a4fc14b34ff02638c6af0c6628178c97de98acb3dd41c32"
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 8411,
+      "sha256": "1477e7cc02c181c7637b07f4ae5f1044bc35851c7b055516458d1a9b78d5bb0a"
+    },
+    {
+      "path": "rl/learner/tests/test_state_handoff.py",
+      "bytes": 17001,
+      "sha256": "5c144d7e8b173d331cd82613fa11ff68ba92e2258bc97ea0f9cf774069455e89"
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 19830,
+      "sha256": "9a2fdd334245475dbed2e390d7e035f27201925c18428e5e4b5ee664a95b74a6"
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 12584,
+      "sha256": "c890c9b409b5bc6b2e405c0d517c9a761fa9e8a5d34c00dc6831ff8fede94a67"
+    }
+  ],
+  "retained_bytes": 553937,
+  "next_three_file_caps": 786432,
+  "record_report_growth_reserve": 40000,
+  "retained_projected": 1380369,
+  "phase_cap": 2000000,
+  "sample": {
+    "project_bytes": 13314892734,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304732503,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994732503,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "extra3M_projection": 13997732503,
+  "execution": "report exact compatibility command once; CUDA_VISIBLE_DEVICES empty,offlineHF,120s+5,fsize262144,core0,sampled2GBincl1MiBanonymous,scratch1M; own original handle; any failure stops",
+  "not_authorized": "focused/GPU/native/Git/install/download; fullmodel fit unverified"
+}

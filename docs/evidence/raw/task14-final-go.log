@@ -1,0 +1,61 @@
+=== RUN   TestCooldownExactAndLimits
+--- PASS: TestCooldownExactAndLimits (0.00s)
+=== RUN   TestPolicyConcurrent
+--- PASS: TestPolicyConcurrent (0.00s)
+=== RUN   TestControllerDryRunAndConditionalScale
+--- PASS: TestControllerDryRunAndConditionalScale (0.00s)
+=== RUN   TestFourTimesBurstExperiment
+    controller_test.go:162: {"burst_first_down_seconds_after_load_drop":{"max":240,"median":240,"min":240},"burst_first_up_seconds":{"max":0,"median":0,"min":0},"clock":"injected logical seconds","label":"synthetic-control-policy-only","rounds":3,"trials":[{"Round":0,"Condition":"baseline-1x","FirstUpSeconds":-1,"FirstDownSeconds":110,"Events":[{"Second":300,"Desired":1}]},{"Round":0,"Condition":"burst-4x","FirstUpSeconds":0,"FirstDownSeconds":240,"Events":[{"Second":10,"Desired":3},{"Second":70,"Desired":4},{"Second":130,"Desired":5},{"Second":430,"Desired":4}]},{"Round":1,"Condition":"burst-4x","FirstUpSeconds":0,"FirstDownSeconds":240,"Events":[{"Second":10,"Desired":3},{"Second":70,"Desired":4},{"Second":130,"Desired":5},{"Second":430,"Desired":4}]},{"Round":1,"Condition":"baseline-1x","FirstUpSeconds":-1,"FirstDownSeconds":110,"Events":[{"Second":300,"Desired":1}]},{"Round":2,"Condition":"baseline-1x","FirstUpSeconds":-1,"FirstDownSeconds":110,"Events":[{"Second":300,"Desired":1}]},{"Round":2,"Condition":"burst-4x","FirstUpSeconds":0,"FirstDownSeconds":240,"Events":[{"Second":10,"Desired":3},{"Second":70,"Desired":4},{"Second":130,"Desired":5},{"Second":430,"Desired":4}]}]}
+--- PASS: TestFourTimesBurstExperiment (0.00s)
+=== RUN   TestMissingMetricsRejected
+--- PASS: TestMissingMetricsRejected (0.00s)
+=== RUN   TestAutoscalerHysteresis
+--- PASS: TestAutoscalerHysteresis (0.00s)
+=== RUN   TestScaleDownCooldown
+--- PASS: TestScaleDownCooldown (0.00s)
+=== RUN   TestInvalidAndStaleMetrics
+--- PASS: TestInvalidAndStaleMetrics (0.00s)
+=== RUN   TestTTFTAndQueueSignals
+--- PASS: TestTTFTAndQueueSignals (0.00s)
+PASS
+ok  	crucible/serving/autoscaler	0.005s
+=== RUN   TestAlternatingColdFixture
+    main_test.go:64: {"content_sha256":"0000000000000000000000000000000000000000000000000000000000000000","label":"cpu-fixture","metadata":"loopback adapter, no weights/model/NVMe/object store","trials":[{"round":0,"source":"object-store","seconds":0.000587146},{"round":0,"source":"nvme","seconds":0.000174736},{"round":1,"source":"nvme","seconds":0.000153684},{"round":1,"source":"object-store","seconds":0.0001416},{"round":2,"source":"object-store","seconds":0.000164453},{"round":2,"source":"nvme","seconds":0.000123017}],"summary":{"nvme":{"Median":0.000153684,"Min":0.000123017,"Max":0.000174736},"object-store":{"Median":0.000164453,"Min":0.0001416,"Max":0.000587146}}}
+--- PASS: TestAlternatingColdFixture (0.00s)
+=== RUN   TestStageIntegrityBoundsAndCleanup
+--- PASS: TestStageIntegrityBoundsAndCleanup (0.01s)
+=== RUN   TestColdMismatchAndTimeoutStillStop
+=== RUN   TestColdMismatchAndTimeoutStillStop/mismatch
+=== RUN   TestColdMismatchAndTimeoutStillStop/timeout
+--- PASS: TestColdMismatchAndTimeoutStillStop (0.03s)
+    --- PASS: TestColdMismatchAndTimeoutStillStop/mismatch (0.00s)
+    --- PASS: TestColdMismatchAndTimeoutStillStop/timeout (0.03s)
+PASS
+ok  	crucible/serving/experiments	0.044s
+=== RUN   TestStreamingCancellationAndAdmission
+--- PASS: TestStreamingCancellationAndAdmission (0.00s)
+=== RUN   TestCompletionFailureAndBodyBounds
+--- PASS: TestCompletionFailureAndBodyBounds (0.50s)
+=== RUN   TestTransportFailureReleasesWithoutRetry
+--- PASS: TestTransportFailureReleasesWithoutRetry (0.00s)
+=== RUN   TestConcurrentSnapshotAndReservations
+--- PASS: TestConcurrentSnapshotAndReservations (0.00s)
+=== RUN   TestSnapshotHTTPContract
+--- PASS: TestSnapshotHTTPContract (0.00s)
+=== RUN   TestRunnableRouterLifecycle
+--- PASS: TestRunnableRouterLifecycle (0.00s)
+=== RUN   TestPrefixAffinity
+--- PASS: TestPrefixAffinity (0.00s)
+=== RUN   TestSpillWhenOverloaded
+--- PASS: TestSpillWhenOverloaded (0.00s)
+=== RUN   TestCacheScopeFreshnessAndBounds
+--- PASS: TestCacheScopeFreshnessAndBounds (0.00s)
+=== RUN   TestReservations
+--- PASS: TestReservations (0.00s)
+=== RUN   TestLongestPrefixAndExactThreshold
+--- PASS: TestLongestPrefixAndExactThreshold (0.00s)
+=== RUN   TestInvalidSnapshotsRejected
+--- PASS: TestInvalidSnapshotsRejected (0.00s)
+PASS
+ok  	crucible/serving/router	0.512s
+?   	crucible/serving/router/cmd/router	[no test files]

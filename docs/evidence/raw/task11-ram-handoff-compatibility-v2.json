@@ -1,0 +1,285 @@
+{
+  "mode": "compatibility-v2",
+  "command": [
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-v",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/compatibility-v2/pytest",
+    "rl/learner/tests/test_state_handoff.py::test_sealed_memfd_weights_only_mmap_support"
+  ],
+  "initial_resource": {
+    "project_bytes": 13314929783,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304769552,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994769552,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "f81c85271d6cf45892378ff1aa861badec429bb5478e92729d07ae8e2ebf6961",
+    "rl/learner/train.py": "9a2fdd334245475dbed2e390d7e035f27201925c18428e5e4b5ee664a95b74a6",
+    "rl/learner/README.md": "6c261d1d0fe325281863ced3f2b3548c806117e006645d4c76559139a6ca99bb",
+    "rl/learner/tests/test_state_handoff.py": "c28c65d6a52ac040669b5f2d62af813d960169f434f1e3020bbb5b5ad8b40ae6",
+    "rl/learner/tests/handoff_worker.py": "1477e7cc02c181c7637b07f4ae5f1044bc35851c7b055516458d1a9b78d5bb0a",
+    "scripts/test_ram_handoff_cpu.py": "8f33b850f1d837dab6b54bb302ef0e195bfd4a50f533f0fe0dccef33ac780e9e"
+  },
+  "limits": {
+    "seconds": 120,
+    "cleanup_seconds": 5,
+    "scratch_bytes": 1000000,
+    "aggregate_rss_plus_anonymous": 2000000000,
+    "anonymous_reserve": 1048576,
+    "fsize": 262144
+  },
+  "samples": [
+    {
+      "elapsed": 1.9073779450263828,
+      "rss": 43798528,
+      "charged": 44847104,
+      "pids": [
+        4,
+        5
+      ],
+      "scratch_bytes": 0
+    },
+    {
+      "elapsed": 2.9207805580226704,
+      "rss": 605360128,
+      "charged": 606408704,
+      "pids": [
+        4,
+        5
+      ],
+      "scratch_bytes": 2355
+    }
+  ],
+  "errors": [],
+  "exit_code": 0,
+  "cleanup_confirmed": true,
+  "peak_sampled_charge": 698724352,
+  "remaining_owned_children": [],
+  "final_resource": {
+    "project_bytes": 13314930256,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304770025,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994770025,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "scratch_bytes": 0,
+  "scratch_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395020,
+      "mode": 16893,
+      "nlink": 5,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility",
+      "dev": 66307,
+      "inode": 56395028,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936205178521942
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cuda",
+      "dev": 66307,
+      "inode": 56395038,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/cupy",
+      "dev": 66307,
+      "inode": 56395039,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/inductor",
+      "dev": 66307,
+      "inode": 56395034,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/numba",
+      "dev": 66307,
+      "inode": 56395044,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/tmp",
+      "dev": 66307,
+      "inode": 56395029,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205665518693
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/torch",
+      "dev": 66307,
+      "inode": 56395033,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/triton",
+      "dev": 66307,
+      "inode": 56395035,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/vllm",
+      "dev": 66307,
+      "inode": 56395045,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility/xdg",
+      "dev": 66307,
+      "inode": 56395030,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936205177930901
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2",
+      "dev": 66307,
+      "inode": 56395049,
+      "mode": 16893,
+      "nlink": 11,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/cuda",
+      "dev": 66307,
+      "inode": 56395059,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/cupy",
+      "dev": 66307,
+      "inode": 56395062,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/inductor",
+      "dev": 66307,
+      "inode": 56395057,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/numba",
+      "dev": 66307,
+      "inode": 56395063,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/tmp",
+      "dev": 66307,
+      "inode": 56395052,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936562490826966
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/torch",
+      "dev": 66307,
+      "inode": 56395054,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/triton",
+      "dev": 66307,
+      "inode": 56395058,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/vllm",
+      "dev": 66307,
+      "inode": 56395068,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/compatibility-v2/xdg",
+      "dev": 66307,
+      "inode": 56395053,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792936560999148708
+    },
+    {
+      "path": ".cache/task11-ram-handoff/static",
+      "dev": 66307,
+      "inode": 56395025,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792935779017365491
+    }
+  ]
+}

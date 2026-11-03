@@ -1,0 +1,43 @@
+# T15 EAGLE-3 draft for Qwen3-4B on one RTX 4090 (SpecForge e3ab28d, offline colocated).
+# Starts from upstream examples/configs/offline/colocated/qwen3-8b-eagle3.yaml; the target is
+# Qwen3-4B (plan: smaller target on the single 4090) and max_length is 1024. Both follow
+# from the project's 28 GB disk share: offline features (4.2 GB for 240 samples) plus one
+# checkpoint (about 14 bytes per trainable parameter) must fit. So the draft is upstream
+# configs/qwen3-4b-eagle3.json (spec/configs/qwen3-4b-eagle3.json, used for feature capture;
+# same captured layers) with draft_vocab_size 32000 -> 16000 and intermediate_size
+# 9728 -> 6144: 150M instead of 218M trainable parameters. Paths are relative to the repo root.
+model:
+  target_model_path: /home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c
+  draft_model_config: spec/configs/qwen3-4b-eagle3-t15.json
+  target_backend: sglang
+  embedding_key: model.embed_tokens.weight
+  torch_dtype: bfloat16
+
+data:
+  hidden_states_path: .cache/t15/features
+  max_length: 1024
+  chat_template: qwen
+  cache_dir: .cache/t15/sf-cache
+
+training:
+  strategy: eagle3
+  num_epochs: 10
+  batch_size: 1
+  learning_rate: 1.0e-4
+  max_grad_norm: 0.5
+  ttt_length: 7
+  attention_backend: flex_attention
+  save_interval: 0
+  max_checkpoints: 1
+  log_interval: 20
+  dist_timeout: 20
+  seed: 0
+
+run_id: qwen3-4b-eagle3-t15
+output_dir: .cache/t15/train
+
+deployment:
+  mode: local_colocated
+  trainer:
+    nnodes: 1
+    nproc_per_node: 1

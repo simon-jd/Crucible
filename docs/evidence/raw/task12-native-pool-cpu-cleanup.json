@@ -1,0 +1,12 @@
+{
+  "entries_checked": 335,
+  "regular_paths_deleted": 99,
+  "symlinks_unlinked": 19,
+  "directories_removed": 217,
+  "path_regular_bytes": 44287,
+  "unique_regular_bytes_reclaimed": 44267,
+  "canonical_before": 13302760288,
+  "canonical_after_before_receipt": 13302716021,
+  "scratch_absent": true,
+  "links_followed": false
+}

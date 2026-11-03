@@ -1,0 +1,14 @@
+{
+  "inventory_sha256": "93a29fb55d8042fc377d4702f8cbacc05696963208f0a61c3fbc580c6cc0bbb5",
+  "entries_rechecked": 3730,
+  "regular_deleted": 3464,
+  "regular_bytes_deleted": 242783895,
+  "directories_removed": 266,
+  "loan_absent": true,
+  "canonical_before": 13541251661,
+  "canonical_after_before_receipt": 13298467766,
+  "observed_reclaimed": 242783895,
+  "all_experiment_commands_authoritative_terminal": true,
+  "binary_deletion_intentional": ".tmp-task12-sender-phase-go-loan/replay-phase",
+  "preserved": "all raw/source/inventory/old replay/runtime/shared HF"
+}

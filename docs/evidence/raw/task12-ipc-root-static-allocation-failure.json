@@ -1,0 +1,17 @@
+{
+  "commands": [
+    "check --no-cache",
+    "format --check --no-cache"
+  ],
+  "both_returncode": -6,
+  "log_bytes": [
+    116,
+    213
+  ],
+  "self_imposed_AS": 512000000,
+  "not_lint_results": true,
+  "all6_sourceSHA_unchanged": true,
+  "sourcewriteflags_used": false,
+  "no_GREEN_run": true,
+  "correction_scope": "Separate finite static-tool AS profile only, project16GB and CPUtest512MB unchanged; retain failure bytes"
+}

@@ -1,0 +1,130 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: crucible-baseline
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: crucible-shared
+spec:
+  capacity: {storage: 1Ti}
+  accessModes: [ReadWriteMany]
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ''
+  mountOptions: [hard, nfsvers=4.1]
+  nfs:
+    server: '@NFS_SERVER@'
+    path: '@NFS_PATH@'
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: shared
+  namespace: crucible-baseline
+spec:
+  accessModes: [ReadWriteMany]
+  resources: {requests: {storage: 1Ti}}
+  storageClassName: ''
+  volumeName: crucible-shared
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: ResourceFlavor
+metadata: {name: h100}
+spec:
+  nodeLabels: {crucible.ai/worker: 'true'}
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: ClusterQueue
+metadata: {name: crucible}
+spec:
+  namespaceSelector: {matchLabels: {kubernetes.io/metadata.name: crucible-baseline}}
+  resourceGroups:
+    - coveredResources: [nvidia.com/gpu, rdma/rdma_shared_device_a]
+      flavors:
+        - name: h100
+          resources:
+            - name: nvidia.com/gpu
+              nominalQuota: 32
+            - name: rdma/rdma_shared_device_a
+              nominalQuota: 32
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: LocalQueue
+metadata: {name: baseline, namespace: crucible-baseline}
+spec: {clusterQueue: crucible}
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata: {name: host-probe, namespace: crucible-baseline}
+spec:
+  selector: {matchLabels: {component: host}}
+  template:
+    metadata: {labels: {component: host}}
+    spec:
+      nodeSelector: {crucible.ai/worker: 'true'}
+      runtimeClassName: nvidia
+      hostNetwork: true
+      hostPID: true
+      containers:
+        - name: probe
+          image: '@IMAGE@'
+          command: [sleep, infinity]
+          securityContext: {privileged: true}
+          env:
+            - name: NVIDIA_VISIBLE_DEVICES
+              value: all
+            - name: NODE_NAME
+              valueFrom: {fieldRef: {fieldPath: spec.nodeName}}
+          volumeMounts:
+            - {name: probe, mountPath: /probe, readOnly: true}
+            - {name: host, mountPath: /host, readOnly: true}
+            - {name: shared, mountPath: /shared}
+      volumes:
+        - name: probe
+          configMap: {name: node-probe}
+        - name: host
+          hostPath: {path: /, type: Directory}
+        - name: shared
+          persistentVolumeClaim: {claimName: shared}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gpu-baseline
+  namespace: crucible-baseline
+  labels: {kueue.x-k8s.io/queue-name: baseline}
+spec:
+  suspend: true
+  parallelism: 32
+  completions: 32
+  activeDeadlineSeconds: 1800
+  backoffLimit: 0
+  template:
+    metadata: {labels: {component: gpu}}
+    spec:
+      restartPolicy: Never
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      runtimeClassName: nvidia
+      nodeSelector: {crucible.ai/worker: 'true'}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          minDomains: 4
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector: {matchLabels: {component: gpu}}
+      containers:
+        - name: probe
+          image: '@IMAGE@'
+          command: [sleep, infinity]
+          env:
+            - name: NODE_NAME
+              valueFrom: {fieldRef: {fieldPath: spec.nodeName}}
+          resources:
+            limits: {nvidia.com/gpu: 1, rdma/rdma_shared_device_a: 1}
+          volumeMounts:
+            - {name: probe, mountPath: /probe, readOnly: true}
+      volumes:
+        - name: probe
+          configMap: {name: node-probe}

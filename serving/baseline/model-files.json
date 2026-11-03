@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "repo": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "runtime_lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "files": [
+    {
+      "name": "LICENSE",
+      "bytes": 11343,
+      "algorithm": "git-sha1",
+      "upstream_hash": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "blob": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/LICENSE"
+    },
+    {
+      "name": "README.md",
+      "bytes": 16660,
+      "algorithm": "git-sha1",
+      "upstream_hash": "ecc3ebd0849aa08d9484bd911dddfd5261b10d30",
+      "blob": "ecc3ebd0849aa08d9484bd911dddfd5261b10d30",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/README.md"
+    },
+    {
+      "name": "config.json",
+      "bytes": 728,
+      "algorithm": "git-sha1",
+      "upstream_hash": "d46195ac87f837ad233d02b2f80f148bf7c005e0",
+      "blob": "d46195ac87f837ad233d02b2f80f148bf7c005e0",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 239,
+      "algorithm": "git-sha1",
+      "upstream_hash": "20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+      "blob": "20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json"
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 1671853,
+      "algorithm": "git-sha1",
+      "upstream_hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "blob": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/merges.txt"
+    },
+    {
+      "name": "model-00001-of-00005.safetensors",
+      "bytes": 3996250744,
+      "algorithm": "sha256",
+      "upstream_hash": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+      "blob": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model-00001-of-00005.safetensors"
+    },
+    {
+      "name": "model-00002-of-00005.safetensors",
+      "bytes": 3993160032,
+      "algorithm": "sha256",
+      "upstream_hash": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+      "blob": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model-00002-of-00005.safetensors"
+    },
+    {
+      "name": "model-00003-of-00005.safetensors",
+      "bytes": 3959604768,
+      "algorithm": "sha256",
+      "upstream_hash": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+      "blob": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model-00003-of-00005.safetensors"
+    },
+    {
+      "name": "model-00004-of-00005.safetensors",
+      "bytes": 3187841392,
+      "algorithm": "sha256",
+      "upstream_hash": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+      "blob": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model-00004-of-00005.safetensors"
+    },
+    {
+      "name": "model-00005-of-00005.safetensors",
+      "bytes": 1244659840,
+      "algorithm": "sha256",
+      "upstream_hash": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+      "blob": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model-00005-of-00005.safetensors"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 32878,
+      "algorithm": "git-sha1",
+      "upstream_hash": "2b85c00f1b118961cd7a477e2bba0fe197a4ce1a",
+      "blob": "2b85c00f1b118961cd7a477e2bba0fe197a4ce1a",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model.safetensors.index.json"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 11422654,
+      "algorithm": "sha256",
+      "upstream_hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "blob": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer.json"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 9732,
+      "algorithm": "git-sha1",
+      "upstream_hash": "417d038a63fa3de29cfde265caedae14d1a58d92",
+      "blob": "417d038a63fa3de29cfde265caedae14d1a58d92",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json"
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 2776833,
+      "algorithm": "git-sha1",
+      "upstream_hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "blob": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/vocab.json"
+    }
+  ],
+  "total_bytes": 16397459696
+}

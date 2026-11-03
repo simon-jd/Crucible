@@ -1,0 +1,73 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_____________ test_absent_group_is_explicit_noop[azure_reaper.sh] ______________
+
+azure = ({'account': {'id': '11111111-1111-1111-1111-111111111111', 'name': 'Azure for Students', 'state': 'Enabled'}, 'exists...x-crucible', 'project': 'crucible', 'ttl': '2000-01-01T00:00:00Z'}}]}, <function azure.<locals>.run at 0x7867cf8c80e0>)
+entry = 'azure_reaper.sh'
+
+    @pytest.mark.parametrize("entry", ["azure_reaper.sh", "azure_down.sh"])
+    def test_absent_group_is_explicit_noop(azure, entry):
+        data, run = azure
+        data["exists"] = False
+        result, calls = run("--apply", entry=entry)
+        assert result.returncode == 0, result.stderr
+>       assert '"event": "absent"' in result.stdout
+E       assert '"event": "absent"' in '{"event": "scope", "subscription": "11111111-1111-1111-1111-111111111111", "resource_group": "rg-crucible-lab", "mode...11111111-1111-1111-1111-111111111111/resourceGroups/rg-crucible-lab/providers/Microsoft.Compute/virtualMachines/vm"}\n'
+E        +  where '{"event": "scope", "subscription": "11111111-1111-1111-1111-111111111111", "resource_group": "rg-crucible-lab", "mode...11111111-1111-1111-1111-111111111111/resourceGroups/rg-crucible-lab/providers/Microsoft.Compute/virtualMachines/vm"}\n' = CompletedProcess(args=['bash', '/home/postedism/Desktop/Crucible/scripts/azure_reaper.sh', '--apply'], returncode=0, s...1-1111-1111-111111111111/resourceGroups/rg-crucible-lab/providers/Microsoft.Compute/virtualMachines/vm"}\n', stderr='').stdout
+
+scripts/tests/test_azure_guards.py:189: AssertionError
+______________ test_absent_group_is_explicit_noop[azure_down.sh] _______________
+
+azure = ({'account': {'id': '11111111-1111-1111-1111-111111111111', 'name': 'Azure for Students', 'state': 'Enabled'}, 'exists...x-crucible', 'project': 'crucible', 'ttl': '2000-01-01T00:00:00Z'}}]}, <function azure.<locals>.run at 0x7867cf8cb7e0>)
+entry = 'azure_down.sh'
+
+    @pytest.mark.parametrize("entry", ["azure_reaper.sh", "azure_down.sh"])
+    def test_absent_group_is_explicit_noop(azure, entry):
+        data, run = azure
+        data["exists"] = False
+        result, calls = run("--apply", entry=entry)
+        assert result.returncode == 0, result.stderr
+>       assert '"event": "absent"' in result.stdout
+E       assert '"event": "absent"' in '{"event": "scope", "subscription": "11111111-1111-1111-1111-111111111111", "resource_group": "rg-crucible-lab", "mode...1}\n{"event": "deleted", "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-crucible-lab"}\n'
+E        +  where '{"event": "scope", "subscription": "11111111-1111-1111-1111-111111111111", "resource_group": "rg-crucible-lab", "mode...1}\n{"event": "deleted", "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-crucible-lab"}\n' = CompletedProcess(args=['bash', '/home/postedism/Desktop/Crucible/scripts/azure_down.sh', '--apply'], returncode=0, std...: "deleted", "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-crucible-lab"}\n', stderr='').stdout
+
+scripts/tests/test_azure_guards.py:189: AssertionError
+___ test_resource_id_is_authority_when_optional_resource_group_field_absent ____
+
+azure = ({'account': {'id': '11111111-1111-1111-1111-111111111111', 'name': 'Azure for Students', 'state': 'Enabled'}, 'group'...x-crucible', 'project': 'crucible', 'ttl': '2000-01-01T00:00:00Z'}}]}, <function azure.<locals>.run at 0x7867cf8cb920>)
+
+    def test_resource_id_is_authority_when_optional_resource_group_field_absent(azure):
+        data, run = azure
+        del data["resources"][0]["resourceGroup"]
+        result, calls = run("--apply")
+        assert result.returncode == 0, result.stderr
+>       assert deleted(calls)
+E       AssertionError: assert []
+E        +  where [] = deleted([['account', 'show', '--output', 'json', '--only-show-errors'], ['resource', 'list', '--resource-group', 'rg-crucible-lab', '--subscription', '11111111-1111-1111-1111-111111111111', ...]])
+
+scripts/tests/test_azure_guards.py:198: AssertionError
+_____________ test_wrapper_sigterm_cleans_up_workload_and_unlocks ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-35/test_wrapper_sigterm_cleans_up0')
+
+    def test_wrapper_sigterm_cleans_up_workload_and_unlocks(tmp_path):
+        lock, pidfile = tmp_path / "lock", tmp_path / "pid"
+        code = "import os,sys,time;open(sys.argv[1],'w').write(str(os.getpid()));time.sleep(30)"
+        proc = launcher(lock, 3, [sys.executable, "-c", code, str(pidfile)])
+        deadline = time.monotonic() + 3
+        while not pidfile.exists() and time.monotonic() < deadline:
+            time.sleep(.02)
+        assert pidfile.exists()
+        proc.terminate()
+>       assert proc.wait(timeout=2) == 143
+E       AssertionError: assert -15 == 143
+E        +  where -15 = wait(timeout=2)
+E        +    where wait = <Popen: returncode: -15 args: ['/home/postedism/Desktop/Crucible/.venv/bin/p...>.wait
+
+scripts/tests/test_gpu_guard.py:76: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_azure_guards.py::test_absent_group_is_explicit_noop[azure_reaper.sh]
+FAILED scripts/tests/test_azure_guards.py::test_absent_group_is_explicit_noop[azure_down.sh]
+FAILED scripts/tests/test_azure_guards.py::test_resource_id_is_authority_when_optional_resource_group_field_absent
+FAILED scripts/tests/test_gpu_guard.py::test_wrapper_sigterm_cleans_up_workload_and_unlocks
+4 failed in 0.48s

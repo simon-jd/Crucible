@@ -1,0 +1,29 @@
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/segments
+    wait_test.go:144: delays=[250ms 150ms 50ms] creates=1 stops=3 resets=2 now=1969-12-31 16:16:40.25 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/early-wake
+    wait_test.go:144: delays=[250ms 170ms 70ms 1ms] creates=1 stops=4 resets=3 now=1969-12-31 16:16:40.25 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/delayed-wakes
+    wait_test.go:144: delays=[250ms 140ms 25ms] creates=1 stops=3 resets=2 now=1969-12-31 16:16:40.26 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/late-first-wake
+    wait_test.go:144: delays=[250ms] creates=1 stops=1 resets=0 now=1969-12-31 16:16:40.273 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/fresh-reset-remainder
+    wait_test.go:144: delays=[250ms 50ms] creates=1 stops=2 resets=1 now=1969-12-31 16:16:40.25 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/bookkeeping-crosses-due
+    wait_test.go:144: delays=[250ms] creates=1 stops=1 resets=0 now=1969-12-31 16:16:40.3 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/after-reset-counter-delay
+    wait_test.go:144: delays=[250ms 150ms] creates=1 stops=2 resets=1 now=1969-12-31 16:16:40.28 -0800 PST
+=== RUN   TestWaitSegmentsBoundAndAbsoluteDue/stop-crosses-due
+    wait_test.go:144: delays=[250ms] creates=1 stops=1 resets=0 now=1969-12-31 16:16:40.251 -0800 PST
+--- FAIL: TestWaitSegmentsBoundAndAbsoluteDue (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/segments (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/early-wake (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/delayed-wakes (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/late-first-wake (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/fresh-reset-remainder (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/bookkeeping-crosses-due (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/after-reset-counter-delay (0.00s)
+    --- FAIL: TestWaitSegmentsBoundAndAbsoluteDue/stop-crosses-due (0.00s)
+FAIL
+FAIL	crucible/serving/replay	0.002s
+FAIL

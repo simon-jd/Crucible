@@ -1,0 +1,24 @@
+{
+  "original_test_handles": {
+    "35450": 1,
+    "27586": 0
+  },
+  "focused": "11 passed, 17 deselected in 10.06s",
+  "children": "real subprocess cases reached wait/reap; interruption regression also asserts reaped child",
+  "removed_owned_test_roots": [
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/exit-contract-red",
+      "bytes": 11908,
+      "device": 66307,
+      "inode": 56377436
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/exit-contract-focused",
+      "bytes": 15183,
+      "device": 66307,
+      "inode": 56377543
+    }
+  ],
+  "failed_RED_log_retained": true,
+  "shared_runtime_or_model_files_changed": false
+}

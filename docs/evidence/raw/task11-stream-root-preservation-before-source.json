@@ -1,0 +1,33 @@
+{
+  "time_utc": "2026-10-25T15:04:59.949249+00:00",
+  "scope": "ROOT read-only while new stream source being prepared; no experiment launched",
+  "sources": 183,
+  "artifacts": 207,
+  "executables": {
+    "python_path": true,
+    "native_python_path": true,
+    "timeout_path": true,
+    "prlimit_path": true
+  },
+  "frozen_mismatches": [],
+  "coordinator_count": 100,
+  "coordinator_bytes": 2578786,
+  "coordinator_mismatches": [],
+  "resource_sample": {
+    "project_bytes": 13315929405,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305769174,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995769174,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "conservative_extra3M": 13998769174,
+  "new_GPU_authorized": false,
+  "Task12_full02": "historical actual sender-invalid FAILED; one-shot spent; preserved",
+  "Task11_fullsize_fit_admitted": false
+}

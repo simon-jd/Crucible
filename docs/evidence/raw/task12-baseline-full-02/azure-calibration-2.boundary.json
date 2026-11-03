@@ -1,0 +1,17 @@
+{
+  "accepted": true,
+  "attempts": [
+    {
+      "status": 200,
+      "started_seconds": 8.100178092718124e-07,
+      "http_body_complete": true,
+      "http_framing": "content-length",
+      "remaining_content_length": 0,
+      "bytes": 142,
+      "sha256": "8cdea2a5c5b674710a54ffe32275c8d96a2f1bfeb88fdc7f0431b279f12f10b7",
+      "elapsed_seconds": 0.04909621994011104
+    }
+  ],
+  "deadline_seconds": 30,
+  "elapsed_seconds": 0.049098943010903895
+}

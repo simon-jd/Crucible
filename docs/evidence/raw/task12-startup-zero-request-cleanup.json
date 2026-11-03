@@ -1,0 +1,19 @@
+{
+  "terminal_handle": 70957,
+  "removed_owned_basetemps": [
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/ready-log-red",
+      "device": 66307,
+      "inode": 56278849,
+      "logical_bytes": 2985
+    },
+    {
+      "path": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/tmp/ready-log-green",
+      "device": 66307,
+      "inode": 56377543,
+      "logical_bytes": 12745
+    }
+  ],
+  "remaining": [],
+  "live_native_processes_started": 0
+}

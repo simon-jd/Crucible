@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-10-25T09:05:10.912328+00:00",
+  "scope": "one read-only CPU epoll timeout probe; no listener/FD registration/network/model/GPU/child/tuning",
+  "root_ruling": "Single8s poll under12s outer bound tests whether host long epoll wait itself can exceed5ms. Cost if wrong:8s idleCPU wait and tiny evidence, no client fix or native acceptance.",
+  "project_bytes_before": 13297415955,
+  "planned_project_bytes": 690000000,
+  "kernel_release": "7.0.0-38-generic",
+  "kernel_signature": "Ubuntu 7.0.0-38.38-generic 7.0.14",
+  "nice": 0,
+  "timer_slack_ns": 50000,
+  "requested_seconds": 8.0,
+  "attempts": 1,
+  "event_fds_registered": 0,
+  "source_evidence": {
+    "select_accuracy": "https://raw.githubusercontent.com/gregkh/linux/v7.0.14/fs/select.c",
+    "epoll_wait": "https://raw.githubusercontent.com/gregkh/linux/v7.0.14/fs/eventpoll.c"
+  },
+  "interpretation_limit": "Separate host syscall probe, not a Go phase trace and not proof that the original delays share this cause.",
+  "elapsed_seconds": 8.000870494,
+  "overshoot_ms": 0.870494,
+  "events": [],
+  "maxrss_bytes": 31805440
+}

@@ -1,0 +1,33 @@
+{
+  "observed_at_utc": "2026-10-25T12:34:11.671708+00:00",
+  "scope": "root-independent complete144paths75SHA8rawlinktarget/metadata/pathset check before exact scratch cleanup",
+  "inventory_sha256": "6d5e43bb69e9f380f21d990ecdf7e24b08da44c6c7d004fe64916a01fa280d26",
+  "scratch_identity": [
+    66307,
+    55446940
+  ],
+  "entries": 144,
+  "regular_paths": 75,
+  "unique_regular_inodes": 75,
+  "regular_unique_bytes": 189487,
+  "symlinks": 8,
+  "empty_directories_after_payload_unlink": 61,
+  "all_four_tested_source_hashes_unchanged": true,
+  "terminal_runs": {
+    "red": {
+      "original_chunk": "c9f5dc",
+      "exit": 1,
+      "expected_assertion": "measurement history missing at terminal boundary",
+      "pytest": "1 failed in0.07s"
+    },
+    "green": {
+      "original_chunk": "999e18",
+      "exit": 0,
+      "pytest": "15 passed in0.09s"
+    }
+  },
+  "authorized_only": "Immediately repeat complete path/metadata/SHA/rawtarget check, unlink only75inventoriedregular+8symlinknodes (nofollow), then61bottomupemptydirs including exactscratchroot. Stoponmismatch; preserve model/runtime/raw/client/pool.",
+  "next_scope_after_cleanup": "write exactcleanup+current healthyNativePool.measure/budget; SOURCEONLY prepare fresh short host metadata validation and full03-v2 proposal/freeze lineage. No oldhandoff rerun/newhost execution/Git/native untilgate.",
+  "no_gpu_service_fixtures": true,
+  "deletion_executed_by_root": false
+}

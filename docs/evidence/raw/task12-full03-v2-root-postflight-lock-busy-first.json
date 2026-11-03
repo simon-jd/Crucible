@@ -1,0 +1,11 @@
+{
+  "original_native_handle": 60652,
+  "native_exit": 1,
+  "audit_exception": "BlockingIOError: [Errno 11] Resource temporarily unavailable",
+  "operation": "read-only postflight nonblocking flock probe",
+  "known_wrapper_guard_server_all_absent": true,
+  "live_full03_or_owned_project_candidates": 0,
+  "port31012_bindable": true,
+  "audit_before_evidence_write": true,
+  "interpretation": "Lock busy at this instant; do not infer our cleanup failed or stop foreign job. Next inspect current lock owner read-only. No GPU retry."
+}

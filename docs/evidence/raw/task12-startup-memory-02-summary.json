@@ -1,0 +1,308 @@
+{
+  "original_handle": 79950,
+  "outer_guard_returncode": 0,
+  "reason": "ready-no-generation",
+  "baseline_accepted": false,
+  "http_requests_sent": 0,
+  "server_warmup_skipped": true,
+  "trace_or_generation_requests": 0,
+  "samples": 146,
+  "observed_elapsed_seconds": 14.784575380035676,
+  "launch_to_guard_terminal_seconds": 32.51757348095998,
+  "max_sampled_aggregate_stat_rss_bytes": 7409397760,
+  "final_sample_stat_rss_bytes": 3928104960,
+  "max_sampled_owned_processes": 7,
+  "sum_check_all_samples": true,
+  "interval_seconds": {
+    "min": 0.062387111014686525,
+    "median": 0.1000611410709098,
+    "max": 0.14099986292421818
+  },
+  "peak_sample": {
+    "monotonic": 679329.312424217,
+    "aggregate_rss_bytes": 7409397760,
+    "processes": [
+      {
+        "pid": 2645620,
+        "ppid": 2645619,
+        "pgrp": 2645619,
+        "start_ticks": 67929956,
+        "rss_bytes": 58044416,
+        "category": "observer",
+        "status_components": {
+          "VmRSS": 59965440,
+          "RssAnon": 47804416,
+          "RssFile": 12161024,
+          "RssShmem": 0
+        },
+        "VmRSS": 59965440,
+        "RssAnon": 47804416,
+        "RssFile": 12161024,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2646378,
+        "ppid": 2645620,
+        "pgrp": 2645619,
+        "start_ticks": 67931711,
+        "rss_bytes": 1042358272,
+        "category": "server-entry",
+        "status_components": {
+          "VmRSS": 1046269952,
+          "RssAnon": 656773120,
+          "RssFile": 369905664,
+          "RssShmem": 19591168
+        },
+        "VmRSS": 1046269952,
+        "RssAnon": 656773120,
+        "RssFile": 369905664,
+        "RssShmem": 19591168
+      },
+      {
+        "pid": 2646634,
+        "ppid": 2646378,
+        "pgrp": 2645619,
+        "start_ticks": 67932205,
+        "rss_bytes": 14155776,
+        "category": "unknown-owned-child",
+        "status_components": {
+          "VmRSS": 14737408,
+          "RssAnon": 5783552,
+          "RssFile": 8953856,
+          "RssShmem": 0
+        },
+        "VmRSS": 14737408,
+        "RssAnon": 5783552,
+        "RssFile": 8953856,
+        "RssShmem": 0
+      },
+      {
+        "pid": 2646635,
+        "ppid": 2646378,
+        "pgrp": 2645619,
+        "start_ticks": 67932205,
+        "rss_bytes": 5275365376,
+        "category": "scheduler-title",
+        "status_components": {
+          "VmRSS": 5279236096,
+          "RssAnon": 801189888,
+          "RssFile": 4380942336,
+          "RssShmem": 97103872
+        },
+        "VmRSS": 5279236096,
+        "RssAnon": 801189888,
+        "RssFile": 4380942336,
+        "RssShmem": 97103872
+      },
+      {
+        "pid": 2646636,
+        "ppid": 2646378,
+        "pgrp": 2645619,
+        "start_ticks": 67932205,
+        "rss_bytes": 1019473920,
+        "category": "detokenizer-title",
+        "status_components": {
+          "VmRSS": 1023864832,
+          "RssAnon": 655208448,
+          "RssFile": 368656384,
+          "RssShmem": 0
+        },
+        "VmRSS": 1023864832,
+        "RssAnon": 655208448,
+        "RssFile": 368656384,
+        "RssShmem": 0
+      }
+    ],
+    "events": []
+  },
+  "observed_processes": [
+    {
+      "pid": 2645620,
+      "start_ticks": 67929956,
+      "categories": [
+        "observer"
+      ],
+      "max_stat_rss_bytes": 58044416,
+      "observed_ppids": [
+        2645619
+      ]
+    },
+    {
+      "pid": 2646378,
+      "start_ticks": 67931711,
+      "categories": [
+        "server-entry"
+      ],
+      "max_stat_rss_bytes": 1052352512,
+      "observed_ppids": [
+        2645620
+      ]
+    },
+    {
+      "pid": 2646634,
+      "start_ticks": 67932205,
+      "categories": [
+        "unknown-owned-child"
+      ],
+      "max_stat_rss_bytes": 14155776,
+      "observed_ppids": [
+        2646378
+      ]
+    },
+    {
+      "pid": 2646635,
+      "start_ticks": 67932205,
+      "categories": [
+        "scheduler-title",
+        "unknown-owned-child"
+      ],
+      "max_stat_rss_bytes": 5275365376,
+      "observed_ppids": [
+        2646378
+      ]
+    },
+    {
+      "pid": 2646636,
+      "start_ticks": 67932205,
+      "categories": [
+        "detokenizer-title",
+        "unknown-owned-child"
+      ],
+      "max_stat_rss_bytes": 1021128704,
+      "observed_ppids": [
+        2646378
+      ]
+    },
+    {
+      "pid": 2647072,
+      "start_ticks": 67932786,
+      "categories": [
+        "unknown-owned-child"
+      ],
+      "max_stat_rss_bytes": 3145728,
+      "observed_ppids": [
+        2646635
+      ]
+    },
+    {
+      "pid": 2647073,
+      "start_ticks": 67932786,
+      "categories": [
+        "unknown-owned-child"
+      ],
+      "max_stat_rss_bytes": 49541120,
+      "observed_ppids": [
+        2647072
+      ]
+    }
+  ],
+  "resource_error_samples": [],
+  "cleanup": {
+    "pid": 2646378,
+    "returncode": -15,
+    "forced_kill": false,
+    "reaped": true,
+    "listener_closed": true,
+    "descendant_confirmation": "required from outer fixed GPU guard before lock release"
+  },
+  "runtime_cache_bytes": 43333,
+  "owned_raw_directory_bytes": 237670,
+  "shared_HF_bytes_including_retained_partial": 23815435170,
+  "hashes": {
+    "server.log": "8cf55f5fd49b57ac88d69cbd164d5defc26a95a9836e30f9ad3ba1d29339a96b",
+    "samples.jsonl": "6311a2a069eadf63b57ac949709056960310dcb8ec5a463d7c43218aeae0d8da",
+    "terminal.json": "ee1b507990608b7a418d8c95d2487d3593670b18e3872b8581ca6761e36818bb",
+    "stop.json": "20aa1ca6544882e7319d8de80ef91ff46519718bfacd01dcdee07c00d6c68957",
+    "server-inventory.json": "c4fd8e0c8f15fac0881e9808d763f35b008008a2186595ae14f18d5a6990a91d"
+  },
+  "observed_scope": "Exact readiness marker with same BF16/context4096/static.80/running8/seed17 and derived compile_threads1; no HTTP, native smoke, warmups or trace/cal/eval request. Runtime stdout reports BF16 weight load and KV pool allocation; these are backend logs, not independently measured GPU-memory samples.",
+  "limits": [
+    "Sampling is non-atomic; no guarantee against transient overshoot. Status RSS components come from another read and need not sum to statRSS.",
+    "Diagnostic01 reached its early stop at11,500,138,496B/29sampledPIDs; diagnostic02 ready with146samples/max7PIDs/7,409,397,760B sampled peak. Different terminal conditions and single runs prevent a causal memory-savings or performance estimate. Historical unknown processes remain unidentified.",
+    "Full native token smoke, fixed warmups,6calibration and24evaluation members remain required; readiness is not baseline/model-under-workload acceptance.",
+    "No explicit backend destroy_process_group event observed; exact process reap, outer guard successful descendant drain and host PID/PGID/GPU/listener absence are available cleanup evidence.",
+    "Bounded stdout pipe may affect startup; shutdown tail may be lost."
+  ],
+  "runtime_cache_files_after_terminal": [
+    {
+      "path": ".cache/task12-baseline/native-cache/flashinfer/.cache/flashinfer/0.5.0/89/flashinfer_jit.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmp0za1bogo/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmp4g0ugce0",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmp5e4vmgkh",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmp_j3a3enn",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpa109ox8h",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpd0owk98e/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpf4x6dxec/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpfsel7t34/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmphuypxqu4",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpjo14gvvx/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpl8kmerbv/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmppu68ax5u/_remote_module_non_scriptable.py",
+      "bytes": 2355,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpr5zhzzqc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/tmp/tmpywts4krn",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".cache/task12-baseline/native-cache/triton/PJQAOAUEBF4K7G2PTZIJJD55WTLUU6NAJCS4RTYMIQEOPXS6RRAA/cuda_utils.cpython-312-x86_64-linux-gnu.so",
+      "bytes": 26848,
+      "sha256": "1136d02d496fe51c2ca3cce36931049942956ca18620223aa3077c7d68844a78"
+    }
+  ]
+}

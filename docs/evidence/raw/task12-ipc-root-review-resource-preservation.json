@@ -1,0 +1,30 @@
+{
+  "time_utc": "2026-10-25T19:38:01.634465+00:00",
+  "sample": {
+    "project_bytes": 13318562546,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 64194,
+    "combined_bytes": 10224425,
+    "nonpool_bytes": 13308402315,
+    "evidence_credit_bytes": 64194,
+    "projected_bytes": 13998338121,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "phase_initial_project_bytes": 13318058860,
+  "actual_phase_net_growth_bytes": 503686,
+  "retained_cap_bytes": 1000000,
+  "remaining_phase_bytes": 496314,
+  "CPU_scratch_bytes": 256000,
+  "extra_conservative_bytes": 244000,
+  "future_plus_remaining_phase_and_scratch_extra": 13999334435,
+  "retained12_preservation_baseline_SHA_verified": true,
+  "coordinator100_verified": 100,
+  "original15_directory_identities14empty_plus_client": true,
+  "shared_HF_bytes": 23815435170,
+  "free_bytes": 263182135296,
+  "GPU_query_lock_queue_execution": false,
+  "note": "Sequential sampled accounting. No retained evidence/cache/source deletion; protected hashes verified. Full690M not added again; client remains in pool."
+}

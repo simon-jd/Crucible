@@ -1,0 +1,111 @@
+{
+  "time_utc": "2026-10-25T15:35:08.412359+00:00",
+  "scope": "host-permitted read-only /proc exactcwd+CPUmodule argv observation; no signals",
+  "pid_namespace": "pid:[4026531836]",
+  "same_UID_seen": 435,
+  "project_CPU_runtime_candidates": [],
+  "unreadable_or_race_entries": [
+    {
+      "pid": 2560,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2588,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8142,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8324,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8341,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8363,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8824,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8922,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 11726,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13578,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13594,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13610,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13646,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13654,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13661,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 13773,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 17558,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 19730,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763646,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763649,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1763812,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1767066,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 1828718,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2190702,
+      "error": "PermissionError"
+    },
+    {
+      "pid": 3826483,
+      "error": "PermissionError"
+    }
+  ],
+  "original_handle97129": "terminal0/supervisorcleanupproved independently; run-localPIDnumbers are not reused ashosthandles",
+  "limitation": "unknownentries retained; no globalGPU/lock/container absenceclaim; no newprojectGPU/service/container wasstarted"
+}

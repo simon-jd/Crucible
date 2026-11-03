@@ -1,0 +1,107 @@
+{
+  "time_utc": "2026-10-25T13:42:34.789267+00:00",
+  "scope": "root read all final source/report/tests/worker/wrapper/README; static formatter/lint gate only; no Torch tests/native authorized yet",
+  "sources": {
+    "rl/learner/state_handoff.py": "d3fa0537b68881fa7d011caafe6907b7a1600ac36d3ec87e86142c6f005ad00b",
+    "rl/learner/train.py": "62c121e29b660ef7c6a29f47e1d526ccdc410d1ee5277f59dceed0ae9a7c50a3",
+    "rl/learner/README.md": "6c261d1d0fe325281863ced3f2b3548c806117e006645d4c76559139a6ca99bb",
+    "rl/learner/tests/test_state_handoff.py": "47836de03f57f973a975786828538af5d28d177f1c0c59b7e08dce7be3e6cf4f",
+    "rl/learner/tests/handoff_worker.py": "c99bc7d719922b6de0c7cabaf94fc93316d73340f4b9e939903647c39f34fdcf",
+    "scripts/test_ram_handoff_cpu.py": "1c88e886a4ef068e3be3fba02dcea3178b7a7c4f60151d29d46626189264073d"
+  },
+  "ruff_sha256": "396f38351ef19df216c0aa7a230305e2aca19fd537d3eaaf5e4dd5fba33de82c",
+  "AST_parse_all5": true,
+  "retained_phase_complete_conservative_paths": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 263136
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-brief.md",
+      "bytes": 13837
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-ram-handoff-report.md",
+      "bytes": 22259
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 84101
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 19195
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-28.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-28.json",
+      "bytes": 1119
+    },
+    {
+      "path": "docs/evidence/raw/task11-ram-state-static-context.json",
+      "bytes": 2501
+    },
+    {
+      "path": "docs/evidence/rl-state-handoff.md",
+      "bytes": 2897
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 14207
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 42858
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 7859
+    },
+    {
+      "path": "rl/learner/tests/test_state_handoff.py",
+      "bytes": 16484
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 19734
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 11699
+    }
+  ],
+  "retained_before_gate": 523330,
+  "static_log_reserve": 131072,
+  "gate_report_growth_reserve": 20000,
+  "retained_projected": 674402,
+  "retained_cap": 2000000,
+  "pool_sample": {
+    "project_bytes": 13314862127,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13304701896,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13994701896,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "conservative_extra3M_projection": 13997701896,
+  "scratch_initially_absent": true,
+  "static_permitted": "create only .cache/task11-ram-handoff/static; RAYON_NUM_THREADS=1 command-local pinnedRuff format then check --no-cache for5py, each45s+5/AS2GB/core0/fsize65536; conditional lint; any failure stop",
+  "scope_exclusions": "No Torch imports/memfd/children tests/GPU/Git; Task12 frozen source+artifacts preserved",
+  "source_preparation_rulings_applied": [
+    "true dualfd advance",
+    "independent hard metadata sink bound",
+    "max serial-stage RAM with kernel mapping release proof"
+  ]
+}

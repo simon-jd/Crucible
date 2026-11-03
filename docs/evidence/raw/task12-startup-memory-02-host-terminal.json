@@ -1,0 +1,76 @@
+{
+  "host_read_only": true,
+  "checked_utc": "2026-10-24T22:40:31Z",
+  "original_handle": 79950,
+  "outer_guard_returncode": 0,
+  "owned_identity_rows": [
+    {
+      "expected_pid": 2645551,
+      "expected_start_ticks": null,
+      "absent": true
+    },
+    {
+      "expected_pid": 2645552,
+      "expected_start_ticks": 67929870,
+      "absent": true
+    },
+    {
+      "expected_pid": 2645615,
+      "expected_start_ticks": 67929952,
+      "absent": true
+    },
+    {
+      "expected_pid": 2645619,
+      "expected_start_ticks": null,
+      "absent": true
+    },
+    {
+      "expected_pid": 2645620,
+      "expected_start_ticks": 67929956,
+      "absent": true
+    },
+    {
+      "expected_pid": 2646378,
+      "expected_start_ticks": 67931711,
+      "absent": true
+    },
+    {
+      "expected_pid": 2646634,
+      "expected_start_ticks": 67932205,
+      "absent": true
+    },
+    {
+      "expected_pid": 2646635,
+      "expected_start_ticks": 67932205,
+      "absent": true
+    },
+    {
+      "expected_pid": 2646636,
+      "expected_start_ticks": 67932205,
+      "absent": true
+    },
+    {
+      "expected_pid": 2647072,
+      "expected_start_ticks": 67932786,
+      "absent": true
+    },
+    {
+      "expected_pid": 2647073,
+      "expected_start_ticks": 67932786,
+      "absent": true
+    }
+  ],
+  "owned_pgids": [
+    2645551,
+    2645619
+  ],
+  "group_members": [],
+  "proc_scan_errors": [],
+  "transient_proc_vanished": 0,
+  "port31012_closed": true,
+  "owned_GPU_pids": [],
+  "unrelated_compute_process_count": 8,
+  "no_unrelated_cmdline_or_env_read": true,
+  "scope": "Own recorded PID/startticks plus wrapper parent/timeout PGID whose startticks were not captured; no retrospective identity invention",
+  "all_recorded_PIDs_absent": true
+}

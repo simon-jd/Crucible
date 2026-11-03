@@ -1,0 +1,38 @@
+=== RUN   TestSlowConsumerDeadlineAndCancellation
+=== RUN   TestSlowConsumerDeadlineAndCancellation/deadline
+    proxy_test.go:391: stalled downstream retained handler beyond budget
+2026/10/24 10:48:36 httputil: ReverseProxy read error during body copy: context deadline exceeded
+=== RUN   TestSlowConsumerDeadlineAndCancellation/parent-cancel
+    proxy_test.go:391: stalled downstream retained handler beyond budget
+--- FAIL: TestSlowConsumerDeadlineAndCancellation (2.03s)
+    --- FAIL: TestSlowConsumerDeadlineAndCancellation/deadline (1.00s)
+    --- FAIL: TestSlowConsumerDeadlineAndCancellation/parent-cancel (1.03s)
+=== RUN   TestRequestBodyLifetimeBudget
+    proxy_test.go:411: body read outlived request budget
+--- FAIL: TestRequestBodyLifetimeBudget (1.00s)
+=== RUN   TestDeadlineCapabilityRequired
+    proxy_test.go:456: want explicit abort for unsupported deadlines, got <nil>
+--- FAIL: TestDeadlineCapabilityRequired (0.00s)
+FAIL
+FAIL	crucible/serving/router	3.038s
+=== RUN   TestExecutableSignalStopsTrial
+=== RUN   TestExecutableSignalStopsTrial/sigterm
+    main_test.go:201: expected handled cancellation exit1, got signal: terminated code-1
+    main_test.go:209: signal exited without stop attempt
+    main_test.go:212: missing cancellation result 
+=== RUN   TestExecutableSignalStopsTrial/sigint
+    main_test.go:201: expected handled cancellation exit1, got signal: interrupt code-1
+    main_test.go:209: signal exited without stop attempt
+    main_test.go:212: missing cancellation result 
+=== RUN   TestExecutableSignalStopsTrial/failed-stop
+    main_test.go:201: expected handled cancellation exit1, got signal: terminated code-1
+    main_test.go:209: signal exited without stop attempt
+    main_test.go:212: missing cancellation result 
+    main_test.go:215: failed stop claimed clean 
+--- FAIL: TestExecutableSignalStopsTrial (0.01s)
+    --- FAIL: TestExecutableSignalStopsTrial/sigterm (0.00s)
+    --- FAIL: TestExecutableSignalStopsTrial/sigint (0.00s)
+    --- FAIL: TestExecutableSignalStopsTrial/failed-stop (0.00s)
+FAIL
+FAIL	crucible/serving/experiments	0.013s
+FAIL

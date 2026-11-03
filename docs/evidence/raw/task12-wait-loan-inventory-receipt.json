@@ -1,0 +1,14 @@
+{
+  "entries": 3719,
+  "regular_files": 3453,
+  "logical_regular_bytes": 243380070,
+  "uncompressed_bytes": 706297,
+  "compressed_bytes": 259969,
+  "gzip_sha256": "44369ba62c39edd4f4c78d126930ce8fdeeb638780d01e3406b785853e48069a",
+  "uncompressed_sha256": "a81c33ad8edc225ff5ec0615fe8de6ac3dc21eb792e7c870d906cac4833e0312",
+  "cap": 270000,
+  "two_full_hash_metadata_passes_match": true,
+  "loan_deleted": false,
+  "authority_handle_terminal": 48046,
+  "inventory_path": "docs/evidence/raw/task12-wait-loan-inventory.json.gz"
+}

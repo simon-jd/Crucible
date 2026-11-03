@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_ownership_shim_existing_child_refuses_launch_despite_empty_snapshot ___
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7889c6c92600>
+
+    def test_ownership_shim_existing_child_refuses_launch_despite_empty_snapshot(monkeypatch):
+        state = ownership_shim(monkeypatch)
+        original = gpu_guard.os.waitid
+
+        def peek(kind, pid, flags):
+            if kind == os.P_ALL and not state.started:
+                return None  # unrelated live child; proc's empty discovery cannot authorize launch
+            return original(kind, pid, flags)
+
+        monkeypatch.setattr(gpu_guard.os, "waitid", peek)
+>       assert gpu_guard._supervise(1, ["fixture"]) == 2
+E       AssertionError: assert 0 == 2
+E        +  where 0 = <function _supervise at 0x7889c61f47c0>(1, ['fixture'])
+E        +    where <function _supervise at 0x7889c61f47c0> = gpu_guard._supervise
+
+scripts/tests/test_gpu_guard.py:326: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_existing_child_refuses_launch_despite_empty_snapshot
+1 failed, 20 deselected in 0.03s

@@ -1,0 +1,62 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+____________ test_ownership_shim_never_signals_after_reaping_leader ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7512056916a0>
+
+    def test_ownership_shim_never_signals_after_reaping_leader(monkeypatch):
+        state = ownership_shim(monkeypatch)
+        assert gpu_guard._supervise(1, ["fixture"]) == 0
+        assert state.reaped
+>       assert not any(reaped for _, _, reaped in state.signals)
+E       assert not True
+E        +  where True = any(<generator object test_ownership_shim_never_signals_after_reaping_leader.<locals>.<genexpr> at 0x7512054c09e0>)
+
+scripts/tests/test_gpu_guard.py:185: AssertionError
+__________ test_ownership_shim_lost_anchor_never_signals_reused_pgid ___________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x751205691640>
+capsys = <_pytest.capture.CaptureFixture object at 0x751205690ec0>
+
+    def test_ownership_shim_lost_anchor_never_signals_reused_pgid(monkeypatch, capsys):
+        state = ownership_shim(monkeypatch, lost=True)
+
+        def stop(_seconds):
+            assert "cleanup_unconfirmed" in capsys.readouterr().err
+            assert not state.reaped
+            assert not state.signals
+            raise StopQuarantine
+
+        monkeypatch.setattr(gpu_guard.time, "sleep", stop)
+>       with pytest.raises(StopQuarantine):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'test_gpu_guard.StopQuarantine'>
+
+scripts/tests/test_gpu_guard.py:198: Failed
+_________ test_ownership_shim_unconfirmed_worker_keeps_anchor_and_lock _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7512054cad20>
+capsys = <_pytest.capture.CaptureFixture object at 0x7512054cad80>
+
+    def test_ownership_shim_unconfirmed_worker_keeps_anchor_and_lock(monkeypatch, capsys):
+        state = ownership_shim(monkeypatch, worker=True)
+
+        def advance(seconds):
+            state.clock += seconds
+            if state.clock > 1.1:
+                assert "cleanup_unconfirmed" in capsys.readouterr().err
+                assert not state.reaped, "return/reap would release the supervisor's flock"
+                assert any(sig == signal.SIGKILL for _, sig, _ in state.signals)
+                raise StopQuarantine
+
+        monkeypatch.setattr(gpu_guard.time, "sleep", advance)
+>       with pytest.raises(StopQuarantine):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'test_gpu_guard.StopQuarantine'>
+
+scripts/tests/test_gpu_guard.py:214: Failed
+=========================== short test summary info ============================
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_never_signals_after_reaping_leader
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_lost_anchor_never_signals_reused_pgid
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_unconfirmed_worker_keeps_anchor_and_lock
+3 failed, 13 deselected in 0.03s

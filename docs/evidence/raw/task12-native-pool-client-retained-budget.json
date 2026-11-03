@@ -1,0 +1,10 @@
+{
+  "canonical_bytes": 13313022301,
+  "owned_bytes": 10160231,
+  "nonloan_bytes": 13302862070,
+  "projected_bytes": 13992862070,
+  "free_bytes": 265521491968,
+  "accounting": "independent sequential full scans; nonloan excludes only verified owned root; cross-boundary hardlinks may double count; non-atomic, not a continuous quota",
+  "scan_errors": [],
+  "loan_repaid": false
+}

@@ -1,0 +1,6 @@
+extends: qwen25_05b_math_code.yaml
+id: clip03
+declared_factor: clip
+overrides:
+  objective:
+    clip: 0.3

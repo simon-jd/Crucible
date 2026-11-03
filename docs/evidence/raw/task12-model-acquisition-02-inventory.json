@@ -1,0 +1,99 @@
+{
+  "source_acquisition_handle": 53114,
+  "files": [
+    {
+      "name": "LICENSE",
+      "reuse": true,
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "algorithm": "git-sha1",
+      "upstream_hash": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab"
+    },
+    {
+      "name": "README.md",
+      "reuse": true,
+      "bytes": 16660,
+      "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+      "algorithm": "git-sha1",
+      "upstream_hash": "ecc3ebd0849aa08d9484bd911dddfd5261b10d30"
+    },
+    {
+      "name": "config.json",
+      "reuse": true,
+      "bytes": 728,
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "algorithm": "git-sha1",
+      "upstream_hash": "d46195ac87f837ad233d02b2f80f148bf7c005e0"
+    },
+    {
+      "name": "generation_config.json",
+      "reuse": true,
+      "bytes": 239,
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+      "algorithm": "git-sha1",
+      "upstream_hash": "20a8a9156fc8c3f25295ca067f61fdf120d517c5"
+    },
+    {
+      "name": "merges.txt",
+      "reuse": true,
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "algorithm": "git-sha1",
+      "upstream_hash": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "name": "model-00001-of-00005.safetensors",
+      "reuse": false,
+      "bytes": 3996250744
+    },
+    {
+      "name": "model-00002-of-00005.safetensors",
+      "reuse": false,
+      "bytes": 3993160032
+    },
+    {
+      "name": "model-00003-of-00005.safetensors",
+      "reuse": false,
+      "bytes": 3959604768
+    },
+    {
+      "name": "model-00004-of-00005.safetensors",
+      "reuse": false,
+      "bytes": 3187841392
+    },
+    {
+      "name": "model-00005-of-00005.safetensors",
+      "reuse": false,
+      "bytes": 1244659840
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "reuse": false,
+      "bytes": 32878
+    },
+    {
+      "name": "tokenizer.json",
+      "reuse": false,
+      "bytes": 11422654
+    },
+    {
+      "name": "tokenizer_config.json",
+      "reuse": false,
+      "bytes": 9732
+    },
+    {
+      "name": "vocab.json",
+      "reuse": false,
+      "bytes": 2776833
+    }
+  ],
+  "reused_count": 5,
+  "reused_bytes": 1700823,
+  "remaining_download_bytes": 16395758873,
+  "retained_failed_partial_bytes": 303796954,
+  "shared_cache_bytes": 7419676297,
+  "projected_shared_cache_bytes": 23815435170,
+  "free_bytes": 285349249024,
+  "project_bytes": 13266102704,
+  "failed_prefix_already_in_shared_total": true
+}

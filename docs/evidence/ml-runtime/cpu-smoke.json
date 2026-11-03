@@ -1,0 +1,13 @@
+{
+  "kind": "environment-correctness-smoke",
+  "performance_claim": false,
+  "model": null,
+  "device": "cpu",
+  "python": "3.12.13",
+  "torch": "2.8.0+cu128",
+  "triton": "3.4.0",
+  "torch_build_cuda": "12.8",
+  "dtype": "torch.float32",
+  "forward_ok": true,
+  "backward_ok": true
+}

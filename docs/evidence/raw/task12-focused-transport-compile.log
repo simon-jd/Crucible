@@ -1,0 +1,4 @@
+# crucible/serving/replay [crucible/serving/replay.test]
+serving/replay/schedule.go:104:25: assignment mismatch: 2 variables but mime.ParseMediaType returns 3 values
+FAIL	crucible/serving/replay [build failed]
+FAIL

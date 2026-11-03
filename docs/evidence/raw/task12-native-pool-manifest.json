@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "root": "/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool",
+  "root_identity": [
+    66307,
+    55447049
+  ],
+  "work_identity": [
+    66307,
+    55447088
+  ],
+  "client_identity": [
+    66307,
+    55468959
+  ],
+  "client_bytes": 10160231,
+  "client_mtime_ns": 1792928229568374196,
+  "client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b"
+}

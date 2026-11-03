@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "scope": "Real unmodified local PATH/shared libraries; no mocks. No physical GPUs were enumerated because the driver could not be contacted; this is not a measured zero-GPU hardware inventory.",
+  "errors": [
+    "command failed (9): nvidia-smi -L: ",
+    "command failed (9): nvidia-smi --query-gpu=driver_version --format=csv,noheader: ",
+    "command failed (127): ofed_info -s: FileNotFoundError: [Errno 2] No such file or directory: 'ofed_info'",
+    "command failed (9): nvidia-smi topo -m: ",
+    "command failed (127): ibstat: FileNotFoundError: [Errno 2] No such file or directory: 'ibstat'",
+    "expected 32 unique physical GPU UUIDs; observed 0",
+    "nccl unavailable: libnccl.so: cannot open shared object file: No such file or directory",
+    "real local cuda_toolkit version mismatch: observed=13.2.2, expected=12.8.1",
+    "real local cuda_runtime version mismatch: observed=13020, expected=12080"
+  ],
+  "observed_versions": {
+    "nvcc": "13.2.86",
+    "cuda_runtime": 13020,
+    "cuda_toolkit": "13.2.2"
+  }
+}

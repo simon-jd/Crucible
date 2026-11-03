@@ -1,0 +1,8 @@
+=== RUN   TestTransportEmissionIncludesWriteWait
+    replay_test.go:173: write wait not measured: {ScheduledMs:0 SentMs:0.260853 TTFTms:20.588879 TPOTms:7.515496000000001 CompletedMs:35.882229 OutputTokens:3 Coalesced:true Status:ok Error:}
+--- FAIL: TestTransportEmissionIncludesWriteWait (0.04s)
+=== RUN   TestNeverEmittedCountsLate
+--- PASS: TestNeverEmittedCountsLate (0.01s)
+FAIL
+FAIL	crucible/serving/replay	0.050s
+FAIL

@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-10-25T18:50:26.227130+00:00",
+  "original_exec_session_id": 60652,
+  "exit_code": 1,
+  "wrapper_pid": 3061993,
+  "guard_pid": 3062015,
+  "server_pid": 3062912,
+  "stdout_original_chunks": [
+    "{\"root_original_wrapper_pid\": 3061993, \"state\": \"ROOT_SINGLE_ENTRY_COMMITTED_BEFORE_GUARD_CREATION\"}\n",
+    "{\"original_guard_pid\": 3062015}\n"
+  ],
+  "native_terminal_sha256": "8bec8abfb76a5b7400efe7b93e34fb85333c3dc76a8d9e847031213613951b94",
+  "actual_trials": 0,
+  "planned30_all_not_run": true,
+  "baseline_accepted": false,
+  "resource_samples": 6,
+  "sampled_max_owned_RSS_bytes": 997625856,
+  "sampling_is_not_continuous_peak": true,
+  "one_new_authorization_spent": true,
+  "automatic_retry": false,
+  "frozen_outputs_are_final_and_must_not_be_reused": true,
+  "next_scope": "Only bounded CPU identify exact IPC origin, narrow compatibility fix and independent review as latest coordinator instruction; no GPU execution or queue authority."
+}

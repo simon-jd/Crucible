@@ -1,0 +1,682 @@
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 152ms
+Downloading vllm (416.2MiB)
+ Downloaded vllm
+Prepared 1 package in 8.82s
+Installed 1 package in 15ms
+ + vllm==0.10.2 (from https://files.pythonhosted.org/packages/a2/1a/365479f413e7408b314c0237d6c929569874d5c002bc7c8b5a7fbf40c7d9/vllm-0.10.2-cp38-abi3-manylinux1_x86_64.whl#sha256=e0cba6110483d9bf25c4402d8655cf78d366dd13e4155210980cc3480ed98b7b)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 93ms
+Downloading xformers (111.8MiB)
+ Downloaded xformers
+Prepared 1 package in 2.55s
+Installed 1 package in 3ms
+ + xformers==0.0.32.post1 (from https://files.pythonhosted.org/packages/6b/df/6817346f1a77278315d5fe1fc9f239ba3282ba36e8ab3256babd448dde62/xformers-0.0.32.post1-cp39-abi3-manylinux_2_28_x86_64.whl#sha256=5f245b5555188da112070d8fefb6b7ae1ae47422856521d66c837e9d2352fbe4)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 162ms
+Downloading cupy-cuda12x (107.7MiB)
+ Downloaded cupy-cuda12x
+Prepared 1 package in 2.54s
+Installed 1 package in 20ms
+ + cupy-cuda12x==13.6.0 (from https://files.pythonhosted.org/packages/e0/95/d7e1295141e7d530674a3cc567e13ed0eb6b81524cb122d797ed996b5bea/cupy_cuda12x-13.6.0-cp312-cp312-manylinux2014_x86_64.whl#sha256=79b0cacb5e8b190ef409f9e03f06ac8de1b021b0c0dda47674d446f5557e0eb1)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 328ms
+Downloading ray (66.9MiB)
+ Downloaded ray
+Prepared 1 package in 2.06s
+Installed 1 package in 21ms
+ + ray==2.49.2 (from https://files.pythonhosted.org/packages/69/ca/94791be5c3b68ed0df85589a8ca558334818a47bf2978000f85533245aed/ray-2.49.2-cp312-cp312-manylinux2014_x86_64.whl#sha256=2ecaaa51f588ccdda2b61563a8be3843bf65dfaaa83a240588a307f4ebb82471)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 121ms
+Downloading opencv-python-headless (51.5MiB)
+ Downloaded opencv-python-headless
+Prepared 1 package in 1.33s
+Installed 1 package in 4ms
+ + opencv-python-headless==4.12.0.88 (from https://files.pythonhosted.org/packages/89/53/e19c21e0c4eb1275c3e2c97b081103b6dfb3938172264d283a519bf728b9/opencv_python_headless-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=236c8df54a90f4d02076e6f9c1cc763d794542e886c576a6fee46ec8ff75a7a9)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 92ms
+Downloading llvmlite (40.4MiB)
+ Downloaded llvmlite
+Prepared 1 package in 947ms
+Installed 1 package in 2ms
+ + llvmlite==0.44.0 (from https://files.pythonhosted.org/packages/cb/da/8341fd3056419441286c8e26bf436923021005ece0bff5f41906476ae514/llvmlite-0.44.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=c0143a5ef336da14deaa8ec26c5449ad5b6a2b564df82fcef4be040b9cacfea9)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 220ms
+Downloading scipy (34.0MiB)
+ Downloaded scipy
+Prepared 1 package in 805ms
+Installed 1 package in 12ms
+ + scipy==1.16.2 (from https://files.pythonhosted.org/packages/53/11/a0160990b82999b45874dc60c0c183d3a3a969a563fffc476d5a9995c407/scipy-1.16.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=f66bd07ba6f84cd4a380b41d1bf3c59ea488b590a2ff96744845163309ee8e2f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 111ms
+Downloading llguidance (14.3MiB)
+ Downloaded llguidance
+Prepared 1 package in 378ms
+Installed 1 package in 3ms
+ + llguidance==0.7.30 (from https://files.pythonhosted.org/packages/af/80/5a40b9689f17612434b820854cba9b8cabd5142072c491b5280fe5f7a35e/llguidance-0.7.30-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=9edc409b9decd6cffba5f5bf3b4fbd7541f95daa8cbc9510cbf96c6ab1ffc153)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 201ms
+Downloading transformers (10.7MiB)
+ Downloaded transformers
+Prepared 1 package in 232ms
+Installed 1 package in 19ms
+ + transformers==4.55.4 (from https://files.pythonhosted.org/packages/fa/0a/8791a6ee0529c45f669566969e99b75e2ab20eb0bfee8794ce295c18bdad/transformers-4.55.4-py3-none-any.whl#sha256=df28f3849665faba4af5106f0db4510323277c4bb595055340544f7e59d06458)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 85ms
+Downloading mistral-common (6.2MiB)
+ Downloaded mistral-common
+Prepared 1 package in 183ms
+Installed 1 package in 4ms
+ + mistral-common==1.8.5 (from https://files.pythonhosted.org/packages/91/4a/54e19c5e75939fd9418c7b806c21d12cf252ea2ba38f122b597272b459dd/mistral_common-1.8.5-py3-none-any.whl#sha256=f3cf87b61958a00485e603f3fe0530eb509d7e9b2f7178329dcd260e307eced1)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 128ms
+Downloading xgrammar (7.5MiB)
+ Downloaded xgrammar
+Prepared 1 package in 207ms
+Installed 1 package in 4ms
+ + xgrammar==0.1.23 (from https://files.pythonhosted.org/packages/a1/13/53d950b93a361ef73e5930050916fa36c23fade80ee05cfb0339c044e951/xgrammar-0.1.23-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=e0ff9c0a1d46c95d82345a5bf026956ef6d98f1aac7115b57ce88d1d93c4a374)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 126ms
+Downloading torchvision (8.2MiB)
+ Downloaded torchvision
+Prepared 1 package in 246ms
+Installed 1 package in 3ms
+ + torchvision==0.23.0 (from https://files.pythonhosted.org/packages/e4/b5/3e580dcbc16f39a324f3dd71b90edbf02a42548ad44d2b4893cc92b1194b/torchvision-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=4e7d31c43bc7cbecbb1a5652ac0106b436aa66e26437585fc2c4b2cf04d6014c)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 101ms
+Downloading pillow (6.3MiB)
+ Downloaded pillow
+Prepared 1 package in 195ms
+Installed 1 package in 4ms
+ + pillow==11.3.0 (from https://files.pythonhosted.org/packages/e4/c9/06dd4a38974e24f932ff5f98ea3c546ce3f8c995d3f0985f8e5ba48bba19/pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl#sha256=676b2815362456b5b3216b4fd5bd89d362100dc6f4945154ff172e206a22c024)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 86ms
+Downloading uvloop (4.5MiB)
+ Downloaded uvloop
+Prepared 1 package in 142ms
+Installed 1 package in 3ms
+ + uvloop==0.21.0 (from https://files.pythonhosted.org/packages/06/a7/b4e6a19925c900be9f98bec0a75e6e8f79bb53bdeb891916609ab3958967/uvloop-0.21.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=86975dca1c773a2c9864f4c52c5a55631038e387b47eaf56210f873887b6c8dc)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 133ms
+Downloading pycountry (6.0MiB)
+ Downloaded pycountry
+Prepared 1 package in 273ms
+Installed 1 package in 16ms
+ + pycountry==24.6.1 (from https://files.pythonhosted.org/packages/b1/ec/1fb891d8a2660716aadb2143235481d15ed1cbfe3ad669194690b0604492/pycountry-24.6.1-py3-none-any.whl#sha256=f1a4fb391cd7214f8eefd39556d740adcc233c778a27f8942c8dca351d6ce06f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 101ms
+Downloading torchaudio (3.8MiB)
+ Downloaded torchaudio
+Prepared 1 package in 182ms
+Installed 1 package in 5ms
+ + torchaudio==2.8.0 (from https://files.pythonhosted.org/packages/c2/a6/84d80f34472503e9eb82245d7df501c59602d75d7360e717fb9b84f91c5e/torchaudio-2.8.0-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=93a8583f280fe83ba021aa713319381ea71362cc87b67ee38e97a43cb2254aee)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 130ms
+Downloading numba (3.7MiB)
+ Downloaded numba
+Prepared 1 package in 139ms
+Installed 1 package in 8ms
+ + numba==0.61.2 (from https://files.pythonhosted.org/packages/9a/2d/e518df036feab381c23a624dac47f8445ac55686ec7f11083655eb707da3/numba-0.61.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=5b1bb509d01f23d70325d3a5a0e237cbc9544dd50e50588bc581ba860c213546)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 98ms
+Downloading tokenizers (3.0MiB)
+ Downloaded tokenizers
+Prepared 1 package in 124ms
+Installed 1 package in 3ms
+ + tokenizers==0.21.4 (from https://files.pythonhosted.org/packages/f2/90/273b6c7ec78af547694eddeea9e05de771278bd20476525ab930cecaf7d8/tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=51b7eabb104f46c1c50b486520555715457ae833d5aee9ff6ae853d1130506ff)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 164ms
+Downloading hf-xet (3.0MiB)
+ Downloaded hf-xet
+Prepared 1 package in 125ms
+Installed 1 package in 2ms
+ + hf-xet==1.1.10 (from https://files.pythonhosted.org/packages/15/07/86397573efefff941e100367bbda0b21496ffcdb34db7ab51912994c32a2/hf_xet-1.1.10-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=6b6bceb6361c80c1cc42b5a7b4e3efd90e64630bcf11224dcac50ef30a47e435)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 106ms
+Downloading openai-harmony (2.9MiB)
+ Downloaded openai-harmony
+Prepared 1 package in 131ms
+Installed 1 package in 4ms
+ + openai-harmony==0.0.4 (from https://files.pythonhosted.org/packages/1f/ec/dcdcace0ffcf3a532cca910e0c351b62d3a7decf0b091ea8cf856d2a67a6/openai_harmony-0.0.4-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=31e9bcac0902a309e2fc688e52f247eec7fffcd00d17e958b9a83a8fea6519c2)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 147ms
+Downloading networkx (1.9MiB)
+ Downloaded networkx
+Prepared 1 package in 112ms
+Uninstalled 1 package in 9ms
+Installed 1 package in 9ms
+ - networkx==3.7
+ + networkx==3.5 (from https://files.pythonhosted.org/packages/eb/8d/776adee7bbf76365fdd7f2552710282c79a4ead5d2a46408c9043a2b70ba/networkx-3.5-py3-none-any.whl#sha256=0030d386a9a06dee3565298b4a734b68589749a544acbb6c412dc9e2489ec6ec)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 98ms
+Downloading aiohttp (1.6MiB)
+ Downloaded aiohttp
+Prepared 1 package in 107ms
+Installed 1 package in 4ms
+ + aiohttp==3.12.15 (from https://files.pythonhosted.org/packages/de/5e/3bf5acea47a96a28c121b167f5ef659cf71208b19e52a88cdfa5c37f1fcc/aiohttp-3.12.15-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=fd736ed420f4db2b8148b52b46b88ed038d0354255f9a73196b7bbce3ea97545)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 93ms
+Downloading outlines-core (2.2MiB)
+ Downloaded outlines-core
+Prepared 1 package in 117ms
+Installed 1 package in 2ms
+ + outlines-core==0.2.11 (from https://files.pythonhosted.org/packages/92/c7/a65d1fddf49830ebc41422294eacde35286d9f68994a8aa905cb14f5aade/outlines_core-0.2.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=86df9740368866295077346440d911df4972da2b3f1f54b8125e6f329e8a8891)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 118ms
+Downloading pydantic-core (1.9MiB)
+ Downloaded pydantic-core
+Prepared 1 package in 117ms
+Installed 1 package in 2ms
+ + pydantic-core==2.33.2 (from https://files.pythonhosted.org/packages/f9/41/4b043778cf9c4285d59742281a769eac371b9e47e35f98ad321349cc5d61/pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=8f57a69461af2a5fa6e6bbd7a5f60d3b7e6cebb687f55106933188e79ad155c1)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 100ms
+Downloading pygments (1.2MiB)
+ Downloaded pygments
+Prepared 1 package in 102ms
+Uninstalled 1 package in 3ms
+Installed 1 package in 6ms
+ - pygments==2.21.0
+ + pygments==2.19.2 (from https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl#sha256=86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 136ms
+Downloading setuptools (1.2MiB)
+ Downloaded setuptools
+Prepared 1 package in 88ms
+Uninstalled 1 package in 4ms
+Installed 1 package in 7ms
+ - setuptools==84.2.1
+ + setuptools==79.0.1 (from https://files.pythonhosted.org/packages/0d/6d/b4752b044bf94cb802d88a888dc7d288baaf77d7910b7dedda74b5ceea0c/setuptools-79.0.1-py3-none-any.whl#sha256=e147c0549f27767ba362f9da434eab9c5dc0045d5304feb602a0af001089fc51)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Downloading soundfile (1.3MiB)
+ Downloaded soundfile
+Prepared 1 package in 108ms
+Installed 1 package in 2ms
+ + soundfile==0.13.1 (from https://files.pythonhosted.org/packages/57/5e/70bdd9579b35003a489fc850b5047beeda26328053ebadc1fb60f320f7db/soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl#sha256=03267c4e493315294834a0870f31dbb3b28a95561b80b134f0bd3cf2d5f0e618)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 113ms
+Downloading tiktoken (1.1MiB)
+ Downloaded tiktoken
+Prepared 1 package in 93ms
+Installed 1 package in 2ms
+ + tiktoken==0.11.0 (from https://files.pythonhosted.org/packages/d5/2d/4d77f6feb9292bfdd23d5813e442b3bba883f42d0ac78ef5fdc56873f756/tiktoken-0.11.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=7f929255c705efec7a28bf515e29dc74220b2f07544a8c81b8d69e8efc4578bd)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Downloading sentencepiece (1.3MiB)
+ Downloaded sentencepiece
+Prepared 1 package in 101ms
+Installed 1 package in 2ms
+ + sentencepiece==0.2.1 (from https://files.pythonhosted.org/packages/04/88/14f2f4a2b922d8b39be45bf63d79e6cd3a9b2f248b2fcb98a69b12af12f5/sentencepiece-0.2.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl#sha256=0cdfecef430d985f1c2bcbfff3defd1d95dae876fbd0173376012d2d7d24044b)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 162ms
+Prepared 1 package in 66ms
+Installed 1 package in 8ms
+ + openai==2.0.1 (from https://files.pythonhosted.org/packages/4d/5d/7b8dc822de474a283a190fe222d9a074e2fdecfbcb4a14ff49ad4d555404/openai-2.0.1-py3-none-any.whl#sha256=f0671423666cfd24c15010fd4732738f89f1b6d4f21c47f5c82db411cc2648d5)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 106ms
+Prepared 1 package in 87ms
+Installed 1 package in 3ms
+ + regex==2025.9.18 (from https://files.pythonhosted.org/packages/35/9e/a91b50332a9750519320ed30ec378b74c996f6befe282cfa6bb6cea7e9fd/regex-2025.9.18-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl#sha256=4f130c3a7845ba42de42f380fff3c8aebe89a810747d91bcf56d40a069f15352)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 101ms
+Prepared 1 package in 80ms
+Installed 1 package in 2ms
+ + pyzmq==27.1.0 (from https://files.pythonhosted.org/packages/f8/9b/c108cdb55560eaf253f0cbdb61b29971e9fb34d9c3499b0e96e4e60ed8a5/pyzmq-27.1.0-cp312-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl#sha256=43ad9a73e3da1fab5b0e7e13402f0b2fb934ae1c876c51d0afff0e7c052eca31)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 122ms
+Prepared 1 package in 90ms
+Installed 1 package in 2ms
+ + rignore==0.6.4 (from https://files.pythonhosted.org/packages/80/c8/b91afda10bd5ca1e3a80463340b899c0dc26a7750a9f3c94f668585c7f40/rignore-0.6.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=456456802b1e77d1e2d149320ee32505b8183e309e228129950b807d204ddd17)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 94ms
+Prepared 1 package in 65ms
+Installed 1 package in 3ms
+ + huggingface-hub==0.35.3 (from https://files.pythonhosted.org/packages/31/a0/651f93d154cb72323358bf2bbae3e642bdb5d2f1bfc874d096f7cb159fa0/huggingface_hub-0.35.3-py3-none-any.whl#sha256=0e3a01829c19d86d03793e4577816fe3bdfc1602ac62c7fb220d593d351224ba)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Prepared 1 package in 49ms
+Installed 1 package in 2ms
+ + compressed-tensors==0.11.0 (from https://files.pythonhosted.org/packages/d2/81/e3073017a8f5c75169e79108eda209e6089e3f96c9f197d307cbda7df71c/compressed_tensors-0.11.0-py3-none-any.whl#sha256=e1cbc46e1ae032b7ceea915fe18c8d2de5a54d3a50a607969b6bdfe703b6cb83)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 107ms
+Prepared 1 package in 64ms
+Installed 1 package in 2ms
+ + httptools==0.6.4 (from https://files.pythonhosted.org/packages/f7/d8/b644c44acc1368938317d76ac991c9bba1166311880bcc0ac297cb9d6bd7/httptools-0.6.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=16e603a3bff50db08cd578d54f07032ca1631450ceb972c2f834c2b860c28ea2)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 90ms
+Prepared 1 package in 69ms
+Installed 1 package in 4ms
+ + pydantic==2.11.9 (from https://files.pythonhosted.org/packages/3e/d3/108f2006987c58e76691d5ae5d200dd3e0f532cb4e5fa3560751c3a1feba/pydantic-2.11.9-py3-none-any.whl#sha256=c42dd626f5cfc1c6950ce6205ea58c93efa406da65f479dcb4029d5934857da2)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 94ms
+Prepared 1 package in 71ms
+Installed 1 package in 2ms
+ + msgpack==1.1.1 (from https://files.pythonhosted.org/packages/4d/ec/fd869e2567cc9c01278a736cfd1697941ba0d4b81a43e0aa2e8d71dab208/msgpack-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=a494554874691720ba5891c9b0b39474ba43ffb1aaf32a5dac874effb1619e1a)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 104ms
+Prepared 1 package in 60ms
+Installed 1 package in 3ms
+ + protobuf==6.32.1 (from https://files.pythonhosted.org/packages/5c/f6/88d77011b605ef979aace37b7703e4eefad066f7e84d935e5a696515c2dd/protobuf-6.32.1-cp39-abi3-manylinux2014_x86_64.whl#sha256=b1864818300c297265c83a4982fd3169f97122c299f56a56e2445c3698d34710)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 105ms
+Prepared 1 package in 57ms
+Installed 1 package in 4ms
+ + sentry-sdk==2.39.0 (from https://files.pythonhosted.org/packages/dd/44/4356cc64246ba7b2b920f7c97a85c3c52748e213e250b512ee8152eb559d/sentry_sdk-2.39.0-py2.py3-none-any.whl#sha256=ba655ca5e57b41569b18e2a5552cb3375209760a5d332cdd87c6c3f28f729602)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 107ms
+Prepared 1 package in 71ms
+Installed 1 package in 3ms
+ + yarl==1.20.1 (from https://files.pythonhosted.org/packages/98/28/3ab7acc5b51f4434b181b0cee8f1f4b77a65919700a355fb3617f9488874/yarl-1.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=a97d67108e79cfe22e2b430d80d7571ae57d19f17cda8bb967057ca8a7bf5bfd)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 122ms
+Prepared 1 package in 68ms
+Installed 1 package in 3ms
+ + safetensors==0.6.2 (from https://files.pythonhosted.org/packages/fe/5d/5a514d7b88e310c8b146e2404e0dc161282e78634d9358975fd56dfd14be/safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=8045db2c872db8f4cbe3faa0495932d89c38c899c603f21e9b6486951a5ecb8f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 106ms
+Prepared 1 package in 70ms
+Installed 1 package in 4ms
+ + watchfiles==1.1.0 (from https://files.pythonhosted.org/packages/8c/77/e3362fe308358dc9f8588102481e599c83e1b91c2ae843780a7ded939a35/watchfiles-1.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=f7590d5a455321e53857892ab8879dce62d1f4b04748769f5adf2e707afb9d4f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 119ms
+Prepared 1 package in 64ms
+Installed 1 package in 4ms
+ + dnspython==2.8.0 (from https://files.pythonhosted.org/packages/ba/5a/18ad964b0086c6e62e2e7500f7edc89e3faa45033c71c1893d34eed2b2de/dnspython-2.8.0-py3-none-any.whl#sha256=01d9bbc4a2d76bf0db7c1f729812ded6d912bd318d3b1cf81d30c0f845dbf3af)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 568ms
+Prepared 1 package in 58ms
+Installed 1 package in 2ms
+ + psutil==7.1.0 (from https://files.pythonhosted.org/packages/9d/de/04c8c61232f7244aa0a4b9a9fbd63a89d5aeaf94b2fc9d1d16e2faa5cbb0/psutil-7.1.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=8c70e113920d51e89f212dd7be06219a9b88014e63a4cec69b684c327bc474e3)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 106ms
+Prepared 1 package in 58ms
+Installed 1 package in 3ms
+ + rpds-py==0.27.1 (from https://files.pythonhosted.org/packages/ed/7b/8f4fee9ba1fb5ec856eb22d725a4efa3deb47f769597c809e03578b0f9d9/rpds_py-0.27.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=466bfe65bd932da36ff279ddd92de56b042f2266d752719beb97b08526268ec5)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 114ms
+Prepared 1 package in 61ms
+Installed 1 package in 2ms
+ + blake3==1.0.7 (from https://files.pythonhosted.org/packages/db/30/addf808816833de5e497a1bf9d10221b1fc8048703b3de2c21ac6450326f/blake3-1.0.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=4ef46ca98068d0153a8fd12215df8a24844800762fd5a3145658d89a3335990c)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 85ms
+Prepared 1 package in 59ms
+Installed 1 package in 3ms
+ + cbor2==5.7.0 (from https://files.pythonhosted.org/packages/a8/6e/3499eaa2b858c7695a447b6311303f06ffc90fc2c45851337121661f1f5c/cbor2-5.7.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl#sha256=8e837825a16e60ace6e284095aa9fbe504bf87a8f4494bf7d95931e37fb01a70)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 101ms
+Prepared 1 package in 70ms
+Installed 1 package in 2ms
+ + rich==14.1.0 (from https://files.pythonhosted.org/packages/e3/30/3c4d035596d3cf444529e0b2953ad0466f6049528a879d27534700580395/rich-14.1.0-py3-none-any.whl#sha256=536f5f1785986d6dbdea3c75205c473f970777b4a0d6c6dd1b696aa05a3fa04f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 86ms
+Prepared 1 package in 55ms
+Installed 1 package in 3ms
+ + multidict==6.6.4 (from https://files.pythonhosted.org/packages/af/65/753a2d8b05daf496f4a9c367fe844e90a1b2cac78e2be2c844200d10cc4c/multidict-6.6.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl#sha256=b8eb3025f17b0a4c3cd08cda49acf312a19ad6e8a4edd9dbd591e6506d999402)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 91ms
+Prepared 1 package in 64ms
+Installed 1 package in 2ms
+ + jiter==0.11.0 (from https://files.pythonhosted.org/packages/9a/5f/0dc34563d8164d31d07bc09d141d3da08157a68dcd1f9b886fa4e917805b/jiter-0.11.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=cf408d2a0abd919b60de8c2e7bc5eeab72d4dafd18784152acc7c9adc3291591)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 94ms
+Prepared 1 package in 51ms
+Installed 1 package in 2ms
+ + frozenlist==1.7.0 (from https://files.pythonhosted.org/packages/8d/db/48421f62a6f77c553575201e89048e97198046b793f4a089c79a6e3268bd/frozenlist-1.7.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=488d0a7d6a0008ca0db273c542098a0fa9e7dfaa7e57f70acef43f32b3f69dca)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 76ms
+Prepared 1 package in 53ms
+Installed 1 package in 2ms
+ + propcache==0.3.2 (from https://files.pythonhosted.org/packages/37/7c/54fd5301ef38505ab235d98827207176a5c9b2aa61939b10a460ca53e123/propcache-0.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=ee6f22b6eaa39297c751d0e80c0d3a454f112f5c6481214fcf4c092074cecd67)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 89ms
+Prepared 1 package in 63ms
+Installed 1 package in 2ms
+ + cffi==2.0.0 (from https://files.pythonhosted.org/packages/78/2d/7fa73dfa841b5ac06c7b8855cfc18622132e365f5b81d02230333ff26e9e/cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=3e17ed538242334bf70832644a32a7aae3d83b57567f9fd60a26257e992b79ba)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 79ms
+Prepared 1 package in 51ms
+Uninstalled 1 package in 0.70ms
+Installed 1 package in 2ms
+ - fsspec==2026.9.0
+ + fsspec==2025.9.0 (from https://files.pythonhosted.org/packages/47/71/70db47e4f6ce3e5c37a607355f80da8860a33226be640226ac52cb05ef2e/fsspec-2025.9.0-py3-none-any.whl#sha256=530dc2a2af60a414a832059574df4a6e10cce927f6f4a78209390fe38955cfb7)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 108ms
+Prepared 1 package in 44ms
+Installed 1 package in 2ms
+ + fastapi==0.118.0 (from https://files.pythonhosted.org/packages/54/20/54e2bdaad22ca91a59455251998d43094d5c3d3567c52c7c04774b3f43f2/fastapi-0.118.0-py3-none-any.whl#sha256=705137a61e2ef71019d2445b123aa8845bd97273c395b744d5a7dfe559056855)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 99ms
+Prepared 1 package in 48ms
+Installed 1 package in 4ms
+ + websockets==15.0.1 (from https://files.pythonhosted.org/packages/14/8f/aa61f528fba38578ec553c145857a181384c72b98156f858ca5c8e82d9d3/websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=64dee438fed052b52e4f98f76c5790513235efaa1ef7f3f2192c392cd7c91b65)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 99ms
+Prepared 1 package in 39ms
+Installed 1 package in 2ms
+ + pycparser==2.23 (from https://files.pythonhosted.org/packages/a0/e3/59cd50310fc9b59512193629e1984c1f95e5c8ae6e5d8c69532ccc65a7fe/pycparser-2.23-py3-none-any.whl#sha256=e5c6e8d3fbad53479cab09ac03729e0a9faf2bee3db8208a550daf5af81a5934)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 90ms
+Prepared 1 package in 57ms
+Installed 1 package in 2ms
+ + soxr==1.0.0 (from https://files.pythonhosted.org/packages/b1/87/2726603c13c2126cb8ded9e57381b7377f4f0df6ba4408e1af5ddbfdc3dd/soxr-1.0.0-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl#sha256=e8f2a69686f2856d37823bbb7b78c3d44904f311fe70ba49b893af11d6b6047b)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 94ms
+Prepared 1 package in 54ms
+Installed 1 package in 2ms
+ + msgspec==0.19.0 (from https://files.pythonhosted.org/packages/d0/ef/c5422ce8af73928d194a6606f8ae36e93a52fd5e8df5abd366903a5ca8da/msgspec-0.19.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl#sha256=d911c442571605e17658ca2b416fd8579c5050ac9adc5e00c2cb3126c97f73bc)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 92ms
+Prepared 1 package in 179ms
+Installed 1 package in 4ms
+ + charset-normalizer==3.4.3 (from https://files.pythonhosted.org/packages/16/ab/0233c3231af734f5dfcf0844aa9582d5a1466c985bbed6cedab85af9bfe3/charset_normalizer-3.4.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl#sha256=1606f4a55c0fd363d754049cdf400175ee96c992b1f8018b993941f221221c5f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 101ms
+Prepared 1 package in 42ms
+Installed 1 package in 3ms
+ + jsonschema==4.25.1 (from https://files.pythonhosted.org/packages/bf/9c/8c95d856233c1f82500c2450b8c68576b4cf1c871db3afac5c34ff84e6fd/jsonschema-4.25.1-py3-none-any.whl#sha256=3fba0169e345c7175110351d456342c364814cfcf3b964ba4587f22915230a63)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 85ms
+Prepared 1 package in 61ms
+Installed 1 package in 3ms
+ + gguf==0.17.1 (from https://files.pythonhosted.org/packages/fc/31/6a93a887617ee7deeaa602ca3d02d1c12a6cb8a742a695de5d128f5fa46a/gguf-0.17.1-py3-none-any.whl#sha256=7bc5aa7eeb1931f7d39b48fdc5b38fda6b294b9dca75cf607ac69557840a3943)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 92ms
+Prepared 1 package in 45ms
+Installed 1 package in 2ms
+ + anyio==4.11.0 (from https://files.pythonhosted.org/packages/15/b3/9b1a8074496371342ec1e796a96f99c82c945a339cd81a8e73de28b4cf9e/anyio-4.11.0-py3-none-any.whl#sha256=0287e96f4d26d4149305414d4e3bc32f0dcd0862365a4bddea19d7a1ec38c4fc)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 99ms
+Prepared 1 package in 58ms
+Installed 1 package in 3ms
+ + urllib3==2.5.0 (from https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl#sha256=e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 86ms
+Prepared 1 package in 62ms
+Installed 1 package in 2ms
+ + ninja==1.13.0 (from https://files.pythonhosted.org/packages/ed/de/0e6edf44d6a04dabd0318a519125ed0415ce437ad5a1ec9b9be03d9048cf/ninja-1.13.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl#sha256=fb46acf6b93b8dd0322adc3a4945452a4e774b75b91293bafcc7b7f8e6517dfa)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 72ms
+Prepared 1 package in 42ms
+Installed 1 package in 4ms
+ + click==8.3.0 (from https://files.pythonhosted.org/packages/db/d3/9dcc0f5797f070ec8edf30fbadfb200e71d9db6b84d211e3b2085a7589a0/click-8.3.0-py3-none-any.whl#sha256=9b9f285302c6e3064f4330c05f05b81945b2a39544279343e6e7c5f27a9baddc)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 90ms
+Prepared 1 package in 39ms
+Installed 1 package in 3ms
+ + dill==0.4.0 (from https://files.pythonhosted.org/packages/50/3d/9373ad9c56321fdab5b41197068e1d8c25883b3fea29dd361f9b55116869/dill-0.4.0-py3-none-any.whl#sha256=44f54bf6412c2c8464c14e8243eb163690a9800dbe2c367330883b19c7561049)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Prepared 1 package in 36ms
+Installed 1 package in 2ms
+ + idna==3.10 (from https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl#sha256=946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 91ms
+Prepared 1 package in 44ms
+Installed 1 package in 2ms
+ + lark==1.2.2 (from https://files.pythonhosted.org/packages/2d/00/d90b10b962b4277f5e64a78b6609968859ff86889f5b898c1a778c06ec00/lark-1.2.2-py3-none-any.whl#sha256=c2276486b02f0f1b90be155f2c8ba4a8e194d42775786db622faccd652d8e80c)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 75ms
+Prepared 1 package in 55ms
+Installed 1 package in 2ms
+ + certifi==2025.8.3 (from https://files.pythonhosted.org/packages/e5/48/1549795ba7742c948d2ad169c1c8cdbae65bc450d6cd753d124b17c8cd32/certifi-2025.8.3-py3-none-any.whl#sha256=f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 91ms
+Prepared 1 package in 41ms
+Installed 1 package in 3ms
+ + httpx==0.28.1 (from https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl#sha256=d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 99ms
+Prepared 1 package in 38ms
+Installed 1 package in 3ms
+ + httpcore==1.0.9 (from https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl#sha256=2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 98ms
+Prepared 1 package in 34ms
+Installed 1 package in 3ms
+ + starlette==0.48.0 (from https://files.pythonhosted.org/packages/be/72/2db2f49247d0a18b4f1bb9a5a39a0162869acf235f3a96418363947b3d46/starlette-0.48.0-py3-none-any.whl#sha256=0764ca97b097582558ecb498132ed0c7d942f233f365b86ba37770e026510659)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 81ms
+Prepared 1 package in 28ms
+Uninstalled 1 package in 8ms
+Installed 1 package in 3ms
+ - packaging==26.3
+ + packaging==25.0 (from https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl#sha256=29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 85ms
+Prepared 1 package in 45ms
+Installed 1 package in 4ms
+ + markdown-it-py==4.0.0 (from https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl#sha256=87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 93ms
+Prepared 1 package in 56ms
+Installed 1 package in 3ms
+ + einops==0.8.1 (from https://files.pythonhosted.org/packages/87/62/9773de14fe6c45c23649e98b83231fffd7b9892b6cf863251dc2afa73643/einops-0.8.1-py3-none-any.whl#sha256=919387eb55330f5757c6bea9165c5ff5cfe63a642682ea788a6d472576d81737)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 123ms
+Prepared 1 package in 32ms
+Installed 1 package in 3ms
+ + tqdm==4.67.1 (from https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl#sha256=26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 89ms
+Prepared 1 package in 37ms
+Installed 1 package in 3ms
+ + uvicorn==0.37.0 (from https://files.pythonhosted.org/packages/85/cd/584a2ceb5532af99dd09e50919e3615ba99aa127e9850eafe5f31ddfdb9a/uvicorn-0.37.0-py3-none-any.whl#sha256=913b2b88672343739927ce381ff9e2ad62541f9f8289664fa1d1d3803fa2ce6c)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 102ms
+Prepared 1 package in 51ms
+Installed 1 package in 4ms
+ + pybase64==1.4.2 (from https://files.pythonhosted.org/packages/ee/87/d9baf98cbfc37b8657290ad4421f3a3c36aa0eafe4872c5859cfb52f3448/pybase64-1.4.2-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl#sha256=ace8b23093a6bb862477080d9059b784096ab2f97541e8bfc40d42f062875149)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 108ms
+Prepared 1 package in 34ms
+Installed 1 package in 2ms
+ + attrs==25.3.0 (from https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl#sha256=427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 80ms
+Prepared 1 package in 26ms
+Installed 1 package in 2ms
+ + requests==2.32.5 (from https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl#sha256=2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 92ms
+Prepared 1 package in 57ms
+Installed 1 package in 3ms
+ + prometheus-client==0.23.1 (from https://files.pythonhosted.org/packages/b8/db/14bafcb4af2139e046d03fd00dea7873e48eafe18b7d2797e73d6681f210/prometheus_client-0.23.1-py3-none-any.whl#sha256=dd1913e6e76b59cfe44e7a4b83e01afc9873c1bdfd2ed8739f1e76aeca115f99)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 73ms
+Prepared 1 package in 41ms
+Installed 1 package in 3ms
+ + diskcache==5.6.3 (from https://files.pythonhosted.org/packages/3f/27/4570e78fc0bf5ea0ca45eb1de3818a23787af9b390c0b0a0033a1b8236f9/diskcache-5.6.3-py3-none-any.whl#sha256=5e31b2d5fbad117cc363ebaf6b689474db18a1f6438bc82358b024abd4c2ca19)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 117ms
+Prepared 1 package in 32ms
+Installed 1 package in 4ms
+ + typer==0.19.2 (from https://files.pythonhosted.org/packages/00/22/35617eee79080a5d071d0f14ad698d325ee6b3bf824fc0467c03b30e7fa8/typer-0.19.2-py3-none-any.whl#sha256=755e7e19670ffad8283db353267cb81ef252f595aa6834a0d1ca9312d9326cb9)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 104ms
+Prepared 1 package in 38ms
+Uninstalled 1 package in 2ms
+Installed 1 package in 13ms
+ - typing-extensions==4.16.0
+ + typing-extensions==4.15.0 (from https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl#sha256=f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 111ms
+Prepared 1 package in 49ms
+Installed 1 package in 52ms
+ + lm-format-enforcer==0.11.3 (from https://files.pythonhosted.org/packages/a0/ef/11292bb0b85cf4c93447cab5a29f64576ed14d3ab4280e35ddd23486594a/lm_format_enforcer-0.11.3-py3-none-any.whl#sha256=cf586350875def1ae7a8fba84fcbbfc8371424b6c9d05c1fcba70aa233fbf06f)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 145ms
+Prepared 1 package in 73ms
+Installed 1 package in 23ms
+ + fastrlock==0.8.3 (from https://files.pythonhosted.org/packages/80/07/cdecb7aa976f34328372f1c4efd6c9dc1b039b3cc8d3f38787d640009a25/fastrlock-0.8.3-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_28_x86_64.whl#sha256=5f13ec08f1adb1aa916c384b05ecb7dbebb8df9ea81abd045f60941c6283a670)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 97ms
+Prepared 1 package in 25ms
+Installed 1 package in 2ms
+ + pydantic-extra-types==2.10.5 (from https://files.pythonhosted.org/packages/70/1a/5f4fd9e7285f10c44095a4f9fe17d0f358d1702a7c74a9278c794e8a7537/pydantic_extra_types-2.10.5-py3-none-any.whl#sha256=b60c4e23d573a69a4f1a16dd92888ecc0ef34fb0e655b4f305530377fa70e7a8)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 105ms
+Prepared 1 package in 22ms
+Installed 1 package in 2ms
+ + depyf==0.19.0 (from https://files.pythonhosted.org/packages/28/4d/1192acbcdc5e843f5e5d51f6e8788f2b60a9fe0b578ac385ded67a0b0b26/depyf-0.19.0-py3-none-any.whl#sha256=040b35fc0997d49df024b7d094f2a7836f91e9ed02f49982dd37e70aa3285ad5)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 105ms
+Prepared 1 package in 26ms
+Installed 1 package in 2ms
+ + referencing==0.36.2 (from https://files.pythonhosted.org/packages/c1/b1/3baf80dc6d2b7bc27a95a67752d0208e410351e3feb4eb78de5f77454d8d/referencing-0.36.2-py3-none-any.whl#sha256=e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 81ms
+Prepared 1 package in 16ms
+Installed 1 package in 2ms
+ + h11==0.16.0 (from https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl#sha256=63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 91ms
+Prepared 1 package in 25ms
+Installed 1 package in 2ms
+ + email-validator==2.3.0 (from https://files.pythonhosted.org/packages/de/15/545e2b6cf2e3be84bc1ed85613edd75b8aea69807a71c26f4ca6a9258e82/email_validator-2.3.0-py3-none-any.whl#sha256=80f13f623413e6b197ae73bb10bf4eb0908faf509ad8362c5edeb0be7fd450b4)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 83ms
+Prepared 1 package in 17ms
+Installed 1 package in 3ms
+ + python-multipart==0.0.20 (from https://files.pythonhosted.org/packages/45/58/38b5afbc1a800eeea951b9285d3912613f2603bdf897a4ab0f4bd7f405fc/python_multipart-0.0.20-py3-none-any.whl#sha256=8a62d3a8335e06589fe01f2a3e178cdcc632f3fbe0d492ad9ee0ec35aab1f104)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 88ms
+Prepared 1 package in 18ms
+Installed 1 package in 3ms
+ + py-cpuinfo==9.0.0 (from https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl#sha256=859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 74ms
+Prepared 1 package in 21ms
+Installed 1 package in 2ms
+ + setproctitle==1.3.7 (from https://files.pythonhosted.org/packages/d0/99/71630546b9395b095f4082be41165d1078204d1696c2d9baade3de3202d0/setproctitle-1.3.7-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl#sha256=2906b6c7959cdb75f46159bf0acd8cc9906cf1361c9e1ded0d065fe8f9039629)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 85ms
+Prepared 1 package in 12ms
+Installed 1 package in 2ms
+ + interegular==0.3.3 (from https://files.pythonhosted.org/packages/c4/01/72d6472f80651673716d1deda2a5bbb633e563ecf94f4479da5519d69d25/interegular-0.3.3-py37-none-any.whl#sha256=b0c07007d48c89d6d19f7204972d369b2a77222722e126b6aa63aa721dc3b19c)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 83ms
+Prepared 1 package in 17ms
+Installed 1 package in 3ms
+ + rich-toolkit==0.15.1 (from https://files.pythonhosted.org/packages/c8/49/42821d55ead7b5a87c8d121edf323cb393d8579f63e933002ade900b784f/rich_toolkit-0.15.1-py3-none-any.whl#sha256=36a0b1d9a135d26776e4b78f1d5c2655da6e0ef432380b5c6b523c8d8ab97478)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 107ms
+Prepared 1 package in 27ms
+Installed 1 package in 2ms
+ + astor==0.8.1 (from https://files.pythonhosted.org/packages/c3/88/97eef84f48fa04fbd6750e62dcceafba6c63c81b7ac1420856c8dcc0a3f9/astor-0.8.1-py2.py3-none-any.whl#sha256=070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 96ms
+Prepared 1 package in 16ms
+Installed 1 package in 3ms
+ + prometheus-fastapi-instrumentator==7.1.0 (from https://files.pythonhosted.org/packages/27/72/0824c18f3bc75810f55dacc2dd933f6ec829771180245ae3cc976195dec0/prometheus_fastapi_instrumentator-7.1.0-py3-none-any.whl#sha256=978130f3c0bb7b8ebcc90d35516a6fe13e02d2eb358c8f83887cdef7020c31e9)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 94ms
+Prepared 1 package in 20ms
+Installed 1 package in 3ms
+ + distro==1.9.0 (from https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl#sha256=7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 120ms
+Prepared 1 package in 20ms
+Uninstalled 1 package in 0.44ms
+Installed 1 package in 3ms
+ - markupsafe==3.0.4
+ + markupsafe==3.0.3 (from https://files.pythonhosted.org/packages/3c/2e/8d0c2ab90a8c1d9a24f0399058ab8519a3279d1bd4289511d74e909f060e/markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl#sha256=d6dd0be5b5b189d31db7cda48b91d7e0a9795f31430b7f271219ab30f1d3ac9d)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 85ms
+Prepared 1 package in 11ms
+Installed 1 package in 2ms
+ + cloudpickle==3.1.1 (from https://files.pythonhosted.org/packages/7e/e8/64c37fadfc2816a7701fa8a6ed8d87327c7d54eacfbfb6edab14a2f2be75/cloudpickle-3.1.1-py3-none-any.whl#sha256=c8c5a44295039331ee9dad40ba100a9c7297b6f988e50e87ccdf3765a668350e)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Prepared 1 package in 29ms
+Installed 1 package in 3ms
+ + frozendict==2.4.6 (from https://files.pythonhosted.org/packages/ba/d0/d482c39cee2ab2978a892558cf130681d4574ea208e162da8958b31e9250/frozendict-2.4.6-py312-none-any.whl#sha256=49344abe90fb75f0f9fdefe6d4ef6d4894e640fadab71f11009d52ad97f370b9)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 108ms
+Prepared 1 package in 19ms
+Installed 1 package in 3ms
+ + python-dotenv==1.1.1 (from https://files.pythonhosted.org/packages/5f/ed/539768cf28c661b5b068d66d96a2f155c4971a5d55684a514c1a0e0dec2f/python_dotenv-1.1.1-py3-none-any.whl#sha256=31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 78ms
+Prepared 1 package in 22ms
+Installed 1 package in 3ms
+ + typing-inspection==0.4.2 (from https://files.pythonhosted.org/packages/dc/9b/47798a6c91d8bdb567fe2698fe81e0c6b7cb7ef4d13da4114b41d239f65d/typing_inspection-0.4.2-py3-none-any.whl#sha256=4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 86ms
+Prepared 1 package in 18ms
+Installed 1 package in 3ms
+ + fastapi-cloud-cli==0.2.1 (from https://files.pythonhosted.org/packages/3b/1f/5fa06afce6e4bb7fc7e54651236bad3b849340480967c54cbd7c13563c3f/fastapi_cloud_cli-0.2.1-py3-none-any.whl#sha256=245447bfb17b01ae5f7bc15dec0833bce85381ecf34532e8fa4bcf279ad1c361)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 84ms
+Prepared 1 package in 14ms
+Installed 1 package in 2ms
+ + jsonschema-specifications==2025.9.1 (from https://files.pythonhosted.org/packages/41/45/1a4ed80516f02155c51f51e8cedb3c1902296743db0bbc66608a0db2814f/jsonschema_specifications-2025.9.1-py3-none-any.whl#sha256=98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Prepared 1 package in 22ms
+Installed 1 package in 2ms
+ + cachetools==6.2.0 (from https://files.pythonhosted.org/packages/6c/56/3124f61d37a7a4e7cc96afc5492c78ba0cb551151e530b54669ddd1436ef/cachetools-6.2.0-py3-none-any.whl#sha256=1c76a8960c0041fcc21097e357f882197c79da0dbff766e7317890a65d7d8ba6)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 88ms
+Prepared 1 package in 19ms
+Uninstalled 1 package in 8ms
+Installed 1 package in 3ms
+ - filelock==4.2.4
+ + filelock==3.19.1 (from https://files.pythonhosted.org/packages/42/14/42b2651a2f46b022ccd948bca9f2d5af0fd8929c4eec235b8d6d844fbe67/filelock-3.19.1-py3-none-any.whl#sha256=d38e30481def20772f5baf097c122c3babc4fcdb7e14e57049eb9d88c6dc017d)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 74ms
+Prepared 1 package in 20ms
+Installed 1 package in 3ms
+ + aiohappyeyeballs==2.6.1 (from https://files.pythonhosted.org/packages/0f/15/5bf3b99495fb160b63f95972b81750f18f7f4e02ad051373b669d17d44f2/aiohappyeyeballs-2.6.1-py3-none-any.whl#sha256=f349ba8f4b75cb25c99c5c2d84e997e485204d2902a9597802b0371f09331fb8)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 107ms
+Prepared 1 package in 24ms
+Installed 1 package in 3ms
+ + python-json-logger==3.3.0 (from https://files.pythonhosted.org/packages/08/20/0f2523b9e50a8052bc6a8b732dfc8568abbdc42010aef03a2d750bdab3b2/python_json_logger-3.3.0-py3-none-any.whl#sha256=dd980fae8cffb24c13caf6e158d3d61c0d6d22342f932cb6e9deedab3d35eec7)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 97ms
+Prepared 1 package in 13ms
+Installed 1 package in 2ms
+ + six==1.17.0 (from https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl#sha256=4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 71ms
+Prepared 1 package in 13ms
+Installed 1 package in 3ms
+ + annotated-types==0.7.0 (from https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl#sha256=1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 95ms
+Prepared 1 package in 29ms
+Installed 1 package in 3ms
+ + fastapi-cli==0.0.13 (from https://files.pythonhosted.org/packages/08/36/7432750f3638324b055496d2c952000bea824259fca70df5577a6a3c172f/fastapi_cli-0.0.13-py3-none-any.whl#sha256=219b73ccfde7622559cef1d43197da928516acb4f21f2ec69128c4b90057baba)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 74ms
+Prepared 1 package in 16ms
+Installed 1 package in 4ms
+ + partial-json-parser==0.2.1.1.post6 (from https://files.pythonhosted.org/packages/cb/40/1f922794af3dc7503f19319a8804b398a161a2cd54183cff8b12225b8d85/partial_json_parser-0.2.1.1.post6-py3-none-any.whl#sha256=abc332f09b13ef5233384dbfe7128a0e9ea3fa4b8f8be9b37ac1b433c810e99e)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 70ms
+Prepared 1 package in 20ms
+Installed 1 package in 2ms
+ + mdurl==0.1.2 (from https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl#sha256=84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 79ms
+Prepared 1 package in 14ms
+Installed 1 package in 4ms
+ + sniffio==1.3.1 (from https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl#sha256=2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 91ms
+Prepared 1 package in 22ms
+Installed 1 package in 2ms
+ + shellingham==1.5.4 (from https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl#sha256=7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686)
+Using Python 3.12.13 environment at: .venv-ml
+Resolved 1 package in 84ms
+Prepared 1 package in 12ms
+Installed 1 package in 3ms
+ + aiosignal==1.4.0 (from https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl#sha256=053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e)
+Using Python 3.12.13 environment at: .venv-ml
+Checked 146 packages in 25ms
+All installed packages are compatible
+vllm==0.10.2
+transformers==4.55.4
+torch==2.8.0
+triton==3.4.0
+numpy==2.2.6

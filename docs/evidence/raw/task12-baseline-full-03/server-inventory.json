@@ -1,0 +1,984 @@
+{
+  "inventory": [
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.6.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "3525e5849c007e2dfcd1e123028ec14383ff4d56a5f718b4aa4c995a26ccb153"
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.12.15",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b99b7830c40a7c041ba66c7243adf21c0a607c82d20f8968306c44efd61f30a1"
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "09247ef1da8bc696728d47130e702e4307f6f7d101d6c485bff9f3a71ce7008d"
+    },
+    {
+      "name": "airportsdata",
+      "version": "20260905",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4cbf5f83da0ad341fe4e3ef60678a968abdc4b9d5b69a1e5dcbc483ed9638b0a"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ee5b6ac64b09274c026051813484025939564067801f485115d9cadc207cf791"
+    },
+    {
+      "name": "anthropic",
+      "version": "0.71.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "b5195e7ecae4bfb0511ff81b66230eb3a5a602a738bcc45a193e175283beea4c"
+    },
+    {
+      "name": "anyio",
+      "version": "4.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "cab41c4ad137ce03f81be673fbba956b0f7da9bf834ccda01e0c0fff5a4006ee"
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "version": "0.1.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c0853b0c1119730d97662e75296500ca93384cde0ed91af5f04aee4e6c7ace2f"
+    },
+    {
+      "name": "asttokens",
+      "version": "3.0.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "8b3567b29654e6e9a60ab50fde2c317899152790acadaab7868a708bf931c3d3"
+    },
+    {
+      "name": "attrs",
+      "version": "25.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5b7f1c4448fbb35c2a35fd5f838855c1998bd7187401d4a9e0886d4cc44e8a7c"
+    },
+    {
+      "name": "blobfile",
+      "version": "3.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "79a7732ed7d83494cfeaa0c4b9c0f0d663c30e531fd1058dff49e729f1e4bfdb"
+    },
+    {
+      "name": "build",
+      "version": "1.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "8bf61ef1c4aeb139423ab04e5a97248889f4864c5be948b4daf602f5aa531dfc"
+    },
+    {
+      "name": "certifi",
+      "version": "2025.8.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "cf8b06ddfa2c6cfde7be2b9bfd352949bef5cf46cf9aca775dae9921ab4651ee"
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b98ce7e3417af089bc12d5c73412d9b3b1683ccf8ec73c986c35ac8c9be1ba39"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "9c134eb243d4b5ca87b5a48f3da25a7e35eb96270f70f2202c5ce92504e0bda0"
+    },
+    {
+      "name": "click",
+      "version": "8.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "3fabe910767f30b06de123b6781f9069a75c39d8b39e4cda66d248991a3bfd5e"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "fef3b5de3d1f2213c8183d488c75130b2d4f509885600b51f0f303d0a2db301f"
+    },
+    {
+      "name": "compressed-tensors",
+      "version": "0.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "441b79b9fe7ef9b26f7ff34fc6368e097d07a0780755437d6bc7e6688c970803"
+    },
+    {
+      "name": "cuda-bindings",
+      "version": "12.9.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e89661f414ebd3b325b664a9f671274c0e0ea1889eb8b02c441ee0d5375249c4"
+    },
+    {
+      "name": "cuda-pathfinder",
+      "version": "1.8.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d9e367a2c6f8f01bb3585e070c5f01e35832c8658b247c3f776baa54ed753b40"
+    },
+    {
+      "name": "cuda-python",
+      "version": "12.9.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "9f81e0df453c3fae510a4042ebfc5e24c40ca96dd5818d1e61b9d76fcb4166b8"
+    },
+    {
+      "name": "datasets",
+      "version": "4.1.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "8ca0320acdfc173db4e4c369eec8b8f6dba009d7514f155a500219b8debf377d"
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "2133792485403bbd739e1db5960228bedbcde6d00c0acc052b27f39dbae5b5c4"
+    },
+    {
+      "name": "decord2",
+      "version": "3.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "cd77e7bfc64fdb25d0d71a5d4a90736006101d665a549257b2a17bedad77df4f"
+    },
+    {
+      "name": "dill",
+      "version": "0.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "673af578ab6e4efaeb88bf87ff80e637b7f18c1f6d10dcc6473d03c0023bbb94"
+    },
+    {
+      "name": "diskcache",
+      "version": "5.6.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6fc70cff43a3c6666531e6c268e90059fb93ae58aed708163c0ceecab24dbaef"
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "31632ab2de5591131091b3397bdcdf797718579d85a75186f06839dd0c09e81d"
+    },
+    {
+      "name": "docstring-parser",
+      "version": "0.18.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "cbc42027997fd4b194ae5fd064a4d1e57b92976941d0c26d369561a7c016a333"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "79529559045603ccd27713c844f2b57247c48e93135077bdb904bc53ed189403"
+    },
+    {
+      "name": "executing",
+      "version": "2.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d619489e8b06a0bcd934e4dae17fe86bd651b2aea0b3a4d2964221fd66c55db0"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.118.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "454eec5d16190c50116e4492b0ef063eb63b51f63bea599fab0f4a676bd74fa8"
+    },
+    {
+      "name": "filelock",
+      "version": "3.19.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "822e98d63d6669cd35e35b0907f41ad8c4ef870c92260d84a868dd7e1040e0e8"
+    },
+    {
+      "name": "flashinfer-cubin",
+      "version": "0.5.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "0713f469cd8e7c827b773520010438ee38357be0d0aada9c5dc2eea5402e90b9"
+    },
+    {
+      "name": "flashinfer-python",
+      "version": "0.5.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "6223dfa7c68fda359be148310ba2e9faa9296550afde0b06ac62810662725e46"
+    },
+    {
+      "name": "frozendict",
+      "version": "2.4.6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "16429470df04611c8365e6d584224051051b6ac5fca9a65e0e8a7d82143dad41"
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.7.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8b5ed851b564399a4c8490e7c8eec172108b7b222576dc7aaed8f920a5581b40"
+    },
+    {
+      "name": "fsspec",
+      "version": "2025.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5663281a5ba84614179508a062cf64cf09577cf220d4a06444bed5d85e4ed81d"
+    },
+    {
+      "name": "gguf",
+      "version": "0.17.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a5af3f71ee6e7e858a1ead73ce1f7b1dee771198c5b5114e3450d6b65ee69002"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c2f68ec54428fbd7ae36858061733c32f136a0a0980264de4c7bf32e3107772b"
+    },
+    {
+      "name": "grpcio-health-checking",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c82b9066e0d54c525d9c9950603decb94882df0a1b5d20b15ed117aac106a177"
+    },
+    {
+      "name": "grpcio-reflection",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d8eb720768ad96425a253ce41b5c564342570670649485607df03e854b21e7c7"
+    },
+    {
+      "name": "grpcio-tools",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d0be5b801233aad2c2fec9518ff1d0d01b17dff1984b1ce83d79def8348cad71"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64"
+    },
+    {
+      "name": "hf-transfer",
+      "version": "0.1.9",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "70849fb99f222aba6c6425a4c48f88151702de1b4304e08c5d74fe96227d1490"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.1.10",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b853727d47b4c1ede81d61be48f5020430166241c24f5241550691660e3f0f94"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "fe2d4fda6199128978779e0cf27f3c045c531863fcdd987eacc74f3a18d41c21"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "febb9b0f8f3e80d57c8199c304f35c4336e8581d1d18d7983c92766b82793b25"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.35.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a123ddd70795cc50d0108215d5dedca13b4df6eca6b63c9594679fb5556ab36e"
+    },
+    {
+      "name": "idna",
+      "version": "3.10",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5114796720df4353c2106864628a23a9f8b645ad2d6aedbefa58701b85d27e32"
+    },
+    {
+      "name": "interegular",
+      "version": "0.3.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "c7598668f970b37c6d21612cc2abc9253156bf8b5c3905524793ed9af309acb3"
+    },
+    {
+      "name": "ipython",
+      "version": "9.6.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "501c8699e1affb71f96a269e65535f61d21d51e6200eaffe80f7a8925af726d0"
+    },
+    {
+      "name": "ipython-pygments-lexers",
+      "version": "1.1.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "6b38c0946bdbc4778f4e38e2298547cbd7d13aeba9979ec4e4a412eabfbdfadb"
+    },
+    {
+      "name": "jedi",
+      "version": "0.20.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "b9450ab995663c682c807066e067a2f4c176de4754901c61c95ba9144291516a"
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+    },
+    {
+      "name": "jiter",
+      "version": "0.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6b478e8e80231d5f21b8f292d6be60e3ef2af112004eb409f39fb3b810079577"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.25.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "31f83c1579e46e1af62269cefa5d83534ef155f3ee21914f7881bbd544bc125c"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "35abd41757f32b4ea24756920ded47b70173d77cbc052a5a6d3ab583b2e8d89d"
+    },
+    {
+      "name": "lark",
+      "version": "1.2.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "4beebd1ee349af492d96f6fb2795c4e3c8216ffe9a8589fc92c756f47701f9dd"
+    },
+    {
+      "name": "llguidance",
+      "version": "0.7.30",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2757077b7cdabb6d6bd370ad9c5e2a9bffd765954d9518fe1578b73615bdedcc"
+    },
+    {
+      "name": "lxml",
+      "version": "6.0.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d2a20793094d4d3333e3e7397bc6676db1a0b7fbe96191c2128a97c9c911f794"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "12b4cc61a7fa288cf7667ee3f213786d9619db57fb33ff6f934afbcb5c12ec81"
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.2.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "fedb3d587ec2d3fa4b0a81fd5353df697d2534c8ee714dbf050009afc60bcab7"
+    },
+    {
+      "name": "modelscope",
+      "version": "1.31.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "02df2db47ef98fb1feb3e6f4641bca668e156e70b4f16f27a69b164e1a7189ce"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406"
+    },
+    {
+      "name": "msgspec",
+      "version": "0.19.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f04db5993a3331d8d79b5e7eb1f9ac149d3b0170138d8f9ad224086027ae264f"
+    },
+    {
+      "name": "multidict",
+      "version": "6.6.4",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "bee9a91478d3a6105a52be28555aa915d4a053c44ebce577768189606e507136"
+    },
+    {
+      "name": "multiprocess",
+      "version": "0.70.16",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4afd9e1f60a38f28d561aaf24caa8791b25397195503e49b9b3882824049790d"
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.6.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "7f7b98f9e1a28a9597d70df9158175a22d05446ce4b328908d920e7293d35bd2"
+    },
+    {
+      "name": "networkx",
+      "version": "3.5",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "18b28258a7a706532cc5e97549a0f1beb39ba7b299c085904367c4930d4f8b94"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8d76fc4e382cedcd22bcaeaa748af39b3fa7931b72442396d15cb181659d0a4e"
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "22d648f53848429464ca643b40d73b49a920d47876fc77c395d4dca4e834904a"
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.8.4.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "310556f1c2c31ec517d4b049eaf12374081d1c52c8ef4d8eceab2aaf1edff2df"
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "version": "12.8.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6df7fa2fcdfa046eb952f3f8c172f524b2e19a654ec037da3dbb32e93d9671d1"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.8.93",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "376458a22054b4a36e110dfab570df4bc658c037a2fb47184bdc4dff7ab90d23"
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.8.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "00431338ea983d4be2f46f9fd29cec2fd9bfa39553933ca59fd37192e7d0f82f"
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.10.2.21",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7dc7ea3541119ddea15ed9a68e9f01e4a160b164607abad22f9dec54e2937266"
+    },
+    {
+      "name": "nvidia-cudnn-frontend",
+      "version": "1.14.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d7a849f42c46778b90dd2952773a41f30833ea665b0512c1ad722667c42ebfd8"
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "version": "11.3.3.83",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ed11d2273b98e3897dc87ae88fcd7a0661b8a4c96529b93a5d22799fd4898de5"
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "version": "1.13.1.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "df713a26389a8052d17fee3c1521563e060b24a037983b3889fff54f906ef288"
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.9.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7d4df14884c3de2ec922c546d995cee62f9a0e5225b3eaf2d8951520212cbf6f"
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.3.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "1f06a55dc8f2aef9eb20f018044bfa7731124698ba7b435d11c250c62eaf4dc3"
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.8.93",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "e83b3bf81e6a2c1dc4d4ddcd73b283a88e6f7f9d20385d280ec030dbf5384f22"
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "version": "0.7.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b264cea6951b70b52a3fd2ffaa88f9109eaf379633aa8d6e0832ecc92ddf6fba"
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "version": "4.2.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d9dbca368ad7f537756eaed6c1e26392475d5c130bb43421ea80a9561b8980fa"
+    },
+    {
+      "name": "nvidia-ml-py",
+      "version": "13.615.71",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "df52f2f04ac78c5259e776be3194ae3bfee274cadc0623576be6a699621ef6a8"
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "version": "2.27.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "87ee999c55a3181761f4b7758a385539776b0cba3cda4fd0f8bff4da26c6e355"
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.8.93",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "776feab012c1f3efce8918975dc08aa01793aa33832d87b377caa0448cad4435"
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "version": "12.8.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "c63c23e04e8cf04143721ff718cba87a2ae5630a50451b77f8357a0d26133cf1"
+    },
+    {
+      "name": "openai",
+      "version": "2.6.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "6a55da43ce61efa69aa6c8a4d728c3a4e976d02e8fa8cbe565229e26aea91410"
+    },
+    {
+      "name": "openai-harmony",
+      "version": "0.0.4",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "35b04c68df05d0eeef03ad550b9ec8a7a09ee1ac18935eb4b563f19ccb0e5952"
+    },
+    {
+      "name": "orjson",
+      "version": "3.11.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "86cb78c67260c074b55c74f86d91e44eef2660ec85d9f160235d76be1cb2d817"
+    },
+    {
+      "name": "outlines",
+      "version": "0.1.11",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "f7423ac9279df728d633f03471967b918686e824a1d438939c6abe435b3f8de3"
+    },
+    {
+      "name": "outlines-core",
+      "version": "0.1.26",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "60d99166b0160b2fc959c4d3b96b13cc3f6a66ef96766e49f094d3a252d18a03"
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5b611a609c38fefc3d616bf45d20aec98fb7d53f245daca9e2c30fc85c7ac282"
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "40ee953dc7ca155840b639a1881ff84578075187fce0ac20eeda55a7fa0d9a90"
+    },
+    {
+      "name": "parso",
+      "version": "0.8.7",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "2fd8c9f8209218163a6c086ba8075d177122430645fea770cc02c53cd426119d"
+    },
+    {
+      "name": "partial-json-parser",
+      "version": "0.2.1.1.post6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "04c03d250890c1a7388a73d22cbb6b9003cc83ebda0b55eeb416c09c5081fbfc"
+    },
+    {
+      "name": "pexpect",
+      "version": "4.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "2d7c5ac5fdefde4a0194ec522fbcc0ca70e99e1a2a956eea444168f8591650aa"
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "d53d4d78f8a8efe182396711ef76840386d2ba4ccdad421f58cc00c3b3401f73"
+    },
+    {
+      "name": "prometheus-client",
+      "version": "0.23.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "22c3a8dba8da39b7dd5adab472c120af773c27c2ce0f697e64915f1e4ed3368e"
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.53",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d04994e4401b88abf884ca54fb3b85e50a8b4fb1fde1ed7eb3ece9d8bf5459a9"
+    },
+    {
+      "name": "propcache",
+      "version": "0.3.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "620a3404e4d202ded13606ec77be4541272415064edc168cb9dadb7dfa965222"
+    },
+    {
+      "name": "protobuf",
+      "version": "6.32.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "67e944e2754173a1d54d8f418d590b296ffba88486169033ed3fea465fdab0ee"
+    },
+    {
+      "name": "psutil",
+      "version": "7.1.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ac00a0bcd2510cbd355745e1742a41ef2eadd59546c28788d6122a57d329c6b6"
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.7.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c3c2b96b5d9a55da5958c34d08c18a0849f56609026cc46d5c95b8b77fcf3e0c"
+    },
+    {
+      "name": "pure-eval",
+      "version": "0.2.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4fe70f69411b9963d7275084210743afa819c2350899a29150bc43b1abf105d0"
+    },
+    {
+      "name": "py-spy",
+      "version": "0.4.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "26aeb28846bd82f28093b6ee8ebccbab17abc89c4d33118ba092361fa0243b6a"
+    },
+    {
+      "name": "pyarrow",
+      "version": "21.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "29e53bc2f9e13f9b72838ea1cc71a9a30fb1f7fc8b4ad5f32fda2187b6cf2550"
+    },
+    {
+      "name": "pybase64",
+      "version": "1.4.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "249a8b75c7c0d35b82ae7c1a81fe099f8e1afd678972cf5f4d96a82ff2235dad"
+    },
+    {
+      "name": "pycountry",
+      "version": "24.6.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a2f8631a3b4830c3bb77e8bed4e373980d834d8092763a00f8f54e066d1bcd3d"
+    },
+    {
+      "name": "pycparser",
+      "version": "2.23",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a2c9a11ccc5ade7e6c3f0bf959e529cb23e79bbe9ea215d8199c8a1a659b3c57"
+    },
+    {
+      "name": "pycryptodomex",
+      "version": "3.23.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "bb4cf1a7d5bbc98ad4f475fa8b5c0c0597550a8173ef1a35baf76ad2b9dc68a9"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.11.9",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "94bed7e977916e379b3f7e1e7cee3e3c69beee9776492bb63a847d64ceada2ca"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.33.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "efc941a0e673e0acdfcf3ff2308fea147305b36484dd58275a97863ed8f270ab"
+    },
+    {
+      "name": "pygments",
+      "version": "2.19.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7ae100d67d67006c6479803dd835fcf47a9b59fac794441ea8e66aa7f5984d82"
+    },
+    {
+      "name": "pyproject-hooks",
+      "version": "1.3.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "844e375bb28dcbe42a0502fbd9428d9ba4669db25028ee7a7afaa8dd7ada2e00"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e10ead93598aed51bdb28aa30ef64ee5d6ccc871e88741d220e504e979af4695"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.20",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8761ad3ce55285b564a4152b8e9e4a137b7a7a224985dd3f5826825eb6f94e05"
+    },
+    {
+      "name": "pytz",
+      "version": "2026.5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4d20d16f6004b1d7f9b01a96f4d3eb462c0c2a8413d9aa878effe50a21535929"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34"
+    },
+    {
+      "name": "pyzmq",
+      "version": "27.1.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7e05c41b7e28dddfe8617d63b5691aff02b4cf737092842df9f4b2d59d9aef55"
+    },
+    {
+      "name": "referencing",
+      "version": "0.36.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f1ec8cf77a53d149e03e4370d19c5281753c77f24abc3468d27c614b05bd7206"
+    },
+    {
+      "name": "regex",
+      "version": "2025.9.18",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a69552b079357a52a897a78b0c47ec488aef40aa6d2a6c2a9af71f1005e804d2"
+    },
+    {
+      "name": "requests",
+      "version": "2.32.5",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "65b5a08da81f4915513e760965ff14b7518f65b7bb3efe0dab364bbcc4d40cb0"
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.27.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b76fe460f93be155403bdb6a74d01661c967c3e2ae522fe9963c297c7a1faea9"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.6.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8768f97439fd846ac9bec48a5e4cba450b268142529db527ce4681d29833a736"
+    },
+    {
+      "name": "scipy",
+      "version": "1.16.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2b01909e07f69a4e64c8f8826635a217079ef4b9957e3926defbb2b96b126f06"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ce0a2e9c599cd060a7bc3dffb18be5cfc3d5f293533e3ee4e870eaef0a5500fd"
+    },
+    {
+      "name": "setproctitle",
+      "version": "1.3.7",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f3aae6f59f0e0c2ae3378189d4399d7a4a25de58c774cdb423fbfa02a534d0aa"
+    },
+    {
+      "name": "setuptools",
+      "version": "79.0.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "d3152caeb1486d143b30b1d41fffaaddb7ea95fdc9547ae1135ce697b1a420b5"
+    },
+    {
+      "name": "sgl-kernel",
+      "version": "0.3.16.post5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e94dbe7113e92b744edc5aa0996f7d4c1757ff23b170f392bf667ef469addd39"
+    },
+    {
+      "name": "sglang",
+      "version": "0.5.5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "ffb8c6546be8efd7260a417c77d64da8efd957d6a85175545a1015432c79dd28"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "0b318b57098edeccf585e60a889a6b6a7b5c4086f3a9aa62eff76a1d3cee12d9"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.13.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "0e4254c32f48852e0789e265aee10208a9bb778113ae8c5420d680393b7d32a1"
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "f28a66f2adde54e7031355e09a166e437bc0d023a31c10c973ac494288ca4c6f"
+    },
+    {
+      "name": "starlette",
+      "version": "0.48.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6c709a92af6fd81489ad13f144b779980e86446d45fe628837b008873c9e1c2e"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595"
+    },
+    {
+      "name": "tabulate",
+      "version": "0.10.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "38dfc6db689745ff4c3890b3c30ef7e5d0b156fdbeeb765b9027fd917043d84b"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "02d46284596a1c89c7eb236369c1cd2bb8b46eb84d15f0252cb07df71bd814e9"
+    },
+    {
+      "name": "timm",
+      "version": "1.0.16",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "ad5f79b43031a2e2358158f251a2be22e30cbe6cd6f5c33d0c4077aeb07be22f"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "ddc92f061ff422fb05d19da58e9161c5098da143c38aa23779bf8a5b48ce76ca"
+    },
+    {
+      "name": "torch",
+      "version": "2.8.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "57ede492698857503164f9ab76185bc0d70aafd1e0078e3ea4f137a56320433c"
+    },
+    {
+      "name": "torch-memory-saver",
+      "version": "0.0.9",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4ad7474d881da57f75620fd75bf0a3aab0a21aa282e6b32dccc018397495b616"
+    },
+    {
+      "name": "torchao",
+      "version": "0.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "fd71bb640fc5c2ae0d2168195a2cc18ed915fac57cb6f8119fba30dae560fc92"
+    },
+    {
+      "name": "torchaudio",
+      "version": "2.8.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "39c912d16311486d17ad8cfdc3ce7b532703706c410b140a74c9511fa8687fef"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.23.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f3e83af19eaec8195f920dd36176654b45701547a63edc139369d560ae6553b8"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "688a1632df525a198fec52dcfefb1246d31eacee9c035aacac2d7eaf8d8ff669"
+    },
+    {
+      "name": "traitlets",
+      "version": "5.16.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e42b503240c058625ffb30c390818d72933117840cb25060614cb24f0be9e587"
+    },
+    {
+      "name": "transformers",
+      "version": "4.57.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "5a7907140118994d1b284d23ea8cda916e6fa8a4d8698aa1d20ab5f59e610590"
+    },
+    {
+      "name": "triton",
+      "version": "3.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8496b57becd6f0fe732bf81570330383f25e2bc572a54bdec45671a23e1db189"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "c138378fe8f18934ac99de060535c53ec6c13aeed65e94c32641da7ee3192a72"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "61096cd0bfe3c7040b6f98c22b02d190fe01936d0ff7616c5134fed02891953a"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e0780e8b6dc8882ce87e871a9d4589d59cb05a0c2d64f58b1ba62cde1ee91f6a"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.5.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "99a6244c866dd1afa59040be84c6566c206670667225c60e791938fe7b93acd7"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.37.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2ed5028b7d2d7076d0834b01bc6d9fa607368a02db08c576c2bbf05e3d58468d"
+    },
+    {
+      "name": "uvloop",
+      "version": "0.21.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "52769c5420236aecdc6c71c4e1456dc48f386bdf83d41e73cb4162fd3e8d1aed"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "180d42f593e4840a9672498f42d83709e85f43da2ad8c7c11e3a1c7622c74da5"
+    },
+    {
+      "name": "xgrammar",
+      "version": "0.1.25",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e100f2e27025f1ff749e65a4485fb2fc9b5bff8814144235aa4169b1f45716d2"
+    },
+    {
+      "name": "xxhash",
+      "version": "3.6.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "9dcdbae3ea685db00dc0691d6f90ec6c1d74349658f97e5a4f55f9bdf183db21"
+    },
+    {
+      "name": "yarl",
+      "version": "1.20.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2b42f2e958b0c33e8c1ed382008289aa4c10b838e3b7d2327408ad5b345062f5"
+    }
+  ],
+  "python": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+  "executable": "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "cache_audit_sha256": "297a0a25e62a15be1ceb3dfa7dc0e9ef03d665a77de959f31a75ddc1f8385d55",
+  "python_sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+  "sys_path": [
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+    "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay/nvidia_cutlass_dsl/python_packages",
+    "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+    "/home/postedism/Desktop/Crucible",
+    "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python312.zip",
+    "/home/postedism/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12",
+    "/home/postedism/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/lib/python3.12/lib-dynload"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "canonical_method": "scripts.resource_preflight.project_bytes + check_limits; all project unique device/inode logical bytes, no exclusions",
+  "project_bytes": 13284274193,
+  "planned_project_bytes": 680000000,
+  "native_reserve": 650000000,
+  "Task13_allowance": 10000000,
+  "root_review_allowance": 10000000,
+  "CPU_allowance": 10000000,
+  "preparation_budget_within_CPU_allowance": 5000000,
+  "free_bytes": 272824012800,
+  "shared_HF_bytes": 23815435170,
+  "shared_cap": 40000000000,
+  "downloads": 0,
+  "retained_checkpoints_ceiling": 2,
+  "planned_service_memory_cap": 16000000000,
+  "actual_active_service_bytes": 0,
+  "errors": [],
+  "fresh_output_guard_absent": true,
+  "port31012_connect_failed": true
+}

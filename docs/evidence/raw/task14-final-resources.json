@@ -1,0 +1,16 @@
+{
+  "command": [
+    "bash",
+    ".cache/task14/final-gate.sh"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 37.43097108602524,
+  "project_bytes_before": 12517983053,
+  "project_bytes_after": 12687630464,
+  "sampling": "0.25s requested interval plus scan time; transient peaks may be missed",
+  "scope": "wrapper and descendants RSS; task14 caches/temp only; CPU-only",
+  "sampled_tree_rss_bytes": 275496960,
+  "sampled_task14_cache_bytes": 357445194,
+  "sampled_tmp_bytes": 105311844,
+  "samples": 124
+}

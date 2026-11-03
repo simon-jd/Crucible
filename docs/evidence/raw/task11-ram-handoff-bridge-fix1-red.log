@@ -1,0 +1,427 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv-ml/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 3 items
+
+rl/sync/tests/test_phase_bridge.py::test_known_noop_does_not_spawn_or_retire FAILED
+rl/sync/tests/test_phase_bridge.py::test_mixed_stale_accounting_owned_by_learner_and_submission_retry FAILED
+rl/sync/tests/test_phase_bridge.py::test_invalid_headers_cannot_partially_account_stale_drops FAILED
+
+=================================== FAILURES ===================================
+___________________ test_known_noop_does_not_spawn_or_retire ___________________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70fdfd468860>
+
+    def test_known_noop_does_not_spawn_or_retire(tmp_path, monkeypatch):
+        owned = bridge(tmp_path)
+        try:
+>           initial(owned)
+
+rl/sync/tests/test_phase_bridge.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/sync/tests/test_phase_bridge.py:39: in initial
+    return owned.capture_initial(
+rl/sync/phase_bridge.py:107: in capture_initial
+    self._source = self._owner.capture_stream(
+rl/learner/state_handoff.py:445: in capture_stream
+    return capture_initial(self, command, version=version, binding=binding, budget=budget)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/handoff_protocol.py:332: in capture_initial
+    owner.last_output = owner._child(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rl.learner.state_handoff.SnapshotOwner object at 0x70fce8ea1a00>
+command = ['/home/postedism/Desktop/Crucible/.venv-ml/bin/python', '-B', '-m', 'rl.sync.tests.ram_worker', 'initial']
+fd = 10
+extra = {'CRUCIBLE_HANDOFF_BINDING': '{"external_state":"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy","model":"tiny-cpu... 2000000000, "storage_cap": 8192, "metadata_cap": 65536, "retained_bytes": 0, "weights_bytes": 0, "weights_slots": 0}'}
+source = None
+
+    def _child(self, command, fd, extra, source=None):
+        env = os.environ.copy()
+        env.update(extra)
+        env["CRUCIBLE_HANDOFF_FD"] = str(fd)
+        inherited = (fd,)
+        if source is not None:
+            env["CRUCIBLE_HANDOFF_SOURCE_FD"] = str(source.fd)
+            env["CRUCIBLE_HANDOFF_SOURCE_RECEIPT"] = json.dumps(asdict(source.receipt))
+            inherited += (source.fd,)
+        process = subprocess.Popen(
+            command,
+            env=env,
+            pass_fds=inherited,
+            stdin=subprocess.DEVNULL,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        self.last_process = process
+        output, deadline = bytearray(), time.monotonic() + self.timeout
+        cause = None
+        try:
+            with selectors.DefaultSelector() as selector:
+                selector.register(process.stdout, selectors.EVENT_READ)
+                eof = False
+                while not eof:
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError("owned handoff child deadline exceeded")
+                    for key, _ in selector.select(min(0.05, deadline - time.monotonic())):
+                        block = os.read(key.fileobj.fileno(), 4096)
+                        if not block:
+                            eof = True
+                            break
+                        if len(output) + len(block) > 65536:
+                            raise ValueError("owned child output cap exceeded")
+                        output.extend(block)
+                code = process.wait(timeout=max(0.001, deadline - time.monotonic()))
+                if code != 0:
+>                   raise RuntimeError(
+                        f"owned handoff child exited {code}: {output.decode(errors='replace')}"
+                    )
+E                   RuntimeError: owned handoff child exited 1: Traceback (most recent call last):
+E                     File "<frozen runpy>", line 198, in _run_module_as_main
+E                     File "<frozen runpy>", line 88, in _run_code
+E                     File "/home/postedism/Desktop/Crucible/rl/sync/tests/ram_worker.py", line 256, in <module>
+E                       main()
+E                     File "/home/postedism/Desktop/Crucible/rl/sync/tests/ram_worker.py", line 191, in main
+E                       stream.capture(learner, fd, binding=BINDING, budget=budget)
+E                     File "/home/postedism/Desktop/Crucible/rl/learner/handoff_stream.py", line 547, in capture
+E                       _write(fd, encoded)
+E                     File "/home/postedism/Desktop/Crucible/rl/learner/handoff_stream.py", line 101, in _write
+E                       n = os.write(fd, view[:65536])
+E                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                   OSError: [Errno 27] File too large
+
+rl/learner/state_handoff.py:325: RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70fdfd468860>
+
+    def test_known_noop_does_not_spawn_or_retire(tmp_path, monkeypatch):
+        owned = bridge(tmp_path)
+        try:
+            initial(owned)
+            counters = [owned.audit.get("noop_dropped_stale")]
+            assert_noop_retained(owned, 2, [], monkeypatch)
+            counters.append(owned.audit.get("noop_dropped_stale"))
+            producer = owned._source_producer
+            with pytest.raises(ValueError, match="group"):
+                advance(owned, 2, headers=[[2, 2]])
+            # Age exactly1 is accepted by the existing learner's group filter.
+            advance(owned, 2, mode="advance-stale", headers=[[0, 0]])
+            assert owned._source_producer is not producer
+            assert json.loads(owned._owner.last_output)["metrics"]["dropped_stale"] == 0
+            counters.append(owned.audit.get("noop_dropped_stale"))
+            # No batch IDs in headers: each valid resubmission counts its four drops.
+            for _ in range(2):
+                assert_noop_retained(owned, 3, [[0, 0], [0, 0]], monkeypatch)
+                counters.append(owned.audit.get("noop_dropped_stale"))
+            assert_noop_retained(owned, 3, [], monkeypatch)
+            counters.append(owned.audit.get("noop_dropped_stale"))
+            assert counters == [0, 0, 0, 4, 8, 8]
+        finally:
+>           owned.close()
+
+rl/sync/tests/test_phase_bridge.py:138: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rl.sync.phase_bridge.PhaseBridge object at 0x70fcf171e4b0>
+
+    def close(self):
+        with self._lock:
+            if self._closed:
+                return
+            self._failed = True
+            self.retire_rollout()
+            if self._owner.failed:
+>               raise RuntimeError("training ownership uncertain; retain owner")
+E               RuntimeError: training ownership uncertain; retain owner
+
+rl/sync/phase_bridge.py:325: RuntimeError
+______ test_mixed_stale_accounting_owned_by_learner_and_submission_retry _______
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70fce8ea2c90>
+
+    def test_mixed_stale_accounting_owned_by_learner_and_submission_retry(tmp_path, monkeypatch):
+        owned = bridge(tmp_path)
+        try:
+>           initial(owned)
+
+rl/sync/tests/test_phase_bridge.py:144: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/sync/tests/test_phase_bridge.py:39: in initial
+    return owned.capture_initial(
+rl/sync/phase_bridge.py:107: in capture_initial
+    self._source = self._owner.capture_stream(
+rl/learner/state_handoff.py:445: in capture_stream
+    return capture_initial(self, command, version=version, binding=binding, budget=budget)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/handoff_protocol.py:332: in capture_initial
+    owner.last_output = owner._child(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rl.learner.state_handoff.SnapshotOwner object at 0x70fce8eb1820>
+command = ['/home/postedism/Desktop/Crucible/.venv-ml/bin/python', '-B', '-m', 'rl.sync.tests.ram_worker', 'initial']
+fd = 10
+extra = {'CRUCIBLE_HANDOFF_BINDING': '{"external_state":"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy","model":"tiny-cpu... 2000000000, "storage_cap": 8192, "metadata_cap": 65536, "retained_bytes": 0, "weights_bytes": 0, "weights_slots": 0}'}
+source = None
+
+    def _child(self, command, fd, extra, source=None):
+        env = os.environ.copy()
+        env.update(extra)
+        env["CRUCIBLE_HANDOFF_FD"] = str(fd)
+        inherited = (fd,)
+        if source is not None:
+            env["CRUCIBLE_HANDOFF_SOURCE_FD"] = str(source.fd)
+            env["CRUCIBLE_HANDOFF_SOURCE_RECEIPT"] = json.dumps(asdict(source.receipt))
+            inherited += (source.fd,)
+        process = subprocess.Popen(
+            command,
+            env=env,
+            pass_fds=inherited,
+            stdin=subprocess.DEVNULL,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        self.last_process = process
+        output, deadline = bytearray(), time.monotonic() + self.timeout
+        cause = None
+        try:
+            with selectors.DefaultSelector() as selector:
+                selector.register(process.stdout, selectors.EVENT_READ)
+                eof = False
+                while not eof:
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError("owned handoff child deadline exceeded")
+                    for key, _ in selector.select(min(0.05, deadline - time.monotonic())):
+                        block = os.read(key.fileobj.fileno(), 4096)
+                        if not block:
+                            eof = True
+                            break
+                        if len(output) + len(block) > 65536:
+                            raise ValueError("owned child output cap exceeded")
+                        output.extend(block)
+                code = process.wait(timeout=max(0.001, deadline - time.monotonic()))
+                if code != 0:
+>                   raise RuntimeError(
+                        f"owned handoff child exited {code}: {output.decode(errors='replace')}"
+                    )
+E                   RuntimeError: owned handoff child exited 1: Traceback (most recent call last):
+E                     File "<frozen runpy>", line 198, in _run_module_as_main
+E                     File "<frozen runpy>", line 88, in _run_code
+E                     File "/home/postedism/Desktop/Crucible/rl/sync/tests/ram_worker.py", line 256, in <module>
+E                       main()
+E                     File "/home/postedism/Desktop/Crucible/rl/sync/tests/ram_worker.py", line 191, in main
+E                       stream.capture(learner, fd, binding=BINDING, budget=budget)
+E                     File "/home/postedism/Desktop/Crucible/rl/learner/handoff_stream.py", line 547, in capture
+E                       _write(fd, encoded)
+E                     File "/home/postedism/Desktop/Crucible/rl/learner/handoff_stream.py", line 101, in _write
+E                       n = os.write(fd, view[:65536])
+E                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                   OSError: [Errno 27] File too large
+
+rl/learner/state_handoff.py:325: RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-438a6f0f71402082cb3652c142dab3b9e1c76e2322b5330d3916fba6051e253a')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70fce8ea2c90>
+
+    def test_mixed_stale_accounting_owned_by_learner_and_submission_retry(tmp_path, monkeypatch):
+        owned = bridge(tmp_path)
+        try:
+            initial(owned)
+            advance(owned, 2)
+            assert_noop_retained(owned, 3, [[0, 0]], monkeypatch)
+            counters = [owned.audit.get("noop_dropped_stale")]
+            expected = make_learner()
+            expected.step([group(0)])
+            expected.step([group(1)])
+            learner_drops = 0
+            # Same headers are two submissions, with valid new target versions.
+            for version in (3, 4):
+                advance(owned, version, mode="advance-mixed", headers=[[2, 2], [0, 0]])
+                result = json.loads(owned._owner.last_output)
+                learner_drops += result["metrics"]["dropped_stale"]
+                assert result["metrics"]["dropped_stale"] == 2
+                assert result["metrics"]["accepted_samples"] == 2
+                assert result["metrics"]["optimizer_steps"] == 1
+                expected.step([group(2)])
+                assert result["state"] == summary(expected)
+                before = owned.audit
+                with pytest.raises(ValueError, match="strict new"):
+                    advance(owned, version, headers=[[2, 2], [0, 0]])
+                assert owned.audit == before  # invalid target retry is not a submission
+                counters.append(owned.audit.get("noop_dropped_stale"))
+            assert_noop_retained(owned, 5, [[2, 2], [0, 0]], monkeypatch)
+            counters.append(owned.audit.get("noop_dropped_stale"))
+            assert counters == [2, 2, 2, 6]
+            assert learner_drops + owned.audit["noop_dropped_stale"] == 10
+        finally:
+>           owned.close()
+
+rl/sync/tests/test_phase_bridge.py:172: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rl.sync.phase_bridge.PhaseBridge object at 0x70fce9012360>
+
+    def close(self):
+        with self._lock:
+            if self._closed:
+                return
+            self._failed = True
+            self.retire_rollout()
+            if self._owner.failed:
+>               raise RuntimeError("training ownership uncertain; retain owner")
+E               RuntimeError: training ownership uncertain; retain owner
+
+rl/sync/phase_bridge.py:325: RuntimeError
+__________ test_invalid_headers_cannot_partially_account_stale_drops ___________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70fce8eb09e0>
+
+    def test_invalid_headers_cannot_partially_account_stale_drops(tmp_path, monkeypatch):
+        owned = bridge(tmp_path)
+        try:
+>           initial(owned)
+
+rl/sync/tests/test_phase_bridge.py:178: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/sync/tests/test_phase_bridge.py:39: in initial
+    return owned.capture_initial(
+rl/sync/phase_bridge.py:107: in capture_initial
+    self._source = self._owner.capture_stream(
+rl/learner/state_handoff.py:445: in capture_stream
+    return capture_initial(self, command, version=version, binding=binding, budget=budget)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/handoff_protocol.py:332: in capture_initial
+    owner.last_output = owner._child(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rl.learner.state_handoff.SnapshotOwner object at 0x70fce8e8a870>
+command = ['/home/postedism/Desktop/Crucible/.venv-ml/bin/python', '-B', '-m', 'rl.sync.tests.ram_worker', 'initial']
+fd = 10
+extra = {'CRUCIBLE_HANDOFF_BINDING': '{"external_state":"fixed-lr:no-scheduler:no-scaler:no-loader:no-numpy","model":"tiny-cpu... 2000000000, "storage_cap": 8192, "metadata_cap": 65536, "retained_bytes": 0, "weights_bytes": 0, "weights_slots": 0}'}
+source = None
+
+    def _child(self, command, fd, extra, source=None):
+        env = os.environ.copy()
+        env.update(extra)
+        env["CRUCIBLE_HANDOFF_FD"] = str(fd)
+        inherited = (fd,)
+        if source is not None:
+            env["CRUCIBLE_HANDOFF_SOURCE_FD"] = str(source.fd)
+            env["CRUCIBLE_HANDOFF_SOURCE_RECEIPT"] = json.dumps(asdict(source.receipt))
+            inherited += (source.fd,)
+        process = subprocess.Popen(
+            command,
+            env=env,
+            pass_fds=inherited,
+            stdin=subprocess.DEVNULL,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        self.last_process = process
+        output, deadline = bytearray(), time.monotonic() + self.timeout
+        cause = None
+        try:
+            with selectors.DefaultSelector() as selector:
+                selector.register(process.stdout, selectors.EVENT_READ)
+                eof = False
+                while not eof:
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError("owned handoff child deadline exceeded")
+                    for key, _ in selector.select(min(0.05, deadline - time.monotonic())):
+                        block = os.read(key.fileobj.fileno(), 4096)
+                        if not block:
+                            eof = True
+                            break
+                        if len(output) + len(block) > 65536:
+                            raise ValueError("owned child output cap exceeded")
+                        output.extend(block)
+                code = process.wait(timeout=max(0.001, deadline - time.monotonic()))
+                if code != 0:
+>                   raise RuntimeError(
+                        f"owned handoff child exited {code}: {output.decode(errors='replace')}"
+                    )
+E                   RuntimeError: owned handoff child exited 1: Traceback (most recent call last):
+E                     File "<frozen runpy>", line 198, in _run_module_as_main
+E                     File "<frozen runpy>", line 88, in _run_code
+E                     File "/home/postedism/Desktop/Crucible/rl/sync/tests/ram_worker.py", line 256, in <module>
+E                       main()
+E                     File "/home/postedism/Desktop/Crucible/rl/sync/tests/ram_worker.py", line 191, in main
+E                       stream.capture(learner, fd, binding=BINDING, budget=budget)
+E                     File "/home/postedism/Desktop/Crucible/rl/learner/handoff_stream.py", line 547, in capture
+E                       _write(fd, encoded)
+E                     File "/home/postedism/Desktop/Crucible/rl/learner/handoff_stream.py", line 101, in _write
+E                       n = os.write(fd, view[:65536])
+E                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                   OSError: [Errno 27] File too large
+
+rl/learner/state_handoff.py:325: RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-fix1-red/pytest/phase-7bdf385a5bf0a44c9a31a1e4babd5b37d5c417e64ee80a3c28719639c5998e2e')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x70fce8eb09e0>
+
+    def test_invalid_headers_cannot_partially_account_stale_drops(tmp_path, monkeypatch):
+        owned = bridge(tmp_path)
+        try:
+            initial(owned)
+            advance(owned, 2)
+            assert_noop_retained(owned, 3, [[0, 0]], monkeypatch)
+            before, source, producer = owned.audit, owned._source, owned._source_producer
+            invalid = [
+                None,
+                [[0, 0]] * 1025,
+                *[[[0, 0], tail] for tail in ([3, 3], [1], [1, 2], [True, True], [-1, -1], ["0", "0"])],
+            ]
+            with monkeypatch.context() as blocked:
+    
+                def unexpected(*args, **kwargs):
+                    pytest.fail("invalid headers must not consume or spawn")
+    
+                blocked.setattr(owned._owner, "advance_consuming", unexpected)
+                blocked.setattr(owned._owner, "_child", unexpected)
+                for headers in invalid:
+                    with pytest.raises(ValueError):
+                        owned.advance_learner(
+                            command("advance"),
+                            version=3,
+                            binding=BINDING,
+                            budget=serial_budget(),
+                            sample_versions=headers,
+                        )
+                    assert owned.audit == before
+                    assert owned._source is source and owned._source_producer is producer
+                    source.receipt.validate(source.fd)
+            assert owned.audit.get("noop_dropped_stale") == 2
+        finally:
+>           owned.close()
+
+rl/sync/tests/test_phase_bridge.py:208: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <rl.sync.phase_bridge.PhaseBridge object at 0x70fce91ede20>
+
+    def close(self):
+        with self._lock:
+            if self._closed:
+                return
+            self._failed = True
+            self.retire_rollout()
+            if self._owner.failed:
+>               raise RuntimeError("training ownership uncertain; retain owner")
+E               RuntimeError: training ownership uncertain; retain owner
+
+rl/sync/phase_bridge.py:325: RuntimeError
+=========================== short test summary info ============================
+FAILED rl/sync/tests/test_phase_bridge.py::test_known_noop_does_not_spawn_or_retire
+FAILED rl/sync/tests/test_phase_bridge.py::test_mixed_stale_accounting_owned_by_learner_and_submission_retry
+FAILED rl/sync/tests/test_phase_bridge.py::test_invalid_headers_cannot_partially_account_stale_drops
+============================== 3 failed in 5.14s ===============================

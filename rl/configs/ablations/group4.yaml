@@ -1,0 +1,6 @@
+extends: qwen25_05b_math_code.yaml
+id: group4
+declared_factor: group_size
+overrides:
+  objective:
+    group_size: 4

@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "f1255befc838b4ac8232a7f80816539e45d643387c6a1fb34f5c3a57efc65244",
+  "allowlist_sha256": "8e8c8418ca48ed5bb0fe5b810ca1dcf841a56fbe0fd5333ed4babae63926eaa4",
+  "file_sha256": {
+    "config.json": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+  },
+  "model": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "ids": 4096,
+  "minimum": 0,
+  "maximum": 4095,
+  "policy": "ascending first <=4096 vocab IDs excluding added/special IDs",
+  "generated_offline": true,
+  "native_prompt_tokens_smoke": "pending"
+}

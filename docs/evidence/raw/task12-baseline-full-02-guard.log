@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 1333, in <module>
+    main()
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 1311, in main
+    slo = calibrate(calibration, identities, lineage)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py", line 287, in calibrate
+    raise ValueError("calibration requires three distinct sender-valid runs")
+ValueError: calibration requires three distinct sender-valid runs

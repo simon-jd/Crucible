@@ -1,0 +1,9 @@
+{
+  "pid": 2560,
+  "scope": "host process namespace",
+  "comm": "systemd\n",
+  "cmdline": "/usr/lib/systemd/systemd --user ",
+  "status": "Name:\tsystemd\nState:\tS (sleeping)\nPPid:\t1\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000",
+  "exe": "PermissionError(13, 'Permission denied')",
+  "fd/0": "PermissionError(13, 'Permission denied')"
+}

@@ -1,0 +1,20 @@
+{
+  "observed_at_utc": "2026-10-25T11:50:46.164911+00:00",
+  "surface": "actual host permission, read-only process metadata plus bind/close31012",
+  "project_runtime_candidates": [],
+  "inaccessible_or_racing_proc_entries": 25,
+  "scope_limit": "Visible own-UID processes with cwd under this project and exact runtime argv markers; not a global all-process/GPU/shared-lock claim. Audit self and ancestors excluded.",
+  "port31012_bind_close_succeeded": true,
+  "new_go_build_original_handles": {
+    "44921": "authoritative exit0; terminal group proved before reaping",
+    "97886": "authoritative exit0; terminal group proved before reaping"
+  },
+  "handoff_original_handles": {
+    "34991": "authoritative exit0",
+    "34348": "authoritative exit0"
+  },
+  "new_native_gpu_service_launches_this_stage": 0,
+  "project_signals_sent_by_audit": 0,
+  "shared_lock_acquisition_by_stage": false,
+  "foreign_processes_or_resources_modified": false
+}

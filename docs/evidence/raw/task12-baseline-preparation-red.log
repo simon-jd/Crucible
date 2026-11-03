@@ -1,0 +1,27 @@
+
+==================================== ERRORS ====================================
+___________ ERROR collecting serving/baseline/select_traces_test.py ____________
+ImportError while importing test module '/home/postedism/Desktop/Crucible/serving/baseline/select_traces_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+serving/baseline/select_traces_test.py:7: in <module>
+    from serving.baseline.select_traces import select_windows
+E   ModuleNotFoundError: No module named 'serving.baseline.select_traces'
+__________ ERROR collecting serving/baseline/prepare_runtime_test.py ___________
+ImportError while importing test module '/home/postedism/Desktop/Crucible/serving/baseline/prepare_runtime_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+serving/baseline/prepare_runtime_test.py:8: in <module>
+    from serving.baseline.prepare_runtime import audit_hardlinks, check_peak, verify_record
+E   ModuleNotFoundError: No module named 'serving.baseline.prepare_runtime'
+=========================== short test summary info ============================
+ERROR serving/baseline/select_traces_test.py
+ERROR serving/baseline/prepare_runtime_test.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+2 errors in 0.05s

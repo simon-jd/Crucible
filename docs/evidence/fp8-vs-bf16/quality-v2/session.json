@@ -1,0 +1,108 @@
+{
+ "plan": [
+  [
+   "1-baseline",
+   1,
+   "baseline"
+  ],
+  [
+   "1-candidate",
+   1,
+   "candidate"
+  ],
+  [
+   "2-candidate",
+   2,
+   "candidate"
+  ],
+  [
+   "2-baseline",
+   2,
+   "baseline"
+  ],
+  [
+   "3-baseline",
+   3,
+   "baseline"
+  ],
+  [
+   "3-candidate",
+   3,
+   "candidate"
+  ]
+ ],
+ "mult": 0.25,
+ "trace_dir": "serving/baseline/traces/azure-60s",
+ "servers": [
+  {
+   "block": 0,
+   "precision": "bf16",
+   "command": [
+    "-m",
+    "vllm.entrypoints.openai.api_server",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--served-model-name",
+    "Qwen/Qwen3-8B",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18081",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--seed",
+    "17",
+    "--max-model-len",
+    "8192",
+    "--max-num-seqs",
+    "64",
+    "--no-enable-prefix-caching",
+    "--generation-config",
+    "vllm",
+    "--enforce-eager"
+   ],
+   "startup_s": 14.003940836060792,
+   "warmup_exit": 0,
+   "quality_s": 79.15023380098864,
+   "exit": 0
+  },
+  {
+   "block": 1,
+   "precision": "fp8",
+   "command": [
+    "-m",
+    "vllm.entrypoints.openai.api_server",
+    "--model",
+    "/home/postedism/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "--served-model-name",
+    "Qwen/Qwen3-8B",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18081",
+    "--gpu-memory-utilization",
+    "0.8",
+    "--seed",
+    "17",
+    "--max-model-len",
+    "8192",
+    "--max-num-seqs",
+    "64",
+    "--no-enable-prefix-caching",
+    "--generation-config",
+    "vllm",
+    "--enforce-eager",
+    "--quantization",
+    "fp8"
+   ],
+   "startup_s": 14.004070702008903,
+   "warmup_exit": 0,
+   "quality_s": 53.467477859929204,
+   "exit": 0
+  }
+ ],
+ "runs": [],
+ "stop_reason": null,
+ "peak_owned_rss_bytes": 5137080320,
+ "peak_runtime_cache_bytes": 223709
+}

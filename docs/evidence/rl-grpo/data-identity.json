@@ -1,0 +1,40 @@
+{
+ "inputs": {
+  "gsm8k/train-00000-of-00001.parquet": {
+   "sha256": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d",
+   "bytes": 2306545
+  },
+  "gsm8k/test-00000-of-00001.parquet": {
+   "sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+   "bytes": 419088
+  },
+  "math500/test.jsonl": {
+   "git_blob_sha1": "2376b9a194b46c0790e197c91b7249e5f88ac09b",
+   "sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+   "bytes": 446564
+  }
+ },
+ "rows": {
+  "gsm8k_train": 7473,
+  "gsm8k_test": 1319,
+  "math500": 500
+ },
+ "dropped": {
+  "train_duplicates": [],
+  "test_duplicates": [],
+  "math500_duplicates": [],
+  "train_overlapping_heldout": [],
+  "math500_ungradable_reference": 123
+ },
+ "heldout_manifest_sha256": {
+  "gsm8k": "2bac3c8205b96c4c73b9a85ffe5de5bc7bed5c0eea107d23e4358473318980c1",
+  "math500": "7f3bebb6687e020896738c502984cef1363976017ef6046355295a57a89b4c45"
+ },
+ "selected": {
+  "train": 1024,
+  "gsm8k_eval": 200,
+  "math500_eval": 100
+ },
+ "data_sha256": "bb491e5505e00da7d81364866d5d5db06bae484d51b713b68d140c15069ac705",
+ "seed": 17
+}

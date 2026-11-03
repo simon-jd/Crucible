@@ -1,0 +1,103 @@
+{
+  "path": ".cache/task12-baseline/tmp/output-caps-final-boundary",
+  "device": 66307,
+  "inode": 56377782,
+  "bytes": 6372,
+  "files": [
+    {
+      "path": "test_attempted_trial_retains_p0/attempt.json",
+      "bytes": 9,
+      "sha256": "b65a190c804413c18b0cd66e8371fca6e671c0dc30d97d69833b2cef680c550a"
+    },
+    {
+      "path": "test_attempted_trial_retains_p0/attempt.summary.json",
+      "bytes": 978,
+      "sha256": "9b7f09cb6b9b9cbad2623dac72311f4ca1d5dfd2b6d3ff955690e7e5dead346d"
+    },
+    {
+      "path": "test_attempted_trial_retains_p0/attempt.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_interrupted_trial_reaps_e0/attempt.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_interrupted_trial_reaps_e0/attempt.summary.json",
+      "bytes": 874,
+      "sha256": "6b49873f4fbb33cd5504b04b73decbfc001931a9e99a25585127f80f0c715517"
+    },
+    {
+      "path": "test_interrupted_trial_reaps_e0/attempt.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/prior-abi.json",
+      "bytes": 17,
+      "sha256": "9af00eda2e0de45fd19ca535e33e7ef417258035208788829f8559dc4ad496ba"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/lock.json",
+      "bytes": 114,
+      "sha256": "3ad61f85a15c1f9ad362c103b47ff10099fa0c056f113ae1ec1a4288b8780b99"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/tokens.json",
+      "bytes": 103,
+      "sha256": "59adcbda1340330b869aa1d3a827b27091bbcbb7ab8373380df6959fce345cff"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/manifest.json",
+      "bytes": 174,
+      "sha256": "9b2a3cf9caace0164d211810eee8b0c035d8c1f12d20cf70a9c0ca41d8a22e39"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/protocol.json",
+      "bytes": 813,
+      "sha256": "9d1098bf12703311435f71e39b90465ad6980cf0274a949e0a9344d9aaf0d6b0"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/out/server.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/out/terminal.json",
+      "bytes": 2783,
+      "sha256": "2c5b0a178adc5258a1391fea01df11ec1fafe88c6f095a7ac0e46319e9309943"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/out/abi-reference.json",
+      "bytes": 280,
+      "sha256": "aace7f66ce6f8d76fe69f96cfd3d9409712b30af9e7c0d37427bc21a4a8b5b6c"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/out/server-inventory.json",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/out/resource-samples.json",
+      "bytes": 32,
+      "sha256": "3cd1340d6ef61689eaa56b830b359a53611c59c85ced3a133ea8726500e7dc82"
+    },
+    {
+      "path": "test_full_controller_reuses_pr0/out/cleanup.json",
+      "bytes": 193,
+      "sha256": "2b1ccf4aa83b215c4ca237a0ff33a0a75b70792c4157e03fc3a9a89e83761ea2"
+    }
+  ],
+  "original_test_handle": 94921,
+  "authoritative_exit": 0,
+  "no_shared_cleanup": true,
+  "removed": true,
+  "recorded_fixture_pid_values_absent": [
+    4,
+    5,
+    6
+  ],
+  "pid_scope": "These 4/5/6 values are mocked full-controller fixture IDs, not real host child identities. The real child cases assert exact cleanup; original test handle 94921 is terminal."
+}

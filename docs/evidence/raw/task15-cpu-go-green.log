@@ -1,0 +1,40 @@
+=== RUN   TestAccountingNoSilentLoss
+--- PASS: TestAccountingNoSilentLoss (0.00s)
+=== RUN   TestAccountingRetryFinalFailureAndDeterminism
+--- PASS: TestAccountingRetryFinalFailureAndDeterminism (0.00s)
+=== RUN   TestAccountingRetryFinalSuccess
+--- PASS: TestAccountingRetryFinalSuccess (0.00s)
+=== RUN   TestAccountingRejectsInvalidAndOpenChains
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/empty
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/blank
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/duplicate_plan
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/unknown
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/missing_all
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/duplicate_attempt
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/negative
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/sparse
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/invalid_status
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/blank_attempt_id
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/missing_retry_successor
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/success_before_retry
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/conflicting_final_closure
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/open_retry_tail
+=== RUN   TestAccountingRejectsInvalidAndOpenChains/missing_middle
+--- PASS: TestAccountingRejectsInvalidAndOpenChains (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/empty (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/blank (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/duplicate_plan (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/unknown (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/missing_all (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/duplicate_attempt (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/negative (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/sparse (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/invalid_status (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/blank_attempt_id (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/missing_retry_successor (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/success_before_retry (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/conflicting_final_closure (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/open_retry_tail (0.00s)
+    --- PASS: TestAccountingRejectsInvalidAndOpenChains/missing_middle (0.00s)
+PASS
+ok  	command-line-arguments	0.002s

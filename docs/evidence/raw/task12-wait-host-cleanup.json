@@ -1,0 +1,40 @@
+{
+  "authority_handle": 48046,
+  "authoritative_exit": 0,
+  "owned_process_states": [
+    {
+      "pid": 1176199,
+      "expected_starttime": 72318317,
+      "exists": false
+    },
+    {
+      "pid": 1176252,
+      "expected_starttime": 72318467,
+      "exists": false
+    }
+  ],
+  "port31013_bind_then_closed": true,
+  "proposal_identities": 18,
+  "mismatches": [],
+  "rss_samples": 585,
+  "sampled_rss_max": 62181376,
+  "no_continuous_peak_claim": true,
+  "cleanup": {
+    "child": {
+      "pid": 1176252,
+      "starttime": 72318467,
+      "termination_requested": false,
+      "pre_cleanup_returncode": 0,
+      "returncode": 0,
+      "reaped": true,
+      "pid_absent": true
+    },
+    "fixture": {
+      "threads_alive": 0,
+      "connections": 15,
+      "listener_closed": true,
+      "port_listener_absent": true,
+      "errors": []
+    }
+  }
+}

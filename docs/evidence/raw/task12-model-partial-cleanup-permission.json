@@ -1,0 +1,8 @@
+{
+  "pid": 2560,
+  "comm": "FileNotFoundError(2, 'No such file or directory')",
+  "cmdline": "FileNotFoundError(2, 'No such file or directory')",
+  "status": "FileNotFoundError(2, 'No such file or directory')",
+  "exe": "FileNotFoundError(2, 'No such file or directory')",
+  "fd/0": "FileNotFoundError(2, 'No such file or directory')"
+}

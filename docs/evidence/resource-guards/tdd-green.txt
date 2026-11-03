@@ -1,0 +1,13 @@
+python -m pytest scripts/tests/test_azure_guards.py scripts/tests/test_gpu_guard.py scripts/tests/test_resource_preflight.py
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collected 65 items
+
+scripts/tests/test_azure_guards.py ..................................... [ 56%]
+.                                                                        [ 58%]
+scripts/tests/test_gpu_guard.py ............                             [ 76%]
+scripts/tests/test_resource_preflight.py ...............                 [100%]
+
+============================== 65 passed in 5.70s ==============================

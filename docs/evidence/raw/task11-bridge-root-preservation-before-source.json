@@ -1,0 +1,15 @@
+{
+  "time_utc": "2026-10-25T17:01:45.793468+00:00",
+  "scope": "ROOT continuation30 actualfrozen/coordinator preservation beforebridge sourceproposal; readonly",
+  "Task12_sources": 183,
+  "Task12_artifacts": 207,
+  "executables": 4,
+  "mismatches": [],
+  "rl_paths_in_frozen_inputset": [],
+  "coordinator_files": 100,
+  "coordinator_bytes": 2578786,
+  "coordinator_mismatches": [],
+  "retained_client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "no_runtime_or_sharedcache_changes": true,
+  "GPU_or_fullmodel_authority": false
+}

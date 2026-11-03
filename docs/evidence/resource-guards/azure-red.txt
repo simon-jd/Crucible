@@ -1,0 +1,19 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__________ test_reaper_plan_never_deletes_and_apply_pins_subscription __________
+
+azure = ({'account': {'id': '11111111-1111-1111-1111-111111111111', 'name': 'Azure for Students', 'state': 'Enabled'}, 'group'...x-crucible', 'project': 'crucible', 'ttl': '2000-01-01T00:00:00Z'}}]}, <function azure.<locals>.run at 0x77815040c0e0>)
+
+    def test_reaper_plan_never_deletes_and_apply_pins_subscription(azure):
+        _, run = azure
+        result, calls = run()
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: bash: /home/postedism/Desktop/Crucible/scripts/azure_reaper.sh: No such file or directory
+E
+E       assert 127 == 0
+E        +  where 127 = CompletedProcess(args=['bash', '/home/postedism/Desktop/Crucible/scripts/azure_reaper.sh'], returncode=127, stdout='', stderr='bash: /home/postedism/Desktop/Crucible/scripts/azure_reaper.sh: No such file or directory\n').returncode
+
+scripts/tests/test_azure_guards.py:73: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_azure_guards.py::test_reaper_plan_never_deletes_and_apply_pins_subscription
+1 failed in 0.02s

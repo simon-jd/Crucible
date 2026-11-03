@@ -1,0 +1,166 @@
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:155:16
+    |
+153 |             print(json.dumps({"original_guard_pid": child.pid}), flush=True)
+154 |             result = child.wait()
+155 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+156 |             failure = error
+157 |             if child.poll() is None:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:169:20
+    |
+167 |             try:
+168 |                 write_json_bounded(receipt_path, receipt, min(64 << 10, limit))
+169 |             except BaseException as error:
+    |                    ^^^^^^^^^^^^^
+170 |                 failure = failure or error
+171 |         if failure is not None:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:557:16
+    |
+555 |             if not valid:
+556 |                 raise ValueError(f"native contract failed: {name}")
+557 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+558 |             failure = error
+559 |         finally:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:578:20
+    |
+576 |             try:
+577 |                 (output / f"{prefix}-{name}.raw").write_bytes(retained)
+578 |             except BaseException as write_error:
+    |                    ^^^^^^^^^^^^^
+579 |                 failure = failure or write_error
+580 |                 evidence["accepted_contract"] = False
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:585:20
+    |
+583 |             try:
+584 |                 write_json_bounded(output / f"{prefix}.json", results, 64 << 10)
+585 |             except BaseException as report_error:
+    |                    ^^^^^^^^^^^^^
+586 |                 if failure is None:
+587 |                     failure = report_error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:772:16
+    |
+770 |         try:
+771 |             write_json_bounded(record, summary, SUMMARY_CAP)
+772 |         except BaseException as report_error:
+    |                ^^^^^^^^^^^^^
+773 |             summary["trigger_write_error"] = error_info(report_error)
+774 |         raise
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:780:16
+    |
+778 |                 summary["cleanup"] = stop_child(child, None)
+779 |                 summary["returncode"] = child.returncode
+780 |         except BaseException as cleanup_error:
+    |                ^^^^^^^^^^^^^
+781 |             summary["cleanup_error"] = error_info(cleanup_error)
+782 |             if failure is None:
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:789:16
+    |
+787 |                     summary[key + "_sha256"] = sha256(path)
+788 |                     summary[key + "_bytes"] = path.stat().st_size
+789 |         except BaseException as metadata_error:
+    |                ^^^^^^^^^^^^^
+790 |             summary["metadata_error"] = error_info(metadata_error)
+791 |             failure = failure or metadata_error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:893:12
+    |
+891 |     try:
+892 |         check_output_caps(output)
+893 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+894 |         failure = failure or error
+895 |     attempted = {x["identity"]: x for x in attempts}
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:918:12
+    |
+916 |     try:
+917 |         write_json_bounded(output / "terminal.json", terminal, 64 << 10)
+918 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+919 |         terminal["report_errors"].append(error_info(error))
+920 |         failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:923:12
+    |
+921 |     try:
+922 |         cleanup = stop_child(server, port) if server is not None else {"not_started": True}
+923 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+924 |         cleanup = {"cleanup_error": error_info(error), "confirmed": False}
+925 |         failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:931:12
+    |
+929 |     try:
+930 |         check_output_caps(output)
+931 |     except BaseException as error:
+    |            ^^^^^^^^^^^^^
+932 |         failure = failure or error
+933 |     if not cleanup.get("not_started") and (
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:950:16
+    |
+948 |                     comparison["goodput_difference"] = None
+949 |             reports.append((output / f"{name}-pairs.json", pairs, PAIR_CAP))
+950 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+951 |             terminal["report_errors"].append(error_info(error))
+952 |             failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:956:16
+    |
+954 |         try:
+955 |             write_json_bounded(path, data, limit)
+956 |         except BaseException as error:
+    |                ^^^^^^^^^^^^^
+957 |             terminal["report_errors"].append(error_info(error))
+958 |             failure = failure or error
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> serving/baseline/experiment.py:968:20
+    |
+966 |                     comparison["goodput_difference"] = None
+967 |                 write_json_bounded(output / f"{name}-pairs.json", pairs, PAIR_CAP)
+968 |             except BaseException as error:
+    |                    ^^^^^^^^^^^^^
+969 |                 terminal["report_errors"].append(error_info(error))
+970 |     if terminal["report_errors"] and failure is None:
+    |
+
+Found 16 errors (1 fixed, 15 remaining).

@@ -1,0 +1,16 @@
+/home/postedism/Desktop/Crucible/.cache/t16/html/w2-async-grpo.html: html from reports/w2-async-grpo.md
+579146 bytes written to file /home/postedism/Desktop/Crucible/reports/pdf/w2-async-grpo.pdf
+Creator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36
+Producer:        Skia/PDF m156
+Pages:           4
+Page size:       594.96 x 841.92 pts (A4)
+{"report": "reports/w2-async-grpo.md", "pdf": "reports/pdf/w2-async-grpo.pdf", "pdf_text_chars": 5285, "report_literals": 154, "missing_in_pdf": []}
+/home/postedism/Desktop/Crucible/.cache/t16/html/w3-disaggregated-serving.html: html from reports/w3-disaggregated-serving.md
+568460 bytes written to file /home/postedism/Desktop/Crucible/reports/pdf/w3-disaggregated-serving.pdf
+Creator:         Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36
+Producer:        Skia/PDF m156
+Pages:           4
+Page size:       594.96 x 841.92 pts (A4)
+{"report": "reports/w3-disaggregated-serving.md", "pdf": "reports/pdf/w3-disaggregated-serving.pdf", "pdf_text_chars": 5865, "report_literals": 200, "missing_in_pdf": []}
+783f3c6b2cdab1056664c14066cc129aa38a11cddc65b4ff8611ef4e268656e6  reports/pdf/w2-async-grpo.pdf
+3484990d2eb94a734de04d95d5a87373c4976a390b2194df54d307fdb3fbd71a  reports/pdf/w3-disaggregated-serving.pdf

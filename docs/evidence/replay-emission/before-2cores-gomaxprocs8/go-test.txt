@@ -1,0 +1,262 @@
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:1070 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1070.638229 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1335 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1335.789834 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1435 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1435.726319 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1780 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1780.554705 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=11/400
+    replay_test.go:46: sender-invalid: 11/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:565 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:565.328341 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:600 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:600.493437 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:785 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:785.462064 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1135 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1135.425507 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1295 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1295.453782 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1825 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1825.522704 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=21/400
+    replay_test.go:46: sender-invalid: 21/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:700 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:700.831502 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1100 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1100.918722 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1820 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1820.879671 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=13/400
+    replay_test.go:46: sender-invalid: 13/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:210 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:211.76957 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1000 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1004.661638 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1610 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1610.951332 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=10/400
+    replay_test.go:46: sender-invalid: 10/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:565 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:566.020154 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1430 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1430.152487 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=25/400
+    replay_test.go:46: sender-invalid: 25/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:5 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:5.682351 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:920 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:920.803113 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=17/400
+    replay_test.go:46: sender-invalid: 17/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:130 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:130.139769 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1310 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1311.11245 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1830 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1830.116995 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1850 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1850.77439 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=16/400
+    replay_test.go:46: sender-invalid: 16/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:285 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:285.565384 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:415 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:415.938591 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:960 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:960.94364 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1160 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1160.914155 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1510 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1510.890527 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=12/400
+    replay_test.go:46: sender-invalid: 12/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:100 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:100.970213 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:390 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:390.950553 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:610 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:611.012459 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:680 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:680.754737 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1810 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1810.990134 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=22/400
+    replay_test.go:46: sender-invalid: 22/400
+--- FAIL: TestReplayTimingAccuracy (2.03s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:630 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:631.128702 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:755 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:755.570348 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1080 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1081.030792 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1205 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1205.635922 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1840 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1841.005518 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1870 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1870.641443 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=24/400
+    replay_test.go:46: sender-invalid: 24/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:375 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:376.062728 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1395 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1396.044351 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1445 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1445.306081 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1695 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1695.391567 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1830 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1831.085564 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=10/400
+    replay_test.go:46: sender-invalid: 10/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:1115 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1116.112584 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1375 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1376.10255 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=12/400
+    replay_test.go:46: sender-invalid: 12/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:245 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:245.889119 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:520 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:520.593563 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:560 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:561.713077 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:790 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:790.983375 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:995 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:995.953254 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1115 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1115.996348 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1850 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1850.728593 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=17/400
+    replay_test.go:46: sender-invalid: 17/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:1305 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1305.249255 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1440 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1440.157284 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1580 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1580.897876 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=25/400
+    replay_test.go:46: sender-invalid: 25/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:555 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:556.140746 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1145 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1145.55259 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1495 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1495.492145 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1725 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1725.558885 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1945 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1946.104031 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1975 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1975.741401 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=32/400
+    replay_test.go:46: sender-invalid: 32/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:150 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:150.635765 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:225 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:225.317659 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:275 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:275.553704 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:700 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:701.284337 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:740 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:740.482335 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:810 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:810.567924 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:920 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:923.312995 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1765 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1765.507828 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1950 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1950.345478 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=19/400
+    replay_test.go:46: sender-invalid: 19/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:60 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:60.92773 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:250 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:250.932214 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:345 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:345.52968 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:460 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:460.40498 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1310 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1310.268027 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1460 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1460.470556 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=28/400
+    replay_test.go:46: sender-invalid: 28/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:5 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:5.352677 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:345 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:345.120518 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1165 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1165.180995 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=17/400
+    replay_test.go:46: sender-invalid: 17/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:670 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:670.261454 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1530 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1530.234147 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1780 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1780.566429 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1985 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1985.239202 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=7/400
+    replay_test.go:46: sender-invalid: 7/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:5 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:6.962192 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1155 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1155.564693 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1360 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1360.348888 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=19/400
+    replay_test.go:46: sender-invalid: 19/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:550 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:550.695195 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1235 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1235.966726 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1495 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1495.35399 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=6/400
+    replay_test.go:46: sender-invalid: 6/400
+--- FAIL: TestReplayTimingAccuracy (2.03s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:775 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:775.248274 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:975 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:975.179048 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1035 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1035.24182 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1230 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1230.293681 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1415 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1415.352775 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1510 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1510.264797 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=19/400
+    replay_test.go:46: sender-invalid: 19/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:5 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:5.94366 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:85 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:85.58108 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1610 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1610.326138 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1650 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1651.076803 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=20/400
+    replay_test.go:46: sender-invalid: 20/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:75 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:75.21042 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:250 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:250.988225 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:320 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:320.12233 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:440 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:440.329959 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1780 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1780.133151 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=18/400
+    replay_test.go:46: sender-invalid: 18/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:45 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:45.642367 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:940 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:941.100542 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1445 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1445.203738 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1720 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1720.835673 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=12/400
+    replay_test.go:46: sender-invalid: 12/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:105 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:106.021394 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:640 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:640.293187 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:670 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:670.597478 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:860 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:860.399154 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:930 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:931.392471 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1360 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1360.508731 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1535 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1535.300388 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1575 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1575.495249 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1635 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1635.187411 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=23/400
+    replay_test.go:46: sender-invalid: 23/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:470 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:470.568052 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:745 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:745.467581 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1290 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1290.444798 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1430 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1430.440886 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1605 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1605.476283 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1710 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1710.512127 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=23/400
+    replay_test.go:46: sender-invalid: 23/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:900 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:900.141711 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1085 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1085.298702 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1290 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1290.128544 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1605 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1605.550681 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1830 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1831.080467 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=9/400
+    replay_test.go:46: sender-invalid: 9/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:105 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:106.105182 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:150 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:150.099056 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:190 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:190.312179 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:375 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:375.305784 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:615 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:615.35457 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1345 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1345.201427 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1385 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1385.372274 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1915 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1915.573209 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=18/400
+    replay_test.go:46: sender-invalid: 18/400
+--- FAIL: TestReplayTimingAccuracy (2.01s)
+=== RUN   TestReplayTimingAccuracy
+    replay_test.go:41: request: {ScheduledMs:975 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:975.208885 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1390 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1391.164917 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:41: request: {ScheduledMs:1960 SentMs:-1 TTFTms:-1 TPOTms:-1 CompletedMs:1960.213446 OutputTokens:0 Coalesced:false Status:transport_error Error:missing emission timestamp}
+    replay_test.go:44: 200 rps: late=20/400
+    replay_test.go:46: sender-invalid: 20/400
+--- FAIL: TestReplayTimingAccuracy (2.02s)
+FAIL

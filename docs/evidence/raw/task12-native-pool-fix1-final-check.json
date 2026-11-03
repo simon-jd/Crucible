@@ -1,0 +1,19 @@
+{
+  "status": "static-final-self-review-passed-no-native",
+  "sources_verified": 183,
+  "artifacts_verified": 207,
+  "executables_verified": 4,
+  "changed_sources_relative_v1": [
+    "/home/postedism/Desktop/Crucible/serving/baseline/experiment.py",
+    "/home/postedism/Desktop/Crucible/serving/baseline/README.md",
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_pool.py",
+    "/home/postedism/Desktop/Crucible/serving/baseline/native_pool_test.py"
+  ],
+  "original_native_command_flags_protocol_caps_lifecycle_acceptance_resource_plan_equal": true,
+  "only_environment_change": "append explicit RAYON_NUM_THREADS unset to preserve default; static-only setting isolated",
+  "proposal_sha256": "c90c71457ea85443b6bb290c72210ccdcc82793c71359620ac796ad7c637b692",
+  "freeze_sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a",
+  "actual_client_reused_no_rebuild": true,
+  "primary_failures_and_static_history_preserved": true,
+  "future_native_gate_required": true
+}

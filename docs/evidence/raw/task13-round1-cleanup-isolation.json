@@ -1,0 +1,11 @@
+{
+  "old_raw_count": 31,
+  "old_raw_changed": [],
+  "frozen_source_count": 169,
+  "frozen_artifact_count": 15,
+  "frozen_changed": [],
+  "owned_fixture_directory": "/home/postedism/Desktop/Crucible/.cache/task13-cpu",
+  "all_subprocess_handles_terminal": true,
+  "cleanup": "rmdir exact owned empty directory",
+  "fixture_exists_after": false
+}

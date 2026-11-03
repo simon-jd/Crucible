@@ -1,0 +1,1032 @@
+{
+  "mode": "bridge-v2",
+  "command": [
+    "/home/postedism/Desktop/Crucible/.venv-ml/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-v",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/home/postedism/Desktop/Crucible/.cache/task11-ram-handoff/bridge-v2/pytest",
+    "rl/sync/tests/test_phase_bridge.py",
+    "rl/rollout/tests/test_ram_loader.py",
+    "rl/learner/tests/test_stream_handoff.py::test_malformed_manifest_rejected_before_allocation",
+    "rl/learner/tests/test_stream_handoff.py::test_manifest_allocation_read_boundary_and_no_cuda_queries",
+    "rl/learner/tests/test_stream_handoff.py::test_destination_allowance_is_checked_before_allocation",
+    "rl/learner/tests/test_stream_handoff.py::test_stream_real_adamw_consumption_and_fresh_inspect",
+    "rl/rollout/tests/test_rpc.py::test_transport_close_error_cannot_skip_owned_process_cleanup"
+  ],
+  "initial_resource": {
+    "project_bytes": 13316862355,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306702124,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996702124,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "source_sha256": {
+    "rl/learner/state_handoff.py": "8ebe358deab1c02981c546870f85c39d236f31cefb4ac8290e5cbaa88c3ac4c6",
+    "rl/learner/handoff_zip.py": "631ba0699de344bde4191b3a2a0e1c4ab4f290f98e40dbad32fdcb7d0dc1c405",
+    "rl/learner/handoff_stream.py": "30ce5f1c8081a80dd2bd390e7d3487c33675b832c52b00be1529a80e2e7e556e",
+    "rl/learner/handoff_protocol.py": "687dd2dcce4f5b5d3d1b2da8350c9d11ba36201779a7838103f3d7c0c09d30e5",
+    "rl/learner/tests/test_stream_handoff.py": "277395212f6d110659d1bb73b11b9b92b8b5e0266865d7666693c828ce446f78",
+    "rl/learner/train.py": "4293dd0ff5ac658f5f56e56573f616214cc74a8fbdde4492f67e65cef7d9c3b3",
+    "rl/learner/README.md": "0841c8efcc9fcb29089ffc0cb90e2a01054454ecf593aca8a6bfd3869336edc8",
+    "rl/learner/tests/test_state_handoff.py": "a94a87eb490a7b43ba7779385d04abb5a4f20094cdec592847484188d3f831c7",
+    "rl/learner/tests/handoff_worker.py": "10d1e21ca458a33c444ca7009e264b62a774df187f67e069f1d32cd51ce36c55",
+    "scripts/test_ram_handoff_cpu.py": "1ac5e0bef7bd9aff0a7d34f8d8d39893c3fda699f64efd42cfccd5a5f5ac7248",
+    "rl/sync/ram_weights.py": "27f9fb091a87d07949102ddf1406265806b715367fec438a558836ce21fee78d",
+    "rl/sync/ram_export.py": "454f3919a48afc12601784813756c1f19ede78c33c7639ceb5942c20b01334ec",
+    "rl/sync/phase_bridge.py": "05a764acee9b74262fb5a9d09165b9a1ca01df1e5eddb11c8007030949f0efc8",
+    "rl/rollout/ram_loader.py": "d526c5919ac10a30c698ba8ab68582908467fcb23c8b918b4b5a325f4df9ebf5",
+    "rl/rollout/_worker.py": "1489259a89e191298b282e26a5dfe244e146b41e667634ffb294c7f9663a9a6a",
+    "rl/rollout/engine.py": "fcf2133d0f98ce99d7a21bbfd7152b391a488221d68354cc838a5435486a964c",
+    "rl/rollout/_rpc.py": "39af109ae6662a30bec25bf9c94bc72ec24f06e8ef8f503d67180b9dba793814",
+    "rl/rollout/sampler.py": "03db054d7d99d0fb0714c75001ff9a71b1ec82bf494bb9ad3acf6266badb81a1",
+    "rl/sync/tests/ram_worker.py": "bc26daceba09cd03c284b03ab7af5f977e8976b959dec1a2ad4f664412362765",
+    "rl/sync/tests/test_ram_weights.py": "86c49b1b0b077b40ed8498022aa2a629ba457d0d4bc29f5eff7d1af2acc398d6",
+    "rl/sync/tests/test_phase_bridge.py": "a207a953d3e92ba06b649ad0bad8eabec126cdfbcc2d9f0328e4ce86e6c5668a",
+    "rl/rollout/tests/test_ram_loader.py": "df164f7054dfdc247e4d526b16339c650ee60c48d1b2c3914af3df8b76371339",
+    "rl/sync/README.md": "860bbe3cd888c457869604a0093f6220fad951738f8fc008ef6a8581f80e5a4d",
+    "rl/rollout/README.md": "58fca9a1c586caaa83e572f2e9dcee1afb2462c0dc14eb19307115614139e994",
+    "rl/rollout/tests/test_rpc.py": "1a0dc44c3d98acdd44e54735c88029916a9523036c6d7fd1b9b5b93d61ee1a20"
+  },
+  "limits": {
+    "seconds": 120,
+    "cleanup_seconds": 5,
+    "scratch_bytes": 1000000,
+    "aggregate_rss_plus_anonymous": 2000000000,
+    "anonymous_reserve": 8388608,
+    "fsize": 262144
+  },
+  "samples": [
+    {
+      "elapsed": 1.87207214103546,
+      "rss": 43888640,
+      "charged": 52277248,
+      "pids": [
+        2,
+        3
+      ],
+      "scratch_bytes": 0
+    },
+    {
+      "elapsed": 2.881352341035381,
+      "rss": 663216128,
+      "charged": 671604736,
+      "pids": [
+        2,
+        3
+      ],
+      "scratch_bytes": 2355
+    },
+    {
+      "elapsed": 3.8923961679684,
+      "rss": 1246662656,
+      "charged": 1255051264,
+      "pids": [
+        2,
+        3,
+        5
+      ],
+      "scratch_bytes": 4732
+    },
+    {
+      "elapsed": 4.903511687065475,
+      "rss": 1194762240,
+      "charged": 1203150848,
+      "pids": [
+        2,
+        3,
+        7
+      ],
+      "scratch_bytes": 2377
+    },
+    {
+      "elapsed": 5.916565046063624,
+      "rss": 1233641472,
+      "charged": 1242030080,
+      "pids": [
+        2,
+        3,
+        8,
+        9
+      ],
+      "scratch_bytes": 2377
+    },
+    {
+      "elapsed": 6.9286464400356635,
+      "rss": 1186549760,
+      "charged": 1194938368,
+      "pids": [
+        2,
+        3,
+        8,
+        10
+      ],
+      "scratch_bytes": 2377
+    },
+    {
+      "elapsed": 7.940106046036817,
+      "rss": 718843904,
+      "charged": 727232512,
+      "pids": [
+        2,
+        3,
+        8
+      ],
+      "scratch_bytes": 2377
+    },
+    {
+      "elapsed": 8.957652959041297,
+      "rss": 1146232832,
+      "charged": 1154621440,
+      "pids": [
+        2,
+        3,
+        8,
+        13
+      ],
+      "scratch_bytes": 2377
+    },
+    {
+      "elapsed": 9.971115992055275,
+      "rss": 718843904,
+      "charged": 727232512,
+      "pids": [
+        2,
+        3,
+        8,
+        13
+      ],
+      "scratch_bytes": 2377
+    },
+    {
+      "elapsed": 10.985240019974299,
+      "rss": 1358487552,
+      "charged": 1366876160,
+      "pids": [
+        2,
+        3,
+        8,
+        14
+      ],
+      "scratch_bytes": 4732
+    },
+    {
+      "elapsed": 11.998463583993725,
+      "rss": 1224699904,
+      "charged": 1233088512,
+      "pids": [
+        2,
+        3,
+        8,
+        16
+      ],
+      "scratch_bytes": 2399
+    },
+    {
+      "elapsed": 13.010695245000534,
+      "rss": 1164582912,
+      "charged": 1172971520,
+      "pids": [
+        2,
+        3,
+        8,
+        18
+      ],
+      "scratch_bytes": 2399
+    },
+    {
+      "elapsed": 14.02806895901449,
+      "rss": 1367519232,
+      "charged": 1375907840,
+      "pids": [
+        2,
+        3,
+        8,
+        18
+      ],
+      "scratch_bytes": 2399
+    },
+    {
+      "elapsed": 15.040892916964367,
+      "rss": 1335271424,
+      "charged": 1343660032,
+      "pids": [
+        2,
+        3,
+        8,
+        20
+      ],
+      "scratch_bytes": 4776
+    },
+    {
+      "elapsed": 16.056277583003975,
+      "rss": 1224863744,
+      "charged": 1233252352,
+      "pids": [
+        2,
+        3,
+        8,
+        22
+      ],
+      "scratch_bytes": 2421
+    },
+    {
+      "elapsed": 17.07533477898687,
+      "rss": 1161609216,
+      "charged": 1169997824,
+      "pids": [
+        2,
+        3,
+        8,
+        23
+      ],
+      "scratch_bytes": 2443
+    },
+    {
+      "elapsed": 18.090069010970183,
+      "rss": 1367363584,
+      "charged": 1375752192,
+      "pids": [
+        2,
+        3,
+        8,
+        23
+      ],
+      "scratch_bytes": 2443
+    },
+    {
+      "elapsed": 19.104915334028192,
+      "rss": 1212981248,
+      "charged": 1221369856,
+      "pids": [
+        2,
+        3,
+        8,
+        25
+      ],
+      "scratch_bytes": 2465
+    },
+    {
+      "elapsed": 20.13101347105112,
+      "rss": 1367400448,
+      "charged": 1375789056,
+      "pids": [
+        2,
+        3,
+        8,
+        25
+      ],
+      "scratch_bytes": 2465
+    },
+    {
+      "elapsed": 21.15423870901577,
+      "rss": 1269211136,
+      "charged": 1277599744,
+      "pids": [
+        2,
+        3,
+        8,
+        27
+      ],
+      "scratch_bytes": 4842
+    },
+    {
+      "elapsed": 22.171481517027132,
+      "rss": 1203310592,
+      "charged": 1211699200,
+      "pids": [
+        2,
+        3,
+        8,
+        29
+      ],
+      "scratch_bytes": 2509
+    },
+    {
+      "elapsed": 23.187652515014634,
+      "rss": 718843904,
+      "charged": 727232512,
+      "pids": [
+        2,
+        3,
+        8
+      ],
+      "scratch_bytes": 2509
+    },
+    {
+      "elapsed": 24.204005779,
+      "rss": 1353490432,
+      "charged": 1361879040,
+      "pids": [
+        2,
+        3,
+        8,
+        31
+      ],
+      "scratch_bytes": 4886
+    },
+    {
+      "elapsed": 25.220763518009335,
+      "rss": 1242046464,
+      "charged": 1250435072,
+      "pids": [
+        2,
+        3,
+        8,
+        33
+      ],
+      "scratch_bytes": 2531
+    },
+    {
+      "elapsed": 26.246316949022003,
+      "rss": 1335828480,
+      "charged": 1344217088,
+      "pids": [
+        2,
+        3,
+        8,
+        34
+      ],
+      "scratch_bytes": 4908
+    },
+    {
+      "elapsed": 27.26737656199839,
+      "rss": 1227231232,
+      "charged": 1235619840,
+      "pids": [
+        2,
+        3,
+        8,
+        36
+      ],
+      "scratch_bytes": 2575
+    },
+    {
+      "elapsed": 28.2875843050424,
+      "rss": 1163849728,
+      "charged": 1172238336,
+      "pids": [
+        2,
+        3,
+        8,
+        38
+      ],
+      "scratch_bytes": 2575
+    },
+    {
+      "elapsed": 29.306299910065718,
+      "rss": 718991360,
+      "charged": 727379968,
+      "pids": [
+        2,
+        3,
+        8
+      ],
+      "scratch_bytes": 2555
+    },
+    {
+      "elapsed": 30.32514476403594,
+      "rss": 1246883840,
+      "charged": 1255272448,
+      "pids": [
+        2,
+        3,
+        8,
+        39
+      ],
+      "scratch_bytes": 4910
+    },
+    {
+      "elapsed": 31.343751847045496,
+      "rss": 1224634368,
+      "charged": 1233022976,
+      "pids": [
+        2,
+        3,
+        8,
+        40
+      ],
+      "scratch_bytes": 2555
+    },
+    {
+      "elapsed": 32.384815654018894,
+      "rss": 1361018880,
+      "charged": 1369407488,
+      "pids": [
+        2,
+        3,
+        8,
+        40
+      ],
+      "scratch_bytes": 4910
+    },
+    {
+      "elapsed": 33.39396758296061,
+      "rss": 1361018880,
+      "charged": 1369407488,
+      "pids": [
+        2,
+        3,
+        8,
+        40
+      ],
+      "scratch_bytes": 4910
+    },
+    {
+      "elapsed": 34.43133827496786,
+      "rss": 1217646592,
+      "charged": 1226035200,
+      "pids": [
+        2,
+        3,
+        8,
+        41
+      ],
+      "scratch_bytes": 4910
+    },
+    {
+      "elapsed": 35.482003703014925,
+      "rss": 1361084416,
+      "charged": 1369473024,
+      "pids": [
+        2,
+        3,
+        8,
+        41
+      ],
+      "scratch_bytes": 7265
+    },
+    {
+      "elapsed": 36.532806879025884,
+      "rss": 1361084416,
+      "charged": 1369473024,
+      "pids": [
+        2,
+        3,
+        8,
+        41
+      ],
+      "scratch_bytes": 7265
+    },
+    {
+      "elapsed": 37.56591553403996,
+      "rss": 1201717248,
+      "charged": 1210105856,
+      "pids": [
+        2,
+        3,
+        8,
+        42
+      ],
+      "scratch_bytes": 7265
+    },
+    {
+      "elapsed": 38.58792654098943,
+      "rss": 1082863616,
+      "charged": 1091252224,
+      "pids": [
+        2,
+        3,
+        8,
+        44
+      ],
+      "scratch_bytes": 7265
+    },
+    {
+      "elapsed": 39.607309103012085,
+      "rss": 1367023616,
+      "charged": 1375412224,
+      "pids": [
+        2,
+        3,
+        8,
+        44
+      ],
+      "scratch_bytes": 7265
+    },
+    {
+      "elapsed": 40.62705749901943,
+      "rss": 1336352768,
+      "charged": 1344741376,
+      "pids": [
+        2,
+        3,
+        8,
+        46
+      ],
+      "scratch_bytes": 9620
+    },
+    {
+      "elapsed": 41.64863933506422,
+      "rss": 43433984,
+      "charged": 51822592,
+      "pids": [
+        2,
+        3
+      ],
+      "scratch_bytes": 4910
+    }
+  ],
+  "errors": [],
+  "exit_code": 0,
+  "cleanup_confirmed": true,
+  "peak_sampled_charge": 1502236672,
+  "remaining_owned_children": [],
+  "final_resource": {
+    "project_bytes": 13316873898,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306713667,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996713667,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "scratch_bytes": 4910,
+  "scratch_inventory": [
+    {
+      "path": ".cache/task11-ram-handoff",
+      "dev": 66307,
+      "inode": 56395127,
+      "mode": 16893,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2",
+      "dev": 66307,
+      "inode": 56395130,
+      "mode": 16893,
+      "nlink": 12,
+      "size": 4096,
+      "mtime_ns": 1792950885010779720
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/cuda",
+      "dev": 66307,
+      "inode": 56395141,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/cupy",
+      "dev": 66307,
+      "inode": 56395143,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/inductor",
+      "dev": 66307,
+      "inode": 56395137,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/numba",
+      "dev": 66307,
+      "inode": 56395144,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest",
+      "dev": 66307,
+      "inode": 56395151,
+      "mode": 16832,
+      "nlink": 17,
+      "size": 4096,
+      "mtime_ns": 1792950915853581031
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-134ce305a8369f97b78fd5dc86e4b9e2a9010832647cf18f3ea3587015f59e98",
+      "dev": 66307,
+      "inode": 56395225,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950915853581031
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-64db668b49262a4aeac9787e7cdd36f4cbf15cc42944a86af648b3bec45a7341",
+      "dev": 66307,
+      "inode": 56395214,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950911412609640
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-a4795cd35ed287c8403ef09963cd77f87d950ada8801262b34d5f92c3012634b",
+      "dev": 66307,
+      "inode": 56395215,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950912693601388
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-e0ed22084aa915b72b5337cbc5fc035ef0be405684940c415783c0deb55e1da1",
+      "dev": 66307,
+      "inode": 56395210,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950911349610045
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/loader-fd948638c20c0008d311d2b3992470493cd29a01dbd5a08010a860ecd85eed8a",
+      "dev": 66307,
+      "inode": 56395211,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950911380609846
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c",
+      "dev": 66307,
+      "inode": 56395197,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950907226636606
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets",
+      "dev": 66307,
+      "inode": 56395202,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950907226636606
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-1329ee78ee9ce33c0e559bfa698ea88d039fa20580de52bb047aba33fb78e08c/assets/config.json",
+      "dev": 66307,
+      "inode": 56395204,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950907228082558,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da",
+      "dev": 66307,
+      "inode": 56395171,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950898719691407
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets",
+      "dev": 66307,
+      "inode": 56395173,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950898719691407
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-61f0b81ae71bdf1e43e5c2d1dd100badcbfb1d678422c88d1cf6b5b343c1a6da/assets/config.json",
+      "dev": 66307,
+      "inode": 56395174,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950898721172870,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215",
+      "dev": 66307,
+      "inode": 56395157,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950893261726567
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets",
+      "dev": 66307,
+      "inode": 56395158,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950893261726567
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-85299c851822d4f76a6a40f05426d0262dd37717c88c208f364f350a4fa8f215/assets/config.json",
+      "dev": 66307,
+      "inode": 56395163,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950893263373384,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0",
+      "dev": 66307,
+      "inode": 56395175,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950900251681538
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets",
+      "dev": 66307,
+      "inode": 56395176,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950900251681538
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-97cef9fd0165412a0c040922ecfab54e17d251a64cbe7905cb336e634052f9a0/assets/config.json",
+      "dev": 66307,
+      "inode": 56395179,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950900252838134,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5",
+      "dev": 66307,
+      "inode": 56395180,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950902206668944
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets",
+      "dev": 66307,
+      "inode": 56395181,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950902206668944
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-a559e7c7375948006869544b76fb94213a8ebbcc6fd2ebfcd1aff5b37f955fc5/assets/config.json",
+      "dev": 66307,
+      "inode": 56395182,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950902208332459,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe",
+      "dev": 66307,
+      "inode": 56395152,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950885018779668
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets",
+      "dev": 66307,
+      "inode": 56395153,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950885018779668
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-b4a5de3c3c5baa969899cd4b215c455934cd949d4c61ba626a10dd066f2688fe/assets/config.json",
+      "dev": 66307,
+      "inode": 56395156,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950885019826866,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8",
+      "dev": 66307,
+      "inode": 56395205,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950908574627922
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets",
+      "dev": 66307,
+      "inode": 56395206,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950908574627922
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-bb347e4ebe600c19fbfef83cdb860b16039b0ca98d66241d510a309f31f660f8/assets/config.json",
+      "dev": 66307,
+      "inode": 56395209,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2,
+      "mtime_ns": 1792950910726722771,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871",
+      "dev": 66307,
+      "inode": 56395183,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950903676670539
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets",
+      "dev": 66307,
+      "inode": 56395184,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950903676670539
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-c895178bf89896fabd7fd1771dfd5270bca641829a686cf65784bd6458970871/assets/config.json",
+      "dev": 66307,
+      "inode": 56395186,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950903677232012,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9",
+      "dev": 66307,
+      "inode": 56395193,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950905091650359
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets",
+      "dev": 66307,
+      "inode": 56395194,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950905091650359
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-d7acee3a5ab5dd885aa509c7bd743065ac9b37e01ea965113d973734773672d9/assets/config.json",
+      "dev": 66307,
+      "inode": 56395196,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950905093176820,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63",
+      "dev": 66307,
+      "inode": 56395166,
+      "mode": 16832,
+      "nlink": 3,
+      "size": 4096,
+      "mtime_ns": 1792950896016708820
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets",
+      "dev": 66307,
+      "inode": 56395167,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950896016708820
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/pytest/phase-fd8dd64c68d2c549ec27a6c00a8cf84dab5b6ff096d2ea2c5cda6e2a6479bc63/assets/config.json",
+      "dev": 66307,
+      "inode": 56395168,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 22,
+      "mtime_ns": 1792950896018131829,
+      "sha256": "3ea011c96fbc6ca4f0bd3efa020370e6fd34dda1c1dfd67c39c9fb559aa07d20"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp",
+      "dev": 66307,
+      "inode": 56395133,
+      "mode": 16893,
+      "nlink": 4,
+      "size": 4096,
+      "mtime_ns": 1792950923209533644
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k",
+      "dev": 66307,
+      "inode": 56395226,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950916568576425
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmp74yiex7k/_remote_module_non_scriptable.py",
+      "dev": 66307,
+      "inode": 56395227,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2355,
+      "mtime_ns": 1792950916569670758,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd",
+      "dev": 66307,
+      "inode": 56395222,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950913404596807
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/tmp/tmpi747lcxd/_remote_module_non_scriptable.py",
+      "dev": 66307,
+      "inode": 56395223,
+      "mode": 33204,
+      "nlink": 1,
+      "size": 2355,
+      "mtime_ns": 1792950913405831330,
+      "sha256": "8205b16956fb264841ecd8644784a0d157f87df79b17c16825dc1163433ce5d8"
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/torch",
+      "dev": 66307,
+      "inode": 56395136,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/triton",
+      "dev": 66307,
+      "inode": 56395138,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/vllm",
+      "dev": 66307,
+      "inode": 56395146,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    },
+    {
+      "path": ".cache/task11-ram-handoff/bridge-v2/xdg",
+      "dev": 66307,
+      "inode": 56395134,
+      "mode": 16893,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1792950883772787695
+    }
+  ]
+}

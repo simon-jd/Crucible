@@ -1,0 +1,53 @@
+{
+  "time_utc": "2026-10-25T19:29:39.086113+00:00",
+  "source_sha256": {
+    "serving/baseline/native_ipc.py": "91d153fafb016ea7596d078311c0251b2d97e42adc28302a1201bf0b98b8e15e",
+    "serving/baseline/native_ipc_test.py": "503609471d5ac66f3b7c7b873b830cdbb25b9df04477fb31d8ed0fa5c1dcc66b",
+    "serving/baseline/native_pool.py": "2d339a4ad975c104cc22f4a4ce2756ac472f768bc3b01ebef0b9aa93e701e07b",
+    "serving/baseline/runtime_entry.py": "c507496980279dd8be3d7741a6b9c08afda8d1b7c4b92c82b4bc04c0f4e3308b",
+    "serving/baseline/experiment.py": "e2a75067a3d6e2ecef51e25cb460e047172fd1e2fc1b452a9a78f29cfa18f30c",
+    "serving/baseline/cache-audit.json": "2f1c57563292533b54fb7614aba2ef93d1287f4da0a1b85f5e87244fbd6d1c80"
+  },
+  "proposal_v2_sha256": "f07694cf29b35e42470f47cdf9e1c444f224876303c32c721d7f482755e24cde",
+  "project_bytes": 13318234860,
+  "projected_bytes": 13998010435,
+  "future_plus1500000": 13999510435,
+  "scope": "one new82-case CPU GREEN, maxfail1; already-passed old suites excluded",
+  "expected_cases": 82,
+  "ROOT_reviewed_all_new_code_test_source": true,
+  "static_pass_and_AST_same": true,
+  "exact_command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "60s",
+    "/usr/bin/prlimit",
+    "--as=512000000:512000000",
+    "--fsize=65536:65536",
+    "--core=0:0",
+    "--",
+    "/home/postedism/Desktop/Crucible/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--maxfail=1",
+    "--tb=short",
+    "--basetemp=.tmp-task12-ipc-pytest",
+    "serving/baseline/native_ipc_test.py"
+  ],
+  "root_monitor": {
+    "RSS_aggregate_stop": 512000000,
+    "scratch_stop": 256000,
+    "stdout_stop": 32768,
+    "wall": 60,
+    "TERM_KILL_grace": 5,
+    "core": 0
+  },
+  "original_full03_pool_and_evidence_not_reused": true,
+  "GPU_authorized": false
+}

@@ -1,0 +1,2912 @@
+{
+  "lock_sha256": "2183ac96fead291b5ece21dfe04a4da0e68b28daad5cc97acb7adb7ecd0b6081",
+  "inventory": [
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.6.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "3525e5849c007e2dfcd1e123028ec14383ff4d56a5f718b4aa4c995a26ccb153"
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.12.15",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b99b7830c40a7c041ba66c7243adf21c0a607c82d20f8968306c44efd61f30a1"
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "09247ef1da8bc696728d47130e702e4307f6f7d101d6c485bff9f3a71ce7008d"
+    },
+    {
+      "name": "airportsdata",
+      "version": "20260905",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4cbf5f83da0ad341fe4e3ef60678a968abdc4b9d5b69a1e5dcbc483ed9638b0a"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ee5b6ac64b09274c026051813484025939564067801f485115d9cadc207cf791"
+    },
+    {
+      "name": "anthropic",
+      "version": "0.71.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "b5195e7ecae4bfb0511ff81b66230eb3a5a602a738bcc45a193e175283beea4c"
+    },
+    {
+      "name": "anyio",
+      "version": "4.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "cab41c4ad137ce03f81be673fbba956b0f7da9bf834ccda01e0c0fff5a4006ee"
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "version": "0.1.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c0853b0c1119730d97662e75296500ca93384cde0ed91af5f04aee4e6c7ace2f"
+    },
+    {
+      "name": "asttokens",
+      "version": "3.0.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "8b3567b29654e6e9a60ab50fde2c317899152790acadaab7868a708bf931c3d3"
+    },
+    {
+      "name": "attrs",
+      "version": "25.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5b7f1c4448fbb35c2a35fd5f838855c1998bd7187401d4a9e0886d4cc44e8a7c"
+    },
+    {
+      "name": "blobfile",
+      "version": "3.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "79a7732ed7d83494cfeaa0c4b9c0f0d663c30e531fd1058dff49e729f1e4bfdb"
+    },
+    {
+      "name": "build",
+      "version": "1.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "8bf61ef1c4aeb139423ab04e5a97248889f4864c5be948b4daf602f5aa531dfc"
+    },
+    {
+      "name": "certifi",
+      "version": "2025.8.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "cf8b06ddfa2c6cfde7be2b9bfd352949bef5cf46cf9aca775dae9921ab4651ee"
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b98ce7e3417af089bc12d5c73412d9b3b1683ccf8ec73c986c35ac8c9be1ba39"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "9c134eb243d4b5ca87b5a48f3da25a7e35eb96270f70f2202c5ce92504e0bda0"
+    },
+    {
+      "name": "click",
+      "version": "8.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "3fabe910767f30b06de123b6781f9069a75c39d8b39e4cda66d248991a3bfd5e"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "fef3b5de3d1f2213c8183d488c75130b2d4f509885600b51f0f303d0a2db301f"
+    },
+    {
+      "name": "compressed-tensors",
+      "version": "0.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "441b79b9fe7ef9b26f7ff34fc6368e097d07a0780755437d6bc7e6688c970803"
+    },
+    {
+      "name": "cuda-bindings",
+      "version": "12.9.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e89661f414ebd3b325b664a9f671274c0e0ea1889eb8b02c441ee0d5375249c4"
+    },
+    {
+      "name": "cuda-pathfinder",
+      "version": "1.8.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d9e367a2c6f8f01bb3585e070c5f01e35832c8658b247c3f776baa54ed753b40"
+    },
+    {
+      "name": "cuda-python",
+      "version": "12.9.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "9f81e0df453c3fae510a4042ebfc5e24c40ca96dd5818d1e61b9d76fcb4166b8"
+    },
+    {
+      "name": "datasets",
+      "version": "4.1.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "8ca0320acdfc173db4e4c369eec8b8f6dba009d7514f155a500219b8debf377d"
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "2133792485403bbd739e1db5960228bedbcde6d00c0acc052b27f39dbae5b5c4"
+    },
+    {
+      "name": "decord2",
+      "version": "3.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "cd77e7bfc64fdb25d0d71a5d4a90736006101d665a549257b2a17bedad77df4f"
+    },
+    {
+      "name": "dill",
+      "version": "0.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "673af578ab6e4efaeb88bf87ff80e637b7f18c1f6d10dcc6473d03c0023bbb94"
+    },
+    {
+      "name": "diskcache",
+      "version": "5.6.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6fc70cff43a3c6666531e6c268e90059fb93ae58aed708163c0ceecab24dbaef"
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "31632ab2de5591131091b3397bdcdf797718579d85a75186f06839dd0c09e81d"
+    },
+    {
+      "name": "docstring-parser",
+      "version": "0.18.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "cbc42027997fd4b194ae5fd064a4d1e57b92976941d0c26d369561a7c016a333"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "79529559045603ccd27713c844f2b57247c48e93135077bdb904bc53ed189403"
+    },
+    {
+      "name": "executing",
+      "version": "2.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d619489e8b06a0bcd934e4dae17fe86bd651b2aea0b3a4d2964221fd66c55db0"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.118.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "454eec5d16190c50116e4492b0ef063eb63b51f63bea599fab0f4a676bd74fa8"
+    },
+    {
+      "name": "filelock",
+      "version": "3.19.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "822e98d63d6669cd35e35b0907f41ad8c4ef870c92260d84a868dd7e1040e0e8"
+    },
+    {
+      "name": "flashinfer-cubin",
+      "version": "0.5.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "0713f469cd8e7c827b773520010438ee38357be0d0aada9c5dc2eea5402e90b9"
+    },
+    {
+      "name": "flashinfer-python",
+      "version": "0.5.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "6223dfa7c68fda359be148310ba2e9faa9296550afde0b06ac62810662725e46"
+    },
+    {
+      "name": "frozendict",
+      "version": "2.4.6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "16429470df04611c8365e6d584224051051b6ac5fca9a65e0e8a7d82143dad41"
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.7.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8b5ed851b564399a4c8490e7c8eec172108b7b222576dc7aaed8f920a5581b40"
+    },
+    {
+      "name": "fsspec",
+      "version": "2025.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5663281a5ba84614179508a062cf64cf09577cf220d4a06444bed5d85e4ed81d"
+    },
+    {
+      "name": "gguf",
+      "version": "0.17.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a5af3f71ee6e7e858a1ead73ce1f7b1dee771198c5b5114e3450d6b65ee69002"
+    },
+    {
+      "name": "grpcio",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c2f68ec54428fbd7ae36858061733c32f136a0a0980264de4c7bf32e3107772b"
+    },
+    {
+      "name": "grpcio-health-checking",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c82b9066e0d54c525d9c9950603decb94882df0a1b5d20b15ed117aac106a177"
+    },
+    {
+      "name": "grpcio-reflection",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d8eb720768ad96425a253ce41b5c564342570670649485607df03e854b21e7c7"
+    },
+    {
+      "name": "grpcio-tools",
+      "version": "1.75.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d0be5b801233aad2c2fec9518ff1d0d01b17dff1984b1ce83d79def8348cad71"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64"
+    },
+    {
+      "name": "hf-transfer",
+      "version": "0.1.9",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "70849fb99f222aba6c6425a4c48f88151702de1b4304e08c5d74fe96227d1490"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.1.10",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b853727d47b4c1ede81d61be48f5020430166241c24f5241550691660e3f0f94"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "fe2d4fda6199128978779e0cf27f3c045c531863fcdd987eacc74f3a18d41c21"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "febb9b0f8f3e80d57c8199c304f35c4336e8581d1d18d7983c92766b82793b25"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.35.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a123ddd70795cc50d0108215d5dedca13b4df6eca6b63c9594679fb5556ab36e"
+    },
+    {
+      "name": "idna",
+      "version": "3.10",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5114796720df4353c2106864628a23a9f8b645ad2d6aedbefa58701b85d27e32"
+    },
+    {
+      "name": "interegular",
+      "version": "0.3.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "c7598668f970b37c6d21612cc2abc9253156bf8b5c3905524793ed9af309acb3"
+    },
+    {
+      "name": "ipython",
+      "version": "9.6.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "501c8699e1affb71f96a269e65535f61d21d51e6200eaffe80f7a8925af726d0"
+    },
+    {
+      "name": "ipython-pygments-lexers",
+      "version": "1.1.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "6b38c0946bdbc4778f4e38e2298547cbd7d13aeba9979ec4e4a412eabfbdfadb"
+    },
+    {
+      "name": "jedi",
+      "version": "0.20.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "b9450ab995663c682c807066e067a2f4c176de4754901c61c95ba9144291516a"
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+    },
+    {
+      "name": "jiter",
+      "version": "0.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6b478e8e80231d5f21b8f292d6be60e3ef2af112004eb409f39fb3b810079577"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.25.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "31f83c1579e46e1af62269cefa5d83534ef155f3ee21914f7881bbd544bc125c"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "35abd41757f32b4ea24756920ded47b70173d77cbc052a5a6d3ab583b2e8d89d"
+    },
+    {
+      "name": "lark",
+      "version": "1.2.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "4beebd1ee349af492d96f6fb2795c4e3c8216ffe9a8589fc92c756f47701f9dd"
+    },
+    {
+      "name": "llguidance",
+      "version": "0.7.30",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2757077b7cdabb6d6bd370ad9c5e2a9bffd765954d9518fe1578b73615bdedcc"
+    },
+    {
+      "name": "lxml",
+      "version": "6.0.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d2a20793094d4d3333e3e7397bc6676db1a0b7fbe96191c2128a97c9c911f794"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "12b4cc61a7fa288cf7667ee3f213786d9619db57fb33ff6f934afbcb5c12ec81"
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.2.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "fedb3d587ec2d3fa4b0a81fd5353df697d2534c8ee714dbf050009afc60bcab7"
+    },
+    {
+      "name": "modelscope",
+      "version": "1.31.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "02df2db47ef98fb1feb3e6f4641bca668e156e70b4f16f27a69b164e1a7189ce"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406"
+    },
+    {
+      "name": "msgspec",
+      "version": "0.19.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f04db5993a3331d8d79b5e7eb1f9ac149d3b0170138d8f9ad224086027ae264f"
+    },
+    {
+      "name": "multidict",
+      "version": "6.6.4",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "bee9a91478d3a6105a52be28555aa915d4a053c44ebce577768189606e507136"
+    },
+    {
+      "name": "multiprocess",
+      "version": "0.70.16",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4afd9e1f60a38f28d561aaf24caa8791b25397195503e49b9b3882824049790d"
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.6.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "7f7b98f9e1a28a9597d70df9158175a22d05446ce4b328908d920e7293d35bd2"
+    },
+    {
+      "name": "networkx",
+      "version": "3.5",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "18b28258a7a706532cc5e97549a0f1beb39ba7b299c085904367c4930d4f8b94"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8d76fc4e382cedcd22bcaeaa748af39b3fa7931b72442396d15cb181659d0a4e"
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "22d648f53848429464ca643b40d73b49a920d47876fc77c395d4dca4e834904a"
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.8.4.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "310556f1c2c31ec517d4b049eaf12374081d1c52c8ef4d8eceab2aaf1edff2df"
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "version": "12.8.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6df7fa2fcdfa046eb952f3f8c172f524b2e19a654ec037da3dbb32e93d9671d1"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.8.93",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "376458a22054b4a36e110dfab570df4bc658c037a2fb47184bdc4dff7ab90d23"
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "version": "12.8.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "00431338ea983d4be2f46f9fd29cec2fd9bfa39553933ca59fd37192e7d0f82f"
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.10.2.21",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7dc7ea3541119ddea15ed9a68e9f01e4a160b164607abad22f9dec54e2937266"
+    },
+    {
+      "name": "nvidia-cudnn-frontend",
+      "version": "1.14.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d7a849f42c46778b90dd2952773a41f30833ea665b0512c1ad722667c42ebfd8"
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "version": "11.3.3.83",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ed11d2273b98e3897dc87ae88fcd7a0661b8a4c96529b93a5d22799fd4898de5"
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "version": "1.13.1.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "df713a26389a8052d17fee3c1521563e060b24a037983b3889fff54f906ef288"
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "version": "10.3.9.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7d4df14884c3de2ec922c546d995cee62f9a0e5225b3eaf2d8951520212cbf6f"
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "version": "11.7.3.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "1f06a55dc8f2aef9eb20f018044bfa7731124698ba7b435d11c250c62eaf4dc3"
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "version": "12.5.8.93",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "e83b3bf81e6a2c1dc4d4ddcd73b283a88e6f7f9d20385d280ec030dbf5384f22"
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "version": "0.7.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b264cea6951b70b52a3fd2ffaa88f9109eaf379633aa8d6e0832ecc92ddf6fba"
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "version": "4.2.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d9dbca368ad7f537756eaed6c1e26392475d5c130bb43421ea80a9561b8980fa"
+    },
+    {
+      "name": "nvidia-ml-py",
+      "version": "13.615.71",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "df52f2f04ac78c5259e776be3194ae3bfee274cadc0623576be6a699621ef6a8"
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "version": "2.27.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "87ee999c55a3181761f4b7758a385539776b0cba3cda4fd0f8bff4da26c6e355"
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "version": "12.8.93",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "776feab012c1f3efce8918975dc08aa01793aa33832d87b377caa0448cad4435"
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "version": "12.8.90",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "c63c23e04e8cf04143721ff718cba87a2ae5630a50451b77f8357a0d26133cf1"
+    },
+    {
+      "name": "openai",
+      "version": "2.6.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "6a55da43ce61efa69aa6c8a4d728c3a4e976d02e8fa8cbe565229e26aea91410"
+    },
+    {
+      "name": "openai-harmony",
+      "version": "0.0.4",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "35b04c68df05d0eeef03ad550b9ec8a7a09ee1ac18935eb4b563f19ccb0e5952"
+    },
+    {
+      "name": "orjson",
+      "version": "3.11.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "86cb78c67260c074b55c74f86d91e44eef2660ec85d9f160235d76be1cb2d817"
+    },
+    {
+      "name": "outlines",
+      "version": "0.1.11",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "f7423ac9279df728d633f03471967b918686e824a1d438939c6abe435b3f8de3"
+    },
+    {
+      "name": "outlines-core",
+      "version": "0.1.26",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "60d99166b0160b2fc959c4d3b96b13cc3f6a66ef96766e49f094d3a252d18a03"
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "5b611a609c38fefc3d616bf45d20aec98fb7d53f245daca9e2c30fc85c7ac282"
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "40ee953dc7ca155840b639a1881ff84578075187fce0ac20eeda55a7fa0d9a90"
+    },
+    {
+      "name": "parso",
+      "version": "0.8.7",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "2fd8c9f8209218163a6c086ba8075d177122430645fea770cc02c53cd426119d"
+    },
+    {
+      "name": "partial-json-parser",
+      "version": "0.2.1.1.post6",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "04c03d250890c1a7388a73d22cbb6b9003cc83ebda0b55eeb416c09c5081fbfc"
+    },
+    {
+      "name": "pexpect",
+      "version": "4.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "2d7c5ac5fdefde4a0194ec522fbcc0ca70e99e1a2a956eea444168f8591650aa"
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "d53d4d78f8a8efe182396711ef76840386d2ba4ccdad421f58cc00c3b3401f73"
+    },
+    {
+      "name": "prometheus-client",
+      "version": "0.23.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "22c3a8dba8da39b7dd5adab472c120af773c27c2ce0f697e64915f1e4ed3368e"
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.53",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "d04994e4401b88abf884ca54fb3b85e50a8b4fb1fde1ed7eb3ece9d8bf5459a9"
+    },
+    {
+      "name": "propcache",
+      "version": "0.3.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "620a3404e4d202ded13606ec77be4541272415064edc168cb9dadb7dfa965222"
+    },
+    {
+      "name": "protobuf",
+      "version": "6.32.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "67e944e2754173a1d54d8f418d590b296ffba88486169033ed3fea465fdab0ee"
+    },
+    {
+      "name": "psutil",
+      "version": "7.1.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ac00a0bcd2510cbd355745e1742a41ef2eadd59546c28788d6122a57d329c6b6"
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.7.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "c3c2b96b5d9a55da5958c34d08c18a0849f56609026cc46d5c95b8b77fcf3e0c"
+    },
+    {
+      "name": "pure-eval",
+      "version": "0.2.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4fe70f69411b9963d7275084210743afa819c2350899a29150bc43b1abf105d0"
+    },
+    {
+      "name": "py-spy",
+      "version": "0.4.2",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "26aeb28846bd82f28093b6ee8ebccbab17abc89c4d33118ba092361fa0243b6a"
+    },
+    {
+      "name": "pyarrow",
+      "version": "21.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "29e53bc2f9e13f9b72838ea1cc71a9a30fb1f7fc8b4ad5f32fda2187b6cf2550"
+    },
+    {
+      "name": "pybase64",
+      "version": "1.4.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "249a8b75c7c0d35b82ae7c1a81fe099f8e1afd678972cf5f4d96a82ff2235dad"
+    },
+    {
+      "name": "pycountry",
+      "version": "24.6.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a2f8631a3b4830c3bb77e8bed4e373980d834d8092763a00f8f54e066d1bcd3d"
+    },
+    {
+      "name": "pycparser",
+      "version": "2.23",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a2c9a11ccc5ade7e6c3f0bf959e529cb23e79bbe9ea215d8199c8a1a659b3c57"
+    },
+    {
+      "name": "pycryptodomex",
+      "version": "3.23.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "bb4cf1a7d5bbc98ad4f475fa8b5c0c0597550a8173ef1a35baf76ad2b9dc68a9"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.11.9",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "94bed7e977916e379b3f7e1e7cee3e3c69beee9776492bb63a847d64ceada2ca"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.33.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "efc941a0e673e0acdfcf3ff2308fea147305b36484dd58275a97863ed8f270ab"
+    },
+    {
+      "name": "pygments",
+      "version": "2.19.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7ae100d67d67006c6479803dd835fcf47a9b59fac794441ea8e66aa7f5984d82"
+    },
+    {
+      "name": "pyproject-hooks",
+      "version": "1.3.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "844e375bb28dcbe42a0502fbd9428d9ba4669db25028ee7a7afaa8dd7ada2e00"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e10ead93598aed51bdb28aa30ef64ee5d6ccc871e88741d220e504e979af4695"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.20",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8761ad3ce55285b564a4152b8e9e4a137b7a7a224985dd3f5826825eb6f94e05"
+    },
+    {
+      "name": "pytz",
+      "version": "2026.5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4d20d16f6004b1d7f9b01a96f4d3eb462c0c2a8413d9aa878effe50a21535929"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34"
+    },
+    {
+      "name": "pyzmq",
+      "version": "27.1.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "7e05c41b7e28dddfe8617d63b5691aff02b4cf737092842df9f4b2d59d9aef55"
+    },
+    {
+      "name": "referencing",
+      "version": "0.36.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f1ec8cf77a53d149e03e4370d19c5281753c77f24abc3468d27c614b05bd7206"
+    },
+    {
+      "name": "regex",
+      "version": "2025.9.18",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "a69552b079357a52a897a78b0c47ec488aef40aa6d2a6c2a9af71f1005e804d2"
+    },
+    {
+      "name": "requests",
+      "version": "2.32.5",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "65b5a08da81f4915513e760965ff14b7518f65b7bb3efe0dab364bbcc4d40cb0"
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.27.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b76fe460f93be155403bdb6a74d01661c967c3e2ae522fe9963c297c7a1faea9"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.6.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8768f97439fd846ac9bec48a5e4cba450b268142529db527ce4681d29833a736"
+    },
+    {
+      "name": "scipy",
+      "version": "1.16.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2b01909e07f69a4e64c8f8826635a217079ef4b9957e3926defbb2b96b126f06"
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "ce0a2e9c599cd060a7bc3dffb18be5cfc3d5f293533e3ee4e870eaef0a5500fd"
+    },
+    {
+      "name": "setproctitle",
+      "version": "1.3.7",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f3aae6f59f0e0c2ae3378189d4399d7a4a25de58c774cdb423fbfa02a534d0aa"
+    },
+    {
+      "name": "setuptools",
+      "version": "79.0.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "d3152caeb1486d143b30b1d41fffaaddb7ea95fdc9547ae1135ce697b1a420b5"
+    },
+    {
+      "name": "sgl-kernel",
+      "version": "0.3.16.post5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e94dbe7113e92b744edc5aa0996f7d4c1757ff23b170f392bf667ef469addd39"
+    },
+    {
+      "name": "sglang",
+      "version": "0.5.5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "ffb8c6546be8efd7260a417c77d64da8efd957d6a85175545a1015432c79dd28"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "0b318b57098edeccf585e60a889a6b6a7b5c4086f3a9aa62eff76a1d3cee12d9"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.13.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "0e4254c32f48852e0789e265aee10208a9bb778113ae8c5420d680393b7d32a1"
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.3",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "f28a66f2adde54e7031355e09a166e437bc0d023a31c10c973ac494288ca4c6f"
+    },
+    {
+      "name": "starlette",
+      "version": "0.48.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "6c709a92af6fd81489ad13f144b779980e86446d45fe628837b008873c9e1c2e"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595"
+    },
+    {
+      "name": "tabulate",
+      "version": "0.10.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "38dfc6db689745ff4c3890b3c30ef7e5d0b156fdbeeb765b9027fd917043d84b"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.11.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "02d46284596a1c89c7eb236369c1cd2bb8b46eb84d15f0252cb07df71bd814e9"
+    },
+    {
+      "name": "timm",
+      "version": "1.0.16",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "ad5f79b43031a2e2358158f251a2be22e30cbe6cd6f5c33d0c4077aeb07be22f"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "ddc92f061ff422fb05d19da58e9161c5098da143c38aa23779bf8a5b48ce76ca"
+    },
+    {
+      "name": "torch",
+      "version": "2.8.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "57ede492698857503164f9ab76185bc0d70aafd1e0078e3ea4f137a56320433c"
+    },
+    {
+      "name": "torch-memory-saver",
+      "version": "0.0.9",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "4ad7474d881da57f75620fd75bf0a3aab0a21aa282e6b32dccc018397495b616"
+    },
+    {
+      "name": "torchao",
+      "version": "0.9.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "fd71bb640fc5c2ae0d2168195a2cc18ed915fac57cb6f8119fba30dae560fc92"
+    },
+    {
+      "name": "torchaudio",
+      "version": "2.8.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "39c912d16311486d17ad8cfdc3ce7b532703706c410b140a74c9511fa8687fef"
+    },
+    {
+      "name": "torchvision",
+      "version": "0.23.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "f3e83af19eaec8195f920dd36176654b45701547a63edc139369d560ae6553b8"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "688a1632df525a198fec52dcfefb1246d31eacee9c035aacac2d7eaf8d8ff669"
+    },
+    {
+      "name": "traitlets",
+      "version": "5.16.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e42b503240c058625ffb30c390818d72933117840cb25060614cb24f0be9e587"
+    },
+    {
+      "name": "transformers",
+      "version": "4.57.1",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "5a7907140118994d1b284d23ea8cda916e6fa8a4d8698aa1d20ab5f59e610590"
+    },
+    {
+      "name": "triton",
+      "version": "3.4.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "8496b57becd6f0fe732bf81570330383f25e2bc572a54bdec45671a23e1db189"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.15.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "c138378fe8f18934ac99de060535c53ec6c13aeed65e94c32641da7ee3192a72"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "61096cd0bfe3c7040b6f98c22b02d190fe01936d0ff7616c5134fed02891953a"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e0780e8b6dc8882ce87e871a9d4589d59cb05a0c2d64f58b1ba62cde1ee91f6a"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.5.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "99a6244c866dd1afa59040be84c6566c206670667225c60e791938fe7b93acd7"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.37.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2ed5028b7d2d7076d0834b01bc6d9fa607368a02db08c576c2bbf05e3d58468d"
+    },
+    {
+      "name": "uvloop",
+      "version": "0.21.0",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "52769c5420236aecdc6c71c4e1456dc48f386bdf83d41e73cb4162fd3e8d1aed"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.4",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "180d42f593e4840a9672498f42d83709e85f43da2ad8c7c11e3a1c7622c74da5"
+    },
+    {
+      "name": "xgrammar",
+      "version": "0.1.25",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "e100f2e27025f1ff749e65a4485fb2fc9b5bff8814144235aa4169b1f45716d2"
+    },
+    {
+      "name": "xxhash",
+      "version": "3.6.0",
+      "origin": "/home/postedism/Desktop/Crucible/.cache/task12-baseline/overlay",
+      "metadata_sha256": "9dcdbae3ea685db00dc0691d6f90ec6c1d74349658f97e5a4f55f9bdf183db21"
+    },
+    {
+      "name": "yarl",
+      "version": "1.20.1",
+      "origin": "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages",
+      "metadata_sha256": "2b42f2e958b0c33e8c1ed382008289aa4c10b838e3b7d2327408ad5b345062f5"
+    }
+  ],
+  "records": [
+    {
+      "name": "aiohappyeyeballs",
+      "origin": "base-readonly",
+      "record_sha256": "cb2e04251a36cec73be3280b1826b7df3f88855c286c5572c3a15de0eccb21d3",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 40510,
+        "unhashed_files": [
+          "aiohappyeyeballs-2.6.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "aiohttp",
+      "origin": "base-readonly",
+      "record_sha256": "09eba4e5084ffb15c0473db5076f350b6ab75c223fb92f430bebe4c701a0ff12",
+      "verification": {
+        "hashed_files": 84,
+        "hashed_bytes": 6393215,
+        "unhashed_files": [
+          "aiohttp-3.12.15.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "aiosignal",
+      "origin": "base-readonly",
+      "record_sha256": "99cc744949eba2dac7f98789321724e25bf37222d11a3f63c305c4e9c6932b35",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 16801,
+        "unhashed_files": [
+          "aiosignal-1.4.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "airportsdata",
+      "origin": "overlay",
+      "record_sha256": "534d307682c162494d86942d539fe9e97defc68c0eb11d1ccf08602bf1ce5e6c",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 3095715,
+        "unhashed_files": [
+          "airportsdata-20260905.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "annotated-types",
+      "origin": "base-readonly",
+      "record_sha256": "13b15b962c252a4fb1e87c265d4fe6ced6b6dbf2e7ac0885839b2870da987857",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 36631,
+        "unhashed_files": [
+          "annotated_types-0.7.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "anthropic",
+      "origin": "overlay",
+      "record_sha256": "9ff8ffaed3fe2b7743932f0eb3a8404cdc84f86a182fff364602bb173741e1e0",
+      "verification": {
+        "hashed_files": 412,
+        "hashed_bytes": 1183837,
+        "unhashed_files": [
+          "anthropic-0.71.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "anyio",
+      "origin": "base-readonly",
+      "record_sha256": "045ae186fa48390a8c2975600d58a4f40d004844c27941fe3dbe4694d2771ce8",
+      "verification": {
+        "hashed_files": 50,
+        "hashed_bytes": 434651,
+        "unhashed_files": [
+          "anyio-4.11.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "origin": "overlay",
+      "record_sha256": "79ad0e78438dbb9567da329a2003acd17e0acc8be2b91ee4f5f462f2dbaaae96",
+      "verification": {
+        "hashed_files": 195,
+        "hashed_bytes": 6109820,
+        "unhashed_files": [
+          "apache_tvm_ffi-0.1.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "asttokens",
+      "origin": "overlay",
+      "record_sha256": "7e68c9d31c40c930eb127cd5b0c52cfddfabe21b380532b1a44d38e20a3678bd",
+      "verification": {
+        "hashed_files": 18,
+        "hashed_bytes": 79940,
+        "unhashed_files": [
+          "asttokens-3.0.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "attrs",
+      "origin": "base-readonly",
+      "record_sha256": "4a93ed539fd0b954bc7dcdf6e7354bd1159f74caddf0288a309ead6e0f331869",
+      "verification": {
+        "hashed_files": 37,
+        "hashed_bytes": 216722,
+        "unhashed_files": [
+          "attrs-25.3.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "blobfile",
+      "origin": "overlay",
+      "record_sha256": "026ac38b107c0240cb5f266cf6aca1d12bb9554cea1f552a5d4548a97c50ca05",
+      "verification": {
+        "hashed_files": 19,
+        "hashed_bytes": 304594,
+        "unhashed_files": [
+          "blobfile-3.0.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "build",
+      "origin": "overlay",
+      "record_sha256": "a58b7be755c5d817872fb5eef3b8a8fd03eaecf73f637cdfb9583849a76935aa",
+      "verification": {
+        "hashed_files": 23,
+        "hashed_bytes": 62289,
+        "unhashed_files": [
+          "build-1.3.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "certifi",
+      "origin": "base-readonly",
+      "record_sha256": "60f0c3859f9b1bf2e3c7da1d0cd9ab7021fdaac34f6d8fe96ef1a2b11d6957fc",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 295045,
+        "unhashed_files": [
+          "certifi-2025.8.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "cffi",
+      "origin": "base-readonly",
+      "record_sha256": "019719d062a39a09840009fe4ca07050136bcce736d0cd9ae9055fbd7e035572",
+      "verification": {
+        "hashed_files": 32,
+        "hashed_bytes": 728825,
+        "unhashed_files": [
+          "cffi-2.0.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "charset-normalizer",
+      "origin": "base-readonly",
+      "record_sha256": "d0abd3f6e9125ada8187889d2e655b7527fe671287a40759e13cec77e9b3d429",
+      "verification": {
+        "hashed_files": 24,
+        "hashed_bytes": 484026,
+        "unhashed_files": [
+          "charset_normalizer-3.4.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "click",
+      "origin": "base-readonly",
+      "record_sha256": "83745512b824c5377801c379d8b6d616dde9f6288f667a465ec581ba4f50b04d",
+      "verification": {
+        "hashed_files": 24,
+        "hashed_bytes": 384176,
+        "unhashed_files": [
+          "click-8.3.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "cloudpickle",
+      "origin": "base-readonly",
+      "record_sha256": "4ee56b2a64e4e768e6489790320753196c59e3e08646a410524b152c7f331233",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 66407,
+        "unhashed_files": [
+          "cloudpickle-3.1.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "compressed-tensors",
+      "origin": "base-readonly",
+      "record_sha256": "36beacaf420622f7d21f79bc7269c4b2a4b19f8b7a75bee1d18be02d7b915226",
+      "verification": {
+        "hashed_files": 72,
+        "hashed_bytes": 1829115,
+        "unhashed_files": [
+          "compressed_tensors-0.11.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "cuda-bindings",
+      "origin": "overlay",
+      "record_sha256": "3a53e4ccf04cb6e60a61a1d331943375479be0fdfbd07949a4d3b9fc08979874",
+      "verification": {
+        "hashed_files": 138,
+        "hashed_bytes": 110594467,
+        "unhashed_files": [
+          "cuda_bindings-12.9.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "cuda-pathfinder",
+      "origin": "overlay",
+      "record_sha256": "7c335771ed92534587a76e4c1b202c284002c3b4fdf53783df4a4c4e8e5e0231",
+      "verification": {
+        "hashed_files": 42,
+        "hashed_bytes": 184374,
+        "unhashed_files": [
+          "cuda_pathfinder-1.8.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "cuda-python",
+      "origin": "overlay",
+      "record_sha256": "76aeaf8919b11d7ad45b3d30d1e60c8744ff7f6b450a1ddc6bc828f20429b21f",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 16129,
+        "unhashed_files": [
+          "cuda_python-12.9.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "datasets",
+      "origin": "overlay",
+      "record_sha256": "b3343eb85323d1b889f254704baaf81a25f26583c256155517a41da05264b3fd",
+      "verification": {
+        "hashed_files": 138,
+        "hashed_bytes": 2001014,
+        "unhashed_files": [
+          "datasets-4.1.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "decorator",
+      "origin": "overlay",
+      "record_sha256": "d49dc4897f4c6ad1d07a081d3f971d1096889710be9756f107c43961a894b8f2",
+      "verification": {
+        "hashed_files": 11,
+        "hashed_bytes": 25824,
+        "unhashed_files": [
+          "decorator-5.3.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "decord2",
+      "origin": "overlay",
+      "record_sha256": "7ed568b3fd1da8a4301931e5c0ad3850929bc8ebe97ef1deb10a26309fd8fecd",
+      "verification": {
+        "hashed_files": 78,
+        "hashed_bytes": 75650462,
+        "unhashed_files": [
+          "decord2-3.4.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "dill",
+      "origin": "base-readonly",
+      "record_sha256": "2dfb187b6a0b90ab8fc3f82df983b0fe5f693ebd3e21e39baf04daa0afca55b4",
+      "verification": {
+        "hashed_files": 56,
+        "hashed_bytes": 366602,
+        "unhashed_files": [
+          "dill-0.4.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "diskcache",
+      "origin": "base-readonly",
+      "record_sha256": "69d0693e2925555c9f830d84e0eb795b2bfc61be8cb125728b7fa2847a2ca6e8",
+      "verification": {
+        "hashed_files": 14,
+        "hashed_bytes": 192899,
+        "unhashed_files": [
+          "diskcache-5.6.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "distro",
+      "origin": "base-readonly",
+      "record_sha256": "53ab847e28ed12536032a64b8d7bc55c91dc0fab63940f6f1e6e90db7a6df233",
+      "verification": {
+        "hashed_files": 13,
+        "hashed_bytes": 69233,
+        "unhashed_files": [
+          "distro-1.9.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "docstring-parser",
+      "origin": "overlay",
+      "record_sha256": "b56792a9f72b504a876c49be40ecae639190b111af27b53fcb27bcc919bc92e6",
+      "verification": {
+        "hashed_files": 17,
+        "hashed_bytes": 72530,
+        "unhashed_files": [
+          "docstring_parser-0.18.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "einops",
+      "origin": "base-readonly",
+      "record_sha256": "b8f37080fce7a29ec56b79a1e97a3853c630468fa99f9295fc64e94bdc34ad74",
+      "verification": {
+        "hashed_files": 33,
+        "hashed_bytes": 225661,
+        "unhashed_files": [
+          "einops-0.8.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "executing",
+      "origin": "overlay",
+      "record_sha256": "a36df3d95f74513592d3097e4ea91822c28120b97f271684ab4e2694ec78ed27",
+      "verification": {
+        "hashed_files": 16,
+        "hashed_bytes": 98391,
+        "unhashed_files": [
+          "executing-2.3.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "fastapi",
+      "origin": "base-readonly",
+      "record_sha256": "a02ab3c534679a23aa4cbcb3734f63d5d6ddc5ba8c8ce1e734fa178834522f0e",
+      "verification": {
+        "hashed_files": 54,
+        "hashed_bytes": 682039,
+        "unhashed_files": [
+          "fastapi-0.118.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "filelock",
+      "origin": "base-readonly",
+      "record_sha256": "bb693d677b49f3f88f5c99bd174be4657f7f2193f87800fd3558b4ab30753247",
+      "verification": {
+        "hashed_files": 16,
+        "hashed_bytes": 41627,
+        "unhashed_files": [
+          "filelock-3.19.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "flashinfer-cubin",
+      "origin": "overlay",
+      "record_sha256": "34fafe8a3e83484bff57caa30cce2facfabb82f3f102dd5508435a547fa75152",
+      "verification": {
+        "hashed_files": 6943,
+        "hashed_bytes": 397855846,
+        "unhashed_files": [
+          "flashinfer_cubin-0.5.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "flashinfer-python",
+      "origin": "overlay",
+      "record_sha256": "0861345ab8ed7caa5f0d0d1d01b274e8b1aa4e54a5c4802aee0ca106f5d6ef4e",
+      "verification": {
+        "hashed_files": 1844,
+        "hashed_bytes": 40582085,
+        "unhashed_files": [
+          "flashinfer_python-0.5.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "frozendict",
+      "origin": "base-readonly",
+      "record_sha256": "8bc2b6c7bb557b0c13cb7b0111129964c0ea59ebed3e39a92d6d131bc4cf8277",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 57938,
+        "unhashed_files": [
+          "frozendict-2.4.6.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "frozenlist",
+      "origin": "base-readonly",
+      "record_sha256": "052ecc64595206cc126464ead6593c060e4f85cac8f9a20af7193e977220ee45",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 827627,
+        "unhashed_files": [
+          "frozenlist-1.7.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "fsspec",
+      "origin": "base-readonly",
+      "record_sha256": "9f6422170d395ae2ba833f0e9e9851044a324a52e32716ebdfbae11868c371bf",
+      "verification": {
+        "hashed_files": 62,
+        "hashed_bytes": 722085,
+        "unhashed_files": [
+          "fsspec-2025.9.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "gguf",
+      "origin": "base-readonly",
+      "record_sha256": "4a70fa9fb80cb9bfabc2c53f7b2052d8414477111592acda95ee4a182090d20f",
+      "verification": {
+        "hashed_files": 30,
+        "hashed_bytes": 458712,
+        "unhashed_files": [
+          "gguf-0.17.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "grpcio",
+      "origin": "overlay",
+      "record_sha256": "3b951e83f274d2a5ee7619628ebe67a6c4fe6199112a1f43c4f84eeee466592a",
+      "verification": {
+        "hashed_files": 66,
+        "hashed_bytes": 15992885,
+        "unhashed_files": [
+          "grpcio-1.75.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "grpcio-health-checking",
+      "origin": "overlay",
+      "record_sha256": "f82047c8d7456b23f90f84251f2d42c064102c1084932e8d685322ca385090c7",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 53337,
+        "unhashed_files": [
+          "grpcio_health_checking-1.75.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "grpcio-reflection",
+      "origin": "overlay",
+      "record_sha256": "0b68e5e9973fb0259ca111c0f8f6b987e478d8a19b881e9562220f2c1514b855",
+      "verification": {
+        "hashed_files": 17,
+        "hashed_bytes": 66357,
+        "unhashed_files": [
+          "grpcio_reflection-1.75.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "grpcio-tools",
+      "origin": "overlay",
+      "record_sha256": "6a7eb9e5cf44c299b0b9476318d4f2b827c24536ff804597282e17849cdf13b9",
+      "verification": {
+        "hashed_files": 27,
+        "hashed_bytes": 7798014,
+        "unhashed_files": [
+          "grpcio_tools-1.75.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "h11",
+      "origin": "base-readonly",
+      "record_sha256": "1f87665bbc2f55907bc6d272119fb237c3fde348db83ca5ce1a80f895a34bc18",
+      "verification": {
+        "hashed_files": 19,
+        "hashed_bytes": 102855,
+        "unhashed_files": [
+          "h11-0.16.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "hf-transfer",
+      "origin": "overlay",
+      "record_sha256": "8d5d98bf6d5266072537dca4bceb150229b3ac40ac67a071dc7080471da9bb0e",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 9667616,
+        "unhashed_files": [
+          "hf_transfer-0.1.9.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "hf-xet",
+      "origin": "base-readonly",
+      "record_sha256": "dea447172e079c1881e794266f48edfd0395ff1e9590638f360391a982d358a2",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 7959124,
+        "unhashed_files": [
+          "hf_xet-1.1.10.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "httpcore",
+      "origin": "base-readonly",
+      "record_sha256": "2d75a004189a406346e5f35a76196d91371f1824c1d48735cabef498b5452bce",
+      "verification": {
+        "hashed_files": 38,
+        "hashed_bytes": 285237,
+        "unhashed_files": [
+          "httpcore-1.0.9.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "httpx",
+      "origin": "base-readonly",
+      "record_sha256": "81382c2f9fc26e742b7d84465b5be89c22435ba0d0e5873141ce2e92f17b7ed2",
+      "verification": {
+        "hashed_files": 32,
+        "hashed_bytes": 293569,
+        "unhashed_files": [
+          "httpx-0.28.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "huggingface-hub",
+      "origin": "base-readonly",
+      "record_sha256": "a8111e71393f74f5d679d7adaa25ddc5fe4c2956aa6a85e4e3a8651db2902115",
+      "verification": {
+        "hashed_files": 174,
+        "hashed_bytes": 2230960,
+        "unhashed_files": [
+          "huggingface_hub-0.35.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "idna",
+      "origin": "base-readonly",
+      "record_sha256": "b8b0b8dae698a26c17cda16a9689ee1867683431c6f66d4aa23c7711ebc60ec2",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 349302,
+        "unhashed_files": [
+          "idna-3.10.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "interegular",
+      "origin": "base-readonly",
+      "record_sha256": "d63caa10e888fbc51a5f7c48cfabf5e1516f5ae69b2dd41f606c3e0f51b26599",
+      "verification": {
+        "hashed_files": 14,
+        "hashed_bytes": 83592,
+        "unhashed_files": [
+          "interegular-0.3.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "ipython",
+      "origin": "overlay",
+      "record_sha256": "35b44f0e9264ae3772f106bf578cafdbb54549a7fc9f55439f67fb0cfba9cf38",
+      "verification": {
+        "hashed_files": 190,
+        "hashed_bytes": 1961291,
+        "unhashed_files": [
+          "ipython-9.6.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "ipython-pygments-lexers",
+      "origin": "overlay",
+      "record_sha256": "dff84d6b550ffe945108dc8f13a80262c636f1add172dae3b707ee2b68e17ded",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 22845,
+        "unhashed_files": [
+          "ipython_pygments_lexers-1.1.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "jedi",
+      "origin": "overlay",
+      "record_sha256": "cf6f6bd61dbdaadfa6d4d5601afd79ccc8f4531a2c566b510b2282441e557de2",
+      "verification": {
+        "hashed_files": 5629,
+        "hashed_bytes": 13889723,
+        "unhashed_files": [
+          "jedi-0.20.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "jinja2",
+      "origin": "base-readonly",
+      "record_sha256": "4551b3fb657b85a9f01e961c0f8a235da65d758149b619400211964b3ac02bdc",
+      "verification": {
+        "hashed_files": 32,
+        "hashed_bytes": 494554,
+        "unhashed_files": [
+          "jinja2-3.1.6.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "jiter",
+      "origin": "base-readonly",
+      "record_sha256": "63bef9f34e646dd461ca9c2978a537fd18a5b99c367011f723e7c5f93c682cfa",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 836667,
+        "unhashed_files": [
+          "jiter-0.11.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "jsonschema",
+      "origin": "base-readonly",
+      "record_sha256": "f0fc916462d0f05208ec185d69fea1199120cdae4913a2b13640eb1d17f6bf3b",
+      "verification": {
+        "hashed_files": 45,
+        "hashed_bytes": 472043,
+        "unhashed_files": [
+          "jsonschema-4.25.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "jsonschema-specifications",
+      "origin": "base-readonly",
+      "record_sha256": "f55bde7380ba4fbca07b447fa77ce3bf18ad70611b983c6a7aa6401a75426127",
+      "verification": {
+        "hashed_files": 30,
+        "hashed_bytes": 44225,
+        "unhashed_files": [
+          "jsonschema_specifications-2025.9.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "lark",
+      "origin": "base-readonly",
+      "record_sha256": "a844cffbc13ff5b73c8dd5d9543e0dac14a8f8809cebaca1ffcb00ae19e6b426",
+      "verification": {
+        "hashed_files": 48,
+        "hashed_bytes": 346604,
+        "unhashed_files": [
+          "lark-1.2.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "llguidance",
+      "origin": "base-readonly",
+      "record_sha256": "d97621160f2e00711a4ae5fcdb140b0b7616f3e252ca4b73e7f7227e3f1e394f",
+      "verification": {
+        "hashed_files": 22,
+        "hashed_bytes": 55875468,
+        "unhashed_files": [
+          "llguidance-0.7.30.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "lxml",
+      "origin": "overlay",
+      "record_sha256": "ccc6273d6d0568bc31129b6b848a4dd65040442728c08f7d00da47a52e8edcaa",
+      "verification": {
+        "hashed_files": 177,
+        "hashed_bytes": 11902414,
+        "unhashed_files": [
+          "lxml-6.0.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "markupsafe",
+      "origin": "base-readonly",
+      "record_sha256": "20c3533a1d77208aead294b217ea46a16f52aa361d535e1d4793efa33c98aacc",
+      "verification": {
+        "hashed_files": 13,
+        "hashed_bytes": 66498,
+        "unhashed_files": [
+          "markupsafe-3.0.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "matplotlib-inline",
+      "origin": "overlay",
+      "record_sha256": "c1c9ce094a8f4988fa8ff2bd8983f9dd978f2a1692f34d755dda2d6e6dcd492a",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 20852,
+        "unhashed_files": [
+          "matplotlib_inline-0.2.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "modelscope",
+      "origin": "overlay",
+      "record_sha256": "ee50314847524a4545bacfd05ff99818fc86f0bcbb35294d0778484cc0e0bf44",
+      "verification": {
+        "hashed_files": 2860,
+        "hashed_bytes": 21800581,
+        "unhashed_files": [
+          "modelscope-1.31.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "mpmath",
+      "origin": "base-readonly",
+      "record_sha256": "09cbd04e87d0c5ab64aab08291b31883e4ea27e8d2c640710e0beb1995e86b9b",
+      "verification": {
+        "hashed_files": 93,
+        "hashed_bytes": 1942522,
+        "unhashed_files": [
+          "mpmath-1.3.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "msgspec",
+      "origin": "base-readonly",
+      "record_sha256": "c5371b4ce9a9f9d721496a31cc421ed7de6f8e2fff707817a9a895262101f1e8",
+      "verification": {
+        "hashed_files": 23,
+        "hashed_bytes": 506160,
+        "unhashed_files": [
+          "msgspec-0.19.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "multidict",
+      "origin": "base-readonly",
+      "record_sha256": "34838a042801f0554ecc511571f6ce06a7cdba09c6ceb12c1145aef09c753ef8",
+      "verification": {
+        "hashed_files": 13,
+        "hashed_bytes": 899319,
+        "unhashed_files": [
+          "multidict-6.6.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "multiprocess",
+      "origin": "overlay",
+      "record_sha256": "7afdf7c3432a84630bd560d5477e5d899e5e2856b2efee7fbcb200a06da53e0e",
+      "verification": {
+        "hashed_files": 54,
+        "hashed_bytes": 533038,
+        "unhashed_files": [
+          "multiprocess-0.70.16.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nest-asyncio",
+      "origin": "overlay",
+      "record_sha256": "b537282f67573ca7e3d00adddad3471eaef3b2d0e371249a5cbd638db271d69b",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 11999,
+        "unhashed_files": [
+          "nest_asyncio-1.6.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "networkx",
+      "origin": "base-readonly",
+      "record_sha256": "fe2fa33206ac3766fd16a71fb8312f2706eba320f050304faf35d24754d98cd9",
+      "verification": {
+        "hashed_files": 597,
+        "hashed_bytes": 6838314,
+        "unhashed_files": [
+          "networkx-3.5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "ninja",
+      "origin": "base-readonly",
+      "record_sha256": "0c86e624dd5192d22cdad369d878ac18c73f771e6500f391df403d12d36f6209",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 399796,
+        "unhashed_files": [
+          "ninja-1.13.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "numpy",
+      "origin": "base-readonly",
+      "record_sha256": "f0e9595561b7be5b7f70050c85215a681632d3100fc41f823337fe242fb381e2",
+      "verification": {
+        "hashed_files": 879,
+        "hashed_bytes": 57709093,
+        "unhashed_files": [
+          "numpy-2.2.6.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "32609e27f052bcf38ac86325906fcc17a92d10aba57bc67f5017d8271d137b48",
+      "verification": {
+        "hashed_files": 19,
+        "hashed_bytes": 869569496,
+        "unhashed_files": [
+          "nvidia_cublas_cu12-12.8.4.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cuda-cupti-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "bebc6905f6331672653650ef186a05fb1cb4da8d4d59a93cd1f905796b94f680",
+      "verification": {
+        "hashed_files": 52,
+        "hashed_bytes": 42514059,
+        "unhashed_files": [
+          "nvidia_cuda_cupti_cu12-12.8.90.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "e3c6d179dab8453950ad1e44acc4747b1a4ea1997e46326873731742a4ab5d22",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 222207464,
+        "unhashed_files": [
+          "nvidia_cuda_nvrtc_cu12-12.8.93.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cuda-runtime-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "a880e64bcd71ca45cae1c821771e8fcee673e043bffd1464b1aefa5f127bec90",
+      "verification": {
+        "hashed_files": 106,
+        "hashed_bytes": 4980951,
+        "unhashed_files": [
+          "nvidia_cuda_runtime_cu12-12.8.90.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "2c8f8aabcd98a443b831d245c9d171e2ff2b1ba5e26f8747223b299a5b8a49f5",
+      "verification": {
+        "hashed_files": 28,
+        "hashed_bytes": 1053622200,
+        "unhashed_files": [
+          "nvidia_cudnn_cu12-9.10.2.21.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cudnn-frontend",
+      "origin": "overlay",
+      "record_sha256": "1028218958c9bbb366c1aae20301d0354aab1bfd7e08454f823438d3afae72ab",
+      "verification": {
+        "hashed_files": 87,
+        "hashed_bytes": 7320122,
+        "unhashed_files": [
+          "nvidia_cudnn_frontend-1.14.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cufft-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "fc6ade9f8e7229dbce075027292a7ee3f803bfc8dbf93449f37d9c05c3f38c5a",
+      "verification": {
+        "hashed_files": 16,
+        "hashed_bytes": 281137914,
+        "unhashed_files": [
+          "nvidia_cufft_cu12-11.3.3.83.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cufile-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "25f214d2e17ec175717dfeaf5c1690e1f3348a8ada171500b948ab09e23b2256",
+      "verification": {
+        "hashed_files": 13,
+        "hashed_bytes": 3346642,
+        "unhashed_files": [
+          "nvidia_cufile_cu12-1.13.1.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-curand-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "8f6ff30756082b4f128f521cad94b97cf821be7617d942cd7aba53401f318030",
+      "verification": {
+        "hashed_files": 28,
+        "hashed_bytes": 138914947,
+        "unhashed_files": [
+          "nvidia_curand_cu12-10.3.9.90.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cusolver-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "0c498bbd7fb47d82f861476973ccfd7d039d7d95c559ed673ecad98af48d6278",
+      "verification": {
+        "hashed_files": 18,
+        "hashed_bytes": 405117553,
+        "unhashed_files": [
+          "nvidia_cusolver_cu12-11.7.3.90.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cusparse-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "c621d96e99b26549698cd2d8f5044245727928d7855cb20a5ef787006311f3d7",
+      "verification": {
+        "hashed_files": 13,
+        "hashed_bytes": 388350763,
+        "unhashed_files": [
+          "nvidia_cusparse_cu12-12.5.8.93.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cusparselt-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "a0d0794ea5e6fbf009a350cd345b93b49c5ce40a57270eecbf0c96233bac8ee0",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 452023439,
+        "unhashed_files": [
+          "nvidia_cusparselt_cu12-0.7.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-cutlass-dsl",
+      "origin": "overlay",
+      "record_sha256": "0f548b1ceb93b56493ce90eb1d7d0ad4d2237f4270a5c880f4125211875e73d6",
+      "verification": {
+        "hashed_files": 150,
+        "hashed_bytes": 160981239,
+        "unhashed_files": [
+          "nvidia_cutlass_dsl-4.2.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-ml-py",
+      "origin": "overlay",
+      "record_sha256": "1ad3009addc73f99c39fc1385e08310b2f1dc4d44d8f9ba302574470fcc72700",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 350421,
+        "unhashed_files": [
+          "nvidia_ml_py-13.615.71.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-nccl-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "8208136eed283b319861ace9fbf75c542c73512eaf0836408e9b19aabdcd9cf9",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 429660825,
+        "unhashed_files": [
+          "nvidia_nccl_cu12-2.27.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-nvjitlink-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "778c44b7415819751cfe4c68919ac4e7db9f384c80db22f2cadd6cd9d6a5cc1a",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 94179583,
+        "unhashed_files": [
+          "nvidia_nvjitlink_cu12-12.8.93.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "nvidia-nvtx-cu12",
+      "origin": "base-readonly",
+      "record_sha256": "1c4cae5ca6bd6c1f87f1e2e91215412ca30626e4b552896dc8317c85f0659257",
+      "verification": {
+        "hashed_files": 32,
+        "hashed_bytes": 364234,
+        "unhashed_files": [
+          "nvidia_nvtx_cu12-12.8.90.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "openai",
+      "origin": "overlay",
+      "record_sha256": "5cb92564ac16a903cabbdeb35893d9235aa1815f287806b21b33398d3936a68f",
+      "verification": {
+        "hashed_files": 988,
+        "hashed_bytes": 3510791,
+        "unhashed_files": [
+          "openai-2.6.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "openai-harmony",
+      "origin": "base-readonly",
+      "record_sha256": "6e82312795fff90589f023cac1a996b533c611066532f6d7668e55a6832613fb",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 7922133,
+        "unhashed_files": [
+          "openai_harmony-0.0.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "orjson",
+      "origin": "overlay",
+      "record_sha256": "1e6573c36b826c8f164e431cde488049f66e890225390a2f7a128c638104ae56",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 296934,
+        "unhashed_files": [
+          "orjson-3.11.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "outlines",
+      "origin": "overlay",
+      "record_sha256": "9b08252d576b72a6db1a866189ea0b0d1485c61de0d64009399df4983ca1928a",
+      "verification": {
+        "hashed_files": 57,
+        "hashed_bytes": 267908,
+        "unhashed_files": [
+          "outlines-0.1.11.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "outlines-core",
+      "origin": "overlay",
+      "record_sha256": "29dd66662aa22b2b62f8f1e0807a7c13d14eac008966d73778ff3cddb3367df6",
+      "verification": {
+        "hashed_files": 17,
+        "hashed_bytes": 732981,
+        "unhashed_files": [
+          "outlines_core-0.1.26.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "packaging",
+      "origin": "base-readonly",
+      "record_sha256": "ee365514b6cb63a57809cdeba7ce89842d9cc6e08b7688cd6ad8ad331e06318b",
+      "verification": {
+        "hashed_files": 25,
+        "hashed_bytes": 236652,
+        "unhashed_files": [
+          "packaging-25.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pandas",
+      "origin": "overlay",
+      "record_sha256": "d3993f2995b0da88794c807b1cdffdcf65d6bf6e9238d7596ef598c1000e28f7",
+      "verification": {
+        "hashed_files": 1516,
+        "hashed_bytes": 43279977,
+        "unhashed_files": [
+          "pandas-2.3.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "parso",
+      "origin": "overlay",
+      "record_sha256": "a7f993bf8c6a18208dd0ff6af072766a8e39cc754bfa5a295ff90795ac39e8ef",
+      "verification": {
+        "hashed_files": 40,
+        "hashed_bytes": 352429,
+        "unhashed_files": [
+          "parso-0.8.7.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "partial-json-parser",
+      "origin": "base-readonly",
+      "record_sha256": "829531cfe3c5d8b6bc3e76a7a8be9e1cf32c2af26789452bf820ab53f63e4f43",
+      "verification": {
+        "hashed_files": 17,
+        "hashed_bytes": 26842,
+        "unhashed_files": [
+          "partial_json_parser-0.2.1.1.post6.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pexpect",
+      "origin": "overlay",
+      "record_sha256": "06ab41d7de814c44a45b06e6a85b41f15562671d1f0b79868f353f55e3c9207b",
+      "verification": {
+        "hashed_files": 27,
+        "hashed_bytes": 189789,
+        "unhashed_files": [
+          "pexpect-4.9.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pillow",
+      "origin": "base-readonly",
+      "record_sha256": "4130d3cc083f1a78efa93d5a28831cb1978ec544cc583863b8d664d43c241e15",
+      "verification": {
+        "hashed_files": 138,
+        "hashed_bytes": 17526477,
+        "unhashed_files": [
+          "pillow-11.3.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "prometheus-client",
+      "origin": "base-readonly",
+      "record_sha256": "b268a483b5495d6655ad12a444f9c3bddcf4ce1f4b6f7fe1fe60355e0194e7d9",
+      "verification": {
+        "hashed_files": 35,
+        "hashed_bytes": 200826,
+        "unhashed_files": [
+          "prometheus_client-0.23.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "prompt-toolkit",
+      "origin": "overlay",
+      "record_sha256": "6a816e19cb663ce15d9b56b01987a9f82976a6c16099e04df431546b0d288795",
+      "verification": {
+        "hashed_files": 155,
+        "hashed_bytes": 1383825,
+        "unhashed_files": [
+          "prompt_toolkit-3.0.53.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "propcache",
+      "origin": "base-readonly",
+      "record_sha256": "2b5c4117fc86f3de32d877549a636a2d8344a99e097a6534fdd8afe03c6395e4",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 802268,
+        "unhashed_files": [
+          "propcache-0.3.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "protobuf",
+      "origin": "base-readonly",
+      "record_sha256": "e30f6c323dddf683e387eae10f668c60ef5bb1854428b74de7509968b859b64e",
+      "verification": {
+        "hashed_files": 61,
+        "hashed_bytes": 1313910,
+        "unhashed_files": [
+          "protobuf-6.32.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "psutil",
+      "origin": "base-readonly",
+      "record_sha256": "da6171086a9f83be0fcde240fca7917f91221a308ce0bbc592bbbcbfe34656f8",
+      "verification": {
+        "hashed_files": 38,
+        "hashed_bytes": 1063144,
+        "unhashed_files": [
+          "psutil-7.1.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "ptyprocess",
+      "origin": "overlay",
+      "record_sha256": "678d306d95b9672062b9d855c837b053f70a40fb4f8ce30853489310094a3dc4",
+      "verification": {
+        "hashed_files": 11,
+        "hashed_bytes": 39559,
+        "unhashed_files": [
+          "ptyprocess-0.7.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pure-eval",
+      "origin": "overlay",
+      "record_sha256": "c9fa6d48878622a9c1d0f8c2e0c7961bf5549178b7492a18cbbfc34b68f0bb34",
+      "verification": {
+        "hashed_files": 14,
+        "hashed_bytes": 32439,
+        "unhashed_files": [
+          "pure_eval-0.2.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "py-spy",
+      "origin": "overlay",
+      "record_sha256": "67045eab8f5c71524bb40dd90d2754eb39e22c6168027ed2f48ed6e5825d878d",
+      "verification": {
+        "hashed_files": 9,
+        "hashed_bytes": 8214544,
+        "unhashed_files": [
+          "py_spy-0.4.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pyarrow",
+      "origin": "overlay",
+      "record_sha256": "583dca8bdb7c2c1573911022569e6afc90c427cefd314bcd5a88d64d6404e6b9",
+      "verification": {
+        "hashed_files": 748,
+        "hashed_bytes": 141413144,
+        "unhashed_files": [
+          "pyarrow-21.0.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pybase64",
+      "origin": "base-readonly",
+      "record_sha256": "a6be618c572ae793605c9a87023b308e3765046a6b65f7abb38255c4bccb40fd",
+      "verification": {
+        "hashed_files": 19,
+        "hashed_bytes": 221183,
+        "unhashed_files": [
+          "pybase64-1.4.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pycountry",
+      "origin": "base-readonly",
+      "record_sha256": "d9eba3d8f7765a3dc7b41454cbc37464db8cb0c999e6c0c195524f9a9e159ea4",
+      "verification": {
+        "hashed_files": 599,
+        "hashed_bytes": 16538035,
+        "unhashed_files": [
+          "pycountry-24.6.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pycparser",
+      "origin": "base-readonly",
+      "record_sha256": "17599ccaf48597dfb33153689896be378c92c4584bba2600c5fa115ea9d3c201",
+      "verification": {
+        "hashed_files": 25,
+        "hashed_bytes": 615456,
+        "unhashed_files": [
+          "pycparser-2.23.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pycryptodomex",
+      "origin": "overlay",
+      "record_sha256": "251016f63351357534c35e4e2dd9d3bd6cebbd7118cafb6c3b655145a3db4565",
+      "verification": {
+        "hashed_files": 355,
+        "hashed_bytes": 6262596,
+        "unhashed_files": [
+          "pycryptodomex-3.23.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pydantic",
+      "origin": "base-readonly",
+      "record_sha256": "c1786fb629f28b4230df79f5433f3e535c026b67fc53e086bd96d9a13915692e",
+      "verification": {
+        "hashed_files": 112,
+        "hashed_bytes": 1763417,
+        "unhashed_files": [
+          "pydantic-2.11.9.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pydantic-core",
+      "origin": "base-readonly",
+      "record_sha256": "6fb116ed2bee5e30f5c644506b08b0847332aac93a38930c2c81fdbf3f76eb8f",
+      "verification": {
+        "hashed_files": 11,
+        "hashed_bytes": 4982519,
+        "unhashed_files": [
+          "pydantic_core-2.33.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pygments",
+      "origin": "base-readonly",
+      "record_sha256": "148374aa1d0000e5b47c29dcbe1885a62ffbe574408a1f773a3c0f7e74c79cad",
+      "verification": {
+        "hashed_files": 347,
+        "hashed_bytes": 4467323,
+        "unhashed_files": [
+          "pygments-2.19.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pyproject-hooks",
+      "origin": "overlay",
+      "record_sha256": "f8e82007018e6ea508635aa535a6b0f7f3992e4d48e73cfe5196c1a96c94b5bd",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 32683,
+        "unhashed_files": [
+          "pyproject_hooks-1.3.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "python-dateutil",
+      "origin": "overlay",
+      "record_sha256": "1e71e3a436ed364f5e7c6c128108ae4261fd8a1913cfa36f980c7f7f8c462979",
+      "verification": {
+        "hashed_files": 30,
+        "hashed_bytes": 331246,
+        "unhashed_files": [
+          "python_dateutil-3.0.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "python-multipart",
+      "origin": "base-readonly",
+      "record_sha256": "89bfc3f5b747301c4c7868b3f101cf92e912833a0e08ee86f62560848f59dcb1",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 88295,
+        "unhashed_files": [
+          "python_multipart-0.0.20.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pytz",
+      "origin": "overlay",
+      "record_sha256": "824d4aae4de32fa8b296f6b553c63588d48ed6f8a371fb30b54027882a6d2664",
+      "verification": {
+        "hashed_files": 619,
+        "hashed_bytes": 950921,
+        "unhashed_files": [
+          "pytz-2026.5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pyyaml",
+      "origin": "base-readonly",
+      "record_sha256": "7d0856221a182f5b25fde9bb976af79b4883090f54680d86a42b35fc8d6735a2",
+      "verification": {
+        "hashed_files": 25,
+        "hashed_bytes": 2901827,
+        "unhashed_files": [
+          "pyyaml-6.0.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "pyzmq",
+      "origin": "base-readonly",
+      "record_sha256": "3c447b6e62c98899806b73a364d49b6cc65421d186203258c50d7406f96161b9",
+      "verification": {
+        "hashed_files": 98,
+        "hashed_bytes": 2887744,
+        "unhashed_files": [
+          "pyzmq-27.1.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "referencing",
+      "origin": "base-readonly",
+      "record_sha256": "eb8ac0d06466c1f18d0af00d20d27f6fde333be6adab6a4f0e13e6927dc5125e",
+      "verification": {
+        "hashed_files": 21,
+        "hashed_bytes": 114021,
+        "unhashed_files": [
+          "referencing-0.36.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "regex",
+      "origin": "base-readonly",
+      "record_sha256": "151f216671c66cd3c199aff90c4da3140fbcec426462aa9872448d01d4e1228d",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 3032219,
+        "unhashed_files": [
+          "regex-2025.9.18.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "requests",
+      "origin": "base-readonly",
+      "record_sha256": "3f39148c4a5d4d4454434dbf89513097588a322a3e50a189b6e1386a47c41bd1",
+      "verification": {
+        "hashed_files": 25,
+        "hashed_bytes": 202671,
+        "unhashed_files": [
+          "requests-2.32.5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "rpds-py",
+      "origin": "base-readonly",
+      "record_sha256": "26602b777a42f8e14c9dc21b4555842bc02f16803dd031700935cf7b328dfa91",
+      "verification": {
+        "hashed_files": 10,
+        "hashed_bytes": 1046299,
+        "unhashed_files": [
+          "rpds_py-0.27.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "safetensors",
+      "origin": "base-readonly",
+      "record_sha256": "8f9164a62dd85b12348882bea387df7684165727517589153ef9d88cfa7604ab",
+      "verification": {
+        "hashed_files": 16,
+        "hashed_bytes": 1220874,
+        "unhashed_files": [
+          "safetensors-0.6.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "scipy",
+      "origin": "base-readonly",
+      "record_sha256": "4b98bf8f797e278ea04f7bf217c8de9269f9f9762fbac2ffd721c36243f4fe71",
+      "verification": {
+        "hashed_files": 1420,
+        "hashed_bytes": 118228816,
+        "unhashed_files": [
+          "scipy-1.16.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "sentencepiece",
+      "origin": "base-readonly",
+      "record_sha256": "81a6fd92009f388595b975b115a438f15d22870f1653606d7131bc5835b4010e",
+      "verification": {
+        "hashed_files": 17,
+        "hashed_bytes": 3502078,
+        "unhashed_files": [
+          "sentencepiece-0.2.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "setproctitle",
+      "origin": "base-readonly",
+      "record_sha256": "c1d3f3d41b8297fda4f48349051af44158f5d172e6d5c75c3e04a8402ec3228a",
+      "verification": {
+        "hashed_files": 10,
+        "hashed_bytes": 86188,
+        "unhashed_files": [
+          "setproctitle-1.3.7.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "setuptools",
+      "origin": "base-readonly",
+      "record_sha256": "9c49a6a25d9d036fa644f2eff2465582816ac6501de36d509dd3bc522297c400",
+      "verification": {
+        "hashed_files": 516,
+        "hashed_bytes": 4297476,
+        "unhashed_files": [
+          "setuptools-79.0.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "sgl-kernel",
+      "origin": "overlay",
+      "record_sha256": "90662b973da476390bdc6a11d820a5851d4e7f52b27de649e37a8380de00bb21",
+      "verification": {
+        "hashed_files": 992,
+        "hashed_bytes": 1615587764,
+        "unhashed_files": [
+          "sgl_kernel-0.3.16.post5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "sglang",
+      "origin": "overlay",
+      "record_sha256": "92cd5ffd1ca76215d7e2b47cbb8d6ed288b0b6d1c23851d9f7e5f4ad493136ad",
+      "verification": {
+        "hashed_files": 1337,
+        "hashed_bytes": 14184112,
+        "unhashed_files": [
+          "sglang-0.5.5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "six",
+      "origin": "base-readonly",
+      "record_sha256": "e75de511c34c030a28aa7aff6c8f31bed3b8f4576971074375855a6bdf9c4988",
+      "verification": {
+        "hashed_files": 8,
+        "hashed_bytes": 37708,
+        "unhashed_files": [
+          "six-1.17.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "sniffio",
+      "origin": "base-readonly",
+      "record_sha256": "076341bac961b5c53536a7bb045ebcbef296901041672cb8196777265b7cd97b",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 22056,
+        "unhashed_files": [
+          "sniffio-1.3.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "soundfile",
+      "origin": "base-readonly",
+      "record_sha256": "3eb9e8c484b76b4492a8c6399af4f82d88e828c9e88f889385c8b1ebddc70416",
+      "verification": {
+        "hashed_files": 12,
+        "hashed_bytes": 3755286,
+        "unhashed_files": [
+          "soundfile-0.13.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "stack-data",
+      "origin": "overlay",
+      "record_sha256": "a8fbf68440533a0ab22f172868dd84d1d34873f87a0d054a31c96968d27f12bd",
+      "verification": {
+        "hashed_files": 15,
+        "hashed_bytes": 74620,
+        "unhashed_files": [
+          "stack_data-0.6.3.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "starlette",
+      "origin": "base-readonly",
+      "record_sha256": "893945236f3054ae3daf002936fa2d8b33bc93282ccdde5d73449da675f4a40a",
+      "verification": {
+        "hashed_files": 41,
+        "hashed_bytes": 258626,
+        "unhashed_files": [
+          "starlette-0.48.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "sympy",
+      "origin": "base-readonly",
+      "record_sha256": "6e19ffcc213bed8edad7f17521d6c102cedcfb07ee5756298c7e0ca03562cce1",
+      "verification": {
+        "hashed_files": 1572,
+        "hashed_bytes": 26696808,
+        "unhashed_files": [
+          "sympy-1.14.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "tabulate",
+      "origin": "overlay",
+      "record_sha256": "5bed2d3c9175dc0bdcf15ebc2b36760ca412440b76cd6b2835f06768a72afebf",
+      "verification": {
+        "hashed_files": 11,
+        "hashed_bytes": 150871,
+        "unhashed_files": [
+          "tabulate-0.10.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "tiktoken",
+      "origin": "base-readonly",
+      "record_sha256": "87cf79394ece481344ae64c9c153837d59946148e63faf9782042fb6e315357c",
+      "verification": {
+        "hashed_files": 16,
+        "hashed_bytes": 3503686,
+        "unhashed_files": [
+          "tiktoken-0.11.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "timm",
+      "origin": "overlay",
+      "record_sha256": "355b494675ad28ba6e2a7f0703ce948f8a1f6fc1710d82d48391dc9c8e8889f7",
+      "verification": {
+        "hashed_files": 303,
+        "hashed_bytes": 8541559,
+        "unhashed_files": [
+          "timm-1.0.16.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "tokenizers",
+      "origin": "overlay",
+      "record_sha256": "dc61591297a27bcbcab3749eec657e68b753569180f496e8bd2ba372eb74d3a3",
+      "verification": {
+        "hashed_files": 31,
+        "hashed_bytes": 10585238,
+        "unhashed_files": [
+          "tokenizers-0.22.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "torch",
+      "origin": "base-readonly",
+      "record_sha256": "43acd78ee8b4d317596bb30a934ec5e3c1aed5d68653440322f33d47c9235423",
+      "verification": {
+        "hashed_files": 11502,
+        "hashed_bytes": 1693975297,
+        "unhashed_files": [
+          "torch-2.8.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "torch-memory-saver",
+      "origin": "overlay",
+      "record_sha256": "68d841214a0bd09cc589395f09a46d64e12ff995c67210ad63c660a2797363ae",
+      "verification": {
+        "hashed_files": 19,
+        "hashed_bytes": 1570117,
+        "unhashed_files": [
+          "torch_memory_saver-0.0.9.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "torchao",
+      "origin": "overlay",
+      "record_sha256": "7564379f4ee65447c996bc824a76592a34d0aaaa5d56023110d0c7e8813ce9af",
+      "verification": {
+        "hashed_files": 302,
+        "hashed_bytes": 25414095,
+        "unhashed_files": [
+          "torchao-0.9.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "torchaudio",
+      "origin": "base-readonly",
+      "record_sha256": "a5ca30df41e17b442d2b61af5a53f0df94f4da7296c72d5d0bc66c34ba152258",
+      "verification": {
+        "hashed_files": 151,
+        "hashed_bytes": 16276127,
+        "unhashed_files": [
+          "torchaudio-2.8.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "torchvision",
+      "origin": "base-readonly",
+      "record_sha256": "b40394ef6f5c628c998fa45f1aef85d8bb3926c36a221fba0189b6bfabe3a05b",
+      "verification": {
+        "hashed_files": 203,
+        "hashed_bytes": 23785199,
+        "unhashed_files": [
+          "torchvision-0.23.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "tqdm",
+      "origin": "base-readonly",
+      "record_sha256": "c5486910ba5e8a25f6a9acc6e2e922052f543a5110a82fbc65534fc6dc938e2a",
+      "verification": {
+        "hashed_files": 43,
+        "hashed_bytes": 223359,
+        "unhashed_files": [
+          "tqdm-4.67.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "traitlets",
+      "origin": "overlay",
+      "record_sha256": "8b4cff41cf3015b809d34293144deb000a16dc6c97593482aa5f2738998d6d47",
+      "verification": {
+        "hashed_files": 32,
+        "hashed_bytes": 317524,
+        "unhashed_files": [
+          "traitlets-5.16.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "transformers",
+      "origin": "overlay",
+      "record_sha256": "5ed3cf7958b692f5527919d40ea9b9861ef1f5329c2dfac9e1891a0dc3da6237",
+      "verification": {
+        "hashed_files": 2251,
+        "hashed_bytes": 52167646,
+        "unhashed_files": [
+          "transformers-4.57.1.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "triton",
+      "origin": "base-readonly",
+      "record_sha256": "2360375e74c5e3021d2c39a817b118b3b12207049c2e4fb64ce2d204c38cc0ac",
+      "verification": {
+        "hashed_files": 372,
+        "hashed_bytes": 564890800,
+        "unhashed_files": [
+          "triton-3.4.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "typing-extensions",
+      "origin": "base-readonly",
+      "record_sha256": "1d909715b3cc7ec29efa0b783374f9b8dd115cda150aa7a27f9d04c87ed23c4a",
+      "verification": {
+        "hashed_files": 7,
+        "hashed_bytes": 177884,
+        "unhashed_files": [
+          "typing_extensions-4.15.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "typing-inspection",
+      "origin": "base-readonly",
+      "record_sha256": "ea04ebfa975c0af4d5521f797c8fdc964a5bec8ab9d81ab9e07f9ecacb8d039f",
+      "verification": {
+        "hashed_files": 11,
+        "hashed_bytes": 53007,
+        "unhashed_files": [
+          "typing_inspection-0.4.2.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "tzdata",
+      "origin": "overlay",
+      "record_sha256": "cacc6eb61bc0e23b9e3330ae503b8cdd6ded27b7972f76af0d16a8bd16f936c7",
+      "verification": {
+        "hashed_files": 636,
+        "hashed_bytes": 527488,
+        "unhashed_files": [
+          "tzdata-2026.5.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "urllib3",
+      "origin": "base-readonly",
+      "record_sha256": "23c15010dc702d79176001ff5613b8ace96791891ceed003960fb76e52ce0709",
+      "verification": {
+        "hashed_files": 44,
+        "hashed_bytes": 421539,
+        "unhashed_files": [
+          "urllib3-2.5.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "uvicorn",
+      "origin": "base-readonly",
+      "record_sha256": "d36523c56933293746ed6d19d19759f22f113d3575c00ede37e5d0080a9d175c",
+      "verification": {
+        "hashed_files": 49,
+        "hashed_bytes": 218644,
+        "unhashed_files": [
+          "uvicorn-0.37.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "uvloop",
+      "origin": "base-readonly",
+      "record_sha256": "5a4a861b7c57540ac0a3554b2452e0938b55243a92d02bb75c75c9438ed9a76d",
+      "verification": {
+        "hashed_files": 65,
+        "hashed_bytes": 17127222,
+        "unhashed_files": [
+          "uvloop-0.21.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "wcwidth",
+      "origin": "overlay",
+      "record_sha256": "7f9157e6f5352e13dac4eaf87062a474d7c4f9977ffc71235408ab883ba1d55f",
+      "verification": {
+        "hashed_files": 59,
+        "hashed_bytes": 3608054,
+        "unhashed_files": [
+          "wcwidth-0.9.4.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "xgrammar",
+      "origin": "overlay",
+      "record_sha256": "8518ed241aebc918b00c6dc5e3c0ce0f54a82723ddcaf45351a3cff34ef9806f",
+      "verification": {
+        "hashed_files": 32,
+        "hashed_bytes": 33040920,
+        "unhashed_files": [
+          "xgrammar-0.1.25.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "xxhash",
+      "origin": "overlay",
+      "record_sha256": "a55b636e56e8393131e1bcb2a65753af16b166f1294acb20a019d9afb9261dfe",
+      "verification": {
+        "hashed_files": 13,
+        "hashed_bytes": 802516,
+        "unhashed_files": [
+          "xxhash-3.6.0.dist-info/RECORD"
+        ]
+      }
+    },
+    {
+      "name": "yarl",
+      "origin": "base-readonly",
+      "record_sha256": "66ce3a60762215948b72b37822f4d1839a29b7c8262401a58d0b94d6535594a2",
+      "verification": {
+        "hashed_files": 19,
+        "hashed_bytes": 1269240,
+        "unhashed_files": [
+          "yarl-1.20.1.dist-info/RECORD"
+        ]
+      }
+    }
+  ],
+  "native_imports": false,
+  "seconds": 14.399037400027737,
+  "project_bytes": 13265557282,
+  "remaining_stage_directories": [],
+  "base_package_count": 99,
+  "overlay_package_count": 62,
+  "initial_summary_count_error": "Initial summary compared resolved origin paths to category strings and printed0/0; corrected from verified RECORD category rows without rerunning hashes."
+}

@@ -1,0 +1,13 @@
+{
+  "inputs": {
+    ".cache/datasets/ultrachat_200k/train_sft-00000-of-00003-a3ecf92756993583.parquet": "afa8fa7426081b2a0e732fb50dbb5cd402a28ad5f0dbe66c0d996d63e7220727",
+    ".cache/datasets/ultrachat_200k/test_sft-00000-of-00001-f7dfac4afe5b93f4.parquet": "c18fd6e77395577652bdefbc5a87044ea799e989451ecfca5c6cf977ae5c6f70"
+  },
+  "n_train": 1200,
+  "n_eval": 128,
+  "max_chars": 2000,
+  "outputs": {
+    ".cache/t15/data/train_prompts.jsonl": "953f7673cd485d0ad434703d5985b28266ca0987f882bac85de47595fbb550c6",
+    ".cache/t15/data/eval_prompts.jsonl": "8d622378cc9da95ac4d54c59d9a8db76cdf926350102cefb817a08d85207fd86"
+  }
+}

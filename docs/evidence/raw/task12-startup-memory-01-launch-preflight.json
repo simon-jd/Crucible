@@ -1,0 +1,14 @@
+{
+  "returncode": 0,
+  "stdout": "{\n  \"ok\": true,\n  \"units\": \"decimal GB = 1,000,000,000 bytes\",\n  \"project_bytes\": 13271311945,\n  \"free_bytes\": 272252633088,\n  \"model_cache\": \"/home/postedism/.cache/huggingface\",\n  \"errors\": []\n}\n",
+  "stderr": "",
+  "source_count": 169,
+  "artifact_count": 15,
+  "identities_all_match": true,
+  "command_and_environment_match": true,
+  "python_nativepython_timeout_match": true,
+  "port_free": true,
+  "target_and_guardlog_fresh": true,
+  "proposal_sha256": "68e52f7b340ec7651eb5ecba24201328382e3763447993e2b1684c8905680d78",
+  "freeze_sha256": "4245699a5ea1d7f81d7af15b65e6ff6e99103ae33d0ef28fc4d70d06b629d91c"
+}

@@ -1,0 +1,10 @@
+9786090075	.venv-ml
+81043572	.venv
+410574372	.cache
+561135236	.tools
+1719559157	.venv-ml/lib/python3.12/site-packages/torch
+4385333383	.venv-ml/lib/python3.12/site-packages/nvidia
+565902014	.venv-ml/lib/python3.12/site-packages/triton
+1348054638	.venv-ml/lib/python3.12/site-packages/vllm
+10933379151	.
+33807223943	/home/postedism/.cache/huggingface

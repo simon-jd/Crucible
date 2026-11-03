@@ -1,0 +1,141 @@
+{
+  "scope": "one frozen-binary CPU fixture screen; no serving-performance acceptance",
+  "original_exec_handle": 15879,
+  "outer_authoritative_exit_code": 0,
+  "exact_outer_argv": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "85s",
+    "/usr/bin/prlimit",
+    "--fsize=262144:262144",
+    "--core=0:0",
+    "--",
+    "env",
+    "PYTHONDONTWRITEBYTECODE=1",
+    ".venv/bin/python",
+    "-B",
+    "docs/evidence/raw/task12-sender-cpu-01-fixture.py"
+  ],
+  "replay_actual_returncode": 1,
+  "replay_stderr": "sender-invalid run; no accepted performance\n",
+  "screen_completed": true,
+  "sender_valid": false,
+  "raw_aborted": false,
+  "all_planned_rows_retained": true,
+  "status_counts": {
+    "ok": 23
+  },
+  "actual_output_tokens": 1556,
+  "late": [
+    {
+      "index": 1,
+      "scheduled_ms": 8000,
+      "sent_ms": 8006.790109,
+      "lag_ms": 6.790108999999575
+    },
+    {
+      "index": 2,
+      "scheduled_ms": 31000,
+      "sent_ms": 31017.557943,
+      "lag_ms": 17.557942999999796
+    }
+  ],
+  "late_fraction": 0.08695652173913043,
+  "elapsed_s": 59.03601136896759,
+  "sample_count": 582,
+  "sampled_max_aggregate_rss_bytes": 39669760,
+  "fixture_connections": 12,
+  "body_events_for_late_indices": [
+    {
+      "event": "body_complete",
+      "connection": 2,
+      "index": 1,
+      "sha256": "f830030cfd316cde2169349ea9b22cbd2401b2ff13d44e3cbba19b09c225c0e5",
+      "bytes": 172,
+      "monotonic_ns": 716246531647079
+    },
+    {
+      "event": "body_complete",
+      "connection": 3,
+      "index": 2,
+      "sha256": "e7dc38eea9dba6aafd58b25f0e35324a76f649d35bcc0ff3876904ef17ca91c0",
+      "bytes": 2673,
+      "monotonic_ns": 716269543034456
+    }
+  ],
+  "run_output_bytes": 146749,
+  "phase_current_bytes_including_root_gate_and_report": 253618,
+  "phase_cap_bytes": 2000000,
+  "output_manifest": {
+    "docs/evidence/raw/task12-sender-cpu-01/fixture.jsonl": {
+      "bytes": 7008,
+      "sha256": "92eec61386d3cfd66c7ffd9fa5813dd8cd37e24c579e397453c3fe0c800c80c1"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/launch.json": {
+      "bytes": 530,
+      "sha256": "1e7e6d2eb27e6be6564e1c5128960987c9c50e69ec3bd4e02179a5efb82ced67"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/provenance.json": {
+      "bytes": 4026,
+      "sha256": "b10506917afb5f92f430dff9764760fc882d39d67f6c978038ade915e99cdf97"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/rss.jsonl": {
+      "bytes": 91017,
+      "sha256": "58e82a02c2582ac18965d217ea2c7f5ac98bbf9c22e7ec20d5191d86ab826f2c"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/stderr.log": {
+      "bytes": 44,
+      "sha256": "54e25baf2a1ae08480afd26e3404ad057831f3d1e722a33f4390f5046fe4eb07"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/stdout.json": {
+      "bytes": 43462,
+      "sha256": "5b6b4ceef022aa5aecdfca17feaef357fe2bf9c0199684c49a7d91c34c4f9f87"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/stop.json": {
+      "bytes": 93,
+      "sha256": "641650a138c465492ae86fa0d776accb49d93841a99758fe6120f1883e966ba7"
+    },
+    "docs/evidence/raw/task12-sender-cpu-01/terminal.json": {
+      "bytes": 569,
+      "sha256": "a5786f15cb77b9b3728384744abdc3e136827f6d551adde8c2092f938c299523"
+    }
+  },
+  "cleanup": {
+    "child": {
+      "pid": 656904,
+      "starttime": 71623852,
+      "termination_requested": false,
+      "pre_cleanup_returncode": 1,
+      "returncode": 1,
+      "reaped": true,
+      "pid_absent": true
+    },
+    "fixture": {
+      "threads_alive": 0,
+      "connections": 12,
+      "listener_closed": true,
+      "port_listener_absent": true,
+      "errors": []
+    }
+  },
+  "host_cleanup_receipt": "docs/evidence/raw/task12-sender-cpu-01-host-cleanup.json",
+  "terminal_integrity_receipt": "docs/evidence/raw/task12-sender-cpu-01-terminal-integrity.json",
+  "postflight": {
+    "ok": true,
+    "units": "decimal GB = 1,000,000,000 bytes",
+    "project_bytes": 13297091038,
+    "free_bytes": 266069819392,
+    "model_cache": "/home/postedism/.cache/huggingface",
+    "errors": []
+  },
+  "limitations": [
+    "single immediate/coalesced fixture run; original native SSE pacing/load and prior idle durations differ",
+    "index2 delay recurs without native model service but shared host/runtime/client cause remains unassigned",
+    "no timer/goroutine/dial/Write phase timestamps in frozen binary; no phase decomposition inferred",
+    "sampled RSS bound is not continuous quota enforcement",
+    "sender-invalid binary exit1 is retained; wrapper0 denotes completed diagnosis only",
+    "no retries, no native/GPU run, no StageC instrumentation/build"
+  ]
+}

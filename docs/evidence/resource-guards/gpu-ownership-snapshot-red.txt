@@ -1,0 +1,35 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_ownership_shim_empty_snapshot_never_overrides_kernel_live_child _____
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x78a8baea2390>
+capsys = <_pytest.capture.CaptureFixture object at 0x78a8baea2450>
+
+    def test_ownership_shim_empty_snapshot_never_overrides_kernel_live_child(monkeypatch, capsys):
+        state = ownership_shim(monkeypatch, worker=True)
+        # /proc can omit live children during concurrent exits. It is only discovery.
+        monkeypatch.setattr(gpu_guard, "_own_children", lambda: (
+            {71001} if state.started and not state.reaped else set()))
+
+        def reap_leader(pid, flags):
+            assert pid == 71001
+            state.reaped = True
+            return pid, 0
+
+        def advance(seconds):
+            state.clock += seconds
+            if state.clock > 1.1:
+                assert "cleanup_unconfirmed" in capsys.readouterr().err
+                assert not any(reaped for _, _, reaped in state.signals), "no stale group signal"
+                raise StopQuarantine
+
+        monkeypatch.setattr(gpu_guard.os, "waitpid", reap_leader)
+        monkeypatch.setattr(gpu_guard.time, "sleep", advance)
+>       with pytest.raises(StopQuarantine):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'test_gpu_guard.StopQuarantine'>
+
+scripts/tests/test_gpu_guard.py:252: Failed
+=========================== short test summary info ============================
+FAILED scripts/tests/test_gpu_guard.py::test_ownership_shim_empty_snapshot_never_overrides_kernel_live_child
+1 failed, 16 deselected in 0.04s

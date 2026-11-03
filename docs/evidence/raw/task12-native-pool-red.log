@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 1 item
+
+serving/baseline/native_pool_test.py::test_pool_client_cache_evidence_and_growth_no_double_count FAILED [100%]
+
+=================================== FAILURES ===================================
+__________ test_pool_client_cache_evidence_and_growth_no_double_count __________
+
+tmp_path = PosixPath('/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-cpu/red/test_pool_client_cache_evidenc0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x710a00775d90>
+
+    def test_pool_client_cache_evidence_and_growth_no_double_count(tmp_path, monkeypatch):
+        pool = fixture(tmp_path)
+        (pool.work / "tmp").mkdir(exist_ok=True)
+        (pool.work / "tmp/payload").write_bytes(b"abc")
+        (pool.output / "record").write_bytes(b"12")
+        first = pool.measure()
+        assert first["pool_bytes"] == 13 and first["runtime_cache_bytes"] == 3
+>       assert first["combined_bytes"] == 15  # Mutation RED: omitting client gives5.
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert 5 == 15
+
+serving/baseline/native_pool_test.py:46: AssertionError
+=========================== short test summary info ============================
+FAILED serving/baseline/native_pool_test.py::test_pool_client_cache_evidence_and_growth_no_double_count
+============================== 1 failed in 0.04s ===============================

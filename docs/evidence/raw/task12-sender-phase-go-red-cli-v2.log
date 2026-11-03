@@ -1,0 +1,24 @@
+flag provided but not defined: -phase-sidecar
+Usage of replay:
+  -format string
+    	azure or burstgpt
+  -inflight int
+    	hard admission bound (default 64)
+  -mult float
+    	arrival-rate multiplier (default 1)
+  -seed uint
+    	synthetic input seed (default 1)
+  -timeout duration
+    	absolute request lifetime from schedule (default 30s)
+  -token-ids string
+    	verified tokenizer allowlist JSON
+  -trace string
+    	bounded source CSV
+  -url string
+    	native /generate URL
+--- FAIL: TestDiagnosticCLIOptionalAndOriginalJSON (0.00s)
+    --- FAIL: TestDiagnosticCLIOptionalAndOriginalJSON/enabled (0.00s)
+        diagnostic_test.go:48: flag provided but not defined: -phase-sidecar
+FAIL
+FAIL	crucible/serving/replay/cmd/replay	0.004s
+FAIL

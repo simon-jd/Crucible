@@ -1,0 +1,29 @@
+{
+  "red": {
+    "original_chunk": "c9f5dc",
+    "exit": 1,
+    "expected_assertion": "measurement history missing at terminal boundary",
+    "pytest": "1 failed in0.07s"
+  },
+  "green": {
+    "original_chunk": "999e18",
+    "exit": 0,
+    "pytest": "15 passed in0.09s"
+  },
+  "commands": [
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp TASK12_POOL_FIX1_BASELINE=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/baseline .venv/bin/python -B -m pytest -p no:cacheprovider --basetemp=.tmp-task12-native-pool-fix1/red -v 'serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup[exhausted]' > docs/evidence/raw/task12-native-pool-fix1-red.log 2>&1",
+    "/usr/bin/timeout --foreground --signal=TERM --kill-after=5s 45s /usr/bin/prlimit --fsize=262144:262144 --core=0:0 --as=2000000000:2000000000 -- env -u TRANSFORMERS_CACHE -u TASK12_POOL_FIX1_BASELINE PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp .venv/bin/python -B -m pytest -p no:cacheprovider --basetemp=.tmp-task12-native-pool-fix1/green -v serving/baseline/native_pool_test.py::test_pool_history_reaches_terminal_before_cleanup serving/baseline/native_pool_test.py::test_pool_history_copy_and_bound_are_explicit serving/baseline/native_pool_test.py::test_pool_scan_errors_retry_only_whole_enoent serving/baseline/native_pool_test.py::test_pool_scan_transient_restarts_whole_count serving/baseline/native_pool_test.py::test_pool_legacy_mode_no_scan_and_rss_still_enforced serving/baseline/output_limits_test.py::test_bounded_utf8_metadata_keeps_prefix_and_never_reports_success serving/baseline/output_limits_test.py::test_final_child_output_cutoff_invalidates_before_pair_publication > docs/evidence/raw/task12-native-pool-fix1-focused.log 2>&1"
+  ],
+  "source_hashes_unchanged": {
+    "serving/baseline/native_pool.py": "0f02c526c85904bfaa9b01d4255a992b505ea4d7acfce0aad6dd198bd0c5496d",
+    "serving/baseline/experiment.py": "5d36897a9a6fedd53664cf38b258d6aa7a455a4ad9433a857e81fad1ccc3f596",
+    "serving/baseline/native_pool_test.py": "057b2bcf748ba22c7ae34a4b47f394e8c7e04b60880c26eae455931ddb3e0556",
+    "serving/baseline/README.md": "8eb49fabd7c644c32d4081d90c33ee14e5d4e4104f19215e2be911d801276cc6"
+  },
+  "inventory": "docs/evidence/raw/task12-native-pool-fix1-cpu-inventory.json",
+  "inventory_sha256": "6d5e43bb69e9f380f21d990ecdf7e24b08da44c6c7d004fe64916a01fa280d26",
+  "inventory_bytes": 47474,
+  "scratch_unique_bytes": 189487,
+  "cleanup": "pending exact root inventory review/gate",
+  "no_repeats_or_native": true
+}

@@ -1,0 +1,16 @@
+{
+ "steps": 100,
+ "last_step": 100,
+ "step_time_sum_s": 1418.6,
+ "samples": 6400,
+ "samples_per_s_over_step_time": 4.51,
+ "gen_time_sum_s": 412.4,
+ "actor_max_memory_allocated_gb": 9.221,
+ "actor_max_memory_reserved_gb": 10.393,
+ "nvidia_smi_peak_used_mib": 16423,
+ "nvidia_smi_samples": 1573,
+ "score_mean_first10": 0.3922,
+ "score_mean_last10": 0.6266,
+ "response_clip_ratio_first10": 0.2437,
+ "response_clip_ratio_last10": 0.0531
+}

@@ -1,0 +1,34 @@
+{
+  "time_utc": "2026-10-25T18:07:20.820004+00:00",
+  "scope": "ROOT boundedfix1 allocation; no totalcap/resourceauthority increase",
+  "current_phase_with_fullgitindex_branchlogs_and_newobjects": 1357578,
+  "new_git_objects": 35,
+  "new_git_object_bytes": 112102,
+  "stage_cap": 2000000,
+  "scratch_cap": 1000000,
+  "new_fix_modes_only": {
+    "FSIZE_eachfile": 49152,
+    "terminal_receipt_cap": 49152,
+    "stdout_highwater": 45000,
+    "six_CPU_files_cap": 294912,
+    "four_staticfiles_8192each": 32768,
+    "conservative_future_extra": 2000000
+  },
+  "old_modes_unchanged": {
+    "extra": 3000000,
+    "FSIZE": 262144
+  },
+  "other_forecast": {
+    "report": 4051,
+    "proposal": 8000,
+    "fixdiff": 60000,
+    "fixreview_publiccopy": 32000,
+    "source_docs_growth": 20000,
+    "root_metadata_git_growth": 100000
+  },
+  "phase_forecast": 1909309,
+  "whole690M_nativepool_reserve_unchanged": true,
+  "project_cap": 14000000000,
+  "ruling": "newfixmode extra2M is above actualremainingstage642422+1Mscratch1642422; replaces spentwhole3M doubleconservatism, not actual14GB or original690M cap relaxation",
+  "cost_if_wrong": "newboundedCPUgate fails; no permit to exceedproject orphasecaps"
+}

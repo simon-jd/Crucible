@@ -1,0 +1,31 @@
+{
+  "time_utc": "2026-10-25T19:30:28.007782+00:00",
+  "original_Popen_pid": 4,
+  "parent_pid": 3,
+  "command": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "60s",
+    "/usr/bin/prlimit",
+    "--as=512000000:512000000",
+    "--fsize=65536:65536",
+    "--core=0:0",
+    "--",
+    "/home/postedism/Desktop/Crucible/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-s",
+    "-p",
+    "no:cacheprovider",
+    "--maxfail=1",
+    "--tb=short",
+    "--basetemp=.tmp-task12-ipc-pytest",
+    "serving/baseline/native_ipc_test.py"
+  ],
+  "automatic_retry": false,
+  "GPU_authorized": false
+}

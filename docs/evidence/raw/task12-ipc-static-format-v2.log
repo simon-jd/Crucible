@@ -1,0 +1,71 @@
+unformatted: File would be reformatted
+   --> serving/baseline/native_ipc.py:89:23
+    |
+88  |     return _inode(value) + [
+    -         value.st_mode, value.st_uid, value.st_gid, value.st_nlink,
+    -         value.st_size, value.st_mtime_ns,
+89  +         value.st_mode,
+90  +         value.st_uid,
+91  +         value.st_gid,
+92  +         value.st_nlink,
+93  +         value.st_size,
+94  +         value.st_mtime_ns,
+95  |     ]
+--------------------------------------------------------------------------------
+137 |         _require((value.st_uid, value.st_gid) == (self.uid, self.gid), "receipt/reservation owner")
+    -         _require(value.st_dev == self.identity[0] and value.st_nlink == links, "receipt/reservation links/device")
+138 +         _require(
+139 +             value.st_dev == self.identity[0] and value.st_nlink == links,
+140 +             "receipt/reservation links/device",
+141 +         )
+142 |
+--------------------------------------------------------------------------------
+158 |         prepared = os.open(
+    -             PREPARED, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+    -             0o600, dir_fd=fd,
+159 +             PREPARED,
+160 +             os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+161 +             0o600,
+162 +             dir_fd=fd,
+163 |         )
+--------------------------------------------------------------------------------
+174 |             _require(value.st_size == len(data), "receipt size")
+    -             _require(_receipt_stat(os.stat(PREPARED, dir_fd=fd, follow_symlinks=False)) == _receipt_stat(value), "prepared replacement")
+175 +             _require(
+176 +                 _receipt_stat(os.stat(PREPARED, dir_fd=fd, follow_symlinks=False))
+177 +                 == _receipt_stat(value),
+178 +                 "prepared replacement",
+179 +             )
+180 |             os.link(PREPARED, FINAL, src_dir_fd=fd, dst_dir_fd=fd, follow_symlinks=False)
+--------------------------------------------------------------------------------
+185 |             _require(_receipt_stat(first) == _receipt_stat(second), "published receipt links")
+    -             _require(first.st_ino == value.st_ino and first.st_dev == value.st_dev, "published receipt identity")
+186 +             _require(
+187 +                 first.st_ino == value.st_ino and first.st_dev == value.st_dev,
+188 +                 "published receipt identity",
+189 +             )
+190 |             os.fsync(fd)
+--------------------------------------------------------------------------------
+218 |                 endpoint = getattr(ports, field)
+    -                 _require(isinstance(endpoint, str) and endpoint.startswith("ipc://"), "endpoint scheme")
+219 +                 _require(
+220 +                     isinstance(endpoint, str) and endpoint.startswith("ipc://"), "endpoint scheme"
+221 +                 )
+222 |                 path = Path(endpoint[6:])
+    -                 _require(path.parent == directory.path and endpoint == "ipc://" + str(path), "endpoint location")
+    -                 _require(path.name not in (PREPARED, FINAL) and len(os.fsencode(path)) <= 107, "endpoint name/length")
+223 +                 _require(
+224 +                     path.parent == directory.path and endpoint == "ipc://" + str(path),
+225 +                     "endpoint location",
+226 +                 )
+227 +                 _require(
+228 +                     path.name not in (PREPARED, FINAL) and len(os.fsencode(path)) <= 107,
+229 +                     "endpoint name/length",
+230 +                 )
+231 |                 value = os.stat(path.name, dir_fd=fd, follow_symlinks=False)
+--------------------------------------------------------------------------------
+235 |             _require(len({row["name"] for row in rows.values()}) == 5, "duplicate endpoints")
+    -             _require(len({tuple(row["reservation"][:2]) for row in rows.values()}) == 5, "duplicate reservations")
+236 +             _require(
+237 +                 len({tuple(row["reservation"][:2]) for row in rows.values()}) == 5,
+238 +                 "duplic

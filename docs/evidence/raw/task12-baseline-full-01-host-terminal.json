@@ -1,0 +1,60 @@
+{
+  "exact_owned_identities": [
+    {
+      "pid": 1758685,
+      "proc_exists": false
+    },
+    {
+      "pid": 1759427,
+      "proc_exists": false
+    }
+  ],
+  "matching_controller_or_entry_processes": [],
+  "loopback_31012_connection_refused": true,
+  "gpu_compute_process_query": {
+    "returncode": 0,
+    "stderr": "",
+    "rows": [
+      {
+        "pid": 22351,
+        "executable_basename": "claude-desktop",
+        "used_memory": "70 MiB"
+      },
+      {
+        "pid": 18172,
+        "executable_basename": "gnome-software",
+        "used_memory": "44 MiB"
+      },
+      {
+        "pid": 2944731,
+        "executable_basename": "chrome",
+        "used_memory": "237 MiB"
+      },
+      {
+        "pid": 18205,
+        "executable_basename": "xdg-desktop-portal-gnome",
+        "used_memory": "12 MiB"
+      },
+      {
+        "pid": 2898551,
+        "executable_basename": "siyuan",
+        "used_memory": "138 MiB"
+      },
+      {
+        "pid": 3141444,
+        "executable_basename": "nautilus",
+        "used_memory": "30 MiB"
+      },
+      {
+        "pid": 1743835,
+        "executable_basename": "code",
+        "used_memory": "203 MiB"
+      }
+    ],
+    "unrelated_command_arguments": "omitted: nvidia-smi process_name unexpectedly returned full application arguments; receipt retains only PID/executable basename/memory"
+  },
+  "outer_guard_original_handle": 57885,
+  "outer_guard_authoritative_exit": 1,
+  "descendant_drain_contract": "fixed guard returns original1 only after cleanup confirmation; cleanup-unconfirmed would return125",
+  "NCCL": "startup log records torch distributed initialization; exact-owned process exit and GPU-process query evidence retained; explicit backend destroy_process_group call not observed"
+}

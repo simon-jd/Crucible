@@ -1,0 +1,15 @@
+{
+  "scope": "root independent parsing of retained actual diagnostic02; no native execution or tests",
+  "samples": 146,
+  "all_stat_rss_sums_match": true,
+  "peak_stat_rss_bytes": 7409397760,
+  "last_stat_rss_bytes": 3928104960,
+  "max_owned_processes_observed": 7,
+  "resource_error_sample_count": 0,
+  "benchmark_accepted": false,
+  "limitations": [
+    "stat RSS/status components sampled non-atomically; no quota discount",
+    "readiness only; no requests, inference peak, SLO or throughput established",
+    "no historical unknown-process module attribution or matched memory-saving percentage"
+  ]
+}

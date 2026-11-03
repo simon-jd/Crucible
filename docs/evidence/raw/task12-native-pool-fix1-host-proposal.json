@@ -1,0 +1,53 @@
+{
+  "status": "source-only-proposed-not-authorized-or-executed",
+  "argv": [
+    "/usr/bin/timeout",
+    "--foreground",
+    "--signal=TERM",
+    "--kill-after=5s",
+    "30s",
+    "/usr/bin/prlimit",
+    "--fsize=131072:131072",
+    "--core=0:0",
+    "--as=2000000000:2000000000",
+    "--",
+    "env",
+    "-u",
+    "TRANSFORMERS_CACHE",
+    "PYTHONPATH=.",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "HF_HOME=/home/postedism/.cache/huggingface",
+    "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+    "TORCH_HOME=/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/torch-home",
+    "TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/tmp",
+    ".venv/bin/python",
+    "-B",
+    "docs/evidence/raw/task12-native-pool-fix1-host.py"
+  ],
+  "log": "docs/evidence/raw/task12-native-pool-fix1-host.log",
+  "receipt": "docs/evidence/raw/task12-native-pool-fix1-host-receipt.json",
+  "script_sha256": "1966f18e49e0239b7e5882162387ceff5af0659e89c349293f71841618ba7308",
+  "executables": {
+    ".venv/bin/python": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7",
+    "/usr/bin/timeout": "f84e76ea4da1e0c4e92254bd0d7dccdabe2c8b3098e734f27997dae3ee5d8e02",
+    "/usr/bin/prlimit": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4"
+  },
+  "scope": "one metadata/pureCPU check on actual host permission surface; no native import/modelread/service/listener/lock/processscan/download; no pool mutation",
+  "no_old_handoff_execution": true,
+  "compare_environment": "derived43+inherited4 must equal pinned historical host snapshot; reject mismatch, no silently updated freeze",
+  "remaining_gate": "root reads source/argv then one metadata command gate; native remains closed",
+  "future_v2_lineage": {
+    "new_paths": [
+      "docs/evidence/raw/task12-baseline-full-03-proposal-v2.json",
+      "docs/evidence/raw/task12-baseline-full-03-source-freeze-v2.json",
+      "docs/evidence/raw/task12-baseline-full-03-preflight-v2.json",
+      "docs/evidence/raw/task12-baseline-full-03-preparation-v2.json"
+    ],
+    "original_proposal_sha256": "a288fcbdf15945bd38b8c5536635dbcfab74b587eab216d4d747bf475242d1ee",
+    "original_freeze_sha256": "6efc95908755d150e74293732c3ab19eacbc16eabbf037c21e2f6d162b8842a2",
+    "change": "update only fixed-source identity/launcher source hash/new CPU proof+current host metadata and new v2 launcher proposal/freeze paths; old historical artifacts preserved",
+    "unchanged": "actual ee968client/buildinfo/Go sources/pool manifest/runtime/protocol/limits/6cal24eval2106requests/native command flags; no rebuild",
+    "status": "v2 files deferred until authorized host success; no native authority"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "trusted_human_reply_recorded_by_coordinator",
+  "recorded_utc": "2026-10-25T18:37:38.209159+00:00",
+  "source_chat_id": "01a171e6-b069-7a80-a7ac-43de46652990",
+  "source_question_item_id": "[\"request_user_input_async\",\"call_5d0eb5634d5c46cfa745bbb2f0110d61\",0]",
+  "human_answer_verbatim": "授权按该冻结方案执行一次",
+  "question_scope": "Crucible full03 v2 在本机 RTX4090 按已冻结方案执行一次；先通过最新资源/环境检查并确认现有CPU作业终态和清理；$0、离线、固定GPU锁、最长4小时含清理、项目14GB、进程树RSS16GB停机线，失败即停且不自动重试，保留full02失败，不修改发送有效性门槛。",
+  "proposal": {
+    "path": "docs/evidence/raw/task12-baseline-full-03-proposal-v2.json",
+    "sha256": "c90c71457ea85443b6bb290c72210ccdcc82793c71359620ac796ad7c637b692"
+  },
+  "freeze": {
+    "path": "docs/evidence/raw/task12-baseline-full-03-source-freeze-v2.json",
+    "sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a"
+  },
+  "reviewed_commit": "4ec13359b4062f45e64239ba96590247ed83cd63",
+  "review_document_sha256": "186dbcb0733eb9c23f19a0ad1f9f42f8243edf16a597a6026a76f00bd68e604e",
+  "authority_basis": "The human directly answered the exact scoped approval question in the coordinator chat. This JSON is a coordinator transcript record, not independent human-signature evidence; accepted=true on an async request was not used as consent.",
+  "execution_count": 1,
+  "entry": "launch_full bound to the above proposal/freeze with frozen environment; one original handle only",
+  "conditions": [
+    "Finish current CPU terminal/cleanup and source handback first",
+    "Fresh verify all frozen sources/artifacts/executables, exact environment, resources, empty leaf directories/new outputs/closed31012 and ownership",
+    "No duplicate queued/live run, no unauthorized source/env/cap change, no automatic retry",
+    "If actual fresh gate fails, preserve reason and do not execute until corrected within same original limits",
+    "No alternate path to bypass any remaining explicit automatic approval rejection"
+  ]
+}

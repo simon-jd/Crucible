@@ -1,0 +1,84 @@
+{
+  "status": "proposed-not-authorized-or-executed",
+  "commands": {
+    "prepare": [
+      "/usr/bin/timeout",
+      "--foreground",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "30s",
+      "/usr/bin/prlimit",
+      "--fsize=131072:131072",
+      "--core=0:0",
+      "--as=2000000000:2000000000",
+      "--",
+      "env",
+      "-u",
+      "TRANSFORMERS_CACHE",
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "HF_HOME=/home/postedism/.cache/huggingface",
+      "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "TORCH_HOME=/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/torch-home",
+      "TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool",
+      ".venv/bin/python",
+      "-B",
+      "docs/evidence/raw/task12-native-pool-handoff.py",
+      "prepare"
+    ],
+    "host": [
+      "/usr/bin/timeout",
+      "--foreground",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "30s",
+      "/usr/bin/prlimit",
+      "--fsize=131072:131072",
+      "--core=0:0",
+      "--as=2000000000:2000000000",
+      "--",
+      "env",
+      "-u",
+      "TRANSFORMERS_CACHE",
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "HF_HOME=/home/postedism/.cache/huggingface",
+      "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "TORCH_HOME=/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/torch-home",
+      "TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-03-pool/native-cache/tmp",
+      ".venv/bin/python",
+      "-B",
+      "docs/evidence/raw/task12-native-pool-handoff.py",
+      "host"
+    ]
+  },
+  "outer_logs": {
+    "prepare": "docs/evidence/raw/task12-native-pool-handoff-prepare.log",
+    "host": "docs/evidence/raw/task12-native-pool-handoff-host.log"
+  },
+  "identities": {
+    "docs/evidence/raw/task12-native-pool-handoff.py": {
+      "bytes": 8205,
+      "sha256": "c4c575e43ff43d6bf7f2f52b04e87df1a46ef1184c947ffe989a18f03621c098"
+    },
+    ".venv/bin/python": {
+      "bytes": 30905176,
+      "sha256": "021044895e95be79dc2f110367607e684119afbc8ce75f6f0eec94844e0acec7"
+    },
+    "/usr/bin/timeout": {
+      "bytes": 11807104,
+      "sha256": "f84e76ea4da1e0c4e92254bd0d7dccdabe2c8b3098e734f27997dae3ee5d8e02"
+    },
+    "/usr/bin/prlimit": {
+      "bytes": 27616,
+      "sha256": "cb28811cb3902773c1a0f3ac0ea554c7a1e232724e9d4cae055ede54b65a7bc4"
+    }
+  },
+  "prepare_scope": "create only exact native-cache plus14 listed directories; exclusive manifest+receipt; no overwrite/cleanup",
+  "host_scope": "same actual host permission surface as future native; allowlist43derived+4inherited/poolmetadata/productionNativePool.measure only; no nativeimports/service/GPU/flock",
+  "no_native_authority": true,
+  "new_evidence_bound": 524288,
+  "remaining_pool_bytes": 489839769
+}

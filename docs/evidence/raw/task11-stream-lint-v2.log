@@ -1,0 +1,70 @@
+{"environment_override": {"RAYON_NUM_THREADS": "1"}, "command": [".venv/bin/ruff", "check", "--no-cache", "rl/learner/handoff_stream.py", "rl/learner/handoff_protocol.py", "rl/learner/state_handoff.py", "rl/learner/train.py", "rl/learner/tests/test_stream_handoff.py", "rl/learner/tests/handoff_worker.py", "scripts/test_ram_handoff_cpu.py"]}
+BLE001 Do not catch blind exception: `BaseException`
+  --> rl/learner/handoff_protocol.py:63:16
+   |
+61 |             identity = os.fstat(fd)
+62 |             _close_identity(fd, (identity.st_dev, identity.st_ino))
+63 |         except BaseException as error:
+   |                ^^^^^^^^^^^^^
+64 |             errors.append(error)
+65 |             uncertain.append((fd, None if identity is None else (identity.st_dev, identity.st_ino)))
+   |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/handoff_protocol.py:99:16
+    |
+ 97 |         try:
+ 98 |             _close_rights(fds)
+ 99 |         except BaseException as cleanup:
+    |                ^^^^^^^^^^^^^
+100 |             raise BaseExceptionGroup("protocol and descriptor cleanup failed", [error, cleanup])
+101 |         raise
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/handoff_protocol.py:255:20
+    |
+253 |             try:
+254 |                 _close_identity(fd, (identity.st_dev, identity.st_ino))
+255 |             except BaseException as cleanup:
+    |                    ^^^^^^^^^^^^^
+256 |                 owner.failed = True
+257 |                 raise BaseExceptionGroup("capture and cleanup failed", [error, cleanup])
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/handoff_protocol.py:447:20
+    |
+445 |             try:
+446 |                 _cleanup_process(process)
+447 |             except BaseException as error:
+    |                    ^^^^^^^^^^^^^
+448 |                 errors.append(error)
+449 |                 uncertain = True
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/handoff_protocol.py:465:20
+    |
+463 |                 _close_identity(output_fd, (identity.st_dev, identity.st_ino))
+464 |                 owner.pending_fd = None
+465 |             except BaseException as error:
+    |                    ^^^^^^^^^^^^^
+466 |                 errors.append(error)
+467 |                 owner.failed = True
+    |
+
+BLE001 Do not catch blind exception: `BaseException`
+   --> rl/learner/handoff_protocol.py:472:24
+    |
+470 |                 try:
+471 |                     handle.close()
+472 |                 except BaseException as error:
+    |                        ^^^^^^^^^^^^^
+473 |                     errors.append(error)
+474 |                     owner.failed = True
+    |
+
+Found 6 errors.
+
+exit_code=1

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "synthetic_fixture": true,
+  "heldout_manifest_sha256": "be08c38630cf33c9987845aafba0703d5610178b0ddd959238a2613a22314361",
+  "problems": [
+    {
+      "id": "a",
+      "question_sha256": "36bc5ec619514bf7576b187b06c5ddf69dfa665e1c119c946bea43f2dad07cf1",
+      "source": "fixture/test@v1",
+      "record_sha256": "d1063c000d1de6eec8babced531542f45ff2ded1dce33a02dfa8903e0b1e345e",
+      "planned_completions": 2
+    },
+    {
+      "id": "b",
+      "question_sha256": "752a9eb1994c7fd4b8ff391dbb2836c54f8643edaeb488b025646db06e0f8614",
+      "source": "fixture/test@v1",
+      "record_sha256": "df531a116cd407fddcb0b8648af4bbf3938ce47651f75a560dc16d37558dbc3b",
+      "planned_completions": 3
+    }
+  ]
+}

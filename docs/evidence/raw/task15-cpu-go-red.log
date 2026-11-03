@@ -1,0 +1,14 @@
+# command-line-arguments [command-line-arguments.test]
+serving/replay/accounting_test.go:7:15: undefined: AccountRequests
+serving/replay/accounting_test.go:7:76: undefined: Attempt
+serving/replay/accounting_test.go:16:16: undefined: Attempt
+serving/replay/accounting_test.go:23:29: undefined: Attempt
+serving/replay/accounting_test.go:24:14: undefined: AccountRequests
+serving/replay/accounting_test.go:35:23: undefined: Attempt
+serving/replay/accounting_test.go:37:16: undefined: AccountRequests
+serving/replay/accounting_test.go:45:14: undefined: AccountRequests
+serving/replay/accounting_test.go:45:57: undefined: Attempt
+serving/replay/accounting_test.go:53:11: undefined: Attempt
+serving/replay/accounting_test.go:53:11: too many errors
+FAIL	command-line-arguments [build failed]
+FAIL

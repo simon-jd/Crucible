@@ -1,0 +1,86 @@
+{
+  "formatter": {
+    "chunk": "93efe7",
+    "exit": 0,
+    "output": "3 files left unchanged\n"
+  },
+  "lint": {
+    "chunk": "894df4",
+    "exit": 1,
+    "output": "RUF100 [*] Unused `noqa` directive (unused: `BLE001`)\n   --> serving/baseline/experiment.py:721:41\n    |\n719 |             if sample[\"owned_rss_bytes\"] >= 16_000_000_000:\n720 |                 raise RuntimeError(\"resource high-water stop: \" + json.dumps(sample))\n721 |         except BaseException as error:  # noqa: BLE001 - a proc/RSS failure must retain recovered scan evidence\n    |                                         ^^^^^^^^^^^^^^\n722 |             attach_scan_history(error, sample[\"canonical_rescans\"])\n723 |             raise\n    |\nhelp: Remove unused `noqa` directive\n    |\n720 |                 raise RuntimeError(\"resource high-water stop: \" + json.dumps(sample))\n    -         except BaseException as error:  # noqa: BLE001 - a proc/RSS failure must retain recovered scan evidence\n721 +         except BaseException as error:\n722 |             attach_scan_history(error, sample[\"canonical_rescans\"])\n    |\n\nRUF100 [*] Unused `noqa` directive (unused: `BLE001`)\n   --> serving/baseline/native_pool.py:180:41\n    |\n178 |         try:\n179 |             return self._measure(canonical, errors)\n180 |         except BaseException as error:  # noqa: BLE001 - carry evidence without replacing the original failure\n    |                                         ^^^^^^^^^^^^^^\n181 |             attach_scan_history(error, errors)\n182 |             raise\n    |\nhelp: Remove unused `noqa` directive\n    |\n179 |             return self._measure(canonical, errors)\n    -         except BaseException as error:  # noqa: BLE001 - carry evidence without replacing the original failure\n180 +         except BaseException as error:\n181 |             attach_scan_history(error, errors)\n    |\n\nFound 2 errors.\n[*] 2 fixable with `--fix`.\n"
+  },
+  "sources_after": {
+    "serving/baseline/native_pool.py": "c7e5c0580195ff6b12753e343a683faf4342397b1e2aefef130af12d9e0066ed",
+    "serving/baseline/experiment.py": "1f2cfe6b9df44b93584eed4b06d5d25a4cee50c1358a9044b67b7609f91b49ea",
+    "serving/baseline/native_pool_test.py": "057b2bcf748ba22c7ae34a4b47f394e8c7e04b60880c26eae455931ddb3e0556",
+    "serving/baseline/README.md": "8eb49fabd7c644c32d4081d90c33ee14e5d4e4104f19215e2be911d801276cc6"
+  },
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--foreground",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "45s",
+      "/usr/bin/prlimit",
+      "--fsize=65536:65536",
+      "--core=0:0",
+      "--as=2000000000:2000000000",
+      "--",
+      "env",
+      "-u",
+      "TRANSFORMERS_CACHE",
+      "-u",
+      "TASK12_POOL_FIX1_BASELINE",
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "HF_HOME=/home/postedism/.cache/huggingface",
+      "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp",
+      "RAYON_NUM_THREADS=1",
+      ".venv/bin/ruff",
+      "format",
+      "--no-cache",
+      "serving/baseline/native_pool.py",
+      "serving/baseline/experiment.py",
+      "serving/baseline/native_pool_test.py"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--foreground",
+      "--signal=TERM",
+      "--kill-after=5s",
+      "45s",
+      "/usr/bin/prlimit",
+      "--fsize=65536:65536",
+      "--core=0:0",
+      "--as=2000000000:2000000000",
+      "--",
+      "env",
+      "-u",
+      "TRANSFORMERS_CACHE",
+      "-u",
+      "TASK12_POOL_FIX1_BASELINE",
+      "PYTHONPATH=.",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "HF_HOME=/home/postedism/.cache/huggingface",
+      "HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub",
+      "TMPDIR=/home/postedism/Desktop/Crucible/.tmp-task12-native-pool-fix1/tmp",
+      "RAYON_NUM_THREADS=1",
+      ".venv/bin/ruff",
+      "check",
+      "--no-cache",
+      "serving/baseline/native_pool.py",
+      "serving/baseline/experiment.py",
+      "serving/baseline/native_pool_test.py"
+    ]
+  ],
+  "logs": [
+    "task12-native-pool-fix1-format-v2.log",
+    "task12-native-pool-fix1-lint-v2.log"
+  ],
+  "pytest_or_native": false,
+  "stopped_after_lint_failure": true
+}

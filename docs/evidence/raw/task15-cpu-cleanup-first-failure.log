@@ -1,0 +1,11 @@
+First inline cleanup attempt, before any deletion or inventory receipt write:
+Traceback (most recent call last):
+  File "<stdin>", line 24, in <module>
+AssertionError
+
+Cause: assertion forbidding any symlink encountered pytest's owned current link:
+.tmp-task15-py-green/test_cli_json_errors_are_striccurrent -> /home/postedism/Desktop/Crucible/.tmp-task15-py-green/test_cli_json_errors_are_stric0
+No files were deleted. The subsequent no-loan full690MB preflight was mistakenly
+run before Go loan repayment and failed; exact output retained as
+task15-cpu-post-go-resources.json. No further tests/compilation were run while
+this resource error was unresolved. Root notified for exact cleanup recovery.

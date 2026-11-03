@@ -1,0 +1,101 @@
+{
+  "time_utc": "2026-10-25T16:05:58.660011+00:00",
+  "scope": "ROOT actual394frozen+100coord+15pooldirs+client+8serialsource pins afterfix1CPU/commit; readonly",
+  "freeze_sha256": "96ee0793a3f57b8b65c0e752b0fd34dbb71ef4a8d2f0a24f272481f2547c385a",
+  "Task12_source_count": 183,
+  "Task12_artifact_count": 207,
+  "executable_identity": {
+    "python_path": true,
+    "native_python_path": true,
+    "timeout_path": true,
+    "prlimit_path": true
+  },
+  "mismatches": [],
+  "coordinator_files": 100,
+  "coordinator_bytes": 2578786,
+  "pool15_directory_identities": {
+    "native-cache": {
+      "dev": 66307,
+      "inode": 55447088,
+      "empty": null
+    },
+    "cuda": {
+      "dev": 66307,
+      "inode": 55447089,
+      "empty": true
+    },
+    "datasets": {
+      "dev": 66307,
+      "inode": 55447090,
+      "empty": true
+    },
+    "deep-gemm": {
+      "dev": 66307,
+      "inode": 55447091,
+      "empty": true
+    },
+    "flashinfer": {
+      "dev": 66307,
+      "inode": 55447092,
+      "empty": true
+    },
+    "hf-modules": {
+      "dev": 66307,
+      "inode": 55447093,
+      "empty": true
+    },
+    "inductor": {
+      "dev": 66307,
+      "inode": 55447094,
+      "empty": true
+    },
+    "offline-cubin-source": {
+      "dev": 66307,
+      "inode": 55447095,
+      "empty": true
+    },
+    "outlines": {
+      "dev": 66307,
+      "inode": 55447096,
+      "empty": true
+    },
+    "tmp": {
+      "dev": 66307,
+      "inode": 55447097,
+      "empty": true
+    },
+    "torch": {
+      "dev": 66307,
+      "inode": 55447098,
+      "empty": true
+    },
+    "torch-home": {
+      "dev": 66307,
+      "inode": 55447099,
+      "empty": true
+    },
+    "triton": {
+      "dev": 66307,
+      "inode": 55447100,
+      "empty": true
+    },
+    "tvm-ffi": {
+      "dev": 66307,
+      "inode": 55447101,
+      "empty": true
+    },
+    "xdg": {
+      "dev": 66307,
+      "inode": 55447102,
+      "empty": true
+    }
+  },
+  "client_sha256": "ee968c696cb476a5aae97537991adea237400626518dfe34229fc346be5c855b",
+  "client_loan_repaid": false,
+  "full03_output_absent": true,
+  "scratch_absent": true,
+  "all8_serial_source_pins_match": true,
+  "initialreport38854Bprefix_and_initialreview_preserved": true,
+  "new_GPU_authorized": false,
+  "Goal": "active/open"
+}

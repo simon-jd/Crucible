@@ -1,0 +1,14 @@
+# crucible/serving/replay [crucible/serving/replay.test]
+serving/replay/replay_test.go:23:16: undefined: Req
+serving/replay/replay_test.go:24:31: undefined: Req
+serving/replay/replay_test.go:25:11: undefined: Replay
+serving/replay/replay_test.go:33:5: undefined: Replay
+serving/replay/replay_test.go:33:14: undefined: Req
+serving/replay/replay_test.go:37:18: undefined: Record
+serving/replay/replay_test.go:38:35: undefined: Record
+serving/replay/replay_test.go:39:6: undefined: SenderValid
+serving/replay/replay_test.go:41:6: undefined: SenderValid
+serving/replay/replay_test.go:43:5: undefined: SenderValid
+serving/replay/replay_test.go:43:5: too many errors
+FAIL	crucible/serving/replay [build failed]
+FAIL

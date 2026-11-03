@@ -1,0 +1,22 @@
+{
+  "release": "20261019.0",
+  "url": "https://storage.googleapis.com/gvisor/releases/release/20261019.0/x86_64/gvisor.tar.bz2",
+  "sha512": "7cbc2aeeee809dcccfb40e612504a1b76f2c119790cee59e482f7b35428cccc4f71705e7e322442d07d1f7d29b5d9e72e31319fc3088d6dcbec9fc7c1f0d8881",
+  "sha512_verified": true,
+  "archive_bytes": 73621897,
+  "expanded_file_bytes": 164899549,
+  "install_path": ".tools/gvisor/20261019.0",
+  "files": {
+    "runsc": 18605915,
+    "containerd-shim-runsc-v1": 24024733,
+    "gvisor-bin/runsc-fd-parking": 1320,
+    "gvisor-bin/gvisor_sentry": 52831883,
+    "gvisor-bin/checkpointgofer": 48438588,
+    "gvisor-bin/runsc-metric-server": 20994414,
+    "gvisor-bin/gvisor-sentry-prewarmer": 1416,
+    "gvisor-bin/gvisor-proc-umounter": 1280
+  },
+  "host_installation": false,
+  "docker_changes": false,
+  "runtime_usable": null
+}

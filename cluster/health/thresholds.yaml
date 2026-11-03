@@ -1,0 +1,19 @@
+schema: 1
+# Fractions, not percentage points: 0.70 means 70% of a site-supplied theoretical peak.
+# Policy candidates only. No H100/NIC measurements or assumed theoretical values.
+nccl:
+  bandwidth_unit: GB/s
+  time_unit: us
+  min_busbw_fraction: 0.70
+  min_size_bytes: 134217728
+  # Required per collective and node subset in inventory.nccl_theory.
+  # theoretical_busbw_gbs: null
+ib:
+  bandwidth_unit: GB/s
+  time_unit: us
+  min_write_bw_fraction: 0.70
+  min_read_latency_efficiency_fraction: 0.50
+  # Peak unidirectional GB/s = min(endpoint link_gbps) / 8; no bidirectional sum.
+  # Read latency efficiency = site ideal_read_latency_us / measured median_us.
+  write_size_bytes: 8388608
+  read_size_bytes: 8

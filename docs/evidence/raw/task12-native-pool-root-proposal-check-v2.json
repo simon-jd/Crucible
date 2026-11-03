@@ -1,0 +1,20 @@
+{
+  "observed_at_utc": "2026-10-25T11:58:05.723056+00:00",
+  "status": "metadata correction and task manifest verified; no execution approval",
+  "supersedes_for_current_proposal": "task12-native-pool-root-proposal-check.json (historical initial SHA, otherwise same verified source/command/environment/resource contracts)",
+  "initial_proposal_sha256": "21769b85cae85c07494459720c7f59b2e0eaf0ce7b1b77ed9ffec0b59844a0bb",
+  "initial_freeze_sha256": "84ad1d18a1d0cb6580dea76548a427925c18a021e4a4c207522372215dc024e3",
+  "current_proposal_sha256": "a288fcbdf15945bd38b8c5536635dbcfab74b587eab216d4d747bf475242d1ee",
+  "current_freeze_sha256": "6efc95908755d150e74293732c3ab19eacbc16eabbf037c21e2f6d162b8842a2",
+  "exact_only_delta": "proposal additional_allowances.other_existing_reserve=10,000,000B; freeze proposal artifactSHA only. 500+100+50+40=690MB unchanged.",
+  "all_current_source_hashes_verified": 183,
+  "all_current_artifact_hashes_verified": 183,
+  "functional_tests_repeated": false,
+  "report_read_in_full_bytes": 29391,
+  "report_sha256_at_read": "5642605e9ecd58baf0df0fa2f7cd079c67f76670b096cd2110f0ccb88b875c5a",
+  "task_manifest_sha256": "dc58ab0bc8c579a69eb8d28bfc20d4afe28dd27bb37c716939b7430707143e91",
+  "task_path_count": 47,
+  "task_payload_bytes": 550180,
+  "serial_git_window": "only these47paths; no root metadata/public docs/pool binary; local commit only with command-scoped auto gc/maintenance disabled",
+  "review_question": "Verify exhausted ENOENT history survives actual NativePool.measure -> experiment.error_info/finish_full, not only direct _scan(errors) tests; root sees potential gap, no counterexample executed."
+}

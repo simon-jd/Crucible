@@ -1,0 +1,1794 @@
+FFFFFFFFF..sF.F....F.FFF...FFFF...                                       [100%]
+=================================== FAILURES ===================================
+______________________ test_matches_reference_fp32[1-cpu] ______________________
+
+device = 'cpu', vocab = 1
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("vocab", [1, 7, 2051])
+    def test_matches_reference_fp32(device, vocab):
+        torch.manual_seed(10)
+        x = torch.randn(2, 3, vocab, device=device, requires_grad=True)
+        y = torch.randint(vocab, (2, 3), device=device)
+        actual = token_logprobs(x, y)
+        expected = reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=2e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+>       grad = torch.autograd.grad(actual, x, weight)[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+kernels/tests/test_ops.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.6014],
+         [-1.0122],
+         [-0.3023]],
+
+        [[-1.2277],
+         [ 0.9198],
+         [-0.3485]]], requires_grad=True)
+targets = tensor([[0, 0, 0],
+        [0, 0, 0]])
+grad = tensor([[ 1.2137, -0.6678, -0.4038],
+        [-0.1300,  0.7410, -0.1425]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+______________________ test_matches_reference_fp32[7-cpu] ______________________
+
+device = 'cpu', vocab = 7
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("vocab", [1, 7, 2051])
+    def test_matches_reference_fp32(device, vocab):
+        torch.manual_seed(10)
+        x = torch.randn(2, 3, vocab, device=device, requires_grad=True)
+        y = torch.randint(vocab, (2, 3), device=device)
+        actual = token_logprobs(x, y)
+        expected = reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=2e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+>       grad = torch.autograd.grad(actual, x, weight)[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+kernels/tests/test_ops.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.8173, -0.5556, -0.8267, -1.2970, -0.1974, -0.9643, -0.5133],
+         [ 2.6278, -0.7465,  1.0051, -0.2568....0823,  0.6278],
+         [-0.1005,  1.0506, -0.6454,  0.9944, -1.6354, -0.0051,  0.3538]]],
+       requires_grad=True)
+targets = tensor([[4, 1, 3],
+        [6, 0, 3]])
+grad = tensor([[ 1.5216, -0.9270, -0.1278],
+        [ 1.8899, -0.5093,  0.2018]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+____________________ test_matches_reference_fp32[2051-cpu] _____________________
+
+device = 'cpu', vocab = 2051
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("vocab", [1, 7, 2051])
+    def test_matches_reference_fp32(device, vocab):
+        torch.manual_seed(10)
+        x = torch.randn(2, 3, vocab, device=device, requires_grad=True)
+        y = torch.randint(vocab, (2, 3), device=device)
+        actual = token_logprobs(x, y)
+        expected = reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=2e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+>       grad = torch.autograd.grad(actual, x, weight)[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+kernels/tests/test_ops.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.8173, -0.5556, -0.8267,  ..., -1.0871,  1.6198,  1.6472],
+         [-0.3526,  0.5379, -0.5087,  ...,  0.2... -0.3062, -2.2489],
+         [ 0.9454, -1.1096,  1.0414,  ..., -0.6659,  0.5321, -1.0668]]],
+       requires_grad=True)
+targets = tensor([[ 178,  935, 1202],
+        [1374, 1998, 1998]])
+grad = tensor([[ 0.1260, -0.5880, -0.9522],
+        [-0.0543,  0.2151,  1.2099]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+_______________________ test_matches_reference_bf16[cpu] _______________________
+
+device = 'cpu'
+
+    @pytest.mark.parametrize("device", DEVICES)
+    def test_matches_reference_bf16(device):
+        torch.manual_seed(11)
+        x = torch.randn(2, 4, 4099, device=device, dtype=torch.bfloat16, requires_grad=True)
+        y = torch.randint(4099, (2, 4), device=device)
+        actual, expected = token_logprobs(x, y), reference(x, y)
+        assert actual.dtype == torch.float32
+        torch.testing.assert_close(actual, expected, atol=2e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+>       grad = torch.autograd.grad(actual, x, weight)[0]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+kernels/tests/test_ops.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.9297, -0.2832, -0.3730,  ...,  0.2100, -1.8203,  0.3516],
+         [ 1.2188,  0.2695, -0.8398,  ...,  0.1...       [ 0.9531,  0.0146, -1.1172,  ..., -1.1094, -0.9844, -0.7383]]],
+       dtype=torch.bfloat16, requires_grad=True)
+targets = tensor([[1469, 3708,  682,  792],
+        [4060, 3915, 2040, 2910]])
+grad = tensor([[-2.4893, -1.4607,  0.3836,  0.8686],
+        [-0.2942,  0.1573,  0.3763, -0.9831]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+_____________________________ test_gradcheck_small _____________________________
+
+    def test_gradcheck_small():
+        torch.manual_seed(12)
+        x = torch.randn(2, 2, 5, dtype=torch.float64, requires_grad=True)
+        y = torch.tensor([[0, 4], [2, 1]])
+>       assert torch.autograd.gradcheck(token_logprobs, (x, y))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+kernels/tests/test_ops.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:2056: in gradcheck
+    return _gradcheck_helper(**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:2085: in _gradcheck_helper
+    _gradcheck_real_imag(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:1495: in _gradcheck_real_imag
+    gradcheck_fn(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:1630: in _slow_gradcheck
+    analytical = _check_analytical_jacobian_attributes(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:779: in _check_analytical_jacobian_attributes
+    vjps1 = _compute_analytical_jacobian_rows(vjp_fn, output.clone())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:897: in _compute_analytical_jacobian_rows
+    grad_inputs = vjp_fn(grad_out_base)
+                  ^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/autograd/gradcheck.py:770: in vjp_fn
+    return torch.autograd.grad(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[ 0.7943,  1.3938, -0.1506, -0.0239,  1.6561],
+         [-1.2970,  2.1593,  0.3381, -0.9360,  0.4970]],
+
+    ...48, -0.4037],
+         [-0.3970,  1.1587,  0.2075,  0.3184,  1.1975]]], dtype=torch.float64,
+       requires_grad=True)
+targets = tensor([[0, 4],
+        [2, 1]])
+grad = tensor([[1., 0.],
+        [0., 0.]], dtype=torch.float64)
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+____________ test_stable_boundaries_and_layout_backward[offset-cpu] ____________
+
+device = 'cpu', case = 'offset'
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("case", ["offset", "extreme", "strided", "expanded"])
+    def test_stable_boundaries_and_layout_backward(device, case):
+        torch.manual_seed(14)
+        x = torch.randn(2, 3, 2051, device=device)
+        y = torch.randint(2051, (3, 2), device=device).T
+        if case == "offset":
+            x += 1e8
+        elif case == "extreme":
+            x *= 1e20
+        elif case == "strided":
+            x = torch.randn(3, 2, 4102, device=device).transpose(0, 1)[..., ::2]
+        else:
+            x = x[:1, :1].expand(2, 3, -1)
+        x.requires_grad_()
+        actual, expected = token_logprobs(x, y), reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=3e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+        torch.testing.assert_close(
+>           torch.autograd.grad(actual, x, weight)[0],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            torch.autograd.grad(expected, x, weight)[0],
+            atol=2e-6, rtol=2e-5,
+        )
+
+kernels/tests/test_ops.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[100000000., 100000000., 100000000.,  ..., 100000000.,
+          100000000., 100000000.],
+         [100000000...        [100000000., 100000000., 100000000.,  ..., 100000000.,
+          100000000., 100000000.]]], requires_grad=True)
+targets = tensor([[2018, 1841,  484],
+        [1862, 1646,  410]])
+grad = tensor([[-0.5475,  0.6576,  0.4111],
+        [ 0.0052, -1.3621,  0.4658]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+___________ test_stable_boundaries_and_layout_backward[extreme-cpu] ____________
+
+device = 'cpu', case = 'extreme'
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("case", ["offset", "extreme", "strided", "expanded"])
+    def test_stable_boundaries_and_layout_backward(device, case):
+        torch.manual_seed(14)
+        x = torch.randn(2, 3, 2051, device=device)
+        y = torch.randint(2051, (3, 2), device=device).T
+        if case == "offset":
+            x += 1e8
+        elif case == "extreme":
+            x *= 1e20
+        elif case == "strided":
+            x = torch.randn(3, 2, 4102, device=device).transpose(0, 1)[..., ::2]
+        else:
+            x = x[:1, :1].expand(2, 3, -1)
+        x.requires_grad_()
+        actual, expected = token_logprobs(x, y), reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=3e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+        torch.testing.assert_close(
+>           torch.autograd.grad(actual, x, weight)[0],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            torch.autograd.grad(expected, x, weight)[0],
+            atol=2e-6, rtol=2e-5,
+        )
+
+kernels/tests/test_ops.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-3.4179e+19, -9.5649e+18,  1.3965e+20,  ...,  3.3258e+19,
+          -2.9767e+19,  9.1995e+19],
+         [ 8....  [ 5.1010e+19, -1.8997e+20, -1.1503e+20,  ..., -2.6415e+20,
+          -4.5805e+19, -1.5261e+20]]], requires_grad=True)
+targets = tensor([[2018, 1841,  484],
+        [1862, 1646,  410]])
+grad = tensor([[-0.5475,  0.6576,  0.4111],
+        [ 0.0052, -1.3621,  0.4658]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+___________ test_stable_boundaries_and_layout_backward[strided-cpu] ____________
+
+device = 'cpu', case = 'strided'
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("case", ["offset", "extreme", "strided", "expanded"])
+    def test_stable_boundaries_and_layout_backward(device, case):
+        torch.manual_seed(14)
+        x = torch.randn(2, 3, 2051, device=device)
+        y = torch.randint(2051, (3, 2), device=device).T
+        if case == "offset":
+            x += 1e8
+        elif case == "extreme":
+            x *= 1e20
+        elif case == "strided":
+            x = torch.randn(3, 2, 4102, device=device).transpose(0, 1)[..., ::2]
+        else:
+            x = x[:1, :1].expand(2, 3, -1)
+        x.requires_grad_()
+        actual, expected = token_logprobs(x, y), reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=3e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+        torch.testing.assert_close(
+>           torch.autograd.grad(actual, x, weight)[0],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            torch.autograd.grad(expected, x, weight)[0],
+            atol=2e-6, rtol=2e-5,
+        )
+
+kernels/tests/test_ops.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.4388, -0.7211,  0.8536,  ...,  1.2795, -0.7891,  0.7221],
+         [ 0.1145, -0.5823,  0.3676,  ...,  0.0...  1.5255, -1.8152],
+         [-0.7747,  0.1247, -0.8635,  ...,  0.5602, -0.1415,  2.1201]]],
+       requires_grad=True)
+targets = tensor([[2018, 1841,  484],
+        [1862, 1646,  410]])
+grad = tensor([[-0.2950, -0.9719, -0.5037],
+        [ 0.2593,  0.5620, -0.3611]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+___________ test_stable_boundaries_and_layout_backward[expanded-cpu] ___________
+
+device = 'cpu', case = 'expanded'
+
+    @pytest.mark.parametrize("device", DEVICES)
+    @pytest.mark.parametrize("case", ["offset", "extreme", "strided", "expanded"])
+    def test_stable_boundaries_and_layout_backward(device, case):
+        torch.manual_seed(14)
+        x = torch.randn(2, 3, 2051, device=device)
+        y = torch.randint(2051, (3, 2), device=device).T
+        if case == "offset":
+            x += 1e8
+        elif case == "extreme":
+            x *= 1e20
+        elif case == "strided":
+            x = torch.randn(3, 2, 4102, device=device).transpose(0, 1)[..., ::2]
+        else:
+            x = x[:1, :1].expand(2, 3, -1)
+        x.requires_grad_()
+        actual, expected = token_logprobs(x, y), reference(x, y)
+        torch.testing.assert_close(actual, expected, atol=3e-6, rtol=2e-6)
+        weight = torch.randn_like(actual)
+        torch.testing.assert_close(
+>           torch.autograd.grad(actual, x, weight)[0],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            torch.autograd.grad(expected, x, weight)[0],
+            atol=2e-6, rtol=2e-5,
+        )
+
+kernels/tests/test_ops.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:503: in grad
+    result = _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.3418, -0.0956,  1.3965,  ...,  0.3326, -0.2977,  0.9200],
+         [-0.3418, -0.0956,  1.3965,  ...,  0.3... -0.2977,  0.9200],
+         [-0.3418, -0.0956,  1.3965,  ...,  0.3326, -0.2977,  0.9200]]],
+       requires_grad=True)
+targets = tensor([[2018, 1841,  484],
+        [1862, 1646,  410]])
+grad = tensor([[-0.5475,  0.6576,  0.4111],
+        [ 0.0052, -1.3621,  0.4658]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+____________ test_nonuniform_token_accumulation_matches_whole_batch ____________
+
+    def test_nonuniform_token_accumulation_matches_whole_batch():
+        torch.manual_seed(123)
+        policy = TinyLM()
+        ref = copy.deepcopy(policy)
+        split = trainer(copy.deepcopy(policy), copy.deepcopy(ref), 1)
+        whole = trainer(copy.deepcopy(policy), copy.deepcopy(ref), 2)
+        before = copy.deepcopy(whole.policy.state_dict())
+>       split_metrics = split.step([group(), group(0, "stale")])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+rl/learner/tests/test_train.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[ 0.1059, -0.4257, -0.5679, -0.2694, -0.5395,  0.7042,  0.2846,
+           0.0180],
+         [ 0.4182, -0.493...        [-0.5568,  0.2889,  0.6067,  0.0172, -0.7640, -0.3876, -0.3496,
+          -0.3512]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.0645, -0.2096, -0.0533]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+___________________ test_group_contract_and_empty_stale_step ___________________
+
+    def test_group_contract_and_empty_stale_step():
+        model = TinyLM()
+        learner = trainer(model, copy.deepcopy(model), 1)
+        result = learner.step([group(0)])
+        assert result["dropped_stale"] == 2
+        assert result["policy_version"] == 2
+        assert result["optimizer_steps"] == 0
+        with pytest.raises(ValueError, match="future"):
+            learner.step([group(3)])
+        with pytest.raises(ValueError, match="duplicate"):
+            learner.step([group(), group()])
+        # Same prompt IDs in distinct batches are not merged.
+        different_batch = RolloutGroup(
+            "other", "group", group().prompt, group().samples, group().rewards, SamplingConfig()
+        )
+>       assert learner.step([group(), different_batch])["accepted_samples"] == 4
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+rl/learner/tests/test_train.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[ 0.4184, -0.5053,  0.0071,  0.0563, -0.4492, -0.5394,  0.2749,
+           0.4966],
+         [-0.3890,  1.057...        [-0.8129,  1.0352,  0.3255, -1.4025,  0.4288,  0.2380,  0.3922,
+           0.6999]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.0430, -0.1339, -0.0135]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+_______________ test_nonfinite_gradient_cancels_step_and_version _______________
+
+    def test_nonfinite_gradient_cancels_step_and_version():
+        policy = TinyLM()
+        learner = trainer(policy, copy.deepcopy(policy), 1)
+        before = copy.deepcopy(policy.state_dict())
+        hook = policy.head.weight.register_hook(lambda grad: torch.full_like(grad, float("nan")))
+        with pytest.raises(FloatingPointError, match="gradient"):
+>           learner.step([group()])
+
+rl/learner/tests/test_train.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.1520, -0.0324, -0.1042,  0.6653, -0.1117,  0.3629, -0.5813,
+           0.0571],
+         [-0.6424,  1.180...        [ 0.2734,  0.1356, -1.0962, -0.1326, -0.9928, -0.4651, -0.2058,
+           0.4230]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.1533, -0.1769, -0.1274]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+________________ test_partial_optimizer_failure_poisoned_phase _________________
+
+    def test_partial_optimizer_failure_poisoned_phase():
+        class MutateThenRaise(torch.optim.SGD):
+            def step(self, closure=None):
+                super().step(closure)
+                raise RuntimeError("after real SGD update")
+    
+        torch.manual_seed(123)
+        policy = TinyLM()
+        before = copy.deepcopy(policy.state_dict())
+        learner = Learner(
+            policy,
+            copy.deepcopy(policy),
+            Tokenizer(),
+            MutateThenRaise(policy.parameters(), lr=0.1),
+            LearnerConfig(group_size=2),
+            policy_version=2,
+        )
+        with pytest.raises(RuntimeError, match="after real SGD update"):
+>           learner.step([group()])
+
+rl/learner/tests/test_train.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[ 0.1059, -0.4257, -0.5679, -0.2694, -0.5395,  0.7042,  0.2846,
+           0.0180],
+         [ 0.4182, -0.493...        [-0.5568,  0.2889,  0.6067,  0.0172, -0.7640, -0.3876, -0.3496,
+          -0.3512]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.0645, -0.2096, -0.0533]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+
+During handling of the above exception, another exception occurred:
+
+    def test_partial_optimizer_failure_poisoned_phase():
+        class MutateThenRaise(torch.optim.SGD):
+            def step(self, closure=None):
+                super().step(closure)
+                raise RuntimeError("after real SGD update")
+    
+        torch.manual_seed(123)
+        policy = TinyLM()
+        before = copy.deepcopy(policy.state_dict())
+        learner = Learner(
+            policy,
+            copy.deepcopy(policy),
+            Tokenizer(),
+            MutateThenRaise(policy.parameters(), lr=0.1),
+            LearnerConfig(group_size=2),
+            policy_version=2,
+        )
+>       with pytest.raises(RuntimeError, match="after real SGD update"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'after real SGD update'
+E        Input: 'Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.'
+
+rl/learner/tests/test_train.py:181: AssertionError
+___________ test_native_sgd_finite_gradient_overflow_poisoned_phase ____________
+
+    def test_native_sgd_finite_gradient_overflow_poisoned_phase():
+        policy = TinyLM()
+        learner = Learner(
+            policy,
+            copy.deepcopy(policy),
+            Tokenizer(),
+            torch.optim.SGD(policy.parameters(), lr=1e20),
+            LearnerConfig(group_size=2),
+            policy_version=2,
+        )
+        hook = policy.head.weight.register_hook(lambda grad: torch.full_like(grad, 1e20))
+        try:
+            with pytest.raises(FloatingPointError, match="policy"):
+>               learner.step([group()])
+
+rl/learner/tests/test_train.py:200: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[ 0.4184, -0.5053,  0.0071,  0.0563, -0.4492, -0.5394,  0.2749,
+           0.4966],
+         [-0.3890,  1.057...        [-0.8129,  1.0352,  0.3255, -1.4025,  0.4288,  0.2380,  0.3922,
+           0.6999]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.0859, -0.2679, -0.0269]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+________________ test_nonfinite_optimizer_state_poisoned_phase _________________
+
+    def test_nonfinite_optimizer_state_poisoned_phase():
+        class CorruptState(torch.optim.SGD):
+            def step(self, closure=None):
+                super().step(closure)
+                for state in self.state.values():
+                    state["momentum_buffer"].fill_(float("inf"))
+    
+        policy = TinyLM()
+        learner = Learner(
+            policy,
+            copy.deepcopy(policy),
+            Tokenizer(),
+            CorruptState(policy.parameters(), lr=0.1, momentum=0.9),
+            LearnerConfig(group_size=2),
+            policy_version=2,
+        )
+        with pytest.raises(FloatingPointError, match="optimizer"):
+>           learner.step([group()])
+
+rl/learner/tests/test_train.py:224: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.1508,  0.4924,  0.0510,  0.8378,  0.3111, -0.5031,  0.2053,
+          -0.0099],
+         [-0.2635,  0.754...        [-0.8536, -0.5373, -0.1663, -1.3254,  0.9820, -0.9051, -0.2648,
+          -0.3581]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.1563, -0.2821, -0.0434]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+___________________ test_pre_execution_rejection_is_reusable ___________________
+
+    def test_pre_execution_rejection_is_reusable():
+        policy = TinyLM()
+        learner = trainer(policy, copy.deepcopy(policy), 1)
+        with pytest.raises(ValueError, match="future"):
+            learner.step([group(3)])
+        assert learner.phase_status == "ready"
+        assert learner.policy_version == 2
+>       assert learner.step([group()])["policy_version"] == 3
+               ^^^^^^^^^^^^^^^^^^^^^^^
+
+rl/learner/tests/test_train.py:251: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[-0.2778, -0.3328,  0.3600, -0.1867, -0.4523, -0.8744,  0.7791,
+           0.9433],
+         [-1.1503, -0.117...        [-0.2697,  0.2470, -0.0390,  0.4616,  0.1021,  0.4171, -0.7738,
+          -0.4555]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.0591, -0.2235, -0.0624]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+________ test_cleanup_failure_poisoned_phase_and_attempts_all_restores _________
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/postedism/Desktop/Crucible/rl/learner/tests/test_train.py", line 272, in test_cleanup_failure_poisoned_phase_and_attempts_all_restores
+  |     learner.step([group()])
+  |   File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 312, in step
+  |     raise BaseExceptionGroup("learner phase failed during execution/cleanup", errors)
+  | ExceptionGroup: learner phase failed during execution/cleanup (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 296, in step
+    |     loss_total = self._execute_records(records, total_tokens)
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 339, in _execute_records
+    |     (loss * weight).backward()
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_tensor.py", line 647, in backward
+    |     torch.autograd.backward(
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py", line 354, in backward
+    |     _engine_run_backward(
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    |     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py", line 311, in apply
+    |     return user_fn(self, *args)
+    |            ^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py", line 77, in backward
+    |     result = info._backward_fn(ctx, *grads)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/kernels/ops.py", line 102, in _autograd_backward
+    |     return _backward(logits, targets, grad), None
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py", line 681, in __call__
+    |     return self._opoverload(*args, **kwargs)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_ops.py", line 829, in __call__
+    |     return self._op(*args, **kwargs)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py", line 111, in autograd_impl
+    |     result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py", line 40, in forward_no_grad
+    |     result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_ops.py", line 836, in redispatch
+    |     return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py", line 344, in backend_impl
+    |     result = self._backend_fns[device_type](*args, **kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_compile.py", line 53, in inner
+    |     return disable_fn(*args, **kwargs)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+    |     return fn(*args, **kwargs)
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py", line 377, in wrapped_fn
+    |     return fn(*args, **kwargs)
+    |            ^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/kernels/ops.py", line 87, in _backward
+    |     result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+    |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+    | RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 253, in _cleanup
+    |     action()
+    |   File "/home/postedism/Desktop/Crucible/rl/learner/train.py", line 246, in <lambda>
+    |     lambda: self._policy.set_requires_gradient_sync(True),
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/postedism/Desktop/Crucible/rl/learner/tests/test_train.py", line 264, in sync
+    |     raise RuntimeError("restore sync failed")
+    | RuntimeError: restore sync failed
+    +------------------------------------
+_____________ test_execution_and_cleanup_errors_are_both_preserved _____________
+
+    def test_execution_and_cleanup_errors_are_both_preserved():
+        class DoubleFailure(torch.optim.SGD):
+            clear_calls = 0
+    
+            def step(self, closure=None):
+                super().step(closure)
+                raise RuntimeError("update failed")
+    
+            def zero_grad(self, *args, **kwargs):
+                self.clear_calls += 1
+                super().zero_grad(*args, **kwargs)
+                if self.clear_calls == 2:
+                    raise RuntimeError("cleanup failed")
+    
+        policy = TinyLM()
+        learner = Learner(
+            policy,
+            copy.deepcopy(policy),
+            Tokenizer(),
+            DoubleFailure(policy.parameters(), lr=0.1),
+            LearnerConfig(group_size=2),
+            policy_version=2,
+        )
+        with pytest.raises(BaseExceptionGroup) as caught:
+            learner.step([group()])
+>       assert [str(exc) for exc in caught.value.exceptions] == ["update failed", "cleanup failed"]
+E       AssertionError: assert ['Subtraction...eanup failed'] == ['update fail...eanup failed']
+E         
+E         At index 0 diff: 'Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.' != 'update failed'
+E         Use -v to get more diff
+
+rl/learner/tests/test_train.py:303: AssertionError
+____________ test_executing_phase_cannot_be_reentered_or_published _____________
+
+    def test_executing_phase_cannot_be_reentered_or_published():
+        policy = TinyLM()
+        learner = trainer(policy, copy.deepcopy(policy), 1)
+        optimizer = learner.optimizer
+    
+        def check_boundary(_optimizer, _args, _kwargs):
+            assert learner.phase_status == "executing"
+            assert learner.last_committed_version == 2
+            for attribute in ("policy", "optimizer", "policy_version"):
+                with pytest.raises(RuntimeError, match="phase"):
+                    getattr(learner, attribute)
+            with pytest.raises(RuntimeError, match="phase"):
+                learner.step([])
+    
+        hook = optimizer.register_step_pre_hook(check_boundary)
+        try:
+>           assert learner.step([group()])["policy_version"] == 3
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+rl/learner/tests/test_train.py:323: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/learner/train.py:311: in step
+    raise errors[0]
+rl/learner/train.py:296: in step
+    loss_total = self._execute_records(records, total_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/learner/train.py:339: in _execute_records
+    (loss * weight).backward()
+.venv-ml/lib/python3.12/site-packages/torch/_tensor.py:647: in backward
+    torch.autograd.backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/__init__.py:354: in backward
+    _engine_run_backward(
+.venv-ml/lib/python3.12/site-packages/torch/autograd/graph.py:829: in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+.venv-ml/lib/python3.12/site-packages/torch/autograd/function.py:311: in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:77: in backward
+    result = info._backward_fn(ctx, *grads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kernels/ops.py:102: in _autograd_backward
+    return _backward(logits, targets, grad), None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:681: in __call__
+    return self._opoverload(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:829: in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:111: in autograd_impl
+    result = forward_no_grad(*args, Metadata(keyset, keyword_only_args))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/autograd.py:40: in forward_no_grad
+    result = op.redispatch(keyset & _C._after_autograd_keyset, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_ops.py:836: in redispatch
+    return self._handle.redispatch_boxed(keyset, *args, **kwargs)  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:344: in backend_impl
+    result = self._backend_fns[device_type](*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_compile.py:53: in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:929: in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+.venv-ml/lib/python3.12/site-packages/torch/_library/custom_ops.py:377: in wrapped_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logits = tensor([[[ 0.1992,  0.0099, -0.6922, -0.3181, -0.7099,  0.1938, -0.5942,
+           0.4857],
+         [-0.0824,  0.036...        [ 0.8848,  0.1684,  0.6394, -0.8612,  0.1417, -0.7387, -0.0599,
+           0.2349]]], grad_fn=<IndexBackward0>)
+targets = tensor([[3, 4, 0]]), grad = tensor([[-0.0673, -0.2857, -0.1687]])
+
+    @torch.library.custom_op("crucible::_token_logprobs_backward", mutates_args=())
+    def _backward(logits: torch.Tensor, targets: torch.Tensor, grad: torch.Tensor) -> torch.Tensor:
+        if not targets.numel():
+            return torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        if logits.is_cuda:
+            from kernels.logprob_triton import backward
+    
+            return backward(logits, targets, grad)
+        maximum, total = _cpu_stats(logits)
+        result = torch.empty(logits.shape, device=logits.device, dtype=logits.dtype)
+        for start in range(0, logits.shape[-1], CHUNK):
+            stop = min(start + CHUNK, logits.shape[-1])
+            part = logits[..., start:stop].to(_dtype(logits))
+            probabilities = (part - maximum[..., None]).exp() / total[..., None]
+            indices = torch.arange(start, stop, device=logits.device)
+>           result[..., start:stop] = ((targets[..., None] == indices) - probabilities) * grad[..., None]
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           RuntimeError: Subtraction, the `-` operator, with a bool tensor is not supported. If you are trying to invert a mask, use the `~` or `logical_not()` operator instead.
+
+kernels/ops.py:87: RuntimeError
+=========================== short test summary info ============================
+SKIPPED [1] kernels/tests/test_ops.py:127: fixed GPU guard required
+FAILED kernels/tests/test_ops.py::test_matches_reference_fp32[1-cpu] - Runtim...
+FAILED kernels/tests/test_ops.py::test_matches_reference_fp32[7-cpu] - Runtim...
+FAILED kernels/tests/test_ops.py::test_matches_reference_fp32[2051-cpu] - Run...
+FAILED kernels/tests/test_ops.py::test_matches_reference_bf16[cpu] - RuntimeE...
+FAILED kernels/tests/test_ops.py::test_gradcheck_small - RuntimeError: Subtra...
+FAILED kernels/tests/test_ops.py::test_stable_boundaries_and_layout_backward[offset-cpu]
+FAILED kernels/tests/test_ops.py::test_stable_boundaries_and_layout_backward[extreme-cpu]
+FAILED kernels/tests/test_ops.py::test_stable_boundaries_and_layout_backward[strided-cpu]
+FAILED kernels/tests/test_ops.py::test_stable_boundaries_and_layout_backward[expanded-cpu]
+FAILED rl/learner/tests/test_train.py::test_nonuniform_token_accumulation_matches_whole_batch
+FAILED rl/learner/tests/test_train.py::test_group_contract_and_empty_stale_step
+FAILED rl/learner/tests/test_train.py::test_nonfinite_gradient_cancels_step_and_version
+FAILED rl/learner/tests/test_train.py::test_partial_optimizer_failure_poisoned_phase
+FAILED rl/learner/tests/test_train.py::test_native_sgd_finite_gradient_overflow_poisoned_phase
+FAILED rl/learner/tests/test_train.py::test_nonfinite_optimizer_state_poisoned_phase
+FAILED rl/learner/tests/test_train.py::test_pre_execution_rejection_is_reusable
+FAILED rl/learner/tests/test_train.py::test_cleanup_failure_poisoned_phase_and_attempts_all_restores
+FAILED rl/learner/tests/test_train.py::test_execution_and_cleanup_errors_are_both_preserved
+FAILED rl/learner/tests/test_train.py::test_executing_phase_cannot_be_reentered_or_published
+19 failed, 14 passed, 1 skipped, 2 deselected in 3.14s

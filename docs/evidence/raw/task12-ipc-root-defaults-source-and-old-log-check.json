@@ -1,0 +1,53 @@
+{
+  "declared_defaults": {
+    "tokenizer_worker_num": 1,
+    "skip_tokenizer_init": false,
+    "grpc_mode": false,
+    "tp_size": 1,
+    "pp_size": 1,
+    "enable_metrics": false,
+    "enable_metrics_for_all_schedulers": false,
+    "dp_size": 1,
+    "nnodes": 1,
+    "node_rank": 0,
+    "speculative_algorithm": null,
+    "ep_size": 1,
+    "enable_dp_attention": false,
+    "disaggregation_mode": "null"
+  },
+  "guard_values": {
+    "grpc_mode": false,
+    "tokenizer_worker_num": 1,
+    "tp_size": 1,
+    "pp_size": 1,
+    "dp_size": 1,
+    "ep_size": 1,
+    "nnodes": 1,
+    "node_rank": 0,
+    "enable_dp_attention": false,
+    "enable_metrics": false,
+    "enable_metrics_for_all_schedulers": false,
+    "skip_tokenizer_init": false,
+    "disaggregation_mode": "null",
+    "speculative_algorithm": null
+  },
+  "declared_all14_match": true,
+  "old_full03_logged_values": {
+    "grpc_mode": false,
+    "tokenizer_worker_num": 1,
+    "tp_size": 1,
+    "pp_size": 1,
+    "dp_size": 1,
+    "ep_size": 1,
+    "nnodes": 1,
+    "node_rank": 0,
+    "enable_dp_attention": false,
+    "enable_metrics": false,
+    "enable_metrics_for_all_schedulers": false,
+    "skip_tokenizer_init": false,
+    "disaggregation_mode": "null",
+    "speculative_algorithm": null
+  },
+  "logged_all14_match": true,
+  "no_native_imports": true
+}

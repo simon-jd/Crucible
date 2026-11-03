@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0 -- /home/postedism/Desktop/Crucible/.venv/bin/python
+rootdir: /home/postedism/Desktop/Crucible
+configfile: pyproject.toml
+collecting ... collected 16 items
+
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_exact_burst_body_identity_and_bounds PASSED [  6%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_http_framing_rejects_malformed_and_bounds[Content-Length: 2\r\nContent-Length: 2] PASSED [ 12%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_http_framing_rejects_malformed_and_bounds[Transfer-Encoding: chunked] PASSED [ 18%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_http_framing_rejects_malformed_and_bounds[Content-Length: 16385] PASSED [ 25%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_http_framing_rejects_malformed_and_bounds[Content-Length: nope] PASSED [ 31%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_http_framing_rejects_malformed_and_bounds[bad\x00: x] PASSED [ 37%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_bounded_writer_refuses_before_append PASSED [ 43%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_stopping_does_not_swallow_evidence_eio PASSED [ 50%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_fast_normal_stub_keepalive_count_and_cleanup PASSED [ 56%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_timeout_stub_is_terminated_reaped_and_signal_restored PASSED [ 62%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_real_child_hard_cap_signal_and_cleanup PASSED [ 68%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_first_or_later_proc_failure_still_cleans_original_popen[1] PASSED [ 75%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_first_or_later_proc_failure_still_cleans_original_popen[2] PASSED [ 81%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_pid_reuse_rejected_without_relaxing_sampler PASSED [ 87%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_duplicate_or_unknown_body_is_retained_failure[False] PASSED [ 93%]
+docs/evidence/raw/task12-sender-cpu-01-fixture-test.py::test_duplicate_or_unknown_body_is_retained_failure[True] PASSED [100%]
+
+============================== 16 passed in 0.33s ==============================

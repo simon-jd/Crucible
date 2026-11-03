@@ -1,0 +1,32 @@
+{
+  "original_handle": 17692,
+  "authoritative_exit": 0,
+  "unchanged_frozen_identities": 105,
+  "changed_frozen_sources": [],
+  "actual_manifest_sha256": "f1255befc838b4ac8232a7f80816539e45d643387c6a1fb34f5c3a57efc65244",
+  "verified_files": 14,
+  "verified_total_bytes": 16397459696,
+  "downloaded_bytes": 16395758873,
+  "reused_files": 5,
+  "resource_samples": 858,
+  "canonical_rescan_events": [
+    {
+      "root": "/home/postedism/Desktop/Crucible",
+      "attempt": 1,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "root": "/home/postedism/Desktop/Crucible",
+      "attempt": 1,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "root": "/home/postedism/Desktop/Crucible",
+      "attempt": 1,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    }
+  ],
+  "max_sampled_project_bytes": 13266385555,
+  "max_sampled_shared_cache_bytes": 23815435170,
+  "retained_failure_partial_bytes": 303796954
+}

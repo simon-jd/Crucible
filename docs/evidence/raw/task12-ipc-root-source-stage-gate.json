@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-10-25T18:52:02.890632+00:00",
+  "BASE": "d748447c22867a15013f8de7fc6be969e8dc55f9",
+  "scope": "bounded CPU source audit then separately ROOT-gated precise compatibility implementation/review",
+  "resource_sample": {
+    "project_bytes": 13318058860,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 64194,
+    "combined_bytes": 10224425,
+    "nonpool_bytes": 13307898629,
+    "evidence_credit_bytes": 64194,
+    "projected_bytes": 13997834435,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "stage_retained_cap": 1000000,
+  "CPU_scratch_cap": 256000,
+  "extra_conservative_Git_and_root_allowance": 244000,
+  "future_plus1500000": 13999334435,
+  "same690M_reserve_not_increased": true,
+  "GPU_authorized": false,
+  "no_tests_or_imports_yet": true
+}

@@ -1,0 +1,58 @@
+...............FF...........F                                            [100%]
+=================================== FAILURES ===================================
+_ test_cli_rejects_nonshared_xdg_default_when_hf_home_unset[/tmp/crucible-review-xdg] _
+
+xdg = '/tmp/crucible-review-xdg'
+
+    @pytest.mark.parametrize("xdg", ["/tmp/crucible-review-xdg", ""])
+    def test_cli_rejects_nonshared_xdg_default_when_hf_home_unset(xdg):
+        result = run_preflight({"XDG_CACHE_HOME": xdg})
+>       assert result.returncode != 0, result.stdout
+E       AssertionError: {
+E           "ok": true,
+E           "units": "decimal GB = 1,000,000,000 bytes",
+E           "project_bytes": 314647775,
+E           "free_bytes": 267294556160,
+E           "model_cache": "/home/postedism/.cache/huggingface",
+E           "errors": []
+E         }
+E
+E       assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['/home/postedism/Desktop/Crucible/.venv/bin/python', '/home/postedism/Desktop/Crucible/scripts/...  "free_bytes": 267294556160,\n  "model_cache": "/home/postedism/.cache/huggingface",\n  "errors": []\n}\n', stderr='').returncode
+
+scripts/tests/test_resource_preflight.py:93: AssertionError
+_________ test_cli_rejects_nonshared_xdg_default_when_hf_home_unset[] __________
+
+xdg = ''
+
+    @pytest.mark.parametrize("xdg", ["/tmp/crucible-review-xdg", ""])
+    def test_cli_rejects_nonshared_xdg_default_when_hf_home_unset(xdg):
+        result = run_preflight({"XDG_CACHE_HOME": xdg})
+>       assert result.returncode != 0, result.stdout
+E       AssertionError: {
+E           "ok": true,
+E           "units": "decimal GB = 1,000,000,000 bytes",
+E           "project_bytes": 314647776,
+E           "free_bytes": 267294556160,
+E           "model_cache": "/home/postedism/.cache/huggingface",
+E           "errors": []
+E         }
+E
+E       assert 0 != 0
+E        +  where 0 = CompletedProcess(args=['/home/postedism/Desktop/Crucible/.venv/bin/python', '/home/postedism/Desktop/Crucible/scripts/...  "free_bytes": 267294556160,\n  "model_cache": "/home/postedism/.cache/huggingface",\n  "errors": []\n}\n', stderr='').returncode
+
+scripts/tests/test_resource_preflight.py:93: AssertionError
+____ test_cli_rejected_xdg_reports_effective_path_instead_of_shared_default ____
+
+    def test_cli_rejected_xdg_reports_effective_path_instead_of_shared_default():
+        result = run_preflight({"XDG_CACHE_HOME": "/tmp/crucible-review-xdg"})
+        payload = json.loads(result.stdout)
+>       assert payload["ok"] is False
+E       assert True is False
+
+scripts/tests/test_resource_preflight.py:129: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/tests/test_resource_preflight.py::test_cli_rejects_nonshared_xdg_default_when_hf_home_unset[/tmp/crucible-review-xdg]
+FAILED scripts/tests/test_resource_preflight.py::test_cli_rejects_nonshared_xdg_default_when_hf_home_unset[]
+FAILED scripts/tests/test_resource_preflight.py::test_cli_rejected_xdg_reports_effective_path_instead_of_shared_default
+3 failed, 26 passed in 3.60s

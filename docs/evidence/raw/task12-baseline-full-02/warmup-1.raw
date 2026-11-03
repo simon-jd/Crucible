@@ -1,0 +1,66 @@
+data: {"text":"\n","output_ids":[198],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":1,"cached_tokens":0,"response_sent_ts":1792912817.829394}}
+
+data: {"text":"\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":2,"cached_tokens":0}}
+
+data: {"text":"\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":3,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":4,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":5,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":6,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":7,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":8,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":9,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":10,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":11,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":12,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":13,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":14,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":15,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":16,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":17,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":18,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":19,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":20,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":21,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":22,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":23,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":24,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":25,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":26,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":27,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":28,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":29,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":30,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n","output_ids":[532],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":null,"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":31,"cached_tokens":0}}
+
+data: {"text":"\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t","output_ids":[197],"meta_info":{"id":"a5247a4b479c4f70a46a67e66ad514d4","finish_reason":{"type":"length","length":32},"prompt_tokens":1024,"weight_version":"default","total_retractions":0,"queue_time":0.00010711792856454849,"prefill_delay":0.0003753430210053921,"prefill_latency":0.009200721979141235,"completion_tokens":32,"cached_tokens":0,"e2e_latency":0.6698942184448242,"request_received_ts":1792912817.7290041,"request_scheduled_ts":1792912817.7291024,"response_sent_ts":1792912817.829394,"decode_finished_ts":1792912818.3988984,"forward_time":0.6695141580421478}}
+
+data: [DONE]
+

@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+_________ ERROR collecting scripts/tests/test_check_report_numbers.py __________
+ImportError while importing test module '/home/postedism/Desktop/Crucible/scripts/tests/test_check_report_numbers.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../../.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/tests/test_check_report_numbers.py:10: in <module>
+    from scripts.check_report_numbers import check_reports
+E   ModuleNotFoundError: No module named 'scripts.check_report_numbers'
+=========================== short test summary info ============================
+ERROR scripts/tests/test_check_report_numbers.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.05s

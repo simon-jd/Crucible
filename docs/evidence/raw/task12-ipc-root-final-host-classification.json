@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-10-25T19:44:07.529488+00:00",
+  "supplements": "task12-ipc-root-final-host-observation.json",
+  "reason": "Prior743 combined unreadable/race count included cwd reads for empty cmdline/non-project processes; narrow identity classification avoids treating those as project candidates. Original record unchanged.",
+  "uid": 1000,
+  "processes_seen": 1269,
+  "other_uid_skipped": 784,
+  "own_uid_empty_cmdline": 0,
+  "own_uid_unknown": [
+    {
+      "pid": 3350263,
+      "step": "uid/cmdline",
+      "error": "FileNotFoundError"
+    }
+  ],
+  "exact_project_native_candidates": [],
+  "no_GPU_or_lock_or_signals": true,
+  "sampling_limit": "Concurrent/racing process table, not continuous guarantee; fresh check still required."
+}

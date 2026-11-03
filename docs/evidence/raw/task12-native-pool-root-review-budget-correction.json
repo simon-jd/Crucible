@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-10-25T12:42:45.181316+00:00",
+  "scope": "correction of internal review-archive named-file estimator, not project allocation",
+  "earlier_receipt": "task12-native-pool-root-review-archive.json",
+  "omitted_file": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-12-full03-source-map.json",
+  "omitted_bytes": 30394,
+  "omitted_file_mtime_utc": "2026-10-25T11:50:21.279742+00:00",
+  "prior_conservative_named_peak_estimate": 1991487,
+  "corrected_named_peak_forecast_with_same_allowances": 2021881,
+  "note": "Prior claim that this named-file peak estimate was below2M was incorrect: the prefix-only enumeration omitted this earlier source map. This is an internal phase-planning estimate, not an observed14GB project breach or a continuous peak measurement. Originalreceipt retained; current full budget explicitly includes this file. No threshold reset or deleted evidence.",
+  "current_declared_retained_total_with_next_reservations": 1808912,
+  "current_retained_cap": 2000000,
+  "fresh_project_canonical": 13314058904,
+  "fresh_project_future_projection": 13993898673,
+  "user_project_cap_unchanged": 14000000000,
+  "corrective_action": "Enumerate explicit full phase path manifest incl non-prefix files before further allocations; keep temporary review generation separate from retained artifacts and enforce canonical/projected caps."
+}

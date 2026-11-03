@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "status": "candidate-unverified",
+  "topology": {
+    "nodes": 4,
+    "gpus_per_node": 8,
+    "gpu_model_contains": "H100"
+  },
+  "versions": {
+    "driver": "570.133.20",
+    "cuda_toolkit": "12.8.1",
+    "cuda_runtime": 12080,
+    "nccl": 22501,
+    "ofed": "MLNX_OFED_LINUX-24.10-3.2.5.0",
+    "slurm": "25.05.4",
+    "enroot": "4.2.1",
+    "pyxis": "0.21.0-1",
+    "kubernetes": "v1.33.5",
+    "gpu_operator": "v25.3.2",
+    "network_operator": "25.4.0",
+    "kueue": "0.13.4"
+  },
+  "image": {
+    "candidate_ref": "nvcr.io/nvidia/pytorch:25.03-py3",
+    "repository": "nvcr.io/nvidia/pytorch",
+    "digest": null,
+    "slurm_sqsh_path": "/shared/images/crucible.sqsh",
+    "slurm_sqsh_sha256": null
+  },
+  "shared_filesystems": [
+    "nfs",
+    "nfs4",
+    "lustre",
+    "beegfs",
+    "ceph"
+  ],
+  "notes": "Versions are fixed deployment candidates, not observations or compatibility certification. Replace null digests with independently resolved artifacts and set status=locked only after review. No model is used in baseline; later workloads must also pin model revisions.",
+  "node_image": {
+    "id": null,
+    "sha256": null
+  },
+  "k8s_images": {}
+}

@@ -1,0 +1,12 @@
+extends: qwen25_05b_math_code.yaml
+id: external_verl_sync
+declared_factor: external_framework_and_sync_schedule
+overrides:
+  schedule:
+    mode: sync
+    max_staleness: 0
+  framework:
+    name: verl
+    strategy: fsdp
+    backend: hf
+    revision: 8d9e350ea58c7ad4b50dd14d9dcb50577242c55f

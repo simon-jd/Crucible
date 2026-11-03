@@ -1,0 +1,305 @@
+FFFFFFF                                                                  [100%]
+=================================== FAILURES ===================================
+_______________ test_stale_close_preserves_successor_reservation _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_stale_close_preserves_suc0')
+
+    def test_stale_close_preserves_successor_reservation(tmp_path):
+        store = make_store(tmp_path)
+        WeightSync(store).push([("weight", torch.ones(3, 2))], 1)
+        checkpoint = store.checkpoint(1)
+        first = RolloutEngine(checkpoint, _backend_factory=Backend, weight_store=store)
+        first.close()
+        with RolloutEngine(checkpoint, _backend_factory=Backend, weight_store=store):
+            first.close()
+>           assert store.active_version == 1
+E           assert None == 1
+E            +  where None = <rl.sync.version.VersionStore object at 0x7d541b9b1af0>.active_version
+
+rl/sync/tests/test_sync.py:530: AssertionError
+__________ test_initial_start_reserves_until_confirmed_cleanup[False] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_initial_start_reserves_un0')
+confirmed = False
+
+    @pytest.mark.parametrize("confirmed", [False, True])
+    def test_initial_start_reserves_until_confirmed_cleanup(tmp_path, confirmed):
+        store = make_store(tmp_path)
+        WeightSync(store).push([("weight", torch.ones(3, 2))], 1)
+        checkpoint = store.checkpoint(1)
+        calls = []
+    
+        class Partial:
+            close_calls = 0
+    
+            def close(self):
+                self.close_calls += 1
+                if self.close_calls == 1:
+                    raise RuntimeError("still unresolved")
+    
+        partial = Partial()
+    
+        def fail_start(checkpoint, config):
+            calls.append(checkpoint.policy_version)
+            # Reservation must already block a reentrant constructor inside the factory.
+            with pytest.raises(RuntimeError, match="already has an active"):
+                RolloutEngine(checkpoint, _backend_factory=Backend, weight_store=store)
+            error = RuntimeError("initial start failed")
+            error.worker, error.cleanup_confirmed = partial, confirmed
+            raise error
+    
+        with pytest.raises(RuntimeError, match="initial start failed") as caught:
+>           RolloutEngine(checkpoint, _backend_factory=fail_start, weight_store=store)
+
+rl/sync/tests/test_sync.py:565: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/rollout/engine.py:61: in __init__
+    self._backend = self._start(checkpoint)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/engine.py:69: in _start
+    return self._backend_factory(checkpoint, self._config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+checkpoint = PolicyCheckpoint(model_path='/tmp/pytest-of-postedism/pytest-201/test_initial_start_reserves_un0/versions/v1-d4a31c3cb...285f9ca73e2b24ff56292e', revision='d4a31c3cb30c50c7411a10b354f208ba6f00679dee285f9ca73e2b24ff56292e', policy_version=1)
+config = SamplingConfig(seed=0, temperature=1.0, top_p=1.0, top_k=-1, max_tokens=32, max_model_len=256)
+
+    def fail_start(checkpoint, config):
+        calls.append(checkpoint.policy_version)
+        # Reservation must already block a reentrant constructor inside the factory.
+>       with pytest.raises(RuntimeError, match="already has an active"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'RuntimeError'>
+
+rl/sync/tests/test_sync.py:558: Failed
+__________ test_initial_start_reserves_until_confirmed_cleanup[True] ___________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_initial_start_reserves_un1')
+confirmed = True
+
+    @pytest.mark.parametrize("confirmed", [False, True])
+    def test_initial_start_reserves_until_confirmed_cleanup(tmp_path, confirmed):
+        store = make_store(tmp_path)
+        WeightSync(store).push([("weight", torch.ones(3, 2))], 1)
+        checkpoint = store.checkpoint(1)
+        calls = []
+    
+        class Partial:
+            close_calls = 0
+    
+            def close(self):
+                self.close_calls += 1
+                if self.close_calls == 1:
+                    raise RuntimeError("still unresolved")
+    
+        partial = Partial()
+    
+        def fail_start(checkpoint, config):
+            calls.append(checkpoint.policy_version)
+            # Reservation must already block a reentrant constructor inside the factory.
+            with pytest.raises(RuntimeError, match="already has an active"):
+                RolloutEngine(checkpoint, _backend_factory=Backend, weight_store=store)
+            error = RuntimeError("initial start failed")
+            error.worker, error.cleanup_confirmed = partial, confirmed
+            raise error
+    
+        with pytest.raises(RuntimeError, match="initial start failed") as caught:
+>           RolloutEngine(checkpoint, _backend_factory=fail_start, weight_store=store)
+
+rl/sync/tests/test_sync.py:565: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/rollout/engine.py:61: in __init__
+    self._backend = self._start(checkpoint)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/engine.py:69: in _start
+    return self._backend_factory(checkpoint, self._config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/sync/tests/test_sync.py:559: in fail_start
+    RolloutEngine(checkpoint, _backend_factory=Backend, weight_store=store)
+rl/rollout/engine.py:61: in __init__
+    self._backend = self._start(checkpoint)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/engine.py:69: in _start
+    return self._backend_factory(checkpoint, self._config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_sync.Backend object at 0x7d541b045520>
+checkpoint = PolicyCheckpoint(model_path='/tmp/pytest-of-postedism/pytest-201/test_initial_start_reserves_un1/versions/v1-d4a31c3cb...285f9ca73e2b24ff56292e', revision='d4a31c3cb30c50c7411a10b354f208ba6f00679dee285f9ca73e2b24ff56292e', policy_version=1)
+config = SamplingConfig(seed=0, temperature=1.0, top_p=1.0, top_k=-1, max_tokens=32, max_model_len=256)
+
+    def __init__(self, checkpoint, config):
+        from safetensors.torch import load_file
+    
+>       assert Backend.live == 0
+E       assert 1 == 0
+E        +  where 1 = Backend.live
+
+rl/sync/tests/test_sync.py:31: AssertionError
+_________ test_real_loader_rejects_owned_non_bf16_before_spawn[dtype0] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_real_loader_rejects_owned0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7d541b046090>
+dtype = torch.float32
+
+    @pytest.mark.parametrize("dtype", [torch.float32, torch.float16])
+    def test_real_loader_rejects_owned_non_bf16_before_spawn(tmp_path, monkeypatch, dtype):
+        from rl.rollout import _worker
+    
+        store = make_store(tmp_path, dtype)
+        original = torch.ones(3, 2, dtype=dtype)
+        WeightSync(store).push([("weight", original)], 1)
+        checkpoint = store.checkpoint(1)
+        spawned = []
+    
+        def forbidden_context(*args):
+            spawned.append(args)
+            raise AssertionError("must reject before worker construction")
+    
+        monkeypatch.setattr(_worker.mp, "get_context", forbidden_context)
+        with pytest.raises(ValueError, match="BF16"):
+>           RolloutEngine(checkpoint, weight_store=store)
+
+rl/sync/tests/test_sync.py:601: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/rollout/engine.py:61: in __init__
+    self._backend = self._start(checkpoint)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/engine.py:69: in _start
+    return self._backend_factory(checkpoint, self._config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/_worker.py:226: in __init__
+    context = mp.get_context("spawn")
+              ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = ('spawn',)
+
+    def forbidden_context(*args):
+        spawned.append(args)
+>       raise AssertionError("must reject before worker construction")
+E       AssertionError: must reject before worker construction
+
+rl/sync/tests/test_sync.py:597: AssertionError
+_________ test_real_loader_rejects_owned_non_bf16_before_spawn[dtype1] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_real_loader_rejects_owned1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7d541b7164b0>
+dtype = torch.float16
+
+    @pytest.mark.parametrize("dtype", [torch.float32, torch.float16])
+    def test_real_loader_rejects_owned_non_bf16_before_spawn(tmp_path, monkeypatch, dtype):
+        from rl.rollout import _worker
+    
+        store = make_store(tmp_path, dtype)
+        original = torch.ones(3, 2, dtype=dtype)
+        WeightSync(store).push([("weight", original)], 1)
+        checkpoint = store.checkpoint(1)
+        spawned = []
+    
+        def forbidden_context(*args):
+            spawned.append(args)
+            raise AssertionError("must reject before worker construction")
+    
+        monkeypatch.setattr(_worker.mp, "get_context", forbidden_context)
+        with pytest.raises(ValueError, match="BF16"):
+>           RolloutEngine(checkpoint, weight_store=store)
+
+rl/sync/tests/test_sync.py:601: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+rl/rollout/engine.py:61: in __init__
+    self._backend = self._start(checkpoint)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/engine.py:69: in _start
+    return self._backend_factory(checkpoint, self._config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rl/rollout/_worker.py:226: in __init__
+    context = mp.get_context("spawn")
+              ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = ('spawn',)
+
+    def forbidden_context(*args):
+        spawned.append(args)
+>       raise AssertionError("must reject before worker construction")
+E       AssertionError: must reject before worker construction
+
+rl/sync/tests/test_sync.py:597: AssertionError
+___ test_final_directory_fsync_deadline_preserves_committed_identity[False] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_final_directory_fsync_dea0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7d541b045790>
+direct_stage = False
+
+    @pytest.mark.parametrize("direct_stage", [False, True])
+    def test_final_directory_fsync_deadline_preserves_committed_identity(
+        tmp_path, monkeypatch, direct_stage
+    ):
+        import stat
+    
+        from rl.sync import version as version_module
+    
+        store = make_store(tmp_path)
+        sync = WeightSync(store, timeout=30)
+        sync.push([("weight", torch.ones(3, 2))], 1)
+        previous = store.checkpoint(1)
+        store.active_version = 1
+        now = [0.0]
+        monkeypatch.setattr(version_module.time, "monotonic", lambda: now[0])
+        original_fsync = version_module.os.fsync
+    
+        def slow_directory(fd):
+            original_fsync(fd)
+            if stat.S_ISDIR(version_module.os.fstat(fd).st_mode):
+                now[0] = 60.0
+    
+        monkeypatch.setattr(version_module.os, "fsync", slow_directory)
+>       with pytest.raises(TimeoutError, match="transaction deadline"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'TimeoutError'>
+
+rl/sync/tests/test_sync.py:631: Failed
+____ test_final_directory_fsync_deadline_preserves_committed_identity[True] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-postedism/pytest-201/test_final_directory_fsync_dea1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7d541b044680>
+direct_stage = True
+
+    @pytest.mark.parametrize("direct_stage", [False, True])
+    def test_final_directory_fsync_deadline_preserves_committed_identity(
+        tmp_path, monkeypatch, direct_stage
+    ):
+        import stat
+    
+        from rl.sync import version as version_module
+    
+        store = make_store(tmp_path)
+        sync = WeightSync(store, timeout=30)
+        sync.push([("weight", torch.ones(3, 2))], 1)
+        previous = store.checkpoint(1)
+        store.active_version = 1
+        now = [0.0]
+        monkeypatch.setattr(version_module.time, "monotonic", lambda: now[0])
+        original_fsync = version_module.os.fsync
+    
+        def slow_directory(fd):
+            original_fsync(fd)
+            if stat.S_ISDIR(version_module.os.fstat(fd).st_mode):
+                now[0] = 60.0
+    
+        monkeypatch.setattr(version_module.os, "fsync", slow_directory)
+>       with pytest.raises(TimeoutError, match="transaction deadline"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'TimeoutError'>
+
+rl/sync/tests/test_sync.py:631: Failed
+=========================== short test summary info ============================
+FAILED rl/sync/tests/test_sync.py::test_stale_close_preserves_successor_reservation
+FAILED rl/sync/tests/test_sync.py::test_initial_start_reserves_until_confirmed_cleanup[False]
+FAILED rl/sync/tests/test_sync.py::test_initial_start_reserves_until_confirmed_cleanup[True]
+FAILED rl/sync/tests/test_sync.py::test_real_loader_rejects_owned_non_bf16_before_spawn[dtype0]
+FAILED rl/sync/tests/test_sync.py::test_real_loader_rejects_owned_non_bf16_before_spawn[dtype1]
+FAILED rl/sync/tests/test_sync.py::test_final_directory_fsync_deadline_preserves_committed_identity[False]
+FAILED rl/sync/tests/test_sync.py::test_final_directory_fsync_deadline_preserves_committed_identity[True]
+7 failed, 25 deselected in 1.13s

@@ -1,0 +1,89 @@
+B023 Function definition does not bind loop variable `after_current`
+   --> serving/baseline/model_snapshot.py:312:25
+    |
+310 |                     resource_sample(
+311 |                         cache,
+312 |                         after_current + current_remaining,
+    |                         ^^^^^^^^^^^^^
+313 |                         TOTAL_BYTES if args.download else 0,
+314 |                     )
+    |
+
+F401 [*] `sys` imported but unused
+ --> serving/baseline/model_snapshot_test.py:6:8
+  |
+4 | import os
+5 | import subprocess
+6 | import sys
+  |        ^^^
+7 | import threading
+8 | from pathlib import Path
+  |
+help: Remove unused import: `sys`
+  |
+5 | import subprocess
+  - import sys
+6 | import threading
+  |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+   --> serving/baseline/model_snapshot_test.py:143:19
+    |
+141 |     ]
+142 |     with blob_lock(lock, timeout=1):
+143 |         blocked = subprocess.run(command, capture_output=True, text=True, timeout=3)
+    |                   ^^^^^^^^^^^^^^
+144 |         assert blocked.returncode != 0 and "filelock._error.Timeout" in blocked.stderr
+145 |     acquired = subprocess.run(command, capture_output=True, text=True, timeout=3)
+    |
+help: Add explicit `check=False`
+    |
+142 |     with blob_lock(lock, timeout=1):
+    -         blocked = subprocess.run(command, capture_output=True, text=True, timeout=3)
+143 +         blocked = subprocess.run(command, check=False, capture_output=True, text=True, timeout=3)
+144 |         assert blocked.returncode != 0 and "filelock._error.Timeout" in blocked.stderr
+    |
+note: This suggestion may be incorrect or produce invalid syntax. It requires manual review and cannot be applied automatically
+
+PLW1510 `subprocess.run` without explicit `check` argument
+   --> serving/baseline/model_snapshot_test.py:145:16
+    |
+143 |         blocked = subprocess.run(command, capture_output=True, text=True, timeout=3)
+144 |         assert blocked.returncode != 0 and "filelock._error.Timeout" in blocked.stderr
+145 |     acquired = subprocess.run(command, capture_output=True, text=True, timeout=3)
+    |                ^^^^^^^^^^^^^^
+146 |     assert acquired.returncode == 0 and acquired.stdout.strip() == "acquired"
+    |
+help: Add explicit `check=False`
+    |
+144 |         assert blocked.returncode != 0 and "filelock._error.Timeout" in blocked.stderr
+    -     acquired = subprocess.run(command, capture_output=True, text=True, timeout=3)
+145 +     acquired = subprocess.run(command, check=False, capture_output=True, text=True, timeout=3)
+146 |     assert acquired.returncode == 0 and acquired.stdout.strip() == "acquired"
+    |
+note: This suggestion may be incorrect or produce invalid syntax. It requires manual review and cannot be applied automatically
+
+SIM117 [*] Use a single `with` statement with multiple contexts instead of nested `with` statements
+   --> serving/baseline/model_snapshot_test.py:173:9
+    |
+171 |       try:
+172 |           assert child.stdout.readline().strip() == "held"
+173 | /         with pytest.raises(TimeoutError):
+174 | |             with blob_lock(path, timeout=0.1):
+    | |______________________________________________^
+175 |                   pytest.fail("cross-process lock unexpectedly acquired")
+176 |           child.stdin.write("release\n")
+    |
+help: Combine `with` statements
+    |
+172 |         assert child.stdout.readline().strip() == "held"
+    -         with pytest.raises(TimeoutError):
+    -             with blob_lock(path, timeout=0.1):
+    -                 pytest.fail("cross-process lock unexpectedly acquired")
+173 +         with pytest.raises(TimeoutError), blob_lock(path, timeout=0.1):
+174 +             pytest.fail("cross-process lock unexpectedly acquired")
+175 |         child.stdin.write("release\n")
+    |
+
+Found 5 errors.
+[*] 2 fixable with `--fix`.

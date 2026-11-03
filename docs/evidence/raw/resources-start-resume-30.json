@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-10-25T17:01:07.902970+00:00",
+  "scope": "continuation30 freshstart HEADb5f2873, no runningexperiments; oldphaseactualprogress",
+  "sample": {
+    "project_bytes": 13316660821,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13306500590,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13996500590,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "new_phase_retained_cap": 2000000,
+  "new_CPU_scratch_cap": 1000000,
+  "existing_allowances": "unchanged690Mtotal/client10160231inside500M/remaining679839769/loanNOTrepaid",
+  "conservative_projection_plus3M": 13999500590,
+  "estimated_USD": 0,
+  "GPU_authorized": false,
+  "fullmodel_fit_admitted": false,
+  "previous_turn_classification": "PROGRESS:92744f5 source+12actualCPU+sameagentApproved+b5f2873metadata; not wait/no-progress"
+}

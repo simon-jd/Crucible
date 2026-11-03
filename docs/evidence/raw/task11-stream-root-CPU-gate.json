@@ -1,0 +1,168 @@
+{
+  "time_utc": "2026-10-25T15:26:03.862830+00:00",
+  "scope": "ROOT fresh single tinyCPU gate after actualsource andstaticread; no nativeGPU",
+  "sources": {
+    "rl/learner/handoff_stream.py": "ac3452d915f05c0bba8338b70d185c5a293443cf29df113f9c86d4e54be3e44d",
+    "rl/learner/handoff_protocol.py": "f72a884d61fb88f47c983ce91a47a2bce45cecefe6e3ffb90e758ff80ff9df4a",
+    "rl/learner/state_handoff.py": "8ebe358deab1c02981c546870f85c39d236f31cefb4ac8290e5cbaa88c3ac4c6",
+    "rl/learner/train.py": "4293dd0ff5ac658f5f56e56573f616214cc74a8fbdde4492f67e65cef7d9c3b3",
+    "rl/learner/tests/test_stream_handoff.py": "9a1b689e37e5256d8f5f5c8ab01e0486f51789c09ed31a863f521c4b69b1a858",
+    "rl/learner/tests/handoff_worker.py": "10d1e21ca458a33c444ca7009e264b62a774df187f67e069f1d32cd51ce36c55",
+    "scripts/test_ram_handoff_cpu.py": "a064f38f9592d48a51a916d32d82cca3cd94cefd82f8db80b15369b4393a1003",
+    "rl/learner/README.md": "3152d38a83285619f21e0fb2121c49e2d577c508d1f76eecfe2204ef36ac7ca4"
+  },
+  "same_interpreter_seven_AST_match_original": true,
+  "static_v3_format": 0,
+  "static_v3_lint": 0,
+  "phase_inventory": [
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/progress.md",
+      "bytes": 275633
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-brief.md",
+      "bytes": 1241
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-brief.md",
+      "bytes": 11645
+    },
+    {
+      "path": ".superpowers/sdd/5-crucible-gpu-ml-plan/task-11-stream-handoff-report.md",
+      "bytes": 31056
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 88696
+    },
+    {
+      "path": "docs/azure-spend.md",
+      "bytes": 20048
+    },
+    {
+      "path": "docs/evidence/raw/azure-reaper-resume-29.json",
+      "bytes": 203
+    },
+    {
+      "path": "docs/evidence/raw/resources-start-resume-29.json",
+      "bytes": 1225
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format-v2.log",
+      "bytes": 400
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format-v3.log",
+      "bytes": 177
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-format.log",
+      "bytes": 1054
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-lint-v2.log",
+      "bytes": 2760
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-lint-v3.log",
+      "bytes": 375
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-preservation-before-source.json",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-source-static-gate.json",
+      "bytes": 4496
+    },
+    {
+      "path": "docs/evidence/raw/task11-stream-root-static-v2-gate.json",
+      "bytes": 1194
+    },
+    {
+      "path": "docs/evidence/rl-serial-state-handoff.md",
+      "bytes": 3324
+    },
+    {
+      "path": "rl/learner/README.md",
+      "bytes": 18704
+    },
+    {
+      "path": "rl/learner/handoff_protocol.py",
+      "bytes": 20124
+    },
+    {
+      "path": "rl/learner/handoff_stream.py",
+      "bytes": 22384
+    },
+    {
+      "path": "rl/learner/state_handoff.py",
+      "bytes": 46366
+    },
+    {
+      "path": "rl/learner/tests/handoff_worker.py",
+      "bytes": 10407
+    },
+    {
+      "path": "rl/learner/tests/test_stream_handoff.py",
+      "bytes": 22448
+    },
+    {
+      "path": "rl/learner/train.py",
+      "bytes": 20819
+    },
+    {
+      "path": "scripts/test_ram_handoff_cpu.py",
+      "bytes": 13836
+    }
+  ],
+  "phase_retained": 619713,
+  "remaining_upperbounds": {
+    "CPU_three_logs": 786432,
+    "review_packages": 250000,
+    "review_brief_report": 40000,
+    "root_remaining_metadata_and_git": 180000
+  },
+  "phase_forecast": 1876145,
+  "phase_cap": 2000000,
+  "resource_sample": {
+    "project_bytes": 13316039894,
+    "pool_bytes": 10160231,
+    "runtime_cache_bytes": 0,
+    "evidence_bytes": 0,
+    "combined_bytes": 10160231,
+    "nonpool_bytes": 13305879663,
+    "evidence_credit_bytes": 0,
+    "projected_bytes": 13995879663,
+    "canonical_rescans": [],
+    "project_bytes_kind": "canonical",
+    "accounting": "sequential non-atomic inode scans; cross-boundary hardlinks may double count; sampled, not quota"
+  },
+  "future_plus3M": 13998879663,
+  "shared_HF_bytes": 23815435170,
+  "shared_rescans": [],
+  "free_bytes": 264503164928,
+  "fresh_paths": [
+    ".cache/task11-ram-handoff/stream",
+    "docs/evidence/raw/task11-ram-handoff-stream.log",
+    "docs/evidence/raw/task11-ram-handoff-stream.json",
+    "docs/evidence/raw/task11-ram-handoff-stream-supervisor.log"
+  ],
+  "command": "env -u TRANSFORMERS_CACHE CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 HF_HOME=/home/postedism/.cache/huggingface HF_HUB_CACHE=/home/postedism/.cache/huggingface/hub HUGGINGFACE_HUB_CACHE=/home/postedism/.cache/huggingface/hub HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv-ml/bin/python -B -m scripts.test_ram_handoff_cpu stream",
+  "selection": [
+    "rl/learner/tests/test_stream_handoff.py",
+    "rl/learner/tests/test_state_handoff.py::test_original_child_exit_then_fresh_process_adamw_resume"
+  ],
+  "limits": {
+    "seconds": 120,
+    "cleanup_seconds": 5,
+    "aggregate_sampled_RSS_plus_4194304_anonymous": 2000000000,
+    "scratch": 1000000,
+    "fsize": 262144,
+    "core": 0
+  },
+  "single_execution": true,
+  "no_automatic_retry_after_failure": true,
+  "GPU_authorized": false,
+  "fullsize_fit_admitted": false
+}
