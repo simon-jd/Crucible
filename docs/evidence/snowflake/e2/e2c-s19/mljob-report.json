@@ -1,0 +1,249 @@
+{
+  "started_at": "2026-11-04T20:46:31+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e2c-s19",
+    "--task",
+    "pair",
+    "--layout",
+    "two-node",
+    "--seed",
+    "19",
+    "--port",
+    "12939",
+    "--timeout",
+    "4800",
+    "--role-env",
+    "all:NCCL_SOCKET_NTHREADS=4",
+    "all:NCCL_NSOCKS_PERTHREAD=4"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "2",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E12_E2C_S19_1Q92WSGJ8AW41",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e2c-s19",
+      "task": "pair",
+      "layout": "two-node",
+      "nproc": 36,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 5.5,
+          "MBps": 182.4
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.4,
+          "MBps": 2.1
+        }
+      ],
+      "roles": [
+        {
+          "role": "learner",
+          "exit": 0,
+          "seconds": 1468.3,
+          "host": "job-0",
+          "role_results": [
+            {
+              "staleness_histogram": {
+                "0": 64,
+                "1": 6336
+              },
+              "train_wall_s": 929.5244555759999,
+              "peak_allocated_bytes": 11762728448,
+              "peak_reserved_bytes": 15233712128,
+              "peak_device_used_bytes": 18349686784,
+              "device": "NVIDIA A10-24Q",
+              "host": "job-0",
+              "nccl_env": {
+                "NCCL_NET_PLUGIN": "none",
+                "NCCL_VERSION": "2.25.1-1",
+                "NCCL_SOCKET_IFNAME": "eth0",
+                "CUDA_VISIBLE_DEVICES": "0",
+                "NCCL_SOCKET_NTHREADS": "4",
+                "NCCL_NSOCKS_PERTHREAD": "4"
+              }
+            }
+          ],
+          "tail": [
+            "{\"step\": 60, \"wait_batch_s\": 0.007677650999994512, \"learn_s\": 5.624227375000146, \"sync_s\": 2.988011124000195, \"wall_s\": 8.685960404999832}",
+            "{\"step\": 70, \"wait_batch_s\": 0.006824676999940493, \"learn_s\": 5.809567222999931, \"sync_s\": 2.925443181000219, \"wall_s\": 8.807126619999963}",
+            "{\"step\": 80, \"wait_batch_s\": 0.006286723999892274, \"learn_s\": 5.4167258150000634, \"sync_s\": 2.9042408190000515, \"wall_s\": 8.39421596399984}",
+            "{\"step\": 90, \"wait_batch_s\": 0.006115637999982937, \"learn_s\": 5.4427072779999435, \"sync_s\": 2.9371870339998623, \"wall_s\": 8.54332045000001}",
+            "ROLE_RESULT {\"staleness_histogram\": {\"0\": 64, \"1\": 6336}, \"train_wall_s\": 929.5244555759999, \"peak_allocated_bytes\": 11762728448, \"peak_reserved_bytes\": 15233712128, \"peak_device_used_bytes\": 18349686784, \"device\": \"NVIDIA A10-24Q\", \"host\": \"job-0\", \"nccl_env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_SOCKET_NTHREADS\": \"4\", \"NCCL_NSOCKS_PERTHREAD\": \"4\"}}"
+          ],
+          "node": {
+            "ip": "10.244.3.203",
+            "host": "job-0",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 2933,
+              "mean_util_pct": 46.2,
+              "peak_used_mib": 15324.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "rollout",
+          "exit": 0,
+          "seconds": 1467.0,
+          "host": "job-1",
+          "role_results": [],
+          "tail": [
+            "INFO 11-04 21:11:21 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-04 21:11:29 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-04 21:11:38 [block_pool.py:292] Successfully reset prefix cache",
+            "{\"after\": {\"gsm8k\": 0.488248673237301, \"math500\": 0.28448275862068967}}",
+            "[rank0]:[W1104 21:20:09.614276170 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+          ],
+          "node": {
+            "ip": "10.244.4.11",
+            "host": "job-1",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 2930,
+              "mean_util_pct": 53.1,
+              "peak_used_mib": 4644.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "pipeline": {
+        "training_window_s": 929.5304555892944,
+        "learner_gpu_busy_s": 921.1511263847351,
+        "rollout_gpu_busy_s": 726.3402559757233,
+        "learner_gpu_idle_share": 0.009014582743549937,
+        "rollout_gpu_idle_share": 0.21859445098520702,
+        "learn_generate_overlap_s": 429.65388011932373,
+        "trained_samples_per_s": 6.885196672703523,
+        "generated_samples_per_s": 6.885196672703523,
+        "step_wall_s": {
+          "median": 8.774329709000085,
+          "min": 8.278924975999871,
+          "max": 22.097870895999904
+        },
+        "wait_batch_s": {
+          "median": 0.006938617499940847,
+          "min": 0.005619983999849865,
+          "max": 7.578530232999924
+        },
+        "learn_s": {
+          "median": 5.672473104999938,
+          "min": 5.232501329000115,
+          "max": 11.277248690999954
+        },
+        "export_s": {
+          "median": 0.0643711784999823,
+          "min": 0.062091128000020035,
+          "max": 0.07066886200004774
+        },
+        "barrier_s": {
+          "median": 0.0002538625000170214,
+          "min": 0.00016110900014609797,
+          "max": 0.7806584049999401
+        },
+        "learner_push_s": {
+          "median": 2.89645572500001,
+          "min": 2.788921602000073,
+          "max": 2.988011124000195
+        },
+        "rollout_generate_s": {
+          "median": 4.316254090500024,
+          "min": 3.3997802220001176,
+          "max": 6.206252720000009
+        },
+        "rollout_grade_s": {
+          "median": 1.309334903500087,
+          "min": 1.1772853899999518,
+          "max": 1.415630348000036
+        },
+        "rollout_recv_s": {
+          "median": 2.896507413499876,
+          "min": 2.7890335579999714,
+          "max": 2.98839831600003
+        },
+        "rollout_load_s": {
+          "median": 0.007715610499985814,
+          "min": 0.006396230999939689,
+          "max": 0.013983915000039815
+        },
+        "rollout_barrier_s": {
+          "median": 0.11119992049992788,
+          "min": 0.0005104609999762033,
+          "max": 5.927227894999987
+        },
+        "sync_bytes_per_version": [
+          988065536
+        ],
+        "learner_push_GBps": {
+          "median": 0.34112919444658973,
+          "min": 0.33067665915420985,
+          "max": 0.3542822915106002
+        },
+        "staleness_histogram": {
+          "0": 64,
+          "1": 6336
+        },
+        "dropped_stale": 0,
+        "versions_loaded": 100
+      },
+      "after": {
+        "gsm8k": 0.488248673237301,
+        "math500": 0.28448275862068967
+      },
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e2c-s19.tar.gz",
+        "bytes": 1035276
+      },
+      "seconds": 1496.4
+    }
+  ],
+  "seconds": 2080.9,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "2",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 1.965
+}
