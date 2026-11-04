@@ -24,7 +24,7 @@ PYTEST := -m pytest -q -p no:cacheprovider
 ML_TESTS := kernels rl scripts/tests/test_build_report_pdf.py scripts/tests/test_build_report_html.py
 
 .PHONY: bootstrap bootstrap-python bootstrap-ml toolchains test test-python test-ml test-go \
-	check lint vet replay-bin
+	check lint vet replay-bin snowflake-bins
 bootstrap: bootstrap-python
 	bash scripts/bootstrap.sh
 
@@ -73,6 +73,14 @@ k8s-bins: toolchains
 	@mkdir -p $(ROOT)/.cache/k8s/bin $(ROOT)/.cache/k8s/logs
 	CGO_ENABLED=0 $(GO) build -o $(ROOT)/.cache/k8s/bin/router ./serving/router/cmd/router
 	CGO_ENABLED=0 $(GO) build -o $(ROOT)/.cache/k8s/bin/autoscaler ./serving/autoscaler
+
+# Static router/autoscaler/replayer for Snowflake ML Jobs (shipped with the payload, see
+# scripts/snowflake/payloads/e3_autoscale.py).
+snowflake-bins: toolchains
+	@mkdir -p $(ROOT)/.cache/snowflake/bin
+	CGO_ENABLED=0 $(GO) build -trimpath -o $(ROOT)/.cache/snowflake/bin/router ./serving/router/cmd/router
+	CGO_ENABLED=0 $(GO) build -trimpath -o $(ROOT)/.cache/snowflake/bin/autoscaler ./serving/autoscaler
+	CGO_ENABLED=0 $(GO) build -trimpath -o $(ROOT)/.cache/snowflake/bin/replay ./serving/replay/cmd/replay
 
 replay-bin: toolchains
 	$(GO) build -o $(ROOT)/.cache/bin/replay ./serving/replay/cmd/replay

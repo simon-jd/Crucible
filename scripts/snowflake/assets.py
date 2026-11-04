@@ -2,6 +2,7 @@
 
   python scripts/snowflake/assets.py put <local dir or file> <name>   # e.g. models/Qwen2.5-0.5B-Instruct
   python scripts/snowflake/assets.py ls
+  python scripts/snowflake/assets.py get <stage file> <local dir>       # e.g. a job's output tar
 
 Each asset is one uncompressed tar, @CRUCIBLE_LAB.PROBE.ASSETS/<name>.tar, with <name>.sha256 next to it, so a
 job downloads a single file and checks it. Symlinks are followed, so a Hugging Face snapshot directory becomes
@@ -74,6 +75,16 @@ def fetch(name, dest):
     return {"asset": name, "bytes": size, "get_seconds": round(dt, 1), "MBps": round(size / dt / 1e6, 1)}
 
 
+def get(name, dest):
+    """On the host: download one stage file (for example a job's output tar) into dest."""
+    s = _host_session()
+    Path(dest).mkdir(parents=True, exist_ok=True)
+    rows = s.file.get(f"@{STAGE}/{name}", str(dest))
+    s.close()
+    for r in rows:
+        print(f"got {r.file} ({r.size} bytes) -> {dest}")
+
+
 def ls():
     s = _host_session()
     for r in s.sql(f"LIST @{STAGE}").collect():
@@ -84,6 +95,8 @@ def ls():
 if __name__ == "__main__":
     if len(sys.argv) == 4 and sys.argv[1] == "put":
         put(sys.argv[2], sys.argv[3].strip("/"))
+    elif len(sys.argv) == 4 and sys.argv[1] == "get":
+        get(sys.argv[2].strip("/"), sys.argv[3])
     elif len(sys.argv) == 2 and sys.argv[1] == "ls":
         ls()
     else:
