@@ -11,6 +11,7 @@ module, so the definitions match docs/evidence/serving-baseline.md.
 """
 
 import argparse
+import gzip
 import json
 import statistics
 from pathlib import Path
@@ -18,9 +19,16 @@ from pathlib import Path
 from serving.baseline import vllm_baseline as vb
 
 
+def _read_text(path):
+    """Plain file, or its .gz copy (the committed evidence keeps raw files gzipped)."""
+    path = Path(path)
+    if path.exists():
+        return path.read_text()
+    return gzip.decompress(Path(str(path) + ".gz").read_bytes()).decode()
+
+
 def read_jsonl(path):
-    with open(path) as f:
-        return [json.loads(line) for line in f if line.strip()]
+    return [json.loads(line) for line in _read_text(path).splitlines() if line.strip()]
 
 
 def _dist(values):
@@ -71,7 +79,7 @@ def load_layout(path):
 
 def slo_from(path):
     summary, path = load_layout(path)
-    runs = [json.loads((path / t["file"]).read_text()) for t in summary["calibration"]]
+    runs = [json.loads(_read_text(path / t["file"])) for t in summary["calibration"]]
     valid = [r for r in runs if r["Run"]["SenderValid"] and not r["Run"]["Aborted"]]
     if len(valid) < 3:
         raise ValueError(f"{path}: only {len(valid)} sender-valid calibration runs")
@@ -83,7 +91,7 @@ def evaluate(path, slo):
     levels = tuple(summary["levels"])
     trials = []
     for t in summary["evaluation"]:
-        data = json.loads((path / t["file"]).read_text())
+        data = json.loads(_read_text(path / t["file"]))
         s = vb.summarize(data, slo)
         trials.append({"file": t["file"], "round": t["round"], "level": t["level"], **s, "kv": t.get("kv")})
     per_level = {}

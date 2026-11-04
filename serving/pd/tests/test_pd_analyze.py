@@ -46,6 +46,13 @@ def test_slo_comes_from_the_colocated_calibration_and_applies_to_every_layout(tm
     analyze.main(["--slo-from", f"colo={colo}", "--layout", f"colo={colo}", "--layout", f"pd-shm={pd}",
                   "--output", str(out), "--markdown", str(tmp_path / "t.md")])
     res = json.loads(out.read_text())
+    import gzip  # the committed evidence keeps raw replay files gzipped; results must not change
+
+    for f in pd.glob("evaluation-*.json"):
+        f.with_name(f.name + ".gz").write_bytes(gzip.compress(f.read_bytes()))
+        f.unlink()
+    again = analyze.evaluate(pd, res["slo"])
+    assert again["per_level"] == res["layouts"][1]["per_level"]
     assert res["slo"]["ttft_ms"] == 100 and res["slo"]["tpot_ms"] == 10 and res["slo"]["samples"] == 9
     colo_r, pd_r = res["layouts"]
     assert colo_r["per_level"]["1"]["good"] == [1, 2]
