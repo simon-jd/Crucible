@@ -96,8 +96,9 @@ supported between these two devices'`: attempt 1 with defaults, attempt 2 with
   on the GPU.
 - CPU tests: `rl/sync/tests/test_memory_store.py` (schema/digest rules; actual
   two-process gloo WeightSync over the pair group between two processes whose default
-  rank is 0; a corrupted receiver tensor is rejected before commit). `rl/sync` and
-  `rl/local` suites: 103 passed, 1 skipped (GPU opt-in) in `.venv-ml`.
+  rank is 0; a corrupted receiver tensor is rejected before commit). `rl/sync`,
+  `rl/local` and `rl/learner/tests/test_grpo.py`: 114 passed, 1 skipped (GPU opt-in) in
+  `.venv-ml`, CPU only; ruff clean.
 
 ## Limits
 
