@@ -4,8 +4,9 @@ Crucible is a GPU and ML infrastructure project in five parts: bring-up tooling 
 GPU cluster, asynchronous RL post-training with GRPO (rollout engine, learner and weight sync),
 LLM serving with a trace replayer, router and autoscaler (including prefill/decode disaggregated
 layouts), EAGLE-3 speculative decoding, and a PyTorch custom op for fused token log-probabilities.
-Everything that was measured ran on a single RTX 4090 (24 GB) in a shared workstation, with models
-scaled down to fit it. The multi-node parts (four-node H100 cluster checks, burn-in, health-based
+Most measurements ran on a single RTX 4090 (24 GB) in a shared workstation, with models scaled down
+to fit it. A second set ran on Snowflake trial GPU nodes: two A10 24 GB GPUs in one node (no
+NVLink/P2P), or two single-A10 nodes over TCP. The multi-node parts (four-node H100 cluster checks, burn-in, health-based
 drain, fault injection, scaling runs, cross-node P/D serving with KV transfer over RDMA) are
 written and covered by offline CPU tests, but they have never run on real hardware.
 
@@ -76,8 +77,8 @@ learner uses it to score both the policy and the reference model.
 
 ## Results
 
-Hardware for every row: one NVIDIA RTX 4090 (24 GB) in a 32-core Linux workstation that ran other
-workloads at the same time. GPU jobs ran one at a time under a lock; the CPU was shared. Each row
+Hardware for every row outside the Snowflake section: one NVIDIA RTX 4090 (24 GB) in a 32-core Linux
+workstation that ran other workloads at the same time. GPU jobs ran one at a time under a lock; the CPU was shared. Each row
 links the write-up with the full setup, raw outputs and caveats. Longer technical reports (in
 Chinese) are in [reports/](reports/) with PDFs in [reports/pdf/](reports/pdf/); commits, model
 revisions and environment hashes for the report runs are in
@@ -109,6 +110,21 @@ differences.
 | BF16 vs online FP8 | Same Qwen3-8B checkpoint, vLLM BF16 vs `--quantization fp8`, both in eager mode; Azure window at 0.25× the trace's rate; order AB, BA, AB | p50 TPOT 24.6 → 15.5 ms (−37%), p50 TTFT 128 → 89 ms, KV cache 22,192 → 68,016 tokens. Throughput +1.4% and goodput +2.2% only, because BF16 already met the SLO on almost every request. Accuracy: GSM8K 0.920 → 0.910, MMLU-Pro 0.377 → 0.380, both within one SE (about ±1.9 and ±2.8 pp) | [pd-disaggregation.md](docs/evidence/pd-disaggregation.md) |
 | Autoscaling on one GPU | Router + autoscaler, up to two vLLM replicas of Qwen2.5-0.5B on the same GPU; a 120 s burst at 4x load; 3 trials each | The new replica served its first request a median 35.5 s after the burst began, but burst goodput fell from 4.00 req/s (one fixed replica) to 0.675 req/s: two processes on one GPU slow every decode step (p50 TPOT 3.7 → 5.6 ms) | [autoscaling.md](docs/evidence/autoscaling.md) |
 | Replica kill | 2 replicas, 260 requests at 3 req/s, SIGKILL of one replica at 30 s; 3 trials per condition | Failed requests per kill: 32–34 with the original router, which kept routing to the dead replica until its snapshot expired; 0–1 after ejecting on transport errors and retrying failed connects; 0 failed and 1 retried (then completed) with a client resend of cut streams. Every request is accounted for in every trial | [serving-faults.md](docs/evidence/serving-faults.md) |
+
+### Two A10 GPUs on Snowflake
+
+Hardware: a Snowflake trial account, November 2026. "One node" is Snowflake GPU_NV_2M: 2× A10 24 GB
+(vGPU) in one node, no NVLink/P2P. "Two nodes" is 2 Snowflake GPU_NV_SM nodes (1× A10 24 GB each)
+over TCP. Each run was a Snowflake ML Job with vLLM 0.10.2, torch 2.8.0 (NCCL 2.27.3) and
+transformers 4.55.4 ([scripts/snowflake/](scripts/snowflake/)). Compare the A10 numbers with each
+other, not with the 4090 rows.
+
+| What | Setup | Result | Evidence |
+|---|---|---|---|
+| Network and NCCL baseline | 1 GiB all-reduce and broadcast between the two GPUs; default NCCL settings vs tuned; raw TCP streams; 3 passes each | Two nodes: all-reduce 0.19 → 1.26 GB/s and broadcast 0.27 → 2.6 GB/s with 8 threads × 8 sockets and at least 4 channels. One TCP stream carries about 0.19 GB/s, so the defaults were the limit, not the link. One node: all-reduce 2.5 → 9.9 GB/s and broadcast 2.0 → 18.6 GB/s with `NCCL_SHM_USE_CUDA_MEMCPY=1` | [e0-network.md](docs/evidence/snowflake/e0-network.md) |
+| Weight sync over NCCL | The weight-sync correctness check above, with the learner broadcasting BF16 weights over NCCL to vLLM on the other A10; same prompts, versions and error bound | All 1,823,232 coordinates within the bound in both layouts; 0 failures. One 988 MB version took 2.21 s in one node and 5.9 s across two nodes (default socket settings), including a per-tensor SHA-256 | [e1-weight-sync.md](docs/evidence/snowflake/e1-weight-sync.md) |
+| Async GRPO on separate GPUs | The RL setup above, seeds 17/18/19. (a) the unchanged time-shared loop on one A10; (b) learner on GPU0 and vLLM rollout on GPU1 of one node; (c) the same across two nodes. Weights synced over NCCL every step | Training time 1,207 s (a), 741 s (b, 1.63× faster) and 933 s (c, 1.29×). In (b) and (c) the learner GPU is idle 1% of the time; sync takes 1.06 s (b) and 2.9 s (c) per step; every batch is one version old, 0 dropped. GSM8K +3.80 / +3.78 / +2.99 pp (all above 4 SE). MATH-500 +1.79 pp in (a), 1.76 SE, below the bar; +2.21 pp (2.22 SE) in (b) and +3.12 pp (3.08 SE) in (c). No difference between layouts reaches 2 SE | [e2-async-grpo.md](docs/evidence/snowflake/e2-async-grpo.md) |
+| Autoscaling onto a second GPU | The autoscaling setup above in one node, with the new replica on GPU1; fixed 1 replica / autoscaling 1 → 2 / fixed 2 replicas; 3 trials each; SLO re-derived on the A10 (TTFT ≤ 85.7 ms, TPOT ≤ 9.37 ms) | Burst goodput 0.042 / 0.308 (0.025–0.433 across trials) / 0.525 req/s; failed requests 210–213 / 29–40 / 0 of 1,123. The second replica no longer slows the first (burst p50 TPOT 9.45 / 9.45 / 9.50 ms) and served its first request a median 38.5 s after the burst began. Goodput stays low in every condition because one A10 replica's TPOT under a full batch is above the SLO | [e3-autoscaling.md](docs/evidence/snowflake/e3-autoscaling.md) |
 
 ### Speculative decoding (EAGLE-3, Qwen3-4B target)
 
@@ -154,7 +170,6 @@ Not run on hardware:
   on a GPU cluster, and there are no scaling, MFU, burn-in or fault-goodput measurements.
 - **Prefill/decode disaggregation.** The 1P:1D, 2P:1D and cross-node layouts with KV transfer over
   RDMA are inactive manifests in `serving/deploy/pd-*.yaml`; no disaggregated serving was measured.
-  Multi-GPU NCCL weight sync was not tested either (only a two-process gloo run on CPU).
 - **Kubernetes deployment of the router and autoscaler.** The kind node started, but kube-proxy
   crash-looped with "too many open files" (the host's inotify instance limit), so the deployment was
   not exercised ([record](docs/evidence/t14-kind.md)).
@@ -168,8 +183,8 @@ Qwen3-4B as the speculative decoding target.
 
 Limits of the results above:
 
-- With one GPU, rollout and learning take turns, so "async" changes only how stale the training data
-  is; step times match the sync runs.
+- On the 4090, rollout and learning take turns, so "async" changes only how stale the training data
+  is; step times match the sync runs. Only the A10 runs on Snowflake overlap them.
 - MATH-500 is restricted to the 377 problems the verifier can grade, a disclosed selection. The group
   size and clip ablations have one seed each, on smaller held-out sets, and fall within the
   seed-to-seed spread of the reference configuration.
@@ -183,8 +198,14 @@ Limits of the results above:
   evaluation window, and the p99 SLOs come from 191 and 105 calibration requests.
 - FP8 is vLLM's online dynamic per-tensor quantization, not a calibrated FP8 checkpoint, measured
   at one load level.
-- The autoscaling result says nothing about scale-out on separate GPUs: on one GPU the second
-  replica only slows the first.
+- On the 4090 the second replica only slows the first. On two A10s it does not, but there the TPOT
+  SLO caps goodput in every condition, and autoscaling goodput varies a lot between trials. In every
+  autoscaling trial a short cluster of arrivals caused a second scale-up about 300 s after the load
+  dropped.
+- Snowflake runs: at most two GPUs; the A10s are virtual GPUs ("A10-24Q"); the network is shared TCP
+  with no RDMA, and results vary between runs. The two-node GRPO runs (E2 c) used 4 threads × 4
+  sockets, before the network baseline found faster settings. The A10 GRPO runs reuse the base-model
+  eval of the time-shared run for each seed (checked identical for seed 17).
 - Speculative decoding: one target model, one dataset family, 256 output tokens. The tree
   configuration's two rounds differ a lot at batch 64 (22.37 vs 16.14 ms TPOT).
 - The fused log-prob op reduces memory only in isolation; a whole learner step shows no memory or
