@@ -11,7 +11,7 @@ def test_every_layout_has_its_servers_on_the_right_nodes_and_gpus():
     dp = layouts.plan("dp2")
     assert [(s.node, s.gpu) for s in dp.servers] == [(0, "0"), (0, "1")] and dp.nodes == 1
     shm = layouts.plan("pd-shm")
-    assert [(s.node, s.gpu, s.kv_role) for s in shm.servers] == [(0, "0", "kv_producer"), (0, "1", "kv_consumer")]
+    assert [(s.node, s.gpu, s.kv_role) for s in shm.servers] == [(0, "0,1", "kv_producer"), (0, "1,0", "kv_consumer")]
     assert "NCCL_SHM_USE_CUDA_MEMCPY" not in shm.servers[0].env
     ce = layouts.plan("pd-shm-ce")
     assert ce.layout == "pd-shm-ce" and all(s.env["NCCL_SHM_USE_CUDA_MEMCPY"] == "1" for s in ce.servers)

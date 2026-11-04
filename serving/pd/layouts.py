@@ -89,9 +89,12 @@ def plan(layout, decode_pool_gb=24, decode_buffer_bytes=2e9, socket_threads=8, s
         return Plan(layout, 1, servers, "dp")
     if layout in ("pd-shm", "pd-shm-ce"):
         env = nccl | ({"NCCL_SHM_USE_CUDA_MEMCPY": "1", CUMEM_ENV: "0"} if layout == "pd-shm-ce" else {})
+        # Both GPUs stay visible to both processes (each uses cuda:0, its first visible device): with only
+        # its own GPU visible, NCCL's SHM transport fails at the first send with "peer access is not
+        # supported" (smoke runs e4-smoke1b/e4-smoke2); E0's working SHM runs also saw both GPUs.
         servers = [
-            Server("prefill", 0, "0", HTTP_PORTS[0], "127.0.0.1", COLOCATED_UTIL, "kv_producer", dict(env)),
-            Server("decode", 0, "1", HTTP_PORTS[1], "127.0.0.1", DECODE_UTIL, "kv_consumer", dict(env)),
+            Server("prefill", 0, "0,1", HTTP_PORTS[0], "127.0.0.1", COLOCATED_UTIL, "kv_producer", dict(env)),
+            Server("decode", 0, "1,0", HTTP_PORTS[1], "127.0.0.1", DECODE_UTIL, "kv_consumer", dict(env)),
         ]
         p = Plan(layout, 1, servers, "pd")
         p.layout = layout

@@ -48,6 +48,7 @@ BASE_MULT = 0.25
 REPLAY = ROOT / ".cache/e4/bin/replay"
 IDS = ROOT / ".cache/e4/qwen3-8b-awq-ids.json"
 RESULT_STAGE = "@CRUCIBLE_LAB.PROBE.ASSETS/e4-results"
+MODEL_PORT = 12975  # head -> second instance model copy (E4's port band)
 WORK = Path("/tmp/e4")
 SERVER_MODULE = "serving.pd.vllm_entry"  # tests swap in a fake server
 # The job image exports OpenTelemetry settings whose collector refuses connections; keep our processes quiet.
@@ -170,10 +171,17 @@ def remote_actor_class():
         def info(self):
             return node_info()
 
-        def fetch(self, asset, dest):
-            from scripts.snowflake.assets import fetch
-
-            return fetch(asset, dest)
+        def download(self, base, names, dest):
+            """Copy the model from the head's HTTP server (worker instances have no Snowpark session)."""
+            t, total = time.time(), 0
+            for name in names:
+                p = Path(dest) / name
+                p.parent.mkdir(parents=True, exist_ok=True)
+                with urllib.request.urlopen(f"{base}/{name}", timeout=600) as r, open(p, "wb") as f:
+                    shutil.copyfileobj(r, f, 1 << 22)
+                total += p.stat().st_size
+            dt = time.time() - t
+            return {"bytes": total, "seconds": round(dt, 1), "MBps": round(total / dt / 1e6, 1), "files": len(names)}
 
         def start(self, argv, env, log_path):
             Path(log_path).parent.mkdir(parents=True, exist_ok=True)
@@ -252,10 +260,20 @@ class Cluster:
         self.info = ray.get(self.actor.info.remote(), timeout=300)
         self.ip = self.info["ip"]
 
-    def fetch(self, asset, dest):
+    def copy_model(self, snapshot, head_ip):
+        """Serve the head's model directory over HTTP on MODEL_PORT and have the worker download it."""
         import ray
 
-        return ray.get(self.actor.fetch.remote(asset, dest), timeout=1800)
+        names = sorted(str(p.relative_to(snapshot)) for p in Path(snapshot).rglob("*") if p.is_file())
+        srv = subprocess.Popen([sys.executable, "-m", "http.server", str(MODEL_PORT), "--bind", head_ip,
+                                "--directory", snapshot], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        try:
+            time.sleep(2)
+            return ray.get(self.actor.download.remote(f"http://{head_ip}:{MODEL_PORT}", names, snapshot),
+                           timeout=1800)
+        finally:
+            srv.terminate()
+            srv.wait()
 
 
 # ---------------------------------------------------------------- one layout
@@ -498,7 +516,7 @@ def main():
 
         env["fetch_head"] = fetch(MODEL_ASSET, snapshot)
         if cluster is not None:
-            env["fetch_remote"] = cluster.fetch(MODEL_ASSET, snapshot)
+            env["fetch_remote"] = cluster.copy_model(snapshot, _node_ip())
         log(f"model fetched: {env['fetch_head']} {env.get('fetch_remote')}")
     (WORK / "out" / "environment.json").write_text(json.dumps(env, indent=1) + "\n")
     result({"environment": env})
