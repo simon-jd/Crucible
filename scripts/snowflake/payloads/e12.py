@@ -5,8 +5,10 @@
   e12.py --run NAME --task timeshared --seeds S [S] [--steps N]      # rl/local/grpo_run.py unchanged
   common: [--eval-subset N] (smoke runs: first N problems of each held-out set) [--port P]
 
-same-node: both roles are subprocesses of this process, CUDA_VISIBLE_DEVICES=0 (learner)
-and 1 (rollout), i.e. GPU_NV_2M's two A10s. two-node: one Ray actor per node
+same-node: both roles are subprocesses of this process on GPU_NV_2M's two A10s, with
+CUDA_VISIBLE_DEVICES=0,1 (learner) and 1,0 (rollout): each uses its cuda:0, but both see
+both GPUs. With only its own GPU visible, NCCL's SHM transport failed with "peer access
+is not supported" (2026-11-04, also with NCCL_P2P_DISABLE=1). two-node: one Ray actor per node
 (STRICT_SPREAD placement group over the job's 2 instances), each running its role as a
 subprocess; the repository copy and the assets are shipped to the actors through Ray.
 timeshared: one grpo_run per seed, each on its own node (Ray actors when several seeds).
@@ -245,7 +247,7 @@ def main():
             env[r][k] = v
     local = a.layout != "two-node"
     gpu = (
-        {"learner": "0", "rollout": "1"}
+        {"learner": "0,1", "rollout": "1,0"}
         if a.layout == "same-node"
         else {"learner": None, "rollout": None}
     )

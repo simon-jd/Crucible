@@ -294,7 +294,7 @@ def merge(learner_dir, rollout_dir, out_dir, before_from=None):
         "rollout_load_s": _range([x["load_s"] for x in receives]),
         "rollout_barrier_s": _range([x["barrier_s"] for x in receives]),
         "sync_bytes_per_version": sorted({x["bytes"] for x in receives}),
-        "learner_push_GBps": _range([e["sync_bytes"] / e["sync_s"] for e in lsteps]),
+        "learner_push_GBps": _range([e["sync_bytes"] / e["sync_s"] / 1e9 for e in lsteps]),
         "staleness_histogram": lsum["staleness_histogram"],
         "dropped_stale": sum(e["dropped_stale"] for e in lsteps),
         "versions_loaded": len(receives),
