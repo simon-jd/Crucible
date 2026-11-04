@@ -1,0 +1,6 @@
+'artifact_repositories' is in public preview since 1.50.0.
+09:02:02Z submitted CRUCIBLE_LAB.PROBE.CRUCIBLE_E0_FOLLOW_2NODE_15ZSL8JK1R54B on SYSTEM_COMPUTE_POOL_GPU x2
+Compute pool busy (1/2 nodes in use, 2 nodes required). Job execution may be delayed.
+09:15:22Z status DONE after 808 s
+09:15:26Z wrote .cache/snowflake/follow-2node/report.json (credits estimate 0.765)
+exit 0

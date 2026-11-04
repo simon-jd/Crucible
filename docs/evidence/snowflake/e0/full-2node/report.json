@@ -1,0 +1,4065 @@
+{
+  "started_at": "2026-11-04T08:30:42+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e0_network.py",
+  "include": [],
+  "pip": [
+    "torch==2.8.0",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--mode",
+    "two-node"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E0_FULL_2NODE_CLHZO2XUK0HC",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "mode": "two-node",
+      "quick": false,
+      "ray_nodes": [
+        {
+          "ip": "10.244.2.11",
+          "alive": true,
+          "gpus": 1.0
+        },
+        {
+          "ip": "10.244.1.203",
+          "alive": true,
+          "gpus": 1.0
+        }
+      ],
+      "workers": [
+        {
+          "ip": "10.244.2.11",
+          "gpu": "NVIDIA A10-24Q",
+          "nccl": "2.27.3",
+          "cuda": "12.8",
+          "versions": {
+            "torch": "2.8.0",
+            "numpy": "2.2.6",
+            "ray": "2.55.1",
+            "nvidia-nccl-cu12": "2.27.3"
+          },
+          "host": "job-1",
+          "cpu_count": 36,
+          "affinity": 36,
+          "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')",
+          "mtu_eth0": "1500",
+          "speed_eth0": "10000",
+          "port_range": "32768\t59999",
+          "tcp_cc": "cubic",
+          "tcp_rmem": "4096\t131072\t6291456",
+          "tcp_wmem": "4096\t16384\t4194304",
+          "rmem_max": "FileNotFoundError(2, 'No such file or directory')",
+          "wmem_max": "FileNotFoundError(2, 'No such file or directory')",
+          "gpus": "0, NVIDIA A10-24Q, 24512 MiB, 570.211.01"
+        },
+        {
+          "ip": "10.244.1.203",
+          "gpu": "NVIDIA A10-24Q",
+          "nccl": "2.27.3",
+          "cuda": "12.8",
+          "versions": {
+            "torch": "2.8.0",
+            "numpy": "2.2.6",
+            "ray": "2.55.1",
+            "nvidia-nccl-cu12": "2.27.3"
+          },
+          "host": "job-0",
+          "cpu_count": 36,
+          "affinity": 36,
+          "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')",
+          "mtu_eth0": "1500",
+          "speed_eth0": "10000",
+          "port_range": "32768\t59999",
+          "tcp_cc": "cubic",
+          "tcp_rmem": "4096\t131072\t6291456",
+          "tcp_wmem": "4096\t16384\t4194304",
+          "rmem_max": "FileNotFoundError(2, 'No such file or directory')",
+          "wmem_max": "FileNotFoundError(2, 'No such file or directory')",
+          "gpus": "0, NVIDIA A10-24Q, 24512 MiB, 570.211.01"
+        }
+      ],
+      "distinct_nodes": true,
+      "tcp_loopback_node_a": [
+        {
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 0.209,
+          "GBps": 10.268,
+          "complete": true,
+          "per_stream_GBps": [
+            10.268
+          ]
+        },
+        {
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 0.081,
+          "GBps": 26.543,
+          "complete": true,
+          "per_stream_GBps": [
+            3.615,
+            3.472,
+            3.578,
+            3.652,
+            3.89,
+            3.668,
+            3.834,
+            3.985
+          ]
+        }
+      ],
+      "tcp": [
+        {
+          "test": "a_to_b",
+          "rep": 0,
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 10.847,
+          "GBps": 0.198,
+          "complete": true,
+          "per_stream_GBps": [
+            0.198
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 0,
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 11.326,
+          "GBps": 0.19,
+          "complete": true,
+          "per_stream_GBps": [
+            0.19
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "a_to_b",
+          "rep": 0,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 3.863,
+          "GBps": 0.556,
+          "complete": true,
+          "per_stream_GBps": [
+            0.097,
+            0.093,
+            0.084,
+            0.101,
+            0.099,
+            0.095,
+            0.07,
+            0.093
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 0,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 3.461,
+          "GBps": 0.621,
+          "complete": true,
+          "per_stream_GBps": [
+            0.098,
+            0.098,
+            0.097,
+            0.078,
+            0.078,
+            0.097,
+            0.091,
+            0.092
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "a_to_b",
+          "rep": 0,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 2.804,
+          "GBps": 0.766,
+          "complete": true,
+          "per_stream_GBps": [
+            0.028,
+            0.064,
+            0.037,
+            0.073,
+            0.045,
+            0.074,
+            0.025,
+            0.025,
+            0.069,
+            0.029,
+            0.073,
+            0.033,
+            0.073,
+            0.038,
+            0.061,
+            0.074,
+            0.044,
+            0.036,
+            0.033,
+            0.05,
+            0.051,
+            0.047,
+            0.073,
+            0.048,
+            0.054,
+            0.04,
+            0.048,
+            0.04,
+            0.026,
+            0.055,
+            0.035,
+            0.024
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 0,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 2.236,
+          "GBps": 0.96,
+          "complete": true,
+          "per_stream_GBps": [
+            0.032,
+            0.047,
+            0.046,
+            0.042,
+            0.042,
+            0.038,
+            0.055,
+            0.076,
+            0.076,
+            0.061,
+            0.056,
+            0.03,
+            0.055,
+            0.052,
+            0.04,
+            0.033,
+            0.048,
+            0.057,
+            0.055,
+            0.04,
+            0.041,
+            0.044,
+            0.058,
+            0.039,
+            0.05,
+            0.044,
+            0.078,
+            0.031,
+            0.049,
+            0.049,
+            0.047,
+            0.054
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "bidir_into_a",
+          "rep": 0,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 5.133,
+          "GBps": 0.418,
+          "complete": true,
+          "per_stream_GBps": [
+            0.093,
+            0.065,
+            0.052,
+            0.06,
+            0.068,
+            0.061,
+            0.092,
+            0.069
+          ]
+        },
+        {
+          "test": "bidir_into_b",
+          "rep": 0,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 5.226,
+          "GBps": 0.411,
+          "complete": true,
+          "per_stream_GBps": [
+            0.076,
+            0.051,
+            0.095,
+            0.057,
+            0.065,
+            0.059,
+            0.091,
+            0.057
+          ]
+        },
+        {
+          "test": "bidir_into_a",
+          "rep": 0,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 2.795,
+          "GBps": 0.768,
+          "complete": true,
+          "per_stream_GBps": [
+            0.024,
+            0.036,
+            0.043,
+            0.025,
+            0.026,
+            0.045,
+            0.028,
+            0.037,
+            0.068,
+            0.03,
+            0.032,
+            0.043,
+            0.025,
+            0.044,
+            0.029,
+            0.029,
+            0.037,
+            0.025,
+            0.036,
+            0.049,
+            0.028,
+            0.045,
+            0.028,
+            0.033,
+            0.056,
+            0.031,
+            0.034,
+            0.027,
+            0.037,
+            0.031,
+            0.032,
+            0.044
+          ]
+        },
+        {
+          "test": "bidir_into_b",
+          "rep": 0,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 3.007,
+          "GBps": 0.714,
+          "complete": true,
+          "per_stream_GBps": [
+            0.049,
+            0.033,
+            0.033,
+            0.033,
+            0.023,
+            0.039,
+            0.031,
+            0.041,
+            0.038,
+            0.046,
+            0.038,
+            0.04,
+            0.029,
+            0.031,
+            0.027,
+            0.041,
+            0.032,
+            0.033,
+            0.041,
+            0.034,
+            0.047,
+            0.035,
+            0.029,
+            0.038,
+            0.06,
+            0.039,
+            0.033,
+            0.025,
+            0.032,
+            0.037,
+            0.045,
+            0.023
+          ]
+        },
+        {
+          "test": "a_to_b",
+          "rep": 1,
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 11.552,
+          "GBps": 0.186,
+          "complete": true,
+          "per_stream_GBps": [
+            0.186
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 1,
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 11.247,
+          "GBps": 0.191,
+          "complete": true,
+          "per_stream_GBps": [
+            0.191
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "a_to_b",
+          "rep": 1,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 3.608,
+          "GBps": 0.595,
+          "complete": true,
+          "per_stream_GBps": [
+            0.096,
+            0.08,
+            0.075,
+            0.085,
+            0.103,
+            0.078,
+            0.1,
+            0.099
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 1,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 3.417,
+          "GBps": 0.629,
+          "complete": true,
+          "per_stream_GBps": [
+            0.094,
+            0.084,
+            0.096,
+            0.098,
+            0.08,
+            0.079,
+            0.082,
+            0.1
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "a_to_b",
+          "rep": 1,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 2.106,
+          "GBps": 1.02,
+          "complete": true,
+          "per_stream_GBps": [
+            0.042,
+            0.042,
+            0.05,
+            0.048,
+            0.064,
+            0.037,
+            0.054,
+            0.04,
+            0.048,
+            0.043,
+            0.032,
+            0.04,
+            0.051,
+            0.046,
+            0.049,
+            0.032,
+            0.049,
+            0.048,
+            0.034,
+            0.043,
+            0.048,
+            0.037,
+            0.065,
+            0.049,
+            0.04,
+            0.074,
+            0.046,
+            0.055,
+            0.064,
+            0.073,
+            0.045,
+            0.05
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 1,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 1.902,
+          "GBps": 1.129,
+          "complete": true,
+          "per_stream_GBps": [
+            0.048,
+            0.05,
+            0.046,
+            0.038,
+            0.06,
+            0.044,
+            0.037,
+            0.041,
+            0.058,
+            0.061,
+            0.047,
+            0.06,
+            0.039,
+            0.036,
+            0.056,
+            0.072,
+            0.043,
+            0.056,
+            0.042,
+            0.043,
+            0.05,
+            0.055,
+            0.045,
+            0.045,
+            0.044,
+            0.047,
+            0.064,
+            0.038,
+            0.05,
+            0.04,
+            0.039,
+            0.046
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "bidir_into_a",
+          "rep": 1,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 4.863,
+          "GBps": 0.442,
+          "complete": true,
+          "per_stream_GBps": [
+            0.081,
+            0.09,
+            0.09,
+            0.055,
+            0.08,
+            0.061,
+            0.068,
+            0.056
+          ]
+        },
+        {
+          "test": "bidir_into_b",
+          "rep": 1,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 5.125,
+          "GBps": 0.419,
+          "complete": true,
+          "per_stream_GBps": [
+            0.052,
+            0.068,
+            0.066,
+            0.053,
+            0.091,
+            0.063,
+            0.062,
+            0.059
+          ]
+        },
+        {
+          "test": "bidir_into_a",
+          "rep": 1,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 3.259,
+          "GBps": 0.659,
+          "complete": true,
+          "per_stream_GBps": [
+            0.037,
+            0.031,
+            0.024,
+            0.032,
+            0.05,
+            0.023,
+            0.028,
+            0.054,
+            0.026,
+            0.031,
+            0.036,
+            0.027,
+            0.027,
+            0.032,
+            0.023,
+            0.034,
+            0.039,
+            0.033,
+            0.021,
+            0.027,
+            0.028,
+            0.022,
+            0.023,
+            0.042,
+            0.025,
+            0.03,
+            0.028,
+            0.026,
+            0.031,
+            0.026,
+            0.032,
+            0.021
+          ]
+        },
+        {
+          "test": "bidir_into_b",
+          "rep": 1,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 3.168,
+          "GBps": 0.678,
+          "complete": true,
+          "per_stream_GBps": [
+            0.026,
+            0.046,
+            0.031,
+            0.027,
+            0.05,
+            0.021,
+            0.04,
+            0.031,
+            0.069,
+            0.025,
+            0.053,
+            0.044,
+            0.031,
+            0.04,
+            0.029,
+            0.023,
+            0.023,
+            0.036,
+            0.039,
+            0.032,
+            0.028,
+            0.026,
+            0.04,
+            0.023,
+            0.041,
+            0.032,
+            0.032,
+            0.048,
+            0.024,
+            0.026,
+            0.023,
+            0.025
+          ]
+        },
+        {
+          "test": "a_to_b",
+          "rep": 2,
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 11.004,
+          "GBps": 0.195,
+          "complete": true,
+          "per_stream_GBps": [
+            0.195
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 2,
+          "streams": 1,
+          "bytes": 2147483648,
+          "seconds": 11.012,
+          "GBps": 0.195,
+          "complete": true,
+          "per_stream_GBps": [
+            0.195
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "a_to_b",
+          "rep": 2,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 3.535,
+          "GBps": 0.608,
+          "complete": true,
+          "per_stream_GBps": [
+            0.106,
+            0.082,
+            0.091,
+            0.103,
+            0.084,
+            0.086,
+            0.094,
+            0.076
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 2,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 4.887,
+          "GBps": 0.439,
+          "complete": true,
+          "per_stream_GBps": [
+            0.105,
+            0.056,
+            0.108,
+            0.059,
+            0.06,
+            0.064,
+            0.114,
+            0.055
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "a_to_b",
+          "rep": 2,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 2.168,
+          "GBps": 0.991,
+          "complete": true,
+          "per_stream_GBps": [
+            0.046,
+            0.057,
+            0.038,
+            0.061,
+            0.052,
+            0.063,
+            0.064,
+            0.047,
+            0.058,
+            0.049,
+            0.056,
+            0.033,
+            0.033,
+            0.061,
+            0.083,
+            0.055,
+            0.046,
+            0.048,
+            0.039,
+            0.056,
+            0.036,
+            0.034,
+            0.043,
+            0.059,
+            0.079,
+            0.037,
+            0.033,
+            0.032,
+            0.058,
+            0.039,
+            0.045,
+            0.041
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "b_to_a",
+          "rep": 2,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 2.038,
+          "GBps": 1.054,
+          "complete": true,
+          "per_stream_GBps": [
+            0.039,
+            0.065,
+            0.039,
+            0.05,
+            0.036,
+            0.051,
+            0.041,
+            0.056,
+            0.068,
+            0.043,
+            0.052,
+            0.061,
+            0.042,
+            0.044,
+            0.033,
+            0.04,
+            0.068,
+            0.044,
+            0.066,
+            0.044,
+            0.043,
+            0.035,
+            0.048,
+            0.053,
+            0.046,
+            0.038,
+            0.039,
+            0.038,
+            0.048,
+            0.069,
+            0.063,
+            0.041
+          ],
+          "send_errors": []
+        },
+        {
+          "test": "bidir_into_a",
+          "rep": 2,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 5.247,
+          "GBps": 0.409,
+          "complete": true,
+          "per_stream_GBps": [
+            0.078,
+            0.094,
+            0.066,
+            0.051,
+            0.061,
+            0.059,
+            0.055,
+            0.074
+          ]
+        },
+        {
+          "test": "bidir_into_b",
+          "rep": 2,
+          "streams": 8,
+          "bytes": 2147483648,
+          "seconds": 5.42,
+          "GBps": 0.396,
+          "complete": true,
+          "per_stream_GBps": [
+            0.088,
+            0.077,
+            0.057,
+            0.066,
+            0.064,
+            0.083,
+            0.05,
+            0.064
+          ]
+        },
+        {
+          "test": "bidir_into_a",
+          "rep": 2,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 3.349,
+          "GBps": 0.641,
+          "complete": true,
+          "per_stream_GBps": [
+            0.047,
+            0.031,
+            0.039,
+            0.036,
+            0.022,
+            0.042,
+            0.05,
+            0.026,
+            0.025,
+            0.033,
+            0.033,
+            0.027,
+            0.022,
+            0.023,
+            0.036,
+            0.022,
+            0.043,
+            0.048,
+            0.023,
+            0.02,
+            0.036,
+            0.029,
+            0.025,
+            0.028,
+            0.035,
+            0.023,
+            0.051,
+            0.06,
+            0.022,
+            0.022,
+            0.034,
+            0.033
+          ]
+        },
+        {
+          "test": "bidir_into_b",
+          "rep": 2,
+          "streams": 32,
+          "bytes": 2147483648,
+          "seconds": 3.285,
+          "GBps": 0.654,
+          "complete": true,
+          "per_stream_GBps": [
+            0.039,
+            0.025,
+            0.023,
+            0.05,
+            0.036,
+            0.046,
+            0.032,
+            0.026,
+            0.042,
+            0.032,
+            0.034,
+            0.032,
+            0.031,
+            0.024,
+            0.034,
+            0.028,
+            0.034,
+            0.036,
+            0.032,
+            0.042,
+            0.021,
+            0.039,
+            0.042,
+            0.024,
+            0.021,
+            0.021,
+            0.035,
+            0.036,
+            0.039,
+            0.026,
+            0.058,
+            0.025
+          ]
+        }
+      ],
+      "nccl_runs": [
+        {
+          "variant": "default",
+          "pass": 0,
+          "env": {},
+          "port": 12901,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.203,
+                  "GBps": 0.169
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 85.145,
+                  "GBps": 0.197
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1388.972,
+                  "GBps": 0.193
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 5673.674,
+                  "GBps": 0.189
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 3.686,
+                  "GBps": 0.285
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 58.138,
+                  "GBps": 0.289
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 942.719,
+                  "GBps": 0.285
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4037.019,
+                  "GBps": 0.266
+                }
+              ],
+              "check_ok": true,
+              "seconds": 58.8,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f244526da90 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x4fa06e20a93d6bd3 - Init START",
+                "comm 0x7f244526da90 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f244526da90 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x4fa06e20a93d6bd3 - Init COMPLETE",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f244526da90 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.202,
+                  "GBps": 0.169
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 85.118,
+                  "GBps": 0.197
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1388.537,
+                  "GBps": 0.193
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 5672.704,
+                  "GBps": 0.189
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 4.433,
+                  "GBps": 0.237
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 60.233,
+                  "GBps": 0.279
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 951.318,
+                  "GBps": 0.282
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4044.902,
+                  "GBps": 0.265
+                }
+              ],
+              "check_ok": true,
+              "seconds": 57.4,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7faf97696a20 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x4fa06e20a93d6bd3 - Init START",
+                "comm 0x7faf97696a20 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7faf97696a20 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x4fa06e20a93d6bd3 - Init COMPLETE",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7faf97696a20 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "1x1",
+          "pass": 0,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "1",
+            "NCCL_NSOCKS_PERTHREAD": "1"
+          },
+          "port": 12902,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 9.148,
+                  "GBps": 0.115
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 101.291,
+                  "GBps": 0.166
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1550.44,
+                  "GBps": 0.173
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4773.144,
+                  "GBps": 0.225
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 2.679,
+                  "GBps": 0.391
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 51.571,
+                  "GBps": 0.325
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 844.739,
+                  "GBps": 0.318
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3377.062,
+                  "GBps": 0.318
+                }
+              ],
+              "check_ok": true,
+              "seconds": 54.2,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f413126d8d0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xdb3c205c881dcdbe - Init START",
+                "comm 0x7f413126d8d0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f413126d8d0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xdb3c205c881dcdbe - Init COMPLETE",
+                "NET/Socket: Using 1 threads and 1 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f413126d8d0 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 9.131,
+                  "GBps": 0.115
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 101.36,
+                  "GBps": 0.166
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1548.933,
+                  "GBps": 0.173
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4772.856,
+                  "GBps": 0.225
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 3.531,
+                  "GBps": 0.297
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 53.982,
+                  "GBps": 0.311
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 849.253,
+                  "GBps": 0.316
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3389.209,
+                  "GBps": 0.317
+                }
+              ],
+              "check_ok": true,
+              "seconds": 52.8,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7ee40b676870 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xdb3c205c881dcdbe - Init START",
+                "comm 0x7ee40b676870 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7ee40b676870 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xdb3c205c881dcdbe - Init COMPLETE",
+                "NET/Socket: Using 1 threads and 1 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7ee40b676870 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "2x2",
+          "pass": 0,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "2",
+            "NCCL_NSOCKS_PERTHREAD": "2"
+          },
+          "port": 12903,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.479,
+                  "GBps": 0.162
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 50.213,
+                  "GBps": 0.334
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 981.123,
+                  "GBps": 0.274
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3826.689,
+                  "GBps": 0.281
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.288,
+                  "GBps": 0.814
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.333,
+                  "GBps": 0.637
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 441.28,
+                  "GBps": 0.608
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1875.368,
+                  "GBps": 0.573
+                }
+              ],
+              "check_ok": true,
+              "seconds": 35.1,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7ee02d26dc10 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x117274ea259d9fce - Init START",
+                "comm 0x7ee02d26dc10 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7ee02d26dc10 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x117274ea259d9fce - Init COMPLETE",
+                "NET/Socket: Using 2 threads and 2 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7ee02d26dc10 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.441,
+                  "GBps": 0.163
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 50.202,
+                  "GBps": 0.334
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 981.109,
+                  "GBps": 0.274
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3826.2,
+                  "GBps": 0.281
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 2.069,
+                  "GBps": 0.507
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 28.13,
+                  "GBps": 0.596
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 446.533,
+                  "GBps": 0.601
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1884.305,
+                  "GBps": 0.57
+                }
+              ],
+              "check_ok": true,
+              "seconds": 33.8,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7ef997696320 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x117274ea259d9fce - Init START",
+                "comm 0x7ef997696320 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7ef997696320 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x117274ea259d9fce - Init COMPLETE",
+                "NET/Socket: Using 2 threads and 2 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7ef997696320 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "4x4",
+          "pass": 0,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "4",
+            "NCCL_NSOCKS_PERTHREAD": "4"
+          },
+          "port": 12904,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.136,
+                  "GBps": 0.171
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 37.118,
+                  "GBps": 0.452
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 627.965,
+                  "GBps": 0.427
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 2721.467,
+                  "GBps": 0.395
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.361,
+                  "GBps": 2.903
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 14.701,
+                  "GBps": 1.141
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 271.958,
+                  "GBps": 0.987
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1324.76,
+                  "GBps": 0.811
+                }
+              ],
+              "check_ok": true,
+              "seconds": 24.5,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f7ddd26db50 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x7d58a5e8bfc6a121 - Init START",
+                "comm 0x7f7ddd26db50 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f7ddd26db50 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x7d58a5e8bfc6a121 - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f7ddd26db50 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.296,
+                  "GBps": 0.167
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 37.15,
+                  "GBps": 0.452
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 628.041,
+                  "GBps": 0.427
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 2722.525,
+                  "GBps": 0.394
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.601,
+                  "GBps": 0.655
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 20.139,
+                  "GBps": 0.833
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 277.344,
+                  "GBps": 0.968
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1328.91,
+                  "GBps": 0.808
+                }
+              ],
+              "check_ok": true,
+              "seconds": 23.2,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f5eb36768c0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x7d58a5e8bfc6a121 - Init START",
+                "comm 0x7f5eb36768c0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f5eb36768c0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x7d58a5e8bfc6a121 - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f5eb36768c0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "8x8",
+          "pass": 0,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "8",
+            "NCCL_NSOCKS_PERTHREAD": "8"
+          },
+          "port": 12905,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.524,
+                  "GBps": 0.19
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 24.515,
+                  "GBps": 0.684
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 350.47,
+                  "GBps": 0.766
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1416.565,
+                  "GBps": 0.758
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.526,
+                  "GBps": 1.993
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 8.74,
+                  "GBps": 1.92
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 162.917,
+                  "GBps": 1.648
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 711.676,
+                  "GBps": 1.509
+                }
+              ],
+              "check_ok": true,
+              "seconds": 14.5,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f99ed26dbf0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xacbd6480de078f89 - Init START",
+                "comm 0x7f99ed26dbf0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f99ed26dbf0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xacbd6480de078f89 - Init COMPLETE",
+                "NET/Socket: Using 8 threads and 8 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f99ed26dbf0 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.346,
+                  "GBps": 0.196
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 24.696,
+                  "GBps": 0.679
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 351.085,
+                  "GBps": 0.765
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1415.645,
+                  "GBps": 0.758
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.978,
+                  "GBps": 1.072
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 10.995,
+                  "GBps": 1.526
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 167.13,
+                  "GBps": 1.606
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 723.771,
+                  "GBps": 1.484
+                }
+              ],
+              "check_ok": true,
+              "seconds": 13.2,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f0fe36963d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xacbd6480de078f89 - Init START",
+                "comm 0x7f0fe36963d0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f0fe36963d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xacbd6480de078f89 - Init COMPLETE",
+                "NET/Socket: Using 8 threads and 8 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f0fe36963d0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "4x4_buff16m",
+          "pass": 0,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "4",
+            "NCCL_NSOCKS_PERTHREAD": "4",
+            "NCCL_BUFFSIZE": "16777216"
+          },
+          "port": 12906,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.431,
+                  "GBps": 0.163
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.796,
+                  "GBps": 0.626
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 449.786,
+                  "GBps": 0.597
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1816.269,
+                  "GBps": 0.591
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.717,
+                  "GBps": 1.462
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 16.727,
+                  "GBps": 1.003
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 293.568,
+                  "GBps": 0.914
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1188.169,
+                  "GBps": 0.904
+                }
+              ],
+              "check_ok": true,
+              "seconds": 19.5,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f438126da80 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1ee682400f32664d - Init START",
+                "comm 0x7f438126da80 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f438126da80 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1ee682400f32664d - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f438126da80 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.411,
+                  "GBps": 0.164
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.81,
+                  "GBps": 0.626
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 449.863,
+                  "GBps": 0.597
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1815.392,
+                  "GBps": 0.591
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 2.005,
+                  "GBps": 0.523
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 20.956,
+                  "GBps": 0.801
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 304.62,
+                  "GBps": 0.881
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1202.035,
+                  "GBps": 0.893
+                }
+              ],
+              "check_ok": true,
+              "seconds": 18.2,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fd537676890 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1ee682400f32664d - Init START",
+                "comm 0x7fd537676890 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fd537676890 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1ee682400f32664d - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7fd537676890 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "1x1",
+          "pass": 1,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "1",
+            "NCCL_NSOCKS_PERTHREAD": "1"
+          },
+          "port": 12907,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 7.46,
+                  "GBps": 0.141
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 95.182,
+                  "GBps": 0.176
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1583.815,
+                  "GBps": 0.169
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 5423.688,
+                  "GBps": 0.198
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 2.557,
+                  "GBps": 0.41
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 53.272,
+                  "GBps": 0.315
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 869.499,
+                  "GBps": 0.309
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3431.768,
+                  "GBps": 0.313
+                }
+              ],
+              "check_ok": true,
+              "seconds": 56.2,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f349d26db50 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xe98e471b0a517c63 - Init START",
+                "comm 0x7f349d26db50 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f349d26db50 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xe98e471b0a517c63 - Init COMPLETE",
+                "NET/Socket: Using 1 threads and 1 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f349d26db50 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 7.449,
+                  "GBps": 0.141
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 95.106,
+                  "GBps": 0.176
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1583.8,
+                  "GBps": 0.169
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 5423.797,
+                  "GBps": 0.198
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 3.375,
+                  "GBps": 0.311
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 54.688,
+                  "GBps": 0.307
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 873.735,
+                  "GBps": 0.307
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3438.443,
+                  "GBps": 0.312
+                }
+              ],
+              "check_ok": true,
+              "seconds": 54.8,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f1cc7676870 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xe98e471b0a517c63 - Init START",
+                "comm 0x7f1cc7676870 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f1cc7676870 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xe98e471b0a517c63 - Init COMPLETE",
+                "NET/Socket: Using 1 threads and 1 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f1cc7676870 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "2x2",
+          "pass": 1,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "2",
+            "NCCL_NSOCKS_PERTHREAD": "2"
+          },
+          "port": 12908,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 7.071,
+                  "GBps": 0.148
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 52.416,
+                  "GBps": 0.32
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 980.108,
+                  "GBps": 0.274
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4312.869,
+                  "GBps": 0.249
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.291,
+                  "GBps": 0.812
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 24.905,
+                  "GBps": 0.674
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 420.967,
+                  "GBps": 0.638
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1769.864,
+                  "GBps": 0.607
+                }
+              ],
+              "check_ok": true,
+              "seconds": 36.6,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f50f526d940 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xd5edc4fe5f68241d - Init START",
+                "comm 0x7f50f526d940 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f50f526d940 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xd5edc4fe5f68241d - Init COMPLETE",
+                "NET/Socket: Using 2 threads and 2 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f50f526d940 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 7.054,
+                  "GBps": 0.149
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 52.453,
+                  "GBps": 0.32
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 980.158,
+                  "GBps": 0.274
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4317.301,
+                  "GBps": 0.249
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.901,
+                  "GBps": 0.552
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.563,
+                  "GBps": 0.632
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 428.005,
+                  "GBps": 0.627
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1778.169,
+                  "GBps": 0.604
+                }
+              ],
+              "check_ok": true,
+              "seconds": 35.3,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fba73676bf0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xd5edc4fe5f68241d - Init START",
+                "comm 0x7fba73676bf0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fba73676bf0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xd5edc4fe5f68241d - Init COMPLETE",
+                "NET/Socket: Using 2 threads and 2 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7fba73676bf0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "4x4",
+          "pass": 1,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "4",
+            "NCCL_NSOCKS_PERTHREAD": "4"
+          },
+          "port": 12909,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.982,
+                  "GBps": 0.175
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 36.556,
+                  "GBps": 0.459
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 627.705,
+                  "GBps": 0.428
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 2767.8,
+                  "GBps": 0.388
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.773,
+                  "GBps": 1.356
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 14.937,
+                  "GBps": 1.123
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 297.359,
+                  "GBps": 0.903
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1201.877,
+                  "GBps": 0.893
+                }
+              ],
+              "check_ok": true,
+              "seconds": 25.1,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f06a526d800 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x96f03984aa09caeb - Init START",
+                "comm 0x7f06a526d800 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f06a526d800 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x96f03984aa09caeb - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f06a526d800 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.01,
+                  "GBps": 0.174
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 36.563,
+                  "GBps": 0.459
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 627.612,
+                  "GBps": 0.428
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 2768.348,
+                  "GBps": 0.388
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.496,
+                  "GBps": 0.701
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 17.52,
+                  "GBps": 0.958
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 310.587,
+                  "GBps": 0.864
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1206.196,
+                  "GBps": 0.89
+                }
+              ],
+              "check_ok": true,
+              "seconds": 23.7,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f8b5f6964d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x96f03984aa09caeb - Init START",
+                "comm 0x7f8b5f6964d0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f8b5f6964d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x96f03984aa09caeb - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f8b5f6964d0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "8x8",
+          "pass": 1,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "8",
+            "NCCL_NSOCKS_PERTHREAD": "8"
+          },
+          "port": 12910,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.393,
+                  "GBps": 0.194
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 24.611,
+                  "GBps": 0.682
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 359.386,
+                  "GBps": 0.747
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1415.425,
+                  "GBps": 0.759
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.423,
+                  "GBps": 2.479
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 32.882,
+                  "GBps": 0.51
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 153.624,
+                  "GBps": 1.747
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 678.151,
+                  "GBps": 1.583
+                }
+              ],
+              "check_ok": true,
+              "seconds": 16.0,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fadad26dd10 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xba21fe357a2a0cfd - Init START",
+                "comm 0x7fadad26dd10 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fadad26dd10 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xba21fe357a2a0cfd - Init COMPLETE",
+                "NET/Socket: Using 8 threads and 8 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7fadad26dd10 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.459,
+                  "GBps": 0.192
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 24.782,
+                  "GBps": 0.677
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 359.998,
+                  "GBps": 0.746
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1416.025,
+                  "GBps": 0.758
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.373,
+                  "GBps": 0.763
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 68.402,
+                  "GBps": 0.245
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 175.648,
+                  "GBps": 1.528
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 689.103,
+                  "GBps": 1.558
+                }
+              ],
+              "check_ok": true,
+              "seconds": 14.7,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fb2e36968a0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xba21fe357a2a0cfd - Init START",
+                "comm 0x7fb2e36968a0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fb2e36968a0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xba21fe357a2a0cfd - Init COMPLETE",
+                "NET/Socket: Using 8 threads and 8 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7fb2e36968a0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "4x4_buff16m",
+          "pass": 1,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "4",
+            "NCCL_NSOCKS_PERTHREAD": "4",
+            "NCCL_BUFFSIZE": "16777216"
+          },
+          "port": 12911,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.069,
+                  "GBps": 0.173
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.516,
+                  "GBps": 0.633
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 401.821,
+                  "GBps": 0.668
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1790.44,
+                  "GBps": 0.6
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.902,
+                  "GBps": 1.162
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 14.265,
+                  "GBps": 1.176
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 246.41,
+                  "GBps": 1.089
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1138.777,
+                  "GBps": 0.943
+                }
+              ],
+              "check_ok": true,
+              "seconds": 19.0,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fb7e526d980 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa7f5eb82bc9ac5c5 - Init START",
+                "comm 0x7fb7e526d980 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fb7e526d980 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa7f5eb82bc9ac5c5 - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7fb7e526d980 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.087,
+                  "GBps": 0.172
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.506,
+                  "GBps": 0.633
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 402.567,
+                  "GBps": 0.667
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1790.881,
+                  "GBps": 0.6
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.909,
+                  "GBps": 0.549
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 17.995,
+                  "GBps": 0.932
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 259.541,
+                  "GBps": 1.034
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1147.801,
+                  "GBps": 0.935
+                }
+              ],
+              "check_ok": true,
+              "seconds": 17.7,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fcd8b696a00 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa7f5eb82bc9ac5c5 - Init START",
+                "comm 0x7fcd8b696a00 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fcd8b696a00 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa7f5eb82bc9ac5c5 - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7fcd8b696a00 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "1x1",
+          "pass": 2,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "1",
+            "NCCL_NSOCKS_PERTHREAD": "1"
+          },
+          "port": 12912,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.682,
+                  "GBps": 0.185
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 75.622,
+                  "GBps": 0.222
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1324.156,
+                  "GBps": 0.203
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4756.978,
+                  "GBps": 0.226
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 2.492,
+                  "GBps": 0.421
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 53.011,
+                  "GBps": 0.316
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 858.433,
+                  "GBps": 0.313
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3443.581,
+                  "GBps": 0.312
+                }
+              ],
+              "check_ok": true,
+              "seconds": 51.1,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f4fa526d9c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x64ec63620a5c705c - Init START",
+                "comm 0x7f4fa526d9c0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f4fa526d9c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x64ec63620a5c705c - Init COMPLETE",
+                "NET/Socket: Using 1 threads and 1 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f4fa526d9c0 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.676,
+                  "GBps": 0.185
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 75.487,
+                  "GBps": 0.222
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 1323.778,
+                  "GBps": 0.203
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4756.387,
+                  "GBps": 0.226
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 3.456,
+                  "GBps": 0.303
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 54.259,
+                  "GBps": 0.309
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 865.483,
+                  "GBps": 0.31
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 3452.331,
+                  "GBps": 0.311
+                }
+              ],
+              "check_ok": true,
+              "seconds": 49.8,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f97d7696420 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x64ec63620a5c705c - Init START",
+                "comm 0x7f97d7696420 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f97d7696420 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x64ec63620a5c705c - Init COMPLETE",
+                "NET/Socket: Using 1 threads and 1 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f97d7696420 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "2x2",
+          "pass": 2,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "2",
+            "NCCL_NSOCKS_PERTHREAD": "2"
+          },
+          "port": 12913,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.99,
+                  "GBps": 0.175
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 50.364,
+                  "GBps": 0.333
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 944.723,
+                  "GBps": 0.284
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4109.065,
+                  "GBps": 0.261
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.379,
+                  "GBps": 0.761
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 29.62,
+                  "GBps": 0.566
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 434.184,
+                  "GBps": 0.618
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1881.413,
+                  "GBps": 0.571
+                }
+              ],
+              "check_ok": true,
+              "seconds": 36.1,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f4f5926d890 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1a1fe7f7be831e0d - Init START",
+                "comm 0x7f4f5926d890 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f4f5926d890 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1a1fe7f7be831e0d - Init COMPLETE",
+                "NET/Socket: Using 2 threads and 2 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f4f5926d890 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.005,
+                  "GBps": 0.175
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 50.4,
+                  "GBps": 0.333
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 944.754,
+                  "GBps": 0.284
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 4112.637,
+                  "GBps": 0.261
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.973,
+                  "GBps": 0.531
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 31.713,
+                  "GBps": 0.529
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 442.014,
+                  "GBps": 0.607
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1888.525,
+                  "GBps": 0.569
+                }
+              ],
+              "check_ok": true,
+              "seconds": 34.8,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f1ac76768e0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1a1fe7f7be831e0d - Init START",
+                "comm 0x7f1ac76768e0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f1ac76768e0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x1a1fe7f7be831e0d - Init COMPLETE",
+                "NET/Socket: Using 2 threads and 2 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f1ac76768e0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "4x4",
+          "pass": 2,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "4",
+            "NCCL_NSOCKS_PERTHREAD": "4"
+          },
+          "port": 12914,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.14,
+                  "GBps": 0.171
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 34.559,
+                  "GBps": 0.485
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 606.986,
+                  "GBps": 0.442
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 2654.825,
+                  "GBps": 0.404
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.745,
+                  "GBps": 1.407
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 16.319,
+                  "GBps": 1.028
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 302.235,
+                  "GBps": 0.888
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1296.369,
+                  "GBps": 0.828
+                }
+              ],
+              "check_ok": true,
+              "seconds": 24.6,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f8d6526dc20 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xcf2dbd4fd301e331 - Init START",
+                "comm 0x7f8d6526dc20 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f8d6526dc20 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xcf2dbd4fd301e331 - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f8d6526dc20 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.154,
+                  "GBps": 0.17
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 34.815,
+                  "GBps": 0.482
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 608.646,
+                  "GBps": 0.441
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 2655.275,
+                  "GBps": 0.404
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.706,
+                  "GBps": 0.615
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 19.904,
+                  "GBps": 0.843
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 312.02,
+                  "GBps": 0.86
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1300.35,
+                  "GBps": 0.826
+                }
+              ],
+              "check_ok": true,
+              "seconds": 23.3,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7fb6df6962d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xcf2dbd4fd301e331 - Init START",
+                "comm 0x7fb6df6962d0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7fb6df6962d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xcf2dbd4fd301e331 - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7fb6df6962d0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "8x8",
+          "pass": 2,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "8",
+            "NCCL_NSOCKS_PERTHREAD": "8"
+          },
+          "port": 12915,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.389,
+                  "GBps": 0.195
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 25.498,
+                  "GBps": 0.658
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 350.979,
+                  "GBps": 0.765
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1375.664,
+                  "GBps": 0.781
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.514,
+                  "GBps": 2.041
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 8.87,
+                  "GBps": 1.891
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 162.914,
+                  "GBps": 1.648
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 708.844,
+                  "GBps": 1.515
+                }
+              ],
+              "check_ok": true,
+              "seconds": 14.6,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f6bc926dac0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xf0b4833be9ec9a69 - Init START",
+                "comm 0x7f6bc926dac0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f6bc926dac0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xf0b4833be9ec9a69 - Init COMPLETE",
+                "NET/Socket: Using 8 threads and 8 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f6bc926dac0 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 5.556,
+                  "GBps": 0.189
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 25.741,
+                  "GBps": 0.652
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 351.382,
+                  "GBps": 0.764
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1375.624,
+                  "GBps": 0.781
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.82,
+                  "GBps": 1.278
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 11.702,
+                  "GBps": 1.434
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 167.601,
+                  "GBps": 1.602
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 723.605,
+                  "GBps": 1.484
+                }
+              ],
+              "check_ok": true,
+              "seconds": 13.2,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f1517676610 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xf0b4833be9ec9a69 - Init START",
+                "comm 0x7f1517676610 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f1517676610 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xf0b4833be9ec9a69 - Init COMPLETE",
+                "NET/Socket: Using 8 threads and 8 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f1517676610 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        },
+        {
+          "variant": "4x4_buff16m",
+          "pass": 2,
+          "env": {
+            "NCCL_SOCKET_NTHREADS": "4",
+            "NCCL_NSOCKS_PERTHREAD": "4",
+            "NCCL_BUFFSIZE": "16777216"
+          },
+          "port": 12916,
+          "ranks": [
+            {
+              "rank": 0,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.139,
+                  "GBps": 0.171
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.968,
+                  "GBps": 0.622
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 403.002,
+                  "GBps": 0.666
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1779.3,
+                  "GBps": 0.603
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 0.357,
+                  "GBps": 2.937
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 16.02,
+                  "GBps": 1.047
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 284.087,
+                  "GBps": 0.945
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1040.431,
+                  "GBps": 1.032
+                }
+              ],
+              "check_ok": true,
+              "seconds": 18.5,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.2.11<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f157926db30 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa4e892f0b284c4cc - Init START",
+                "comm 0x7f157926db30 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f157926db30 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa4e892f0b284c4cc - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+                "comm 0x7f157926db30 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            },
+            {
+              "rank": 1,
+              "bw": [
+                {
+                  "op": "all_reduce",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 6.149,
+                  "GBps": 0.171
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 26.94,
+                  "GBps": 0.623
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 402.73,
+                  "GBps": 0.667
+                },
+                {
+                  "op": "all_reduce",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1779.769,
+                  "GBps": 0.603
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1048576,
+                  "iters": 50,
+                  "ms": 1.716,
+                  "GBps": 0.611
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 16777216,
+                  "iters": 20,
+                  "ms": 19.52,
+                  "GBps": 0.859
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 268435456,
+                  "iters": 5,
+                  "ms": 294.021,
+                  "GBps": 0.913
+                },
+                {
+                  "op": "broadcast",
+                  "bytes": 1073741824,
+                  "iters": 3,
+                  "ms": 1047.832,
+                  "GBps": 1.025
+                }
+              ],
+              "check_ok": true,
+              "seconds": 17.3,
+              "nccl_log": [
+                "NCCL version 2.27.3+cuda12.9",
+                "NET/Socket : Using [0]eth0:10.244.1.203<0>",
+                "Using network Socket",
+                "ncclCommInitRankConfig comm 0x7f48d36769f0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa4e892f0b284c4cc - Init START",
+                "comm 0x7f48d36769f0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+                "ncclCommInitRankConfig comm 0x7f48d36769f0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xa4e892f0b284c4cc - Init COMPLETE",
+                "NET/Socket: Using 4 threads and 4 sockets per thread",
+                "Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+                "Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+                "comm 0x7f48d36769f0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+              ]
+            }
+          ]
+        }
+      ],
+      "nccl_summary": {
+        "default": {
+          "all_reduce": {
+            "1048576": {
+              "n": 1,
+              "median": 0.169,
+              "min": 0.169,
+              "max": 0.169,
+              "spread_pct": 0.0
+            },
+            "16777216": {
+              "n": 1,
+              "median": 0.197,
+              "min": 0.197,
+              "max": 0.197,
+              "spread_pct": 0.0
+            },
+            "268435456": {
+              "n": 1,
+              "median": 0.193,
+              "min": 0.193,
+              "max": 0.193,
+              "spread_pct": 0.0
+            },
+            "1073741824": {
+              "n": 1,
+              "median": 0.189,
+              "min": 0.189,
+              "max": 0.189,
+              "spread_pct": 0.0
+            }
+          },
+          "broadcast": {
+            "1048576": {
+              "n": 1,
+              "median": 0.237,
+              "min": 0.237,
+              "max": 0.237,
+              "spread_pct": 0.0
+            },
+            "16777216": {
+              "n": 1,
+              "median": 0.279,
+              "min": 0.279,
+              "max": 0.279,
+              "spread_pct": 0.0
+            },
+            "268435456": {
+              "n": 1,
+              "median": 0.282,
+              "min": 0.282,
+              "max": 0.282,
+              "spread_pct": 0.0
+            },
+            "1073741824": {
+              "n": 1,
+              "median": 0.265,
+              "min": 0.265,
+              "max": 0.265,
+              "spread_pct": 0.0
+            }
+          }
+        },
+        "1x1": {
+          "all_reduce": {
+            "1048576": {
+              "n": 3,
+              "median": 0.141,
+              "min": 0.115,
+              "max": 0.185,
+              "spread_pct": 49.6
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.176,
+              "min": 0.166,
+              "max": 0.222,
+              "spread_pct": 31.8
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.173,
+              "min": 0.169,
+              "max": 0.203,
+              "spread_pct": 19.7
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.225,
+              "min": 0.198,
+              "max": 0.226,
+              "spread_pct": 12.4
+            }
+          },
+          "broadcast": {
+            "1048576": {
+              "n": 3,
+              "median": 0.303,
+              "min": 0.297,
+              "max": 0.311,
+              "spread_pct": 4.6
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.309,
+              "min": 0.307,
+              "max": 0.311,
+              "spread_pct": 1.3
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.31,
+              "min": 0.307,
+              "max": 0.316,
+              "spread_pct": 2.9
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.312,
+              "min": 0.311,
+              "max": 0.317,
+              "spread_pct": 1.9
+            }
+          }
+        },
+        "2x2": {
+          "all_reduce": {
+            "1048576": {
+              "n": 3,
+              "median": 0.162,
+              "min": 0.148,
+              "max": 0.175,
+              "spread_pct": 16.7
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.333,
+              "min": 0.32,
+              "max": 0.334,
+              "spread_pct": 4.2
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.274,
+              "min": 0.274,
+              "max": 0.284,
+              "spread_pct": 3.6
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.261,
+              "min": 0.249,
+              "max": 0.281,
+              "spread_pct": 12.3
+            }
+          },
+          "broadcast": {
+            "1048576": {
+              "n": 3,
+              "median": 0.531,
+              "min": 0.507,
+              "max": 0.552,
+              "spread_pct": 8.5
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.596,
+              "min": 0.529,
+              "max": 0.632,
+              "spread_pct": 17.3
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.607,
+              "min": 0.601,
+              "max": 0.627,
+              "spread_pct": 4.3
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.57,
+              "min": 0.569,
+              "max": 0.604,
+              "spread_pct": 6.1
+            }
+          }
+        },
+        "4x4": {
+          "all_reduce": {
+            "1048576": {
+              "n": 3,
+              "median": 0.17,
+              "min": 0.167,
+              "max": 0.174,
+              "spread_pct": 4.1
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.459,
+              "min": 0.452,
+              "max": 0.482,
+              "spread_pct": 6.5
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.428,
+              "min": 0.427,
+              "max": 0.441,
+              "spread_pct": 3.3
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.394,
+              "min": 0.388,
+              "max": 0.404,
+              "spread_pct": 4.1
+            }
+          },
+          "broadcast": {
+            "1048576": {
+              "n": 3,
+              "median": 0.655,
+              "min": 0.615,
+              "max": 0.701,
+              "spread_pct": 13.1
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.843,
+              "min": 0.833,
+              "max": 0.958,
+              "spread_pct": 14.8
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.864,
+              "min": 0.86,
+              "max": 0.968,
+              "spread_pct": 12.5
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.826,
+              "min": 0.808,
+              "max": 0.89,
+              "spread_pct": 9.9
+            }
+          }
+        },
+        "8x8": {
+          "all_reduce": {
+            "1048576": {
+              "n": 3,
+              "median": 0.19,
+              "min": 0.189,
+              "max": 0.192,
+              "spread_pct": 1.6
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.677,
+              "min": 0.652,
+              "max": 0.679,
+              "spread_pct": 4.0
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.764,
+              "min": 0.746,
+              "max": 0.765,
+              "spread_pct": 2.5
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.758,
+              "min": 0.758,
+              "max": 0.781,
+              "spread_pct": 3.0
+            }
+          },
+          "broadcast": {
+            "1048576": {
+              "n": 3,
+              "median": 1.072,
+              "min": 0.763,
+              "max": 1.278,
+              "spread_pct": 48.0
+            },
+            "16777216": {
+              "n": 3,
+              "median": 1.434,
+              "min": 0.245,
+              "max": 1.526,
+              "spread_pct": 89.3
+            },
+            "268435456": {
+              "n": 3,
+              "median": 1.602,
+              "min": 1.528,
+              "max": 1.606,
+              "spread_pct": 4.9
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 1.484,
+              "min": 1.484,
+              "max": 1.558,
+              "spread_pct": 5.0
+            }
+          }
+        },
+        "4x4_buff16m": {
+          "all_reduce": {
+            "1048576": {
+              "n": 3,
+              "median": 0.171,
+              "min": 0.163,
+              "max": 0.172,
+              "spread_pct": 5.3
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.626,
+              "min": 0.622,
+              "max": 0.633,
+              "spread_pct": 1.8
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.666,
+              "min": 0.597,
+              "max": 0.667,
+              "spread_pct": 10.5
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.6,
+              "min": 0.591,
+              "max": 0.603,
+              "spread_pct": 2.0
+            }
+          },
+          "broadcast": {
+            "1048576": {
+              "n": 3,
+              "median": 0.549,
+              "min": 0.523,
+              "max": 0.611,
+              "spread_pct": 16.0
+            },
+            "16777216": {
+              "n": 3,
+              "median": 0.859,
+              "min": 0.801,
+              "max": 0.932,
+              "spread_pct": 15.3
+            },
+            "268435456": {
+              "n": 3,
+              "median": 0.913,
+              "min": 0.881,
+              "max": 1.034,
+              "spread_pct": 16.8
+            },
+            "1073741824": {
+              "n": 3,
+              "median": 0.935,
+              "min": 0.893,
+              "max": 1.025,
+              "spread_pct": 14.1
+            }
+          }
+        }
+      },
+      "tcp_summary": {
+        "a_to_b/1": {
+          "n": 3,
+          "median": 0.195,
+          "min": 0.186,
+          "max": 0.198,
+          "spread_pct": 6.2
+        },
+        "b_to_a/1": {
+          "n": 3,
+          "median": 0.191,
+          "min": 0.19,
+          "max": 0.195,
+          "spread_pct": 2.6
+        },
+        "a_to_b/8": {
+          "n": 3,
+          "median": 0.595,
+          "min": 0.556,
+          "max": 0.608,
+          "spread_pct": 8.7
+        },
+        "b_to_a/8": {
+          "n": 3,
+          "median": 0.621,
+          "min": 0.439,
+          "max": 0.629,
+          "spread_pct": 30.6
+        },
+        "a_to_b/32": {
+          "n": 3,
+          "median": 0.991,
+          "min": 0.766,
+          "max": 1.02,
+          "spread_pct": 25.6
+        },
+        "b_to_a/32": {
+          "n": 3,
+          "median": 1.054,
+          "min": 0.96,
+          "max": 1.129,
+          "spread_pct": 16.0
+        },
+        "bidir_into_a/8": {
+          "n": 3,
+          "median": 0.418,
+          "min": 0.409,
+          "max": 0.442,
+          "spread_pct": 7.9
+        },
+        "bidir_into_b/8": {
+          "n": 3,
+          "median": 0.411,
+          "min": 0.396,
+          "max": 0.419,
+          "spread_pct": 5.6
+        },
+        "bidir_into_a/32": {
+          "n": 3,
+          "median": 0.659,
+          "min": 0.641,
+          "max": 0.768,
+          "spread_pct": 19.3
+        },
+        "bidir_into_b/32": {
+          "n": 3,
+          "median": 0.678,
+          "min": 0.654,
+          "max": 0.714,
+          "spread_pct": 8.8
+        }
+      },
+      "seconds": 698.5
+    }
+  ],
+  "seconds": 1174.1,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "2",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 1.109
+}

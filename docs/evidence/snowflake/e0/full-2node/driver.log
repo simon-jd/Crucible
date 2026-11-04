@@ -1,0 +1,6 @@
+'artifact_repositories' is in public preview since 1.50.0.
+08:30:56Z submitted CRUCIBLE_LAB.PROBE.CRUCIBLE_E0_FULL_2NODE_CLHZO2XUK0HC on SYSTEM_COMPUTE_POOL_GPU x2
+Compute pool busy (1/2 nodes in use, 2 nodes required). Job execution may be delayed.
+08:50:18Z status DONE after 1173 s
+08:50:20Z wrote .cache/snowflake/full-2node/report.json (credits estimate 1.109)
+exit 0
