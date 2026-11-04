@@ -145,8 +145,10 @@ def server_env(server, node_ip, cache_dir, probe_dir=None):
         "VLLM_HOST_IP": node_ip,
         **server.env,
     }
-    if probe_dir and server.kv_role:
-        env["CRUCIBLE_KVPROBE_DIR"] = probe_dir
+    if server.kv_role:
+        env["CRUCIBLE_P2P_FIX"] = "1"  # serving.pd.vllm_entry: chunked-prefill None-block fix
+        if probe_dir:
+            env["CRUCIBLE_KVPROBE_DIR"] = probe_dir
     return env
 
 

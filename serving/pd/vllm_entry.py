@@ -1,5 +1,11 @@
 """`python -m serving.pd.vllm_entry <vLLM OpenAI server args>`: vLLM's server with the KV probe.
 
+With $CRUCIBLE_P2P_FIX=1, P2pNcclConnector.build_connector_meta gets a one-line bug fix: in vLLM
+0.10.2 the producer indexes ``new_block_ids[0]`` of a continuing chunked-prefill request, which is
+None when that step allocated no new block, and the engine core dies with "TypeError: 'NoneType'
+object is not subscriptable" (run e4-full-pd-tcp, 4x level). The fix passes an empty block list for
+those requests for the duration of the call and restores the scheduler output afterwards.
+
 With $CRUCIBLE_P2P_NCCL_CUMEM set (0 or 1), the P2pNcclEngine communicators are created with that
 NCCL_CUMEM_ENABLE instead of the 1 that vLLM 0.10.2's set_p2p_nccl_context forces.
 
@@ -18,7 +24,41 @@ from contextlib import contextmanager
 from serving.pd import kvprobe
 
 CUMEM_ENV = "CRUCIBLE_P2P_NCCL_CUMEM"
+FIX_ENV = "CRUCIBLE_P2P_FIX"
 ENGINE_MODULE = kvprobe.MODULE
+CONNECTOR_MODULE = "vllm.distributed.kv_transfer.kv_connector.v1.p2p.p2p_nccl_connector"
+
+
+def fix_build_connector_meta(connector_cls):
+    """Wrap build_connector_meta so None entries of new_block_ids read as 'no new blocks'."""
+    if getattr(connector_cls, "_crucible_fixed", False):
+        return connector_cls
+    original = connector_cls.build_connector_meta
+
+    def build_connector_meta(self, scheduler_output):
+        cached = scheduler_output.scheduled_cached_reqs
+        saved = cached.new_block_ids
+        if any(b is None for b in saved):
+            cached.new_block_ids = [([],) if b is None else b for b in saved]
+        try:
+            return original(self, scheduler_output)
+        finally:
+            cached.new_block_ids = saved
+
+    connector_cls.build_connector_meta = build_connector_meta
+    connector_cls._crucible_fixed = True
+    return connector_cls
+
+
+def apply_fix(module=None):
+    if os.environ.get(FIX_ENV) != "1":
+        return False
+    if module is None:
+        import importlib
+
+        module = importlib.import_module(CONNECTOR_MODULE)
+    fix_build_connector_meta(module.P2pNcclConnector)
+    return True
 
 
 def nccl_context(cumem):
@@ -58,6 +98,7 @@ def plugin():
     """vLLM general-plugin entry point (vllm.general_plugins): idempotent, env-gated."""
     kvprobe.install_if_enabled()
     override_cumem()
+    apply_fix()
 
 
 PLUGIN_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "plugin")

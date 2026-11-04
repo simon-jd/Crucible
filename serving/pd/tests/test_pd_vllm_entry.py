@@ -30,3 +30,39 @@ def test_the_plugin_dist_info_registers_a_vllm_general_plugin(monkeypatch):
     monkeypatch.delenv("CRUCIBLE_KVPROBE_DIR", raising=False)
     monkeypatch.delenv(vllm_entry.CUMEM_ENV, raising=False)
     vllm_entry.plugin()  # no-op without its environment variables
+
+
+def test_fix_passes_empty_block_lists_for_none_and_restores_the_scheduler_output(monkeypatch):
+    seen = []
+
+    class Connector:
+        def build_connector_meta(self, scheduler_output):
+            ids = scheduler_output.scheduled_cached_reqs.new_block_ids
+            seen.append([b[0] for b in ids])  # what vLLM 0.10.2 does; raises on None
+            return "meta"
+
+    out = types.SimpleNamespace(scheduled_cached_reqs=types.SimpleNamespace(new_block_ids=[([1, 2],), None]))
+    try:
+        Connector().build_connector_meta(out)
+        raise AssertionError("expected the unpatched TypeError")
+    except TypeError:
+        pass
+    monkeypatch.delenv(vllm_entry.FIX_ENV, raising=False)
+    mod = types.SimpleNamespace(P2pNcclConnector=Connector)
+    assert vllm_entry.apply_fix(mod) is False
+    monkeypatch.setenv(vllm_entry.FIX_ENV, "1")
+    assert vllm_entry.apply_fix(mod) is True and vllm_entry.apply_fix(mod) is True  # idempotent
+    assert Connector().build_connector_meta(out) == "meta"
+    assert seen[-1] == [[1, 2], []]
+    assert out.scheduled_cached_reqs.new_block_ids == [([1, 2],), None]
+
+
+def test_fix_targets_the_installed_vllm_connector_when_available(monkeypatch):
+    import pytest
+
+    mod = pytest.importorskip(vllm_entry.CONNECTOR_MODULE)
+    import inspect
+
+    assert "new_block_ids[0]" in inspect.getsource(mod.P2pNcclConnector.build_connector_meta)
+    monkeypatch.setenv(vllm_entry.FIX_ENV, "1")
+    assert vllm_entry.apply_fix() is True and mod.P2pNcclConnector._crucible_fixed

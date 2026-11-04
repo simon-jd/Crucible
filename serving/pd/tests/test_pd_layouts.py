@@ -64,10 +64,11 @@ def test_server_env_pins_the_gpu_and_enables_the_probe_only_for_kv_servers():
     colo = layouts.plan("colo").servers[0]
     env = layouts.server_env(colo, "127.0.0.1", "/c", "/probe")
     assert env["CUDA_VISIBLE_DEVICES"] == "0" and env["VLLM_CACHE_ROOT"] == "/c/colo"
-    assert "CRUCIBLE_KVPROBE_DIR" not in env
+    assert "CRUCIBLE_KVPROBE_DIR" not in env and "CRUCIBLE_P2P_FIX" not in env
     dec = layouts.plan("pd-tcp").servers[1]
     env = layouts.server_env(dec, "10.0.0.2", "/c", "/probe")
     assert env["VLLM_HOST_IP"] == "10.0.0.2" and env["CRUCIBLE_KVPROBE_DIR"] == "/probe"
+    assert env["CRUCIBLE_P2P_FIX"] == "1"
     assert env["NCCL_IB_DISABLE"] == "1"
 
 
