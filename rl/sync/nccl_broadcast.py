@@ -1,7 +1,9 @@
 """Complete tensor broadcast with receiver preparation acknowledgements.
 
-Actual gloo CPU validation; NCCL CUDA path is implemented but unverified. The
-caller owns/destroys the process group. Lost collectives invalidate this owner;
+Actual gloo CPU validation; the NCCL CUDA path was run on Snowflake A10 GPUs
+(docs/evidence/snowflake/e1-weight-sync.md). The caller owns/destroys the process
+group. The group may be the default group, a subgroup, or a separate pair group
+(rl.sync.pair_group); `source` is a global rank of that group's rank mapping. Lost collectives invalidate this owner;
 no distributed atomic-commit claim is made after lost ACK or process death.
 """
 
@@ -88,7 +90,9 @@ class WeightSync:
             if backend == "nccl"
             else torch.device("cpu")
         )
-        source = dist.get_rank() == self.source
+        # Rank within the group, mapped back to the group's global ranks; a separate pair
+        # group's ranks differ from the default-group rank of this process.
+        source = dist.get_global_rank(self.group, self.group.rank()) == self.source
         stage = None
         transport_failed = False
         commit_started = False

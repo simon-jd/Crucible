@@ -31,13 +31,24 @@ def base_schema(model_path, dtype=None):
     return schema
 
 
-def export_ready_learner_bf16(learner, sync):
+def export_ready_learner_bf16(learner, sync, device="cpu"):
     """Fresh guarded access, explicit cast, and final guard before store commit.
 
     The caller owns the entire phase; concurrent step calls are forbidden. No
     cached learner alias or last_committed_version is accepted. Persistent state
     must match the complete base schema, allowing only the Qwen tied-head alias.
     Each tensor is materialized/copied individually. No optimizer state is saved.
+    device="cuda" keeps the BF16 copies on the learner GPU for an NCCL broadcast.
+    """
+    version, tensors = ready_bf16_tensors(learner, sync.store.schema, device)
+    return sync.push(tensors, version)
+
+
+def ready_bf16_tensors(learner, schema, device="cpu"):
+    """(version, generator of (name, BF16 tensor)) with the same guards as the export.
+
+    The generator rechecks the public guards before each tensor and at exhaustion,
+    so materializing it fully (list(...)) before a push keeps the final check.
     """
     import torch
     from torch.distributed.tensor import DTensor
@@ -45,7 +56,7 @@ def export_ready_learner_bf16(learner, sync):
     version = learner.policy_version  # raises immediately outside ready
     policy = learner.policy
     state = policy.state_dict()
-    expected = set(sync.store.schema)
+    expected = set(schema)
     aliases = set(state) - expected
     if aliases:
         if aliases != {"lm_head.weight"} or not getattr(
@@ -67,10 +78,10 @@ def export_ready_learner_bf16(learner, sync):
                 value = value.full_tensor()
             value = value.detach()
             target = torch.bfloat16 if value.is_floating_point() else value.dtype
-            if sync.store.schema[name][1] != target:
+            if schema[name][1] != target:
                 raise ValueError("store must explicitly declare BF16 inference schema")
-            yield name, value.to(device="cpu", dtype=target).contiguous()
+            yield name, value.to(device=device, dtype=target).contiguous()
         if learner.policy_version != version or learner.policy is not policy:
             raise RuntimeError("learner changed during publication")
 
-    return sync.push(tensors(), version)
+    return version, tensors()
