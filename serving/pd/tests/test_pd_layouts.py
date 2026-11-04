@@ -12,18 +12,17 @@ def test_every_layout_has_its_servers_on_the_right_nodes_and_gpus():
     assert [(s.node, s.gpu) for s in dp.servers] == [(0, "0"), (0, "1")] and dp.nodes == 1
     shm = layouts.plan("pd-shm")
     assert [(s.node, s.gpu, s.kv_role) for s in shm.servers] == [(0, "0", "kv_producer"), (0, "1", "kv_consumer")]
-    assert shm.servers[0].env["NCCL_SHM_USE_CUDA_MEMCPY"] == "1"
+    assert "NCCL_SHM_USE_CUDA_MEMCPY" not in shm.servers[0].env
+    ce = layouts.plan("pd-shm-ce")
+    assert ce.layout == "pd-shm-ce" and all(s.env["NCCL_SHM_USE_CUDA_MEMCPY"] == "1" for s in ce.servers)
+    assert all(s.env[layouts.CUMEM_ENV] == "0" for s in ce.servers)
     tcp = layouts.plan("pd-tcp")
     assert tcp.nodes == 2 and [(s.node, s.gpu) for s in tcp.servers] == [(0, "0"), (1, "0")]
     assert tcp.servers[1].host == "0.0.0.0"  # the proxy on node 0 reaches it over the network
-    assert tcp.servers[0].env["NCCL_SOCKET_NTHREADS"] == "4" and tcp.servers[0].env["NCCL_NSOCKS_PERTHREAD"] == "4"
+    env = tcp.servers[0].env
+    assert (env["NCCL_SOCKET_NTHREADS"], env["NCCL_NSOCKS_PERTHREAD"], env["NCCL_BUFFSIZE"]) == ("8", "8", "16777216")
     with pytest.raises(ValueError):
         layouts.plan("pd-rdma")
-
-
-def test_shm_default_leaves_the_cuda_memcpy_switch_unset():
-    p = layouts.plan("pd-shm", shm_cuda_memcpy=False)
-    assert "NCCL_SHM_USE_CUDA_MEMCPY" not in p.servers[0].env
 
 
 def test_cross_node_ports_stay_in_the_e4_band():

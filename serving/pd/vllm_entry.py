@@ -1,16 +1,59 @@
 """`python -m serving.pd.vllm_entry <vLLM OpenAI server args>`: vLLM's server with the KV probe.
 
+With $CRUCIBLE_P2P_NCCL_CUMEM set (0 or 1), the P2pNcclEngine communicators are created with that
+NCCL_CUMEM_ENABLE instead of the 1 that vLLM 0.10.2's set_p2p_nccl_context forces.
+
 The probe (serving.pd.kvprobe) is installed at import time when $CRUCIBLE_KVPROBE_DIR is set, so
 it is also in place in vLLM's engine-core process, whether that process is forked (inherits the
 patched class) or spawned (re-imports this module as __mp_main__).
 """
 
+import os
 import runpy
 import sys
+from contextlib import contextmanager
 
 from serving.pd import kvprobe
 
+CUMEM_ENV = "CRUCIBLE_P2P_NCCL_CUMEM"
+ENGINE_MODULE = kvprobe.MODULE
+
+
+def nccl_context(cumem):
+    """set_p2p_nccl_context with a chosen NCCL_CUMEM_ENABLE; restores the variables afterwards."""
+
+    @contextmanager
+    def ctx(num_channels):
+        names = ("NCCL_MAX_NCHANNELS", "NCCL_MIN_NCHANNELS", "NCCL_CUMEM_ENABLE")
+        saved = {k: os.environ.get(k) for k in names}
+        try:
+            os.environ["NCCL_MAX_NCHANNELS"] = os.environ["NCCL_MIN_NCHANNELS"] = num_channels
+            os.environ["NCCL_CUMEM_ENABLE"] = cumem
+            yield
+        finally:
+            for k, v in saved.items():
+                if v is None:
+                    os.environ.pop(k, None)
+                else:
+                    os.environ[k] = v
+
+    return ctx
+
+
+def override_cumem(module=None):
+    cumem = os.environ.get(CUMEM_ENV)
+    if cumem is None:
+        return False
+    if module is None:
+        import importlib
+
+        module = importlib.import_module(ENGINE_MODULE)
+    module.set_p2p_nccl_context = nccl_context(cumem)
+    return True
+
+
 kvprobe.install_if_enabled()
+override_cumem()
 
 if __name__ == "__main__":
     sys.argv = ["vllm.entrypoints.openai.api_server", *sys.argv[1:]]

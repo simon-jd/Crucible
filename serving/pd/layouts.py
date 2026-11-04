@@ -4,7 +4,11 @@ Layouts, all serving Qwen3-8B-AWQ with vLLM 0.10.2 behind serving.pd.proxy:
 
 - ``colo``:   one colocated server on one A10 (proxy in "dp" mode with one backend);
 - ``dp2``:    two colocated replicas on the two A10s of one node, least-outstanding routing;
-- ``pd-shm``: 1 prefill + 1 decode server on the two A10s of one node, KV over NCCL (SHM transport);
+- ``pd-shm``: 1 prefill + 1 decode server on the two A10s of one node, KV over NCCL's SHM transport
+  (default host-copy mode);
+- ``pd-shm-ce``: the same with NCCL_SHM_USE_CUDA_MEMCPY=1 (copy-engine SHM, E0's fastest on-node
+  setting) and NCCL_CUMEM_ENABLE=0 for the connector's communicators: the connector forces cuMem on,
+  and SHM/CE with cuMem fails on these vGPUs ("peer access is not supported", smoke run e4-smoke1b);
 - ``pd-tcp``: prefill on node 0, decode on node 1 (two single-A10 nodes), KV over NCCL (NET/Socket).
 
 Every server gets the Task 12 baseline arguments (seed 17, max-model-len 8192, max-num-seqs 64, no
@@ -18,7 +22,8 @@ Ports that cross nodes stay inside E4's band 12970-12999.
 import json
 from dataclasses import dataclass, field
 
-LAYOUTS = ("colo", "dp2", "pd-shm", "pd-tcp")
+LAYOUTS = ("colo", "dp2", "pd-shm", "pd-shm-ce", "pd-tcp")
+CUMEM_ENV = "CRUCIBLE_P2P_NCCL_CUMEM"  # read by serving.pd.vllm_entry
 PROXY_PORT = 12970
 HTTP_PORTS = (12971, 12972)
 KV_PORTS = {"kv_producer": 12980, "kv_consumer": 12985}
@@ -69,9 +74,11 @@ def kv_transfer_config(role, kv_port, http_port, pool_gb, buffer_bytes, send_typ
     }
 
 
-def plan(layout, decode_pool_gb=24, decode_buffer_bytes=2e9, shm_cuda_memcpy=True, socket_threads=4,
-         socks_per_thread=4, nccl_debug=True):
-    """The servers of one layout. NCCL settings are the fastest ones E0's probes measured on these nodes."""
+def plan(layout, decode_pool_gb=24, decode_buffer_bytes=2e9, socket_threads=8, socks_per_thread=8,
+         nccl_buffsize=16 << 20, nccl_debug=True):
+    """The servers of one layout. Cross-node NCCL settings are E0's best measured ones
+    (docs/evidence/snowflake/e0-network.md on snowflake/e0); its NCCL_MIN_NCHANNELS=4 is moot because
+    the connector pins NCCL_MIN/MAX_NCHANNELS to nccl_num_channels (8) while it creates a communicator."""
     nccl = {"NCCL_IB_DISABLE": "1"}
     if nccl_debug:
         nccl |= {"NCCL_DEBUG": "INFO", "NCCL_DEBUG_SUBSYS": "INIT,NET"}
@@ -80,15 +87,17 @@ def plan(layout, decode_pool_gb=24, decode_buffer_bytes=2e9, shm_cuda_memcpy=Tru
     if layout == "dp2":
         servers = [Server(f"replica{i}", 0, str(i), HTTP_PORTS[i], "127.0.0.1", COLOCATED_UTIL) for i in (0, 1)]
         return Plan(layout, 1, servers, "dp")
-    if layout == "pd-shm":
-        env = nccl | ({"NCCL_SHM_USE_CUDA_MEMCPY": "1"} if shm_cuda_memcpy else {})
+    if layout in ("pd-shm", "pd-shm-ce"):
+        env = nccl | ({"NCCL_SHM_USE_CUDA_MEMCPY": "1", CUMEM_ENV: "0"} if layout == "pd-shm-ce" else {})
         servers = [
             Server("prefill", 0, "0", HTTP_PORTS[0], "127.0.0.1", COLOCATED_UTIL, "kv_producer", dict(env)),
             Server("decode", 0, "1", HTTP_PORTS[1], "127.0.0.1", DECODE_UTIL, "kv_consumer", dict(env)),
         ]
         p = Plan(layout, 1, servers, "pd")
+        p.layout = layout
     elif layout == "pd-tcp":
-        env = nccl | {"NCCL_SOCKET_NTHREADS": str(socket_threads), "NCCL_NSOCKS_PERTHREAD": str(socks_per_thread)}
+        env = nccl | {"NCCL_SOCKET_NTHREADS": str(socket_threads), "NCCL_NSOCKS_PERTHREAD": str(socks_per_thread),
+                      "NCCL_BUFFSIZE": str(nccl_buffsize)}
         servers = [
             Server("prefill", 0, "0", HTTP_PORTS[0], "127.0.0.1", COLOCATED_UTIL, "kv_producer", dict(env)),
             Server("decode", 1, "0", HTTP_PORTS[1], "0.0.0.0", DECODE_UTIL, "kv_consumer", dict(env)),

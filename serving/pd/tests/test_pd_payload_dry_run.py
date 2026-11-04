@@ -27,7 +27,7 @@ def test_layout_loop_runs_calibration_and_evaluation_against_fake_servers(layout
         pytest.skip("needs .cache/e4/bin/replay and .cache/e4/qwen3-8b-awq-ids.json")
     monkeypatch.setattr(mod, "WORK", tmp_path)
     monkeypatch.setattr(mod, "SERVER_MODULE", "serving.pd.tests.fake_vllm")
-    a = SimpleNamespace(decode_pool_gb=1, decode_buffer_bytes=1e8, shm_default=False, max_pd_inflight=8,
+    a = SimpleNamespace(decode_pool_gb=1, decode_buffer_bytes=1e8, max_pd_inflight=8,
                         levels=[1, 2], rounds=2, smoke=6, calibrate=calibrate)
     s = mod.run_layout(layout, a, "/nonexistent-model", None, deadline=float("inf"))
     assert s["stop_reason"] is None, s["stop_reason"]
