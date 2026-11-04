@@ -6,19 +6,19 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))  # repository root inside the job
-from scripts.snowflake.assets import fetch  # noqa: E402
+from scripts.snowflake.assets import fetch
 
 
 def ver(name):
     try:
         return md.version(name)
-    except Exception:
+    except md.PackageNotFoundError:
         return None
 
 
 try:
     gpus = subprocess.run(["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader"],
-                          capture_output=True, text=True).stdout.strip().splitlines()
+                          check=False, capture_output=True, text=True).stdout.strip().splitlines()
 except FileNotFoundError:
     gpus = []
 got = fetch(sys.argv[1], "/tmp/asset") if len(sys.argv) > 1 else None

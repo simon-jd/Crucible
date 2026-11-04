@@ -32,7 +32,7 @@ import os
 import shutil
 import tempfile
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from snowflake.ml.jobs import submit_directory
@@ -47,7 +47,7 @@ RATE = {"GPU_NV_SM": 1.70, "GPU_NV_2M": 3.50, "GPU_NV_XS": 0.25, "GPU_NV_3M": 3.
 
 
 def log(msg):
-    print(f"{datetime.now(timezone.utc):%H:%M:%SZ} {msg}", flush=True)
+    print(f"{datetime.now(UTC):%H:%M:%SZ} {msg}", flush=True)
 
 
 def session():
@@ -69,7 +69,7 @@ def stop_pool(s, pool):
         try:
             s.sql(q).collect()
             out.append(f"{q}: ok")
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 - record the error and still try the next statement
             out.append(f"{q}: {str(e).splitlines()[0][:200]}")
     return out
 
@@ -103,11 +103,11 @@ def main():
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
     name = "crucible_" + (a.name or Path(a.entry).stem)
-    report = {"started_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "pool": a.pool,
+    report = {"started_at": datetime.now(UTC).isoformat(timespec="seconds"), "pool": a.pool,
               "instances": a.instances, "entry": a.entry, "include": a.include, "pip": a.pip, "env": a.env,
               "args": a.args}
 
-    lock = open(f"/var/tmp/snowflake-pool-{a.pool}.lock", "w")
+    lock = open(f"/var/tmp/snowflake-pool-{a.pool}.lock", "w")  # noqa: SIM115 - held for the whole run
     t_lock = time.time()
     while True:
         try:
@@ -140,14 +140,14 @@ def main():
         log(f"submitted {job.id} on {a.pool} x{a.instances}")
         try:
             report["status"] = job.wait(timeout=a.max_minutes * 60)
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 - a failed wait still collects logs and stops the pool
             report["status"] = f"wait: {e!r}"[:500]
         log(f"status {report['status']} after {time.time() - t0:.0f} s")
         report["results"] = []
         for i in range(a.instances):
             try:
                 text = job.get_logs(instance_id=i)
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - keep the other instances' logs
                 text = f"get_logs failed: {e!r}"
             (a.out / f"instance{i}.log").write_text(text)
             for line in text.splitlines():
@@ -156,7 +156,7 @@ def main():
                         report["results"].append({"instance": i, **json.loads(line[len("RESULT "):])})
                     except json.JSONDecodeError:
                         report["results"].append({"instance": i, "unparsed": line[:2000]})
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - recorded in the report; the pool is stopped in finally
         report["error"] = repr(e)[:2000]
         log(f"error: {report['error'][:300]}")
     finally:
@@ -165,7 +165,7 @@ def main():
                 if job.status in ("PENDING", "RUNNING"):
                     job.cancel()
                     report["cancelled"] = True
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - cancellation is best effort before the pool stop
                 report["cancelled"] = repr(e)[:300]
         report["seconds"] = round(time.time() - t0, 1)
         report["stop"] = stop_pool(s, a.pool)
