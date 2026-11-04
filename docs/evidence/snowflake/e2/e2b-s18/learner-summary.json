@@ -1,0 +1,19 @@
+{
+ "staleness_histogram": {
+  "0": 64,
+  "1": 6336
+ },
+ "train_wall_s": 741.5716196409999,
+ "peak_allocated_bytes": 11760125440,
+ "peak_reserved_bytes": 15133048832,
+ "peak_device_used_bytes": 18257412096,
+ "device": "NVIDIA A10-24Q",
+ "host": "job-0",
+ "nccl_env": {
+  "NCCL_NET_PLUGIN": "none",
+  "NCCL_VERSION": "2.25.1-1",
+  "NCCL_SOCKET_IFNAME": "eth0",
+  "NCCL_SHM_USE_CUDA_MEMCPY": "1",
+  "CUDA_VISIBLE_DEVICES": "0,1"
+ }
+}

@@ -1,0 +1,163 @@
+{
+  "started_at": "2026-11-04T18:00:58+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e2a-s17-s18",
+    "--task",
+    "timeshared",
+    "--seeds",
+    "17",
+    "18",
+    "--timeout",
+    "6000"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E12_E2A_S17_S18_WCJF8NBKYDZW",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e2a-s17-s18",
+      "task": "timeshared",
+      "layout": "same-node",
+      "nproc": 36,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 5.9,
+          "MBps": 169.5
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.3,
+          "MBps": 3.2
+        }
+      ],
+      "roles": [
+        {
+          "role": "s17",
+          "exit": 0,
+          "seconds": 2349.4,
+          "host": "job-1",
+          "role_results": [],
+          "tail": [
+            "INFO 11-04 18:40:53 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-04 18:41:04 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-04 18:41:16 [block_pool.py:292] Successfully reset prefix cache",
+            "{\"after\": {\"gsm8k\": 0.49564063684609555, \"math500\": 0.2791777188328912}}",
+            "[rank0]:[W1104 18:49:43.133811023 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+          ],
+          "node": {
+            "ip": "10.244.0.203",
+            "host": "job-1",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 4693,
+              "mean_util_pct": 57.9,
+              "peak_used_mib": 18066.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "s18",
+          "exit": 0,
+          "seconds": 2354.9,
+          "host": "job-0",
+          "role_results": [],
+          "tail": [
+            "INFO 11-04 18:40:42 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-04 18:40:53 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-04 18:41:04 [block_pool.py:292] Successfully reset prefix cache",
+            "{\"after\": {\"gsm8k\": 0.48597422289613346, \"math500\": 0.26856763925729443}}",
+            "[rank0]:[W1104 18:49:50.335139982 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+          ],
+          "node": {
+            "ip": "10.244.0.75",
+            "host": "job-0",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 4704,
+              "mean_util_pct": 59.2,
+              "peak_used_mib": 18250.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "s17": {
+        "before": {
+          "gsm8k": 0.45261561789234267,
+          "math500": 0.2579575596816976
+        },
+        "after": {
+          "gsm8k": 0.49564063684609555,
+          "math500": 0.2791777188328912
+        },
+        "wall_s": 2337.291662431,
+        "peak": 14854097408
+      },
+      "s18": {
+        "before": {
+          "gsm8k": 0.45261561789234267,
+          "math500": 0.2579575596816976
+        },
+        "after": {
+          "gsm8k": 0.48597422289613346,
+          "math500": 0.26856763925729443
+        },
+        "wall_s": 2342.8819551509996,
+        "peak": 14842235904
+      },
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e2a-s17-s18.tar.gz",
+        "bytes": 4541795
+      },
+      "seconds": 2383.1
+    }
+  ],
+  "seconds": 2990.6,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 2.824
+}
