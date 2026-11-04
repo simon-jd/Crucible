@@ -96,7 +96,9 @@ reward first → last 10 steps: (a) 0.40–0.42 → 0.60–0.66, (b) 0.39–0.41
   which nothing overlaps: the broadcast is a rendezvous between the two loops.
 - Sync is the remaining cost. In (b) it is 1.06 s per step (0.94 GB/s effective, versus
   8.4 GB/s raw SHM all-reduce measured by the probe); in (c) 2.8–3.2 s (0.31–0.35 GB/s,
-  near the 0.40 GB/s raw TCP rate). The (b) overhead is WeightSync's per-tensor protocol
+  near the 0.40 GB/s NCCL reached with 4×4 sockets in the probe). E0, measured after
+  these runs, reached 2.6 GB/s broadcast with 8×8 sockets and 4 channels, so (c) did not
+  run with the best socket settings and its sync time is not the link's limit. The (b) overhead is WeightSync's per-tensor protocol
   (290 tensors, each with control frames, acknowledgements and a digest), not the link.
 - `NCCL_SHM_USE_CUDA_MEMCPY=1` helps: an 8-step smoke without it synced in 1.47 s per
   step versus 1.06 s with it (`smokes/e2b-smoke*-mljob-report.json`).
