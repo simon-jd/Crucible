@@ -3,9 +3,11 @@
 With $CRUCIBLE_P2P_NCCL_CUMEM set (0 or 1), the P2pNcclEngine communicators are created with that
 NCCL_CUMEM_ENABLE instead of the 1 that vLLM 0.10.2's set_p2p_nccl_context forces.
 
-The probe (serving.pd.kvprobe) is installed at import time when $CRUCIBLE_KVPROBE_DIR is set, so
-it is also in place in vLLM's engine-core process, whether that process is forked (inherits the
-patched class) or spawned (re-imports this module as __mp_main__).
+The probe (serving.pd.kvprobe) is installed when $CRUCIBLE_KVPROBE_DIR is set. Installing it at
+import time here is not enough: vLLM's engine-core process (where P2pNcclEngine lives) does not
+re-import this module (smoke run e4-smoke4 recorded no events). So `plugin` is also registered as a
+vLLM general plugin (serving/pd/plugin/*.dist-info, found through PYTHONPATH), which vLLM calls in
+every process it starts, including the engine core.
 """
 
 import os
@@ -52,8 +54,15 @@ def override_cumem(module=None):
     return True
 
 
-kvprobe.install_if_enabled()
-override_cumem()
+def plugin():
+    """vLLM general-plugin entry point (vllm.general_plugins): idempotent, env-gated."""
+    kvprobe.install_if_enabled()
+    override_cumem()
+
+
+PLUGIN_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "plugin")
+
+plugin()
 
 if __name__ == "__main__":
     sys.argv = ["vllm.entrypoints.openai.api_server", *sys.argv[1:]]

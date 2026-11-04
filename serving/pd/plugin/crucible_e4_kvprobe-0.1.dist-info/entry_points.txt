@@ -1,0 +1,2 @@
+[vllm.general_plugins]
+crucible_e4 = serving.pd.vllm_entry:plugin

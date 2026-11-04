@@ -55,7 +55,9 @@ SERVER_MODULE = "serving.pd.vllm_entry"  # tests swap in a fake server
 QUIET = {"OTEL_SDK_DISABLED": "true", "OTEL_TRACES_EXPORTER": "none", "OTEL_METRICS_EXPORTER": "none",
          "OTEL_LOGS_EXPORTER": "none"}
 # What the second instance needs to start a probed vLLM server and fetch the model (shipped as text).
-SOURCES = ("serving/pd/__init__.py", "serving/pd/kvprobe.py", "serving/pd/vllm_entry.py", "scripts/snowflake/assets.py")
+SOURCES = ("serving/pd/__init__.py", "serving/pd/kvprobe.py", "serving/pd/vllm_entry.py",
+           "serving/pd/plugin/crucible_e4_kvprobe-0.1.dist-info/METADATA",
+           "serving/pd/plugin/crucible_e4_kvprobe-0.1.dist-info/entry_points.txt", "scripts/snowflake/assets.py")
 
 
 def log(msg):
@@ -125,7 +127,7 @@ class LocalServer:
         self.server, self.url = server, f"http://127.0.0.1:{server.port}"
         self.log_path = out / f"server-{server.name}.log"
         self._log = open(self.log_path, "wb")  # noqa: SIM115 - closed in stop()
-        full_env = {**os.environ, **QUIET, **env, "PYTHONPATH": str(ROOT)}
+        full_env = {**os.environ, **QUIET, **env, "PYTHONPATH": f"{ROOT}:{ROOT}/serving/pd/plugin"}
         self.proc = subprocess.Popen([sys.executable, "-m", SERVER_MODULE, *argv], cwd=ROOT, env=full_env,
                                      stdout=self._log, stderr=subprocess.STDOUT, start_new_session=True)
 
@@ -186,7 +188,8 @@ def remote_actor_class():
         def start(self, argv, env, log_path):
             Path(log_path).parent.mkdir(parents=True, exist_ok=True)
             self._log = open(log_path, "wb")  # noqa: SIM115
-            full_env = {**os.environ, **env, "PYTHONPATH": str(self.root)}  # env carries QUIET
+            full_env = {**os.environ, **env,  # env carries QUIET
+                        "PYTHONPATH": f"{self.root}:{self.root}/serving/pd/plugin"}
             self.proc = subprocess.Popen([sys.executable, "-m", "serving.pd.vllm_entry", *argv], cwd=self.root,
                                          env=full_env, stdout=self._log, stderr=subprocess.STDOUT,
                                          start_new_session=True)

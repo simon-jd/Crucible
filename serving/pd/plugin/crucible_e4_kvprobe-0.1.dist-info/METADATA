@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: crucible-e4-kvprobe
+Version: 0.1
+Summary: vLLM general plugin that installs serving.pd's KV probe and cuMem override in every vLLM process
