@@ -1,0 +1,9 @@
+{"trial": 0, "condition": "static", "events": 87}
+{"trial": 1, "condition": "auto", "events": 16}
+{"trial": 2, "condition": "static2", "events": 126}
+{"trial": 3, "condition": "static2", "events": 127}
+{"trial": 4, "condition": "auto", "events": 16}
+{"trial": 5, "condition": "static", "events": 87}
+{"trial": 6, "condition": "static", "events": 86}
+{"trial": 7, "condition": "auto", "events": 16}
+{"trial": 8, "condition": "static2", "events": 127}

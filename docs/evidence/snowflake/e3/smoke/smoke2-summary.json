@@ -1,0 +1,772 @@
+{
+ "slo": {
+  "ttft_ms": 56.61495300000024,
+  "tpot_ms": 9.730174049645385,
+  "quantile": 0.99,
+  "samples": 20
+ },
+ "trials": [
+  {
+   "condition": "static",
+   "index": 0,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 20.0,
+     "multiple": 1.0,
+     "requests": 20,
+     "ok": 20,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 20,
+     "goodput_rps": 1.0,
+     "ttft_ms": {
+      "p50": 17.718446999999287,
+      "p99": 56.61495300000024,
+      "max": 56.61495300000024
+     },
+     "tpot_ms": {
+      "p50": 8.678138368794327,
+      "p99": 9.730174049645385,
+      "max": 9.730174049645385
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 60.0,
+     "multiple": 4.0,
+     "requests": 293,
+     "ok": 243,
+     "failed": 50,
+     "timeouts": 0,
+     "good": 25,
+     "goodput_rps": 0.4166666666666667,
+     "ttft_ms": {
+      "p50": 10025.149828000001,
+      "p99": 21965.985120000012,
+      "max": 22198.175501000005
+     },
+     "tpot_ms": {
+      "p50": 9.501017262626284,
+      "p99": 10.615519000000033,
+      "max": 13.144357600000028
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 40.0,
+     "multiple": 1.0,
+     "requests": 55,
+     "ok": 55,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 2,
+     "goodput_rps": 0.05,
+     "ttft_ms": {
+      "p50": 12854.95999100001,
+      "p99": 21057.272297000003,
+      "max": 21057.272297000003
+     },
+     "tpot_ms": {
+      "p50": 9.52060129899499,
+      "p99": 11.001213882353007,
+      "max": 11.001213882353007
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 12.01,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 368,
+    "completed": 318,
+    "failed": 50,
+    "retried": 0,
+    "records": 368,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "auto",
+   "index": 1,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 20.0,
+     "multiple": 1.0,
+     "requests": 20,
+     "ok": 20,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 20,
+     "goodput_rps": 1.0,
+     "ttft_ms": {
+      "p50": 15.110340000000065,
+      "p99": 48.52991199999997,
+      "max": 48.52991199999997
+     },
+     "tpot_ms": {
+      "p50": 8.759167134751774,
+      "p99": 9.562861184397164,
+      "max": 9.562861184397164
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 60.0,
+     "multiple": 4.0,
+     "requests": 293,
+     "ok": 256,
+     "failed": 37,
+     "timeouts": 0,
+     "good": 30,
+     "goodput_rps": 0.5,
+     "ttft_ms": {
+      "p50": 4091.7664880000084,
+      "p99": 20685.113078000002,
+      "max": 20897.848427000004
+     },
+     "tpot_ms": {
+      "p50": 9.638849206088985,
+      "p99": 10.933692102272785,
+      "max": 12.82641806666652
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 40.0,
+     "multiple": 1.0,
+     "requests": 55,
+     "ok": 55,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 39,
+     "goodput_rps": 0.975,
+     "ttft_ms": {
+      "p50": 27.674675999995088,
+      "p99": 4278.382628000007,
+      "max": 4278.382628000007
+     },
+     "tpot_ms": {
+      "p50": 9.421033941176788,
+      "p99": 9.822420950649327,
+      "max": 9.822420950649327
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 12.01,
+    "replica_ready_s": 41.128,
+    "first_success_on_new_replica_s": 41.529,
+    "spawn_to_ready_s": 29.116,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 368,
+    "completed": 331,
+    "failed": 37,
+    "retried": 0,
+    "records": 368,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "static2",
+   "index": 2,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 20.0,
+     "multiple": 1.0,
+     "requests": 20,
+     "ok": 20,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 20,
+     "goodput_rps": 1.0,
+     "ttft_ms": {
+      "p50": 15.328980000000229,
+      "p99": 49.15428599999905,
+      "max": 49.15428599999905
+     },
+     "tpot_ms": {
+      "p50": 8.735780048192776,
+      "p99": 9.670278230769187,
+      "max": 9.670278230769187
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 60.0,
+     "multiple": 4.0,
+     "requests": 293,
+     "ok": 293,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 159,
+     "goodput_rps": 2.65,
+     "ttft_ms": {
+      "p50": 32.309047000002465,
+      "p99": 1461.7424750000064,
+      "max": 1820.8268559999997
+     },
+     "tpot_ms": {
+      "p50": 9.555457662264152,
+      "p99": 10.216399219780195,
+      "max": 10.492435846153686
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 40.0,
+     "multiple": 1.0,
+     "requests": 55,
+     "ok": 55,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 52,
+     "goodput_rps": 1.3,
+     "ttft_ms": {
+      "p50": 26.42710000000079,
+      "p99": 86.30427100000088,
+      "max": 86.30427100000088
+     },
+     "tpot_ms": {
+      "p50": 9.234725714285776,
+      "p99": 9.44255061971831,
+      "max": 9.44255061971831
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 368,
+    "completed": 368,
+    "failed": 0,
+    "retried": 0,
+    "records": 368,
+    "balanced": true
+   }
+  }
+ ],
+ "by_condition": {
+  "auto": {
+   "phase_goodput_rps": [
+    {
+     "median": 1.0,
+     "min": 1.0,
+     "max": 1.0,
+     "n": 1
+    },
+    {
+     "median": 0.5,
+     "min": 0.5,
+     "max": 0.5,
+     "n": 1
+    },
+    {
+     "median": 0.975,
+     "min": 0.975,
+     "max": 0.975,
+     "n": 1
+    }
+   ],
+   "phase_p99_ttft_ms": [
+    {
+     "median": 48.52991199999997,
+     "min": 48.52991199999997,
+     "max": 48.52991199999997,
+     "n": 1
+    },
+    {
+     "median": 20685.113078000002,
+     "min": 20685.113078000002,
+     "max": 20685.113078000002,
+     "n": 1
+    },
+    {
+     "median": 4278.382628000007,
+     "min": 4278.382628000007,
+     "max": 4278.382628000007,
+     "n": 1
+    }
+   ],
+   "phase_p50_ttft_ms": [
+    {
+     "median": 15.110340000000065,
+     "min": 15.110340000000065,
+     "max": 15.110340000000065,
+     "n": 1
+    },
+    {
+     "median": 4091.7664880000084,
+     "min": 4091.7664880000084,
+     "max": 4091.7664880000084,
+     "n": 1
+    },
+    {
+     "median": 27.674675999995088,
+     "min": 27.674675999995088,
+     "max": 27.674675999995088,
+     "n": 1
+    }
+   ],
+   "phase_p50_tpot_ms": [
+    {
+     "median": 8.759167134751774,
+     "min": 8.759167134751774,
+     "max": 8.759167134751774,
+     "n": 1
+    },
+    {
+     "median": 9.638849206088985,
+     "min": 9.638849206088985,
+     "max": 9.638849206088985,
+     "n": 1
+    },
+    {
+     "median": 9.421033941176788,
+     "min": 9.421033941176788,
+     "max": 9.421033941176788,
+     "n": 1
+    }
+   ],
+   "accounting": {
+    "planned": {
+     "median": 368,
+     "min": 368,
+     "max": 368,
+     "n": 1
+    },
+    "completed": {
+     "median": 331,
+     "min": 331,
+     "max": 331,
+     "n": 1
+    },
+    "failed": {
+     "median": 37,
+     "min": 37,
+     "max": 37,
+     "n": 1
+    },
+    "retried": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    }
+   },
+   "accounting_balanced": true,
+   "phase_failed": [
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    },
+    {
+     "median": 37,
+     "min": 37,
+     "max": 37,
+     "n": 1
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    }
+   ],
+   "reactions": {
+    "up_decision_s": {
+     "median": 12.01,
+     "min": 12.01,
+     "max": 12.01,
+     "n": 1
+    },
+    "replica_ready_s": {
+     "median": 41.128,
+     "min": 41.128,
+     "max": 41.128,
+     "n": 1
+    },
+    "first_success_on_new_replica_s": {
+     "median": 41.529,
+     "min": 41.529,
+     "max": 41.529,
+     "n": 1
+    },
+    "spawn_to_ready_s": {
+     "median": 29.116,
+     "min": 29.116,
+     "max": 29.116,
+     "n": 1
+    },
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   }
+  },
+  "static": {
+   "phase_goodput_rps": [
+    {
+     "median": 1.0,
+     "min": 1.0,
+     "max": 1.0,
+     "n": 1
+    },
+    {
+     "median": 0.4166666666666667,
+     "min": 0.4166666666666667,
+     "max": 0.4166666666666667,
+     "n": 1
+    },
+    {
+     "median": 0.05,
+     "min": 0.05,
+     "max": 0.05,
+     "n": 1
+    }
+   ],
+   "phase_p99_ttft_ms": [
+    {
+     "median": 56.61495300000024,
+     "min": 56.61495300000024,
+     "max": 56.61495300000024,
+     "n": 1
+    },
+    {
+     "median": 21965.985120000012,
+     "min": 21965.985120000012,
+     "max": 21965.985120000012,
+     "n": 1
+    },
+    {
+     "median": 21057.272297000003,
+     "min": 21057.272297000003,
+     "max": 21057.272297000003,
+     "n": 1
+    }
+   ],
+   "phase_p50_ttft_ms": [
+    {
+     "median": 17.718446999999287,
+     "min": 17.718446999999287,
+     "max": 17.718446999999287,
+     "n": 1
+    },
+    {
+     "median": 10025.149828000001,
+     "min": 10025.149828000001,
+     "max": 10025.149828000001,
+     "n": 1
+    },
+    {
+     "median": 12854.95999100001,
+     "min": 12854.95999100001,
+     "max": 12854.95999100001,
+     "n": 1
+    }
+   ],
+   "phase_p50_tpot_ms": [
+    {
+     "median": 8.678138368794327,
+     "min": 8.678138368794327,
+     "max": 8.678138368794327,
+     "n": 1
+    },
+    {
+     "median": 9.501017262626284,
+     "min": 9.501017262626284,
+     "max": 9.501017262626284,
+     "n": 1
+    },
+    {
+     "median": 9.52060129899499,
+     "min": 9.52060129899499,
+     "max": 9.52060129899499,
+     "n": 1
+    }
+   ],
+   "accounting": {
+    "planned": {
+     "median": 368,
+     "min": 368,
+     "max": 368,
+     "n": 1
+    },
+    "completed": {
+     "median": 318,
+     "min": 318,
+     "max": 318,
+     "n": 1
+    },
+    "failed": {
+     "median": 50,
+     "min": 50,
+     "max": 50,
+     "n": 1
+    },
+    "retried": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    }
+   },
+   "accounting_balanced": true,
+   "phase_failed": [
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    },
+    {
+     "median": 50,
+     "min": 50,
+     "max": 50,
+     "n": 1
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    }
+   ],
+   "reactions": {
+    "up_decision_s": {
+     "median": 12.01,
+     "min": 12.01,
+     "max": 12.01,
+     "n": 1
+    },
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   }
+  },
+  "static2": {
+   "phase_goodput_rps": [
+    {
+     "median": 1.0,
+     "min": 1.0,
+     "max": 1.0,
+     "n": 1
+    },
+    {
+     "median": 2.65,
+     "min": 2.65,
+     "max": 2.65,
+     "n": 1
+    },
+    {
+     "median": 1.3,
+     "min": 1.3,
+     "max": 1.3,
+     "n": 1
+    }
+   ],
+   "phase_p99_ttft_ms": [
+    {
+     "median": 49.15428599999905,
+     "min": 49.15428599999905,
+     "max": 49.15428599999905,
+     "n": 1
+    },
+    {
+     "median": 1461.7424750000064,
+     "min": 1461.7424750000064,
+     "max": 1461.7424750000064,
+     "n": 1
+    },
+    {
+     "median": 86.30427100000088,
+     "min": 86.30427100000088,
+     "max": 86.30427100000088,
+     "n": 1
+    }
+   ],
+   "phase_p50_ttft_ms": [
+    {
+     "median": 15.328980000000229,
+     "min": 15.328980000000229,
+     "max": 15.328980000000229,
+     "n": 1
+    },
+    {
+     "median": 32.309047000002465,
+     "min": 32.309047000002465,
+     "max": 32.309047000002465,
+     "n": 1
+    },
+    {
+     "median": 26.42710000000079,
+     "min": 26.42710000000079,
+     "max": 26.42710000000079,
+     "n": 1
+    }
+   ],
+   "phase_p50_tpot_ms": [
+    {
+     "median": 8.735780048192776,
+     "min": 8.735780048192776,
+     "max": 8.735780048192776,
+     "n": 1
+    },
+    {
+     "median": 9.555457662264152,
+     "min": 9.555457662264152,
+     "max": 9.555457662264152,
+     "n": 1
+    },
+    {
+     "median": 9.234725714285776,
+     "min": 9.234725714285776,
+     "max": 9.234725714285776,
+     "n": 1
+    }
+   ],
+   "accounting": {
+    "planned": {
+     "median": 368,
+     "min": 368,
+     "max": 368,
+     "n": 1
+    },
+    "completed": {
+     "median": 368,
+     "min": 368,
+     "max": 368,
+     "n": 1
+    },
+    "failed": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    },
+    "retried": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    }
+   },
+   "accounting_balanced": true,
+   "phase_failed": [
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 1
+    }
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   }
+  }
+ },
+ "meta": {
+  "replica_a_start_to_ready_s": 32.712467432022095,
+  "order": [
+   "static",
+   "auto",
+   "static2"
+  ],
+  "phases": [
+   [
+    20.0,
+    1.0
+   ],
+   [
+    60.0,
+    4.0
+   ],
+   [
+    40.0,
+    1.0
+   ]
+  ],
+  "gpus": {
+   "a": "0",
+   "b": "1"
+  },
+  "base_rps": 1.25,
+  "requests": 368,
+  "args": {
+   "mode": "scale",
+   "kill_at": "30.0",
+   "snapshot": "/tmp/e3/model",
+   "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+   "output": "/tmp/e3/e3-smoke",
+   "cache_root": "/tmp/e3/runtime",
+   "router_bin": "/tmp/e3/bin/router",
+   "autoscaler_bin": "/tmp/e3/bin/autoscaler",
+   "replay_bin": "/tmp/e3/bin/replay",
+   "token_ids": "/mnt/job_stage/app/.cache/snowflake/qwen25-05b-words.json",
+   "gpu_util": "0.25",
+   "max_num_seqs": "8",
+   "phases": "[(20.0, 1.0), (60.0, 4.0), (40.0, 1.0)]",
+   "base_rps": "1.25",
+   "conditions": "['static', 'auto', 'static2']",
+   "gpus": "{'a': '0', 'b': '1'}",
+   "fault_conditions": "['kill', 'none']",
+   "pairs": "1",
+   "queue_high": "4",
+   "queue_low": "1",
+   "ttft_high": "0.8",
+   "ttft_low": "0.2",
+   "trace_csv": "/tmp/e3/e3-smoke/trace.csv"
+  },
+  "nproc": 72,
+  "loadavg_start": [
+   4.0537109375,
+   2.7939453125,
+   1.2822265625
+  ]
+ },
+ "stop_reason": null,
+ "peak_owned_rss_bytes": 6279008256,
+ "loadavg_end": [
+  1.79638671875,
+  2.2421875,
+  1.6044921875
+ ]
+}

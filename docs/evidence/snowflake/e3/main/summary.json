@@ -1,0 +1,1309 @@
+{
+ "slo": {
+  "ttft_ms": 85.66444399999818,
+  "tpot_ms": 9.37005728571434,
+  "quantile": 0.99,
+  "samples": 183
+ },
+ "trials": [
+  {
+   "condition": "static",
+   "index": 0,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 60,
+     "goodput_rps": 1.0,
+     "ttft_ms": {
+      "p50": 17.15628800000195,
+      "p99": 82.8963960000001,
+      "max": 82.8963960000001
+     },
+     "tpot_ms": {
+      "p50": 9.149658266666666,
+      "p99": 9.392862318681312,
+      "max": 9.392862318681312
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 429,
+     "failed": 208,
+     "timeouts": 0,
+     "good": 2,
+     "goodput_rps": 0.016666666666666666,
+     "ttft_ms": {
+      "p50": 16923.901497000013,
+      "p99": 21453.022006999992,
+      "max": 21908.37494599998
+     },
+     "tpot_ms": {
+      "p50": 9.45790103147699,
+      "p99": 10.405386576922655,
+      "max": 10.781529830188825
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 423,
+     "failed": 2,
+     "timeouts": 0,
+     "good": 251,
+     "goodput_rps": 0.6972222222222222,
+     "ttft_ms": {
+      "p50": 27.879948000016157,
+      "p99": 17292.135037,
+      "max": 18102.66483599998
+     },
+     "tpot_ms": {
+      "p50": 9.29633993023281,
+      "p99": 9.723638376146832,
+      "max": 10.170276259258964
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 6.012,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 913,
+    "failed": 210,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "auto",
+   "index": 1,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 57,
+     "goodput_rps": 0.95,
+     "ttft_ms": {
+      "p50": 18.33643899999879,
+      "p99": 82.65107599999828,
+      "max": 82.65107599999828
+     },
+     "tpot_ms": {
+      "p50": 9.188965910112366,
+      "p99": 9.45992602197801,
+      "max": 9.45992602197801
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 597,
+     "failed": 40,
+     "timeouts": 0,
+     "good": 52,
+     "goodput_rps": 0.43333333333333335,
+     "ttft_ms": {
+      "p50": 3801.7830740000063,
+      "p99": 19442.529586999997,
+      "max": 19823.789967999997
+     },
+     "tpot_ms": {
+      "p50": 9.438908356234107,
+      "p99": 10.270726693333321,
+      "max": 10.605447137931057
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 425,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 363,
+     "goodput_rps": 1.0083333333333333,
+     "ttft_ms": {
+      "p50": 26.415004000009503,
+      "p99": 266.60640500002773,
+      "max": 1035.1926049999893
+     },
+     "tpot_ms": {
+      "p50": 9.163635238693429,
+      "p99": 9.553639448529472,
+      "max": 10.073442691357887
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 6.006,
+    "replica_ready_s": 34.718,
+    "first_success_on_new_replica_s": 41.521,
+    "spawn_to_ready_s": 28.71,
+    "down_decision_after_drop_s": 188.01,
+    "stopped_after_drop_s": 237.967
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 1083,
+    "failed": 40,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "static2",
+   "index": 2,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 61,
+     "goodput_rps": 1.0166666666666666,
+     "ttft_ms": {
+      "p50": 15.522448000001532,
+      "p99": 82.49192399999447,
+      "max": 82.49192399999447
+     },
+     "tpot_ms": {
+      "p50": 8.541368800000003,
+      "p99": 9.353082114942596,
+      "max": 9.353082114942596
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 637,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 115,
+     "goodput_rps": 0.9583333333333334,
+     "ttft_ms": {
+      "p50": 32.2731039999926,
+      "p99": 1969.539969000005,
+      "max": 2460.381502000004
+     },
+     "tpot_ms": {
+      "p50": 9.500641536299726,
+      "p99": 10.034842284091031,
+      "max": 10.311912999999969
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 425,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 362,
+     "goodput_rps": 1.0055555555555555,
+     "ttft_ms": {
+      "p50": 25.292791000043508,
+      "p99": 93.89366299999529,
+      "max": 354.4029969999974
+     },
+     "tpot_ms": {
+      "p50": 9.16845420930229,
+      "p99": 9.561519735848602,
+      "max": 9.847299911110895
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": 120.012,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 1123,
+    "failed": 0,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "static2",
+   "index": 3,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 59,
+     "goodput_rps": 0.9833333333333333,
+     "ttft_ms": {
+      "p50": 15.41915699999663,
+      "p99": 86.61751799999911,
+      "max": 86.61751799999911
+     },
+     "tpot_ms": {
+      "p50": 8.503378726027396,
+      "p99": 9.473069549180302,
+      "max": 9.473069549180302
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 637,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 63,
+     "goodput_rps": 0.525,
+     "ttft_ms": {
+      "p50": 31.922258000005968,
+      "p99": 1817.6943759999995,
+      "max": 2769.2485959999904
+     },
+     "tpot_ms": {
+      "p50": 9.50191463636425,
+      "p99": 10.056070472602773,
+      "max": 10.570330716980916
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 425,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 338,
+     "goodput_rps": 0.9388888888888889,
+     "ttft_ms": {
+      "p50": 25.039839999983087,
+      "p99": 89.34121699997922,
+      "max": 337.9998520000081
+     },
+     "tpot_ms": {
+      "p50": 9.16418411343803,
+      "p99": 9.554289648101276,
+      "max": 9.844167622222125
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": 120.011,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 1123,
+    "failed": 0,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "auto",
+   "index": 4,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 60,
+     "goodput_rps": 1.0,
+     "ttft_ms": {
+      "p50": 18.992764999995416,
+      "p99": 85.27545399999872,
+      "max": 85.27545399999872
+     },
+     "tpot_ms": {
+      "p50": 9.09109189080461,
+      "p99": 9.44091895054945,
+      "max": 9.44091895054945
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 608,
+     "failed": 29,
+     "timeouts": 0,
+     "good": 37,
+     "goodput_rps": 0.30833333333333335,
+     "ttft_ms": {
+      "p50": 3412.1297090000007,
+      "p99": 19194.329287,
+      "max": 19675.836500999998
+     },
+     "tpot_ms": {
+      "p50": 9.447883695054971,
+      "p99": 10.208716728813577,
+      "max": 12.824050066666677
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 425,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 348,
+     "goodput_rps": 0.9666666666666667,
+     "ttft_ms": {
+      "p50": 27.055978999997023,
+      "p99": 273.0486539999838,
+      "max": 1024.7061439999961
+     },
+     "tpot_ms": {
+      "p50": 9.183992050632929,
+      "p99": 9.608239844444647,
+      "max": 10.00095219753056
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 6.005,
+    "replica_ready_s": 34.312,
+    "first_success_on_new_replica_s": 36.513,
+    "spawn_to_ready_s": 28.305,
+    "down_decision_after_drop_s": 188.012,
+    "stopped_after_drop_s": 237.828
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 1094,
+    "failed": 29,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "static",
+   "index": 5,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 60,
+     "goodput_rps": 1.0,
+     "ttft_ms": {
+      "p50": 20.0783120000051,
+      "p99": 87.90603199999896,
+      "max": 87.90603199999896
+     },
+     "tpot_ms": {
+      "p50": 9.074931948275882,
+      "p99": 9.307838917582398,
+      "max": 9.307838917582398
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 428,
+     "failed": 209,
+     "timeouts": 0,
+     "good": 5,
+     "goodput_rps": 0.041666666666666664,
+     "ttft_ms": {
+      "p50": 16743.305838,
+      "p99": 21394.030411,
+      "max": 22089.82208500002
+     },
+     "tpot_ms": {
+      "p50": 9.451352586124399,
+      "p99": 10.511166909090951,
+      "max": 12.80550093333392
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 423,
+     "failed": 2,
+     "timeouts": 0,
+     "good": 285,
+     "goodput_rps": 0.7916666666666666,
+     "ttft_ms": {
+      "p50": 27.012326999974903,
+      "p99": 16409.532754000014,
+      "max": 17283.852002
+     },
+     "tpot_ms": {
+      "p50": 9.297713544117869,
+      "p99": 9.752613848039177,
+      "max": 10.222339950617615
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 6.011,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 912,
+    "failed": 211,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "static",
+   "index": 6,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 61,
+     "goodput_rps": 1.0166666666666666,
+     "ttft_ms": {
+      "p50": 17.466263000002073,
+      "p99": 85.66444399999818,
+      "max": 85.66444399999818
+     },
+     "tpot_ms": {
+      "p50": 9.095789148514825,
+      "p99": 9.37005728571434,
+      "max": 9.37005728571434
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 425,
+     "failed": 212,
+     "timeouts": 0,
+     "good": 6,
+     "goodput_rps": 0.05,
+     "ttft_ms": {
+      "p50": 17171.996719999996,
+      "p99": 21349.504818999994,
+      "max": 21390.71803199999
+     },
+     "tpot_ms": {
+      "p50": 9.412703682151612,
+      "p99": 10.270022474576116,
+      "max": 11.232411660377007
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 424,
+     "failed": 1,
+     "timeouts": 0,
+     "good": 291,
+     "goodput_rps": 0.8083333333333333,
+     "ttft_ms": {
+      "p50": 27.72153799998341,
+      "p99": 16138.803461000003,
+      "max": 17996.729431999993
+     },
+     "tpot_ms": {
+      "p50": 9.269901451612798,
+      "p99": 9.869616677777636,
+      "max": 10.145927760869634
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 6.007,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 910,
+    "failed": 213,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "auto",
+   "index": 7,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 56,
+     "goodput_rps": 0.9333333333333333,
+     "ttft_ms": {
+      "p50": 18.24911599999905,
+      "p99": 92.22478899999987,
+      "max": 92.22478899999987
+     },
+     "tpot_ms": {
+      "p50": 9.132627000000026,
+      "p99": 9.506967450549451,
+      "max": 9.506967450549451
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 603,
+     "failed": 34,
+     "timeouts": 0,
+     "good": 3,
+     "goodput_rps": 0.025,
+     "ttft_ms": {
+      "p50": 3673.410422999994,
+      "p99": 19582.736279999997,
+      "max": 20001.742937999996
+     },
+     "tpot_ms": {
+      "p50": 9.549487696470598,
+      "p99": 10.381778727272335,
+      "max": 10.879740103448245
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 425,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 347,
+     "goodput_rps": 0.9638888888888889,
+     "ttft_ms": {
+      "p50": 26.65128300001379,
+      "p99": 270.159616000019,
+      "max": 1036.1926119999844
+     },
+     "tpot_ms": {
+      "p50": 9.205797902173957,
+      "p99": 9.525607767554488,
+      "max": 10.041908654321077
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": 6.012,
+    "replica_ready_s": 34.522,
+    "first_success_on_new_replica_s": 38.523,
+    "spawn_to_ready_s": 28.507,
+    "down_decision_after_drop_s": 188.011,
+    "stopped_after_drop_s": 228.805
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 1089,
+    "failed": 34,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  },
+  {
+   "condition": "static2",
+   "index": 8,
+   "sender_valid": true,
+   "phases": [
+    {
+     "phase": 0,
+     "seconds": 60.0,
+     "multiple": 1.0,
+     "requests": 61,
+     "ok": 61,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 61,
+     "goodput_rps": 1.0166666666666666,
+     "ttft_ms": {
+      "p50": 15.408838999996078,
+      "p99": 81.85436400000253,
+      "max": 81.85436400000253
+     },
+     "tpot_ms": {
+      "p50": 8.539413807228911,
+      "p99": 9.33390134426229,
+      "max": 9.33390134426229
+     }
+    },
+    {
+     "phase": 1,
+     "seconds": 120.0,
+     "multiple": 4.0,
+     "requests": 637,
+     "ok": 637,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 45,
+     "goodput_rps": 0.375,
+     "ttft_ms": {
+      "p50": 32.856606999994256,
+      "p99": 2098.608890999996,
+      "max": 2627.8527239999967
+     },
+     "tpot_ms": {
+      "p50": 9.52560327341769,
+      "p99": 10.060476871287175,
+      "max": 10.369006137931137
+     }
+    },
+    {
+     "phase": 2,
+     "seconds": 360.0,
+     "multiple": 1.0,
+     "requests": 425,
+     "ok": 425,
+     "failed": 0,
+     "timeouts": 0,
+     "good": 368,
+     "goodput_rps": 1.0222222222222221,
+     "ttft_ms": {
+      "p50": 25.3821379999863,
+      "p99": 90.96620200001053,
+      "max": 137.91968699998688
+     },
+     "tpot_ms": {
+      "p50": 9.144816149758391,
+      "p99": 9.59035768181837,
+      "max": 9.850700876542604
+     }
+    }
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": 120.008,
+    "stopped_after_drop_s": null
+   },
+   "accounting": {
+    "planned": 1123,
+    "completed": 1123,
+    "failed": 0,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   }
+  }
+ ],
+ "by_condition": {
+  "auto": {
+   "phase_goodput_rps": [
+    {
+     "median": 0.95,
+     "min": 0.9333333333333333,
+     "max": 1.0,
+     "n": 3
+    },
+    {
+     "median": 0.30833333333333335,
+     "min": 0.025,
+     "max": 0.43333333333333335,
+     "n": 3
+    },
+    {
+     "median": 0.9666666666666667,
+     "min": 0.9638888888888889,
+     "max": 1.0083333333333333,
+     "n": 3
+    }
+   ],
+   "phase_p99_ttft_ms": [
+    {
+     "median": 85.27545399999872,
+     "min": 82.65107599999828,
+     "max": 92.22478899999987,
+     "n": 3
+    },
+    {
+     "median": 19442.529586999997,
+     "min": 19194.329287,
+     "max": 19582.736279999997,
+     "n": 3
+    },
+    {
+     "median": 270.159616000019,
+     "min": 266.60640500002773,
+     "max": 273.0486539999838,
+     "n": 3
+    }
+   ],
+   "phase_p50_ttft_ms": [
+    {
+     "median": 18.33643899999879,
+     "min": 18.24911599999905,
+     "max": 18.992764999995416,
+     "n": 3
+    },
+    {
+     "median": 3673.410422999994,
+     "min": 3412.1297090000007,
+     "max": 3801.7830740000063,
+     "n": 3
+    },
+    {
+     "median": 26.65128300001379,
+     "min": 26.415004000009503,
+     "max": 27.055978999997023,
+     "n": 3
+    }
+   ],
+   "phase_p50_tpot_ms": [
+    {
+     "median": 9.132627000000026,
+     "min": 9.09109189080461,
+     "max": 9.188965910112366,
+     "n": 3
+    },
+    {
+     "median": 9.447883695054971,
+     "min": 9.438908356234107,
+     "max": 9.549487696470598,
+     "n": 3
+    },
+    {
+     "median": 9.183992050632929,
+     "min": 9.163635238693429,
+     "max": 9.205797902173957,
+     "n": 3
+    }
+   ],
+   "accounting": {
+    "planned": {
+     "median": 1123,
+     "min": 1123,
+     "max": 1123,
+     "n": 3
+    },
+    "completed": {
+     "median": 1089,
+     "min": 1083,
+     "max": 1094,
+     "n": 3
+    },
+    "failed": {
+     "median": 34,
+     "min": 29,
+     "max": 40,
+     "n": 3
+    },
+    "retried": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    }
+   },
+   "accounting_balanced": true,
+   "phase_failed": [
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    },
+    {
+     "median": 34,
+     "min": 29,
+     "max": 40,
+     "n": 3
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    }
+   ],
+   "reactions": {
+    "up_decision_s": {
+     "median": 6.006,
+     "min": 6.005,
+     "max": 6.012,
+     "n": 3
+    },
+    "replica_ready_s": {
+     "median": 34.522,
+     "min": 34.312,
+     "max": 34.718,
+     "n": 3
+    },
+    "first_success_on_new_replica_s": {
+     "median": 38.523,
+     "min": 36.513,
+     "max": 41.521,
+     "n": 3
+    },
+    "spawn_to_ready_s": {
+     "median": 28.507,
+     "min": 28.305,
+     "max": 28.71,
+     "n": 3
+    },
+    "down_decision_after_drop_s": {
+     "median": 188.011,
+     "min": 188.01,
+     "max": 188.012,
+     "n": 3
+    },
+    "stopped_after_drop_s": {
+     "median": 237.828,
+     "min": 228.805,
+     "max": 237.967,
+     "n": 3
+    }
+   }
+  },
+  "static": {
+   "phase_goodput_rps": [
+    {
+     "median": 1.0,
+     "min": 1.0,
+     "max": 1.0166666666666666,
+     "n": 3
+    },
+    {
+     "median": 0.041666666666666664,
+     "min": 0.016666666666666666,
+     "max": 0.05,
+     "n": 3
+    },
+    {
+     "median": 0.7916666666666666,
+     "min": 0.6972222222222222,
+     "max": 0.8083333333333333,
+     "n": 3
+    }
+   ],
+   "phase_p99_ttft_ms": [
+    {
+     "median": 85.66444399999818,
+     "min": 82.8963960000001,
+     "max": 87.90603199999896,
+     "n": 3
+    },
+    {
+     "median": 21394.030411,
+     "min": 21349.504818999994,
+     "max": 21453.022006999992,
+     "n": 3
+    },
+    {
+     "median": 16409.532754000014,
+     "min": 16138.803461000003,
+     "max": 17292.135037,
+     "n": 3
+    }
+   ],
+   "phase_p50_ttft_ms": [
+    {
+     "median": 17.466263000002073,
+     "min": 17.15628800000195,
+     "max": 20.0783120000051,
+     "n": 3
+    },
+    {
+     "median": 16923.901497000013,
+     "min": 16743.305838,
+     "max": 17171.996719999996,
+     "n": 3
+    },
+    {
+     "median": 27.72153799998341,
+     "min": 27.012326999974903,
+     "max": 27.879948000016157,
+     "n": 3
+    }
+   ],
+   "phase_p50_tpot_ms": [
+    {
+     "median": 9.095789148514825,
+     "min": 9.074931948275882,
+     "max": 9.149658266666666,
+     "n": 3
+    },
+    {
+     "median": 9.451352586124399,
+     "min": 9.412703682151612,
+     "max": 9.45790103147699,
+     "n": 3
+    },
+    {
+     "median": 9.29633993023281,
+     "min": 9.269901451612798,
+     "max": 9.297713544117869,
+     "n": 3
+    }
+   ],
+   "accounting": {
+    "planned": {
+     "median": 1123,
+     "min": 1123,
+     "max": 1123,
+     "n": 3
+    },
+    "completed": {
+     "median": 912,
+     "min": 910,
+     "max": 913,
+     "n": 3
+    },
+    "failed": {
+     "median": 211,
+     "min": 210,
+     "max": 213,
+     "n": 3
+    },
+    "retried": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    }
+   },
+   "accounting_balanced": true,
+   "phase_failed": [
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    },
+    {
+     "median": 209,
+     "min": 208,
+     "max": 212,
+     "n": 3
+    },
+    {
+     "median": 2,
+     "min": 1,
+     "max": 2,
+     "n": 3
+    }
+   ],
+   "reactions": {
+    "up_decision_s": {
+     "median": 6.011,
+     "min": 6.007,
+     "max": 6.012,
+     "n": 3
+    },
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   }
+  },
+  "static2": {
+   "phase_goodput_rps": [
+    {
+     "median": 1.0166666666666666,
+     "min": 0.9833333333333333,
+     "max": 1.0166666666666666,
+     "n": 3
+    },
+    {
+     "median": 0.525,
+     "min": 0.375,
+     "max": 0.9583333333333334,
+     "n": 3
+    },
+    {
+     "median": 1.0055555555555555,
+     "min": 0.9388888888888889,
+     "max": 1.0222222222222221,
+     "n": 3
+    }
+   ],
+   "phase_p99_ttft_ms": [
+    {
+     "median": 82.49192399999447,
+     "min": 81.85436400000253,
+     "max": 86.61751799999911,
+     "n": 3
+    },
+    {
+     "median": 1969.539969000005,
+     "min": 1817.6943759999995,
+     "max": 2098.608890999996,
+     "n": 3
+    },
+    {
+     "median": 90.96620200001053,
+     "min": 89.34121699997922,
+     "max": 93.89366299999529,
+     "n": 3
+    }
+   ],
+   "phase_p50_ttft_ms": [
+    {
+     "median": 15.41915699999663,
+     "min": 15.408838999996078,
+     "max": 15.522448000001532,
+     "n": 3
+    },
+    {
+     "median": 32.2731039999926,
+     "min": 31.922258000005968,
+     "max": 32.856606999994256,
+     "n": 3
+    },
+    {
+     "median": 25.292791000043508,
+     "min": 25.039839999983087,
+     "max": 25.3821379999863,
+     "n": 3
+    }
+   ],
+   "phase_p50_tpot_ms": [
+    {
+     "median": 8.539413807228911,
+     "min": 8.503378726027396,
+     "max": 8.541368800000003,
+     "n": 3
+    },
+    {
+     "median": 9.50191463636425,
+     "min": 9.500641536299726,
+     "max": 9.52560327341769,
+     "n": 3
+    },
+    {
+     "median": 9.16418411343803,
+     "min": 9.144816149758391,
+     "max": 9.16845420930229,
+     "n": 3
+    }
+   ],
+   "accounting": {
+    "planned": {
+     "median": 1123,
+     "min": 1123,
+     "max": 1123,
+     "n": 3
+    },
+    "completed": {
+     "median": 1123,
+     "min": 1123,
+     "max": 1123,
+     "n": 3
+    },
+    "failed": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    },
+    "retried": {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    }
+   },
+   "accounting_balanced": true,
+   "phase_failed": [
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    },
+    {
+     "median": 0,
+     "min": 0,
+     "max": 0,
+     "n": 3
+    }
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": {
+     "median": 120.011,
+     "min": 120.008,
+     "max": 120.012,
+     "n": 3
+    },
+    "stopped_after_drop_s": null
+   }
+  }
+ },
+ "meta": {
+  "replica_a_start_to_ready_s": 32.716758251190186,
+  "order": [
+   "static",
+   "auto",
+   "static2",
+   "static2",
+   "auto",
+   "static",
+   "static",
+   "auto",
+   "static2"
+  ],
+  "phases": [
+   [
+    60.0,
+    1.0
+   ],
+   [
+    120.0,
+    4.0
+   ],
+   [
+    360.0,
+    1.0
+   ]
+  ],
+  "gpus": {
+   "a": "0",
+   "b": "1"
+  },
+  "base_rps": 1.25,
+  "requests": 1123,
+  "args": {
+   "mode": "scale",
+   "kill_at": "30.0",
+   "snapshot": "/tmp/e3/model",
+   "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+   "output": "/tmp/e3/e3-main",
+   "cache_root": "/tmp/e3/runtime",
+   "router_bin": "/tmp/e3/bin/router",
+   "autoscaler_bin": "/tmp/e3/bin/autoscaler",
+   "replay_bin": "/tmp/e3/bin/replay",
+   "token_ids": "/mnt/job_stage/app/.cache/snowflake/qwen25-05b-words.json",
+   "gpu_util": "0.25",
+   "max_num_seqs": "8",
+   "phases": "[(60.0, 1.0), (120.0, 4.0), (360.0, 1.0)]",
+   "base_rps": "1.25",
+   "conditions": "['static', 'auto', 'static2']",
+   "gpus": "{'a': '0', 'b': '1'}",
+   "fault_conditions": "['kill', 'none']",
+   "pairs": "3",
+   "queue_high": "4",
+   "queue_low": "1",
+   "ttft_high": "0.8",
+   "ttft_low": "0.2",
+   "trace_csv": "/tmp/e3/e3-main/trace.csv"
+  },
+  "nproc": 72,
+  "loadavg_start": [
+   4.5986328125,
+   2.962890625,
+   1.33642578125
+  ]
+ },
+ "stop_reason": null,
+ "peak_owned_rss_bytes": 6340059136,
+ "loadavg_end": [
+  1.78662109375,
+  2.2529296875,
+  2.16650390625
+ ]
+}

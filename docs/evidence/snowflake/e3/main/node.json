@@ -1,0 +1,40 @@
+{
+ "gpus": [
+  "0, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000002:00:00.0",
+  "1, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000003:00:00.0"
+ ],
+ "topo": "\u001b[4mGPU0\tGPU1\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\tNODE\t0-17\t0\t\tN/A\nGPU1\tSYS\t X \tSYS\t36-53\t2\t\tN/A\nNIC0\tNODE\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+ "nproc": 72,
+ "loadavg": [
+  4.83740234375,
+  2.70849609375,
+  1.17529296875
+ ],
+ "meminfo": [
+  "MemTotal:       908196204 kB",
+  "MemFree:        870542572 kB",
+  "MemAvailable:   895706428 kB"
+ ],
+ "python": "3.12.15",
+ "packages": {
+  "vllm": "0.10.2",
+  "torch": "2.8.0",
+  "transformers": "4.55.4",
+  "numpy": "2.2.6"
+ },
+ "binaries": {
+  "autoscaler": "47df5239673536b6d467cae05522204050ce55bbda01de560e5f4bd5bb028465",
+  "replay": "bbcbdd0445b49f8587d10bb8100bb4ee4430c4bbc4118eb34e507959c4d73a5c",
+  "router": "b81e1b0762a038eb23a6589d759ce22f15b562781fd4590fd5e557d17d8328ba"
+ },
+ "words_sha256": "54e33c43112e426ba6e80ece4d229304d348d9a939a578d6df355e0a6d6b6c28",
+ "cuda_visible_devices": null,
+ "prometheus_multiproc_dir": "/tmp/prometheus-multi-dir",
+ "model_fetch": {
+  "asset": "models/Qwen2.5-0.5B-Instruct",
+  "bytes": 999628800,
+  "get_seconds": 6.4,
+  "MBps": 155.3
+ },
+ "model_safetensors_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+}

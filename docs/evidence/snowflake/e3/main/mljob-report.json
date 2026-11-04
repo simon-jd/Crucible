@@ -1,0 +1,555 @@
+{
+  "started_at": "2026-11-04T18:31:32+00:00",
+  "pool": "CRUCIBLE_2XA10_POOL",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e3_autoscale.py",
+  "include": [
+    "serving/localscale",
+    "serving/baseline",
+    "scripts/snowflake",
+    ".cache/snowflake/bin",
+    ".cache/snowflake/qwen25-05b-words.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "e3-main",
+    "--phases",
+    "60:1,120:4,360:1",
+    "--base-rps",
+    "1.25",
+    "--conditions",
+    "static,auto,static2",
+    "--pairs",
+    "3"
+  ],
+  "lock_wait_s": 3960.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E3_MAIN_16M5QAIIMN11N",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "tag": "e3-main",
+      "returncode": 0,
+      "seconds": 5215.1,
+      "node": {
+        "gpus": [
+          "0, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000002:00:00.0",
+          "1, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000003:00:00.0"
+        ],
+        "topo": "\u001b[4mGPU0\tGPU1\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\tNODE\t0-17\t0\t\tN/A\nGPU1\tSYS\t X \tSYS\t36-53\t2\t\tN/A\nNIC0\tNODE\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+        "nproc": 72,
+        "loadavg": [
+          4.83740234375,
+          2.70849609375,
+          1.17529296875
+        ],
+        "meminfo": [
+          "MemTotal:       908196204 kB",
+          "MemFree:        870542572 kB",
+          "MemAvailable:   895706428 kB"
+        ],
+        "python": "3.12.15",
+        "packages": {
+          "vllm": "0.10.2",
+          "torch": "2.8.0",
+          "transformers": "4.55.4",
+          "numpy": "2.2.6"
+        },
+        "binaries": {
+          "autoscaler": "47df5239673536b6d467cae05522204050ce55bbda01de560e5f4bd5bb028465",
+          "replay": "bbcbdd0445b49f8587d10bb8100bb4ee4430c4bbc4118eb34e507959c4d73a5c",
+          "router": "b81e1b0762a038eb23a6589d759ce22f15b562781fd4590fd5e557d17d8328ba"
+        },
+        "words_sha256": "54e33c43112e426ba6e80ece4d229304d348d9a939a578d6df355e0a6d6b6c28",
+        "cuda_visible_devices": null,
+        "prometheus_multiproc_dir": "/tmp/prometheus-multi-dir",
+        "model_fetch": {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 6.4,
+          "MBps": 155.3
+        },
+        "model_safetensors_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+      },
+      "summary": {
+        "slo": {
+          "ttft_ms": 85.66444399999818,
+          "tpot_ms": 9.37005728571434,
+          "quantile": 0.99,
+          "samples": 183
+        },
+        "stop_reason": null,
+        "meta": {
+          "replica_a_start_to_ready_s": 32.716758251190186,
+          "order": [
+            "static",
+            "auto",
+            "static2",
+            "static2",
+            "auto",
+            "static",
+            "static",
+            "auto",
+            "static2"
+          ],
+          "phases": [
+            [
+              60.0,
+              1.0
+            ],
+            [
+              120.0,
+              4.0
+            ],
+            [
+              360.0,
+              1.0
+            ]
+          ],
+          "gpus": {
+            "a": "0",
+            "b": "1"
+          },
+          "base_rps": 1.25,
+          "requests": 1123,
+          "args": {
+            "mode": "scale",
+            "kill_at": "30.0",
+            "snapshot": "/tmp/e3/model",
+            "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+            "output": "/tmp/e3/e3-main",
+            "cache_root": "/tmp/e3/runtime",
+            "router_bin": "/tmp/e3/bin/router",
+            "autoscaler_bin": "/tmp/e3/bin/autoscaler",
+            "replay_bin": "/tmp/e3/bin/replay",
+            "token_ids": "/mnt/job_stage/app/.cache/snowflake/qwen25-05b-words.json",
+            "gpu_util": "0.25",
+            "max_num_seqs": "8",
+            "phases": "[(60.0, 1.0), (120.0, 4.0), (360.0, 1.0)]",
+            "base_rps": "1.25",
+            "conditions": "['static', 'auto', 'static2']",
+            "gpus": "{'a': '0', 'b': '1'}",
+            "fault_conditions": "['kill', 'none']",
+            "pairs": "3",
+            "queue_high": "4",
+            "queue_low": "1",
+            "ttft_high": "0.8",
+            "ttft_low": "0.2",
+            "trace_csv": "/tmp/e3/e3-main/trace.csv"
+          },
+          "nproc": 72,
+          "loadavg_start": [
+            4.5986328125,
+            2.962890625,
+            1.33642578125
+          ]
+        },
+        "peak_owned_rss_bytes": 6340059136,
+        "trials": [
+          {
+            "index": 0,
+            "condition": "static",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 913,
+              "failed": 210,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 6.012,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": null,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0,
+              0.016666666666666666,
+              0.6972222222222222
+            ],
+            "p50_tpot_ms": [
+              9.149658266666666,
+              9.45790103147699,
+              9.29633993023281
+            ],
+            "p50_ttft_ms": [
+              17.15628800000195,
+              16923.901497000013,
+              27.879948000016157
+            ],
+            "p99_ttft_ms": [
+              82.8963960000001,
+              21453.022006999992,
+              17292.135037
+            ]
+          },
+          {
+            "index": 1,
+            "condition": "auto",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 1083,
+              "failed": 40,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 6.006,
+              "replica_ready_s": 34.718,
+              "first_success_on_new_replica_s": 41.521,
+              "spawn_to_ready_s": 28.71,
+              "down_decision_after_drop_s": 188.01,
+              "stopped_after_drop_s": 237.967
+            },
+            "goodput_rps": [
+              0.95,
+              0.43333333333333335,
+              1.0083333333333333
+            ],
+            "p50_tpot_ms": [
+              9.188965910112366,
+              9.438908356234107,
+              9.163635238693429
+            ],
+            "p50_ttft_ms": [
+              18.33643899999879,
+              3801.7830740000063,
+              26.415004000009503
+            ],
+            "p99_ttft_ms": [
+              82.65107599999828,
+              19442.529586999997,
+              266.60640500002773
+            ]
+          },
+          {
+            "index": 2,
+            "condition": "static2",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 1123,
+              "failed": 0,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": null,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": 120.012,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0166666666666666,
+              0.9583333333333334,
+              1.0055555555555555
+            ],
+            "p50_tpot_ms": [
+              8.541368800000003,
+              9.500641536299726,
+              9.16845420930229
+            ],
+            "p50_ttft_ms": [
+              15.522448000001532,
+              32.2731039999926,
+              25.292791000043508
+            ],
+            "p99_ttft_ms": [
+              82.49192399999447,
+              1969.539969000005,
+              93.89366299999529
+            ]
+          },
+          {
+            "index": 3,
+            "condition": "static2",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 1123,
+              "failed": 0,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": null,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": 120.011,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              0.9833333333333333,
+              0.525,
+              0.9388888888888889
+            ],
+            "p50_tpot_ms": [
+              8.503378726027396,
+              9.50191463636425,
+              9.16418411343803
+            ],
+            "p50_ttft_ms": [
+              15.41915699999663,
+              31.922258000005968,
+              25.039839999983087
+            ],
+            "p99_ttft_ms": [
+              86.61751799999911,
+              1817.6943759999995,
+              89.34121699997922
+            ]
+          },
+          {
+            "index": 4,
+            "condition": "auto",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 1094,
+              "failed": 29,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 6.005,
+              "replica_ready_s": 34.312,
+              "first_success_on_new_replica_s": 36.513,
+              "spawn_to_ready_s": 28.305,
+              "down_decision_after_drop_s": 188.012,
+              "stopped_after_drop_s": 237.828
+            },
+            "goodput_rps": [
+              1.0,
+              0.30833333333333335,
+              0.9666666666666667
+            ],
+            "p50_tpot_ms": [
+              9.09109189080461,
+              9.447883695054971,
+              9.183992050632929
+            ],
+            "p50_ttft_ms": [
+              18.992764999995416,
+              3412.1297090000007,
+              27.055978999997023
+            ],
+            "p99_ttft_ms": [
+              85.27545399999872,
+              19194.329287,
+              273.0486539999838
+            ]
+          },
+          {
+            "index": 5,
+            "condition": "static",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 912,
+              "failed": 211,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 6.011,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": null,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0,
+              0.041666666666666664,
+              0.7916666666666666
+            ],
+            "p50_tpot_ms": [
+              9.074931948275882,
+              9.451352586124399,
+              9.297713544117869
+            ],
+            "p50_ttft_ms": [
+              20.0783120000051,
+              16743.305838,
+              27.012326999974903
+            ],
+            "p99_ttft_ms": [
+              87.90603199999896,
+              21394.030411,
+              16409.532754000014
+            ]
+          },
+          {
+            "index": 6,
+            "condition": "static",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 910,
+              "failed": 213,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 6.007,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": null,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0166666666666666,
+              0.05,
+              0.8083333333333333
+            ],
+            "p50_tpot_ms": [
+              9.095789148514825,
+              9.412703682151612,
+              9.269901451612798
+            ],
+            "p50_ttft_ms": [
+              17.466263000002073,
+              17171.996719999996,
+              27.72153799998341
+            ],
+            "p99_ttft_ms": [
+              85.66444399999818,
+              21349.504818999994,
+              16138.803461000003
+            ]
+          },
+          {
+            "index": 7,
+            "condition": "auto",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 1089,
+              "failed": 34,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 6.012,
+              "replica_ready_s": 34.522,
+              "first_success_on_new_replica_s": 38.523,
+              "spawn_to_ready_s": 28.507,
+              "down_decision_after_drop_s": 188.011,
+              "stopped_after_drop_s": 228.805
+            },
+            "goodput_rps": [
+              0.9333333333333333,
+              0.025,
+              0.9638888888888889
+            ],
+            "p50_tpot_ms": [
+              9.132627000000026,
+              9.549487696470598,
+              9.205797902173957
+            ],
+            "p50_ttft_ms": [
+              18.24911599999905,
+              3673.410422999994,
+              26.65128300001379
+            ],
+            "p99_ttft_ms": [
+              92.22478899999987,
+              19582.736279999997,
+              270.159616000019
+            ]
+          },
+          {
+            "index": 8,
+            "condition": "static2",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 1123,
+              "completed": 1123,
+              "failed": 0,
+              "retried": 0,
+              "records": 1123,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": null,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": 120.008,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0166666666666666,
+              0.375,
+              1.0222222222222221
+            ],
+            "p50_tpot_ms": [
+              8.539413807228911,
+              9.52560327341769,
+              9.144816149758391
+            ],
+            "p50_ttft_ms": [
+              15.408838999996078,
+              32.856606999994256,
+              25.3821379999863
+            ],
+            "p99_ttft_ms": [
+              81.85436400000253,
+              2098.608890999996,
+              90.96620200001053
+            ]
+          }
+        ]
+      },
+      "upload": {
+        "stage_path": "e3/runs/e3-main.tar.gz",
+        "bytes": 711237,
+        "sha256": "752144a9a97df98a192e510cefa780d1bea2ccc8993d8f12bc827fbe856f0def"
+      }
+    }
+  ],
+  "seconds": 5682.9,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 5.525
+}

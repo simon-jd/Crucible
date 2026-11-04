@@ -1,0 +1,56 @@
+{
+  "started_at": "2026-11-04T17:59:58+00:00",
+  "pool": "CRUCIBLE_2XA10_POOL",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e3_autoscale.py",
+  "include": [
+    "serving/localscale",
+    "serving/baseline",
+    "scripts/snowflake",
+    ".cache/snowflake/bin",
+    ".cache/snowflake/qwen25-05b-words.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "e3-main",
+    "--phases",
+    "60:1,120:4,360:1",
+    "--base-rps",
+    "1.25",
+    "--conditions",
+    "static,auto,static2",
+    "--pairs",
+    "3"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E3_MAIN_Z3Y7ROIKVMSX",
+  "cancelled": true,
+  "seconds": 62.5,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.061
+}

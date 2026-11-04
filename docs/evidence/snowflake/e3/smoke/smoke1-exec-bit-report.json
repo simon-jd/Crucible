@@ -1,0 +1,108 @@
+{
+  "started_at": "2026-11-04T08:23:33+00:00",
+  "pool": "CRUCIBLE_2XA10_POOL",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e3_autoscale.py",
+  "include": [
+    "serving/localscale",
+    "serving/baseline",
+    "scripts/snowflake",
+    ".cache/snowflake/bin",
+    ".cache/snowflake/qwen25-05b-words.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "e3-smoke",
+    "--phases",
+    "20:1,60:4,40:1",
+    "--base-rps",
+    "1.25",
+    "--conditions",
+    "static,auto,static2",
+    "--pairs",
+    "1"
+  ],
+  "lock_wait_s": 260.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E3_SMOKE_W7EF1JQXYJZ5",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "tag": "e3-smoke",
+      "returncode": 1,
+      "seconds": 60.1,
+      "node": {
+        "gpus": [
+          "0, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000002:00:00.0",
+          "1, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000003:00:00.0"
+        ],
+        "topo": "\u001b[4mGPU0\tGPU1\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\tNODE\t0-17\t0\t\tN/A\nGPU1\tSYS\t X \tSYS\t36-53\t2\t\tN/A\nNIC0\tNODE\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+        "nproc": 72,
+        "loadavg": [
+          4.14208984375,
+          2.330078125,
+          0.99609375
+        ],
+        "meminfo": [
+          "MemTotal:       908196204 kB",
+          "MemFree:        870408664 kB",
+          "MemAvailable:   895474976 kB"
+        ],
+        "python": "3.12.15",
+        "packages": {
+          "vllm": "0.10.2",
+          "torch": "2.8.0",
+          "transformers": "4.55.4",
+          "numpy": "2.2.6"
+        },
+        "binaries": {
+          "autoscaler": "47df5239673536b6d467cae05522204050ce55bbda01de560e5f4bd5bb028465",
+          "replay": "bbcbdd0445b49f8587d10bb8100bb4ee4430c4bbc4118eb34e507959c4d73a5c",
+          "router": "b81e1b0762a038eb23a6589d759ce22f15b562781fd4590fd5e557d17d8328ba"
+        },
+        "words_sha256": "54e33c43112e426ba6e80ece4d229304d348d9a939a578d6df355e0a6d6b6c28",
+        "cuda_visible_devices": null,
+        "model_fetch": {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 6.1,
+          "MBps": 163.3
+        },
+        "model_safetensors_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+      },
+      "upload": {
+        "stage_path": "e3/runs/e3-smoke.tar.gz",
+        "bytes": 9705,
+        "sha256": "f7475f3f5e454a3b0fcc7a3e530a337671892bf9c7e9c19172ecbac5bf6a7b59"
+      }
+    }
+  ],
+  "seconds": 451.2,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "1",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.439
+}

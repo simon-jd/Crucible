@@ -1,0 +1,1204 @@
+{
+ "slo": {
+  "ttft_ms": 85.66444399999818,
+  "tpot_ms": 9.37005728571434,
+  "quantile": 0.99,
+  "samples": 183
+ },
+ "order": [
+  "static",
+  "auto",
+  "static2",
+  "static2",
+  "auto",
+  "static",
+  "static",
+  "auto",
+  "static2"
+ ],
+ "by_condition": {
+  "static": {
+   "n": 3,
+   "goodput_phase0": [
+    1.0,
+    1.0,
+    1.017
+   ],
+   "goodput_phase1": [
+    0.042,
+    0.017,
+    0.05
+   ],
+   "goodput_phase2": [
+    0.792,
+    0.697,
+    0.808
+   ],
+   "p50_tpot_phase0": [
+    9.1,
+    9.07,
+    9.15
+   ],
+   "p50_tpot_phase1": [
+    9.45,
+    9.41,
+    9.46
+   ],
+   "p50_tpot_phase2": [
+    9.3,
+    9.27,
+    9.3
+   ],
+   "p50_ttft_phase0": [
+    17.5,
+    17.2,
+    20.1
+   ],
+   "p50_ttft_phase1": [
+    16923.9,
+    16743.3,
+    17172.0
+   ],
+   "p50_ttft_phase2": [
+    27.7,
+    27.0,
+    27.9
+   ],
+   "p99_ttft_phase0": [
+    85.7,
+    82.9,
+    87.9
+   ],
+   "p99_ttft_phase1": [
+    21394.0,
+    21349.5,
+    21453.0
+   ],
+   "p99_ttft_phase2": [
+    16409.5,
+    16138.8,
+    17292.1
+   ],
+   "up_decision_s": [
+    6.011,
+    6.007,
+    6.012
+   ],
+   "replica_ready_s": null,
+   "first_success_on_new_replica_s": null,
+   "spawn_to_ready_s": null,
+   "down_decision_after_drop_s": null,
+   "stopped_after_drop_s": null,
+   "completed": [
+    913,
+    912,
+    910
+   ],
+   "failed": [
+    210,
+    211,
+    213
+   ],
+   "retried": [
+    0,
+    0,
+    0
+   ],
+   "planned": [
+    1123,
+    1123,
+    1123
+   ],
+   "balanced": true,
+   "sender_valid": true,
+   "served_by_b": [
+    null,
+    null,
+    null
+   ],
+   "b_starts": [
+    0,
+    0,
+    0
+   ],
+   "burst_ok": [
+    429,
+    428,
+    425
+   ],
+   "burst_ttft_within_slo": [
+    10,
+    11,
+    11
+   ],
+   "burst_tpot_within_slo": [
+    102,
+    73,
+    136
+   ],
+   "gpu1_burst_util": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "gpu0_burst_util": [
+    46.2,
+    46.3,
+    46.3
+   ]
+  },
+  "auto": {
+   "n": 3,
+   "goodput_phase0": [
+    0.95,
+    0.933,
+    1.0
+   ],
+   "goodput_phase1": [
+    0.308,
+    0.025,
+    0.433
+   ],
+   "goodput_phase2": [
+    0.967,
+    0.964,
+    1.008
+   ],
+   "p50_tpot_phase0": [
+    9.13,
+    9.09,
+    9.19
+   ],
+   "p50_tpot_phase1": [
+    9.45,
+    9.44,
+    9.55
+   ],
+   "p50_tpot_phase2": [
+    9.18,
+    9.16,
+    9.21
+   ],
+   "p50_ttft_phase0": [
+    18.3,
+    18.2,
+    19.0
+   ],
+   "p50_ttft_phase1": [
+    3673.4,
+    3412.1,
+    3801.8
+   ],
+   "p50_ttft_phase2": [
+    26.7,
+    26.4,
+    27.1
+   ],
+   "p99_ttft_phase0": [
+    85.3,
+    82.7,
+    92.2
+   ],
+   "p99_ttft_phase1": [
+    19442.5,
+    19194.3,
+    19582.7
+   ],
+   "p99_ttft_phase2": [
+    270.2,
+    266.6,
+    273.0
+   ],
+   "up_decision_s": [
+    6.006,
+    6.005,
+    6.012
+   ],
+   "replica_ready_s": [
+    34.522,
+    34.312,
+    34.718
+   ],
+   "first_success_on_new_replica_s": [
+    38.523,
+    36.513,
+    41.521
+   ],
+   "spawn_to_ready_s": [
+    28.507,
+    28.305,
+    28.71
+   ],
+   "down_decision_after_drop_s": [
+    188.011,
+    188.01,
+    188.012
+   ],
+   "stopped_after_drop_s": [
+    237.828,
+    228.805,
+    237.967
+   ],
+   "completed": [
+    1083,
+    1094,
+    1089
+   ],
+   "failed": [
+    40,
+    29,
+    34
+   ],
+   "retried": [
+    0,
+    0,
+    0
+   ],
+   "planned": [
+    1123,
+    1123,
+    1123
+   ],
+   "balanced": true,
+   "sender_valid": true,
+   "served_by_b": [
+    342,
+    353,
+    349
+   ],
+   "b_starts": [
+    2,
+    2,
+    2
+   ],
+   "burst_ok": [
+    597,
+    608,
+    603
+   ],
+   "burst_ttft_within_slo": [
+    131,
+    145,
+    127
+   ],
+   "burst_tpot_within_slo": [
+    179,
+    185,
+    58
+   ],
+   "gpu1_burst_util": [
+    29.3,
+    31.5,
+    31.1
+   ],
+   "gpu0_burst_util": [
+    46.2,
+    46.1,
+    45.5
+   ]
+  },
+  "static2": {
+   "n": 3,
+   "goodput_phase0": [
+    1.017,
+    0.983,
+    1.017
+   ],
+   "goodput_phase1": [
+    0.525,
+    0.375,
+    0.958
+   ],
+   "goodput_phase2": [
+    1.006,
+    0.939,
+    1.022
+   ],
+   "p50_tpot_phase0": [
+    8.54,
+    8.5,
+    8.54
+   ],
+   "p50_tpot_phase1": [
+    9.5,
+    9.5,
+    9.53
+   ],
+   "p50_tpot_phase2": [
+    9.16,
+    9.14,
+    9.17
+   ],
+   "p50_ttft_phase0": [
+    15.4,
+    15.4,
+    15.5
+   ],
+   "p50_ttft_phase1": [
+    32.3,
+    31.9,
+    32.9
+   ],
+   "p50_ttft_phase2": [
+    25.3,
+    25.0,
+    25.4
+   ],
+   "p99_ttft_phase0": [
+    82.5,
+    81.9,
+    86.6
+   ],
+   "p99_ttft_phase1": [
+    1969.5,
+    1817.7,
+    2098.6
+   ],
+   "p99_ttft_phase2": [
+    91.0,
+    89.3,
+    93.9
+   ],
+   "up_decision_s": null,
+   "replica_ready_s": null,
+   "first_success_on_new_replica_s": null,
+   "spawn_to_ready_s": null,
+   "down_decision_after_drop_s": [
+    120.011,
+    120.008,
+    120.012
+   ],
+   "stopped_after_drop_s": null,
+   "completed": [
+    1123,
+    1123,
+    1123
+   ],
+   "failed": [
+    0,
+    0,
+    0
+   ],
+   "retried": [
+    0,
+    0,
+    0
+   ],
+   "planned": [
+    1123,
+    1123,
+    1123
+   ],
+   "balanced": true,
+   "sender_valid": true,
+   "served_by_b": [
+    493,
+    491,
+    494
+   ],
+   "b_starts": [
+    1,
+    1,
+    1
+   ],
+   "burst_ok": [
+    637,
+    637,
+    637
+   ],
+   "burst_ttft_within_slo": [
+    412,
+    424,
+    411
+   ],
+   "burst_tpot_within_slo": [
+    171,
+    94,
+    66
+   ],
+   "gpu1_burst_util": [
+    43.8,
+    44.0,
+    44.1
+   ],
+   "gpu0_burst_util": [
+    45.1,
+    44.7,
+    44.5
+   ]
+  }
+ },
+ "trials": [
+  {
+   "index": 0,
+   "condition": "static",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 913,
+    "failed": 210,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    1.0,
+    0.017,
+    0.697
+   ],
+   "good": [
+    60,
+    2,
+    251
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    208,
+    2
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    9.15,
+    9.46,
+    9.3
+   ],
+   "p50_ttft": [
+    17.2,
+    16923.9,
+    27.9
+   ],
+   "p99_ttft": [
+    82.9,
+    21453.0,
+    17292.1
+   ],
+   "reactions": {
+    "up_decision_s": 6.012,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "b_starts": 0,
+   "served_by_b": null,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 429,
+    "ttft_within_slo": 10,
+    "tpot_within_slo": 102
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 46.2,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 0.0,
+     "mem_max_mib": 0.0,
+     "n": 120
+    }
+   },
+   "prestart": null
+  },
+  {
+   "index": 1,
+   "condition": "auto",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 1083,
+    "failed": 40,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    0.95,
+    0.433,
+    1.008
+   ],
+   "good": [
+    57,
+    52,
+    363
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    40,
+    0
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    9.19,
+    9.44,
+    9.16
+   ],
+   "p50_ttft": [
+    18.3,
+    3801.8,
+    26.4
+   ],
+   "p99_ttft": [
+    82.7,
+    19442.5,
+    266.6
+   ],
+   "reactions": {
+    "up_decision_s": 6.006,
+    "replica_ready_s": 34.718,
+    "first_success_on_new_replica_s": 41.521,
+    "spawn_to_ready_s": 28.71,
+    "down_decision_after_drop_s": 188.01,
+    "stopped_after_drop_s": 237.967
+   },
+   "b_starts": 2,
+   "served_by_b": 342,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 597,
+    "ttft_within_slo": 131,
+    "tpot_within_slo": 179
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 46.2,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 29.3,
+     "mem_max_mib": 6502.0,
+     "n": 120
+    }
+   },
+   "prestart": null
+  },
+  {
+   "index": 2,
+   "condition": "static2",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 1123,
+    "failed": 0,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    1.017,
+    0.958,
+    1.006
+   ],
+   "good": [
+    61,
+    115,
+    362
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    0,
+    0
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    8.54,
+    9.5,
+    9.17
+   ],
+   "p50_ttft": [
+    15.5,
+    32.3,
+    25.3
+   ],
+   "p99_ttft": [
+    82.5,
+    1969.5,
+    93.9
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": 120.012,
+    "stopped_after_drop_s": null
+   },
+   "b_starts": 1,
+   "served_by_b": 493,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 637,
+    "ttft_within_slo": 412,
+    "tpot_within_slo": 171
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 45.1,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 43.8,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    }
+   },
+   "prestart": {
+    "t": 1793822635.7182505,
+    "event": "replica_prestarted",
+    "replica": "b",
+    "gpu": "1",
+    "start_to_ready_s": 28.325480937957764
+   }
+  },
+  {
+   "index": 3,
+   "condition": "static2",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 1123,
+    "failed": 0,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    0.983,
+    0.525,
+    0.939
+   ],
+   "good": [
+    59,
+    63,
+    338
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    0,
+    0
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    8.5,
+    9.5,
+    9.16
+   ],
+   "p50_ttft": [
+    15.4,
+    31.9,
+    25.0
+   ],
+   "p99_ttft": [
+    86.6,
+    1817.7,
+    89.3
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": 120.011,
+    "stopped_after_drop_s": null
+   },
+   "b_starts": 1,
+   "served_by_b": 491,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 637,
+    "ttft_within_slo": 424,
+    "tpot_within_slo": 94
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 44.7,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 44.0,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    }
+   },
+   "prestart": {
+    "t": 1793823239.1870277,
+    "event": "replica_prestarted",
+    "replica": "b",
+    "gpu": "1",
+    "start_to_ready_s": 28.311712980270386
+   }
+  },
+  {
+   "index": 4,
+   "condition": "auto",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 1094,
+    "failed": 29,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    1.0,
+    0.308,
+    0.967
+   ],
+   "good": [
+    60,
+    37,
+    348
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    29,
+    0
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    9.09,
+    9.45,
+    9.18
+   ],
+   "p50_ttft": [
+    19.0,
+    3412.1,
+    27.1
+   ],
+   "p99_ttft": [
+    85.3,
+    19194.3,
+    273.0
+   ],
+   "reactions": {
+    "up_decision_s": 6.005,
+    "replica_ready_s": 34.312,
+    "first_success_on_new_replica_s": 36.513,
+    "spawn_to_ready_s": 28.305,
+    "down_decision_after_drop_s": 188.012,
+    "stopped_after_drop_s": 237.828
+   },
+   "b_starts": 2,
+   "served_by_b": 353,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 608,
+    "ttft_within_slo": 145,
+    "tpot_within_slo": 185
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 46.1,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 31.5,
+     "mem_max_mib": 6446.0,
+     "n": 120
+    }
+   },
+   "prestart": null
+  },
+  {
+   "index": 5,
+   "condition": "static",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 912,
+    "failed": 211,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    1.0,
+    0.042,
+    0.792
+   ],
+   "good": [
+    60,
+    5,
+    285
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    209,
+    2
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    9.07,
+    9.45,
+    9.3
+   ],
+   "p50_ttft": [
+    20.1,
+    16743.3,
+    27.0
+   ],
+   "p99_ttft": [
+    87.9,
+    21394.0,
+    16409.5
+   ],
+   "reactions": {
+    "up_decision_s": 6.011,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "b_starts": 0,
+   "served_by_b": null,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 428,
+    "ttft_within_slo": 11,
+    "tpot_within_slo": 73
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 46.3,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 0.0,
+     "mem_max_mib": 0.0,
+     "n": 120
+    }
+   },
+   "prestart": null
+  },
+  {
+   "index": 6,
+   "condition": "static",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 910,
+    "failed": 213,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    1.017,
+    0.05,
+    0.808
+   ],
+   "good": [
+    61,
+    6,
+    291
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    212,
+    1
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    9.1,
+    9.41,
+    9.27
+   ],
+   "p50_ttft": [
+    17.5,
+    17172.0,
+    27.7
+   ],
+   "p99_ttft": [
+    85.7,
+    21349.5,
+    16138.8
+   ],
+   "reactions": {
+    "up_decision_s": 6.007,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": null,
+    "stopped_after_drop_s": null
+   },
+   "b_starts": 0,
+   "served_by_b": null,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 425,
+    "ttft_within_slo": 11,
+    "tpot_within_slo": 136
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 46.3,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 0.0,
+     "mem_max_mib": 0.0,
+     "n": 120
+    }
+   },
+   "prestart": null
+  },
+  {
+   "index": 7,
+   "condition": "auto",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 1089,
+    "failed": 34,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    0.933,
+    0.025,
+    0.964
+   ],
+   "good": [
+    56,
+    3,
+    347
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    34,
+    0
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    9.13,
+    9.55,
+    9.21
+   ],
+   "p50_ttft": [
+    18.2,
+    3673.4,
+    26.7
+   ],
+   "p99_ttft": [
+    92.2,
+    19582.7,
+    270.2
+   ],
+   "reactions": {
+    "up_decision_s": 6.012,
+    "replica_ready_s": 34.522,
+    "first_success_on_new_replica_s": 38.523,
+    "spawn_to_ready_s": 28.507,
+    "down_decision_after_drop_s": 188.011,
+    "stopped_after_drop_s": 228.805
+   },
+   "b_starts": 2,
+   "served_by_b": 349,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 603,
+    "ttft_within_slo": 127,
+    "tpot_within_slo": 58
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 45.5,
+     "mem_max_mib": 6472.0,
+     "n": 120
+    },
+    "1": {
+     "util_mean": 31.1,
+     "mem_max_mib": 6468.0,
+     "n": 120
+    }
+   },
+   "prestart": null
+  },
+  {
+   "index": 8,
+   "condition": "static2",
+   "sender_valid": true,
+   "accounting": {
+    "planned": 1123,
+    "completed": 1123,
+    "failed": 0,
+    "retried": 0,
+    "records": 1123,
+    "balanced": true
+   },
+   "goodput": [
+    1.017,
+    0.375,
+    1.022
+   ],
+   "good": [
+    61,
+    45,
+    368
+   ],
+   "requests": [
+    61,
+    637,
+    425
+   ],
+   "failed": [
+    0,
+    0,
+    0
+   ],
+   "timeouts": [
+    0,
+    0,
+    0
+   ],
+   "p50_tpot": [
+    8.54,
+    9.53,
+    9.14
+   ],
+   "p50_ttft": [
+    15.4,
+    32.9,
+    25.4
+   ],
+   "p99_ttft": [
+    81.9,
+    2098.6,
+    91.0
+   ],
+   "reactions": {
+    "up_decision_s": null,
+    "replica_ready_s": null,
+    "first_success_on_new_replica_s": null,
+    "spawn_to_ready_s": null,
+    "down_decision_after_drop_s": 120.008,
+    "stopped_after_drop_s": null
+   },
+   "b_starts": 1,
+   "served_by_b": 494,
+   "burst_detail": {
+    "requests": 637,
+    "ok": 637,
+    "ttft_within_slo": 411,
+    "tpot_within_slo": 66
+   },
+   "gpu_burst": {
+    "0": {
+     "util_mean": 44.5,
+     "mem_max_mib": 6472.0,
+     "n": 119
+    },
+    "1": {
+     "util_mean": 44.1,
+     "mem_max_mib": 6472.0,
+     "n": 119
+    }
+   },
+   "prestart": {
+    "t": 1793826075.3783617,
+    "event": "replica_prestarted",
+    "replica": "b",
+    "gpu": "1",
+    "start_to_ready_s": 28.71112084388733
+   }
+  }
+ ],
+ "peak_owned_rss_bytes": 6340059136,
+ "stop_reason": null,
+ "replica_a_start_to_ready_s": 32.716758251190186,
+ "loadavg": [
+  [
+   4.5986328125,
+   2.962890625,
+   1.33642578125
+  ],
+  [
+   1.78662109375,
+   2.2529296875,
+   2.16650390625
+  ]
+ ]
+}

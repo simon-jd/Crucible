@@ -1,0 +1,302 @@
+{
+  "started_at": "2026-11-04T08:35:57+00:00",
+  "pool": "CRUCIBLE_2XA10_POOL",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e3_autoscale.py",
+  "include": [
+    "serving/localscale",
+    "serving/baseline",
+    "scripts/snowflake",
+    ".cache/snowflake/bin",
+    ".cache/snowflake/qwen25-05b-words.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "e3-smoke",
+    "--phases",
+    "20:1,60:4,40:1",
+    "--base-rps",
+    "1.25",
+    "--conditions",
+    "static,auto,static2",
+    "--pairs",
+    "1"
+  ],
+  "lock_wait_s": 1160.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E3_SMOKE_4HIBGZBZZBQF",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "tag": "e3-smoke",
+      "returncode": 0,
+      "seconds": 518.7,
+      "node": {
+        "gpus": [
+          "0, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000002:00:00.0",
+          "1, NVIDIA A10-24Q, 24512 MiB, 570.211.01, 00000003:00:00.0"
+        ],
+        "topo": "\u001b[4mGPU0\tGPU1\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\tNODE\t0-17\t0\t\tN/A\nGPU1\tSYS\t X \tSYS\t36-53\t2\t\tN/A\nNIC0\tNODE\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+        "nproc": 72,
+        "loadavg": [
+          4.09033203125,
+          2.5673828125,
+          1.134765625
+        ],
+        "meminfo": [
+          "MemTotal:       908196208 kB",
+          "MemFree:        870412840 kB",
+          "MemAvailable:   895494636 kB"
+        ],
+        "python": "3.12.15",
+        "packages": {
+          "vllm": "0.10.2",
+          "torch": "2.8.0",
+          "transformers": "4.55.4",
+          "numpy": "2.2.6"
+        },
+        "binaries": {
+          "autoscaler": "47df5239673536b6d467cae05522204050ce55bbda01de560e5f4bd5bb028465",
+          "replay": "bbcbdd0445b49f8587d10bb8100bb4ee4430c4bbc4118eb34e507959c4d73a5c",
+          "router": "b81e1b0762a038eb23a6589d759ce22f15b562781fd4590fd5e557d17d8328ba"
+        },
+        "words_sha256": "54e33c43112e426ba6e80ece4d229304d348d9a939a578d6df355e0a6d6b6c28",
+        "cuda_visible_devices": null,
+        "model_fetch": {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 6.0,
+          "MBps": 165.8
+        },
+        "model_safetensors_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+      },
+      "summary": {
+        "slo": {
+          "ttft_ms": 56.61495300000024,
+          "tpot_ms": 9.730174049645385,
+          "quantile": 0.99,
+          "samples": 20
+        },
+        "stop_reason": null,
+        "meta": {
+          "replica_a_start_to_ready_s": 32.712467432022095,
+          "order": [
+            "static",
+            "auto",
+            "static2"
+          ],
+          "phases": [
+            [
+              20.0,
+              1.0
+            ],
+            [
+              60.0,
+              4.0
+            ],
+            [
+              40.0,
+              1.0
+            ]
+          ],
+          "gpus": {
+            "a": "0",
+            "b": "1"
+          },
+          "base_rps": 1.25,
+          "requests": 368,
+          "args": {
+            "mode": "scale",
+            "kill_at": "30.0",
+            "snapshot": "/tmp/e3/model",
+            "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+            "output": "/tmp/e3/e3-smoke",
+            "cache_root": "/tmp/e3/runtime",
+            "router_bin": "/tmp/e3/bin/router",
+            "autoscaler_bin": "/tmp/e3/bin/autoscaler",
+            "replay_bin": "/tmp/e3/bin/replay",
+            "token_ids": "/mnt/job_stage/app/.cache/snowflake/qwen25-05b-words.json",
+            "gpu_util": "0.25",
+            "max_num_seqs": "8",
+            "phases": "[(20.0, 1.0), (60.0, 4.0), (40.0, 1.0)]",
+            "base_rps": "1.25",
+            "conditions": "['static', 'auto', 'static2']",
+            "gpus": "{'a': '0', 'b': '1'}",
+            "fault_conditions": "['kill', 'none']",
+            "pairs": "1",
+            "queue_high": "4",
+            "queue_low": "1",
+            "ttft_high": "0.8",
+            "ttft_low": "0.2",
+            "trace_csv": "/tmp/e3/e3-smoke/trace.csv"
+          },
+          "nproc": 72,
+          "loadavg_start": [
+            4.0537109375,
+            2.7939453125,
+            1.2822265625
+          ]
+        },
+        "peak_owned_rss_bytes": 6279008256,
+        "trials": [
+          {
+            "index": 0,
+            "condition": "static",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 368,
+              "completed": 318,
+              "failed": 50,
+              "retried": 0,
+              "records": 368,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 12.01,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": null,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0,
+              0.4166666666666667,
+              0.05
+            ],
+            "p50_tpot_ms": [
+              8.678138368794327,
+              9.501017262626284,
+              9.52060129899499
+            ],
+            "p50_ttft_ms": [
+              17.718446999999287,
+              10025.149828000001,
+              12854.95999100001
+            ],
+            "p99_ttft_ms": [
+              56.61495300000024,
+              21965.985120000012,
+              21057.272297000003
+            ]
+          },
+          {
+            "index": 1,
+            "condition": "auto",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 368,
+              "completed": 331,
+              "failed": 37,
+              "retried": 0,
+              "records": 368,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": 12.01,
+              "replica_ready_s": 41.128,
+              "first_success_on_new_replica_s": 41.529,
+              "spawn_to_ready_s": 29.116,
+              "down_decision_after_drop_s": null,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0,
+              0.5,
+              0.975
+            ],
+            "p50_tpot_ms": [
+              8.759167134751774,
+              9.638849206088985,
+              9.421033941176788
+            ],
+            "p50_ttft_ms": [
+              15.110340000000065,
+              4091.7664880000084,
+              27.674675999995088
+            ],
+            "p99_ttft_ms": [
+              48.52991199999997,
+              20685.113078000002,
+              4278.382628000007
+            ]
+          },
+          {
+            "index": 2,
+            "condition": "static2",
+            "sender_valid": true,
+            "accounting": {
+              "planned": 368,
+              "completed": 368,
+              "failed": 0,
+              "retried": 0,
+              "records": 368,
+              "balanced": true
+            },
+            "reactions": {
+              "up_decision_s": null,
+              "replica_ready_s": null,
+              "first_success_on_new_replica_s": null,
+              "spawn_to_ready_s": null,
+              "down_decision_after_drop_s": null,
+              "stopped_after_drop_s": null
+            },
+            "goodput_rps": [
+              1.0,
+              2.65,
+              1.3
+            ],
+            "p50_tpot_ms": [
+              8.735780048192776,
+              9.555457662264152,
+              9.234725714285776
+            ],
+            "p50_ttft_ms": [
+              15.328980000000229,
+              32.309047000002465,
+              26.42710000000079
+            ],
+            "p99_ttft_ms": [
+              49.15428599999905,
+              1461.7424750000064,
+              86.30427100000088
+            ]
+          }
+        ]
+      },
+      "upload": {
+        "stage_path": "e3/runs/e3-smoke.tar.gz",
+        "bytes": 91458,
+        "sha256": "a2cc3e89358e4b96cc7c05f6a46065e9a78b1bfb455ee9117a3f28d80448f1cf"
+      }
+    }
+  ],
+  "seconds": 933.5,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.908
+}
