@@ -8,8 +8,11 @@ Must run under scripts/with_gpu.sh (see scripts/run_localscale_gpu.sh).
 proposes; in `auto` trials this driver acts on its proposals by spawning replica `b`
 (scale up) or draining and stopping it (scale down), and reports the new desired
 count back through the adapter so the policy observes the change. In `static`
-trials the proposals are only logged. Two replicas share the one GPU, so a replica
-adds a batch of `--max-num-seqs` slots, not GPU compute.
+trials the proposals are only logged. `static2` trials serve the whole schedule with
+both replicas (b is started before the replay and stays routable), with proposals
+only logged. Without `--gpus` both replicas inherit the parent's GPUs, so on one GPU
+a replica adds a batch of `--max-num-seqs` slots, not GPU compute. `--gpus a=0,b=1`
+pins each replica to its own device through CUDA_VISIBLE_DEVICES.
 
 `--mode cold`: alternating warm/cold start-to-ready of one replica. "cold" evicts the
 snapshot's files from the page cache with posix_fadvise(DONTNEED) first (no root).
@@ -44,6 +47,23 @@ def alternate(conditions, pairs):
     for pair in range(pairs):
         order += list(conditions) if pair % 2 == 0 else list(conditions)[::-1]
     return order
+
+
+SCALE_CONDITIONS = ("static", "auto", "static2")  # conditions that run the (dry-run) autoscaler
+
+
+def parse_gpus(text):
+    """'a=0,b=1' -> {"a": "0", "b": "1"}: the CUDA_VISIBLE_DEVICES value for each replica."""
+    if not text:
+        return {}
+    out = {}
+    for part in text.split(","):
+        name, sep, device = part.partition("=")
+        name, device = name.strip(), device.strip()
+        if not sep or name not in PORTS or not device:
+            raise ValueError(f"bad --gpus entry {part!r}: want <replica>=<device> with replica in {sorted(PORTS)}")
+        out[name] = device
+    return out
 
 
 def kills(condition):
@@ -86,7 +106,14 @@ class Replica:
         self.name, self.args, self.port = name, args, PORTS[name]
         self.url = f"http://127.0.0.1:{self.port}"
         self.log = Path(log_dir) / f"server-{name}.log"
+        self.gpu = (getattr(args, "gpus", None) or {}).get(name)  # None: inherit the parent's GPUs
         self.proc = None
+
+    def env(self, base=None):
+        env = dict(os.environ if base is None else base)
+        if self.gpu is not None:
+            env["CUDA_VISIBLE_DEVICES"] = self.gpu
+        return env
 
     def command(self):
         return [
@@ -101,7 +128,8 @@ class Replica:
     def spawn(self):
         self.log.parent.mkdir(parents=True, exist_ok=True)
         with open(self.log, "ab") as out:  # the child keeps its own descriptor
-            self.proc = subprocess.Popen(self.command(), stdout=out, stderr=subprocess.STDOUT, start_new_session=True)
+            self.proc = subprocess.Popen(self.command(), stdout=out, stderr=subprocess.STDOUT, start_new_session=True,
+                                         env=self.env())  # fmt: skip
 
     def alive(self):
         return self.proc is not None and self.proc.poll() is None
@@ -191,7 +219,7 @@ class Trial:
     def scale_up(self):
         self.state.desired = 2
         self.b.spawn()
-        self.event("replica_spawn", replica="b")
+        self.event("replica_spawn", replica="b", gpu=self.b.gpu)
         self.b.wait_ready()
         self.event("replica_ready", replica="b")
         with self.state.lock:
@@ -271,7 +299,7 @@ class Trial:
         autoscaler = None
         timer = threading.Timer(a.kill_at, self.kill_b) if kills(self.condition) else None
         try:
-            if self.condition in ("static", "auto"):  # fault mode runs no autoscaler
+            if self.condition in SCALE_CONDITIONS:  # fault mode runs no autoscaler
                 autoscaler = start_process([
                     a.autoscaler_bin, "-metrics-url", f"http://127.0.0.1:{ADAPTER_PORT}/aggregate",
                     "-interval", "2s", "-min", "1", "-max", "2", "-queue-high", str(a.queue_high),
@@ -329,6 +357,17 @@ def wait_idle(url, limit_s=180):
     return False
 
 
+def accounting_counts(accounting, records):
+    """Replayer accounting (-account): every planned request is completed, failed or retried."""
+    if not accounting:
+        return {"planned": None, "completed": None, "failed": None, "retried": None, "records": records,
+                "balanced": False}  # fmt: skip
+    c = {k: accounting[k.capitalize()] for k in ("planned", "completed", "failed", "retried")}
+    c["records"] = records
+    c["balanced"] = c["completed"] + c["failed"] + c["retried"] == c["planned"] == records
+    return c
+
+
 def summarize(trials, phases, burst_s, drop_s):
     slo = analyze.slo_from_base_phase([t["records"] for t in trials if t["condition"] == "static"], phases)
     rows = []
@@ -337,6 +376,7 @@ def summarize(trials, phases, burst_s, drop_s):
             "condition": t["condition"], "index": t["index"], "sender_valid": t["sender_valid"],
             "phases": analyze.phase_summary(t["records"], phases, slo),
             "reactions": analyze.reactions(t["events"], burst_s, drop_s),
+            "accounting": accounting_counts(t.get("accounting"), len(t["records"])),
         })  # fmt: skip
 
     def spread(values):
@@ -351,6 +391,10 @@ def summarize(trials, phases, burst_s, drop_s):
         by[cond] = {
             "phase_goodput_rps": [spread([r["phases"][i]["goodput_rps"] for r in rs]) for i in range(len(phases))],
             "phase_p99_ttft_ms": [spread([(r["phases"][i]["ttft_ms"] or {}).get("p99") for r in rs]) for i in range(len(phases))],
+            "phase_p50_ttft_ms": [spread([(r["phases"][i]["ttft_ms"] or {}).get("p50") for r in rs]) for i in range(len(phases))],
+            "phase_p50_tpot_ms": [spread([(r["phases"][i]["tpot_ms"] or {}).get("p50") for r in rs]) for i in range(len(phases))],
+            "accounting": {k: spread([r["accounting"][k] for r in rs]) for k in ("planned", "completed", "failed", "retried")},
+            "accounting_balanced": all(r["accounting"]["balanced"] for r in rs),
             "phase_failed": [spread([r["phases"][i]["failed"] for r in rs]) for i in range(len(phases))],
             "reactions": {k: spread([r["reactions"][k] for r in rs]) for k in rs[0]["reactions"]},
         }  # fmt: skip
@@ -373,7 +417,7 @@ def run_scale(args):
     started = now()
     a.spawn()
     ready = a.wait_ready()
-    meta = {"replica_a_start_to_ready_s": ready - started, "order": order, "phases": args.phases,
+    meta = {"replica_a_start_to_ready_s": ready - started, "order": order, "phases": args.phases, "gpus": args.gpus,
             "base_rps": args.base_rps, "requests": len(rows), "args": {k: str(v) for k, v in vars(args).items()},
             "nproc": os.cpu_count(), "loadavg_start": os.getloadavg()}  # fmt: skip
     trials, stop_reason = [], None
@@ -383,11 +427,24 @@ def run_scale(args):
                 stop_reason = monitor.stop_reason
                 break
             wait_idle(a.url)
-            trial = Trial(args, condition, index, a, out / f"trial-{index}-{condition}")
+            trial_out = out / f"trial-{index}-{condition}"
+            b, b_ready = None, None
+            if condition == "static2":  # both replicas serve the whole schedule
+                b = Replica("b", args, trial_out)
+                b_started = now()
+                b.spawn()
+                try:
+                    b_ready = b.wait_ready() - b_started
+                except Exception:
+                    b.stop()
+                    raise
+            trial = Trial(args, condition, index, a, trial_out, replica_b=b)
+            if b is not None:
+                trial.event("replica_prestarted", replica="b", gpu=b.gpu, start_to_ready_s=b_ready)
             result = trial.run()
             trials.append({"condition": condition, "index": index, "records": result["Run"]["Records"],
                            "sender_valid": bool(result["Run"]["SenderValid"]) and not result["Run"]["Aborted"],
-                           "events": trial.events})  # fmt: skip
+                           "events": trial.events, "accounting": result.get("Accounting")})  # fmt: skip
             print(json.dumps({"trial": index, "condition": condition, "events": len(trial.events)}), flush=True)
     finally:
         a.stop()
@@ -524,7 +581,10 @@ def main(argv=None):
     p.add_argument("--max-num-seqs", type=int, default=8)
     p.add_argument("--phases", type=parse_phases, default=parse_phases("60:1,120:4,360:1"))
     p.add_argument("--base-rps", type=float, default=1.0)
-    p.add_argument("--conditions", type=lambda s: s.split(","), default=["static", "auto"])
+    p.add_argument("--conditions", type=lambda s: s.split(","), default=["static", "auto"],
+                   help="scale mode: any of static (1 replica), auto (1->2->1), static2 (2 replicas); needs static")
+    p.add_argument("--gpus", type=parse_gpus, default={},
+                   help="per-replica CUDA_VISIBLE_DEVICES, e.g. a=0,b=1 (default: inherit)")
     p.add_argument("--fault-conditions", type=lambda s: s.split(","), default=["kill", "none"],
                    help="fault mode: any of kill, kill-retry, kill-client-retry, none")
     p.add_argument("--pairs", type=int, default=3)
@@ -533,6 +593,9 @@ def main(argv=None):
     p.add_argument("--ttft-high", type=float, default=0.8)
     p.add_argument("--ttft-low", type=float, default=0.2)
     args = p.parse_args(argv)
+    bad = [c for c in args.conditions if c not in SCALE_CONDITIONS]
+    if args.mode == "scale" and (bad or "static" not in args.conditions):
+        p.error(f"--conditions: unknown {bad} or no static (the SLO comes from static trials)")
     {"scale": run_scale, "cold": run_cold, "fault": run_fault}[args.mode](args)
 
 

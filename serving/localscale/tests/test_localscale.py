@@ -211,3 +211,101 @@ def test_router_log_stats_parse_ejections_and_totals():
     st = run.router_log_stats(log)
     assert st["ejections"] == 2 and st["dial_retries"] == 1 and st["eject_lines"] == 2
     assert st["first_eject_t"] == pytest.approx(1793131201.5)
+
+
+def test_parse_gpus_maps_each_replica_to_a_device():
+    from serving.localscale import run
+
+    assert run.parse_gpus("a=0,b=1") == {"a": "0", "b": "1"}
+    assert run.parse_gpus(" b = 1 ") == {"b": "1"}
+    assert run.parse_gpus("") == {}
+    for bad in ("a", "c=0", "a=", "a:0"):
+        with pytest.raises(ValueError):
+            run.parse_gpus(bad)
+
+
+def test_replica_env_pins_cuda_visible_devices_per_replica(tmp_path):
+    import argparse
+
+    from serving.localscale import run
+
+    args = argparse.Namespace(gpus={"a": "0", "b": "1"})
+    base = {"CUDA_VISIBLE_DEVICES": "0,1", "PATH": "/bin"}
+    a, b = run.Replica("a", args, tmp_path), run.Replica("b", args, tmp_path)
+    assert (a.gpu, b.gpu) == ("0", "1")
+    assert a.env(base) == {"CUDA_VISIBLE_DEVICES": "0", "PATH": "/bin"}
+    assert b.env(base)["CUDA_VISIBLE_DEVICES"] == "1"
+    assert base["CUDA_VISIBLE_DEVICES"] == "0,1"  # the parent's environment is not changed
+    # Without --gpus (the one-GPU runs) a replica inherits the parent's devices unchanged.
+    plain = run.Replica("b", argparse.Namespace(gpus={}), tmp_path)
+    assert plain.gpu is None and plain.env(base) == base
+    assert run.Replica("b", argparse.Namespace(), tmp_path).gpu is None
+
+
+def test_replica_spawn_passes_its_device_to_the_child(tmp_path, monkeypatch):
+    import argparse
+    import sys
+
+    from serving.localscale import run
+
+    monkeypatch.setenv("CUDA_VISIBLE_DEVICES", "0,1")
+    seen = {}
+    for name in ("a", "b"):
+        r = run.Replica(name, argparse.Namespace(gpus={"a": "0", "b": "1"}), tmp_path / name)
+        monkeypatch.setattr(r, "command", lambda: [sys.executable, "-c",
+                                                   "import os; print(os.environ['CUDA_VISIBLE_DEVICES'])"])  # fmt: skip
+        r.spawn()
+        r.proc.wait(30)
+        seen[name] = r.log.read_text().strip()
+    assert seen == {"a": "0", "b": "1"}
+
+
+def test_alternate_three_scale_conditions():
+    from serving.localscale import run
+
+    order = run.alternate(["static", "auto", "static2"], 3)
+    assert order == ["static", "auto", "static2", "static2", "auto", "static", "static", "auto", "static2"]
+    assert all(order.count(c) == 3 for c in ("static", "auto", "static2"))
+    assert set(run.SCALE_CONDITIONS) == {"static", "auto", "static2"}
+
+
+def test_main_rejects_scale_conditions_without_static_or_unknown(capsys):
+    from serving.localscale import run
+
+    base = ["--mode", "scale", "--snapshot", "s", "--revision", "r", "--output", "o", "--cache-root", "c"]
+    for conditions in ("auto,static2", "static,kill"):
+        with pytest.raises(SystemExit):
+            run.main([*base, "--conditions", conditions])
+    with pytest.raises(SystemExit):
+        run.main([*base, "--gpus", "c=2"])
+    assert "--gpus" in capsys.readouterr().err
+
+
+def test_accounting_counts_every_request():
+    from serving.localscale import run
+
+    acc = {"Planned": 5, "Completed": 3, "Failed": 1, "Retried": 1, "Requests": []}
+    c = run.accounting_counts(acc, 5)
+    assert (c["planned"], c["completed"], c["failed"], c["retried"], c["balanced"]) == (5, 3, 1, 1, True)
+    assert not run.accounting_counts({**acc, "Completed": 2}, 5)["balanced"]
+    assert not run.accounting_counts(acc, 6)["balanced"]  # a record the plan does not cover
+    missing = run.accounting_counts(None, 5)
+    assert missing["planned"] is None and not missing["balanced"]
+
+
+def test_summarize_reports_static2_latency_and_accounting():
+    from serving.localscale import run
+
+    phases = [(60, 1.0), (120, 4.0), (60, 1.0)]
+    acc = {"Planned": 5, "Completed": 4, "Failed": 1, "Retried": 0}
+    trials = [
+        {"condition": cond, "index": i, "records": _records(), "sender_valid": True, "accounting": acc,
+         "events": [{"t": 0.0, "event": "replay_start"}]}
+        for i, cond in enumerate(["static", "auto", "static2"])
+    ]  # fmt: skip
+    s = run.summarize(trials, phases, burst_s=60, drop_s=180)
+    assert set(s["by_condition"]) == {"static", "auto", "static2"}
+    two = s["by_condition"]["static2"]
+    assert two["phase_p50_tpot_ms"][0]["median"] == 5 and two["phase_p50_ttft_ms"][0]["median"] == 50
+    assert two["accounting"]["failed"]["median"] == 1 and two["accounting_balanced"]
+    assert s["trials"][2]["reactions"]["first_success_on_new_replica_s"] is None
