@@ -1,0 +1,182 @@
+{
+  "started_at": "2026-11-04T08:34:10+00:00",
+  "pool": "CRUCIBLE_2XA10_POOL",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e1-same-node",
+    "--task",
+    "e1",
+    "--layout",
+    "same-node",
+    "--port",
+    "12920",
+    "--role-env",
+    "all:NCCL_DEBUG=INFO"
+  ],
+  "lock_wait_s": 80.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E12_E1_SAME_NODE_R6JMZZETN8Y4",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e1-same-node",
+      "task": "e1",
+      "layout": "same-node",
+      "nproc": 72,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 6.5,
+          "MBps": 154.8
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.3,
+          "MBps": 2.9
+        }
+      ],
+      "roles": [
+        {
+          "role": "learner",
+          "exit": 1,
+          "seconds": 27.6,
+          "host": "job-0",
+          "role_results": [],
+          "tail": [
+            "job-0:1360:1360 [0] NCCL INFO comm 0x6251fc10 rank 0 nranks 1 cudaDev 0 busId 200000 - Destroy COMPLETE",
+            "[rank0]: Traceback (most recent call last):",
+            "[rank0]:   File \"<frozen runpy>\", line 198, in _run_module_as_main",
+            "[rank0]:   File \"<frozen runpy>\", line 88, in _run_code",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 327, in <module>",
+            "[rank0]:     sys.exit(main())",
+            "[rank0]:              ^^^^^^",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 323, in main",
+            "[rank0]:     return learner(args) if args.role == \"learner\" else rollout(args)",
+            "[rank0]:            ^^^^^^^^^^^^^",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 140, in learner",
+            "[rank0]:     wait_s = _barrier(pair, device)",
+            "[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 73, in _barrier",
+            "[rank0]:     dist.all_reduce(flag, group=group)",
+            "[rank0]:   File \"/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/torch/distributed/c10d_logger.py\", line 81, in wrapper",
+            "[rank0]:     return func(*args, **kwargs)",
+            "[rank0]:            ^^^^^^^^^^^^^^^^^^^^^",
+            "[rank0]:   File \"/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py\", line 2924, in all_reduce",
+            "[rank0]:     work = group.allreduce([tensor], opts)",
+            "[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+            "[rank0]: torch.distributed.DistBackendError: NCCL error in: /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:3699, unhandled cuda error (run with NCCL_DEBUG=INFO for details), NCCL version 2.27.3",
+            "[rank0]: ncclUnhandledCudaError: Call to CUDA function failed.",
+            "[rank0]: Last error:",
+            "[rank0]: Cuda failure 217 'peer access is not supported between these two devices'"
+          ],
+          "gpu_profile": {
+            "0": {
+              "samples": 55,
+              "mean_util_pct": 0.7,
+              "peak_used_mib": 4962.0,
+              "total_mib": 24512.0
+            },
+            "1": {
+              "samples": 55,
+              "mean_util_pct": 0.3,
+              "peak_used_mib": 19904.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "rollout",
+          "exit": 1,
+          "seconds": 26.2,
+          "host": "job-0",
+          "role_results": [],
+          "tail": [
+            "[rank0]: Traceback (most recent call last):",
+            "[rank0]:   File \"<frozen runpy>\", line 198, in _run_module_as_main",
+            "[rank0]:   File \"<frozen runpy>\", line 88, in _run_code",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 327, in <module>",
+            "[rank0]:     sys.exit(main())",
+            "[rank0]:              ^^^^^^",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 323, in main",
+            "[rank0]:     return learner(args) if args.role == \"learner\" else rollout(args)",
+            "[rank0]:                                                         ^^^^^^^^^^^^^",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 269, in rollout",
+            "[rank0]:     wait_s = _barrier(pair, device)",
+            "[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^",
+            "[rank0]:   File \"/tmp/e12-mg7h3wns/repo/rl/sync/nccl_check.py\", line 73, in _barrier",
+            "[rank0]:     dist.all_reduce(flag, group=group)",
+            "[rank0]:   File \"/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/torch/distributed/c10d_logger.py\", line 81, in wrapper",
+            "[rank0]:     return func(*args, **kwargs)",
+            "[rank0]:            ^^^^^^^^^^^^^^^^^^^^^",
+            "[rank0]:   File \"/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py\", line 2924, in all_reduce",
+            "[rank0]:     work = group.allreduce([tensor], opts)",
+            "[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+            "[rank0]: torch.distributed.DistBackendError: NCCL error in: /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:3699, unhandled cuda error (run with NCCL_DEBUG=INFO for details), NCCL version 2.27.3",
+            "[rank0]: ncclUnhandledCudaError: Call to CUDA function failed.",
+            "[rank0]: Last error:",
+            "[rank0]: Cuda failure 217 'peer access is not supported between these two devices'",
+            "[rank0]:[W1104 08:42:06.331838060 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+          ],
+          "gpu_profile": {
+            "0": {
+              "samples": 52,
+              "mean_util_pct": 0.7,
+              "peak_used_mib": 4962.0,
+              "total_mib": 24512.0
+            },
+            "1": {
+              "samples": 52,
+              "mean_util_pct": 0.3,
+              "peak_used_mib": 19904.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e1-same-node.tar.gz",
+        "bytes": 6369
+      },
+      "seconds": 47.4
+    }
+  ],
+  "seconds": 447.1,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.435
+}

@@ -1,0 +1,348 @@
+{
+ "role": "learner",
+ "host": "job-1",
+ "env": {
+  "NCCL_NET_PLUGIN": "none",
+  "NCCL_VERSION": "2.25.1-1",
+  "NCCL_SOCKET_IFNAME": "eth0",
+  "CUDA_VISIBLE_DEVICES": "0",
+  "NCCL_DEBUG": "INFO"
+ },
+ "controlled_step": {
+  "dropped_stale": 0,
+  "accepted_samples": 2,
+  "effective_tokens": 2,
+  "optimizer_steps": 1,
+  "policy_version": 8,
+  "loss": 0.0
+ },
+ "rollout": {
+  "role": "rollout",
+  "host": "job-0",
+  "env": {
+   "NCCL_NET_PLUGIN": "none",
+   "NCCL_VERSION": "2.25.1-1",
+   "NCCL_SOCKET_IFNAME": "eth0",
+   "CUDA_VISIBLE_DEVICES": "0",
+   "NCCL_DEBUG": "INFO"
+  },
+  "syncs": [
+   {
+    "version": 7,
+    "barrier_wait_s": 2.013416989999996,
+    "push_s": 5.883964114000037,
+    "bytes": 988065536,
+    "load_s": 0.010530249999987973,
+    "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d"
+   },
+   {
+    "version": 8,
+    "barrier_wait_s": 0.0006172600000127204,
+    "push_s": 5.929511152999908,
+    "bytes": 988065536,
+    "load_s": 0.010464168999988033,
+    "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da"
+   }
+  ],
+  "prompt_token_ids": {
+   "7": [
+    [
+     785,
+     7772,
+     11580,
+     304,
+     279,
+     24446,
+     739,
+     374
+    ],
+    [
+     32,
+     21495,
+     702,
+     2326
+    ],
+    [
+     785,
+     14002,
+     315,
+     9255,
+     374
+    ],
+    [
+     11613,
+     3039,
+     2326,
+     16819
+    ],
+    [
+     28253,
+     93377,
+     518,
+     264,
+     9315,
+     315
+    ],
+    [
+     641,
+     264,
+     6366,
+     11,
+     22038,
+     374,
+     1483,
+     311
+    ]
+   ],
+   "8": [
+    [
+     785,
+     7772,
+     11580,
+     304,
+     279,
+     24446,
+     739,
+     374
+    ],
+    [
+     32,
+     21495,
+     702,
+     2326
+    ],
+    [
+     785,
+     14002,
+     315,
+     9255,
+     374
+    ],
+    [
+     11613,
+     3039,
+     2326,
+     16819
+    ],
+    [
+     28253,
+     93377,
+     518,
+     264,
+     9315,
+     315
+    ],
+    [
+     641,
+     264,
+     6366,
+     11,
+     22038,
+     374,
+     1483,
+     311
+    ]
+   ]
+  },
+  "peak_allocated_bytes": 21256539136,
+  "device": "NVIDIA A10-24Q"
+ },
+ "learner_peak_allocated_bytes": 10021550592,
+ "protocol_sha256": "a9d94ba329dddb322156549bd1492a26d8387062d7585fb292b3ff0bd7455b4c",
+ "syncs": [
+  {
+   "version": 7,
+   "export_s": 0.19093158999999105,
+   "barrier_wait_s": 0.16858437400003368,
+   "push_s": 5.884109981999984,
+   "bytes": 988065536,
+   "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d",
+   "GBps": 0.1679209836360266
+  },
+  {
+   "version": 8,
+   "export_s": 0.060235421000015776,
+   "barrier_wait_s": 0.263958252000009,
+   "push_s": 5.92903706200002,
+   "bytes": 988065536,
+   "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da",
+   "GBps": 0.16664856799979247
+  }
+ ],
+ "receiver_syncs": [
+  {
+   "version": 7,
+   "barrier_wait_s": 2.013416989999996,
+   "push_s": 5.883964114000037,
+   "bytes": 988065536,
+   "load_s": 0.010530249999987973,
+   "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d"
+  },
+  {
+   "version": 8,
+   "barrier_wait_s": 0.0006172600000127204,
+   "push_s": 5.929511152999908,
+   "bytes": 988065536,
+   "load_s": 0.010464168999988033,
+   "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da"
+  }
+ ],
+ "digests_agree": true,
+ "token_ids_match": true,
+ "rows": [
+  {
+   "version": 7,
+   "prompt": "The largest planet in the Solar System is",
+   "prompt_index": 0,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.25,
+   "mean_abs": 0.03804613560714336,
+   "rms": 0.04891013137741878,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 7,
+   "prompt": "A triangle has three",
+   "prompt_index": 1,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.375,
+   "mean_abs": 0.06047352822850558,
+   "rms": 0.07748576464200373,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 7,
+   "prompt": "The opposite of cold is",
+   "prompt_index": 2,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.234375,
+   "mean_abs": 0.03362661807551876,
+   "rms": 0.04363429723717782,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 7,
+   "prompt": "Two times three equals",
+   "prompt_index": 3,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.2734375,
+   "mean_abs": 0.05282254202845298,
+   "rms": 0.06575599554549494,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 7,
+   "prompt": "Water freezes at a temperature of",
+   "prompt_index": 4,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.26953125,
+   "mean_abs": 0.036444349388616265,
+   "rms": 0.046392759599919974,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 7,
+   "prompt": "In a computer, RAM is used to",
+   "prompt_index": 5,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.21875,
+   "mean_abs": 0.0324876879427422,
+   "rms": 0.04107312126947812,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 8,
+   "prompt": "The largest planet in the Solar System is",
+   "prompt_index": 0,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.25,
+   "mean_abs": 0.042831155471503735,
+   "rms": 0.05255765177574649,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 8,
+   "prompt": "A triangle has three",
+   "prompt_index": 1,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.2578125,
+   "mean_abs": 0.03811618627504883,
+   "rms": 0.04814214597268939,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 8,
+   "prompt": "The opposite of cold is",
+   "prompt_index": 2,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.1953125,
+   "mean_abs": 0.04530123952170481,
+   "rms": 0.0546551527092833,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 8,
+   "prompt": "Two times three equals",
+   "prompt_index": 3,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.1875,
+   "mean_abs": 0.031021886782151065,
+   "rms": 0.03946248213066245,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 8,
+   "prompt": "Water freezes at a temperature of",
+   "prompt_index": 4,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.1875,
+   "mean_abs": 0.02968917219337035,
+   "rms": 0.038466292665692015,
+   "failed_coordinates": 0,
+   "passed": true
+  },
+  {
+   "version": 8,
+   "prompt": "In a computer, RAM is used to",
+   "prompt_index": 5,
+   "coordinates": 151936,
+   "finite": true,
+   "max_abs": 0.1875,
+   "mean_abs": 0.03124196436483705,
+   "rms": 0.03961381517277479,
+   "failed_coordinates": 0,
+   "passed": true
+  }
+ ],
+ "failed_rows": 0,
+ "failed_coordinates": 0,
+ "coordinates": 1823232,
+ "reference_logits_change_v7_v8": 19.96875,
+ "vllm_logits_change_v7_v8": 19.96875,
+ "logits_npz_sha256": "0992b52ed4c92a39aa71157f66c8bd5794b354b413f6c7bc1dc73684e597602f",
+ "torch": "2.8.0+cu128",
+ "nccl": "2.27.3",
+ "device": "NVIDIA A10-24Q",
+ "passed": true
+}

@@ -1,0 +1,415 @@
+{
+  "started_at": "2026-11-04T08:43:39+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e1-two-node",
+    "--task",
+    "e1",
+    "--layout",
+    "two-node",
+    "--port",
+    "12921",
+    "--role-env",
+    "all:NCCL_DEBUG=INFO"
+  ],
+  "lock_wait_s": 420.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E12_E1_TWO_NODE_2QRIREIPL9AJ",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e1-two-node",
+      "task": "e1",
+      "layout": "two-node",
+      "nproc": 36,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 6.3,
+          "MBps": 157.6
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.4,
+          "MBps": 2.3
+        }
+      ],
+      "roles": [
+        {
+          "role": "learner",
+          "exit": 0,
+          "seconds": 51.2,
+          "host": "job-1",
+          "role_results": [
+            {
+              "role": "learner",
+              "host": "job-1",
+              "env": {
+                "NCCL_NET_PLUGIN": "none",
+                "NCCL_VERSION": "2.25.1-1",
+                "NCCL_SOCKET_IFNAME": "eth0",
+                "CUDA_VISIBLE_DEVICES": "0",
+                "NCCL_DEBUG": "INFO"
+              },
+              "controlled_step": {
+                "dropped_stale": 0,
+                "accepted_samples": 2,
+                "effective_tokens": 2,
+                "optimizer_steps": 1,
+                "policy_version": 8,
+                "loss": 0.0
+              },
+              "rollout": {
+                "role": "rollout",
+                "host": "job-0",
+                "env": {
+                  "NCCL_NET_PLUGIN": "none",
+                  "NCCL_VERSION": "2.25.1-1",
+                  "NCCL_SOCKET_IFNAME": "eth0",
+                  "CUDA_VISIBLE_DEVICES": "0",
+                  "NCCL_DEBUG": "INFO"
+                },
+                "syncs": [
+                  {
+                    "version": 7,
+                    "barrier_wait_s": 2.013416989999996,
+                    "push_s": 5.883964114000037,
+                    "bytes": 988065536,
+                    "load_s": 0.010530249999987973,
+                    "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d"
+                  },
+                  {
+                    "version": 8,
+                    "barrier_wait_s": 0.0006172600000127204,
+                    "push_s": 5.929511152999908,
+                    "bytes": 988065536,
+                    "load_s": 0.010464168999988033,
+                    "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da"
+                  }
+                ],
+                "prompt_token_ids": {
+                  "7": [
+                    [
+                      785,
+                      7772,
+                      11580,
+                      304,
+                      279,
+                      24446,
+                      739,
+                      374
+                    ],
+                    [
+                      32,
+                      21495,
+                      702,
+                      2326
+                    ],
+                    [
+                      785,
+                      14002,
+                      315,
+                      9255,
+                      374
+                    ],
+                    [
+                      11613,
+                      3039,
+                      2326,
+                      16819
+                    ],
+                    [
+                      28253,
+                      93377,
+                      518,
+                      264,
+                      9315,
+                      315
+                    ],
+                    [
+                      641,
+                      264,
+                      6366,
+                      11,
+                      22038,
+                      374,
+                      1483,
+                      311
+                    ]
+                  ],
+                  "8": [
+                    [
+                      785,
+                      7772,
+                      11580,
+                      304,
+                      279,
+                      24446,
+                      739,
+                      374
+                    ],
+                    [
+                      32,
+                      21495,
+                      702,
+                      2326
+                    ],
+                    [
+                      785,
+                      14002,
+                      315,
+                      9255,
+                      374
+                    ],
+                    [
+                      11613,
+                      3039,
+                      2326,
+                      16819
+                    ],
+                    [
+                      28253,
+                      93377,
+                      518,
+                      264,
+                      9315,
+                      315
+                    ],
+                    [
+                      641,
+                      264,
+                      6366,
+                      11,
+                      22038,
+                      374,
+                      1483,
+                      311
+                    ]
+                  ]
+                },
+                "peak_allocated_bytes": 21256539136,
+                "device": "NVIDIA A10-24Q"
+              },
+              "learner_peak_allocated_bytes": 10021550592,
+              "protocol_sha256": "a9d94ba329dddb322156549bd1492a26d8387062d7585fb292b3ff0bd7455b4c",
+              "syncs": [
+                {
+                  "version": 7,
+                  "export_s": 0.19093158999999105,
+                  "barrier_wait_s": 0.16858437400003368,
+                  "push_s": 5.884109981999984,
+                  "bytes": 988065536,
+                  "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d",
+                  "GBps": 0.1679209836360266
+                },
+                {
+                  "version": 8,
+                  "export_s": 0.060235421000015776,
+                  "barrier_wait_s": 0.263958252000009,
+                  "push_s": 5.92903706200002,
+                  "bytes": 988065536,
+                  "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da",
+                  "GBps": 0.16664856799979247
+                }
+              ],
+              "receiver_syncs": [
+                {
+                  "version": 7,
+                  "barrier_wait_s": 2.013416989999996,
+                  "push_s": 5.883964114000037,
+                  "bytes": 988065536,
+                  "load_s": 0.010530249999987973,
+                  "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d"
+                },
+                {
+                  "version": 8,
+                  "barrier_wait_s": 0.0006172600000127204,
+                  "push_s": 5.929511152999908,
+                  "bytes": 988065536,
+                  "load_s": 0.010464168999988033,
+                  "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da"
+                }
+              ],
+              "digests_agree": true,
+              "token_ids_match": true,
+              "failed_rows": 0,
+              "failed_coordinates": 0,
+              "coordinates": 1823232,
+              "reference_logits_change_v7_v8": 19.96875,
+              "vllm_logits_change_v7_v8": 19.96875,
+              "logits_npz_sha256": "0992b52ed4c92a39aa71157f66c8bd5794b354b413f6c7bc1dc73684e597602f",
+              "torch": "2.8.0+cu128",
+              "nccl": "2.27.3",
+              "device": "NVIDIA A10-24Q",
+              "passed": true
+            }
+          ],
+          "tail": [
+            "job-1:2559:2687 [0] NCCL INFO Setting affinity for GPU 0 to 0-17",
+            "job-1:2559:2687 [0] NCCL INFO comm 0x2c056510 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+            "job-1:2559:2687 [0] NCCL INFO Channel 00/02 : 0 1",
+            "job-1:2559:2687 [0] NCCL INFO Channel 01/02 : 0 1",
+            "job-1:2559:2687 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1",
+            "job-1:2559:2687 [0] NCCL INFO P2P Chunksize set to 131072",
+            "job-1:2559:2687 [0] NCCL INFO Check P2P Type isAllDirectP2p 0 directMode 0",
+            "job-1:2559:2688 [0] NCCL INFO [Proxy Service] Device 0 CPU core 10",
+            "job-1:2559:2689 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 14",
+            "job-1:2559:2687 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512",
+            "job-1:2559:2687 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer",
+            "job-1:2559:2687 [0] NCCL INFO CC Off, workFifoBytes 1048576",
+            "job-1:2559:2687 [0] NCCL INFO ncclCommInitRankConfig comm 0x2c056510 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x5cf5874910daf1ff - Init COMPLETE",
+            "job-1:2559:2687 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.12 (kernels 0.00, alloc 0.00, bootstrap 0.11, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)",
+            "job-1:2559:2691 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 10",
+            "job-1:2559:2690 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+            "job-1:2559:2690 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0",
+            "job-1:2559:2690 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+            "job-1:2559:2690 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0",
+            "job-1:2559:2690 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0",
+            "{\"pushed\": {\"version\": 7, \"export_s\": 0.19093158999999105, \"barrier_wait_s\": 0.16858437400003368, \"push_s\": 5.884109981999984, \"bytes\": 988065536, \"digest\": \"046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d\", \"GBps\": 0.1679209836360266}}",
+            "{\"pushed\": {\"version\": 8, \"export_s\": 0.060235421000015776, \"barrier_wait_s\": 0.263958252000009, \"push_s\": 5.92903706200002, \"bytes\": 988065536, \"digest\": \"84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da\", \"GBps\": 0.16664856799979247}}",
+            "job-1:2559:2559 [0] NCCL INFO comm 0x2c056510 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE",
+            "job-1:2559:2559 [0] NCCL INFO comm 0x2ce9eb70 rank 0 nranks 1 cudaDev 0 busId 200000 - Destroy COMPLETE",
+            "ROLE_RESULT {\"role\": \"learner\", \"host\": \"job-1\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_DEBUG\": \"INFO\"}, \"controlled_step\": {\"dropped_stale\": 0, \"accepted_samples\": 2, \"effective_tokens\": 2, \"optimizer_steps\": 1, \"policy_version\": 8, \"loss\": 0.0}, \"rollout\": {\"role\": \"rollout\", \"host\": \"job-0\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_DEBUG\": \"INFO\"}, \"syncs\": [{\"version\": 7, \"barrier_wait_s\": 2.013416989999996, \"push_s\": 5.883964114000037, \"bytes\": 988065536, \"load_s\": 0.010530249999987973, \"digest\": \"046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d\"}, {\"version\": 8, \"barrier_wait_s\": 0.0006172600000127204, \"push_s\": 5.929511152999908, \"bytes\": 988065536, \"load_s\": 0.010464168999988033, \"digest\": \"84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da\"}], \"prompt_token_ids\": {\"7\": [[785, 7772, 11580, 304, 279, 24446, 739, 374], [32, 21495, 702, 2326], [785, 14002, 315, 9255, 374], [11613, 3039, 2326, 16819], [28253, 93377, 518, 264, 9315, 315], [641, 264, 6366, 11, 22038, 374, 1483, 311]], \"8\": [[785, 7772, 11580, 304, 279, 24446, 739, 374], [32, 21495, 702, 2326], [785, 14002, 315, 9255, 374], [11613, 3039, 2326, 16819], [28253, 93377, 518, 264, 9315, 315], [641, 264, 6366, 11, 22038, 374, 1483, 311]]}, \"peak_allocated_bytes\": 21256539136, \"device\": \"NVIDIA A10-24Q\"}, \"learner_peak_allocated_bytes\": 10021550592, \"protocol_sha256\": \"a9d94ba329dddb322156549bd1492a26d8387062d7585fb292b3ff0bd7455b4c\", \"syncs\": [{\"version\": 7, \"export_s\": 0.19093158999999105, \"barrier_wait_s\": 0.16858437400003368, \"push_s\": 5.884109981999984, \"bytes\": 988065536, \"digest\": \"046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d\", \"GBps\": 0.1679209836360266}, {\"version\": 8, \"export_s\": 0.060235421000015776, \"barrier_wait_s\": 0.263958252000009, \"push_s\": 5.92903706200002, \"bytes\": 988065536, \"digest\": \"84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da\", \"GBps\": 0.16664856799979247}], \"receiver_syncs\": [{\"version\": 7, \"barrier_wait_s\": 2.013416989999996, \"push_s\": 5.883964114000037, \"bytes\": 988065536, \"load_s\": 0.010530249999987973, \"digest\": \"046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d\"}, {\"version\": 8, \"barrier_wait_s\": 0.0006172600000127204, \"push_s\": 5.929511152999908, \"bytes\": 988065536, \"load_s\": 0.010464168999988033, \"digest\": \"84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da\"}], \"digests_agree\": true, \"token_ids_match\": true, \"failed_rows\": 0, \"failed_coordinates\": 0, \"coordinates\": 1823232, \"reference_logits_change_v7_v8\": 19.96875, \"vllm_logits_change_v7_v8\": 19.96875, \"logits_npz_sha256\": \"0992b52ed4c92a39aa71157f66c8bd5794b354b413f6c7bc1dc73684e597602f\", \"torch\": \"2.8.0+cu128\", \"nccl\": \"2.27.3\", \"device\": \"NVIDIA A10-24Q\", \"passed\": true}"
+          ],
+          "node": {
+            "ip": "10.244.3.11",
+            "host": "job-1",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 102,
+              "mean_util_pct": 23.5,
+              "peak_used_mib": 11762.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "rollout",
+          "exit": 0,
+          "seconds": 49.6,
+          "host": "job-0",
+          "role_results": [
+            {
+              "role": "rollout",
+              "host": "job-0",
+              "env": {
+                "NCCL_NET_PLUGIN": "none",
+                "NCCL_VERSION": "2.25.1-1",
+                "NCCL_SOCKET_IFNAME": "eth0",
+                "CUDA_VISIBLE_DEVICES": "0",
+                "NCCL_DEBUG": "INFO"
+              },
+              "syncs": [
+                {
+                  "version": 7,
+                  "barrier_wait_s": 2.013416989999996,
+                  "push_s": 5.883964114000037,
+                  "bytes": 988065536,
+                  "load_s": 0.010530249999987973,
+                  "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d"
+                },
+                {
+                  "version": 8,
+                  "barrier_wait_s": 0.0006172600000127204,
+                  "push_s": 5.929511152999908,
+                  "bytes": 988065536,
+                  "load_s": 0.010464168999988033,
+                  "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da"
+                }
+              ],
+              "peak_allocated_bytes": 21256539136,
+              "device": "NVIDIA A10-24Q"
+            }
+          ],
+          "tail": [
+            "job-0:3882:4064 [0] NCCL INFO Bootstrap timings total 0.006095 (create 0.000138, send 0.001963, recv 0.002079, ring 0.000142, delay 0.000001)",
+            "job-0:3882:4064 [0] NCCL INFO Setting affinity for GPU 0 to 0-17",
+            "job-0:3882:4064 [0] NCCL INFO comm 0x43e6f1d0 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0",
+            "job-0:3882:4064 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1",
+            "job-0:3882:4064 [0] NCCL INFO P2P Chunksize set to 131072",
+            "job-0:3882:4064 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. ",
+            "job-0:3882:4066 [0] NCCL INFO [Proxy Service] Device 0 CPU core 14",
+            "job-0:3882:4067 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 7",
+            "job-0:3882:4064 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512",
+            "job-0:3882:4064 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer",
+            "job-0:3882:4064 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.",
+            "job-0:3882:4064 [0] NCCL INFO ncclCommInitRankConfig comm 0x43e6f1d0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0x5cf5874910daf1ff - Init COMPLETE",
+            "job-0:3882:4064 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.12 (kernels 0.10, alloc 0.00, bootstrap 0.01, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)",
+            "job-0:3882:4069 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 12",
+            "job-0:3882:4068 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+            "job-0:3882:4068 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0",
+            "job-0:3882:4068 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+            "job-0:3882:4068 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0",
+            "job-0:3882:4068 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0",
+            "INFO 11-04 09:00:15 [block_pool.py:292] Successfully reset prefix cache",
+            "WARNING 11-04 09:00:15 [cudagraph_dispatcher.py:102] cudagraph dispatching keys are not initialized. No cudagraph will be used.",
+            "INFO 11-04 09:00:25 [block_pool.py:292] Successfully reset prefix cache",
+            "job-0:3882:3882 [0] NCCL INFO comm 0x43e6f1d0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE",
+            "ROLE_RESULT {\"role\": \"rollout\", \"host\": \"job-0\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_DEBUG\": \"INFO\"}, \"syncs\": [{\"version\": 7, \"barrier_wait_s\": 2.013416989999996, \"push_s\": 5.883964114000037, \"bytes\": 988065536, \"load_s\": 0.010530249999987973, \"digest\": \"046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d\"}, {\"version\": 8, \"barrier_wait_s\": 0.0006172600000127204, \"push_s\": 5.929511152999908, \"bytes\": 988065536, \"load_s\": 0.010464168999988033, \"digest\": \"84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da\"}], \"peak_allocated_bytes\": 21256539136, \"device\": \"NVIDIA A10-24Q\"}",
+            "[rank0]:[W1104 09:00:31.551388681 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+          ],
+          "node": {
+            "ip": "10.244.2.203",
+            "host": "job-0",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 99,
+              "mean_util_pct": 16.9,
+              "peak_used_mib": 20854.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e1-two-node.tar.gz",
+        "bytes": 6617211
+      },
+      "seconds": 79.1
+    }
+  ],
+  "seconds": 661.6,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.625
+}

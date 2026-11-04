@@ -1,0 +1,11 @@
+job-0:3882:3882 [0] NCCL INFO cudaDriverVersion 12080
+job-0:3882:3882 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+job-0:3882:3882 [0] NCCL INFO NCCL version 2.27.3+cuda12.9
+job-0:3882:4064 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+job-0:3882:4064 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+job-0:3882:4068 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-0:3882:4068 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-0:3882:4068 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-0:3882:4068 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-0:3882:4068 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+ROLE_RESULT {"role": "rollout", "host": "job-0", "env": {"NCCL_NET_PLUGIN": "none", "NCCL_VERSION": "2.25.1-1", "NCCL_SOCKET_IFNAME": "eth0", "CUDA_VISIBLE_DEVICES": "0", "NCCL_DEBUG": "INFO"}, "syncs": [{"version": 7, "barrier_wait_s": 2.013416989999996, "push_s": 5.883964114000037, "bytes": 988065536, "load_s": 0.010530249999987973, "digest": "046549e4c40038a7dc11e7e0f34f524034fdd7fccc03d1f8ffb4f85afecca01d"}, {"version": 8, "barrier_wait_s": 0.0006172600000127204, "push_s": 5.929511152999908, "bytes": 988065536, "load_s": 0.010464168999988033, "digest": "84a854a6f2850ef4d050f6684c05e93cbbb564dd7a80c2ac247f5a4f46ee58da"}], "peak_allocated_bytes": 21256539136, "device": "NVIDIA A10-24Q"}
