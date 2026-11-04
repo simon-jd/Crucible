@@ -61,6 +61,7 @@ def node_info():
         "packages": {p: ver(p) for p in ("vllm", "torch", "transformers", "numpy")},
         "binaries": {p.name: sha256(p) for p in sorted(BIN.iterdir())}, "words_sha256": sha256(WORDS),
         "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
+        "prometheus_multiproc_dir": os.environ.get("PROMETHEUS_MULTIPROC_DIR"),
     }  # fmt: skip
 
 

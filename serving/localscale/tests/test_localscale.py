@@ -242,6 +242,18 @@ def test_replica_env_pins_cuda_visible_devices_per_replica(tmp_path):
     assert run.Replica("b", argparse.Namespace(), tmp_path).gpu is None
 
 
+def test_replica_env_drops_a_shared_prometheus_multiproc_dir(tmp_path):
+    import argparse
+
+    from serving.localscale import run
+
+    base = {"PROMETHEUS_MULTIPROC_DIR": "/tmp/shared", "PATH": "/bin"}
+    for gpus in ({}, {"b": "1"}):
+        env = run.Replica("b", argparse.Namespace(gpus=gpus), tmp_path).env(base)
+        assert "PROMETHEUS_MULTIPROC_DIR" not in env and env["PATH"] == "/bin"
+    assert base["PROMETHEUS_MULTIPROC_DIR"] == "/tmp/shared"
+
+
 def test_replica_spawn_passes_its_device_to_the_child(tmp_path, monkeypatch):
     import argparse
     import sys

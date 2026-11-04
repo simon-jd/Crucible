@@ -111,6 +111,10 @@ class Replica:
 
     def env(self, base=None):
         env = dict(os.environ if base is None else base)
+        # A PROMETHEUS_MULTIPROC_DIR inherited from the host (the Snowflake ML Job image sets one) makes every
+        # replica's /metrics report the sum over all replicas that share the directory. Without it each vLLM
+        # API server uses its own in-process registry, as on the one-GPU runs.
+        env.pop("PROMETHEUS_MULTIPROC_DIR", None)
         if self.gpu is not None:
             env["CUDA_VISIBLE_DEVICES"] = self.gpu
         return env
