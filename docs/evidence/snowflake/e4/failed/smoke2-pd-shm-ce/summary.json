@@ -1,0 +1,205 @@
+{
+ "layout": "pd-shm-ce",
+ "plan": {
+  "servers": [
+   {
+    "name": "prefill",
+    "node": 0,
+    "gpu": "0",
+    "port": 12971,
+    "host": "127.0.0.1",
+    "gpu_util": 0.8,
+    "kv_role": "kv_producer",
+    "env": {
+     "NCCL_IB_DISABLE": "1",
+     "NCCL_DEBUG": "INFO",
+     "NCCL_DEBUG_SUBSYS": "INIT,NET",
+     "NCCL_SHM_USE_CUDA_MEMCPY": "1",
+     "CRUCIBLE_P2P_NCCL_CUMEM": "0"
+    }
+   },
+   {
+    "name": "decode",
+    "node": 0,
+    "gpu": "1",
+    "port": 12972,
+    "host": "127.0.0.1",
+    "gpu_util": 0.7,
+    "kv_role": "kv_consumer",
+    "env": {
+     "NCCL_IB_DISABLE": "1",
+     "NCCL_DEBUG": "INFO",
+     "NCCL_DEBUG_SUBSYS": "INIT,NET",
+     "NCCL_SHM_USE_CUDA_MEMCPY": "1",
+     "CRUCIBLE_P2P_NCCL_CUMEM": "0"
+    }
+   }
+  ],
+  "proxy_mode": "pd",
+  "notes": {
+   "decode_pool_gb": 24,
+   "decode_buffer_bytes": 2000000000.0
+  },
+  "max_pd_inflight": 96
+ },
+ "base_mult": 0.25,
+ "levels": [
+  2,
+  4
+ ],
+ "calibration": [],
+ "evaluation": [
+  {
+   "file": "evaluation-r0-x2.json",
+   "round": 0,
+   "level": 2,
+   "mult": 0.5,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793827546.8941529,
+   "t_end": 1793827619.5811515,
+   "requests": 40,
+   "ok": 0,
+   "eligible_ok": 0,
+   "good": null,
+   "timeouts": 40,
+   "other_failures": 0,
+   "failure_statuses": {
+    "transport_error": 40
+   },
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 72.679263142,
+   "goodput_rps": null,
+   "completed_rps": 0.0,
+   "output_tokens": 0,
+   "output_tok_per_s": 0.0,
+   "ttft_ms": null,
+   "tpot_ms": null
+  },
+  {
+   "file": "evaluation-r0-x4.json",
+   "round": 0,
+   "level": 4,
+   "mult": 1.0,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793827620.6156695,
+   "t_end": 1793827686.9637034,
+   "requests": 40,
+   "ok": 0,
+   "eligible_ok": 0,
+   "good": null,
+   "timeouts": 40,
+   "other_failures": 0,
+   "failure_statuses": {
+    "transport_error": 40
+   },
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 66.339993036,
+   "goodput_rps": null,
+   "completed_rps": 0.0,
+   "output_tokens": 0,
+   "output_tok_per_s": 0.0,
+   "ttft_ms": null,
+   "tpot_ms": null
+  }
+ ],
+ "stop_reason": null,
+ "server_args": {
+  "prefill": [
+   "--model",
+   "/tmp/models/Qwen3-8B-AWQ",
+   "--served-model-name",
+   "Qwen/Qwen3-8B-AWQ",
+   "--host",
+   "127.0.0.1",
+   "--port",
+   "12971",
+   "--gpu-memory-utilization",
+   "0.8",
+   "--seed",
+   "17",
+   "--max-model-len",
+   "8192",
+   "--max-num-seqs",
+   "64",
+   "--no-enable-prefix-caching",
+   "--generation-config",
+   "vllm",
+   "--kv-transfer-config",
+   "{\"kv_connector\":\"P2pNcclConnector\",\"kv_role\":\"kv_producer\",\"kv_buffer_size\":1000000000.0,\"kv_port\":\"12980\",\"kv_connector_extra_config\":{\"http_port\":\"12971\",\"send_type\":\"PUT_ASYNC\",\"nccl_num_channels\":\"8\",\"mem_pool_size_gb\":\"1\"}}"
+  ],
+  "decode": [
+   "--model",
+   "/tmp/models/Qwen3-8B-AWQ",
+   "--served-model-name",
+   "Qwen/Qwen3-8B-AWQ",
+   "--host",
+   "127.0.0.1",
+   "--port",
+   "12972",
+   "--gpu-memory-utilization",
+   "0.7",
+   "--seed",
+   "17",
+   "--max-model-len",
+   "8192",
+   "--max-num-seqs",
+   "64",
+   "--no-enable-prefix-caching",
+   "--generation-config",
+   "vllm",
+   "--kv-transfer-config",
+   "{\"kv_connector\":\"P2pNcclConnector\",\"kv_role\":\"kv_consumer\",\"kv_buffer_size\":2000000000.0,\"kv_port\":\"12985\",\"kv_connector_extra_config\":{\"http_port\":\"12972\",\"send_type\":\"PUT_ASYNC\",\"nccl_num_channels\":\"8\",\"mem_pool_size_gb\":\"24\"}}"
+  ]
+ },
+ "startup_s": 63.056302309036255,
+ "proxy_command": [
+  "-m",
+  "serving.pd.proxy",
+  "--listen",
+  "127.0.0.1:12970",
+  "--mode",
+  "pd",
+  "--log",
+  "/tmp/e4/out/pd-shm-ce/proxy.jsonl",
+  "--prefill",
+  "http://127.0.0.1:12971",
+  "--prefill-kv",
+  "127.0.0.1:12980",
+  "--decode",
+  "http://127.0.0.1:12972",
+  "--decode-kv",
+  "127.0.0.1:12985",
+  "--max-pd-inflight",
+  "96"
+ ],
+ "warmup": {
+  "exit": 1,
+  "requests": 4,
+  "ok": 0,
+  "eligible_ok": 0,
+  "good": null,
+  "timeouts": 4,
+  "other_failures": 0,
+  "failure_statuses": {
+   "transport_error": 4
+  },
+  "late_sends": 0,
+  "sender_valid": true,
+  "duration_s": 63.00023275,
+  "goodput_rps": null,
+  "completed_rps": 0.0,
+  "output_tokens": 0,
+  "output_tok_per_s": 0.0,
+  "ttft_ms": null,
+  "tpot_ms": null
+ },
+ "server_exit": {
+  "prefill": 0,
+  "decode": 0
+ },
+ "wall_s": 277.73379397392273
+}

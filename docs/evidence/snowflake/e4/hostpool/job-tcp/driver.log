@@ -1,0 +1,5 @@
+'artifact_repositories' is in public preview since 1.50.0.
+00:14:31Z submitted CRUCIBLE_LAB.PROBE.CRUCIBLE_E4_FULL_PD_TCP3_DASL3TYYQLHU on SYSTEM_COMPUTE_POOL_GPU x2
+Compute pool busy (1/2 nodes in use, 2 nodes required). Job execution may be delayed.
+00:54:05Z status DONE after 2384 s
+00:54:07Z wrote .cache/snowflake/e4/full-pd-tcp3/report.json (credits estimate 2.252)

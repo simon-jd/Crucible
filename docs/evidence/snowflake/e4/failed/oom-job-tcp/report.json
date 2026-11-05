@@ -1,0 +1,817 @@
+{
+  "started_at": "2026-11-04T23:38:35+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e4_pd.py",
+  "include": [
+    "scripts/snowflake",
+    "serving/baseline",
+    "serving/pd",
+    ".cache/e4/bin",
+    ".cache/e4/qwen3-8b-awq-ids.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6",
+    "aiohttp==3.12.15"
+  ],
+  "env": [],
+  "args": [
+    "--layouts",
+    "pd-tcp",
+    "--tag",
+    "e4-full-pd-tcp2",
+    "--rounds",
+    "3",
+    "--levels",
+    "1,2,4",
+    "--wall-minutes",
+    "60"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E4_FULL_PD_TCP2_1TKS661C4KLBN",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "environment": {
+        "head": {
+          "host": "job-0",
+          "ip": "10.244.7.139",
+          "gpus": "NVIDIA A10-24Q, 24512 MiB, 570.211.01",
+          "topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+          "mem_total": "MemTotal:       454043012 kB",
+          "cgroup_mem_max": "455266533376",
+          "cpus": 36,
+          "shm": "tmpfs           127G   12K  127G   1% /dev/shm",
+          "otel_env": [
+            "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT",
+            "OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+            "OTEL_RESOURCE_ATTRIBUTES"
+          ],
+          "packages": {
+            "vllm": "0.10.2",
+            "torch": "2.8.0",
+            "transformers": "4.55.4",
+            "aiohttp": "3.12.15",
+            "pyzmq": "27.2.0",
+            "nvidia-nccl-cu12": "2.27.3",
+            "ray": "2.55.1"
+          }
+        },
+        "remote": {
+          "host": "job-1",
+          "ip": "10.244.8.11",
+          "gpus": "NVIDIA A10-24Q, 24512 MiB, 570.211.01",
+          "topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+          "mem_total": "MemTotal:       454043008 kB",
+          "cgroup_mem_max": "455266533376",
+          "cpus": 36,
+          "shm": "tmpfs           127G   12K  127G   1% /dev/shm",
+          "otel_env": [
+            "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT",
+            "OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+            "OTEL_RESOURCE_ATTRIBUTES"
+          ],
+          "packages": {
+            "vllm": "0.10.2",
+            "torch": "2.8.0",
+            "transformers": "4.55.4",
+            "aiohttp": "3.12.15",
+            "pyzmq": "27.2.0",
+            "nvidia-nccl-cu12": "2.27.3",
+            "ray": "2.55.1"
+          }
+        },
+        "fetch_head": {
+          "asset": "models/Qwen3-8B-AWQ",
+          "bytes": 6114600960,
+          "get_seconds": 29.9,
+          "MBps": 204.6
+        },
+        "fetch_remote": {
+          "bytes": 6114568235,
+          "seconds": 29.4,
+          "MBps": 208.2,
+          "files": 12
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x1.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.0730593470543797,
+      "output_tok_per_s": 311.04953510690274,
+      "ttft_ms": {
+        "p50": 381.95112600000004,
+        "p90": 1589.0375919999933,
+        "p99": 2721.5448300000025,
+        "max": 3645.9851979999803
+      },
+      "tpot_ms": {
+        "p50": 16.3225267165354,
+        "p90": 18.144161897435904,
+        "p99": 19.465779502487617,
+        "max": 21.14200330434782
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x2.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 2.043757780874842,
+      "output_tok_per_s": 592.4275384742712,
+      "ttft_ms": {
+        "p50": 752.9485699999932,
+        "p90": 2685.094497000013,
+        "p99": 4822.168033999998,
+        "max": 5150.877925000008
+      },
+      "tpot_ms": {
+        "p50": 21.636253947976876,
+        "p90": 23.406722450000007,
+        "p99": 24.798130247787654,
+        "max": 24.94843969230771
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x4.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 2.57529489934495,
+      "output_tok_per_s": 746.5051056154025,
+      "ttft_ms": {
+        "p50": 17375.610602,
+        "p90": 30407.819368000004,
+        "p99": 36593.752458,
+        "max": 36922.681171
+      },
+      "tpot_ms": {
+        "p50": 26.453147652912616,
+        "p90": 28.670634335978832,
+        "p99": 29.52950179999995,
+        "max": 30.53213368750003
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r1-x2.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 2.0442775330303715,
+      "output_tok_per_s": 592.5781999141925,
+      "ttft_ms": {
+        "p50": 704.6826639999999,
+        "p90": 2626.1311349999996,
+        "p99": 4652.485319999998,
+        "max": 5152.505637000009
+      },
+      "tpot_ms": {
+        "p50": 21.25207198083623,
+        "p90": 23.152133086956514,
+        "p99": 24.647309078703714,
+        "max": 24.748278070796502
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r1-x4.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 2.5781437734797494,
+      "output_tok_per_s": 747.3309135985677,
+      "ttft_ms": {
+        "p50": 17346.412618,
+        "p90": 30391.873558000007,
+        "p99": 36446.519787,
+        "max": 36773.142399
+      },
+      "tpot_ms": {
+        "p50": 26.42074210659898,
+        "p90": 28.68041787179484,
+        "p99": 29.60583612500007,
+        "max": 30.579396137500044
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r1-x1.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.072899672593299,
+      "output_tok_per_s": 311.003249999724,
+      "ttft_ms": {
+        "p50": 374.98199600000225,
+        "p90": 1629.9605589999992,
+        "p99": 2643.4121699999996,
+        "max": 3665.901619000011
+      },
+      "tpot_ms": {
+        "p50": 16.138247980732185,
+        "p90": 17.883098584577134,
+        "p99": 19.21582837777778,
+        "max": 20.082093536231643
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r2-x4.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 122,
+      "timeouts": 116,
+      "other_failures": 27,
+      "completed_rps": 1.018971777718688,
+      "output_tok_per_s": 287.3416890889838,
+      "ttft_ms": {
+        "p50": 9091.516773,
+        "p90": 13545.252567999996,
+        "p99": 17706.727608999998,
+        "max": 17959.858117
+      },
+      "tpot_ms": {
+        "p50": 26.72433492253521,
+        "p90": 28.64051431139242,
+        "p99": 29.15070925000007,
+        "max": 29.51730519999983
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x1.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 0,
+        "pd_requests": 265,
+        "with_kv": 265,
+        "kv_bytes_total": 37312266240,
+        "kv_bytes": {
+          "n": 265,
+          "p50": 150994944,
+          "p90": 195821568,
+          "max": 606339072,
+          "mean": 140801004.6792453
+        },
+        "send_span_s": {
+          "n": 265,
+          "p50": 0.33570408821105957,
+          "p90": 0.7134749889373779,
+          "max": 1.1113159656524658,
+          "mean": 0.3705329013320635
+        },
+        "send_s": {
+          "n": 265,
+          "p50": 0.3074347972869873,
+          "p90": 0.36772918701171875,
+          "max": 1.102445125579834,
+          "mean": 0.288722569987459
+        },
+        "recv_s": {
+          "n": 265,
+          "p50": 0.3209965229034424,
+          "p90": 0.3861997127532959,
+          "max": 1.1012792587280273,
+          "mean": 0.2989698347055687
+        },
+        "decode_load_wait_s": {
+          "n": 265,
+          "p50": 0.00011968612670898438,
+          "p90": 0.00019431114196777344,
+          "max": 0.017999649047851562,
+          "mean": 0.000500700608739313
+        },
+        "send_GBps": 0.4876688534788296,
+        "pooled_tensors": 0,
+        "load_misses": 0,
+        "send_failed": 0,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.0001442432403564453,
+          "p90": 0.00022912025451660156,
+          "max": 0.0005571842193603516,
+          "mean": 0.00015235936866616302
+        },
+        "prefill_s": {
+          "n": 265,
+          "p50": 0.34861087799072266,
+          "p90": 1.5575594902038574,
+          "max": 3.6004791259765625,
+          "mean": 0.5888660349935856
+        },
+        "decode_first_byte_s": {
+          "n": 265,
+          "p50": 0.03338432312011719,
+          "p90": 0.044023752212524414,
+          "max": 0.060477256774902344,
+          "mean": 0.033486698258597895
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x2.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 0,
+        "pd_requests": 265,
+        "with_kv": 265,
+        "kv_bytes_total": 37312266240,
+        "kv_bytes": {
+          "n": 265,
+          "p50": 150994944,
+          "p90": 195821568,
+          "max": 606339072,
+          "mean": 140801004.6792453
+        },
+        "send_span_s": {
+          "n": 265,
+          "p50": 0.43146371841430664,
+          "p90": 0.9067258834838867,
+          "max": 1.5573201179504395,
+          "mean": 0.5244012742672326
+        },
+        "send_s": {
+          "n": 265,
+          "p50": 0.30643534660339355,
+          "p90": 0.3810086250305176,
+          "max": 1.1037871837615967,
+          "mean": 0.2988395861859591
+        },
+        "recv_s": {
+          "n": 265,
+          "p50": 0.3301117420196533,
+          "p90": 0.3984954357147217,
+          "max": 1.1046106815338135,
+          "mean": 0.3090660958919885
+        },
+        "decode_load_wait_s": {
+          "n": 265,
+          "p50": 0.0001232624053955078,
+          "p90": 0.00022149085998535156,
+          "max": 0.022821426391601562,
+          "mean": 0.000541370319870283
+        },
+        "send_GBps": 0.4711591475422166,
+        "pooled_tensors": 0,
+        "load_misses": 0,
+        "send_failed": 0,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.00015783309936523438,
+          "p90": 0.00026679039001464844,
+          "max": 0.0008800029754638672,
+          "mean": 0.00017238832869619693
+        },
+        "prefill_s": {
+          "n": 265,
+          "p50": 0.7144484519958496,
+          "p90": 2.633631706237793,
+          "max": 5.098200082778931,
+          "mean": 1.0896111299406808
+        },
+        "decode_first_byte_s": {
+          "n": 265,
+          "p50": 0.04168295860290527,
+          "p90": 0.055632591247558594,
+          "max": 0.06862163543701172,
+          "mean": 0.04275615080347601
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x4.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 0,
+        "pd_requests": 265,
+        "with_kv": 265,
+        "kv_bytes_total": 37312266240,
+        "kv_bytes": {
+          "n": 265,
+          "p50": 150994944,
+          "p90": 195821568,
+          "max": 606339072,
+          "mean": 140801004.6792453
+        },
+        "send_span_s": {
+          "n": 265,
+          "p50": 0.7646522521972656,
+          "p90": 1.0617554187774658,
+          "max": 1.7167840003967285,
+          "mean": 0.8292191676373751
+        },
+        "send_s": {
+          "n": 265,
+          "p50": 0.31021785736083984,
+          "p90": 0.38906168937683105,
+          "max": 1.110039234161377,
+          "mean": 0.31182358129969184
+        },
+        "recv_s": {
+          "n": 265,
+          "p50": 0.34199953079223633,
+          "p90": 0.39934825897216797,
+          "max": 1.0828192234039307,
+          "mean": 0.3188114517139939
+        },
+        "decode_load_wait_s": {
+          "n": 265,
+          "p50": 0.00011897087097167969,
+          "p90": 0.000202178955078125,
+          "max": 0.011649608612060547,
+          "mean": 0.0003952737124461048
+        },
+        "send_GBps": 0.45154059257603824,
+        "pooled_tensors": 0,
+        "load_misses": 0,
+        "send_failed": 0,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.00017976760864257812,
+          "p90": 2.5142822265625,
+          "max": 6.778087854385376,
+          "mean": 0.7013404594277436
+        },
+        "prefill_s": {
+          "n": 265,
+          "p50": 17.310463428497314,
+          "p90": 27.750672578811646,
+          "max": 31.494572162628174,
+          "mean": 17.22555040503448
+        },
+        "decode_first_byte_s": {
+          "n": 265,
+          "p50": 0.04900789260864258,
+          "p90": 0.06729340553283691,
+          "max": 0.07497692108154297,
+          "mean": 0.051117938419557966
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r1-x2.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 0,
+        "pd_requests": 265,
+        "with_kv": 265,
+        "kv_bytes_total": 37312266240,
+        "kv_bytes": {
+          "n": 265,
+          "p50": 150994944,
+          "p90": 195821568,
+          "max": 606339072,
+          "mean": 140801004.6792453
+        },
+        "send_span_s": {
+          "n": 265,
+          "p50": 0.4306952953338623,
+          "p90": 0.8898530006408691,
+          "max": 1.5453732013702393,
+          "mean": 0.5108737522701048
+        },
+        "send_s": {
+          "n": 265,
+          "p50": 0.29567909240722656,
+          "p90": 0.3699321746826172,
+          "max": 1.0670204162597656,
+          "mean": 0.29197403979751296
+        },
+        "recv_s": {
+          "n": 265,
+          "p50": 0.3211019039154053,
+          "p90": 0.39308595657348633,
+          "max": 1.066805124282837,
+          "mean": 0.3029028559630772
+        },
+        "decode_load_wait_s": {
+          "n": 265,
+          "p50": 0.00011897087097167969,
+          "p90": 0.00017642974853515625,
+          "max": 0.020008563995361328,
+          "mean": 0.0005020258561620173
+        },
+        "send_GBps": 0.482238094787099,
+        "pooled_tensors": 0,
+        "load_misses": 0,
+        "send_failed": 0,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.0001513957977294922,
+          "p90": 0.0002834796905517578,
+          "max": 0.0007231235504150391,
+          "mean": 0.00016666988156876475
+        },
+        "prefill_s": {
+          "n": 265,
+          "p50": 0.6613829135894775,
+          "p90": 2.5779905319213867,
+          "max": 5.106475591659546,
+          "mean": 1.0557304427308856
+        },
+        "decode_first_byte_s": {
+          "n": 265,
+          "p50": 0.03984975814819336,
+          "p90": 0.05162858963012695,
+          "max": 0.06989407539367676,
+          "mean": 0.040640038364338424
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r1-x4.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 0,
+        "pd_requests": 265,
+        "with_kv": 265,
+        "kv_bytes_total": 37312266240,
+        "kv_bytes": {
+          "n": 265,
+          "p50": 150994944,
+          "p90": 195821568,
+          "max": 606339072,
+          "mean": 140801004.6792453
+        },
+        "send_span_s": {
+          "n": 265,
+          "p50": 0.767918586730957,
+          "p90": 1.0511655807495117,
+          "max": 1.7543997764587402,
+          "mean": 0.8251234171525488
+        },
+        "send_s": {
+          "n": 265,
+          "p50": 0.3065962791442871,
+          "p90": 0.387115478515625,
+          "max": 1.1185047626495361,
+          "mean": 0.3101099500116312
+        },
+        "recv_s": {
+          "n": 265,
+          "p50": 0.3404419422149658,
+          "p90": 0.39828920364379883,
+          "max": 1.1078615188598633,
+          "mean": 0.31722805365076606
+        },
+        "decode_load_wait_s": {
+          "n": 265,
+          "p50": 0.00011777877807617188,
+          "p90": 0.0001697540283203125,
+          "max": 0.014067411422729492,
+          "mean": 0.0003816856528228184
+        },
+        "send_GBps": 0.4540357530416689,
+        "pooled_tensors": 0,
+        "load_misses": 0,
+        "send_failed": 0,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.00018262863159179688,
+          "p90": 2.562260389328003,
+          "max": 6.748230695724487,
+          "mean": 0.7114997674834054
+        },
+        "prefill_s": {
+          "n": 265,
+          "p50": 17.300739288330078,
+          "p90": 27.576498985290527,
+          "max": 31.27384877204895,
+          "mean": 17.195223627450332
+        },
+        "decode_first_byte_s": {
+          "n": 265,
+          "p50": 0.053277015686035156,
+          "p90": 0.06597256660461426,
+          "max": 0.07347559928894043,
+          "mean": 0.05313352368912607
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r1-x1.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 0,
+        "pd_requests": 265,
+        "with_kv": 265,
+        "kv_bytes_total": 37312266240,
+        "kv_bytes": {
+          "n": 265,
+          "p50": 150994944,
+          "p90": 195821568,
+          "max": 606339072,
+          "mean": 140801004.6792453
+        },
+        "send_span_s": {
+          "n": 265,
+          "p50": 0.32990288734436035,
+          "p90": 0.6968035697937012,
+          "max": 1.0867974758148193,
+          "mean": 0.3632114203471058
+        },
+        "send_s": {
+          "n": 265,
+          "p50": 0.29511117935180664,
+          "p90": 0.3558692932128906,
+          "max": 1.0777814388275146,
+          "mean": 0.28175046488923844
+        },
+        "recv_s": {
+          "n": 265,
+          "p50": 0.31232285499572754,
+          "p90": 0.3863706588745117,
+          "max": 1.0769202709197998,
+          "mean": 0.2936650078251677
+        },
+        "decode_load_wait_s": {
+          "n": 265,
+          "p50": 0.00011777877807617188,
+          "p90": 0.00042366981506347656,
+          "max": 0.01753520965576172,
+          "mean": 0.0006854480167604842
+        },
+        "send_GBps": 0.4997365478512941,
+        "pooled_tensors": 0,
+        "load_misses": 0,
+        "send_failed": 0,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.0001499652862548828,
+          "p90": 0.00022101402282714844,
+          "max": 0.0005917549133300781,
+          "mean": 0.00015508363831718012
+        },
+        "prefill_s": {
+          "n": 265,
+          "p50": 0.3477649688720703,
+          "p90": 1.5917177200317383,
+          "max": 3.616745948791504,
+          "mean": 0.5803087603371099
+        },
+        "decode_first_byte_s": {
+          "n": 265,
+          "p50": 0.031085729598999023,
+          "p90": 0.04121255874633789,
+          "max": 0.05164527893066406,
+          "mean": 0.032041184407360146
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r2-x4.json",
+      "kv": {
+        "proxy_requests": 265,
+        "proxy_errors": 116,
+        "pd_requests": 265,
+        "with_kv": 150,
+        "kv_bytes_total": 19929235456,
+        "kv_bytes": {
+          "n": 150,
+          "p50": 148635648,
+          "p90": 181665792,
+          "max": 603979776,
+          "mean": 132861569.70666666
+        },
+        "send_span_s": {
+          "n": 150,
+          "p50": 0.7750229835510254,
+          "p90": 0.9860575199127197,
+          "max": 1.6551237106323242,
+          "mean": 0.817578771909078
+        },
+        "send_s": {
+          "n": 150,
+          "p50": 0.2886934280395508,
+          "p90": 0.38002920150756836,
+          "max": 1.0868110656738281,
+          "mean": 0.2933819913864136
+        },
+        "recv_s": {
+          "n": 150,
+          "p50": 0.33506274223327637,
+          "p90": 0.3937106132507324,
+          "max": 1.0879969596862793,
+          "mean": 0.301886568069458
+        },
+        "decode_load_wait_s": {
+          "n": 149,
+          "p50": 0.00011754035949707031,
+          "p90": 0.0001647472381591797,
+          "max": 0.0069119930267333984,
+          "mean": 0.00023612720054268037
+        },
+        "send_GBps": 0.45286204882178543,
+        "pooled_tensors": 0,
+        "load_misses": 3,
+        "send_failed": 3,
+        "admit_wait_s": {
+          "n": 265,
+          "p50": 0.00016236305236816406,
+          "p90": 2.0857763290405273,
+          "max": 37.52044725418091,
+          "mean": 2.927189404109739
+        },
+        "prefill_s": {
+          "n": 149,
+          "p50": 10.571373224258423,
+          "p90": 17.26815629005432,
+          "max": 19.489516973495483,
+          "mean": 10.337426582438834
+        },
+        "decode_first_byte_s": {
+          "n": 149,
+          "p50": 0.05038094520568848,
+          "p90": 0.06539654731750488,
+          "max": 0.07487869262695312,
+          "mean": 0.051116405717478504
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "done": true,
+      "stop_reason": "exited: ['decode']",
+      "startup_s": 87.14411091804504,
+      "trials": 7,
+      "wall_s": 1361.8
+    },
+    {
+      "instance": 0,
+      "upload": {
+        "tar": "@CRUCIBLE_LAB.PROBE.ASSETS/e4-results/e4-full-pd-tcp2.tar",
+        "bytes": 45332480,
+        "put_s": 1.0,
+        "status": [
+          "UPLOADED"
+        ]
+      }
+    }
+  ],
+  "seconds": 2071.3,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "2",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 1.956
+}

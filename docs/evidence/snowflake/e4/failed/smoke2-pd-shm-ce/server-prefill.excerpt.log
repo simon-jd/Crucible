@@ -1,0 +1,14 @@
+# excerpt of server-prefill.log: 156 lines; 0 'Out Of Threshold' (parked in host pool) lines omitted
+[1;36m(APIServer pid=3499)[0;0m INFO 11-04 21:23:57 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(EngineCore_DP0 pid=4323)[0;0m INFO 11-04 21:24:07 [p2p_nccl_engine.py:164] 💯P2pNcclEngine init, rank:0, local_rank:0, http_address:127.0.0.1:12971, zmq_address:127.0.0.1:12980, proxy_address:, send_type:PUT_ASYNC, buffer_size_threshold:1000000000.00, nccl_num_channels:8
+[1;36m(EngineCore_DP0 pid=4323)[0;0m INFO 11-04 21:24:23 [kv_cache_utils.py:864] GPU KV cache size: 92,848 tokens
+[1;36m(EngineCore_DP0 pid=4323)[0;0m INFO 11-04 21:24:23 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 11.33x
+[1;36m(EngineCore_DP0 pid=4323)[0;0m INFO 11-04 21:24:42 [p2p_nccl_engine.py:193] 🤝ncclCommInitRank Success, 127.0.0.1:12980👉127.0.0.1:12985, MyRank:0
+job-0:4323:4813 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.4.75<0>
+job-0:4323:4813 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-0:4323:4957 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:4323:4957 [0] NCCL INFO Channel 05 : 0[0] -> 1[1] via SHM/CE/direct
+[2026-11-04 21:24:43] job-0:4323:4957 [0] transport/shm.cc:590 NCCL WARN Cuda failure 217 'peer access is not supported between these two devices'
+[1;36m(EngineCore_DP0 pid=4323)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=4323)[0;0m     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(EngineCore_DP0 pid=4323)[0;0m RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)

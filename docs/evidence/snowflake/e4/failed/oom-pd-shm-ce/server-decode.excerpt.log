@@ -1,0 +1,23 @@
+# excerpt of server-decode.log: 912 lines; 0 'Out Of Threshold' (parked in host pool) lines omitted
+[1;36m(APIServer pid=1415)[0;0m INFO 11-04 23:46:43 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(EngineCore_DP0 pid=2236)[0;0m INFO 11-04 23:47:06 [p2p_nccl_engine.py:164] 💯P2pNcclEngine init, rank:0, local_rank:0, http_address:127.0.0.1:12972, zmq_address:127.0.0.1:12985, proxy_address:, send_type:PUT_ASYNC, buffer_size_threshold:2000000000.00, nccl_num_channels:8
+[1;36m(EngineCore_DP0 pid=2236)[0;0m INFO 11-04 23:47:32 [kv_cache_utils.py:864] GPU KV cache size: 75,120 tokens
+[1;36m(EngineCore_DP0 pid=2236)[0;0m INFO 11-04 23:47:32 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 9.17x
+job-0:2236:2866 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.7.203<0>
+job-0:2236:2866 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-0:2236:2866 [0] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Channel 02 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Channel 03 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Conn[1;36m(EngineCore_DP0 pid=2236)[0;0m INFO 11-04 23:47:41 [p2p_nccl_engine.py:323] 🤝ncclCommInitRank Success, 127.0.0.1:12985👈127.0.0.1:12980, MyRank:1
+[1;36m(EngineCore_DP0 pid=2236)[0;0m WARNING 11-04 23:54:16 [p2p_nccl_engine.py:353] 🔴[PUT]Recv Tensor, Out Of Memory, 127.0.0.1:12985👈127.0.0.1:12980, data:{'cmd': 'PUT', 'tensor_id': 'cmpl-___prefill_addr_127.0.0.1:12980___decode_addr_127.0.0.1:12985_91da1caf9c2a415c96983eb27c4a0136-0#model.layers.15.self_attn.attn', 'shape': [2, 69, 16, 8, 128], 'dtype': 'float16'}
+[1;36m(EngineCore_DP0 pid=2236)[0;0m ERROR 11-04 23:54:16 [core.py:720] Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=2236)[0;0m ERROR 11-04 23:54:16 [core.py:720] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.72 GiB of which 33.75 MiB is free. Process 20925 has 21.50 GiB memory in use. Of the allocated memory 20.34 GiB is allocated by PyTorch, with 28.00 MiB allocated in private pools (e.g., CUDA Graphs), and 582.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[1;36m(APIServer pid=1415)[0;0m ERROR 11-04 23:54:16 [async_llm.py:485] Traceback (most recent call last):
+[1;36m(APIServer pid=1415)[0;0m ERROR 11-04 23:54:16 [async_llm.py:485] vllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.
+[1;36m(EngineCore_DP0 pid=2236)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=2236)[0;0m torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.72 GiB of which 33.75 MiB is free. Process 20925 has 21.50 GiB memory in use. Of the allocated memory 20.34 GiB is allocated by PyTorch, with 28.00 MiB allocated in private pools (e.g., CUDA Graphs), and 582.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+job-0:2236:2866 [0] NCCL INFO Channel 04 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Channel 05 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Channel 06 : 1[1] -> 0[0] via SHM/CE/direct
+job-0:2236:2866 [0] NCCL INFO Channel 07 : 1[1] -> 0[0] via SHM/CE/direct

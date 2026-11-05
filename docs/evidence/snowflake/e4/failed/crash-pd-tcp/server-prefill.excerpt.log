@@ -1,0 +1,59 @@
+# excerpt of server-prefill.log: 839 lines; 0 'Out Of Threshold' (parked in host pool) lines omitted
+[1;36m(APIServer pid=4090)[0;0m INFO 11-04 23:18:44 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(EngineCore_DP0 pid=4390)[0;0m INFO 11-04 23:18:54 [p2p_nccl_engine.py:164] 💯P2pNcclEngine init, rank:0, local_rank:0, http_address:10.244.7.11:12971, zmq_address:10.244.7.11:12980, proxy_address:, send_type:PUT_ASYNC, buffer_size_threshold:1000000000.00, nccl_num_channels:8
+[1;36m(EngineCore_DP0 pid=4390)[0;0m INFO 11-04 23:19:32 [kv_cache_utils.py:864] GPU KV cache size: 87,664 tokens
+[1;36m(EngineCore_DP0 pid=4390)[0;0m INFO 11-04 23:19:32 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 10.70x
+[1;36m(EngineCore_DP0 pid=4390)[0;0m INFO 11-04 23:19:50 [p2p_nccl_engine.py:193] 🤝ncclCommInitRank Success, 10.244.7.11:12980👉10.244.7.75:12985, MyRank:0
+[1;36m(EngineCore_DP0 pid=4390)[0;0m ERROR 11-04 23:26:31 [core.py:720] Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=4390)[0;0m ERROR 11-04 23:26:31 [core.py:720] TypeError: 'NoneType' object is not subscriptable
+[1;36m(APIServer pid=4090)[0;0m ERROR 11-04 23:26:31 [async_llm.py:485] Traceback (most recent call last):
+[1;36m(APIServer pid=4090)[0;0m ERROR 11-04 23:26:31 [async_llm.py:485] vllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51964 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(EngineCore_DP0 pid=4390)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=4390)[0;0m TypeError: 'NoneType' object is not subscriptable
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51972 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+job-0:4390:4576 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.7.11<0>
+job-0:4390:4576 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-0:4390:5306 [0] NCCL INFO Channel 01/1 : 0[0] -> 1[0] [send] via NET/Socket/0/Shared
+job-0:4390:5306 [0] NCCL INFO Channel 05/1 : 0[0] -> 1[0] [send] via NET/Socket/0/Shared
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51978 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55480 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55486 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55492 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55560 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55458 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55502 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55506 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55518 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55570 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55576 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55578 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55590 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55594 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55602 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55614 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55530 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55536 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55546 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51994 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51996 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55550 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:52006 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:52010 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:52024 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55556 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55466 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55448 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51944 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51958 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51960 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51964 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51972 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:51978 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55480 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55486 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55492 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55560 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55458 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55502 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=4090)[0;0m INFO:     127.0.0.1:55506 - "POST /v1/completions HTTP/1.1" 500 Internal Server Error

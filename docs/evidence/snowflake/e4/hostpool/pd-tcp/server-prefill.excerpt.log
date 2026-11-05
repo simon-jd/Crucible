@@ -1,0 +1,10 @@
+# excerpt of server-prefill.log: 2484 lines; 0 'Out Of Threshold' (parked in host pool) lines omitted
+[1;36m(APIServer pid=4055)[0;0m INFO 11-05 00:24:50 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(EngineCore_DP0 pid=4356)[0;0m INFO 11-05 00:25:01 [p2p_nccl_engine.py:164] 💯P2pNcclEngine init, rank:0, local_rank:0, http_address:10.244.8.75:12971, zmq_address:10.244.8.75:12980, proxy_address:, send_type:PUT_ASYNC, buffer_size_threshold:1000000000.00, nccl_num_channels:8
+[1;36m(EngineCore_DP0 pid=4356)[0;0m INFO 11-05 00:25:38 [kv_cache_utils.py:864] GPU KV cache size: 87,664 tokens
+[1;36m(EngineCore_DP0 pid=4356)[0;0m INFO 11-05 00:25:38 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 10.70x
+[1;36m(EngineCore_DP0 pid=4356)[0;0m INFO 11-05 00:26:09 [p2p_nccl_engine.py:193] 🤝ncclCommInitRank Success, 10.244.8.75:12980👉10.244.8.203:12985, MyRank:0
+job-0:4356:4542 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.8.75<0>
+job-0:4356:4542 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-0:4356:5312 [0] NCCL INFO Channel 01/1 : 0[0] -> 1[0] [send] via NET/Socket/0/Shared
+job-0:4356:5312 [0] NCCL INFO Channel 05/1 : 0[0] -> 1[0] [send] via NET/Socket/0/Shared

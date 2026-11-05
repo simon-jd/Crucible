@@ -1,0 +1,404 @@
+{
+  "started_at": "2026-11-04T19:37:48+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e4_pd.py",
+  "include": [
+    "scripts/snowflake",
+    "serving/baseline",
+    "serving/pd",
+    ".cache/e4/bin",
+    ".cache/e4/qwen3-8b-awq-ids.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6",
+    "aiohttp==3.12.15"
+  ],
+  "env": [],
+  "args": [
+    "--layouts",
+    "colo",
+    "--tag",
+    "e4-full-colo",
+    "--calibrate",
+    "--rounds",
+    "3",
+    "--levels",
+    "1,2,4",
+    "--wall-minutes",
+    "66"
+  ],
+  "lock_wait_s": 6920.1,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E4_FULL_COLO_1VXQVYFXZ1NRT",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "environment": {
+        "head": {
+          "host": "job-0",
+          "ip": "10.244.5.75",
+          "gpus": "NVIDIA A10-24Q, 24512 MiB, 570.211.01",
+          "topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+          "mem_total": "MemTotal:       454043008 kB",
+          "cgroup_mem_max": "455266533376",
+          "cpus": 36,
+          "shm": "tmpfs           127G   12K  127G   1% /dev/shm",
+          "otel_env": [
+            "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT",
+            "OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+            "OTEL_RESOURCE_ATTRIBUTES"
+          ],
+          "packages": {
+            "vllm": "0.10.2",
+            "torch": "2.8.0",
+            "transformers": "4.55.4",
+            "aiohttp": "3.12.15",
+            "pyzmq": "27.2.0",
+            "nvidia-nccl-cu12": "2.27.3",
+            "ray": "2.55.1"
+          }
+        },
+        "fetch_head": {
+          "asset": "models/Qwen3-8B-AWQ",
+          "bytes": 6114600960,
+          "get_seconds": 30.5,
+          "MBps": 200.4
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "calibration-r0-x1.json",
+      "sender_valid": true,
+      "requests": 191,
+      "ok": 191,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 0.7909807150544937,
+      "output_tok_per_s": 183.16380128871836,
+      "ttft_ms": {
+        "p50": 339.7437750000099,
+        "p90": 1146.4566209999903,
+        "p99": 2059.536862000008,
+        "max": 2126.9937999999966
+      },
+      "tpot_ms": {
+        "p50": 22.707790868465434,
+        "p90": 52.64877000549449,
+        "p99": 87.73400306666639,
+        "max": 101.47115373076947
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "calibration-r1-x1.json",
+      "sender_valid": true,
+      "requests": 191,
+      "ok": 191,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 0.7909795914402176,
+      "output_tok_per_s": 183.16354109847845,
+      "ttft_ms": {
+        "p50": 349.7859640000097,
+        "p90": 1195.4376239999983,
+        "p99": 2228.1649719999987,
+        "max": 2385.604084999999
+      },
+      "tpot_ms": {
+        "p50": 22.978986379518126,
+        "p90": 54.4660751703296,
+        "p99": 90.8955455333334,
+        "max": 105.44087019230713
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "calibration-r2-x1.json",
+      "sender_valid": true,
+      "requests": 191,
+      "ok": 191,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 0.7909800957690887,
+      "output_tok_per_s": 183.1636578836179,
+      "ttft_ms": {
+        "p50": 337.7400309999939,
+        "p90": 1171.2607220000064,
+        "p99": 2229.71960099999,
+        "max": 2387.839315999998
+      },
+      "tpot_ms": {
+        "p50": 22.9263739578313,
+        "p90": 53.94789524064164,
+        "p99": 90.42276600000041,
+        "max": 104.67167192307758
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r0-x1.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.0733154617780207,
+      "output_tok_per_s": 311.1237755167564,
+      "ttft_ms": {
+        "p50": 340.1807859999999,
+        "p90": 998.2710960000113,
+        "p99": 1961.9120570000014,
+        "max": 2912.119095000002
+      },
+      "tpot_ms": {
+        "p50": 23.622779207792156,
+        "p90": 31.4264418298429,
+        "p99": 68.14387761538465,
+        "max": 195.4725831818184
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r0-x2.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 254,
+      "timeouts": 11,
+      "other_failures": 0,
+      "completed_rps": 1.7097685400060818,
+      "output_tok_per_s": 477.9543520259521,
+      "ttft_ms": {
+        "p50": 3585.538209999999,
+        "p90": 11818.238217999999,
+        "p99": 15917.488882000005,
+        "max": 16797.200676999986
+      },
+      "tpot_ms": {
+        "p50": 112.30152506481487,
+        "p90": 131.8785512932331,
+        "p99": 180.92401314583336,
+        "max": 563.0498540909091
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r0-x4.json",
+      "sender_valid": false,
+      "requests": 265,
+      "ok": 119,
+      "timeouts": 142,
+      "other_failures": 4,
+      "completed_rps": 1.0052349185843843,
+      "output_tok_per_s": 221.03341915696637,
+      "ttft_ms": {
+        "p50": 6087.5877420000015,
+        "p90": 47087.494939,
+        "p99": 48713.447635,
+        "max": 48825.762149999995
+      },
+      "tpot_ms": {
+        "p50": 114.49510215051022,
+        "p90": 229.8559453625001,
+        "p99": 657.6800872941179,
+        "max": 687.3404458666666
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r1-x2.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 253,
+      "timeouts": 12,
+      "other_failures": 0,
+      "completed_rps": 1.693900969713297,
+      "output_tok_per_s": 472.77914259025596,
+      "ttft_ms": {
+        "p50": 4117.983586000002,
+        "p90": 12692.416941999996,
+        "p99": 16463.746407,
+        "max": 17164.052011000007
+      },
+      "tpot_ms": {
+        "p50": 115.01159466157759,
+        "p90": 132.10203609836074,
+        "p99": 183.18770407500014,
+        "max": 606.4913519090908
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r1-x4.json",
+      "sender_valid": false,
+      "requests": 265,
+      "ok": 116,
+      "timeouts": 146,
+      "other_failures": 3,
+      "completed_rps": 0.9798905526031791,
+      "output_tok_per_s": 210.46528550093282,
+      "ttft_ms": {
+        "p50": 6024.479276000001,
+        "p90": 47154.55415599999,
+        "p99": 49822.392101,
+        "max": 50379.535426999995
+      },
+      "tpot_ms": {
+        "p50": 114.1624995034965,
+        "p90": 230.50566924999993,
+        "p99": 689.5199629411766,
+        "max": 698.4699484000001
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r1-x1.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.0728701477649056,
+      "output_tok_per_s": 310.99469158758114,
+      "ttft_ms": {
+        "p50": 342.7680590000091,
+        "p90": 985.7145279999822,
+        "p99": 1996.9145659999995,
+        "max": 2994.3417060000065
+      },
+      "tpot_ms": {
+        "p50": 23.623802564971776,
+        "p90": 31.69195604950491,
+        "p99": 68.76250548717955,
+        "max": 142.110700181818
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r2-x4.json",
+      "sender_valid": false,
+      "requests": 265,
+      "ok": 119,
+      "timeouts": 142,
+      "other_failures": 4,
+      "completed_rps": 1.005235338696665,
+      "output_tok_per_s": 220.90680119543268,
+      "ttft_ms": {
+        "p50": 6303.169716000002,
+        "p90": 47042.382132000006,
+        "p99": 48672.48398800001,
+        "max": 48781.402826
+      },
+      "tpot_ms": {
+        "p50": 114.26081889887641,
+        "p90": 229.4487339,
+        "p99": 664.1593986363636,
+        "max": 685.690032133334
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r2-x1.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 265,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.0732763715186413,
+      "output_tok_per_s": 311.11244435689036,
+      "ttft_ms": {
+        "p50": 340.16484599999967,
+        "p90": 996.4435570000205,
+        "p99": 1969.0396970000002,
+        "max": 2923.2121259999985
+      },
+      "tpot_ms": {
+        "p50": 23.665555888888886,
+        "p90": 31.469815787958076,
+        "p99": 68.28208415384609,
+        "max": 195.20537154545443
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "file": "evaluation-r2-x2.json",
+      "sender_valid": true,
+      "requests": 265,
+      "ok": 254,
+      "timeouts": 11,
+      "other_failures": 0,
+      "completed_rps": 1.71071126710845,
+      "output_tok_per_s": 478.2178850778282,
+      "ttft_ms": {
+        "p50": 3759.684973000003,
+        "p90": 11832.388965999999,
+        "p99": 15866.254602999994,
+        "max": 16746.63519500001
+      },
+      "tpot_ms": {
+        "p50": 112.12431417129625,
+        "p90": 132.33869230000005,
+        "p99": 188.02068064583332,
+        "max": 564.6853857272727
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "colo",
+      "done": true,
+      "stop_reason": null,
+      "startup_s": 75.0340735912323,
+      "trials": 12,
+      "wall_s": 2365.0
+    },
+    {
+      "instance": 0,
+      "upload": {
+        "tar": "@CRUCIBLE_LAB.PROBE.ASSETS/e4-results/e4-full-colo.tar",
+        "bytes": 1474560,
+        "put_s": 0.4,
+        "status": [
+          "UPLOADED"
+        ]
+      }
+    }
+  ],
+  "seconds": 2902.5,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 1.371
+}

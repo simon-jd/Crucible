@@ -1,0 +1,195 @@
+{
+  "started_at": "2026-11-04T22:53:21+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e4_pd.py",
+  "include": [
+    "scripts/snowflake",
+    "serving/baseline",
+    "serving/pd",
+    ".cache/e4/bin",
+    ".cache/e4/qwen3-8b-awq-ids.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6",
+    "aiohttp==3.12.15"
+  ],
+  "env": [],
+  "args": [
+    "--layouts",
+    "pd-tcp",
+    "--tag",
+    "e4-smoke5",
+    "--smoke",
+    "40",
+    "--levels",
+    "2,4",
+    "--rounds",
+    "1",
+    "--wall-minutes",
+    "32"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E4_SMOKE5_4INLQ1OE8RP7",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "environment": {
+        "head": {
+          "host": "job-0",
+          "ip": "10.244.6.75",
+          "gpus": "NVIDIA A10-24Q, 24512 MiB, 570.211.01",
+          "topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+          "mem_total": "MemTotal:       454043012 kB",
+          "cgroup_mem_max": "455266533376",
+          "cpus": 36,
+          "shm": "tmpfs           127G   12K  127G   1% /dev/shm",
+          "otel_env": [
+            "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT",
+            "OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+            "OTEL_RESOURCE_ATTRIBUTES"
+          ],
+          "packages": {
+            "vllm": "0.10.2",
+            "torch": "2.8.0",
+            "transformers": "4.55.4",
+            "aiohttp": "3.12.15",
+            "pyzmq": "27.2.0",
+            "nvidia-nccl-cu12": "2.27.3",
+            "ray": "2.55.1"
+          }
+        },
+        "remote": {
+          "host": "job-1",
+          "ip": "10.244.6.139",
+          "gpus": "NVIDIA A10-24Q, 24512 MiB, 570.211.01",
+          "topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+          "mem_total": "MemTotal:       454043008 kB",
+          "cgroup_mem_max": "455266533376",
+          "cpus": 36,
+          "shm": "tmpfs           127G   12K  127G   1% /dev/shm",
+          "otel_env": [
+            "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT",
+            "OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+            "OTEL_RESOURCE_ATTRIBUTES"
+          ],
+          "packages": {
+            "vllm": "0.10.2",
+            "torch": "2.8.0",
+            "transformers": "4.55.4",
+            "aiohttp": "3.12.15",
+            "pyzmq": "27.2.0",
+            "nvidia-nccl-cu12": "2.27.3",
+            "ray": "2.55.1"
+          }
+        },
+        "fetch_head": {
+          "asset": "models/Qwen3-8B-AWQ",
+          "bytes": 6114600960,
+          "get_seconds": 30.5,
+          "MBps": 200.3
+        },
+        "fetch_remote": {
+          "bytes": 6114568235,
+          "seconds": 29.7,
+          "MBps": 206.2,
+          "files": 12
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x2.json",
+      "sender_valid": true,
+      "requests": 40,
+      "ok": 40,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.8289594783395833,
+      "output_tok_per_s": 533.3245838838225,
+      "ttft_ms": {
+        "p50": 1387.9078490000002,
+        "p90": 2819.389056,
+        "p99": 3050.4979430000003,
+        "max": 3050.4979430000003
+      },
+      "tpot_ms": {
+        "p50": 22.487933277777767,
+        "p90": 23.297431699999986,
+        "p99": 25.58339671794872,
+        "max": 25.58339671794872
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "file": "evaluation-r0-x4.json",
+      "sender_valid": true,
+      "requests": 40,
+      "ok": 40,
+      "timeouts": 0,
+      "other_failures": 0,
+      "completed_rps": 1.8905051978858376,
+      "output_tok_per_s": 551.2713157035103,
+      "ttft_ms": {
+        "p50": 3978.4049990000003,
+        "p90": 7095.151615,
+        "p99": 8177.3895489999995,
+        "max": 8177.3895489999995
+      },
+      "tpot_ms": {
+        "p50": 22.77180076923077,
+        "p90": 25.271500046511623,
+        "p99": 29.142967641025628,
+        "max": 29.142967641025628
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-tcp",
+      "done": true,
+      "stop_reason": null,
+      "startup_s": 84.18109631538391,
+      "trials": 2,
+      "wall_s": 145.7
+    },
+    {
+      "instance": 0,
+      "upload": {
+        "tar": "@CRUCIBLE_LAB.PROBE.ASSETS/e4-results/e4-smoke5.tar",
+        "bytes": 133120,
+        "put_s": 0.2,
+        "status": [
+          "UPLOADED"
+        ]
+      }
+    }
+  ],
+  "seconds": 812.0,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.767
+}

@@ -1,0 +1,547 @@
+{
+ "layout": "colo",
+ "plan": {
+  "servers": [
+   {
+    "name": "colo",
+    "node": 0,
+    "gpu": "0",
+    "port": 12971,
+    "host": "127.0.0.1",
+    "gpu_util": 0.8,
+    "kv_role": null,
+    "env": {}
+   }
+  ],
+  "proxy_mode": "dp",
+  "notes": {},
+  "max_pd_inflight": 96
+ },
+ "base_mult": 0.25,
+ "levels": [
+  1,
+  2,
+  4
+ ],
+ "calibration": [
+  {
+   "file": "calibration-r0-x1.json",
+   "round": 0,
+   "level": 1,
+   "mult": 0.25,
+   "exit": 0,
+   "idle_after": true,
+   "t_start": 1793828552.7193904,
+   "t_end": 1793828794.3052392,
+   "requests": 191,
+   "ok": 191,
+   "eligible_ok": 191,
+   "good": null,
+   "timeouts": 0,
+   "other_failures": 0,
+   "failure_statuses": {},
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 241.472385312,
+   "goodput_rps": null,
+   "completed_rps": 0.7909807150544937,
+   "output_tokens": 44229,
+   "output_tok_per_s": 183.16380128871836,
+   "ttft_ms": {
+    "p50": 339.7437750000099,
+    "p90": 1146.4566209999903,
+    "p99": 2059.536862000008,
+    "max": 2126.9937999999966
+   },
+   "tpot_ms": {
+    "p50": 22.707790868465434,
+    "p90": 52.64877000549449,
+    "p99": 87.73400306666639,
+    "max": 101.47115373076947
+   }
+  },
+  {
+   "file": "calibration-r1-x1.json",
+   "round": 1,
+   "level": 1,
+   "mult": 0.25,
+   "exit": 0,
+   "idle_after": true,
+   "t_start": 1793828795.3204076,
+   "t_end": 1793829036.8084638,
+   "requests": 191,
+   "ok": 191,
+   "eligible_ok": 191,
+   "good": null,
+   "timeouts": 0,
+   "other_failures": 0,
+   "failure_statuses": {},
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 241.472728332,
+   "goodput_rps": null,
+   "completed_rps": 0.7909795914402176,
+   "output_tokens": 44229,
+   "output_tok_per_s": 183.16354109847845,
+   "ttft_ms": {
+    "p50": 349.7859640000097,
+    "p90": 1195.4376239999983,
+    "p99": 2228.1649719999987,
+    "max": 2385.604084999999
+   },
+   "tpot_ms": {
+    "p50": 22.978986379518126,
+    "p90": 54.4660751703296,
+    "p99": 90.8955455333334,
+    "max": 105.44087019230713
+   }
+  },
+  {
+   "file": "calibration-r2-x1.json",
+   "round": 2,
+   "level": 1,
+   "mult": 0.25,
+   "exit": 0,
+   "idle_after": true,
+   "t_start": 1793829037.8235028,
+   "t_end": 1793829279.3113978,
+   "requests": 191,
+   "ok": 191,
+   "eligible_ok": 191,
+   "good": null,
+   "timeouts": 0,
+   "other_failures": 0,
+   "failure_statuses": {},
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 241.472574369,
+   "goodput_rps": null,
+   "completed_rps": 0.7909800957690887,
+   "output_tokens": 44229,
+   "output_tok_per_s": 183.1636578836179,
+   "ttft_ms": {
+    "p50": 337.7400309999939,
+    "p90": 1171.2607220000064,
+    "p99": 2229.71960099999,
+    "max": 2387.839315999998
+   },
+   "tpot_ms": {
+    "p50": 22.9263739578313,
+    "p90": 53.94789524064164,
+    "p99": 90.42276600000041,
+    "max": 104.67167192307758
+   }
+  }
+ ],
+ "evaluation": [
+  {
+   "file": "evaluation-r0-x1.json",
+   "round": 0,
+   "level": 1,
+   "mult": 0.25,
+   "exit": 0,
+   "idle_after": true,
+   "t_start": 1793829280.3269632,
+   "t_end": 1793829527.695735,
+   "requests": 265,
+   "ok": 265,
+   "eligible_ok": 265,
+   "good": null,
+   "timeouts": 0,
+   "other_failures": 0,
+   "failure_statuses": {},
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 246.898520926,
+   "goodput_rps": null,
+   "completed_rps": 1.0733154617780207,
+   "output_tokens": 76816,
+   "output_tok_per_s": 311.1237755167564,
+   "ttft_ms": {
+    "p50": 340.1807859999999,
+    "p90": 998.2710960000113,
+    "p99": 1961.9120570000014,
+    "max": 2912.119095000002
+   },
+   "tpot_ms": {
+    "p50": 23.622779207792156,
+    "p90": 31.4264418298429,
+    "p99": 68.14387761538465,
+    "max": 195.4725831818184
+   }
+  },
+  {
+   "file": "evaluation-r0-x2.json",
+   "round": 0,
+   "level": 2,
+   "mult": 0.5,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793829528.7113187,
+   "t_end": 1793829677.2882562,
+   "requests": 265,
+   "ok": 254,
+   "eligible_ok": 254,
+   "good": null,
+   "timeouts": 11,
+   "other_failures": 0,
+   "failure_statuses": {
+    "stream_error": 11
+   },
+   "late_sends": 1,
+   "sender_valid": true,
+   "duration_s": 148.55812003600002,
+   "goodput_rps": null,
+   "completed_rps": 1.7097685400060818,
+   "output_tokens": 75844,
+   "output_tok_per_s": 477.9543520259521,
+   "ttft_ms": {
+    "p50": 3585.538209999999,
+    "p90": 11818.238217999999,
+    "p99": 15917.488882000005,
+    "max": 16797.200676999986
+   },
+   "tpot_ms": {
+    "p50": 112.30152506481487,
+    "p90": 131.8785512932331,
+    "p99": 180.92401314583336,
+    "max": 563.0498540909091
+   }
+  },
+  {
+   "file": "evaluation-r0-x4.json",
+   "round": 0,
+   "level": 4,
+   "mult": 1.0,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793829678.3049273,
+   "t_end": 1793829796.7045474,
+   "requests": 265,
+   "ok": 119,
+   "eligible_ok": 119,
+   "good": null,
+   "timeouts": 142,
+   "other_failures": 4,
+   "failure_statuses": {
+    "stream_error": 142,
+    "admission_rejected": 4
+   },
+   "late_sends": 6,
+   "sender_valid": false,
+   "duration_s": 118.380288826,
+   "goodput_rps": null,
+   "completed_rps": 1.0052349185843843,
+   "output_tokens": 46028,
+   "output_tok_per_s": 221.03341915696637,
+   "ttft_ms": {
+    "p50": 6087.5877420000015,
+    "p90": 47087.494939,
+    "p99": 48713.447635,
+    "max": 48825.762149999995
+   },
+   "tpot_ms": {
+    "p50": 114.49510215051022,
+    "p90": 229.8559453625001,
+    "p99": 657.6800872941179,
+    "max": 687.3404458666666
+   }
+  },
+  {
+   "file": "evaluation-r1-x2.json",
+   "round": 1,
+   "level": 2,
+   "mult": 0.5,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793829798.735202,
+   "t_end": 1793829948.1130104,
+   "requests": 265,
+   "ok": 253,
+   "eligible_ok": 253,
+   "good": null,
+   "timeouts": 12,
+   "other_failures": 0,
+   "failure_statuses": {
+    "stream_error": 12
+   },
+   "late_sends": 1,
+   "sender_valid": true,
+   "duration_s": 149.359380816,
+   "goodput_rps": null,
+   "completed_rps": 1.693900969713297,
+   "output_tokens": 75766,
+   "output_tok_per_s": 472.77914259025596,
+   "ttft_ms": {
+    "p50": 4117.983586000002,
+    "p90": 12692.416941999996,
+    "p99": 16463.746407,
+    "max": 17164.052011000007
+   },
+   "tpot_ms": {
+    "p50": 115.01159466157759,
+    "p90": 132.10203609836074,
+    "p99": 183.18770407500014,
+    "max": 606.4913519090908
+   }
+  },
+  {
+   "file": "evaluation-r1-x4.json",
+   "round": 1,
+   "level": 4,
+   "mult": 1.0,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793829949.1291254,
+   "t_end": 1793830067.5291297,
+   "requests": 265,
+   "ok": 116,
+   "eligible_ok": 116,
+   "good": null,
+   "timeouts": 146,
+   "other_failures": 3,
+   "failure_statuses": {
+    "stream_error": 146,
+    "admission_rejected": 3
+   },
+   "late_sends": 5,
+   "sender_valid": false,
+   "duration_s": 118.380567801,
+   "goodput_rps": null,
+   "completed_rps": 0.9798905526031791,
+   "output_tokens": 44121,
+   "output_tok_per_s": 210.46528550093282,
+   "ttft_ms": {
+    "p50": 6024.479276000001,
+    "p90": 47154.55415599999,
+    "p99": 49822.392101,
+    "max": 50379.535426999995
+   },
+   "tpot_ms": {
+    "p50": 114.1624995034965,
+    "p90": 230.50566924999993,
+    "p99": 689.5199629411766,
+    "max": 698.4699484000001
+   }
+  },
+  {
+   "file": "evaluation-r1-x1.json",
+   "round": 1,
+   "level": 1,
+   "mult": 0.25,
+   "exit": 0,
+   "idle_after": true,
+   "t_start": 1793830068.5537097,
+   "t_end": 1793830315.5739186,
+   "requests": 265,
+   "ok": 265,
+   "eligible_ok": 265,
+   "good": null,
+   "timeouts": 0,
+   "other_failures": 0,
+   "failure_statuses": {},
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 247.001000589,
+   "goodput_rps": null,
+   "completed_rps": 1.0728701477649056,
+   "output_tokens": 76816,
+   "output_tok_per_s": 310.99469158758114,
+   "ttft_ms": {
+    "p50": 342.7680590000091,
+    "p90": 985.7145279999822,
+    "p99": 1996.9145659999995,
+    "max": 2994.3417060000065
+   },
+   "tpot_ms": {
+    "p50": 23.623802564971776,
+    "p90": 31.69195604950491,
+    "p99": 68.76250548717955,
+    "max": 142.110700181818
+   }
+  },
+  {
+   "file": "evaluation-r2-x4.json",
+   "round": 2,
+   "level": 4,
+   "mult": 1.0,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793830316.5904975,
+   "t_end": 1793830434.9897106,
+   "requests": 265,
+   "ok": 119,
+   "eligible_ok": 119,
+   "good": null,
+   "timeouts": 142,
+   "other_failures": 4,
+   "failure_statuses": {
+    "stream_error": 142,
+    "admission_rejected": 4
+   },
+   "late_sends": 6,
+   "sender_valid": false,
+   "duration_s": 118.380239352,
+   "goodput_rps": null,
+   "completed_rps": 1.005235338696665,
+   "output_tokens": 46065,
+   "output_tok_per_s": 220.90680119543268,
+   "ttft_ms": {
+    "p50": 6303.169716000002,
+    "p90": 47042.382132000006,
+    "p99": 48672.48398800001,
+    "max": 48781.402826
+   },
+   "tpot_ms": {
+    "p50": 114.26081889887641,
+    "p90": 229.4487339,
+    "p99": 664.1593986363636,
+    "max": 685.690032133334
+   }
+  },
+  {
+   "file": "evaluation-r2-x1.json",
+   "round": 2,
+   "level": 1,
+   "mult": 0.25,
+   "exit": 0,
+   "idle_after": true,
+   "t_start": 1793830437.0179653,
+   "t_end": 1793830683.944851,
+   "requests": 265,
+   "ok": 265,
+   "eligible_ok": 265,
+   "good": null,
+   "timeouts": 0,
+   "other_failures": 0,
+   "failure_statuses": {},
+   "late_sends": 0,
+   "sender_valid": true,
+   "duration_s": 246.907513323,
+   "goodput_rps": null,
+   "completed_rps": 1.0732763715186413,
+   "output_tokens": 76816,
+   "output_tok_per_s": 311.11244435689036,
+   "ttft_ms": {
+    "p50": 340.16484599999967,
+    "p90": 996.4435570000205,
+    "p99": 1969.0396970000002,
+    "max": 2923.2121259999985
+   },
+   "tpot_ms": {
+    "p50": 23.665555888888886,
+    "p90": 31.469815787958076,
+    "p99": 68.28208415384609,
+    "max": 195.20537154545443
+   }
+  },
+  {
+   "file": "evaluation-r2-x2.json",
+   "round": 2,
+   "level": 2,
+   "mult": 0.5,
+   "exit": 1,
+   "idle_after": true,
+   "t_start": 1793830684.960684,
+   "t_end": 1793830833.4556546,
+   "requests": 265,
+   "ok": 254,
+   "eligible_ok": 254,
+   "good": null,
+   "timeouts": 11,
+   "other_failures": 0,
+   "failure_statuses": {
+    "stream_error": 11
+   },
+   "late_sends": 1,
+   "sender_valid": true,
+   "duration_s": 148.47625364,
+   "goodput_rps": null,
+   "completed_rps": 1.71071126710845,
+   "output_tokens": 75843,
+   "output_tok_per_s": 478.2178850778282,
+   "ttft_ms": {
+    "p50": 3759.684973000003,
+    "p90": 11832.388965999999,
+    "p99": 15866.254602999994,
+    "max": 16746.63519500001
+   },
+   "tpot_ms": {
+    "p50": 112.12431417129625,
+    "p90": 132.33869230000005,
+    "p99": 188.02068064583332,
+    "max": 564.6853857272727
+   }
+  }
+ ],
+ "stop_reason": null,
+ "server_args": {
+  "colo": [
+   "--model",
+   "/tmp/models/Qwen3-8B-AWQ",
+   "--served-model-name",
+   "Qwen/Qwen3-8B-AWQ",
+   "--host",
+   "127.0.0.1",
+   "--port",
+   "12971",
+   "--gpu-memory-utilization",
+   "0.8",
+   "--seed",
+   "17",
+   "--max-model-len",
+   "8192",
+   "--max-num-seqs",
+   "64",
+   "--no-enable-prefix-caching",
+   "--generation-config",
+   "vllm"
+  ]
+ },
+ "startup_s": 75.0340735912323,
+ "proxy_command": [
+  "-m",
+  "serving.pd.proxy",
+  "--listen",
+  "127.0.0.1:12970",
+  "--mode",
+  "dp",
+  "--log",
+  "/tmp/e4/out/colo/proxy.jsonl",
+  "--backend",
+  "http://127.0.0.1:12971"
+ ],
+ "warmup": {
+  "exit": 0,
+  "requests": 4,
+  "ok": 4,
+  "eligible_ok": 4,
+  "good": null,
+  "timeouts": 0,
+  "other_failures": 0,
+  "failure_statuses": {},
+  "late_sends": 0,
+  "sender_valid": true,
+  "duration_s": 4.547667644,
+  "goodput_rps": null,
+  "completed_rps": 0.8795717526274003,
+  "output_tokens": 112,
+  "output_tok_per_s": 24.62800907356721,
+  "ttft_ms": {
+   "p50": 260.24455,
+   "p90": 1105.164061,
+   "p99": 1105.164061,
+   "max": 1105.164061
+  },
+  "tpot_ms": {
+   "p50": 13.117584322580642,
+   "p90": 14.229696935483874,
+   "p99": 14.229696935483874,
+   "max": 14.229696935483874
+  }
+ },
+ "server_exit": {
+  "colo": 0
+ },
+ "wall_s": 2365.000347852707
+}

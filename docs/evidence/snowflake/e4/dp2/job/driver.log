@@ -1,0 +1,5 @@
+'artifact_repositories' is in public preview since 1.50.0.
+23:06:23Z submitted CRUCIBLE_LAB.PROBE.CRUCIBLE_E4_FULL_DP2_10NEZY2INHH33 on CRUCIBLE_2XA10_POOL x1
+Compute pool busy (1/1 nodes in use, 1 nodes required). Job execution may be delayed.
+23:39:51Z status DONE after 2019 s
+23:39:54Z wrote .cache/snowflake/e4/full-dp2/report.json (credits estimate 1.963)

@@ -1,0 +1,4 @@
+# excerpt of server-replica0.log: 1461 lines; 0 'Out Of Threshold' (parked in host pool) lines omitted
+[1;36m(APIServer pid=1401)[0;0m INFO 11-04 23:15:17 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(EngineCore_DP0 pid=2227)[0;0m INFO 11-04 23:16:08 [kv_cache_utils.py:864] GPU KV cache size: 87,824 tokens
+[1;36m(EngineCore_DP0 pid=2227)[0;0m INFO 11-04 23:16:08 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 10.72x

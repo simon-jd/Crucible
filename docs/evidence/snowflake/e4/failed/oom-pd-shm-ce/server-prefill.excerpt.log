@@ -1,0 +1,19 @@
+# excerpt of server-prefill.log: 989 lines; 0 'Out Of Threshold' (parked in host pool) lines omitted
+[1;36m(APIServer pid=1414)[0;0m INFO 11-04 23:46:43 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(EngineCore_DP0 pid=2240)[0;0m INFO 11-04 23:46:54 [p2p_nccl_engine.py:164] 💯P2pNcclEngine init, rank:0, local_rank:0, http_address:127.0.0.1:12971, zmq_address:127.0.0.1:12980, proxy_address:, send_type:PUT_ASYNC, buffer_size_threshold:1000000000.00, nccl_num_channels:8
+[1;36m(EngineCore_DP0 pid=2240)[0;0m INFO 11-04 23:47:32 [kv_cache_utils.py:864] GPU KV cache size: 87,664 tokens
+[1;36m(EngineCore_DP0 pid=2240)[0;0m INFO 11-04 23:47:32 [kv_cache_utils.py:868] Maximum concurrency for 8,192 tokens per request: 10.70x
+job-0:2240:2727 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.7.203<0>
+job-0:2240:2727 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-0:2240:2727 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Connected to proxy localRank 0 -> conne[1;36m(EngineCore_DP0 pid=2240)[0;0m INFO 11-04 23:47:41 [p2p_nccl_engine.py:193] 🤝ncclCommInitRank Success, 127.0.0.1:12980👉127.0.0.1:12985, MyRank:0
+[1;36m(EngineCore_DP0 pid=2240)[0;0m ERROR 11-04 23:54:16 [p2p_nccl_engine.py:444] 🔴Send Tensor, Peer Out Of Memory/Threshold, 127.0.0.1:12980 👉 127.0.0.1:12985, MyRank:0, data:{'cmd': 'PUT', 'tensor_id': 'cmpl-___prefill_addr_127.0.0.1:12980___decode_addr_127.0.0.1:12985_91da1caf9c2a415c96983eb27c4a0136-0#model.layers.15.self_attn.attn', 'shape': torch.Size([2, 69, 16, 8, 128]), 'dtype': 'float16'}, tensor:torch.Size([2, 69, 16, 8, 128]), size:0.004211GB, response:1
+job-0:2240:2727 [0] NCCL INFO Channel 02 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Channel 03 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Channel 04 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Channel 05 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Channel 06 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:2727 [0] NCCL INFO Channel 07 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:3329 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/CE/direct
+job-0:2240:3329 [0] NCCL INFO Channel 05 : 0[0] -> 1[1] via SHM/CE/direct

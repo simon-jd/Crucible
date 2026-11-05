@@ -1,0 +1,182 @@
+{
+  "started_at": "2026-11-04T18:03:43+00:00",
+  "pool": "CRUCIBLE_2XA10_POOL",
+  "instances": 1,
+  "entry": "scripts/snowflake/payloads/e4_pd.py",
+  "include": [
+    "scripts/snowflake",
+    "serving/baseline",
+    "serving/pd",
+    ".cache/e4/bin",
+    ".cache/e4/qwen3-8b-awq-ids.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6",
+    "aiohttp==3.12.15"
+  ],
+  "env": [],
+  "args": [
+    "--layouts",
+    "pd-shm,pd-shm-ce",
+    "--tag",
+    "e4-smoke2",
+    "--smoke",
+    "40",
+    "--levels",
+    "2,4",
+    "--rounds",
+    "1",
+    "--wall-minutes",
+    "30"
+  ],
+  "lock_wait_s": 11320.1,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E4_SMOKE2_1MMQRTP4OM0BN",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "environment": {
+        "head": {
+          "host": "job-0",
+          "ip": "10.244.4.75",
+          "gpus": "NVIDIA A10-24Q, 24512 MiB, 570.211.01\nNVIDIA A10-24Q, 24512 MiB, 570.211.01",
+          "topo": "\u001b[4mGPU0\tGPU1\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\tSYS\t18-35\t1\t\tN/A\nGPU1\tSYS\t X \tSYS\t54-71\t3\t\tN/A\nNIC0\tSYS\tSYS\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+          "mem_total": "MemTotal:       908196204 kB",
+          "cgroup_mem_max": "921270484992",
+          "cpus": 72,
+          "shm": "tmpfs           257G   12K  257G   1% /dev/shm",
+          "otel_env": [
+            "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT",
+            "OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+            "OTEL_RESOURCE_ATTRIBUTES"
+          ],
+          "packages": {
+            "vllm": "0.10.2",
+            "torch": "2.8.0",
+            "transformers": "4.55.4",
+            "aiohttp": "3.12.15",
+            "pyzmq": "27.2.0",
+            "nvidia-nccl-cu12": "2.27.3",
+            "ray": "2.55.1"
+          }
+        },
+        "fetch_head": {
+          "asset": "models/Qwen3-8B-AWQ",
+          "bytes": 6114600960,
+          "get_seconds": 36.6,
+          "MBps": 167.1
+        }
+      }
+    },
+    {
+      "instance": 0,
+      "layout": "pd-shm",
+      "file": "evaluation-r0-x2.json",
+      "sender_valid": true,
+      "requests": 40,
+      "ok": 0,
+      "timeouts": 40,
+      "other_failures": 0,
+      "completed_rps": 0.0,
+      "output_tok_per_s": 0.0,
+      "ttft_ms": null,
+      "tpot_ms": null
+    },
+    {
+      "instance": 0,
+      "layout": "pd-shm",
+      "file": "evaluation-r0-x4.json",
+      "sender_valid": true,
+      "requests": 40,
+      "ok": 0,
+      "timeouts": 40,
+      "other_failures": 0,
+      "completed_rps": 0.0,
+      "output_tok_per_s": 0.0,
+      "ttft_ms": null,
+      "tpot_ms": null
+    },
+    {
+      "instance": 0,
+      "layout": "pd-shm",
+      "done": true,
+      "stop_reason": null,
+      "startup_s": 78.06679248809814,
+      "trials": 2,
+      "wall_s": 293.5
+    },
+    {
+      "instance": 0,
+      "layout": "pd-shm-ce",
+      "file": "evaluation-r0-x2.json",
+      "sender_valid": true,
+      "requests": 40,
+      "ok": 0,
+      "timeouts": 40,
+      "other_failures": 0,
+      "completed_rps": 0.0,
+      "output_tok_per_s": 0.0,
+      "ttft_ms": null,
+      "tpot_ms": null
+    },
+    {
+      "instance": 0,
+      "layout": "pd-shm-ce",
+      "file": "evaluation-r0-x4.json",
+      "sender_valid": true,
+      "requests": 40,
+      "ok": 0,
+      "timeouts": 40,
+      "other_failures": 0,
+      "completed_rps": 0.0,
+      "output_tok_per_s": 0.0,
+      "ttft_ms": null,
+      "tpot_ms": null
+    },
+    {
+      "instance": 0,
+      "layout": "pd-shm-ce",
+      "done": true,
+      "stop_reason": null,
+      "startup_s": 63.056302309036255,
+      "trials": 2,
+      "wall_s": 277.7
+    },
+    {
+      "instance": 0,
+      "upload": {
+        "tar": "@CRUCIBLE_LAB.PROBE.ASSETS/e4-results/e4-smoke2.tar",
+        "bytes": 235520,
+        "put_s": 0.3,
+        "status": [
+          "UPLOADED"
+        ]
+      }
+    }
+  ],
+  "seconds": 992.3,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_2XA10_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_2M",
+    "active_nodes": "0",
+    "idle_nodes": "1",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.965
+}
