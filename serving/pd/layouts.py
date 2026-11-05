@@ -12,9 +12,14 @@ Layouts, all serving Qwen3-8B-AWQ with vLLM 0.10.2 behind serving.pd.proxy:
 - ``pd-tcp``: prefill on node 0, decode on node 1 (two single-A10 nodes), KV over NCCL (NET/Socket).
 
 Every server gets the Task 12 baseline arguments (seed 17, max-model-len 8192, max-num-seqs 64, no
-prefix cache, CUDA graphs). The decode server of a P/D pair uses a lower --gpu-memory-utilization,
-because P2pNcclConnector keeps a second copy of every received KV tensor (on the GPU up to
-``kv_buffer_size`` bytes, then in a pinned host pool) until the request finishes.
+prefix cache, CUDA graphs). P2pNcclConnector keeps a second copy of every received KV tensor until
+the request finishes: on the GPU while its running total is under ``kv_buffer_size``, else in a
+pinned host pool. That total is decremented when a tensor is loaded, although the GPU copy stays
+referenced until the request ends, so GPU-resident copies are not bounded by kv_buffer_size; with
+2e9 the decode GPU ran out of memory at 4x (runs e4-full-pd-shm and e4-full-pd-tcp2). The decode
+server therefore parks every received tensor in the pinned pool (kv_buffer_size 1 byte, 64 GiB
+pool; the nodes have 866 GiB of RAM) and keeps a lower --gpu-memory-utilization (0.7) for the
+transient GPU copies.
 
 Ports that cross nodes stay inside E4's band 12970-12999.
 """
@@ -74,7 +79,7 @@ def kv_transfer_config(role, kv_port, http_port, pool_gb, buffer_bytes, send_typ
     }
 
 
-def plan(layout, decode_pool_gb=24, decode_buffer_bytes=2e9, socket_threads=8, socks_per_thread=8,
+def plan(layout, decode_pool_gb=64, decode_buffer_bytes=1, socket_threads=8, socks_per_thread=8,
          nccl_buffsize=16 << 20, nccl_debug=True):
     """The servers of one layout. Cross-node NCCL settings are E0's best measured ones
     (docs/evidence/snowflake/e0-network.md on snowflake/e0); its NCCL_MIN_NCHANNELS=4 is moot because
@@ -126,8 +131,8 @@ def server_args(server, snapshot, model_name, notes=None):
         consumer = server.kv_role == "kv_consumer"
         cfg = kv_transfer_config(
             server.kv_role, KV_PORTS[server.kv_role], server.port,
-            pool_gb=notes.get("decode_pool_gb", 24) if consumer else 1,
-            buffer_bytes=notes.get("decode_buffer_bytes", 2e9) if consumer else 1e9,
+            pool_gb=notes.get("decode_pool_gb", 64) if consumer else 1,
+            buffer_bytes=notes.get("decode_buffer_bytes", 1) if consumer else 1e9,
         )  # fmt: skip
         args += ["--kv-transfer-config", json.dumps(cfg, separators=(",", ":"))]
     return args

@@ -60,6 +60,13 @@ def test_pd_servers_get_producer_and_consumer_kv_configs():
         layouts.kv_transfer_config("kv_both", 1, 2, 1, 1)
 
 
+def test_decode_parks_received_kv_in_host_memory_by_default():
+    p = layouts.plan("pd-shm")
+    dec = layouts.server_args(p.servers[1], "/m", "m", p.notes)
+    cfg = json.loads(dec[dec.index("--kv-transfer-config") + 1])
+    assert cfg["kv_buffer_size"] == 1.0 and cfg["kv_connector_extra_config"]["mem_pool_size_gb"] == "64"
+
+
 def test_server_env_pins_the_gpu_and_enables_the_probe_only_for_kv_servers():
     colo = layouts.plan("colo").servers[0]
     env = layouts.server_env(colo, "127.0.0.1", "/c", "/probe")
