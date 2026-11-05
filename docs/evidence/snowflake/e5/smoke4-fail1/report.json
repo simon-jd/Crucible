@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-11-05T06:31:29+00:00",
+  "pool": "CRUCIBLE_A10X4_POOL",
+  "instances": 4,
+  "entry": "scripts/snowflake/payloads/e5_multinode.py",
+  "include": [
+    "cluster",
+    "scaling",
+    "scripts/snowflake",
+    "scripts/experiment_results.py"
+  ],
+  "pip": [
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--quick",
+    "--nodes",
+    "4"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E5_SMOKE4_TPNY5EFJEI9",
+  "status": "FAILED",
+  "results": [],
+  "seconds": 517.9,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_A10X4_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_A10X4_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "4",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.978
+}

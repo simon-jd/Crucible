@@ -1,0 +1,2731 @@
+{
+  "started_at": "2026-11-05T07:27:40+00:00",
+  "pool": "CRUCIBLE_A10X4_POOL",
+  "instances": 4,
+  "entry": "scripts/snowflake/payloads/e5_multinode.py",
+  "include": [
+    "cluster",
+    "scaling",
+    "scripts/snowflake",
+    "scripts/experiment_results.py"
+  ],
+  "pip": [
+    "torch==2.8.0",
+    "torchvision==0.23.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--quick",
+    "--nodes",
+    "4",
+    "--phases",
+    "health",
+    "scaling",
+    "fault"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E5_SMOKE5_1GZCOBDZZGEIL",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "phase": "setup",
+      "nodes_requested": 4,
+      "ray_gpu_nodes": 4,
+      "nodes_used": 4,
+      "head_ip": "10.244.8.11",
+      "infos": [
+        {
+          "ip": "10.244.8.11",
+          "host": "job-0",
+          "pid": 3583,
+          "cuda_visible_devices": "0",
+          "time": 1793864113.173584,
+          "boot_id": "ae935637-1d3e-4079-a6f7-9415938dee49"
+        },
+        {
+          "ip": "10.244.8.203",
+          "host": "job-1",
+          "pid": 2410,
+          "cuda_visible_devices": "0",
+          "time": 1793864113.1097884,
+          "boot_id": "0a707e83-d99b-4c03-8bd4-49b0b87cca07"
+        },
+        {
+          "ip": "10.244.8.75",
+          "host": "job-2",
+          "pid": 2409,
+          "cuda_visible_devices": "0",
+          "time": 1793864113.1576796,
+          "boot_id": "07fd0eec-34da-4599-a183-8dae4f50faf0"
+        },
+        {
+          "ip": "10.244.9.11",
+          "host": "job-3",
+          "pid": 2277,
+          "cuda_visible_devices": "0",
+          "time": 1793864113.1385608,
+          "boot_id": "efa6e1b0-ceea-4018-aa9d-fae433aeb770"
+        }
+      ],
+      "rank0_on_head": true,
+      "setup": {
+        "model": {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 6.2,
+          "MBps": 162.3
+        },
+        "data": {
+          "asset": "data/gsm8k",
+          "bytes": 2744320,
+          "get_seconds": 0.4,
+          "MBps": 7.0
+        },
+        "tokens": {
+          "examples": 7473,
+          "sequences": 1358,
+          "tokens": 1390592,
+          "files": [
+            "train-00000-of-00001.parquet"
+          ]
+        },
+        "bundle_bytes": 1005189120,
+        "nodes": [
+          {
+            "host": "job-0",
+            "unpacked": false
+          },
+          {
+            "host": "job-1",
+            "unpacked": true,
+            "seconds": 0.5
+          },
+          {
+            "host": "job-2",
+            "unpacked": true,
+            "seconds": 0.4
+          },
+          {
+            "host": "job-3",
+            "unpacked": true,
+            "seconds": 0.4
+          }
+        ],
+        "seconds": 20.8
+      },
+      "versions": {
+        "torch": "2.8.0",
+        "torchvision": "0.23.0",
+        "transformers": "4.55.4",
+        "numpy": "2.2.6",
+        "ray": "2.55.1",
+        "nvidia-nccl-cu12": "2.27.3",
+        "pyarrow": "24.0.0",
+        "pyyaml": "6.0.3"
+      },
+      "seconds": 24.0
+    },
+    {
+      "instance": 0,
+      "phase": "health",
+      "quick": true,
+      "nodes": [
+        {
+          "host": "job-0",
+          "node_probe_host": {
+            "node": "job-0",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-74e04e00-d8ea-11f1-91c6-ff7309c99d29, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [3883] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-74e04e00-d8ea-11f1-91c6-ff7309c99d29",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-0",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-74e04e00-d8ea-11f1-91c6-ff7309c99d29\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-74e04e00-d8ea-11f1-91c6-ff7309c99d29"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 15.44,
+              "GBps": 0.139
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.63,
+              "GBps": 3.404
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   33G  118G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043008 kB",
+            "MemFree:        413024120 kB",
+            "MemAvailable:   439407640 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "pip_probe": {
+            "torchtitan_0.2.0": {
+              "rc": 0,
+              "out": "Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple\nCollecting torchtitan==0.2.0\n  Downloading torchtitan-0.2.0-py3-none-any.whl (282 kB)\nSaved /tmp/e5/pip/torchtitan-0.2.0-py3-none-any.whl\nSuccessfully downloaded torchtitan"
+            },
+            "torch_nightly_2.10.0.dev20251019": {
+              "rc": 1,
+              "out": "Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple\nERROR: Could not find a version that satisfies the requirement torch==2.10.0.dev20251019 (from versions: 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.4.0, 2.4.1, 2.5.0, 2.5.1, 2.6.0, 2.7.0, 2.7.1, 2.8.0, 2.9.0, 2.9.1, 2.10.0, 2.11.0, 2.12.0, 2.12.1, 2.13.0, 2.14.0, 2.14.1, 2.15.0)\nERROR: No matching distribution found for torch==2.10.0.dev20251019"
+            },
+            "torch_nightly_index": {
+              "rc": 1,
+              "out": "Looking in indexes: https://download.pytorch.org/whl/nightly/cu126\nERROR: Could not find a version that satisfies the requirement torch==2.10.0.dev20251019+cu126 (from versions: none)\nERROR: No matching distribution found for torch==2.10.0.dev20251019+cu126"
+            },
+            "torchao_nightly_0.15.0.dev20251015": {
+              "rc": 1,
+              "out": "Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple\nERROR: Could not find a version that satisfies the requirement torchao==0.15.0.dev20251015 (from versions: 0.0.1, 0.0.3, 0.1, 0.2.0, 0.3.0, 0.3.1, 0.4.0, 0.5.0, 0.6.1, 0.7.0, 0.8.0, 0.9.0, 0.10.0, 0.11.0, 0.12.0, 0.13.0, 0.14.0, 0.14.1, 0.15.0, 0.16.0, 0.17.0, 0.18.0)\nERROR: No matching distribution found for torchao==0.15.0.dev20251015"
+            },
+            "pip_env": {
+              "PIP_CONFIG_FILE": "/snowflake/artifactrepository/pip.conf"
+            }
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                89.8,
+                63.5,
+                62.7
+              ],
+              "bf16_8192": [
+                79.1,
+                79.7,
+                75.9
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:36:02 4023:4023 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:36:02 4023:4023 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:36:02 4023:4023 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        },
+        {
+          "host": "job-1",
+          "node_probe_host": {
+            "node": "job-1",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-ab1dcd80-d8ea-11f1-b550-e89c4ec9b2e5, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [2586] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-ab1dcd80-d8ea-11f1-b550-e89c4ec9b2e5",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-1",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-ab1dcd80-d8ea-11f1-b550-e89c4ec9b2e5\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-ab1dcd80-d8ea-11f1-b550-e89c4ec9b2e5"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 14.44,
+              "GBps": 0.149
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.62,
+              "GBps": 3.453
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   32G  119G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043012 kB",
+            "MemFree:        418575188 kB",
+            "MemAvailable:   443240148 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                86.4,
+                68.5,
+                64.8
+              ],
+              "bf16_8192": [
+                80.6,
+                80.9,
+                74.5
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:36:04 2708:2708 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:36:04 2708:2708 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:36:04 2708:2708 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        },
+        {
+          "host": "job-2",
+          "node_probe_host": {
+            "node": "job-2",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-ac4efa80-d8ea-11f1-a34b-bea14e5faffa, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [2585] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-ac4efa80-d8ea-11f1-a34b-bea14e5faffa",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-2",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-ac4efa80-d8ea-11f1-a34b-bea14e5faffa\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-ac4efa80-d8ea-11f1-a34b-bea14e5faffa"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 13.49,
+              "GBps": 0.159
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.61,
+              "GBps": 3.505
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   32G  119G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043012 kB",
+            "MemFree:        418635988 kB",
+            "MemAvailable:   443324324 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                84.9,
+                60.3,
+                60.5
+              ],
+              "bf16_8192": [
+                75.9,
+                75.9,
+                71.6
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:36:04 2707:2707 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:36:04 2707:2707 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:36:04 2707:2707 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        },
+        {
+          "host": "job-3",
+          "node_probe_host": {
+            "node": "job-3",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-ad802780-d8ea-11f1-80e6-059a0d85978d, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [2540] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-ad802780-d8ea-11f1-80e6-059a0d85978d",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-3",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-ad802780-d8ea-11f1-80e6-059a0d85978d\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-ad802780-d8ea-11f1-80e6-059a0d85978d"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 13.58,
+              "GBps": 0.158
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.63,
+              "GBps": 3.385
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   32G  119G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043012 kB",
+            "MemFree:        418610084 kB",
+            "MemAvailable:   443284392 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                83.5,
+                63.8,
+                62.0
+              ],
+              "bf16_8192": [
+                76.7,
+                76.8,
+                75.1
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:36:04 2675:2675 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:36:04 2675:2675 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:36:04 2675:2675 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        }
+      ],
+      "seconds": 30.3,
+      "launched": [
+        4023,
+        2708,
+        2707,
+        2675
+      ]
+    },
+    {
+      "instance": 0,
+      "phase": "scaling",
+      "quick": true,
+      "nodes": 4,
+      "seconds": 176.4,
+      "runs": [
+        {
+          "kind": "weak",
+          "world": 1,
+          "round": 1,
+          "plan": {
+            "kind": "weak",
+            "world": 1,
+            "micro": 2,
+            "accum": 8,
+            "per_rank_seq": 16,
+            "global_seq": 16,
+            "seq": 1024,
+            "tokens_per_step": 16384
+          },
+          "seconds": 18.0,
+          "ranks": [
+            {
+              "rc": 0,
+              "rank": 0,
+              "world": 1,
+              "kind": "scale",
+              "host": "job-0",
+              "attempt": 0,
+              "init_seconds": 4.33,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 1,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                2.0466,
+                2.0444,
+                2.0512
+              ],
+              "local_micro_seconds": [
+                0.2468,
+                0.247,
+                0.2472
+              ],
+              "last_micro_seconds": [
+                0.263,
+                0.2599,
+                0.2648
+              ],
+              "opt_seconds": [
+                0.0561,
+                0.0557,
+                0.0562
+              ],
+              "window_seconds": 6.142,
+              "window_max_rank_seconds": 6.142,
+              "global_tokens_per_s": 8002.374841493493,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.692,
+                0.6531,
+                0.5546,
+                0.5978,
+                0.634
+              ],
+              "split": {
+                "step_s": 2.0466483970000127,
+                "local_micro_s": 0.24697173414286258,
+                "last_micro_s": 0.2629813440000248,
+                "opt_s": 0.05609455799998386,
+                "compute_s": 2.0318684311428843,
+                "exposed_comm_s": 0.016009609857162238,
+                "exposed_comm_share": 0.0078223547731155
+              },
+              "peak_mem_gib": 18.83
+            }
+          ]
+        },
+        {
+          "kind": "weak",
+          "world": 2,
+          "round": 1,
+          "plan": {
+            "kind": "weak",
+            "world": 2,
+            "micro": 2,
+            "accum": 8,
+            "per_rank_seq": 16,
+            "global_seq": 32,
+            "seq": 1024,
+            "tokens_per_step": 32768
+          },
+          "seconds": 34.1,
+          "ranks": [
+            {
+              "rc": 0,
+              "rank": 0,
+              "world": 2,
+              "kind": "scale",
+              "host": "job-0",
+              "attempt": 0,
+              "init_seconds": 7.04,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 2,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 32,
+                "seq": 1024,
+                "tokens_per_step": 32768
+              },
+              "step_seconds": [
+                3.5512,
+                3.5465,
+                3.5499
+              ],
+              "local_micro_seconds": [
+                0.2485,
+                0.2486,
+                0.2485
+              ],
+              "last_micro_seconds": [
+                1.7604,
+                1.7556,
+                1.7591
+              ],
+              "opt_seconds": [
+                0.0512,
+                0.0508,
+                0.0512
+              ],
+              "window_seconds": 10.648,
+              "window_max_rank_seconds": 10.651,
+              "global_tokens_per_s": 9229.2831503087,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.692,
+                0.6266,
+                0.6559,
+                0.5453,
+                0.5597
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  1.7858
+                ]
+              },
+              "split": {
+                "step_s": 3.5498848889999977,
+                "local_micro_s": 0.24851394042856814,
+                "last_micro_s": 1.759128171000043,
+                "opt_s": 0.051159134999977596,
+                "compute_s": 2.0392706584285225,
+                "exposed_comm_s": 1.510614230571475,
+                "exposed_comm_share": 0.4255389337418811,
+                "comm_alone_s": 1.7858,
+                "comm_alone_share": 0.5030585655139538,
+                "hidden_comm_s": 0.27518576942852513
+              },
+              "peak_mem_gib": 18.83
+            },
+            {
+              "rc": 0,
+              "rank": 1,
+              "world": 2,
+              "kind": "scale",
+              "host": "job-1",
+              "attempt": 0,
+              "init_seconds": 7.11,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 2,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 32,
+                "seq": 1024,
+                "tokens_per_step": 32768
+              },
+              "step_seconds": [
+                3.5527,
+                3.5513,
+                3.5473
+              ],
+              "local_micro_seconds": [
+                0.2429,
+                0.2437,
+                0.2444
+              ],
+              "last_micro_seconds": [
+                1.8019,
+                1.7936,
+                1.7864
+              ],
+              "opt_seconds": [
+                0.0508,
+                0.052,
+                0.05
+              ],
+              "window_seconds": 10.651,
+              "window_max_rank_seconds": 10.651,
+              "global_tokens_per_s": 9229.2831503087,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7468,
+                0.6778,
+                0.6209,
+                0.5552,
+                0.5524
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  1.7858
+                ]
+              },
+              "split": {
+                "step_s": 3.5513359880000053,
+                "local_micro_s": 0.24368132857142655,
+                "last_micro_s": 1.7935790060000159,
+                "opt_s": 0.05076204599998846,
+                "compute_s": 2.000212674571401,
+                "exposed_comm_s": 1.5498976774285893,
+                "exposed_comm_share": 0.436426652579679,
+                "comm_alone_s": 1.7858,
+                "comm_alone_share": 0.5028530125097241,
+                "hidden_comm_s": 0.23590232257141075
+              },
+              "peak_mem_gib": 16.99
+            }
+          ]
+        },
+        {
+          "kind": "strong",
+          "world": 2,
+          "round": 1,
+          "plan": {
+            "kind": "strong",
+            "world": 2,
+            "micro": 2,
+            "accum": 4,
+            "per_rank_seq": 8,
+            "global_seq": 16,
+            "seq": 1024,
+            "tokens_per_step": 16384
+          },
+          "seconds": 28.1,
+          "ranks": [
+            {
+              "rc": 0,
+              "rank": 0,
+              "world": 2,
+              "kind": "scale",
+              "host": "job-0",
+              "attempt": 0,
+              "init_seconds": 5.26,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "strong",
+                "world": 2,
+                "micro": 2,
+                "accum": 4,
+                "per_rank_seq": 8,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                2.9587,
+                2.6954,
+                2.6499
+              ],
+              "local_micro_seconds": [
+                0.2468,
+                0.2452,
+                0.2444
+              ],
+              "last_micro_seconds": [
+                2.168,
+                1.9097,
+                1.8663
+              ],
+              "opt_seconds": [
+                0.0504,
+                0.05,
+                0.0504
+              ],
+              "window_seconds": 8.304,
+              "window_max_rank_seconds": 8.304,
+              "global_tokens_per_s": 5919.081114198431,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7101,
+                0.6818,
+                0.5277,
+                0.5591,
+                0.6411
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  1.8466
+                ]
+              },
+              "split": {
+                "step_s": 2.695357626000032,
+                "local_micro_s": 0.24523369500002445,
+                "last_micro_s": 1.90969713100003,
+                "opt_s": 0.05035040400002799,
+                "compute_s": 1.0312851840001258,
+                "exposed_comm_s": 1.6644634360000055,
+                "exposed_comm_share": 0.6175297184849288,
+                "comm_alone_s": 1.8466,
+                "comm_alone_share": 0.6851038920354305,
+                "hidden_comm_s": 0.18213656399999456
+              },
+              "peak_mem_gib": 18.83
+            },
+            {
+              "rc": 0,
+              "rank": 1,
+              "world": 2,
+              "kind": "scale",
+              "host": "job-1",
+              "attempt": 0,
+              "init_seconds": 5.29,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "strong",
+                "world": 2,
+                "micro": 2,
+                "accum": 4,
+                "per_rank_seq": 8,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                2.9614,
+                2.6936,
+                2.6479
+              ],
+              "local_micro_seconds": [
+                0.2431,
+                0.243,
+                0.2437
+              ],
+              "last_micro_seconds": [
+                2.179,
+                1.9124,
+                1.8651
+              ],
+              "opt_seconds": [
+                0.053,
+                0.0523,
+                0.0516
+              ],
+              "window_seconds": 8.303,
+              "window_max_rank_seconds": 8.304,
+              "global_tokens_per_s": 5919.081114198431,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.6739,
+                0.6224,
+                0.5808,
+                0.6369,
+                0.629
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  1.8466
+                ]
+              },
+              "split": {
+                "step_s": 2.6935852220000243,
+                "local_micro_s": 0.24313178700000057,
+                "last_micro_s": 1.9124270560000127,
+                "opt_s": 0.05228794800001424,
+                "compute_s": 1.0248150960000166,
+                "exposed_comm_s": 1.6692952690000122,
+                "exposed_comm_share": 0.6197298883903652,
+                "comm_alone_s": 1.8466,
+                "comm_alone_share": 0.6855546967357038,
+                "hidden_comm_s": 0.17730473099998778
+              },
+              "peak_mem_gib": 16.99
+            }
+          ]
+        },
+        {
+          "kind": "weak",
+          "world": 4,
+          "round": 1,
+          "plan": {
+            "kind": "weak",
+            "world": 4,
+            "micro": 2,
+            "accum": 8,
+            "per_rank_seq": 16,
+            "global_seq": 64,
+            "seq": 1024,
+            "tokens_per_step": 65536
+          },
+          "seconds": 54.1,
+          "ranks": [
+            {
+              "rc": 0,
+              "rank": 0,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-0",
+              "attempt": 0,
+              "init_seconds": 8.04,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 4,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 64,
+                "seq": 1024,
+                "tokens_per_step": 65536
+              },
+              "step_seconds": [
+                6.0458,
+                6.1374,
+                5.9835
+              ],
+              "local_micro_seconds": [
+                0.2484,
+                0.2484,
+                0.2483
+              ],
+              "last_micro_seconds": [
+                4.2553,
+                4.3467,
+                4.1951
+              ],
+              "opt_seconds": [
+                0.0515,
+                0.0521,
+                0.0502
+              ],
+              "window_seconds": 18.167,
+              "window_max_rank_seconds": 18.167,
+              "global_tokens_per_s": 10822.434605594955,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.692,
+                0.7279,
+                0.5759,
+                0.5858,
+                0.5297
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.2448
+                ]
+              },
+              "split": {
+                "step_s": 6.045806485999947,
+                "local_micro_s": 0.2483678574285802,
+                "last_micro_s": 4.255297629999973,
+                "opt_s": 0.051536745000021256,
+                "compute_s": 2.038479604428663,
+                "exposed_comm_s": 4.006929772571392,
+                "exposed_comm_share": 0.6627618303447345,
+                "comm_alone_s": 4.2448,
+                "comm_alone_share": 0.7021064947794026,
+                "hidden_comm_s": 0.23787022742860753
+              },
+              "peak_mem_gib": 16.99
+            },
+            {
+              "rc": 0,
+              "rank": 1,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-1",
+              "attempt": 0,
+              "init_seconds": 8.4,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 4,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 64,
+                "seq": 1024,
+                "tokens_per_step": 65536
+              },
+              "step_seconds": [
+                6.0419,
+                6.1364,
+                5.9845
+              ],
+              "local_micro_seconds": [
+                0.2465,
+                0.2465,
+                0.2462
+              ],
+              "last_micro_seconds": [
+                4.2623,
+                4.3587,
+                4.2084
+              ],
+              "opt_seconds": [
+                0.0542,
+                0.0524,
+                0.0525
+              ],
+              "window_seconds": 18.163,
+              "window_max_rank_seconds": 18.167,
+              "global_tokens_per_s": 10822.434605594955,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7468,
+                0.7028,
+                0.5741,
+                0.5453,
+                0.5264
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.2448
+                ]
+              },
+              "split": {
+                "step_s": 6.041926015999991,
+                "local_micro_s": 0.2464746031428636,
+                "last_micro_s": 4.262313011000003,
+                "opt_s": 0.052456566999978804,
+                "compute_s": 2.024253392142888,
+                "exposed_comm_s": 4.01583840785714,
+                "exposed_comm_share": 0.6646619632915984,
+                "comm_alone_s": 4.2448,
+                "comm_alone_share": 0.7025574276744018,
+                "hidden_comm_s": 0.22896159214286005
+              },
+              "peak_mem_gib": 16.99
+            },
+            {
+              "rc": 0,
+              "rank": 2,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-2",
+              "attempt": 0,
+              "init_seconds": 8.44,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 4,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 64,
+                "seq": 1024,
+                "tokens_per_step": 65536
+              },
+              "step_seconds": [
+                6.0401,
+                6.14,
+                5.983
+              ],
+              "local_micro_seconds": [
+                0.252,
+                0.2523,
+                0.2528
+              ],
+              "last_micro_seconds": [
+                4.2258,
+                4.3218,
+                4.1627
+              ],
+              "opt_seconds": [
+                0.0501,
+                0.0519,
+                0.0507
+              ],
+              "window_seconds": 18.163,
+              "window_max_rank_seconds": 18.167,
+              "global_tokens_per_s": 10822.434605594955,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7292,
+                0.6291,
+                0.5693,
+                0.5698,
+                0.5504
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.2448
+                ]
+              },
+              "split": {
+                "step_s": 6.040122385000018,
+                "local_micro_s": 0.2523310134285696,
+                "last_micro_s": 4.225768724999966,
+                "opt_s": 0.0506990979999955,
+                "compute_s": 2.0693472054285524,
+                "exposed_comm_s": 3.9734377115713966,
+                "exposed_comm_share": 0.6578405963162259,
+                "comm_alone_s": 4.2448,
+                "comm_alone_share": 0.702767217191078,
+                "hidden_comm_s": 0.2713622884286031
+              },
+              "peak_mem_gib": 16.99
+            },
+            {
+              "rc": 0,
+              "rank": 3,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-3",
+              "attempt": 0,
+              "init_seconds": 8.39,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "weak",
+                "world": 4,
+                "micro": 2,
+                "accum": 8,
+                "per_rank_seq": 16,
+                "global_seq": 64,
+                "seq": 1024,
+                "tokens_per_step": 65536
+              },
+              "step_seconds": [
+                6.0438,
+                6.1369,
+                5.9846
+              ],
+              "local_micro_seconds": [
+                0.2497,
+                0.2493,
+                0.2501
+              ],
+              "last_micro_seconds": [
+                4.246,
+                4.3403,
+                4.1833
+              ],
+              "opt_seconds": [
+                0.0501,
+                0.0512,
+                0.0508
+              ],
+              "window_seconds": 18.165,
+              "window_max_rank_seconds": 18.167,
+              "global_tokens_per_s": 10822.434605594955,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7805,
+                0.6565,
+                0.5501,
+                0.5627,
+                0.5433
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.2448
+                ]
+              },
+              "split": {
+                "step_s": 6.0437700520000135,
+                "local_micro_s": 0.24967527914286133,
+                "last_micro_s": 4.245980531999976,
+                "opt_s": 0.050848067000003994,
+                "compute_s": 2.048250300142895,
+                "exposed_comm_s": 3.996305252857115,
+                "exposed_comm_share": 0.6612272171961029,
+                "comm_alone_s": 4.2448,
+                "comm_alone_share": 0.702343067899366,
+                "hidden_comm_s": 0.2484947471428849
+              },
+              "peak_mem_gib": 16.99
+            }
+          ]
+        },
+        {
+          "kind": "strong",
+          "world": 4,
+          "round": 1,
+          "plan": {
+            "kind": "strong",
+            "world": 4,
+            "micro": 2,
+            "accum": 2,
+            "per_rank_seq": 4,
+            "global_seq": 16,
+            "seq": 1024,
+            "tokens_per_step": 16384
+          },
+          "seconds": 42.1,
+          "ranks": [
+            {
+              "rc": 0,
+              "rank": 0,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-0",
+              "attempt": 0,
+              "init_seconds": 5.43,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "strong",
+                "world": 4,
+                "micro": 2,
+                "accum": 2,
+                "per_rank_seq": 4,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                4.1451,
+                4.2249,
+                4.1479
+              ],
+              "local_micro_seconds": [
+                0.2386,
+                0.2395,
+                0.2381
+              ],
+              "last_micro_seconds": [
+                3.8565,
+                3.9351,
+                3.8585
+              ],
+              "opt_seconds": [
+                0.0501,
+                0.0503,
+                0.0513
+              ],
+              "window_seconds": 12.518,
+              "window_max_rank_seconds": 12.518,
+              "global_tokens_per_s": 3926.5260432682553,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7183,
+                0.6857,
+                0.5189,
+                0.5653,
+                0.6452
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.1372
+                ]
+              },
+              "split": {
+                "step_s": 4.147925436000037,
+                "local_micro_s": 0.23856591499998103,
+                "last_micro_s": 3.858503715999973,
+                "opt_s": 0.050269079000031525,
+                "compute_s": 0.5274009089999936,
+                "exposed_comm_s": 3.619937800999992,
+                "exposed_comm_share": 0.8727104324447069,
+                "comm_alone_s": 4.1372,
+                "comm_alone_share": 0.9974142649945078,
+                "hidden_comm_s": 0.5172621990000081
+              },
+              "peak_mem_gib": 16.99
+            },
+            {
+              "rc": 0,
+              "rank": 1,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-1",
+              "attempt": 0,
+              "init_seconds": 5.84,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "strong",
+                "world": 4,
+                "micro": 2,
+                "accum": 2,
+                "per_rank_seq": 4,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                4.1458,
+                4.2232,
+                4.1448
+              ],
+              "local_micro_seconds": [
+                0.2387,
+                0.2372,
+                0.2365
+              ],
+              "last_micro_seconds": [
+                3.856,
+                3.9352,
+                3.858
+              ],
+              "opt_seconds": [
+                0.0511,
+                0.0508,
+                0.0503
+              ],
+              "window_seconds": 12.514,
+              "window_max_rank_seconds": 12.518,
+              "global_tokens_per_s": 3926.5260432682553,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.7018,
+                0.6793,
+                0.5349,
+                0.5538,
+                0.6349
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.1372
+                ]
+              },
+              "split": {
+                "step_s": 4.14578416400002,
+                "local_micro_s": 0.2372229930000458,
+                "last_micro_s": 3.8580023020000453,
+                "opt_s": 0.05079273100000137,
+                "compute_s": 0.525238717000093,
+                "exposed_comm_s": 3.6207793089999996,
+                "exposed_comm_share": 0.8733641612221621,
+                "comm_alone_s": 4.1372,
+                "comm_alone_share": 0.9979294233224777,
+                "hidden_comm_s": 0.5164206910000004
+              },
+              "peak_mem_gib": 18.83
+            },
+            {
+              "rc": 0,
+              "rank": 2,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-2",
+              "attempt": 0,
+              "init_seconds": 5.94,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "strong",
+                "world": 4,
+                "micro": 2,
+                "accum": 2,
+                "per_rank_seq": 4,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                4.1498,
+                4.2212,
+                4.1466
+              ],
+              "local_micro_seconds": [
+                0.2441,
+                0.2456,
+                0.2441
+              ],
+              "last_micro_seconds": [
+                3.8533,
+                3.9247,
+                3.851
+              ],
+              "opt_seconds": [
+                0.0524,
+                0.0509,
+                0.0514
+              ],
+              "window_seconds": 12.518,
+              "window_max_rank_seconds": 12.518,
+              "global_tokens_per_s": 3926.5260432682553,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.6568,
+                0.5897,
+                0.5616,
+                0.6051,
+                0.6699
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.1372
+                ]
+              },
+              "split": {
+                "step_s": 4.149766612999997,
+                "local_micro_s": 0.24409839700001612,
+                "last_micro_s": 3.8532996179999373,
+                "opt_s": 0.051440912999964894,
+                "compute_s": 0.5396377069999971,
+                "exposed_comm_s": 3.609201220999921,
+                "exposed_comm_share": 0.8697359532686384,
+                "comm_alone_s": 4.1372,
+                "comm_alone_share": 0.996971730178601,
+                "hidden_comm_s": 0.5279987790000789
+              },
+              "peak_mem_gib": 16.99
+            },
+            {
+              "rc": 0,
+              "rank": 3,
+              "world": 4,
+              "kind": "scale",
+              "host": "job-3",
+              "attempt": 0,
+              "init_seconds": 5.93,
+              "structure": {
+                "active_parameters": 357898112,
+                "layers": 24,
+                "heads": 14,
+                "head_dim": 64,
+                "embedding_parameters": 136134656
+              },
+              "parameters": 494032768,
+              "plan": {
+                "kind": "strong",
+                "world": 4,
+                "micro": 2,
+                "accum": 2,
+                "per_rank_seq": 4,
+                "global_seq": 16,
+                "seq": 1024,
+                "tokens_per_step": 16384
+              },
+              "step_seconds": [
+                4.1473,
+                4.2252,
+                4.1438
+              ],
+              "local_micro_seconds": [
+                0.242,
+                0.2423,
+                0.245
+              ],
+              "last_micro_seconds": [
+                3.854,
+                3.9306,
+                3.8486
+              ],
+              "opt_seconds": [
+                0.0513,
+                0.0523,
+                0.0501
+              ],
+              "window_seconds": 12.516,
+              "window_max_rank_seconds": 12.518,
+              "global_tokens_per_s": 3926.5260432682553,
+              "timing_scope": "synchronized_train_step",
+              "losses": [
+                0.691,
+                0.653,
+                0.6023,
+                0.6674,
+                0.5868
+              ],
+              "comm_alone": {
+                "bytes": 1976131072,
+                "bucket_bytes": 26214400,
+                "seconds": [
+                  4.1372
+                ]
+              },
+              "split": {
+                "step_s": 4.147278572000005,
+                "local_micro_s": 0.24234178099993642,
+                "last_micro_s": 3.8540168120000544,
+                "opt_s": 0.051306218999911835,
+                "compute_s": 0.5359897809997847,
+                "exposed_comm_s": 3.611675031000118,
+                "exposed_comm_share": 0.8708542163972375,
+                "comm_alone_s": 4.1372,
+                "comm_alone_share": 0.9975698348145579,
+                "hidden_comm_s": 0.525524968999882
+              },
+              "peak_mem_gib": 16.99
+            }
+          ]
+        }
+      ],
+      "peak_flops": 125000000000000.0,
+      "nccl_env": {
+        "NCCL_SOCKET_NTHREADS": "8",
+        "NCCL_NSOCKS_PERTHREAD": "8",
+        "NCCL_MIN_NCHANNELS": "4",
+        "NCCL_BUFFSIZE": "16777216"
+      },
+      "bucket_cap_mb": 25
+    },
+    {
+      "instance": 0,
+      "phase": "fault",
+      "quick": true,
+      "nodes": 4,
+      "seconds": 225.5,
+      "plan": {
+        "kind": "weak",
+        "world": 4,
+        "micro": 2,
+        "accum": 4,
+        "per_rank_seq": 8,
+        "global_seq": 32,
+        "seq": 1024,
+        "tokens_per_step": 32768
+      },
+      "steps": 12,
+      "ckpt_every": 4,
+      "kill_after_step": 6,
+      "killed": {
+        "rank": 3,
+        "host": "job-3",
+        "after_step": 6,
+        "at": 717.584683706,
+        "rc": -9
+      },
+      "survivors": {
+        "0": {
+          "rc_before_teardown": null,
+          "rc": -9,
+          "teardown_s": 0.42
+        },
+        "1": {
+          "rc_before_teardown": null,
+          "rc": -9,
+          "teardown_s": 0.37
+        },
+        "2": {
+          "rc_before_teardown": null,
+          "rc": -9,
+          "teardown_s": 0.37
+        }
+      },
+      "failure_recorded_by": "driver",
+      "timeline_rel_s": {
+        "attempt0_launched": -1.35,
+        "teardown_done": 83.75,
+        "failure_recorded": 83.76,
+        "attempt1_launched": 83.78,
+        "attempt1_done": 223.28,
+        "kill": 82.59
+      },
+      "checkpoint_location": "/tmp/e5/fault/ckpt on job-0 (rank 0, head node); victim on job-3",
+      "events": [
+        {
+          "schema": 1,
+          "rank": 0,
+          "kind": "run_start",
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "world_size": 4,
+          "at": 634.992401693
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 651.167881099,
+          "started_at": 645.275046984,
+          "step": 1
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 656.027635876,
+          "started_at": 651.176986428,
+          "step": 2
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 660.883596753,
+          "started_at": 656.035051668,
+          "step": 3
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 665.683765355,
+          "started_at": 660.891977063,
+          "step": 4
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "checkpoint_saved",
+          "at": 707.334441474,
+          "started_at": 665.691214209,
+          "step": 4,
+          "checkpoint_id": "/tmp/e5/fault/ckpt/step-4@generation-0",
+          "full_state": true
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 712.080726149,
+          "started_at": 707.33792782,
+          "step": 5
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 716.811179917,
+          "started_at": 712.087902993,
+          "step": 6
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "failure",
+          "at": 718.746283634,
+          "reason": "rank 3 process SIGKILLed by the E5 driver after step 6"
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "restore_start",
+          "at": 728.208243317,
+          "checkpoint_id": "/tmp/e5/fault/ckpt/step-4@generation-0"
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "restore_complete",
+          "at": 738.832618033,
+          "started_at": 728.208243317,
+          "checkpoint_id": "/tmp/e5/fault/ckpt/step-4@generation-0",
+          "step": 4
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 744.338871568,
+          "started_at": 738.837745275,
+          "step": 5
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 749.097302008,
+          "started_at": 744.347371763,
+          "step": 6
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 753.659138646,
+          "started_at": 749.103888946,
+          "step": 7
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 758.219031211,
+          "started_at": 753.666069108,
+          "step": 8
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "checkpoint_saved",
+          "at": 798.220576661,
+          "started_at": 758.225251061,
+          "step": 8,
+          "checkpoint_id": "/tmp/e5/fault/ckpt/step-8@generation-0",
+          "full_state": true
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 802.835362738,
+          "started_at": 798.224588231,
+          "step": 9
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 807.434362509,
+          "started_at": 802.844187982,
+          "step": 10
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 812.100373706,
+          "started_at": 807.441422774,
+          "step": 11
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "step_complete",
+          "at": 816.824963891,
+          "started_at": 812.108195007,
+          "step": 12
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "checkpoint_saved",
+          "at": 856.993501995,
+          "started_at": 816.839004072,
+          "step": 12,
+          "checkpoint_id": "/tmp/e5/fault/ckpt/step-12@generation-0",
+          "full_state": true
+        },
+        {
+          "schema": 1,
+          "run_id": "e5-fault",
+          "clock_id": "monotonic:ae935637-1d3e-4079-a6f7-9415938dee49",
+          "rank": 0,
+          "kind": "run_end",
+          "at": 856.996395389,
+          "checkpoint_id": "/tmp/e5/fault/ckpt/step-12@generation-0"
+        }
+      ],
+      "progress": [
+        {
+          "attempt": 0,
+          "step": 1,
+          "loss": 0.71006,
+          "t": 5.8749,
+          "at": 651.174
+        },
+        {
+          "attempt": 0,
+          "step": 2,
+          "loss": 0.59806,
+          "t": 4.8474,
+          "at": 656.032
+        },
+        {
+          "attempt": 0,
+          "step": 3,
+          "loss": 0.6679,
+          "t": 4.8472,
+          "at": 660.888
+        },
+        {
+          "attempt": 0,
+          "step": 4,
+          "loss": 0.53097,
+          "t": 4.7905,
+          "at": 665.688
+        },
+        {
+          "attempt": 0,
+          "step": 5,
+          "loss": 0.56123,
+          "t": 4.7402,
+          "at": 712.085
+        },
+        {
+          "attempt": 0,
+          "step": 6,
+          "loss": 0.52356,
+          "t": 4.7213,
+          "at": 716.815
+        },
+        {
+          "attempt": 1,
+          "step": 5,
+          "loss": 0.56123,
+          "t": 5.5002,
+          "at": 744.344
+        },
+        {
+          "attempt": 1,
+          "step": 6,
+          "loss": 0.52303,
+          "t": 4.748,
+          "at": 749.101
+        },
+        {
+          "attempt": 1,
+          "step": 7,
+          "loss": 0.55176,
+          "t": 4.5519,
+          "at": 753.663
+        },
+        {
+          "attempt": 1,
+          "step": 8,
+          "loss": 0.53321,
+          "t": 4.552,
+          "at": 758.222
+        },
+        {
+          "attempt": 1,
+          "step": 9,
+          "loss": 0.4783,
+          "t": 4.6084,
+          "at": 802.841
+        },
+        {
+          "attempt": 1,
+          "step": 10,
+          "loss": 0.49238,
+          "t": 4.5887,
+          "at": 807.438
+        },
+        {
+          "attempt": 1,
+          "step": 11,
+          "loss": 0.51569,
+          "t": 4.6583,
+          "at": 812.104
+        },
+        {
+          "attempt": 1,
+          "step": 12,
+          "loss": 0.47583,
+          "t": 4.7162,
+          "at": 816.829
+        }
+      ],
+      "accounting": {
+        "useful_steps_time": 58.319754131000195,
+        "wall_time": 222.00399369599995,
+        "goodput": 0.2626968693674045,
+        "lost_steps": 2,
+        "lost_steps_time": 9.466075253000099,
+        "completed_attempts": 14,
+        "retained_steps": 12,
+        "recovery_seconds": [
+          10.624374716000034
+        ],
+        "final_checkpoint_id": "/tmp/e5/fault/ckpt/step-12@generation-0",
+        "work_finished_at": null,
+        "observation_lateness_seconds": null
+      },
+      "attempt0": [
+        {
+          "rc": -9,
+          "log_tail": [
+            "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py:167: UserWarning: torch.distributed is disabled, unavailable or uninitialized, assuming the intent is to save in a single process.",
+            "  warnings.warn(",
+            "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py:131: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()",
+            "  if tensor.storage().size() != tensor.numel():"
+          ]
+        },
+        {
+          "rc": -9,
+          "log_tail": []
+        },
+        {
+          "rc": -9,
+          "log_tail": []
+        },
+        {
+          "rc": -9,
+          "log_tail": []
+        }
+      ],
+      "attempt1": [
+        {
+          "rc": 0,
+          "rank": 0,
+          "world": 4,
+          "kind": "fault",
+          "host": "job-0",
+          "attempt": 1,
+          "init_seconds": 5.44,
+          "structure": {
+            "active_parameters": 357898112,
+            "layers": 24,
+            "heads": 14,
+            "head_dim": 64,
+            "embedding_parameters": 136134656
+          },
+          "parameters": 494032768,
+          "timings": {
+            "save": [
+              39.99,
+              40.15
+            ],
+            "load": [
+              10.62
+            ],
+            "save_bytes": [
+              6475096780,
+              6475096781
+            ]
+          },
+          "final_checkpoint": "/tmp/e5/fault/ckpt/step-12@generation-0",
+          "resumed_from": 4,
+          "peak_mem_gib": 18.84
+        },
+        {
+          "rc": 0,
+          "rank": 1,
+          "world": 4,
+          "kind": "fault",
+          "host": "job-1",
+          "attempt": 1,
+          "init_seconds": 5.74,
+          "structure": {
+            "active_parameters": 357898112,
+            "layers": 24,
+            "heads": 14,
+            "head_dim": 64,
+            "embedding_parameters": 136134656
+          },
+          "parameters": 494032768,
+          "timings": {
+            "save": [
+              39.99,
+              40.15
+            ],
+            "load": [
+              10.62
+            ],
+            "save_bytes": []
+          },
+          "final_checkpoint": "/tmp/e5/fault/ckpt/step-12@generation-0",
+          "resumed_from": 4,
+          "peak_mem_gib": 17.0
+        },
+        {
+          "rc": 0,
+          "rank": 2,
+          "world": 4,
+          "kind": "fault",
+          "host": "job-2",
+          "attempt": 1,
+          "init_seconds": 5.73,
+          "structure": {
+            "active_parameters": 357898112,
+            "layers": 24,
+            "heads": 14,
+            "head_dim": 64,
+            "embedding_parameters": 136134656
+          },
+          "parameters": 494032768,
+          "timings": {
+            "save": [
+              39.99,
+              40.15
+            ],
+            "load": [
+              10.62
+            ],
+            "save_bytes": []
+          },
+          "final_checkpoint": "/tmp/e5/fault/ckpt/step-12@generation-0",
+          "resumed_from": 4,
+          "peak_mem_gib": 17.0
+        },
+        {
+          "rc": 0,
+          "rank": 3,
+          "world": 4,
+          "kind": "fault",
+          "host": "job-3",
+          "attempt": 1,
+          "init_seconds": 5.77,
+          "structure": {
+            "active_parameters": 357898112,
+            "layers": 24,
+            "heads": 14,
+            "head_dim": 64,
+            "embedding_parameters": 136134656
+          },
+          "parameters": 494032768,
+          "timings": {
+            "save": [
+              39.99,
+              40.15
+            ],
+            "load": [
+              10.62
+            ],
+            "save_bytes": []
+          },
+          "final_checkpoint": "/tmp/e5/fault/ckpt/step-12@generation-0",
+          "resumed_from": 4,
+          "peak_mem_gib": 17.0
+        }
+      ],
+      "disk_after": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   45G  106G  30% /\ntmpfs           127G  959M  127G   1% /dev/shm"
+    }
+  ],
+  "seconds": 963.6,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_A10X4_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_A10X4_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "4",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 1.82
+}

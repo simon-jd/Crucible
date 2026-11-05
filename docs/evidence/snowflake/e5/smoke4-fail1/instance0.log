@@ -1,0 +1,88 @@
+2026-11-05 06:39:00,389	INFO worker.py:1672 -- Using address 10.244.3.11:12001 set in the environment variable RAY_ADDRESS
+2026-11-05 06:39:00,389	INFO worker.py:1814 -- Connecting to existing Ray cluster at address: 10.244.3.11:12001...
+2026-11-05 06:39:00,389	INFO worker.py:1828 -- Calling ray.init() again after it has already been called.
+06:39:03 nodes [('job-0', '10.244.3.11'), ('job-2', '10.244.3.139'), ('job-1', '10.244.3.203'), ('job-3', '10.244.4.11')] rank0_on_head=True
+Metric sent (UDP, best-effort) to 127.0.0.1:8125: mljob.user_payload_seconds:4.776916265487671|h
+logger=plugin.signature.key_retriever t=2026-11-05T06:39:04.996530915Z level=error msg="Error downloading plugin manifest keys" error="Get \"https://grafana.com/api/plugins/ci/keys\": dial tcp: lookup grafana.com on 169.254.20.10:53: no such host"
+2026-11-05 06:39:05,377 - INFO - Closing session: 1423876148613246
+2026-11-05 06:39:05,377 - INFO - Canceling all running queries
+2026-11-05 06:39:05,671 - INFO - Closed session: 1423876148613246
+2026-11-05 06:39:05,675 - INFO - Signaling workers to shut down...
+2026-11-05 06:39:05,676	INFO worker.py:1672 -- Using address 10.244.3.11:12001 set in the environment variable RAY_ADDRESS
+2026-11-05 06:39:05,676	INFO worker.py:1814 -- Connecting to existing Ray cluster at address: 10.244.3.11:12001...
+2026-11-05 06:39:05,676	INFO worker.py:1828 -- Calling ray.init() again after it has already been called.
+2026-11-05 06:39:05,677 - INFO - Found 3 worker nodes
+2026-11-05 06:39:05,677 - INFO - Creating new shutdown signal actor: Failed to look up actor with name 'ShutdownSignal'. This could because 1. You are trying to look up a named actor you didn't create. 2. The named actor died. 3. You did not use a namespace matching the namespace of the actor.
+2026-11-05 06:39:08,008 - INFO - Shutdown requested: {'status': 'shutdown_requested', 'timestamp': 1793860748.0077784, 'host': 'job-0'}
+2026-11-05 06:39:08,008 - INFO - Waiting up to 15s for workers to acknowledge shutdown signal...
+2026-11-05 06:39:11,012 - INFO - All 3 workers acknowledged shutdown. Completed in 3.00s
+Metric sent (UDP, best-effort) to 127.0.0.1:8125: mljob.worker_shutdown_seconds:5.336730003356934|h
+Traceback (most recent call last):
+  File "/opt/mljob/mljob_launcher.py", line 1195, in <module>
+    main(
+  File "/opt/mljob/mljob_launcher.py", line 1105, in main
+    execution_result_value = _execute_payload(
+                             ^^^^^^^^^^^^^^^^^
+  File "/opt/mljob/mljob_launcher.py", line 650, in _execute_payload
+    result = run_script(
+             ^^^^^^^^^^^
+  File "/opt/mljob/mljob_launcher.py", line 612, in run_script
+    globals_dict = runpy.run_path(script_path, run_name="__main__")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/job_stage/app/scripts/snowflake/payloads/e5_multinode.py", line 1211, in <module>
+    main()
+  File "/mnt/job_stage/app/scripts/snowflake/payloads/e5_multinode.py", line 1207, in main
+    driver(a)
+  File "/mnt/job_stage/app/scripts/snowflake/payloads/e5_multinode.py", line 1166, in driver
+    meta["setup"] = ray.get([x.setup.remote(a.quick) for x in c.nodes], timeout=1800)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/ray/_private/client_mode_hook.py", line 107, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/ray/_private/worker.py", line 2980, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/ray/_private/worker.py", line 1023, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(Error): [36mray::Node.setup()[39m (pid=3471, ip=10.244.3.11, actor_id=aabeb102d717c443cecac66001000000, repr=<e5_multinode.Node object at 0x7f00c657c260>)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/snowflake/snowpark/session.py", line 331, in _get_active_session
+    raise SnowparkClientExceptionMessages.SERVER_NO_DEFAULT_SESSION()
+snowflake.snowpark.exceptions.SnowparkSessionException: (1403): No default Session is found. Please create a session before you call function 'udf' or use decorator '@udf'.
+
+During handling of the above exception, another exception occurred:
+
+[36mray::Node.setup()[39m (pid=3471, ip=10.244.3.11, actor_id=aabeb102d717c443cecac66001000000, repr=<e5_multinode.Node object at 0x7f00c657c260>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/job_stage/app/scripts/snowflake/payloads/e5_multinode.py", line 690, in setup
+    got["model"] = fetch(MODEL_ASSET, str(BASE / "model"))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/job_stage/app/scripts/snowflake/assets.py", line 61, in fetch
+    s = Session.builder.getOrCreate()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/snowflake/snowpark/session.py", line 603, in getOrCreate
+    return self.create()
+           ^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/snowflake/snowpark/session.py", line 566, in create
+    session = self._create_internal(self._options.get("connection"))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/snowflake/snowpark/session.py", line 617, in _create_internal
+    self._options = _get_default_connection_params()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/snowflake/connector/config_manager.py", line 538, in _get_default_connection_params
+    raise Error(
+snowflake.connector.errors.Error: Default connection with name 'default' cannot be found, known ones are []
+2026-11-05 06:39:11,543 - INFO - Closed session: 1423876148613246
+Metric sent (UDP, best-effort) to 127.0.0.1:8125: mljob.job_status:1|c|#status:failure,reason:user_code
+2026-11-05T06:39:13.945Z	info	otelcol@v0.163.0/collector.go:476	Received signal from OS	{"resource": {"service.instance.id": "01611f02-55d0-4640-9747-c776a63cdcc5", "service.name": "otelcol-contrib", "service.version": "0.163.2"}, "signal": "terminated"}
+2026-11-05T06:39:13.945Z	info	service@v0.163.0/service.go:294	Starting shutdown...	{"resource": {"service.instance.id": "01611f02-55d0-4640-9747-c776a63cdcc5", "service.name": "otelcol-contrib", "service.version": "0.163.2"}}
+2026-11-05T06:39:13.945Z	info	extensions/extensions.go:72	Stopping extensions...	{"resource": {"service.instance.id": "01611f02-55d0-4640-9747-c776a63cdcc5", "service.name": "otelcol-contrib", "service.version": "0.163.2"}}
+2026-11-05T06:39:13.945Z	info	service@v0.163.0/service.go:308	Shutdown complete.	{"resource": {"service.instance.id": "01611f02-55d0-4640-9747-c776a63cdcc5", "service.name": "otelcol-contrib", "service.version": "0.163.2"}}
+Head node job completed. Exiting.

@@ -1,0 +1,6 @@
+'artifact_repositories' is in public preview since 1.50.0.
+07:27:54Z submitted CRUCIBLE_LAB.PROBE.CRUCIBLE_E5_SMOKE5_1GZCOBDZZGEIL on CRUCIBLE_A10X4_POOL x4
+Compute pool busy (1/4 nodes in use, 4 nodes required). Job execution may be delayed.
+07:43:45Z status DONE after 962 s
+07:43:48Z wrote .cache/snowflake/e5/smoke5/report.json (credits estimate 1.82)
+EXIT 0

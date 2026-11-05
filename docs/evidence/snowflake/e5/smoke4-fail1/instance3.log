@@ -1,0 +1,207 @@
+[efa_env] no EFA device; NCCL_NET_PLUGIN=none (using NCCL built-in transport)
+Metric skipped (MLRS_METRICS_ENABLED='<unset>'): mljob.job_payload_source
+Installing system packages from /mnt/job_stage/system/requirements.txt
+Requirement already satisfied: cloudpickle~=3.0 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from -r /mnt/job_stage/system/requirements.txt (line 1)) (3.1.1)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+System package installation completed in 1 seconds
+Metric skipped (MLRS_METRICS_ENABLED='<unset>'): mljob.system_pip_install_seconds
+Installing user packages from requirements.txt
+Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple
+Collecting torch==2.8.0 (from -r requirements.txt (line 1))
+  Downloading torch-2.8.0-cp312-cp312-manylinux_2_28_x86_64.whl (887.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.9/887.9 MB 158.6 MB/s  0:00:08
+Collecting transformers==4.55.4 (from -r requirements.txt (line 2))
+  Downloading transformers-4.55.4-py3-none-any.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 57.5 MB/s  0:00:00
+Requirement already satisfied: numpy==2.2.6 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from -r requirements.txt (line 3)) (2.2.6)
+Requirement already satisfied: filelock in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (3.32.7)
+Requirement already satisfied: typing-extensions>=4.10.0 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: setuptools in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (1.14.0)
+Requirement already satisfied: networkx in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (3.7)
+Requirement already satisfied: jinja2 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: fsspec in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from torch==2.8.0->-r requirements.txt (line 1)) (2025.12.0)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 192.1 MB/s  0:00:00
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 133.7 MB/s  0:00:00
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 252.3 MB/s  0:00:00
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 54.4 MB/s  0:00:12
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 26.6 MB/s  0:00:15
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 79.6 MB/s  0:00:02
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 45.6 MB/s  0:00:01
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 90.2 MB/s  0:00:02
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 74.5 MB/s  0:00:03
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 93.6 MB/s  0:00:03
+Collecting nvidia-nccl-cu12==2.27.3 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.4/322.4 MB 77.4 MB/s  0:00:04
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 82.9 MB/s  0:00:00
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 60.8 MB/s  0:00:00
+Collecting triton==3.4.0 (from torch==2.8.0->-r requirements.txt (line 1))
+  Downloading triton-3.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 MB 36.6 MB/s  0:00:04
+Collecting huggingface-hub<1.0,>=0.34.0 (from transformers==4.55.4->-r requirements.txt (line 2))
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 227.6 MB/s  0:00:00
+Requirement already satisfied: packaging>=20.0 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from transformers==4.55.4->-r requirements.txt (line 2)) (25.0)
+Requirement already satisfied: pyyaml>=5.1 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from transformers==4.55.4->-r requirements.txt (line 2)) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from transformers==4.55.4->-r requirements.txt (line 2)) (2026.9.29)
+Requirement already satisfied: requests in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from transformers==4.55.4->-r requirements.txt (line 2)) (2.34.2)
+Collecting tokenizers<0.22,>=0.21 (from transformers==4.55.4->-r requirements.txt (line 2))
+  Downloading tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 112.4 MB/s  0:00:00
+Requirement already satisfied: safetensors>=0.4.3 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from transformers==4.55.4->-r requirements.txt (line 2)) (0.8.0)
+Requirement already satisfied: tqdm>=4.27 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from transformers==4.55.4->-r requirements.txt (line 2)) (4.70.1)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from huggingface-hub<1.0,>=0.34.0->transformers==4.55.4->-r requirements.txt (line 2)) (1.7.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from sympy>=1.13.3->torch==2.8.0->-r requirements.txt (line 1)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from jinja2->torch==2.8.0->-r requirements.txt (line 1)) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from requests->transformers==4.55.4->-r requirements.txt (line 2)) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from requests->transformers==4.55.4->-r requirements.txt (line 2)) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from requests->transformers==4.55.4->-r requirements.txt (line 2)) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages (from requests->transformers==4.55.4->-r requirements.txt (line 2)) (2026.10.23)
+Installing collected packages: nvidia-cusparselt-cu12, triton, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, huggingface-hub, tokenizers, nvidia-cusolver-cu12, transformers, torch
+  Attempting uninstall: nvidia-cusparselt-cu12
+    Found existing installation: nvidia-cusparselt-cu12 0.8.1
+    Uninstalling nvidia-cusparselt-cu12-0.8.1:
+      Successfully uninstalled nvidia-cusparselt-cu12-0.8.1
+  Attempting uninstall: triton
+    Found existing installation: triton 3.7.1
+    Uninstalling triton-3.7.1:
+      Successfully uninstalled triton-3.7.1
+  Attempting uninstall: nvidia-nvtx-cu12
+    Found existing installation: nvidia-nvtx-cu12 12.9.79
+    Uninstalling nvidia-nvtx-cu12-12.9.79:
+      Successfully uninstalled nvidia-nvtx-cu12-12.9.79
+  Attempting uninstall: nvidia-nvjitlink-cu12
+    Found existing installation: nvidia-nvjitlink-cu12 12.9.86
+    Uninstalling nvidia-nvjitlink-cu12-12.9.86:
+      Successfully uninstalled nvidia-nvjitlink-cu12-12.9.86
+  Attempting uninstall: nvidia-nccl-cu12
+    Found existing installation: nvidia-nccl-cu12 2.29.7
+    Uninstalling nvidia-nccl-cu12-2.29.7:
+      Successfully uninstalled nvidia-nccl-cu12-2.29.7
+  Attempting uninstall: nvidia-curand-cu12
+    Found existing installation: nvidia-curand-cu12 10.3.10.19
+    Uninstalling nvidia-curand-cu12-10.3.10.19:
+      Successfully uninstalled nvidia-curand-cu12-10.3.10.19
+  Attempting uninstall: nvidia-cufile-cu12
+    Found existing installation: nvidia-cufile-cu12 1.14.1.1
+    Uninstalling nvidia-cufile-cu12-1.14.1.1:
+      Successfully uninstalled nvidia-cufile-cu12-1.14.1.1
+  Attempting uninstall: nvidia-cuda-runtime-cu12
+    Found existing installation: nvidia-cuda-runtime-cu12 12.9.79
+    Uninstalling nvidia-cuda-runtime-cu12-12.9.79:
+      Successfully uninstalled nvidia-cuda-runtime-cu12-12.9.79
+  Attempting uninstall: nvidia-cuda-nvrtc-cu12
+    Found existing installation: nvidia-cuda-nvrtc-cu12 12.9.86
+    Uninstalling nvidia-cuda-nvrtc-cu12-12.9.86:
+      Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.9.86
+  Attempting uninstall: nvidia-cuda-cupti-cu12
+    Found existing installation: nvidia-cuda-cupti-cu12 12.9.79
+    Uninstalling nvidia-cuda-cupti-cu12-12.9.79:
+      Successfully uninstalled nvidia-cuda-cupti-cu12-12.9.79
+  Attempting uninstall: nvidia-cublas-cu12
+    Found existing installation: nvidia-cublas-cu12 12.9.1.4
+    Uninstalling nvidia-cublas-cu12-12.9.1.4:
+      Successfully uninstalled nvidia-cublas-cu12-12.9.1.4
+  Attempting uninstall: nvidia-cusparse-cu12
+    Found existing installation: nvidia-cusparse-cu12 12.5.10.65
+    Uninstalling nvidia-cusparse-cu12-12.5.10.65:
+      Successfully uninstalled nvidia-cusparse-cu12-12.5.10.65
+  Attempting uninstall: nvidia-cufft-cu12
+    Found existing installation: nvidia-cufft-cu12 11.4.1.4
+    Uninstalling nvidia-cufft-cu12-11.4.1.4:
+      Successfully uninstalled nvidia-cufft-cu12-11.4.1.4
+  Attempting uninstall: nvidia-cudnn-cu12
+    Found existing installation: nvidia-cudnn-cu12 9.20.0.48
+    Uninstalling nvidia-cudnn-cu12-9.20.0.48:
+      Successfully uninstalled nvidia-cudnn-cu12-9.20.0.48
+  Attempting uninstall: huggingface-hub
+    Found existing installation: huggingface_hub 1.16.1
+    Uninstalling huggingface_hub-1.16.1:
+      Successfully uninstalled huggingface_hub-1.16.1
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.23.2
+    Uninstalling tokenizers-0.23.2:
+      Successfully uninstalled tokenizers-0.23.2
+  Attempting uninstall: nvidia-cusolver-cu12
+    Found existing installation: nvidia-cusolver-cu12 11.7.5.82
+    Uninstalling nvidia-cusolver-cu12-11.7.5.82:
+      Successfully uninstalled nvidia-cusolver-cu12-11.7.5.82
+  Attempting uninstall: transformers
+    Found existing installation: transformers 5.17.0
+    Uninstalling transformers-5.17.0:
+      Successfully uninstalled transformers-5.17.0
+  Attempting uninstall: torch
+    Found existing installation: torch 2.13.0+cu129
+    Uninstalling torch-2.13.0+cu129:
+      Successfully uninstalled torch-2.13.0+cu129
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchvision 0.28.0+cu129 requires torch==2.13.0, but you have torch 2.8.0 which is incompatible.
+Successfully installed huggingface-hub-0.36.2 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.3 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvtx-cu12-12.8.90 tokenizers-0.21.4 torch-2.8.0 transformers-4.55.4 triton-3.4.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+User package installation completed in 162 seconds
+Metric skipped (MLRS_METRICS_ENABLED='<unset>'): mljob.user_pip_install_seconds
+2026-11-05 06:38:48,703 - INFO - AST state has not been set explicitly. Defaulting to ast_enabled = True.
+2026-11-05 06:38:49,365 - INFO - Snowflake Connector for Python Version: 4.8.0, Python Version: 3.12.15, Platform: Linux-5.15.221-14.2026100118g3ce9aaa+snow+aws+5.15+amd64.x86_64-x86_64-with-glibc2.39
+2026-11-05 06:38:49,366 - INFO - Connecting to GLOBAL Snowflake domain
+2026-11-05 06:38:51,801 - INFO - Snowpark Session information:
+"version" : 1.55.1,
+"python.version" : 3.12.15,
+"python.connector.version" : 4.8.0,
+"python.connector.session.id" : 1423876148633698,
+"os.name" : Linux
+2026-11-05 06:38:51,951 - INFO - Closing session: 1423876148633698
+2026-11-05 06:38:51,951 - INFO - Canceling all running queries
+2026-11-05 06:38:52,224 - INFO - Closed session: 1423876148633698
+Head Instance: index=0 ip=10.244.3.11 status=READY
+NODE_TYPE=worker RAY_HEAD_ADDRESS=10.244.3.11:12001
+Worker node started. See more logs in the head node.
+Starting worker shutdown listener...
+Creating log directories...
+[efa_env] no EFA device; NCCL_NET_PLUGIN=none (using NCCL built-in transport)
+Shared memory size: 136365211648 bytes
+Dashboard enabled: true
+2026-11-05 06:38:54,070 - INFO - Attempt 1/15 to connect to Ray failed: Could not find any running Ray instance. Please specify the one to connect to by setting `--address` flag or `RAY_ADDRESS` environment variable.. Retrying in 2 seconds...
+2026-11-05 06:38:56,071 - INFO - Attempt 2/15 to connect to Ray failed: Could not find any running Ray instance. Please specify the one to connect to by setting `--address` flag or `RAY_ADDRESS` environment variable.. Retrying in 3.0 seconds...
+2026-11-05 06:38:55,906	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m10.244.4.11[22m
+2026-11-05 06:38:58,268	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-11-05 06:38:58,269	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-11-05 06:38:58,269	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-11-05 06:38:58,269	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-11-05 06:38:58,269	INFO scripts.py:1149 -- [1m  ray stop[22m
+Dashboard proxy started: localhost:12003 -> 10.244.3.11:12003
+Metric skipped (MLRS_METRICS_ENABLED='<unset>'): mljob.ray_startup_seconds
+Metric skipped (MLRS_METRICS_ENABLED='<unset>'): mljob.startup_status
+2026-11-05 06:38:59,072	INFO worker.py:1814 -- Connecting to existing Ray cluster at address: 10.244.3.11:12001...
+2026-11-05 06:38:59,084	INFO worker.py:2003 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://10.244.3.11:12003 [39m[22m
+/opt/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/site-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+2026-11-05 06:39:08,008 - INFO - Received shutdown signal from head node at 1793860748.0077784. Exiting worker process.
+2026-11-05 06:39:08,009 - INFO - Acknowledged shutdown: {'status': 'acknowledged', 'worker_id': '7624c1f8c8738005198d491a7845b3ec6ee365af740d7ce353daadfa', 'acknowledged_count': 2}
+Worker shutdown listener exited with code 0
