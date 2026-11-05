@@ -1,4 +1,4 @@
-# E5: first multi-node runs of Crucible's cluster code on Snowflake GPU nodes
+# E5: first multi-node runs of Crucible's `cluster/` and `scaling/` code on Snowflake GPU nodes
 
 Date: 2026-11-05. Branch `snowflake/e5`. Payload: `scripts/snowflake/payloads/e5_multinode.py`; tables:
 `scripts/snowflake/e5_results.py` (CPU tests: `scripts/tests/test_e5_multinode.py`, `scripts/tests/test_e5_results.py`).
