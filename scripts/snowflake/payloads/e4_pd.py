@@ -342,7 +342,8 @@ def run_layout(name, a, snapshot, cluster, deadline):
     out = WORK / "out" / name
     out.mkdir(parents=True, exist_ok=True)
     probe_dir = str(WORK / f"kv-{name}")
-    p = layouts.plan(name, decode_pool_gb=a.decode_pool_gb, decode_buffer_bytes=a.decode_buffer_bytes)
+    p = layouts.plan(name, decode_pool_gb=a.decode_pool_gb, decode_buffer_bytes=a.decode_buffer_bytes,
+                     buffer_fix=getattr(a, "buffer_fix", False))
     layouts.check_ports(p)
     summary = {"layout": name, "plan": {"servers": [vars(s) for s in p.servers], "proxy_mode": p.proxy_mode,
                                         "notes": p.notes, "max_pd_inflight": a.max_pd_inflight},
@@ -499,6 +500,8 @@ def main():
     ap.add_argument("--decode-pool-gb", type=float, default=64)
     ap.add_argument("--decode-buffer-bytes", type=float, default=1)
     ap.add_argument("--max-pd-inflight", type=int, default=96)
+    ap.add_argument("--buffer-fix", action="store_true",
+                    help="correct the decode GPU buffer accounting (use with --decode-buffer-bytes 2e9)")
     ap.add_argument("--snapshot", help="use this local model directory instead of fetching the asset")
     a = ap.parse_args()
     a.levels = [int(x) for x in a.levels.split(",")]

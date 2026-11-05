@@ -66,3 +66,67 @@ def test_fix_targets_the_installed_vllm_connector_when_available(monkeypatch):
     assert "new_block_ids[0]" in inspect.getsource(mod.P2pNcclConnector.build_connector_meta)
     monkeypatch.setenv(vllm_entry.FIX_ENV, "1")
     assert vllm_entry.apply_fix() is True and mod.P2pNcclConnector._crucible_fixed
+
+
+class _T:
+    def __init__(self, n):
+        self.n = n
+
+    def element_size(self):
+        return 1
+
+    def numel(self):
+        return self.n
+
+
+class _Engine:
+    """vLLM 0.10.2's PUT-mode accounting: += on receive, -= on load, nothing on finish."""
+
+    send_type = "PUT_ASYNC"
+
+    def __init__(self):
+        self.recv_store, self.buffer_size = {}, 0
+
+    def receive(self, tid, n, threshold):
+        if self.buffer_size + n > threshold:
+            self.recv_store[tid] = ("addr", "dtype", "shape")
+        else:
+            self.recv_store[tid] = _T(n)
+            self.buffer_size += n
+
+    def recv_tensor(self, tid, remote_address=None):
+        t = self.recv_store[tid]
+        if isinstance(t, tuple):
+            return _T(0)
+        self.buffer_size -= t.n
+        return t
+
+    def get_finished(self, finished, layers):
+        for rid in finished:
+            for layer in layers:
+                self.recv_store.pop(f"{rid}#{layer}", None)
+        return None, None
+
+
+def test_buffer_fix_keeps_gpu_copies_counted_until_the_request_finishes(monkeypatch):
+    plain = _Engine()
+    plain.receive("a#l0", 60, threshold=100)
+    plain.recv_tensor("a#l0")
+    plain.receive("b#l0", 60, threshold=100)  # upstream: fits again although a's copy is still on the GPU
+    assert not isinstance(plain.recv_store["b#l0"], tuple)
+
+    cls = type("E", (_Engine,), {})
+    monkeypatch.setenv(vllm_entry.BUFFER_FIX_ENV, "1")
+    assert vllm_entry.apply_buffer_fix(types.SimpleNamespace(P2pNcclEngine=cls)) is True
+    e = cls()
+    e.receive("a#l0", 60, threshold=100)
+    e.recv_tensor("a#l0")
+    assert e.buffer_size == 60
+    e.receive("b#l0", 60, threshold=100)
+    assert isinstance(e.recv_store["b#l0"], tuple)  # parked in the host pool
+    e.receive("c#l0", 30, threshold=100)  # never loaded (e.g. a 1-token prompt)
+    e.get_finished({"a", "c"}, ["l0"])
+    assert e.buffer_size == 0 and "a#l0" not in e.recv_store
+    e.recv_tensor("b#l0")
+    e.get_finished({"b"}, ["l0"])
+    assert e.buffer_size == 0

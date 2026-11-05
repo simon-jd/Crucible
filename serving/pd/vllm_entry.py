@@ -6,6 +6,13 @@ None when that step allocated no new block, and the engine core dies with "TypeE
 object is not subscriptable" (run e4-full-pd-tcp, 4x level). The fix passes an empty block list for
 those requests for the duration of the call and restores the scheduler output afterwards.
 
+With $CRUCIBLE_P2P_BUFFER_FIX=1, the decode side's GPU buffer accounting is corrected: vLLM 0.10.2
+subtracts a received tensor's bytes from ``buffer_size`` when the model loads it, but keeps the GPU
+tensor in ``recv_store`` until the request finishes, so kv_buffer_size never bounds the GPU copies
+(the decode GPU ran out of memory at 4x in runs e4-full-pd-shm and e4-full-pd-tcp2). With the fix
+the bytes stay counted until get_finished drops the tensor, so tensors beyond kv_buffer_size go
+to the pinned host pool as intended.
+
 With $CRUCIBLE_P2P_NCCL_CUMEM set (0 or 1), the P2pNcclEngine communicators are created with that
 NCCL_CUMEM_ENABLE instead of the 1 that vLLM 0.10.2's set_p2p_nccl_context forces.
 
@@ -48,6 +55,51 @@ def fix_build_connector_meta(connector_cls):
     connector_cls.build_connector_meta = build_connector_meta
     connector_cls._crucible_fixed = True
     return connector_cls
+
+
+BUFFER_FIX_ENV = "CRUCIBLE_P2P_BUFFER_FIX"
+
+
+def _gpu_bytes(entry):
+    if entry is None or isinstance(entry, tuple):  # None = failed receive, tuple = parked in the host pool
+        return 0
+    return int(entry.element_size() * entry.numel())
+
+
+def fix_buffer_accounting(engine_cls):
+    """Count GPU-resident received tensors until get_finished frees them (see module docstring)."""
+    if getattr(engine_cls, "_crucible_buffer_fixed", False):
+        return engine_cls
+    recv_tensor, get_finished = engine_cls.recv_tensor, engine_cls.get_finished
+
+    def fixed_recv_tensor(self, tensor_id, remote_address=None):
+        out = recv_tensor(self, tensor_id, remote_address)
+        if out is not None and self.send_type in ("PUT", "PUT_ASYNC"):
+            self.buffer_size += _gpu_bytes(self.recv_store.get(tensor_id))  # undo the early decrement
+        return out
+
+    def fixed_get_finished(self, finished_req_ids, no_compile_layers):
+        freed = sum(_gpu_bytes(self.recv_store.get(f"{rid}#{layer}"))
+                    for rid in finished_req_ids for layer in no_compile_layers)
+        out = get_finished(self, finished_req_ids, no_compile_layers)
+        self.buffer_size -= freed
+        return out
+
+    engine_cls.recv_tensor = fixed_recv_tensor
+    engine_cls.get_finished = fixed_get_finished
+    engine_cls._crucible_buffer_fixed = True
+    return engine_cls
+
+
+def apply_buffer_fix(module=None):
+    if os.environ.get(BUFFER_FIX_ENV) != "1":
+        return False
+    if module is None:
+        import importlib
+
+        module = importlib.import_module(ENGINE_MODULE)
+    fix_buffer_accounting(module.P2pNcclEngine)
+    return True
 
 
 def apply_fix(module=None):
@@ -99,6 +151,7 @@ def plugin():
     kvprobe.install_if_enabled()
     override_cumem()
     apply_fix()
+    apply_buffer_fix()
 
 
 PLUGIN_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "plugin")

@@ -79,7 +79,7 @@ def kv_transfer_config(role, kv_port, http_port, pool_gb, buffer_bytes, send_typ
     }
 
 
-def plan(layout, decode_pool_gb=64, decode_buffer_bytes=1, socket_threads=8, socks_per_thread=8,
+def plan(layout, decode_pool_gb=64, decode_buffer_bytes=1, buffer_fix=False, socket_threads=8, socks_per_thread=8,
          nccl_buffsize=16 << 20, nccl_debug=True):
     """The servers of one layout. Cross-node NCCL settings are E0's best measured ones
     (docs/evidence/snowflake/e0-network.md on snowflake/e0); its NCCL_MIN_NCHANNELS=4 is moot because
@@ -113,7 +113,11 @@ def plan(layout, decode_pool_gb=64, decode_buffer_bytes=1, socket_threads=8, soc
         p = Plan(layout, 2, servers, "pd")
     else:
         raise ValueError(f"unknown layout {layout!r}; expected one of {LAYOUTS}")
-    p.notes = {"decode_pool_gb": decode_pool_gb, "decode_buffer_bytes": decode_buffer_bytes}
+    if buffer_fix:
+        for s in p.servers:
+            s.env["CRUCIBLE_P2P_BUFFER_FIX"] = "1"  # serving.pd.vllm_entry.fix_buffer_accounting
+    p.notes = {"decode_pool_gb": decode_pool_gb, "decode_buffer_bytes": decode_buffer_bytes,
+               "buffer_fix": buffer_fix}
     return p
 
 
