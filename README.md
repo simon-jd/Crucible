@@ -125,6 +125,7 @@ other, not with the 4090 rows.
 | Weight sync over NCCL | The weight-sync correctness check above, with the learner broadcasting BF16 weights over NCCL to vLLM on the other A10; same prompts, versions and error bound | All 1,823,232 coordinates within the bound in both layouts; 0 failures. One 988 MB version took 2.21 s in one node and 5.9 s across two nodes (default socket settings), including a per-tensor SHA-256 | [e1-weight-sync.md](docs/evidence/snowflake/e1-weight-sync.md) |
 | Async GRPO on separate GPUs | The RL setup above, seeds 17/18/19. (a) the unchanged time-shared loop on one A10; (b) learner on GPU0 and vLLM rollout on GPU1 of one node; (c) the same across two nodes. Weights synced over NCCL every step | Training time 1,207 s (a), 741 s (b, 1.63× faster) and 933 s (c, 1.29×). In (b) and (c) the learner GPU is idle 1% of the time; sync takes 1.06 s (b) and 2.9 s (c) per step; every batch is one version old, 0 dropped. GSM8K +3.80 / +3.78 / +2.99 pp (all above 4 SE). MATH-500 +1.79 pp in (a), 1.76 SE, below the bar; +2.21 pp (2.22 SE) in (b) and +3.12 pp (3.08 SE) in (c). No difference between layouts reaches 2 SE | [e2-async-grpo.md](docs/evidence/snowflake/e2-async-grpo.md) |
 | Autoscaling onto a second GPU | The autoscaling setup above in one node, with the new replica on GPU1; fixed 1 replica / autoscaling 1 → 2 / fixed 2 replicas; 3 trials each; SLO re-derived on the A10 (TTFT ≤ 85.7 ms, TPOT ≤ 9.37 ms) | Burst goodput 0.042 / 0.308 (0.025–0.433 across trials) / 0.525 req/s; failed requests 210–213 / 29–40 / 0 of 1,123. The second replica no longer slows the first (burst p50 TPOT 9.45 / 9.45 / 9.50 ms) and served its first request a median 38.5 s after the burst began. Goodput stays low in every condition because one A10 replica's TPOT under a full batch is above the SLO | [e3-autoscaling.md](docs/evidence/snowflake/e3-autoscaling.md) |
+| Prefill/decode disaggregation 1P:1D | Qwen3-8B-AWQ with the trace-replay setup above (Azure conv, 3 rounds per level) and vLLM 0.10.2's NCCL KV connector, not the SGLang manifests. Four layouts: one A10; two data-parallel replicas in one node; 1P:1D in one node (KV over NCCL SHM); 1P:1D across two nodes (KV over TCP). SLO re-derived on one A10: TTFT ≤ 2,110.7 ms, TPOT ≤ 90.27 ms | Goodput at 1x / 2x / 4x: one A10 1.06 / 0.22 req/s (4x trials voided, 0 of 265 good); two replicas 1.09 / 2.09 / 2.52; 1P:1D in one node 1.07 / 2.04 / 0.20; 1P:1D across two nodes 1.04 / 1.50 / 0.06. In one node P/D has a lower decode tail at 2x (p99 TPOT 22.8 vs 40.5 ms) but collapses at 4x: the one prefill GPU waits for every KV send (median prefill 0.29 s at 1x, 9.1 s at 4x). A median prompt carries 151 MB of KV, sent at 2.8 GB/s over SHM and 0.36–0.48 GB/s over TCP. Two bugs in vLLM 0.10.2's connector needed fixes | [e4-pd.md](docs/evidence/snowflake/e4-pd.md) |
 
 ### Speculative decoding (EAGLE-3, Qwen3-4B target)
 
@@ -168,8 +169,9 @@ Not run on hardware:
   [burn-in](docs/evidence/burn-in.md), [drain](docs/evidence/drain.md),
   [faults](docs/evidence/fault-goodput.md), [scaling](docs/evidence/scaling.md)). None of them ran
   on a GPU cluster, and there are no scaling, MFU, burn-in or fault-goodput measurements.
-- **Prefill/decode disaggregation.** The 1P:1D, 2P:1D and cross-node layouts with KV transfer over
-  RDMA are inactive manifests in `serving/deploy/pd-*.yaml`; no disaggregated serving was measured.
+- **Prefill/decode disaggregation as designed.** The SGLang manifests in `serving/deploy/pd-*.yaml`
+  (1P:1D, 2P:1D and cross-node, KV over RDMA) were never run. 1P:1D was measured only on a different
+  stack: vLLM's NCCL KV connector on two A10s, KV over SHM or TCP. 2P:1D was not measured.
 - **Kubernetes deployment of the router and autoscaler.** The kind node started, but kube-proxy
   crash-looped with "too many open files" (the host's inotify instance limit), so the deployment was
   not exercised ([record](docs/evidence/t14-kind.md)).
@@ -205,7 +207,9 @@ Limits of the results above:
 - Snowflake runs: at most two GPUs; the A10s are virtual GPUs ("A10-24Q"); the network is shared TCP
   with no RDMA, and results vary between runs. The two-node GRPO runs (E2 c) used 4 threads × 4
   sockets, before the network baseline found faster settings. The A10 GRPO runs reuse the base-model
-  eval of the time-shared run for each seed (checked identical for seed 17).
+  eval of the time-shared run for each seed (checked identical for seed 17). In the P/D runs the
+  one-A10 and two-node layouts ran on GPU_NV_SM nodes and the others on GPU_NV_2M, and the final
+  P/D configuration had no separate smoke run.
 - Speculative decoding: one target model, one dataset family, 256 output tokens. The tree
   configuration's two rounds differ a lot at batch 64 (22.37 vs 16.14 ms TPOT).
 - The fused log-prob op reduces memory only in isolation; a whole learner step shows no memory or
