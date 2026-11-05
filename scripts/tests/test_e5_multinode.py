@@ -286,3 +286,24 @@ def test_fault_plan_interleaves_disk_rounds_and_one_shm_round():
     assert e5.fault_plan(a) == [(1, "disk"), (1, "shm"), (2, "disk"), (3, "disk")]
     assert e5.fault_plan(SimpleNamespace(quick=True, fault_rounds=3, fault_shm_rounds=0)) == [(1, "disk")]
     assert set(e5.FAULT_STORES) == {"disk", "shm"} and str(e5.FAULT_STORES["shm"]).startswith("/dev/shm/")
+
+
+def test_compact_keeps_what_the_summaries_read_and_drops_bulk():
+    rank0 = {"rc": 0, "rank": 0, "global_tokens_per_s": 1.0, "split": {"step_s": 1}, "structure": {}, "losses": [1],
+             "peak_mem_gib": 3.0, "steps": [{"step": 1}] * 50, "log_tail": ["a", "b", "c", "d", "e"]}
+    res = {"phase": "scaling", "seconds": 1.0, "runs": [{"kind": "weak", "world": 2, "ranks": [
+        rank0, {**rank0, "rank": 1, "split": {"x": 1}}]}], "launched": [1, 2]}
+    c = e5.compact(res)
+    r0, r1 = c["runs"][0]["ranks"]
+    assert r0["split"] == {"step_s": 1} and "steps" not in r0 and r0["log_tail"] == ["b", "c", "d", "e"]
+    assert "split" not in r1 and r1["peak_mem_gib"] == 3.0 and "launched" not in c
+    nccl = {"phase": "collectives", "runs": [{"world": 2, "ranks": [{"rc": 0, "rank": 0, "bw": [1], "check_ok": True,
+            "nccl_log": ["NCCL version 2.27.3", "NET/Socket : Using [0]eth0", "Using network Socket", "Init START"]}]}],
+            "summary_algbw": {"big": 1}, "summary_busbw": {"small": 1}}
+    c = e5.compact(nccl)
+    assert c["runs"][0]["ranks"][0]["nccl_log"] == ["NET/Socket : Using [0]eth0", "Using network Socket"]
+    assert c["runs"][0]["ranks"][0]["bw"] == [1] and "summary_algbw" not in c and c["summary_busbw"] == {"small": 1}
+    fault = {"phase": "fault", "runs": [{"round": 1, "events": [1], "progress": [2], "attempt1": [
+        {"rc": 0, "timings": {"save": [1.0]}, "steps": [3]}]}]}
+    run = e5.compact(fault)["runs"][0]
+    assert run["events"] == [1] and run["progress"] == [2] and run["attempt1"] == [{"rc": 0, "timings": {"save": [1.0]}}]

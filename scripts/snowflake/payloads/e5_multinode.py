@@ -1325,7 +1325,67 @@ def driver(a):
             res = {"error": repr(e)[:2000], "traceback": traceback.format_exc()[-4000:]}
         res = {"phase": name, "quick": a.quick, "nodes": n, "seconds": round(time.time() - t0, 1), **res}
         progress(f"phase {name} done in {res['seconds']} s")
-        print("RESULT " + json.dumps(res, default=str), flush=True)
+        out = BASE / "results" / a.run
+        out.mkdir(parents=True, exist_ok=True)
+        (out / f"{name}.json").write_text(json.dumps(res, default=str))
+        up = upload_results(a.run) if a.run else {"upload": "skipped (no --run)"}
+        print("RESULT " + json.dumps({**compact(res), "full_result": up}, default=str), flush=True)
+
+
+def upload_results(run):
+    """Pack every phase result of this job so far and put it on the asset stage (results.py get e5/<run>), because
+    the job log fetch truncates long output (a 139 KB RESULT line was cut in fullA)."""
+    import tarfile
+    archive = BASE / "results" / f"{run}.tar.gz"
+    with tarfile.open(archive, "w:gz") as tar:
+        tar.add(BASE / "results" / run, arcname=run)
+    try:
+        from snowflake.snowpark import Session
+
+        from scripts.snowflake.assets import STAGE
+        s = Session.builder.getOrCreate()
+        s.file.put(str(archive), f"@{STAGE}/results/e5", auto_compress=False, overwrite=True)
+        return {"uploaded": f"results/e5/{archive.name}", "bytes": archive.stat().st_size}
+    except Exception as e:  # noqa: BLE001 - the compact RESULT line still carries the key numbers
+        return {"upload_error": repr(e)[:300], "bytes": archive.stat().st_size}
+
+
+RANK0_KEYS = ("rc", "rank", "host", "world", "kind", "init_seconds", "parameters", "structure", "plan", "step_seconds",
+              "local_micro_seconds", "last_micro_seconds", "opt_seconds", "window_seconds", "window_max_rank_seconds",
+              "global_tokens_per_s", "losses", "comm_alone", "split", "peak_mem_gib", "timings", "final_checkpoint",
+              "resumed_from")
+
+
+def slim_rank(x, rank0):
+    keep = RANK0_KEYS if rank0 else ("rc", "rank", "host", "global_tokens_per_s", "window_max_rank_seconds",
+                                     "peak_mem_gib", "timings", "check_ok", "bw")
+    out = {k: x[k] for k in keep if k in x}
+    if "log_tail" in x:
+        out["log_tail"] = x["log_tail"][-4:]
+    if "nccl_log" in x:
+        out["nccl_log"] = [line for line in x["nccl_log"] if "NET/" in line or "Using network" in line][:3]
+    if "check_ok" in x and "bw" in x:
+        out.update(check_ok=x["check_ok"], bw=x["bw"])
+    return out
+
+
+def compact(res):
+    """The phase result without bulky per-rank detail, small enough for one log line; e5_results reads either."""
+    drop = {"node_probe_host", "node_probe_workload"}
+    out = {}
+    for k, v in res.items():
+        if k == "ranks" and isinstance(v, list):
+            out[k] = [slim_rank(x, i == 0) for i, x in enumerate(v)]
+        elif k == "nodes" and isinstance(v, list):
+            out[k] = [{kk: vv for kk, vv in x.items() if kk not in drop} for x in v]
+        elif k in ("runs", "attempt0", "attempt1") and isinstance(v, list):
+            out[k] = [compact(x) if isinstance(x, dict) and "rc" not in x else slim_rank(x, i == 0)
+                      for i, x in enumerate(v)]
+        elif k in ("summary_algbw", "launched"):
+            continue
+        else:
+            out[k] = v
+    return out
 
 
 def stage_inputs(ray, c):
@@ -1368,6 +1428,7 @@ def main(argv=None):
     ap.add_argument("--phases", nargs="*", choices=sorted(PHASES), default=list(PHASES))
     ap.add_argument("--nodes", type=int, default=4)
     ap.add_argument("--quick", action="store_true")
+    ap.add_argument("--run", default="", help="tag: full results go to @ASSETS/results/e5/<run>.tar.gz")
     ap.add_argument("--passes", type=int, default=3)
     ap.add_argument("--rounds", type=int, default=3)
     ap.add_argument("--ckpt-threads", type=int, default=4, help="DCP FileSystemWriter threads for the fault phase")

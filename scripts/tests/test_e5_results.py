@@ -72,3 +72,10 @@ def test_export_redacts_and_refuses_leaks(tmp_path):
     (src / "instance1.log").write_text("token eyJhbGciOiJIUzI1NiJ9 alone is fine; mixed-Case Org-Acct is not\n")
     res.export(src, dest, secrets=["org-acct"])
     assert "Org-Acct" not in (dest / "instance1.log").read_text()
+
+
+def test_phases_reads_reports_and_phase_files(tmp_path):
+    (tmp_path / "report.json").write_text(json.dumps({"results": [{"phase": "setup"}, {"phase": "drain", "x": 1}]}))
+    (tmp_path / "fault.json").write_text(json.dumps({"phase": "fault", "runs": []}))
+    ph = res.phases([tmp_path / "report.json", tmp_path / "fault.json"])
+    assert sorted(ph) == ["drain", "fault", "setup"] and ph["fault"][0]["runs"] == []

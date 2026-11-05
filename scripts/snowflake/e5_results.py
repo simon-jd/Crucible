@@ -45,9 +45,12 @@ def fmt(s, digits=3):
 
 
 def phases(paths):
+    """Phase results from driver report.json files (RESULT lines) or from the payload's per-phase <phase>.json files
+    (the full results fetched from the stage with results.py)."""
     out = {}
     for p in paths:
-        for r in json.loads(Path(p).read_text()).get("results", []):
+        data = json.loads(Path(p).read_text())
+        for r in data.get("results", []) if "results" in data else [data]:
             key = r.get("phase")
             if key:
                 out.setdefault(key, []).append(r)
@@ -241,7 +244,7 @@ def fault_summary(res):
            "events": [(round(e["at"] - t0, 2), e["kind"], e.get("step"), e.get("checkpoint_id", "").rsplit("/", 1)[-1])
                       for e in ev if e["kind"] != "step_complete"]}
     losses = {}
-    for p in res["progress"]:
+    for p in res.get("progress", []):
         losses.setdefault(p["step"], {})[p["attempt"]] = p["loss"]
     out["replayed_step_losses"] = {s: v for s, v in losses.items() if len(v) > 1}
     return out
