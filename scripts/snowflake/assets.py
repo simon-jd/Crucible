@@ -7,6 +7,7 @@
 Each asset is one uncompressed tar, @CRUCIBLE_LAB.PROBE.ASSETS/<name>.tar, with <name>.sha256 next to it, so a
 job downloads a single file and checks it. Symlinks are followed, so a Hugging Face snapshot directory becomes
 plain files. Inside a job, fetch(name, dest) downloads, verifies and unpacks it into dest and returns timings.
+On the host, set SNOWFLAKE_ACCOUNT to the account identifier (<orgname>-<accountname>).
 """
 import hashlib
 import os

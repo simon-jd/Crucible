@@ -24,6 +24,7 @@ Environment facts this relies on (measured 2026-11-03/04 on a Snowflake trial ac
   (MASTER_PORT, vLLM KV ports) in 12900-12999.
 - Jobs read models and data from a stage with a Snowpark session (Session.builder.getOrCreate()); see assets.py.
 Connects as CRUCIBLE_PROBE_SVC with the key at ~/.snowflake-keys/crucible/CRUCIBLE_PROBE_SVC.p8 (path only).
+Set SNOWFLAKE_ACCOUNT to the account identifier (<orgname>-<accountname>).
 """
 import argparse
 import fcntl
