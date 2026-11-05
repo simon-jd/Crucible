@@ -6,9 +6,11 @@ LLM serving with a trace replayer, router and autoscaler (including prefill/deco
 layouts), EAGLE-3 speculative decoding, and a PyTorch custom op for fused token log-probabilities.
 Most measurements ran on a single RTX 4090 (24 GB) in a shared workstation, with models scaled down
 to fit it. A second set ran on Snowflake trial GPU nodes: two A10 24 GB GPUs in one node (no
-NVLink/P2P), or two single-A10 nodes over TCP. The multi-node parts (four-node H100 cluster checks, burn-in, health-based
-drain, fault injection, scaling runs, cross-node P/D serving with KV transfer over RDMA) are
-written and covered by offline CPU tests, but they have never run on real hardware.
+NVLink/P2P), or two to four single-A10 nodes over TCP. The multi-node parts were written for a
+four-node H100 cluster with InfiniBand (cluster checks, burn-in, health-based drain, fault injection,
+scaling runs, cross-node P/D serving with KV transfer over RDMA) and have not run on one. Their
+logic ran once on four A10 nodes over TCP; the RDMA, DCGM, Slurm/Kubernetes and TorchTitan parts
+have never run on real hardware.
 
 ## Components
 
@@ -115,7 +117,7 @@ differences.
 
 Hardware: a Snowflake trial account, November 2026. "One node" is Snowflake GPU_NV_2M: 2× A10 24 GB
 (vGPU) in one node, no NVLink/P2P. "Two nodes" is 2 Snowflake GPU_NV_SM nodes (1× A10 24 GB each)
-over TCP. Each run was a Snowflake ML Job with vLLM 0.10.2, torch 2.8.0 (NCCL 2.27.3) and
+over TCP, "four nodes" 4 of them. Each run was a Snowflake ML Job with vLLM 0.10.2, torch 2.8.0 (NCCL 2.27.3) and
 transformers 4.55.4 ([scripts/snowflake/](scripts/snowflake/)). Compare the A10 numbers with each
 other, not with the 4090 rows.
 
@@ -126,6 +128,8 @@ other, not with the 4090 rows.
 | Async GRPO on separate GPUs | The RL setup above, seeds 17/18/19. (a) the unchanged time-shared loop on one A10; (b) learner on GPU0 and vLLM rollout on GPU1 of one node; (c) the same across two nodes. Weights synced over NCCL every step | Training time 1,207 s (a), 741 s (b, 1.63× faster) and 933 s (c, 1.29×); 860 s (1.40×) when (c) was rerun with the tuned socket settings from the network baseline. In (b) and (c) the learner GPU is idle 1% of the time; sync takes 1.06 s (b), 2.9 s (c) and 2.0 s (c rerun) per step; every batch is one version old, 0 dropped. GSM8K +3.80 / +3.78 / +2.99 pp (all above 4 SE). MATH-500 +1.79 pp in (a), 1.76 SE, below the bar; +2.21 pp (2.22 SE) in (b) and +3.12 pp (3.08 SE) in (c). No difference between layouts reaches 2 SE | [e2-async-grpo.md](docs/evidence/snowflake/e2-async-grpo.md) |
 | Autoscaling onto a second GPU | The autoscaling setup above in one node, with the new replica on GPU1; fixed 1 replica / autoscaling 1 → 2 / fixed 2 replicas; 3 trials each; SLO re-derived on the A10 (TTFT ≤ 85.7 ms, TPOT ≤ 9.37 ms) | Burst goodput 0.042 / 0.308 (0.025–0.433 across trials) / 0.525 req/s; failed requests 210–213 / 29–40 / 0 of 1,123. The second replica no longer slows the first (burst p50 TPOT 9.45 / 9.45 / 9.50 ms) and served its first request a median 38.5 s after the burst began. Goodput stays low in every condition because one A10 replica's TPOT under a full batch is above the SLO | [e3-autoscaling.md](docs/evidence/snowflake/e3-autoscaling.md) |
 | Prefill/decode disaggregation 1P:1D | Qwen3-8B-AWQ with the trace-replay setup above (Azure conv, 3 rounds per level) and vLLM 0.10.2's NCCL KV connector, not the SGLang manifests. Four layouts: one A10; two data-parallel replicas in one node; 1P:1D in one node (KV over NCCL SHM); 1P:1D across two nodes (KV over TCP). SLO re-derived on one A10: TTFT ≤ 2,110.7 ms, TPOT ≤ 90.27 ms | Goodput at 1x / 2x / 4x: one A10 1.06 / 0.22 req/s (4x trials voided, 0 of 265 good); two replicas 1.09 / 2.09 / 2.52; 1P:1D in one node 1.07 / 2.04 / 0.20; 1P:1D across two nodes 1.04 / 1.50 / 0.06. In one node P/D has a lower decode tail at 2x (p99 TPOT 22.8 vs 40.5 ms) but collapses at 4x: the one prefill GPU waits for every KV send (median prefill 0.29 s at 1x, 9.1 s at 4x). A median prompt carries 151 MB of KV, sent at 2.8 GB/s over SHM and 0.36–0.48 GB/s over TCP. Two bugs in vLLM 0.10.2's connector needed fixes | [e4-pd.md](docs/evidence/snowflake/e4-pd.md) |
+| Multi-node collectives and scaling | Four nodes. 1 GiB all-reduce and broadcast on 2 / 3 / 4 nodes, 3 passes. Data-parallel (DDP) training of Qwen2.5-0.5B on 1 / 2 / 4 nodes with fp32 gradients: fixed per-GPU batch (weak scaling) and a fixed global batch of 16 sequences (strong scaling), 3 rounds. TorchTitan's pinned nightly stack could not be installed | All-reduce 1.29 / 1.03 / 0.83 GB/s on 2 / 3 / 4 nodes with tuned settings, about 0.2 GB/s by default; NCCL used TCP sockets, as the nodes have no InfiniBand device. Scaling efficiency: weak 0.54 on 2 nodes and 0.36 on 4, strong 0.38 and 0.12. The 1.98 GB gradient all-reduce takes 2.0 s on 2 nodes and 4.2 s on 4, against 2.0 s of compute per step. DCGM, nccl-tests and perftest are not on these nodes, and CUPTI does not start on the vGPU | [e5-multinode.md](docs/evidence/snowflake/e5-multinode.md) |
+| Slow-node drain and rank-kill restart | Four nodes. Drain: one node slowed by a competing CUDA process, step times fed to the drain controller in dry-run mode. Fault: SIGKILL of one rank's process after step 25, all ranks restarted from the step-20 checkpoint, 3 rounds | The node-local step time flagged only the slowed node, once, at its third slow sample; the synchronized step time slows every node equally and flags none. Goodput 0.430 (0.422–0.445) with checkpoints on disk, where each 6.48 GB save takes 39–49 s, and 0.673 with `/dev/shm`. Every round lost 5 steps and the first replayed step reproduced the loss. This is a process kill, not a node, power or network fault | [e5-multinode.md](docs/evidence/snowflake/e5-multinode.md) |
 
 ### Speculative decoding (EAGLE-3, Qwen3-4B target)
 
@@ -163,12 +167,14 @@ Source: [EAGLE-3 write-up](docs/evidence/spec-decoding/phase7/README.md), summar
 
 Not run on hardware:
 
-- **Multi-node cluster work.** The four-node H100 checks, burn-in suite, drain controller, fault
-  plans and scaling runs exist as code, configurations and launch plans, tested with CPU unit
-  tests, command shims and synthetic fixtures ([provisioning](docs/evidence/cluster-baseline.md),
-  [burn-in](docs/evidence/burn-in.md), [drain](docs/evidence/drain.md),
-  [faults](docs/evidence/fault-goodput.md), [scaling](docs/evidence/scaling.md)). None of them ran
-  on a GPU cluster, and there are no scaling, MFU, burn-in or fault-goodput measurements.
+- **Multi-node cluster work on the planned hardware.** The four-node H100 checks, burn-in suite,
+  drain controller, fault plans and scaling runs exist as code, configurations and launch plans,
+  tested with CPU unit tests, command shims and synthetic fixtures
+  ([provisioning](docs/evidence/cluster-baseline.md), [burn-in](docs/evidence/burn-in.md),
+  [drain](docs/evidence/drain.md), [faults](docs/evidence/fault-goodput.md),
+  [scaling](docs/evidence/scaling.md)). Only their logic ran on hardware, once, on four Snowflake
+  A10 nodes over TCP. There are no InfiniBand/HCA tests, DCGM burn-in, Slurm or Kubernetes drain
+  actions, node or power faults, TorchTitan runs, or H100 scaling and MFU numbers.
 - **Prefill/decode disaggregation as designed.** The SGLang manifests in `serving/deploy/pd-*.yaml`
   (1P:1D, 2P:1D and cross-node, KV over RDMA) were never run. 1P:1D was measured only on a different
   stack: vLLM's NCCL KV connector on two A10s, KV over SHM or TCP. 2P:1D was not measured.
@@ -204,7 +210,7 @@ Limits of the results above:
   SLO caps goodput in every condition, and autoscaling goodput varies a lot between trials. In every
   autoscaling trial a short cluster of arrivals caused a second scale-up about 300 s after the load
   dropped.
-- Snowflake runs: at most two GPUs; the A10s are virtual GPUs ("A10-24Q"); the network is shared TCP
+- Snowflake runs: at most four GPUs, at most two per node; the A10s are virtual GPUs ("A10-24Q"); the network is shared TCP
   with no RDMA, and results vary between runs. Two-node weight sync in GRPO stays at about 2 s per
   step even with tuned sockets: the link needs about 0.45 s, the rest is the per-tensor sync protocol
   (about 1,500 collectives per push), which was not changed. The A10 GRPO runs reuse the base-model
