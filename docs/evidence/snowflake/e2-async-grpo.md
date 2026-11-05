@@ -8,7 +8,9 @@ against **1,207 s (5.30 samples/s)** for the unchanged time-shared loop on one A
 idle 1% of the training window, the rollout GPU 21–27%. Held-out accuracy: GSM8K
 clears the 2 SE bar in all three layouts; MATH-500 clears it in the two-GPU layouts
 (2.22 and 3.08 SE) but **not in the time-shared A10 reference (+1.79 ± 1.01 pp,
-1.76 SE)**. No pairwise layout difference in final accuracy reaches 2 SE.
+1.76 SE)**. No pairwise layout difference in final accuracy reaches 2 SE. A rerun of (c) with
+E0's tuned socket settings ([below](#layout-c-rerun-with-tuned-sockets)) syncs in 1.9–2.2 s
+instead of 2.8–3.2 s and trains in 860 s on average (1.40× over (a)).
 
 Hardware: (a) one A10 24 GB (vGPU "A10-24Q") of a Snowflake GPU_NV_SM node. (b)
 Snowflake GPU_NV_2M: 2× A10 24 GB (vGPU) in one node, no NVLink/P2P; learner on GPU0,
@@ -106,6 +108,132 @@ reward first → last 10 steps: (a) 0.40–0.42 → 0.60–0.66, (b) 0.39–0.41
   the learner; (a) loses its time by running generation and learning one after the other.
 - Memory: separating the roles moves vLLM's ~3.6 GB (15% of the card) and its
   activations off the learner GPU (torch peak 14.85 → 11.7 GB).
+
+## Layout (c) rerun with tuned sockets
+
+Run 2026-11-05 as layout (c2), after E0 found that broadcast between two GPU_NV_SM nodes reaches
+2.6 GB/s with `NCCL_SOCKET_NTHREADS=8 NCCL_NSOCKS_PERTHREAD=8 NCCL_MIN_NCHANNELS=4`. The (c)
+numbers above are kept as they were.
+
+What changed:
+- The NCCL environment of both roles. (c2) used E0's settings, without `NCCL_BUFFSIZE`, which
+  made broadcast unstable in E0. (c) used `NCCL_SOCKET_NTHREADS=4 NCCL_NSOCKS_PERTHREAD=4`.
+- `NCCL_DEBUG=INFO NCCL_DEBUG_SUBSYS=INIT,NET,ENV` was added. These subsystems log only while
+  communicators are set up.
+
+What stayed the same:
+- Hardware: 2 Snowflake GPU_NV_SM nodes (1× A10 24 GB each) over TCP, pool `SYSTEM_COMPUTE_POOL_GPU`.
+- Code, pins, data file (`dbdf1a1b…`), seeds 17/18/19, steps, hyperparameters and held-out sets.
+- The base eval is reused from (a), as before.
+
+Deviations that do not touch training:
+- Payload role timeout: 3,000 s instead of 4,800 s.
+- Rendezvous ports: 12927–12929 instead of 12937–12939.
+
+An 8-step smoke ran first (`smokes/e2c2-smoke-*`). It synced in 2.28 s per step, against 2.96 s in
+`e2c-smoke`. All three full runs exited 0.
+
+Per seed (17 / 18 / 19), medians over 100 steps (`e2/comparison-c2.json`):
+
+| | (c) 4×4 sockets | (c2) 8×8 sockets, 4 channels |
+|---|---|---|
+| Training time, 100 steps (s) | 910 / 960 / 930 | **889 / 838 / 853** |
+| Trained samples/s | 7.03 / 6.67 / 6.89 | 7.20 / 7.63 / 7.50 |
+| Speedup over (a), mean training time | 1.29× | **1.40×** (per seed 1.37 / 1.44 / 1.41) |
+| Median step wall (s) | 8.58 / 9.01 / 8.77 | 8.29 / 7.80 / 7.91 |
+| Weight sync per step (s) | 2.80 / 3.17 / 2.90 | **2.22 / 1.90 / 1.95** |
+| Effective sync rate, 988 MB / median (GB/s) | 0.35 / 0.31 / 0.34 | 0.45 / 0.52 / 0.51 |
+| Sync time summed over 100 steps (s) | 280 / 316 / 290 | 223 / 193 / 197 |
+| Learner step (s) | 5.58 / 5.69 / 5.67 | 5.78 / 5.57 / 5.74 |
+| Rollout generate (s) | 4.31 / 4.36 / 4.32 | 4.54 / 4.44 / 4.43 |
+| Grading, CPU (s) | 1.23 / 1.30 / 1.31 | 1.28 / 1.33 / 1.33 |
+| Learn ∥ generate overlap (s) | 426 / 437 / 430 | 451 / 443 / 444 |
+| GPU idle share, learner / rollout | 0.009 / 0.21–0.22 | 0.010 / 0.23–0.24 |
+| Staleness (samples by age), stale dropped | 0: 64, 1: 6,336; 0 | 0: 64, 1: 6,336; 0 |
+| Peak nvidia-smi used (MiB), learner / rollout GPU | 15,228–15,358 / 4,644 | 15,240–15,390 / 4,656 |
+
+Mean training time:
+- (a) 1,207 s.
+- (b) 741 s, 1.63× faster than (a).
+- (c) 933 s, 1.29×.
+- (c2) 860 s, 1.40×.
+
+So (c2) trains 7.8% faster than (c), but still takes 16% longer than (b) on one node. The sync
+fell by a third (mean 2.96 → 2.02 s). The learner was still the bottleneck (idle 1%), so the saved
+sync time went straight into training time.
+
+Held-out pass@1 (base: GSM8K 0.4526, MATH-500 0.2580):
+
+| Layout | GSM8K after (s17/18/19) | GSM8K Δ pooled | MATH-500 after | MATH-500 Δ pooled |
+|---|---|---|---|---|
+| (c) 2 nodes TCP, 4×4 | 0.4820 / 0.4774 / 0.4882 | **+2.99 ± 0.67 pp (4.47 SE)** | 0.2918 / 0.2911 / 0.2845 | **+3.12 ± 1.01 pp (3.08 SE)** |
+| (c2) 2 nodes TCP, 8×8 + 4 channels | 0.4865 / 0.4936 / 0.4653 | **+2.92 ± 0.68 pp (4.28 SE)** | 0.3004 / 0.2878 / 0.2752 | **+2.98 ± 1.04 pp (2.87 SE)** |
+
+- (c2) clears the 2 SE bar on both sets.
+- Differences between layouts in final accuracy (after − after):
+
+  | | GSM8K | MATH-500 |
+  |---|---|---|
+  | (c2) − (c) | −0.08 ± 0.53 pp | −0.13 ± 0.73 pp |
+  | (c2) − (a) | −0.88 ± 0.53 pp | +1.19 ± 0.67 pp |
+  | (c2) − (b) | −0.86 ± 0.53 pp | +0.77 ± 0.72 pp |
+
+  None reaches 2 SE.
+- Train reward, first → last 10 steps: 0.39–0.41 → 0.59–0.62.
+- The broadcast delivers the same bytes whatever the socket count, and digests were checked every
+  step. So the accuracy differences are run-to-run noise, as for the other layouts.
+
+### Why the sync stays far above the link time
+
+**The tuned transport was in effect.** The NCCL INFO lines in `e2c2-s*/{learner,rollout}-log-excerpt.txt`
+(both ranks, all three seeds) show:
+- `NCCL version 2.27.3+cuda12.9`, `NET/IB : No device found` and `Using network Socket`.
+- `NCCL_MIN_NCHANNELS set by environment to 4`. The pair communicator reports
+  `4 coll channels … 2 p2p channels per peer` and `Channel 00/04` to `03/04`.
+- `NET/Socket: Using 8 threads and 8 sockets per thread` four times per rank, and every
+  connection `via NET/Socket/0`.
+- `Connected all rings, use ring PXN 0 GDR 0`: no GPU Direct RDMA, so data passes through
+  host buffers.
+
+This is the configuration with which E0 measured 2.6 GB/s broadcast, so no setting was lost on
+the way to the job.
+
+**The link time went down, and the rest did not.** WeightSync sends in chunks of up to 16 MiB:
+- At E0's 16 MiB broadcast rate (2.22 GB/s with these settings, 0.84 GB/s with 4×4), 988 MB
+  needs 0.45 s of link time; with 4×4 it needs 1.17 s.
+- The time above the link time is 1.45–1.77 s in (c2) and 1.63–2.00 s in (c), about the same.
+- The new sockets removed most of the link time. Most of the remaining sync time is fixed cost
+  that does not depend on the link rate.
+
+**That fixed cost is WeightSync's per-tensor protocol** (`rl/sync/nccl_broadcast.py`):
+- One push of the 290 tensors makes 1,478 collectives, as counted from the code and confirmed by
+  running `WeightSync.push` over gloo with the Qwen2.5-0.5B BF16 schema:
+  - 5 at the start, 5 per tensor, 16 more for the 17-chunk embedding, and 7 at the end.
+  - 306 of them are data broadcasts.
+  - 1,172 are tiny: 586 control-frame broadcasts and 586 four-byte status all-reduces.
+- Each control frame and status flag is read on the host (`.item()` / `.cpu()`) before the next
+  call, so the collectives run strictly one after another.
+- Both GPUs also run a finite check and a sum64 checksum on every tensor.
+- 169 of the 290 tensors are 1 MiB or smaller (121 are 4 KiB or smaller). At that size E0 found
+  broadcast latency-bound.
+
+**Estimated split.** The same protocol takes 1.05 s on one node in (b), where moving the data over
+SHM takes only about 0.05 s. Over TCP, each of the ~1,170 sequential round trips costs roughly
+0.5 ms more: (1.58 − 1.00) s / 1,172.
+
+This split is an estimate from E0's rates, the count above and (b). The INIT/NET/ENV subsystems
+log only setup, so the logs do not contain per-collective times.
+
+**Next step (not tried).** A bucketed sync, with a few large flat broadcasts and one digest, would
+take about 0.4–0.5 s per step at E0's rates.
+
+### Raw outputs and credits
+
+- Raw outputs: `e2/e2c2-s{17,18,19}/`, with the same files as (c).
+- `e2/comparison-c2.json`: `python -m rl.local.compare_layouts --layout a=… --layout b=… --layout c=…
+  --layout c2=…`. Its a/b/c entries and pairs equal `comparison.json`.
+- Eval completions are stored in `@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e2c2-s<seed>.tar.gz`.
+- Credits (ledger upper bounds): smoke 0.720, s17 1.977, s18 1.892, s19 1.885; total 6.47.
 
 ## Smokes and failures
 

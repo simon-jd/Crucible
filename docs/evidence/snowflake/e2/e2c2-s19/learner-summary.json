@@ -1,0 +1,23 @@
+{
+ "staleness_histogram": {
+  "0": 64,
+  "1": 6336
+ },
+ "train_wall_s": 853.3475344399999,
+ "peak_allocated_bytes": 11695333376,
+ "peak_reserved_bytes": 15227420672,
+ "peak_device_used_bytes": 18355978240,
+ "device": "NVIDIA A10-24Q",
+ "host": "job-1",
+ "nccl_env": {
+  "NCCL_NET_PLUGIN": "none",
+  "NCCL_VERSION": "2.25.1-1",
+  "NCCL_SOCKET_IFNAME": "eth0",
+  "CUDA_VISIBLE_DEVICES": "0",
+  "NCCL_SOCKET_NTHREADS": "8",
+  "NCCL_NSOCKS_PERTHREAD": "8",
+  "NCCL_MIN_NCHANNELS": "4",
+  "NCCL_DEBUG": "INFO",
+  "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+ }
+}

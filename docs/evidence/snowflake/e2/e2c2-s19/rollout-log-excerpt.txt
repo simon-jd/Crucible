@@ -1,0 +1,26 @@
+job-0:3740:3740 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+job-0:3740:3740 [0] NCCL INFO NCCL_SOCKET_IFNAME set to eth0
+job-0:3740:3740 [0] NCCL INFO NCCL version 2.27.3+cuda12.9
+job-0:3740:4218 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+job-0:3740:4218 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+job-0:3740:4218 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.9.139<0>
+job-0:3740:4218 [0] NCCL INFO Using network Socket
+job-0:3740:4218 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-0:3740:4218 [0] NCCL INFO NCCL_MIN_NCHANNELS set by environment to 4.
+job-0:3740:4218 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+job-0:3740:4218 [0] NCCL INFO ncclCommInitRankConfig comm 0x798f7640 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xf119eaa0ae713c13 - Init COMPLETE
+job-0:3740:4220 [0] NCCL INFO NCCL_NSOCKS_PERTHREAD set by environment to 8.
+job-0:3740:4220 [0] NCCL INFO NCCL_SOCKET_NTHREADS set by environment to 8.
+job-0:3740:4220 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-0:3740:4222 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-0:3740:4220 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-0:3740:4222 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-0:3740:4220 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-0:3740:4222 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-0:3740:4220 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-0:3740:4222 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-0:3740:4222 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-0:3740:4222 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-0:3740:4222 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-0:3740:4222 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-0:3740:4222 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
