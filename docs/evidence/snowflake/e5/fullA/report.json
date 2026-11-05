@@ -1,0 +1,1080 @@
+{
+  "started_at": "2026-11-05T07:46:00+00:00",
+  "pool": "CRUCIBLE_A10X4_POOL",
+  "instances": 4,
+  "entry": "scripts/snowflake/payloads/e5_multinode.py",
+  "include": [
+    "cluster",
+    "scaling",
+    "scripts/snowflake",
+    "scripts/experiment_results.py"
+  ],
+  "pip": [
+    "torch==2.8.0",
+    "torchvision==0.23.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--nodes",
+    "4",
+    "--phases",
+    "health",
+    "collectives",
+    "scaling"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E5_FULLA_EBJVC0S5FN84",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "phase": "setup",
+      "nodes_requested": 4,
+      "ray_gpu_nodes": 4,
+      "nodes_used": 4,
+      "head_ip": "10.244.10.11",
+      "infos": [
+        {
+          "ip": "10.244.10.11",
+          "host": "job-0",
+          "pid": 3769,
+          "cuda_visible_devices": "0",
+          "time": 1793865242.589125,
+          "boot_id": "6856a105-44dc-4a77-af7f-144e91ad1c6d"
+        },
+        {
+          "ip": "10.244.10.203",
+          "host": "job-1",
+          "pid": 2478,
+          "cuda_visible_devices": "0",
+          "time": 1793865242.482239,
+          "boot_id": "8cfd7e86-4cb5-4e11-ac50-99852d370589"
+        },
+        {
+          "ip": "10.244.10.75",
+          "host": "job-3",
+          "pid": 2612,
+          "cuda_visible_devices": "0",
+          "time": 1793865242.5883417,
+          "boot_id": "2771b851-57d6-4bf7-a104-c00a2f0984a5"
+        },
+        {
+          "ip": "10.244.11.75",
+          "host": "job-2",
+          "pid": 2275,
+          "cuda_visible_devices": "0",
+          "time": 1793865242.52992,
+          "boot_id": "b7d75884-7bef-49a1-8fdc-58965b5994be"
+        }
+      ],
+      "rank0_on_head": true,
+      "setup": {
+        "model": {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 5.7,
+          "MBps": 174.4
+        },
+        "data": {
+          "asset": "data/gsm8k",
+          "bytes": 2744320,
+          "get_seconds": 0.3,
+          "MBps": 8.1
+        },
+        "tokens": {
+          "examples": 7473,
+          "sequences": 1358,
+          "tokens": 1390592,
+          "files": [
+            "train-00000-of-00001.parquet"
+          ]
+        },
+        "bundle_bytes": 1005189120,
+        "nodes": [
+          {
+            "host": "job-0",
+            "unpacked": false
+          },
+          {
+            "host": "job-1",
+            "unpacked": true,
+            "seconds": 0.4
+          },
+          {
+            "host": "job-3",
+            "unpacked": true,
+            "seconds": 0.4
+          },
+          {
+            "host": "job-2",
+            "unpacked": true,
+            "seconds": 0.4
+          }
+        ],
+        "seconds": 20.0
+      },
+      "versions": {
+        "torch": "2.8.0",
+        "torchvision": "0.23.0",
+        "transformers": "4.55.4",
+        "numpy": "2.2.6",
+        "ray": "2.55.1",
+        "nvidia-nccl-cu12": "2.27.3",
+        "pyarrow": "24.0.0",
+        "pyyaml": "6.0.3"
+      },
+      "seconds": 23.3
+    },
+    {
+      "instance": 0,
+      "phase": "health",
+      "quick": false,
+      "nodes": [
+        {
+          "host": "job-0",
+          "node_probe_host": {
+            "node": "job-0",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-05b82900-d8ed-11f1-ad52-e89c4ec9b2e5, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [4039] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-05b82900-d8ed-11f1-ad52-e89c4ec9b2e5",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-0",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-05b82900-d8ed-11f1-ad52-e89c4ec9b2e5\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-05b82900-d8ed-11f1-ad52-e89c4ec9b2e5"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 19.34,
+              "GBps": 0.111
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.64,
+              "GBps": 3.372
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   33G  118G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043012 kB",
+            "MemFree:        413188208 kB",
+            "MemAvailable:   439475516 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "pip_probe": {
+            "torchtitan_0.2.0": {
+              "rc": 0,
+              "out": "Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple\nCollecting torchtitan==0.2.0\n  Downloading torchtitan-0.2.0-py3-none-any.whl (282 kB)\nSaved /tmp/e5/pip/torchtitan-0.2.0-py3-none-any.whl\nSuccessfully downloaded torchtitan"
+            },
+            "torch_nightly_2.10.0.dev20251019": {
+              "rc": 1,
+              "out": "Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple\nERROR: Could not find a version that satisfies the requirement torch==2.10.0.dev20251019 (from versions: 2.2.0, 2.2.1, 2.2.2, 2.3.0, 2.3.1, 2.4.0, 2.4.1, 2.5.0, 2.5.1, 2.6.0, 2.7.0, 2.7.1, 2.8.0, 2.9.0, 2.9.1, 2.10.0, 2.11.0, 2.12.0, 2.12.1, 2.13.0, 2.14.0, 2.14.1, 2.15.0)\nERROR: No matching distribution found for torch==2.10.0.dev20251019"
+            },
+            "torch_nightly_index": {
+              "rc": 1,
+              "out": "Looking in indexes: https://download.pytorch.org/whl/nightly/cu126\nERROR: Could not find a version that satisfies the requirement torch==2.10.0.dev20251019+cu126 (from versions: none)\nERROR: No matching distribution found for torch==2.10.0.dev20251019+cu126"
+            },
+            "torchao_nightly_0.15.0.dev20251015": {
+              "rc": 1,
+              "out": "Looking in indexes: https://<credentials>@<account>.registry-local.snowflakecomputing.com/artifactRepository/v1/python/_/snowflake/snowpark/pypi_shared_repository/simple\nERROR: Could not find a version that satisfies the requirement torchao==0.15.0.dev20251015 (from versions: 0.0.1, 0.0.3, 0.1, 0.2.0, 0.3.0, 0.3.1, 0.4.0, 0.5.0, 0.6.1, 0.7.0, 0.8.0, 0.9.0, 0.10.0, 0.11.0, 0.12.0, 0.13.0, 0.14.0, 0.14.1, 0.15.0, 0.16.0, 0.17.0, 0.18.0)\nERROR: No matching distribution found for torchao==0.15.0.dev20251015"
+            },
+            "pip_env": {
+              "PIP_CONFIG_FILE": "/snowflake/artifactrepository/pip.conf"
+            }
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                89.5,
+                70.8,
+                63.8
+              ],
+              "bf16_8192": [
+                79.1,
+                80.9,
+                77.6
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:54:52 4211:4211 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:54:52 4211:4211 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:54:52 4211:4211 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        },
+        {
+          "host": "job-1",
+          "node_probe_host": {
+            "node": "job-1",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-49129780-d8ed-11f1-b4dc-059a0d85978d, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [2622] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-49129780-d8ed-11f1-b4dc-059a0d85978d",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-1",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-49129780-d8ed-11f1-b4dc-059a0d85978d\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-49129780-d8ed-11f1-b4dc-059a0d85978d"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 18.6,
+              "GBps": 0.115
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.63,
+              "GBps": 3.433
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   32G  119G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043012 kB",
+            "MemFree:        418647848 kB",
+            "MemAvailable:   443196172 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                87.1,
+                63.3,
+                61.9
+              ],
+              "bf16_8192": [
+                76.9,
+                77.4,
+                73.7
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:54:53 2776:2776 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:54:53 2776:2776 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:54:53 2776:2776 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        },
+        {
+          "host": "job-3",
+          "node_probe_host": {
+            "node": "job-3",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-47e16a80-d8ed-11f1-b4a0-bea14e5faffa, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [2757] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-47e16a80-d8ed-11f1-b4a0-bea14e5faffa",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-3",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-47e16a80-d8ed-11f1-b4a0-bea14e5faffa\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-47e16a80-d8ed-11f1-b4a0-bea14e5faffa"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 15.91,
+              "GBps": 0.135
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.62,
+              "GBps": 3.473
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   32G  119G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043008 kB",
+            "MemFree:        418689712 kB",
+            "MemAvailable:   443273236 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                85.3,
+                59.8,
+                61.2
+              ],
+              "bf16_8192": [
+                76.1,
+                75.9,
+                71.6
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:54:53 2911:2911 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:54:53 2911:2911 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:54:53 2911:2911 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        },
+        {
+          "host": "job-2",
+          "node_probe_host": {
+            "node": "job-2",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "host",
+            "errors": [
+              {
+                "field": "ofed",
+                "error": "RuntimeError: {\"argv\": [\"ofed_info\", \"-s\"], \"returncode\": 127, \"stdout\": \"\", \"stderr\": \"[Errno 2] No such file or directory: 'ofed_info'\"}"
+              },
+              {
+                "field": "node_image_id",
+                "error": "RuntimeError: {\"argv\": [\"cat\", \"/etc/crucible/node-image-id\"], \"returncode\": 1, \"stdout\": \"\", \"stderr\": \"cat: /etc/crucible/node-image-id: No such file or directory\\n\"}"
+              },
+              {
+                "field": "shared_token",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/e5-token'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid,name,driver_version",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-49ab2e00-d8ed-11f1-b573-ff7309c99d29, NVIDIA A10-24Q, 570.211.01\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "topo",
+                  "-m"
+                ],
+                "returncode": 0,
+                "stdout": "\t\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n\n",
+                "stderr": ""
+              },
+              {
+                "argv": [
+                  "ibstat"
+                ],
+                "returncode": 0,
+                "stdout": "",
+                "stderr": "ibwarn: [2518] main: stat of IB device 'mlx5_0' failed\n"
+              },
+              {
+                "argv": [
+                  "ofed_info",
+                  "-s"
+                ],
+                "returncode": 127,
+                "stdout": "",
+                "stderr": "[Errno 2] No such file or directory: 'ofed_info'"
+              },
+              {
+                "argv": [
+                  "cat",
+                  "/etc/crucible/node-image-id"
+                ],
+                "returncode": 1,
+                "stdout": "",
+                "stderr": "cat: /etc/crucible/node-image-id: No such file or directory\n"
+              },
+              {
+                "argv": [
+                  "findmnt",
+                  "-n",
+                  "-o",
+                  "FSTYPE",
+                  "--target",
+                  "/tmp"
+                ],
+                "returncode": 0,
+                "stdout": "overlay\n",
+                "stderr": ""
+              }
+            ],
+            "gpus": [
+              {
+                "uuid": "GPU-49ab2e00-d8ed-11f1-b573-ff7309c99d29",
+                "model": "NVIDIA A10-24Q",
+                "driver": "570.211.01"
+              }
+            ],
+            "topology": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0",
+            "ibstat": "",
+            "shared_fstype": "overlay"
+          },
+          "node_probe_workload": {
+            "node": "job-2",
+            "probe_sha256": "091dd7e3c41e61d21824068fb14232ae21d142115d095624150c96c2d5cb23d5",
+            "kind": "workload",
+            "errors": [
+              {
+                "field": "cuda_toolkit",
+                "error": "FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/version.json'"
+              }
+            ],
+            "commands": [
+              {
+                "argv": [
+                  "nvidia-smi",
+                  "--query-gpu=uuid",
+                  "--format=csv,noheader"
+                ],
+                "returncode": 0,
+                "stdout": "GPU-49ab2e00-d8ed-11f1-b573-ff7309c99d29\n",
+                "stderr": ""
+              }
+            ],
+            "uuids": [
+              "GPU-49ab2e00-d8ed-11f1-b573-ff7309c99d29"
+            ],
+            "cuda_runtime": 12080,
+            "nccl": 22703
+          },
+          "tools": {
+            "dcgmi": null,
+            "nv-hostengine": null,
+            "all_reduce_perf": null,
+            "ibstat": "/usr/sbin/ibstat",
+            "ib_write_bw": null,
+            "nsys": null,
+            "ncu": "/usr/local/cuda/bin/ncu",
+            "mpirun": null,
+            "nvcc": "/usr/local/cuda/bin/nvcc"
+          },
+          "libs": {
+            "libdcgm": [],
+            "nccl_tests_on_disk": []
+          },
+          "ncu_version": "NVIDIA (R) Nsight Compute Command Line Profiler\nCopyright (c) 2018-2024 NVIDIA Corporation\nVersion 2025.1.0.0 (build 35237751) (public-release)",
+          "infiniband_sysfs": [
+            "mlx5_0"
+          ],
+          "infiniband_ports": {
+            "mlx5_0/1": {
+              "state": "4: ACTIVE",
+              "phys_state": "5: LinkUp",
+              "rate": "100 Gb/sec (4X EDR)",
+              "link_layer": "Ethernet"
+            }
+          },
+          "dev_infiniband": null,
+          "ibv_devinfo": "\nNo IB devices found",
+          "nvidia_smi": "0, NVIDIA A10-24Q, 00000002:00:00.0, 24512 MiB, 570.211.01, [Unknown Error], 1695 MHz, [N/A], Enabled, P0",
+          "nvidia_smi_health": {
+            "temperature.gpu": "[N/A]",
+            "utilization.gpu": "0 %",
+            "memory.used": "0 MiB",
+            "ecc.errors.uncorrected.volatile.total": "0",
+            "ecc.errors.uncorrected.aggregate.total": "0",
+            "retired_pages.pending": "[N/A]",
+            "clocks_event_reasons.active": "[N/A]",
+            "pcie.link.gen.current": "[N/A]",
+            "pcie.link.width.current": "[N/A]"
+          },
+          "nvidia_smi_q_excerpt": [],
+          "nvidia_smi_topo": "\u001b[4mGPU0\tNIC0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\t0-17\t0\t\tN/A\nNIC0\tNODE\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection tr",
+          "disk_write": [
+            {
+              "path": "/tmp/e5/disktest",
+              "bytes": 2147483648,
+              "seconds": 13.55,
+              "GBps": 0.159
+            },
+            {
+              "path": "/dev/shm/e5-disktest",
+              "bytes": 2147483648,
+              "seconds": 0.62,
+              "GBps": 3.46
+            }
+          ],
+          "numa": {
+            "0002:00:00.0": "0"
+          },
+          "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         150G   32G  119G  22% /\ntmpfs           127G  959M  127G   1% /dev/shm",
+          "mem": [
+            "MemTotal:       454043012 kB",
+            "MemFree:        418689000 kB",
+            "MemAvailable:   443363148 kB"
+          ],
+          "cpus": {
+            "count": 36,
+            "affinity": 36,
+            "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+          },
+          "eth0": {
+            "carrier": "1",
+            "mtu": "1500",
+            "speed": "10000"
+          },
+          "matmul": {
+            "rc": 0,
+            "tflops": {
+              "bf16_4096": [
+                88.0,
+                63.8,
+                63.1
+              ],
+              "bf16_8192": [
+                79.4,
+                79.5,
+                75.2
+              ]
+            },
+            "gpu": "NVIDIA A10-24Q",
+            "cupti_probe": {
+              "kernel_records": 0,
+              "zero_length": 0,
+              "log": [
+                "WARNING:2026-11-05 07:54:53 2673:2673 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+                "WARNING:2026-11-05 07:54:53 2673:2673 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+                "INFO:2026-11-05 07:54:53 2673:2673 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+              ]
+            }
+          }
+        }
+      ],
+      "seconds": 31.5,
+      "launched": [
+        4211,
+        2776,
+        2911,
+        2673
+      ]
+    },
+    {
+      "instance": 0,
+      "unparsed": "RESULT {\"phase\": \"collectives\", \"quick\": false, \"nodes\": 4, \"seconds\": 618.7, \"runs\": [{\"world\": 2, \"variant\": \"default\", \"pass\": 0, \"env\": {}, \"port\": 12950, \"seconds\": 64.1, \"ranks\": [{\"rc\": 0, \"rank\": 0, \"bw\": [{\"op\": \"all_reduce\", \"bytes\": 1048576, \"iters\": 50, \"ms\": 6.055, \"GBps\": 0.173, \"busGBps\": 0.173}, {\"op\": \"all_reduce\", \"bytes\": 16777216, \"iters\": 20, \"ms\": 80.857, \"GBps\": 0.207, \"busGBps\": 0.207}, {\"op\": \"all_reduce\", \"bytes\": 268435456, \"iters\": 5, \"ms\": 1421.596, \"GBps\": 0.189, \"busGBps\": 0.189}, {\"op\": \"all_reduce\", \"bytes\": 1073741824, \"iters\": 3, \"ms\": 6005.987, \"GBps\": 0.179, \"busGBps\": 0.179}, {\"op\": \"broadcast\", \"bytes\": 1048576, \"iters\": 50, \"ms\": 3.114, \"GBps\": 0.337, \"busGBps\": 0.337}, {\"op\": \"broadcast\", \"bytes\": 16777216, \"iters\": 20, \"ms\": 63.871, \"GBps\": 0.263, \"busGBps\": 0.263}, {\"op\": \"broadcast\", \"bytes\": 268435456, \"iters\": 5, \"ms\": 1044.479, \"GBps\": 0.257, \"busGBps\": 0.257}, {\"op\": \"broadcast\", \"bytes\": 1073741824, \"iters\": 3, \"ms\": 4336.888, \"GBps\": 0.248, \"busGBps\": 0.248}], \"check_ok\": true, \"seconds\": 60.8, \"nccl_log\": [\"NCCL version 2.27.3+cuda12.9\", \"NET/Socket : Using [0]eth0:10.244.10.11<0>\", \"Using network Socket\", \"ncclCommInitRankConfig comm 0x1df14960 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xd9b8ba657f965db5 - Init START\", \"comm 0x1df14960 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0\", \"ncclCommInitRankConfig comm 0x1df14960 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xd9b8ba657f965db5 - Init COMPLETE\", \"Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0\", \"Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0\", \"Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0\", \"Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0\", \"comm 0x1df14960 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE\"]}, {\"rc\": 0, \"rank\": 1, \"bw\": [{\"op\": \"all_reduce\", \"bytes\": 1048576, \"iters\": 50, \"ms\": 6.055, \"GBps\": 0.173, \"busGBps\": 0.173}, {\"op\": \"all_reduce\", \"bytes\": 16777216, \"iters\": 20, "
+    }
+  ],
+  "seconds": 2364.8,
+  "stop": [
+    "ALTER COMPUTE POOL CRUCIBLE_A10X4_POOL STOP ALL: ok",
+    "ALTER COMPUTE POOL CRUCIBLE_A10X4_POOL SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 4.467
+}

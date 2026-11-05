@@ -1,0 +1,6 @@
+'artifact_repositories' is in public preview since 1.50.0.
+11:06:13Z submitted CRUCIBLE_LAB.PROBE.CRUCIBLE_E5_FULLB_2EOHQPZUIA2 on CRUCIBLE_A10X4_POOL x4
+Compute pool busy (1/4 nodes in use, 4 nodes required). Job execution may be delayed.
+11:58:52Z status DONE after 3177 s
+11:58:55Z wrote .cache/snowflake/e5/fullB/report.json (credits estimate 6.004)
+EXIT 0

@@ -1,0 +1,2856 @@
+{
+ "health": [
+  {
+   "nodes": [
+    {
+     "host": "job-0",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 70.8,
+      "bf16_8192": 79.1
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 07:54:52 4211:4211 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 07:54:52 4211:4211 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 07:54:52 4211:4211 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.111,
+      "dev": 3.372
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    },
+    {
+     "host": "job-1",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 63.3,
+      "bf16_8192": 76.9
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 07:54:53 2776:2776 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 07:54:53 2776:2776 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 07:54:53 2776:2776 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.115,
+      "dev": 3.433
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    },
+    {
+     "host": "job-3",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 61.2,
+      "bf16_8192": 75.9
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 07:54:53 2911:2911 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 07:54:53 2911:2911 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 07:54:53 2911:2911 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.135,
+      "dev": 3.473
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    },
+    {
+     "host": "job-2",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 63.8,
+      "bf16_8192": 79.4
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 07:54:53 2673:2673 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 07:54:53 2673:2673 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 07:54:53 2673:2673 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.159,
+      "dev": 3.46
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    }
+   ],
+   "pip_probe": {
+    "torchtitan_0.2.0": {
+     "rc": 0,
+     "last": [
+      "Successfully downloaded torchtitan"
+     ]
+    },
+    "torch_nightly_2.10.0.dev20251019": {
+     "rc": 1,
+     "last": [
+      "ERROR: No matching distribution found for torch==2.10.0.dev20251019"
+     ]
+    },
+    "torch_nightly_index": {
+     "rc": 1,
+     "last": [
+      "ERROR: No matching distribution found for torch==2.10.0.dev20251019+cu126"
+     ]
+    },
+    "torchao_nightly_0.15.0.dev20251015": {
+     "rc": 1,
+     "last": [
+      "ERROR: No matching distribution found for torchao==0.15.0.dev20251015"
+     ]
+    }
+   }
+  },
+  {
+   "nodes": [
+    {
+     "host": "job-0",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 65.6,
+      "bf16_8192": 78.5
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 11:14:38 4096:4096 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 11:14:38 4096:4096 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 11:14:38 4096:4096 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.137,
+      "dev": 3.463
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    },
+    {
+     "host": "job-2",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 62.8,
+      "bf16_8192": 75.9
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 11:14:40 2743:2743 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 11:14:40 2743:2743 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 11:14:40 2743:2743 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.136,
+      "dev": 3.446
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    },
+    {
+     "host": "job-1",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 59.8,
+      "bf16_8192": 75.5
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 11:14:40 2707:2707 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 11:14:40 2707:2707 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 11:14:40 2707:2707 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.128,
+      "dev": 3.479
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    },
+    {
+     "host": "job-3",
+     "gpu": [
+      "NVIDIA A10-24Q"
+     ],
+     "tools_present": [
+      "ibstat",
+      "ncu",
+      "nvcc"
+     ],
+     "tools_absent": [
+      "all_reduce_perf",
+      "dcgmi",
+      "ib_write_bw",
+      "mpirun",
+      "nsys",
+      "nv-hostengine"
+     ],
+     "libdcgm": [],
+     "nccl_tests_on_disk": [],
+     "ib_sysfs": [
+      "mlx5_0"
+     ],
+     "ib_ports": {
+      "mlx5_0/1": {
+       "state": "4: ACTIVE",
+       "phys_state": "5: LinkUp",
+       "rate": "100 Gb/sec (4X EDR)",
+       "link_layer": "Ethernet"
+      }
+     },
+     "dev_infiniband": null,
+     "bf16_tflops": {
+      "bf16_4096": 62.8,
+      "bf16_8192": 78.8
+     },
+     "cupti": {
+      "kernel_records": 0,
+      "zero_length": 0,
+      "log": [
+       "WARNING:2026-11-05 11:14:40 2641:2641 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_NOT_INITIALIZED (15)",
+       "WARNING:2026-11-05 11:14:40 2641:2641 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing",
+       "INFO:2026-11-05 11:14:40 2641:2641 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti"
+      ]
+     },
+     "disk_GBps": {
+      "tmp": 0.158,
+      "dev": 3.428
+     },
+     "eth0": {
+      "carrier": "1",
+      "mtu": "1500",
+      "speed": "10000"
+     },
+     "smi_health": {
+      "temperature.gpu": "[N/A]",
+      "utilization.gpu": "0 %",
+      "memory.used": "0 MiB",
+      "ecc.errors.uncorrected.volatile.total": "0",
+      "ecc.errors.uncorrected.aggregate.total": "0",
+      "retired_pages.pending": "[N/A]",
+      "clocks_event_reasons.active": "[N/A]",
+      "pcie.link.gen.current": "[N/A]",
+      "pcie.link.width.current": "[N/A]"
+     },
+     "cpus": {
+      "count": 36,
+      "affinity": 36,
+      "cgroup_cpu_max": "FileNotFoundError(2, 'No such file or directory')"
+     }
+    }
+   ],
+   "pip_probe": {
+    "torchtitan_0.2.0": {
+     "rc": 0,
+     "last": [
+      "Successfully downloaded torchtitan"
+     ]
+    },
+    "torch_nightly_2.10.0.dev20251019": {
+     "rc": 1,
+     "last": [
+      "ERROR: No matching distribution found for torch==2.10.0.dev20251019"
+     ]
+    },
+    "torch_nightly_index": {
+     "rc": 1,
+     "last": [
+      "ERROR: No matching distribution found for torch==2.10.0.dev20251019+cu126"
+     ]
+    },
+    "torchao_nightly_0.15.0.dev20251015": {
+     "rc": 1,
+     "last": [
+      "ERROR: No matching distribution found for torchao==0.15.0.dev20251015"
+     ]
+    }
+   }
+  }
+ ],
+ "collectives": [
+  {
+   "busbw_algbw": {
+    "2n/default/all_reduce/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.173,
+      "min": 0.173,
+      "max": 0.173
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.173,
+      "min": 0.173,
+      "max": 0.173
+     }
+    },
+    "2n/default/all_reduce/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.206,
+      "min": 0.206,
+      "max": 0.206
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.206,
+      "min": 0.206,
+      "max": 0.206
+     }
+    },
+    "2n/default/all_reduce/256MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.189,
+      "min": 0.189,
+      "max": 0.189
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.189,
+      "min": 0.189,
+      "max": 0.189
+     }
+    },
+    "2n/default/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.179,
+      "min": 0.179,
+      "max": 0.179
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.179,
+      "min": 0.179,
+      "max": 0.179
+     }
+    },
+    "2n/default/broadcast/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.238,
+      "min": 0.238,
+      "max": 0.238
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.238,
+      "min": 0.238,
+      "max": 0.238
+     }
+    },
+    "2n/default/broadcast/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.25,
+      "min": 0.25,
+      "max": 0.25
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.25,
+      "min": 0.25,
+      "max": 0.25
+     }
+    },
+    "2n/default/broadcast/256MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.254,
+      "min": 0.254,
+      "max": 0.254
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.254,
+      "min": 0.254,
+      "max": 0.254
+     }
+    },
+    "2n/default/broadcast/1024MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.247,
+      "min": 0.247,
+      "max": 0.247
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.247,
+      "min": 0.247,
+      "max": 0.247
+     }
+    },
+    "2n/ib_enabled/all_reduce/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.18,
+      "min": 0.18,
+      "max": 0.18
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.18,
+      "min": 0.18,
+      "max": 0.18
+     }
+    },
+    "2n/ib_enabled/all_reduce/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.17,
+      "min": 0.17,
+      "max": 0.17
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.17,
+      "min": 0.17,
+      "max": 0.17
+     }
+    },
+    "2n/ib_enabled/broadcast/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.2,
+      "min": 0.2,
+      "max": 0.2
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.2,
+      "min": 0.2,
+      "max": 0.2
+     }
+    },
+    "2n/ib_enabled/broadcast/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.222,
+      "min": 0.222,
+      "max": 0.222
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.222,
+      "min": 0.222,
+      "max": 0.222
+     }
+    },
+    "2n/tuned/all_reduce/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.252,
+      "min": 0.248,
+      "max": 0.262
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.252,
+      "min": 0.248,
+      "max": 0.262
+     }
+    },
+    "2n/tuned/all_reduce/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.724,
+      "min": 0.63,
+      "max": 0.734
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.724,
+      "min": 0.63,
+      "max": 0.734
+     }
+    },
+    "2n/tuned/all_reduce/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.043,
+      "min": 1.033,
+      "max": 1.092
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.043,
+      "min": 1.033,
+      "max": 1.092
+     }
+    },
+    "2n/tuned/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.072,
+      "min": 1.037,
+      "max": 1.078
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.072,
+      "min": 1.037,
+      "max": 1.078
+     }
+    },
+    "2n/tuned/broadcast/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.28,
+      "min": 1.134,
+      "max": 1.471
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.28,
+      "min": 1.134,
+      "max": 1.471
+     }
+    },
+    "2n/tuned/broadcast/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 2.176,
+      "min": 1.038,
+      "max": 2.382
+     },
+     "busbw": {
+      "n": 3,
+      "median": 2.176,
+      "min": 1.038,
+      "max": 2.382
+     }
+    },
+    "2n/tuned/broadcast/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 2.316,
+      "min": 0.536,
+      "max": 2.322
+     },
+     "busbw": {
+      "n": 3,
+      "median": 2.316,
+      "min": 0.536,
+      "max": 2.322
+     }
+    },
+    "2n/tuned/broadcast/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 2.605,
+      "min": 2.557,
+      "max": 2.664
+     },
+     "busbw": {
+      "n": 3,
+      "median": 2.605,
+      "min": 2.557,
+      "max": 2.664
+     }
+    },
+    "2n/tuned_buff16m/all_reduce/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.237,
+      "min": 0.222,
+      "max": 0.244
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.237,
+      "min": 0.222,
+      "max": 0.244
+     }
+    },
+    "2n/tuned_buff16m/all_reduce/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.745,
+      "min": 0.711,
+      "max": 0.776
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.745,
+      "min": 0.711,
+      "max": 0.776
+     }
+    },
+    "2n/tuned_buff16m/all_reduce/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.322,
+      "min": 1.258,
+      "max": 1.357
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.322,
+      "min": 1.258,
+      "max": 1.357
+     }
+    },
+    "2n/tuned_buff16m/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.287,
+      "min": 1.242,
+      "max": 1.367
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.287,
+      "min": 1.242,
+      "max": 1.367
+     }
+    },
+    "2n/tuned_buff16m/broadcast/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.144,
+      "min": 1.072,
+      "max": 1.149
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.144,
+      "min": 1.072,
+      "max": 1.149
+     }
+    },
+    "2n/tuned_buff16m/broadcast/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 2.962,
+      "min": 2.606,
+      "max": 3.063
+     },
+     "busbw": {
+      "n": 3,
+      "median": 2.962,
+      "min": 2.606,
+      "max": 3.063
+     }
+    },
+    "2n/tuned_buff16m/broadcast/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 2.739,
+      "min": 1.112,
+      "max": 2.903
+     },
+     "busbw": {
+      "n": 3,
+      "median": 2.739,
+      "min": 1.112,
+      "max": 2.903
+     }
+    },
+    "2n/tuned_buff16m/broadcast/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 2.47,
+      "min": 2.289,
+      "max": 2.917
+     },
+     "busbw": {
+      "n": 3,
+      "median": 2.47,
+      "min": 2.289,
+      "max": 2.917
+     }
+    },
+    "3n/default/all_reduce/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.153,
+      "min": 0.153,
+      "max": 0.153
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.204,
+      "min": 0.204,
+      "max": 0.204
+     }
+    },
+    "3n/default/all_reduce/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.166,
+      "min": 0.166,
+      "max": 0.166
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.221,
+      "min": 0.221,
+      "max": 0.221
+     }
+    },
+    "3n/default/all_reduce/256MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.16,
+      "min": 0.16,
+      "max": 0.16
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.213,
+      "min": 0.213,
+      "max": 0.213
+     }
+    },
+    "3n/default/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.155,
+      "min": 0.155,
+      "max": 0.155
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.207,
+      "min": 0.207,
+      "max": 0.207
+     }
+    },
+    "3n/default/broadcast/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.189,
+      "min": 0.189,
+      "max": 0.189
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.189,
+      "min": 0.189,
+      "max": 0.189
+     }
+    },
+    "3n/default/broadcast/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.211,
+      "min": 0.211,
+      "max": 0.211
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.211,
+      "min": 0.211,
+      "max": 0.211
+     }
+    },
+    "3n/default/broadcast/256MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.218,
+      "min": 0.218,
+      "max": 0.218
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.218,
+      "min": 0.218,
+      "max": 0.218
+     }
+    },
+    "3n/default/broadcast/1024MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.219,
+      "min": 0.219,
+      "max": 0.219
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.219,
+      "min": 0.219,
+      "max": 0.219
+     }
+    },
+    "3n/tuned/all_reduce/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.36,
+      "min": 0.343,
+      "max": 0.369
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.48,
+      "min": 0.457,
+      "max": 0.492
+     }
+    },
+    "3n/tuned/all_reduce/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.488,
+      "min": 0.469,
+      "max": 0.523
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.651,
+      "min": 0.625,
+      "max": 0.697
+     }
+    },
+    "3n/tuned/all_reduce/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.568,
+      "min": 0.292,
+      "max": 0.571
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.757,
+      "min": 0.389,
+      "max": 0.761
+     }
+    },
+    "3n/tuned/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.624,
+      "min": 0.623,
+      "max": 0.654
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.832,
+      "min": 0.831,
+      "max": 0.872
+     }
+    },
+    "3n/tuned/broadcast/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.225,
+      "min": 0.214,
+      "max": 0.579
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.225,
+      "min": 0.214,
+      "max": 0.579
+     }
+    },
+    "3n/tuned/broadcast/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.273,
+      "min": 0.164,
+      "max": 0.363
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.273,
+      "min": 0.164,
+      "max": 0.363
+     }
+    },
+    "3n/tuned/broadcast/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.581,
+      "min": 0.391,
+      "max": 1.015
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.581,
+      "min": 0.391,
+      "max": 1.015
+     }
+    },
+    "3n/tuned/broadcast/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 1.154,
+      "min": 0.652,
+      "max": 1.155
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.154,
+      "min": 0.652,
+      "max": 1.155
+     }
+    },
+    "3n/tuned_buff16m/all_reduce/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.148,
+      "min": 0.145,
+      "max": 0.152
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.197,
+      "min": 0.193,
+      "max": 0.203
+     }
+    },
+    "3n/tuned_buff16m/all_reduce/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.507,
+      "min": 0.505,
+      "max": 0.512
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.676,
+      "min": 0.673,
+      "max": 0.683
+     }
+    },
+    "3n/tuned_buff16m/all_reduce/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.708,
+      "min": 0.693,
+      "max": 0.813
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.944,
+      "min": 0.924,
+      "max": 1.084
+     }
+    },
+    "3n/tuned_buff16m/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.772,
+      "min": 0.772,
+      "max": 0.806
+     },
+     "busbw": {
+      "n": 3,
+      "median": 1.029,
+      "min": 1.029,
+      "max": 1.075
+     }
+    },
+    "3n/tuned_buff16m/broadcast/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.569,
+      "min": 0.525,
+      "max": 0.619
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.569,
+      "min": 0.525,
+      "max": 0.619
+     }
+    },
+    "3n/tuned_buff16m/broadcast/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.802,
+      "min": 0.606,
+      "max": 1.144
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.802,
+      "min": 0.606,
+      "max": 1.144
+     }
+    },
+    "3n/tuned_buff16m/broadcast/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.451,
+      "min": 0.392,
+      "max": 1.164
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.451,
+      "min": 0.392,
+      "max": 1.164
+     }
+    },
+    "3n/tuned_buff16m/broadcast/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.904,
+      "min": 0.645,
+      "max": 1.513
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.904,
+      "min": 0.645,
+      "max": 1.513
+     }
+    },
+    "4n/default/all_reduce/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.109,
+      "min": 0.109,
+      "max": 0.109
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.164,
+      "min": 0.164,
+      "max": 0.164
+     }
+    },
+    "4n/default/all_reduce/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.156,
+      "min": 0.156,
+      "max": 0.156
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.234,
+      "min": 0.234,
+      "max": 0.234
+     }
+    },
+    "4n/default/all_reduce/256MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.143,
+      "min": 0.143,
+      "max": 0.143
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.214,
+      "min": 0.214,
+      "max": 0.214
+     }
+    },
+    "4n/default/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.141,
+      "min": 0.141,
+      "max": 0.141
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.211,
+      "min": 0.211,
+      "max": 0.211
+     }
+    },
+    "4n/default/broadcast/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.18,
+      "min": 0.18,
+      "max": 0.18
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.18,
+      "min": 0.18,
+      "max": 0.18
+     }
+    },
+    "4n/default/broadcast/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.221,
+      "min": 0.221,
+      "max": 0.221
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.221,
+      "min": 0.221,
+      "max": 0.221
+     }
+    },
+    "4n/default/broadcast/256MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.23,
+      "min": 0.23,
+      "max": 0.23
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.23,
+      "min": 0.23,
+      "max": 0.23
+     }
+    },
+    "4n/default/broadcast/1024MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.233,
+      "min": 0.233,
+      "max": 0.233
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.233,
+      "min": 0.233,
+      "max": 0.233
+     }
+    },
+    "4n/ib_enabled/all_reduce/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.107,
+      "min": 0.107,
+      "max": 0.107
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.161,
+      "min": 0.161,
+      "max": 0.161
+     }
+    },
+    "4n/ib_enabled/all_reduce/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.123,
+      "min": 0.123,
+      "max": 0.123
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.184,
+      "min": 0.184,
+      "max": 0.184
+     }
+    },
+    "4n/ib_enabled/broadcast/1MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.18,
+      "min": 0.18,
+      "max": 0.18
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.18,
+      "min": 0.18,
+      "max": 0.18
+     }
+    },
+    "4n/ib_enabled/broadcast/16MiB": {
+     "algbw": {
+      "n": 1,
+      "median": 0.198,
+      "min": 0.198,
+      "max": 0.198
+     },
+     "busbw": {
+      "n": 1,
+      "median": 0.198,
+      "min": 0.198,
+      "max": 0.198
+     }
+    },
+    "4n/tuned/all_reduce/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.213,
+      "min": 0.2,
+      "max": 0.224
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.32,
+      "min": 0.3,
+      "max": 0.336
+     }
+    },
+    "4n/tuned/all_reduce/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.387,
+      "min": 0.284,
+      "max": 0.397
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.581,
+      "min": 0.426,
+      "max": 0.596
+     }
+    },
+    "4n/tuned/all_reduce/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.446,
+      "min": 0.221,
+      "max": 0.523
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.669,
+      "min": 0.332,
+      "max": 0.784
+     }
+    },
+    "4n/tuned/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.528,
+      "min": 0.435,
+      "max": 0.565
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.792,
+      "min": 0.652,
+      "max": 0.847
+     }
+    },
+    "4n/tuned/broadcast/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.568,
+      "min": 0.442,
+      "max": 0.607
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.568,
+      "min": 0.442,
+      "max": 0.607
+     }
+    },
+    "4n/tuned/broadcast/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.792,
+      "min": 0.283,
+      "max": 0.845
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.792,
+      "min": 0.283,
+      "max": 0.845
+     }
+    },
+    "4n/tuned/broadcast/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.869,
+      "min": 0.844,
+      "max": 1.093
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.869,
+      "min": 0.844,
+      "max": 1.093
+     }
+    },
+    "4n/tuned/broadcast/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.908,
+      "min": 0.747,
+      "max": 1.233
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.908,
+      "min": 0.747,
+      "max": 1.233
+     }
+    },
+    "4n/tuned_buff16m/all_reduce/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.092,
+      "min": 0.084,
+      "max": 0.098
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.138,
+      "min": 0.126,
+      "max": 0.147
+     }
+    },
+    "4n/tuned_buff16m/all_reduce/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.385,
+      "min": 0.215,
+      "max": 0.387
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.578,
+      "min": 0.323,
+      "max": 0.581
+     }
+    },
+    "4n/tuned_buff16m/all_reduce/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.472,
+      "min": 0.374,
+      "max": 0.548
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.708,
+      "min": 0.561,
+      "max": 0.822
+     }
+    },
+    "4n/tuned_buff16m/all_reduce/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.551,
+      "min": 0.464,
+      "max": 0.553
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.827,
+      "min": 0.696,
+      "max": 0.83
+     }
+    },
+    "4n/tuned_buff16m/broadcast/1MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.444,
+      "min": 0.395,
+      "max": 0.641
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.444,
+      "min": 0.395,
+      "max": 0.641
+     }
+    },
+    "4n/tuned_buff16m/broadcast/16MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.749,
+      "min": 0.215,
+      "max": 0.787
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.749,
+      "min": 0.215,
+      "max": 0.787
+     }
+    },
+    "4n/tuned_buff16m/broadcast/256MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.998,
+      "min": 0.24,
+      "max": 1.185
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.998,
+      "min": 0.24,
+      "max": 1.185
+     }
+    },
+    "4n/tuned_buff16m/broadcast/1024MiB": {
+     "algbw": {
+      "n": 3,
+      "median": 0.831,
+      "min": 0.581,
+      "max": 1.005
+     },
+     "busbw": {
+      "n": 3,
+      "median": 0.831,
+      "min": 0.581,
+      "max": 1.005
+     }
+    }
+   },
+   "gate": {
+    "thresholds": {
+     "bandwidth_unit": "GB/s",
+     "time_unit": "us",
+     "min_busbw_fraction": 0.7,
+     "min_size_bytes": 134217728,
+     "theoretical_busbw_gbs": 1.25
+    },
+    "verdicts": {
+     "2n/default/all_reduce": [
+      "slow_bandwidth"
+     ],
+     "2n/default/broadcast": [
+      "slow_bandwidth"
+     ],
+     "2n/ib_enabled/all_reduce": [
+      "not evaluated: no measurements in configured size range"
+     ],
+     "2n/ib_enabled/broadcast": [
+      "not evaluated: no measurements in configured size range"
+     ],
+     "2n/tuned/all_reduce": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "2n/tuned/broadcast": [
+      "slow_bandwidth",
+      "pass",
+      "pass"
+     ],
+     "2n/tuned_buff16m/all_reduce": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "2n/tuned_buff16m/broadcast": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "3n/default/all_reduce": [
+      "slow_bandwidth"
+     ],
+     "3n/default/broadcast": [
+      "slow_bandwidth"
+     ],
+     "3n/tuned/all_reduce": [
+      "slow_bandwidth",
+      "slow_bandwidth",
+      "slow_bandwidth"
+     ],
+     "3n/tuned/broadcast": [
+      "slow_bandwidth",
+      "pass",
+      "slow_bandwidth"
+     ],
+     "3n/tuned_buff16m/all_reduce": [
+      "pass",
+      "pass",
+      "pass"
+     ],
+     "3n/tuned_buff16m/broadcast": [
+      "pass",
+      "slow_bandwidth",
+      "slow_bandwidth"
+     ],
+     "4n/default/all_reduce": [
+      "slow_bandwidth"
+     ],
+     "4n/default/broadcast": [
+      "slow_bandwidth"
+     ],
+     "4n/ib_enabled/all_reduce": [
+      "not evaluated: no measurements in configured size range"
+     ],
+     "4n/ib_enabled/broadcast": [
+      "not evaluated: no measurements in configured size range"
+     ],
+     "4n/tuned/all_reduce": [
+      "slow_bandwidth",
+      "slow_bandwidth",
+      "slow_bandwidth"
+     ],
+     "4n/tuned/broadcast": [
+      "slow_bandwidth",
+      "slow_bandwidth",
+      "slow_bandwidth"
+     ],
+     "4n/tuned_buff16m/all_reduce": [
+      "slow_bandwidth",
+      "slow_bandwidth",
+      "slow_bandwidth"
+     ],
+     "4n/tuned_buff16m/broadcast": [
+      "pass",
+      "slow_bandwidth",
+      "slow_bandwidth"
+     ]
+    }
+   },
+   "failed_runs": [],
+   "transport_lines": [
+    "NET/Socket : Using [0]eth0:10.244.10.11<0>",
+    "NET/Socket : Using [0]eth0:10.244.10.203<0>",
+    "NET/Socket : Using [0]eth0:10.244.10.75<0>",
+    "NET/Socket : Using [0]eth0:10.244.11.75<0>",
+    "NET/Socket: Using 8 threads and 8 sockets per thread",
+    "Using network Socket"
+   ]
+  }
+ ],
+ "scaling": [
+  {
+   "structure": {
+    "active_parameters": 357898112,
+    "layers": 24,
+    "heads": 14,
+    "head_dim": 64,
+    "embedding_parameters": 136134656
+   },
+   "peak_flops": 125000000000000.0,
+   "reference_tokens_per_s": 8018.691496268644,
+   "rows": [
+    {
+     "kind": "weak",
+     "world": 1,
+     "rounds": 3,
+     "global_seq": 16,
+     "accum": 8,
+     "per_gpu_tokens_per_step": 16384,
+     "step_s": {
+      "n": 3,
+      "median": 2.0437384985000335,
+      "min": 2.0309861569999725,
+      "max": 2.047435321499961
+     },
+     "tokens_per_s": {
+      "n": 3,
+      "median": 8018.691496268644,
+      "min": 8012.427894201463,
+      "max": 8061.6888666968935
+     },
+     "tokens_per_s_per_gpu": {
+      "n": 3,
+      "median": 8018.691496268644,
+      "min": 8012.427894201463,
+      "max": 8061.6888666968935
+     },
+     "mfu": {
+      "n": 3,
+      "median": 0.15470492449485318,
+      "min": 0.1545840805784461,
+      "max": 0.15553447442187993
+     },
+     "scaling_efficiency": {
+      "n": 3,
+      "median": 1.0,
+      "min": 0.9992188747914673,
+      "max": 1.0053621429940605
+     },
+     "compute_s": {
+      "n": 3,
+      "median": 2.030503535928582,
+      "min": 2.0170055017142943,
+      "max": 2.0316668273571037
+     },
+     "exposed_comm_s": {
+      "n": 3,
+      "median": 0.014031208142991358,
+      "min": 0.0124640170714575,
+      "max": 0.014418013785729045
+     },
+     "exposed_comm_share": {
+      "n": 3,
+      "median": 0.006853065391443978,
+      "min": 0.006098635946137556,
+      "max": 0.007099021200137722
+     },
+     "comm_alone_s": null,
+     "comm_alone_share": null,
+     "comm_alone_bytes": null,
+     "final_loss": [
+      0.5273,
+      0.5271,
+      0.5274
+     ],
+     "peak_mem_gib": 18.83
+    },
+    {
+     "kind": "strong",
+     "world": 2,
+     "rounds": 3,
+     "global_seq": 16,
+     "accum": 4,
+     "per_gpu_tokens_per_step": 8192,
+     "step_s": {
+      "n": 3,
+      "median": 2.6764352360000885,
+      "min": 2.660109126000009,
+      "max": 2.685658875499996
+     },
+     "tokens_per_s": {
+      "n": 3,
+      "median": 6057.525715251329,
+      "min": 6013.241334836357,
+      "max": 6103.672564847075
+     },
+     "tokens_per_s_per_gpu": {
+      "n": 3,
+      "median": 3028.7628576256643,
+      "min": 3006.6206674181785,
+      "max": 3051.8362824235373
+     },
+     "mfu": {
+      "n": 3,
+      "median": 0.05843403869818815,
+      "min": 0.05800684856800372,
+      "max": 0.05887919517326312
+     },
+     "scaling_efficiency": {
+      "n": 3,
+      "median": 0.377712854900958,
+      "min": 0.3749515327802867,
+      "max": 0.3805903100080176
+     },
+     "compute_s": {
+      "n": 3,
+      "median": 1.027642854333351,
+      "min": 1.0269917695000952,
+      "max": 1.0288780355001943
+     },
+     "exposed_comm_s": {
+      "n": 3,
+      "median": 1.6460779479999321,
+      "min": 1.6340934599999362,
+      "max": 1.6577590071667032
+     },
+     "exposed_comm_share": {
+      "n": 3,
+      "median": 0.615026258008762,
+      "min": 0.6142956482605333,
+      "max": 0.6172634292052723
+     },
+     "comm_alone_s": {
+      "n": 3,
+      "median": 2.0186,
+      "min": 2.0006,
+      "max": 2.0455
+     },
+     "comm_alone_share": {
+      "n": 3,
+      "median": 0.7542121598342062,
+      "min": 0.752074409446612,
+      "max": 0.761638054132688
+     },
+     "comm_alone_bytes": 1976131072,
+     "final_loss": [
+      0.5246,
+      0.5244,
+      0.5242
+     ],
+     "peak_mem_gib": 18.83
+    },
+    {
+     "kind": "weak",
+     "world": 2,
+     "rounds": 3,
+     "global_seq": 32,
+     "accum": 8,
+     "per_gpu_tokens_per_step": 16384,
+     "step_s": {
+      "n": 3,
+      "median": 3.7200019845000156,
+      "min": 3.7019037974999947,
+      "max": 3.7796966150000344
+     },
+     "tokens_per_s": {
+      "n": 3,
+      "median": 8731.30257711356,
+      "min": 8644.313405238587,
+      "max": 8848.427137602623
+     },
+     "tokens_per_s_per_gpu": {
+      "n": 3,
+      "median": 4365.65128855678,
+      "min": 4322.156702619293,
+      "max": 4424.213568801311
+     },
+     "mfu": {
+      "n": 3,
+      "median": 0.08422667878934048,
+      "min": 0.0833875360643055,
+      "max": 0.08535652312213375
+     },
+     "scaling_efficiency": {
+      "n": 3,
+      "median": 0.5444343744348137,
+      "min": 0.5390102243776971,
+      "max": 0.551737595948172
+     },
+     "compute_s": {
+      "n": 3,
+      "median": 2.0234286219286446,
+      "min": 2.0199822321428655,
+      "max": 2.0258116692857744
+     },
+     "exposed_comm_s": {
+      "n": 3,
+      "median": 1.6958003265714297,
+      "min": 1.6748203377143065,
+      "max": 1.7596836213571123
+     },
+     "exposed_comm_share": {
+      "n": 3,
+      "median": 0.4558600596551436,
+      "min": 0.4524213565045538,
+      "max": 0.4655621338426117
+     },
+     "comm_alone_s": {
+      "n": 3,
+      "median": 2.0555,
+      "min": 2.011,
+      "max": 2.0706
+     },
+     "comm_alone_share": {
+      "n": 3,
+      "median": 0.5478217462699665,
+      "min": 0.5432339979656111,
+      "max": 0.5525534686714066
+     },
+     "comm_alone_bytes": 1976131072,
+     "final_loss": [
+      0.4831,
+      0.4831,
+      0.4832
+     ],
+     "peak_mem_gib": 18.83
+    },
+    {
+     "kind": "strong",
+     "world": 4,
+     "rounds": 3,
+     "global_seq": 16,
+     "accum": 2,
+     "per_gpu_tokens_per_step": 4096,
+     "step_s": {
+      "n": 3,
+      "median": 4.175089202499976,
+      "min": 4.143962367999961,
+      "max": 4.201055938999957
+     },
+     "tokens_per_s": {
+      "n": 3,
+      "median": 3928.95722527515,
+      "min": 3845.2002541108222,
+      "max": 3945.7928921292605
+     },
+     "tokens_per_s_per_gpu": {
+      "n": 3,
+      "median": 982.2393063187875,
+      "min": 961.3000635277056,
+      "max": 986.4482230323151
+     },
+     "mfu": {
+      "n": 3,
+      "median": 0.01895038084338768,
+      "min": 0.018546399224132076,
+      "max": 0.01903158363597228
+     },
+     "scaling_efficiency": {
+      "n": 3,
+      "median": 0.1224937144390522,
+      "min": 0.11988241023800822,
+      "max": 0.12301860265996532
+     },
+     "compute_s": {
+      "n": 3,
+      "median": 0.5256809450000901,
+      "min": 0.5248229719999244,
+      "max": 0.5261497384998393
+     },
+     "exposed_comm_s": {
+      "n": 3,
+      "median": 3.6492871174999664,
+      "min": 3.617818165000017,
+      "max": 3.67539395
+     },
+     "exposed_comm_share": {
+      "n": 3,
+      "median": 0.8740620716115077,
+      "min": 0.873033547055621,
+      "max": 0.874873842045272
+     },
+     "comm_alone_s": {
+      "n": 3,
+      "median": 4.2216,
+      "min": 4.2072,
+      "max": 4.2972
+     },
+     "comm_alone_share": {
+      "n": 3,
+      "median": 1.0111400727611217,
+      "min": 1.0014625039726335,
+      "max": 1.0369785288552216
+     },
+     "comm_alone_bytes": 1976131072,
+     "final_loss": [
+      0.5374,
+      0.5384,
+      0.5378
+     ],
+     "peak_mem_gib": 18.83
+    },
+    {
+     "kind": "weak",
+     "world": 4,
+     "rounds": 3,
+     "global_seq": 64,
+     "accum": 8,
+     "per_gpu_tokens_per_step": 16384,
+     "step_s": {
+      "n": 3,
+      "median": 5.748058181500028,
+      "min": 5.63741241300005,
+      "max": 5.822634629000049
+     },
+     "tokens_per_s": {
+      "n": 3,
+      "median": 11396.40836896876,
+      "min": 11221.61846827994,
+      "max": 11540.487147951077
+     },
+     "tokens_per_s_per_gpu": {
+      "n": 3,
+      "median": 2849.10209224219,
+      "min": 2805.404617069985,
+      "max": 2885.121786987769
+     },
+     "mfu": {
+      "n": 3,
+      "median": 0.054967836618176516,
+      "min": 0.0541247795433062,
+      "max": 0.055662765978975036
+     },
+     "scaling_efficiency": {
+      "n": 3,
+      "median": 0.3553076076773834,
+      "min": 0.3498581555825449,
+      "max": 0.3597995743233556
+     },
+     "compute_s": {
+      "n": 3,
+      "median": 2.0287636152143835,
+      "min": 2.027014252000007,
+      "max": 2.029114089428585
+     },
+     "exposed_comm_s": {
+      "n": 3,
+      "median": 3.7221344985000053,
+      "min": 3.608940160571397,
+      "max": 3.793390152285643
+     },
+     "exposed_comm_share": {
+      "n": 3,
+      "median": 0.6475464201944922,
+      "min": 0.6401767151626282,
+      "max": 0.6514903293763945
+     },
+     "comm_alone_s": {
+      "n": 3,
+      "median": 4.1475,
+      "min": 4.1136,
+      "max": 4.252
+     },
+     "comm_alone_share": {
+      "n": 3,
+      "median": 0.730253617292524,
+      "min": 0.7156503761982632,
+      "max": 0.7357098782476398
+     },
+     "comm_alone_bytes": 1976131072,
+     "final_loss": [
+      0.4572,
+      0.4573,
+      0.4574
+     ],
+     "peak_mem_gib": 18.83
+    }
+   ],
+   "failed": []
+  }
+ ],
+ "drain": [
+  {
+   "sync": {
+    "expected_alerts": [],
+    "actual_alerts": [],
+    "match": true,
+    "healthy_flagged": [],
+    "slow_node_alerted": false,
+    "slow_node_first_slow_sample": null,
+    "slow_node_first_alert_sample": null,
+    "slow_flags": {
+     "job-0": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "job-2": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "job-1": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "job-3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "samples": 14,
+    "indeterminate_alerts": 0,
+    "executor_statuses": []
+   },
+   "local": {
+    "expected_alerts": [
+     [
+      7,
+      "job-3"
+     ]
+    ],
+    "actual_alerts": [
+     [
+      7,
+      "job-3"
+     ]
+    ],
+    "match": true,
+    "healthy_flagged": [],
+    "slow_node_alerted": true,
+    "slow_node_first_slow_sample": 5,
+    "slow_node_first_alert_sample": 7,
+    "slow_flags": {
+     "job-0": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "job-2": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "job-1": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "job-3": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "samples": 14,
+    "indeterminate_alerts": 0,
+    "executor_statuses": [
+     "alert"
+    ]
+   }
+  }
+ ],
+ "fault": [
+  {
+   "runs": [
+    {
+     "round": 1,
+     "store": "disk",
+     "accounting": {
+      "useful_steps_time": 140.9637129140001,
+      "wall_time": 328.0355265389999,
+      "goodput": 0.42972087322755587,
+      "lost_steps": 5,
+      "lost_steps_time": 23.05357909400027,
+      "completed_attempts": 35,
+      "retained_steps": 30,
+      "recovery_seconds": [
+       9.223689752999917
+      ],
+      "final_checkpoint_id": "/tmp/e5/fault/round1/ckpt/step-30@generation-0",
+      "work_finished_at": null,
+      "observation_lateness_seconds": null
+     },
+     "logged_accounting_matches": true,
+     "step_seconds_median": 4.638630736000096,
+     "save_seconds": [
+      46.01,
+      43.64,
+      40.88
+     ],
+     "save_bytes_attempt1": [
+      6475096854
+     ],
+     "restore_seconds": [
+      9.223689752999917
+     ],
+     "failure_to_restore_start_s": 11.39,
+     "kill_to_failure_record_s": 1.26,
+     "first_event_to_first_step_s": 10.8,
+     "events": [
+      [
+       0.0,
+       "run_start",
+       null,
+       ""
+      ],
+      [
+       104.02,
+       "checkpoint_saved",
+       10,
+       "step-10@generation-0"
+      ],
+      [
+       193.81,
+       "checkpoint_saved",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       218.75,
+       "failure",
+       null,
+       ""
+      ],
+      [
+       230.14,
+       "restore_start",
+       null,
+       "step-20@generation-0"
+      ],
+      [
+       239.36,
+       "restore_complete",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       328.03,
+       "checkpoint_saved",
+       30,
+       "step-30@generation-0"
+      ],
+      [
+       328.04,
+       "run_end",
+       null,
+       "step-30@generation-0"
+      ]
+     ],
+     "replayed_step_losses": {
+      "21": {
+       "0": 0.4559,
+       "1": 0.4559
+      },
+      "22": {
+       "0": 0.45834,
+       "1": 0.45811
+      },
+      "23": {
+       "0": 0.43973,
+       "1": 0.43947
+      },
+      "24": {
+       "0": 0.52455,
+       "1": 0.52464
+      },
+      "25": {
+       "0": 0.42538,
+       "1": 0.42495
+      }
+     }
+    },
+    {
+     "round": 1,
+     "store": "shm",
+     "accounting": {
+      "useful_steps_time": 141.52518419900116,
+      "wall_time": 210.23129220700002,
+      "goodput": 0.6731880050456581,
+      "lost_steps": 5,
+      "lost_steps_time": 23.35378743299998,
+      "completed_attempts": 35,
+      "retained_steps": 30,
+      "recovery_seconds": [
+       11.445956561000003
+      ],
+      "final_checkpoint_id": "/dev/shm/e5-fault/round1/ckpt/step-30@generation-0",
+      "work_finished_at": null,
+      "observation_lateness_seconds": null
+     },
+     "logged_accounting_matches": true,
+     "step_seconds_median": 4.693790584999988,
+     "save_seconds": [
+      3.33,
+      2.82,
+      3.96
+     ],
+     "save_bytes_attempt1": [
+      6475096858
+     ],
+     "restore_seconds": [
+      11.445956561000003
+     ],
+     "failure_to_restore_start_s": 11.45,
+     "kill_to_failure_record_s": 1.26,
+     "first_event_to_first_step_s": 10.64,
+     "events": [
+      [
+       0.0,
+       "run_start",
+       null,
+       ""
+      ],
+      [
+       61.0,
+       "checkpoint_saved",
+       10,
+       "step-10@generation-0"
+      ],
+      [
+       111.15,
+       "checkpoint_saved",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       136.17,
+       "failure",
+       null,
+       ""
+      ],
+      [
+       147.63,
+       "restore_start",
+       null,
+       "step-20@generation-0"
+      ],
+      [
+       159.07,
+       "restore_complete",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       210.23,
+       "checkpoint_saved",
+       30,
+       "step-30@generation-0"
+      ],
+      [
+       210.23,
+       "run_end",
+       null,
+       "step-30@generation-0"
+      ]
+     ],
+     "replayed_step_losses": {
+      "21": {
+       "0": 0.45527,
+       "1": 0.45527
+      },
+      "22": {
+       "0": 0.45788,
+       "1": 0.45829
+      },
+      "23": {
+       "0": 0.43952,
+       "1": 0.43934
+      },
+      "24": {
+       "0": 0.52508,
+       "1": 0.52471
+      },
+      "25": {
+       "0": 0.42535,
+       "1": 0.42434
+      }
+     }
+    },
+    {
+     "round": 2,
+     "store": "disk",
+     "accounting": {
+      "useful_steps_time": 144.91285154299885,
+      "wall_time": 325.3234663520002,
+      "goodput": 0.44544235670415194,
+      "lost_steps": 5,
+      "lost_steps_time": 23.891963546000625,
+      "completed_attempts": 35,
+      "retained_steps": 30,
+      "recovery_seconds": [
+       10.133097907999854
+      ],
+      "final_checkpoint_id": "/tmp/e5/fault/round2/ckpt/step-30@generation-0",
+      "work_finished_at": null,
+      "observation_lateness_seconds": null
+     },
+     "logged_accounting_matches": true,
+     "step_seconds_median": 4.751080247000118,
+     "save_seconds": [
+      41.04,
+      39.44,
+      41.09
+     ],
+     "save_bytes_attempt1": [
+      6475096854
+     ],
+     "restore_seconds": [
+      10.133097907999854
+     ],
+     "failure_to_restore_start_s": 12.0,
+     "kill_to_failure_record_s": 1.26,
+     "first_event_to_first_step_s": 10.56,
+     "events": [
+      [
+       0.0,
+       "run_start",
+       null,
+       ""
+      ],
+      [
+       100.42,
+       "checkpoint_saved",
+       10,
+       "step-10@generation-0"
+      ],
+      [
+       187.11,
+       "checkpoint_saved",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       213.08,
+       "failure",
+       null,
+       ""
+      ],
+      [
+       225.08,
+       "restore_start",
+       null,
+       "step-20@generation-0"
+      ],
+      [
+       235.22,
+       "restore_complete",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       325.32,
+       "checkpoint_saved",
+       30,
+       "step-30@generation-0"
+      ],
+      [
+       325.32,
+       "run_end",
+       null,
+       "step-30@generation-0"
+      ]
+     ],
+     "replayed_step_losses": {
+      "21": {
+       "0": 0.45576,
+       "1": 0.45576
+      },
+      "22": {
+       "0": 0.45791,
+       "1": 0.45783
+      },
+      "23": {
+       "0": 0.43963,
+       "1": 0.43895
+      },
+      "24": {
+       "0": 0.52441,
+       "1": 0.52409
+      },
+      "25": {
+       "0": 0.42496,
+       "1": 0.42539
+      }
+     }
+    },
+    {
+     "round": 3,
+     "store": "disk",
+     "accounting": {
+      "useful_steps_time": 142.79596129199945,
+      "wall_time": 338.0110877349998,
+      "goodput": 0.4224593999234465,
+      "lost_steps": 5,
+      "lost_steps_time": 23.477181587000814,
+      "completed_attempts": 35,
+      "retained_steps": 30,
+      "recovery_seconds": [
+       10.928452777000075
+      ],
+      "final_checkpoint_id": "/tmp/e5/fault/round3/ckpt/step-30@generation-0",
+      "work_finished_at": null,
+      "observation_lateness_seconds": null
+     },
+     "logged_accounting_matches": true,
+     "step_seconds_median": 4.718006727000102,
+     "save_seconds": [
+      48.71,
+      40.05,
+      47.62
+     ],
+     "save_bytes_attempt1": [
+      6475096854
+     ],
+     "restore_seconds": [
+      10.928452777000075
+     ],
+     "failure_to_restore_start_s": 11.14,
+     "kill_to_failure_record_s": 1.26,
+     "first_event_to_first_step_s": 11.46,
+     "events": [
+      [
+       0.0,
+       "run_start",
+       null,
+       ""
+      ],
+      [
+       108.42,
+       "checkpoint_saved",
+       10,
+       "step-10@generation-0"
+      ],
+      [
+       195.81,
+       "checkpoint_saved",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       220.95,
+       "failure",
+       null,
+       ""
+      ],
+      [
+       232.09,
+       "restore_start",
+       null,
+       "step-20@generation-0"
+      ],
+      [
+       243.02,
+       "restore_complete",
+       20,
+       "step-20@generation-0"
+      ],
+      [
+       338.01,
+       "checkpoint_saved",
+       30,
+       "step-30@generation-0"
+      ],
+      [
+       338.01,
+       "run_end",
+       null,
+       "step-30@generation-0"
+      ]
+     ],
+     "replayed_step_losses": {
+      "21": {
+       "0": 0.45572,
+       "1": 0.45572
+      },
+      "22": {
+       "0": 0.45858,
+       "1": 0.45855
+      },
+      "23": {
+       "0": 0.43944,
+       "1": 0.43945
+      },
+      "24": {
+       "0": 0.52462,
+       "1": 0.52433
+      },
+      "25": {
+       "0": 0.42486,
+       "1": 0.42478
+      }
+     }
+    }
+   ],
+   "failed": []
+  }
+ ]
+}

@@ -295,7 +295,9 @@ def export(src, dest, secrets=None):
     secrets = [s for s in (secrets if secrets is not None else [os.environ.get("SNOWFLAKE_ACCOUNT", "")]) if s]
     dest.mkdir(parents=True, exist_ok=True)
     sizes = {}
-    for name in ("report.json", "driver.log", *sorted(p.name for p in src.glob("instance*.log"))):
+    names = ["report.json", "driver.log", *sorted(p.name for p in src.glob("instance*.log")),
+             *sorted(p.name for p in src.glob("*-salvaged.json")), *sorted(str(p.relative_to(src)) for p in src.glob("phases/*.json"))]
+    for name in names:
         if not (src / name).exists():
             continue
         text = e5.redact((src / name).read_text(errors="replace"), secrets)
@@ -303,6 +305,7 @@ def export(src, dest, secrets=None):
             "account" for s in secrets if s.lower() in text.lower()]
         if bad:
             raise SystemExit(f"{name}: still contains {bad}; not exported")
+        (dest / name).parent.mkdir(parents=True, exist_ok=True)
         (dest / name).write_text(text)
         sizes[name] = len(text.encode())
     return sizes
