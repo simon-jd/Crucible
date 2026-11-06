@@ -102,6 +102,9 @@ def _role(role, port, tmp, steps, bucket_mb):
                                    timeout=60, bucket_mb=bucket_mb)  # fmt: skip
     channel = ag.Channel(kv, timeout=60)
     try:
+        # plain broadcasts of 40 bytes in 16-byte calls, both roles at the same point
+        probe = ag.link_probe(group, device, 40, 16, 2)
+        assert len(probe) == 2 and all(t > 0 for t in probe)
         if role == "learner":
             with open(f"{tmp}/learner/learner.jsonl", "w") as log:
                 result = ag.run_learner(FakeLearner(), channel, sync, group, steps, log, device)

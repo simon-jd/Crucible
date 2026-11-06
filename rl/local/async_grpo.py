@@ -125,6 +125,36 @@ def _sync(device):
         torch.cuda.synchronize()
 
 
+def link_probe(group, device, nbytes, chunk, repeats):
+    """Seconds per plain broadcast of nbytes (pair rank 0 -> 1) in chunk-byte calls.
+
+    No control frames, hashing or checks: the link floor in the processes and node pair of
+    this run. Every rank calls it at the same point; it allocates nbytes on the device.
+    """
+    import torch
+    import torch.distributed as dist
+
+    buffer = torch.zeros(nbytes, dtype=torch.uint8, device=device)
+    seconds = []
+    for _ in range(repeats):
+        _barrier(group, device)
+        t = time.monotonic()
+        for start in range(0, nbytes, chunk):
+            dist.broadcast(buffer[start : start + chunk], src=0, group=group)
+        _sync(device)
+        seconds.append(time.monotonic() - t)
+    del buffer
+    return seconds
+
+
+def _probe(args, group, device, schema):
+    if not args.link_probe:
+        return []
+    nbytes = sum(math.prod(shape) * dtype.itemsize for shape, dtype in schema.values())
+    chunk = int((args.bucket_mb or 64) * (1 << 20))
+    return link_probe(group, device, nbytes, chunk, args.link_probe)
+
+
 def run_learner(backend, channel, sync, group, steps, log, device):
     """Learner loop. backend: .version, .step(groups) -> metrics, .export() -> [(name, tensor)]."""
     stale = {}
@@ -495,13 +525,17 @@ def learner_main(args):
         _, sync = make_weight_sync(schema, assets=args.model, keep=False, group=pair, timeout=args.timeout,
                                    bucket_mb=args.bucket_mb)  # fmt: skip
         channel = Channel(kv, timeout=args.timeout)
+        probe_before = _probe(args, pair, device, schema)
         started = time.monotonic()
         with open(out / "learner.jsonl", "w") as log:
             result = run_learner(
                 FsdpLearner(learner, schema), channel, sync, pair, args.steps, log, device
             )
+        train_wall_s = time.monotonic() - started
+        probe = {"before": probe_before, "after": _probe(args, pair, device, schema)}
         result |= {
-            "train_wall_s": time.monotonic() - started,
+            "train_wall_s": train_wall_s,
+            **({"link_probe_s": probe} if args.link_probe else {}),
             "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
             "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
             "peak_device_used_bytes": peak.stop(),
@@ -564,10 +598,13 @@ def rollout_main(args):
         store, sync = make_weight_sync(schema, assets=args.model, keep=True, group=pair,
                                        timeout=args.timeout, bucket_mb=args.bucket_mb)  # fmt: skip
         channel = Channel(kv, timeout=args.timeout)
+        probe_before = _probe(args, pair, device, schema)
         started = time.monotonic()
         with open(out / "rollout.jsonl", "w") as log:
             summary |= run_rollout(backend, channel, sync, store, pair, args.steps, log, device)
         summary["train_wall_s"] = time.monotonic() - started
+        if args.link_probe:
+            summary["link_probe_s"] = {"before": probe_before, "after": _probe(args, pair, device, schema)}
         t = time.monotonic()
         summary["after"] = gr.run_eval(llm, tokenizer, sets, args.eval_n, args.eval_max_tokens, pool,
                                        out / "eval-after.jsonl.gz")  # fmt: skip
@@ -638,6 +675,10 @@ def main(argv=None):
     p.add_argument(
         "--bucket-mb", type=float, default=0,
         help="BucketedSync with buckets of this many MiB (0: per-tensor WeightSync)",
+    )  # fmt: skip
+    p.add_argument(
+        "--link-probe", type=int, default=0,
+        help="time this many plain broadcasts of the weight bytes before and after training",
     )  # fmt: skip
     p.add_argument(
         "--eval-timeout", type=float, default=7200, help="learner waits this long for the eval"

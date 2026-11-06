@@ -6,6 +6,7 @@
   e12.py --run NAME --task bench --layout two-node [--bench-buckets 16,64,256,1024] [--bench-passes 3]
   common: [--eval-subset N] (smoke runs: first N problems of each held-out set) [--port P]
           [--bucket-mb N] (e1, pair: BucketedSync with N MiB buckets instead of per-tensor WeightSync)
+          [--link-probe N] (pair: time N plain broadcasts of the weight bytes before and after training)
 
 same-node: both roles are subprocesses of this process on GPU_NV_2M's two A10s, with
 CUDA_VISIBLE_DEVICES=0,1 (learner) and 1,0 (rollout): each uses its cuda:0, but both see
@@ -232,6 +233,7 @@ def main():
     ap.add_argument("--port", type=int, default=12930)
     ap.add_argument("--timeout", type=float, default=7200, help="per role (s)")
     ap.add_argument("--bucket-mb", type=float, default=0, help="e1/pair: BucketedSync bucket size")
+    ap.add_argument("--link-probe", type=int, default=0, help="pair: plain broadcasts timed before/after")
     ap.add_argument("--bench-buckets", default="16,64,256,1024", help="bench: bucket sizes (MiB)")
     ap.add_argument("--bench-passes", type=int, default=3, help="bench: timed passes")
     ap.add_argument(
@@ -278,7 +280,8 @@ def main():
                               "--output", "{BASE}/out/rollout"], role_env("rollout"))]  # fmt: skip
     elif a.task == "pair":
         common = ["--data", data, "--model", model, "--port", str(a.port), "--seed", str(a.seed),
-                  "--steps", str(a.steps), "--reward", "eos", "--layout", a.layout, *bucket]  # fmt: skip
+                  "--steps", str(a.steps), "--reward", "eos", "--layout", a.layout, *bucket,
+                  *(["--link-probe", str(a.link_probe)] if a.link_probe else [])]  # fmt: skip
         roles = [("learner", ["-m", "rl.local.async_grpo", "--role", "learner", *common, "--output", "{BASE}/out/learner"],
                   role_env("learner")),
                  ("rollout", ["-m", "rl.local.async_grpo", "--role", "rollout", *common, "--peer", "{PEER}",
