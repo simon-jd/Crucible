@@ -17,7 +17,9 @@ After step 99 the rollout receives version 100 and runs the held-out eval.
 Transport: a separate two-rank process group (rl.sync.pair_group) on a TCPStore at the
 learner; the same store carries the batches (JSON) between the roles. WeightSync
 pushes into an in-memory store (rl.sync.memory_store) with sum64 content digests;
-the rollout loads the received GPU tensors with model.load_weights. Every role
+with --bucket-mb N, BucketedSync (rl.sync.bucketed) sends the packed state in N MiB
+broadcasts with a SHA-256 manifest instead. The rollout loads the received GPU tensors
+with model.load_weights. Every role
 writes <output>/<role>.jsonl and <role>-summary.json; `merge` turns a learner and a
 rollout directory into grpo_run-compatible steps.jsonl and summary.json plus
 per-GPU idle shares, overlap, staleness histogram and sync costs.
@@ -150,6 +152,7 @@ def run_learner(backend, channel, sync, group, steps, log, device):
         _sync(device)
         del tensors
         s1 = time.time()
+        detail = getattr(sync, "last", None)
         entry = {
             "step": t, "generation": batch["generation"], "trained_version": batch["version"],
             "policy_version": backend.version, "wait_batch_s": wait_s, "learn_s": learn_s,
@@ -157,6 +160,7 @@ def run_learner(backend, channel, sync, group, steps, log, device):
             "wall_s": time.monotonic() - t0, "learn_interval": [l0, l1], "export_sync_interval": [l1, s1],
             "push_interval": [s0, s1], "step_interval": [w0, s1],
             **{k: metrics[k] for k in ("loss", "dropped_stale", "accepted_samples", "effective_tokens")},
+            **({"sync_detail": detail} if detail else {}),
         }  # fmt: skip
         log.write(json.dumps(entry) + "\n")
         log.flush()
@@ -194,8 +198,10 @@ def run_rollout(backend, channel, sync, store, group, steps, log, device):
             load_s = time.monotonic() - t
             version = target
             loaded.append(target)
+            detail = getattr(sync, "last", None)
             entry["receives"].append({"version": target, "barrier_s": barrier_s, "recv_s": stats.seconds,
-                                      "bytes": stats.bytes, "load_s": load_s, "interval": [r0, time.time()]})  # fmt: skip
+                                      "bytes": stats.bytes, "load_s": load_s, "interval": [r0, time.time()],
+                                      **({"sync_detail": detail} if detail else {})})  # fmt: skip
         log.write(json.dumps(entry) + "\n")
         log.flush()
     return {"loaded_versions": loaded, "final_version": version}
@@ -469,9 +475,8 @@ def learner_main(args):
     import torch.distributed as dist
 
     from rl.learner.train import LearnerConfig, load_fsdp2_learner
+    from rl.sync.bucketed import make_weight_sync
     from rl.sync.export import base_schema
-    from rl.sync.memory_store import MemoryStore
-    from rl.sync.nccl_broadcast import WeightSync
     from rl.sync.pair_group import destroy_pair_group, init_pair_group
 
     torch.cuda.set_device(0)
@@ -487,8 +492,8 @@ def learner_main(args):
     pair, kv = init_pair_group("nccl", "0.0.0.0", args.port, 0, timeout=args.timeout)
     try:
         schema = base_schema(args.model, torch.bfloat16)
-        sync = WeightSync(MemoryStore(schema, assets=args.model, keep=False), group=pair, source=0,
-                          timeout=args.timeout)  # fmt: skip
+        _, sync = make_weight_sync(schema, assets=args.model, keep=False, group=pair, timeout=args.timeout,
+                                   bucket_mb=args.bucket_mb)  # fmt: skip
         channel = Channel(kv, timeout=args.timeout)
         started = time.monotonic()
         with open(out / "learner.jsonl", "w") as log:
@@ -501,6 +506,7 @@ def learner_main(args):
             "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
             "peak_device_used_bytes": peak.stop(),
             "device": torch.cuda.get_device_name(0), "host": os.uname().nodename, "nccl_env": _nccl_env(),
+            "sync_mode": _sync_mode(args),
         }  # fmt: skip
         (out / "learner-summary.json").write_text(json.dumps(result, indent=1) + "\n")
         print("ROLE_RESULT " + json.dumps(result), flush=True)
@@ -524,9 +530,8 @@ def rollout_main(args):
     from vllm import LLM
 
     from rl.local import grpo_run as gr
+    from rl.sync.bucketed import make_weight_sync
     from rl.sync.export import base_schema
-    from rl.sync.memory_store import MemoryStore
-    from rl.sync.nccl_broadcast import WeightSync
     from rl.sync.pair_group import destroy_pair_group, init_pair_group
 
     # Same engine arguments as grpo_run, so the held-out eval is the same computation.
@@ -556,8 +561,8 @@ def rollout_main(args):
     pair, kv = init_pair_group("nccl", args.peer, args.port, 1, timeout=args.timeout)
     try:
         schema = base_schema(args.model, torch.bfloat16)
-        store = MemoryStore(schema, assets=args.model, keep=True)
-        sync = WeightSync(store, group=pair, source=0, timeout=args.timeout)
+        store, sync = make_weight_sync(schema, assets=args.model, keep=True, group=pair,
+                                       timeout=args.timeout, bucket_mb=args.bucket_mb)  # fmt: skip
         channel = Channel(kv, timeout=args.timeout)
         started = time.monotonic()
         with open(out / "rollout.jsonl", "w") as log:
@@ -572,6 +577,7 @@ def rollout_main(args):
             "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
             "peak_device_used_bytes": peak.stop(),
             "device": torch.cuda.get_device_name(device), "host": os.uname().nodename, "nccl_env": _nccl_env(),
+            "sync_mode": _sync_mode(args),
         }  # fmt: skip
         (out / "rollout-summary.json").write_text(json.dumps(summary, indent=1) + "\n")
         print(
@@ -582,6 +588,12 @@ def rollout_main(args):
     finally:
         destroy_pair_group(pair)
     return 0
+
+
+def _sync_mode(args):
+    if args.bucket_mb:
+        return {"kind": "bucketed", "bucket_mb": args.bucket_mb, "digest": "sha256"}
+    return {"kind": "per-tensor", "digest": "sum64"}
 
 
 def _nccl_env():
@@ -624,11 +636,17 @@ def main(argv=None):
     p.add_argument("--reward", choices=("none", "eos"), default="eos")
     p.add_argument("--timeout", type=float, default=1800, help="per collective/message wait (s)")
     p.add_argument(
+        "--bucket-mb", type=float, default=0,
+        help="BucketedSync with buckets of this many MiB (0: per-tensor WeightSync)",
+    )  # fmt: skip
+    p.add_argument(
         "--eval-timeout", type=float, default=7200, help="learner waits this long for the eval"
     )
     args = p.parse_args(argv)
     if not math.isfinite(args.timeout) or args.timeout <= 0:
         raise SystemExit("timeout must be positive")
+    if not math.isfinite(args.bucket_mb) or args.bucket_mb < 0:
+        raise SystemExit("bucket-mb must be >= 0")
     return learner_main(args) if args.role == "learner" else rollout_main(args)
 
 

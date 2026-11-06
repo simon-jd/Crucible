@@ -66,6 +66,18 @@ a distributed atomic-commit guarantee. The previous active engine is untouched b
 push. Tear down uncertain groups/processes and explicitly recover in a new owner
 phase; never infer activation from a candidate directory alone.
 
+`BucketedSync(MemoryStore(schema, digest="sha256"), group=pair, bucket_bytes=N)`
+(`rl/sync/bucketed.py`) is the same interface for a running vLLM: both ranks derive one
+layout of the schema in a flat byte buffer (sorted names, 256-byte aligned), the source
+packs its tensors into it without casting, and the buffer moves in N-byte broadcasts
+straight into the receiver's buffer, which is unpacked as zero-copy views. A push is
+n_buckets + 10 collectives instead of WeightSync's ~5 per tensor. Integrity: version,
+contract and layout hashes are agreed before data moves; both ranks SHA-256 the packed
+bytes in ≤16 MiB chunks (on CUDA through a pinned host mirror, hashed by a thread pool
+while later buckets are on the wire), check finiteness, and commit only if the source's
+manifest equals the receiver's. `make_weight_sync(..., bucket_mb=)` picks either path;
+`rl.sync.sync_bench` measures both against raw broadcasts.
+
 `export_ready_learner_bf16(learner, sync)` is the explicit inference conversion.
 It freshly obtains the guarded public policy/version, validates the full state and
 Qwen tied alias, materializes DTensors individually, and converts floating tensors

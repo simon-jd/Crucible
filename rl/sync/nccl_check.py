@@ -17,7 +17,9 @@ Acceptance is the frozen protocol docs/evidence/raw/task9-confirmation-protocol.
 (per prompt and version: every one of 151,936 coordinates within
 0.375 + 0.01*|ref|, RMS <= 0.10, mean abs <= 0.08, finite, identical token IDs).
 WeightSync uses sha256 digests here, so both ranks also prove the received bytes
-equal the sent bytes before the candidate commits. The learner writes result.json,
+equal the sent bytes before the candidate commits. With --bucket-mb N both roles use
+BucketedSync (rl/sync/bucketed.py) instead: the packed BF16 state in N MiB broadcasts,
+committed only when both ranks' SHA-256 manifests agree. The learner writes result.json,
 logits.npz and prints one line "ROLE_RESULT <json>".
 """
 
@@ -91,7 +93,6 @@ def learner(args):
     from rl.sync.acceptance import load_protocol
     from rl.sync.export import base_schema, ready_bf16_tensors
     from rl.sync.memory_store import MemoryStore
-    from rl.sync.nccl_broadcast import WeightSync
     from rl.sync.pair_group import destroy_pair_group, init_pair_group
 
     protocol = load_protocol(PROTOCOL)
@@ -112,7 +113,7 @@ def learner(args):
         )
         schema = base_schema(args.model, torch.bfloat16)
         store = MemoryStore(schema, assets=args.model, keep=False, digest="sha256")
-        sync = WeightSync(store, group=pair, source=0, timeout=args.timeout)
+        sync = _make_sync(store, pair, args)
         sent, syncs = {}, []
         for version in VERSIONS:
             if version == 8:
@@ -142,7 +143,8 @@ def learner(args):
             torch.cuda.synchronize()
             syncs.append({"version": version, "export_s": export_s, "barrier_wait_s": wait_s,
                           "push_s": stats.seconds, "bytes": stats.bytes, "digest": store.digest,
-                          "GBps": stats.bytes / stats.seconds / 1e9})  # fmt: skip
+                          "GBps": stats.bytes / stats.seconds / 1e9,
+                          "detail": getattr(sync, "last", None)})  # fmt: skip
             del tensors
             print(json.dumps({"pushed": syncs[-1]}), flush=True)
         # Return channel: rollout broadcasts its logits (src=1) and posts token IDs.
@@ -211,6 +213,7 @@ def learner(args):
             "reference_logits_change_v7_v8": float((reference[8] - reference[7]).abs().max()),
             "vllm_logits_change_v7_v8": float((actual[8] - actual[7]).abs().max()),
             "logits_npz_sha256": hashlib.sha256((out / "logits.npz").read_bytes()).hexdigest(),
+            "sync_mode": _sync_mode(args),
             "torch": torch.__version__,
             "nccl": ".".join(map(str, torch.cuda.nccl.version())),
             "device": torch.cuda.get_device_name(0),
@@ -243,7 +246,6 @@ def rollout(args):
     from rl.sync.acceptance import load_protocol
     from rl.sync.export import base_schema
     from rl.sync.memory_store import MemoryStore
-    from rl.sync.nccl_broadcast import WeightSync
     from rl.sync.pair_group import destroy_pair_group, init_pair_group
 
     protocol = load_protocol(PROTOCOL)
@@ -261,7 +263,7 @@ def rollout(args):
     try:
         schema = base_schema(args.model, torch.bfloat16)
         store = MemoryStore(schema, assets=args.model, keep=True, digest="sha256")
-        sync = WeightSync(store, group=pair, source=0, timeout=args.timeout)
+        sync = _make_sync(store, pair, args)
         params = SamplingParams(max_tokens=1, temperature=1, logprobs=-1, detokenize=False, seed=0)
         prompts = protocol["prompts"]
         vectors_by_version = {}
@@ -276,7 +278,8 @@ def rollout(args):
             load_s = time.monotonic() - t
             del tensors
             info["syncs"].append({"version": version, "barrier_wait_s": wait_s, "push_s": stats.seconds,
-                                  "bytes": stats.bytes, "load_s": load_s, "digest": store.digest})  # fmt: skip
+                                  "bytes": stats.bytes, "load_s": load_s, "digest": store.digest,
+                                  "detail": getattr(sync, "last", None)})  # fmt: skip
             vectors, ids = [], []
             for offset in range(0, len(prompts), 2):
                 for output in llm.generate(prompts[offset : offset + 2], params, use_tqdm=False):
@@ -303,6 +306,24 @@ def rollout(args):
     return 0
 
 
+def _make_sync(store, pair, args):
+    from rl.sync.bucketed import BucketedSync
+    from rl.sync.nccl_broadcast import WeightSync
+
+    if not args.bucket_mb:
+        return WeightSync(store, group=pair, source=0, timeout=args.timeout)
+    sync = BucketedSync(store, group=pair, source=0, bucket_bytes=int(args.bucket_mb * (1 << 20)),
+                        timeout=args.timeout)  # fmt: skip
+    sync.warm()
+    return sync
+
+
+def _sync_mode(args):
+    if args.bucket_mb:
+        return {"kind": "bucketed", "bucket_mb": args.bucket_mb, "digest": "sha256 manifest"}
+    return {"kind": "per-tensor", "digest": "sha256"}
+
+
 def _nccl_env():
     return {
         k: v for k, v in os.environ.items() if k.startswith("NCCL_") or k == "CUDA_VISIBLE_DEVICES"
@@ -319,6 +340,7 @@ def main(argv=None):
     p.add_argument("--peer", default="127.0.0.1", help="learner host (rollout role)")
     p.add_argument("--output", default="e1-out")
     p.add_argument("--timeout", type=float, default=600)
+    p.add_argument("--bucket-mb", type=float, default=0, help="BucketedSync bucket size (0: WeightSync)")
     args = p.parse_args(argv)
     return learner(args) if args.role == "learner" else rollout(args)
 

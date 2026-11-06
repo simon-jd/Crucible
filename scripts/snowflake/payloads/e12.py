@@ -3,7 +3,9 @@
   e12.py --run NAME --task e1 --layout same-node|two-node [--role-env learner|rollout|all K=V ...]
   e12.py --run NAME --task pair --layout same-node|two-node --seed S [--steps N] [--eval-before]
   e12.py --run NAME --task timeshared --seeds S [S] [--steps N]      # rl/local/grpo_run.py unchanged
+  e12.py --run NAME --task bench --layout two-node [--bench-buckets 16,64,256,1024] [--bench-passes 3]
   common: [--eval-subset N] (smoke runs: first N problems of each held-out set) [--port P]
+          [--bucket-mb N] (e1, pair: BucketedSync with N MiB buckets instead of per-tensor WeightSync)
 
 same-node: both roles are subprocesses of this process on GPU_NV_2M's two A10s, with
 CUDA_VISIBLE_DEVICES=0,1 (learner) and 1,0 (rollout): each uses its cuda:0, but both see
@@ -220,7 +222,7 @@ def upload(base, run):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--task", choices=("e1", "pair", "timeshared"), required=True)
+    ap.add_argument("--task", choices=("e1", "pair", "timeshared", "bench"), required=True)
     ap.add_argument("--layout", choices=("same-node", "two-node", "single"), default="same-node")
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--seeds", type=int, nargs="*", default=[17])
@@ -229,6 +231,9 @@ def main():
     ap.add_argument("--eval-before", action="store_true")
     ap.add_argument("--port", type=int, default=12930)
     ap.add_argument("--timeout", type=float, default=7200, help="per role (s)")
+    ap.add_argument("--bucket-mb", type=float, default=0, help="e1/pair: BucketedSync bucket size")
+    ap.add_argument("--bench-buckets", default="16,64,256,1024", help="bench: bucket sizes (MiB)")
+    ap.add_argument("--bench-passes", type=int, default=3, help="bench: timed passes")
     ap.add_argument(
         "--role-env", nargs="*", default=[], help="ROLE:K=V with ROLE learner|rollout|all"
     )
@@ -258,14 +263,22 @@ def main():
             e["CUDA_VISIBLE_DEVICES"] = gpu[role]
         return e
 
+    bucket = ["--bucket-mb", str(a.bucket_mb)] if a.bucket_mb else []
     if a.task == "e1":
         roles = [("learner", ["-m", "rl.sync.nccl_check", "--role", "learner", "--model", model, "--port", str(a.port),
-                              "--output", "{BASE}/out/learner"], role_env("learner")),
+                              "--output", "{BASE}/out/learner", *bucket], role_env("learner")),
                  ("rollout", ["-m", "rl.sync.nccl_check", "--role", "rollout", "--model", model, "--port", str(a.port),
-                              "--peer", "{PEER}", "--output", "{BASE}/out/rollout"], role_env("rollout"))]  # fmt: skip
+                              "--peer", "{PEER}", "--output", "{BASE}/out/rollout", *bucket], role_env("rollout"))]  # fmt: skip
+    elif a.task == "bench":
+        common = ["--model", model, "--port", str(a.port), "--buckets", a.bench_buckets,
+                  "--passes", str(a.bench_passes)]  # fmt: skip
+        roles = [("learner", ["-m", "rl.sync.sync_bench", "--role", "source", *common, "--output", "{BASE}/out/learner"],
+                  role_env("learner")),
+                 ("rollout", ["-m", "rl.sync.sync_bench", "--role", "receiver", *common, "--peer", "{PEER}",
+                              "--output", "{BASE}/out/rollout"], role_env("rollout"))]  # fmt: skip
     elif a.task == "pair":
         common = ["--data", data, "--model", model, "--port", str(a.port), "--seed", str(a.seed),
-                  "--steps", str(a.steps), "--reward", "eos", "--layout", a.layout]  # fmt: skip
+                  "--steps", str(a.steps), "--reward", "eos", "--layout", a.layout, *bucket]  # fmt: skip
         roles = [("learner", ["-m", "rl.local.async_grpo", "--role", "learner", *common, "--output", "{BASE}/out/learner"],
                   role_env("learner")),
                  ("rollout", ["-m", "rl.local.async_grpo", "--role", "rollout", *common, "--peer", "{PEER}",

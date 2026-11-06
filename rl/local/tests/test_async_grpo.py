@@ -85,13 +85,12 @@ class FakeRollout:
         self.w = value.clone()
 
 
-def _role(role, port, tmp, steps):
+def _role(role, port, tmp, steps, bucket_mb):
     from datetime import timedelta
 
     import torch.distributed as dist
 
-    from rl.sync.memory_store import MemoryStore
-    from rl.sync.nccl_broadcast import WeightSync
+    from rl.sync.bucketed import make_weight_sync
     from rl.sync.pair_group import destroy_pair_group, init_pair_group
 
     rank = 0 if role == "learner" else 1
@@ -99,8 +98,8 @@ def _role(role, port, tmp, steps):
                             timeout=timedelta(seconds=60))  # fmt: skip
     group, kv = init_pair_group("gloo", "127.0.0.1", port, rank, timeout=60)
     device = torch.device("cpu")
-    store = MemoryStore({"w": ((4,), torch.float32)}, keep=rank == 1)
-    sync = WeightSync(store, group=group, source=0, timeout=60)
+    store, sync = make_weight_sync({"w": ((4,), torch.float32)}, keep=rank == 1, group=group,
+                                   timeout=60, bucket_mb=bucket_mb)  # fmt: skip
     channel = ag.Channel(kv, timeout=60)
     try:
         if role == "learner":
@@ -125,7 +124,8 @@ def _role(role, port, tmp, steps):
         dist.destroy_process_group()
 
 
-def test_two_process_pipeline_versions_staleness_and_merge(tmp_path):
+@pytest.mark.parametrize("bucket_mb", [0, 1])  # per-tensor WeightSync, BucketedSync
+def test_two_process_pipeline_versions_staleness_and_merge(tmp_path, bucket_mb):
     steps = 5
     for d in ("learner", "rollout"):
         (tmp_path / d).mkdir()
@@ -134,7 +134,7 @@ def test_two_process_pipeline_versions_staleness_and_merge(tmp_path):
         port = s.getsockname()[1]
     context = mp.get_context("spawn")
     children = [
-        context.Process(target=_role, args=(r, port, tmp_path, steps))
+        context.Process(target=_role, args=(r, port, tmp_path, steps, bucket_mb))
         for r in ("learner", "rollout")
     ]
     for child in children:
@@ -169,6 +169,12 @@ def test_two_process_pipeline_versions_staleness_and_merge(tmp_path):
         pipe["learn_generate_overlap_s"] > 0
     )  # learner trains B_t while the rollout generates B_t+1
     assert pipe["sync_bytes_per_version"] == [16]
+    learner_steps = [json.loads(x) for x in (tmp_path / "learner/learner.jsonl").read_text().splitlines()]
+    if bucket_mb:  # one broadcast per bucket: 1 bucket + 10 control/status collectives
+        assert {e["sync_detail"]["collectives"] for e in learner_steps} == {11}
+        assert {e["sync_detail"]["buckets"] for e in learner_steps} == {1}
+    else:
+        assert all("sync_detail" not in e for e in learner_steps)
     assert (
         summary["before_source"] == str(before) and summary["before"]["gsm8k"]["pass_at_1"] == 0.4
     )

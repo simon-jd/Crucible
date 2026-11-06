@@ -128,6 +128,39 @@ class MemoryStage:
         self.seen.add(name)
         check_time(self.deadline)
 
+    def adopt(self, tensors, digest, nbytes):
+        """Stage a complete candidate in one piece (rl.sync.bucketed, which verifies its bytes).
+
+        Same rules as add() for the whole set at once: every schema name exactly once, exact
+        shape/dtype, finite floating values (one device sync). Replaces add() + prepare().
+        """
+        import torch
+
+        check_time(self.deadline)
+        if self.seen:
+            raise ValueError("stage already holds tensors")
+        names = [name for name, _ in tensors]
+        if len(set(names)) != len(names) or set(names) != set(self.store.schema):
+            raise ValueError("missing, duplicate or unexpected parameter name")
+        finite = []
+        for name, tensor in tensors:
+            shape, dtype = self.store.schema[name]
+            if not isinstance(tensor, torch.Tensor) or tensor.layout != torch.strided:
+                raise ValueError("dense Tensor required")
+            if tuple(tensor.shape) != tuple(shape) or tensor.dtype != dtype:
+                raise ValueError("parameter shape/dtype must match complete schema; no implicit cast")
+            if tensor.is_floating_point() and tensor.numel():
+                finite.append(torch.isfinite(tensor).all())
+        if finite and not bool(torch.stack(finite).all()):
+            raise ValueError("parameter must be finite")
+        if self.store.contract() != self.contract:
+            raise ValueError("schema/config contract changed during staging")
+        self.kept = {name: tensor.detach() for name, tensor in tensors} if self.store.keep else {}
+        self.seen = set(names)
+        self.bytes = nbytes
+        self.digest = digest
+        check_time(self.deadline)
+
     def prepare(self):
         check_time(self.deadline)
         if self.store.contract() != self.contract:
