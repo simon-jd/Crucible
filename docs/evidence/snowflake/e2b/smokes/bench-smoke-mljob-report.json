@@ -1,0 +1,295 @@
+{
+  "started_at": "2026-11-06T04:51:02+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e2b-bench-smoke",
+    "--task",
+    "bench",
+    "--layout",
+    "two-node",
+    "--port",
+    "12921",
+    "--timeout",
+    "900",
+    "--bench-buckets",
+    "16,256",
+    "--bench-passes",
+    "1",
+    "--role-env",
+    "all:NCCL_SOCKET_NTHREADS=8",
+    "all:NCCL_NSOCKS_PERTHREAD=8",
+    "all:NCCL_MIN_NCHANNELS=4",
+    "all:NCCL_DEBUG=INFO",
+    "all:NCCL_DEBUG_SUBSYS=INIT,NET,ENV"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E2B_14KTRDTWQQGLX",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e2b-bench-smoke",
+      "task": "bench",
+      "layout": "two-node",
+      "nproc": 36,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 5.4,
+          "MBps": 184.7
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.6,
+          "MBps": 1.6
+        }
+      ],
+      "roles": [
+        {
+          "role": "learner",
+          "exit": 0,
+          "seconds": 23.1,
+          "host": "job-0",
+          "role_results": [
+            {
+              "variants": [
+                "per_tensor_sum64",
+                "per_tensor_sha256",
+                "bucket_16M",
+                "bucket_256M",
+                "raw_16M",
+                "raw_256M"
+              ],
+              "passes": 1,
+              "tensor_bytes": 988065536,
+              "packed_bytes": 988065536,
+              "tensors": 290,
+              "rows": {
+                "per_tensor_sum64": {
+                  "source_s": [
+                    1.9683448040000258
+                  ],
+                  "receiver_s": [
+                    1.9685480950000738
+                  ],
+                  "median_s": 1.9685480950000738,
+                  "min_s": 1.9685480950000738,
+                  "max_s": 1.9685480950000738,
+                  "GBps": 0.5019260329527092
+                },
+                "per_tensor_sha256": {
+                  "source_s": [
+                    2.6091282690000526
+                  ],
+                  "receiver_s": [
+                    2.609236571999986
+                  ],
+                  "median_s": 2.609236571999986,
+                  "min_s": 2.609236571999986,
+                  "max_s": 2.609236571999986,
+                  "GBps": 0.3786799351975377
+                },
+                "bucket_16M": {
+                  "source_s": [
+                    0.4853025710000338
+                  ],
+                  "receiver_s": [
+                    0.4857935820000421
+                  ],
+                  "median_s": 0.4857935820000421,
+                  "min_s": 0.4857935820000421,
+                  "max_s": 0.4857935820000421,
+                  "GBps": 2.03392052223513,
+                  "collectives": 69,
+                  "buckets": 59,
+                  "chunks": 59,
+                  "median_pack_s": 0.010277939999923547,
+                  "median_transfer_s": 0.40341805499997463,
+                  "median_hash_wait_s": 7.396800003789394e-05,
+                  "median_verify_commit_s": 0.0713693449999937
+                },
+                "bucket_256M": {
+                  "source_s": [
+                    0.463349760999904
+                  ],
+                  "receiver_s": [
+                    0.46362913500001923
+                  ],
+                  "median_s": 0.46362913500001923,
+                  "min_s": 0.46362913500001923,
+                  "max_s": 0.46362913500001923,
+                  "GBps": 2.1311549715268843,
+                  "collectives": 14,
+                  "buckets": 4,
+                  "chunks": 59,
+                  "median_pack_s": 0.010124866000069233,
+                  "median_transfer_s": 0.3964771319999727,
+                  "median_hash_wait_s": 7.505999997192703e-05,
+                  "median_verify_commit_s": 0.05652688300006048
+                },
+                "raw_16M": {
+                  "source_s": [
+                    0.37046917900011067
+                  ],
+                  "receiver_s": [
+                    0.38968151300002773
+                  ],
+                  "median_s": 0.38968151300002773,
+                  "min_s": 0.38968151300002773,
+                  "max_s": 0.38968151300002773,
+                  "GBps": 2.53557200697876,
+                  "collectives": 59
+                },
+                "raw_256M": {
+                  "source_s": [
+                    0.36271387899989804
+                  ],
+                  "receiver_s": [
+                    0.38277064099997915
+                  ],
+                  "median_s": 0.38277064099997915,
+                  "min_s": 0.38277064099997915,
+                  "max_s": 0.38277064099997915,
+                  "GBps": 2.581351415611977,
+                  "collectives": 4
+                }
+              },
+              "digests_agree": true,
+              "warmup_equal_to_base": true,
+              "source": {
+                "host": "job-0",
+                "env": {
+                  "NCCL_NET_PLUGIN": "none",
+                  "NCCL_VERSION": "2.25.1-1",
+                  "NCCL_SOCKET_IFNAME": "eth0",
+                  "CUDA_VISIBLE_DEVICES": "0",
+                  "NCCL_SOCKET_NTHREADS": "8",
+                  "NCCL_NSOCKS_PERTHREAD": "8",
+                  "NCCL_MIN_NCHANNELS": "4",
+                  "NCCL_DEBUG": "INFO",
+                  "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+                },
+                "device": "NVIDIA A10-24Q"
+              },
+              "receiver": {
+                "host": "job-1",
+                "env": {
+                  "NCCL_NET_PLUGIN": "none",
+                  "NCCL_VERSION": "2.25.1-1",
+                  "NCCL_SOCKET_IFNAME": "eth0",
+                  "CUDA_VISIBLE_DEVICES": "0",
+                  "NCCL_SOCKET_NTHREADS": "8",
+                  "NCCL_NSOCKS_PERTHREAD": "8",
+                  "NCCL_MIN_NCHANNELS": "4",
+                  "NCCL_DEBUG": "INFO",
+                  "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+                },
+                "device": "NVIDIA A10-24Q"
+              },
+              "torch": "2.8.0+cu128",
+              "backend": "nccl",
+              "nccl": "2.27.3"
+            }
+          ],
+          "tail": [
+            "job-0:4326:4347 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0",
+            "{\"pass\": 0, \"done\": 6}",
+            "{\"pass\": 1, \"done\": 12}",
+            "ROLE_RESULT {\"variants\": [\"per_tensor_sum64\", \"per_tensor_sha256\", \"bucket_16M\", \"bucket_256M\", \"raw_16M\", \"raw_256M\"], \"passes\": 1, \"tensor_bytes\": 988065536, \"packed_bytes\": 988065536, \"tensors\": 290, \"rows\": {\"per_tensor_sum64\": {\"source_s\": [1.9683448040000258], \"receiver_s\": [1.9685480950000738], \"median_s\": 1.9685480950000738, \"min_s\": 1.9685480950000738, \"max_s\": 1.9685480950000738, \"GBps\": 0.5019260329527092}, \"per_tensor_sha256\": {\"source_s\": [2.6091282690000526], \"receiver_s\": [2.609236571999986], \"median_s\": 2.609236571999986, \"min_s\": 2.609236571999986, \"max_s\": 2.609236571999986, \"GBps\": 0.3786799351975377}, \"bucket_16M\": {\"source_s\": [0.4853025710000338], \"receiver_s\": [0.4857935820000421], \"median_s\": 0.4857935820000421, \"min_s\": 0.4857935820000421, \"max_s\": 0.4857935820000421, \"GBps\": 2.03392052223513, \"collectives\": 69, \"buckets\": 59, \"chunks\": 59, \"median_pack_s\": 0.010277939999923547, \"median_transfer_s\": 0.40341805499997463, \"median_hash_wait_s\": 7.396800003789394e-05, \"median_verify_commit_s\": 0.0713693449999937}, \"bucket_256M\": {\"source_s\": [0.463349760999904], \"receiver_s\": [0.46362913500001923], \"median_s\": 0.46362913500001923, \"min_s\": 0.46362913500001923, \"max_s\": 0.46362913500001923, \"GBps\": 2.1311549715268843, \"collectives\": 14, \"buckets\": 4, \"chunks\": 59, \"median_pack_s\": 0.010124866000069233, \"median_transfer_s\": 0.3964771319999727, \"median_hash_wait_s\": 7.505999997192703e-05, \"median_verify_commit_s\": 0.05652688300006048}, \"raw_16M\": {\"source_s\": [0.37046917900011067], \"receiver_s\": [0.38968151300002773], \"median_s\": 0.38968151300002773, \"min_s\": 0.38968151300002773, \"max_s\": 0.38968151300002773, \"GBps\": 2.53557200697876, \"collectives\": 59}, \"raw_256M\": {\"source_s\": [0.36271387899989804], \"receiver_s\": [0.38277064099997915], \"median_s\": 0.38277064099997915, \"min_s\": 0.38277064099997915, \"max_s\": 0.38277064099997915, \"GBps\": 2.581351415611977, \"collectives\": 4}}, \"digests_agree\": true, \"warmup_equal_to_base\": true, \"source\": {\"host\": \"job-0\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_SOCKET_NTHREADS\": \"8\", \"NCCL_NSOCKS_PERTHREAD\": \"8\", \"NCCL_MIN_NCHANNELS\": \"4\", \"NCCL_DEBUG\": \"INFO\", \"NCCL_DEBUG_SUBSYS\": \"INIT,NET,ENV\"}, \"device\": \"NVIDIA A10-24Q\"}, \"receiver\": {\"host\": \"job-1\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_SOCKET_NTHREADS\": \"8\", \"NCCL_NSOCKS_PERTHREAD\": \"8\", \"NCCL_MIN_NCHANNELS\": \"4\", \"NCCL_DEBUG\": \"INFO\", \"NCCL_DEBUG_SUBSYS\": \"INIT,NET,ENV\"}, \"device\": \"NVIDIA A10-24Q\"}, \"torch\": \"2.8.0+cu128\", \"backend\": \"nccl\", \"nccl\": \"2.27.3\"}",
+            "job-0:4326:4326 [0] NCCL INFO comm 0xafda340 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+          ],
+          "node": {
+            "ip": "10.244.0.75",
+            "host": "job-0",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 46,
+              "mean_util_pct": 49.1,
+              "peak_used_mib": 3924.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "rollout",
+          "exit": 0,
+          "seconds": 21.1,
+          "host": "job-1",
+          "role_results": [
+            {
+              "role": "receiver",
+              "host": "job-1"
+            }
+          ],
+          "tail": [
+            "job-1:2527:2574 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0",
+            "{\"pass\": 0, \"done\": 6}",
+            "{\"pass\": 1, \"done\": 12}",
+            "ROLE_RESULT {\"role\": \"receiver\", \"host\": \"job-1\"}",
+            "job-1:2527:2527 [0] NCCL INFO comm 0x2e0c4dd0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+          ],
+          "node": {
+            "ip": "10.244.0.139",
+            "host": "job-1",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 42,
+              "mean_util_pct": 40.1,
+              "peak_used_mib": 3374.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e2b-bench-smoke.tar.gz",
+        "bytes": 5438
+      },
+      "seconds": 51.5
+    }
+  ],
+  "seconds": 801.0,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.756
+}

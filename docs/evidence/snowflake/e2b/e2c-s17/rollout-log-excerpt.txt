@@ -1,0 +1,20 @@
+job-1:2560:2560 [0] NCCL INFO NCCL version 2.27.3+cuda12.9
+job-1:2560:2734 [0] NCCL INFO NET/Socket : Using [0]eth0:10.244.0.139<0>
+job-1:2560:2734 [0] NCCL INFO Using network Socket
+job-1:2560:2734 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+job-1:2560:2734 [0] NCCL INFO NCCL_MIN_NCHANNELS set by environment to 4.
+job-1:2560:2734 [0] NCCL INFO 4 coll channels, 4 collnet channels, 0 nvls channels, 4 p2p channels, 2 p2p channels per peer
+job-1:2560:2734 [0] NCCL INFO ncclCommInitRankConfig comm 0x3f35f3a0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 200000 commId 0xfefebb680c336338 - Init COMPLETE
+job-1:2560:2736 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-1:2560:2738 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-1:2560:2736 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-1:2560:2738 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-1:2560:2736 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-1:2560:2738 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-1:2560:2736 [0] NCCL INFO NET/Socket: Using 8 threads and 8 sockets per thread
+job-1:2560:2738 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+job-1:2560:2738 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-1:2560:2738 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-1:2560:2738 [0] NCCL INFO Channel 02/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-1:2560:2738 [0] NCCL INFO Channel 03/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+job-1:2560:2738 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0

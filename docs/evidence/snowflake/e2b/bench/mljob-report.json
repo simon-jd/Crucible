@@ -1,0 +1,445 @@
+{
+  "started_at": "2026-11-06T05:04:46+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e2b-bench",
+    "--task",
+    "bench",
+    "--layout",
+    "two-node",
+    "--port",
+    "12922",
+    "--timeout",
+    "1200",
+    "--bench-buckets",
+    "4,16,64,256,1024",
+    "--bench-passes",
+    "3",
+    "--role-env",
+    "all:NCCL_SOCKET_NTHREADS=8",
+    "all:NCCL_NSOCKS_PERTHREAD=8",
+    "all:NCCL_MIN_NCHANNELS=4",
+    "all:NCCL_DEBUG=INFO",
+    "all:NCCL_DEBUG_SUBSYS=INIT,NET,ENV"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E2B_9I9H29TW9CUN",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e2b-bench",
+      "task": "bench",
+      "layout": "two-node",
+      "nproc": 36,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 5.9,
+          "MBps": 169.8
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.5,
+          "MBps": 1.8
+        }
+      ],
+      "roles": [
+        {
+          "role": "learner",
+          "exit": 0,
+          "seconds": 49.1,
+          "host": "job-1",
+          "role_results": [
+            {
+              "variants": [
+                "per_tensor_sum64",
+                "per_tensor_sha256",
+                "bucket_4M",
+                "bucket_16M",
+                "bucket_64M",
+                "bucket_256M",
+                "bucket_1024M",
+                "raw_4M",
+                "raw_16M",
+                "raw_64M",
+                "raw_256M",
+                "raw_1024M"
+              ],
+              "passes": 3,
+              "tensor_bytes": 988065536,
+              "packed_bytes": 988065536,
+              "tensors": 290,
+              "rows": {
+                "per_tensor_sum64": {
+                  "source_s": [
+                    1.9151729619999855,
+                    2.0205408920000423,
+                    2.0196016570000097
+                  ],
+                  "receiver_s": [
+                    1.9154311369999277,
+                    2.021251472000017,
+                    2.019778491000011
+                  ],
+                  "median_s": 2.019778491000011,
+                  "min_s": 1.9154311369999277,
+                  "max_s": 2.021251472000017,
+                  "GBps": 0.4891949985618471
+                },
+                "per_tensor_sha256": {
+                  "source_s": [
+                    2.6582876820000365,
+                    2.6720437459999857,
+                    2.8568167110000218
+                  ],
+                  "receiver_s": [
+                    2.6587373109999817,
+                    2.672131709000041,
+                    2.8566363500000307
+                  ],
+                  "median_s": 2.672131709000041,
+                  "min_s": 2.6587373109999817,
+                  "max_s": 2.8568167110000218,
+                  "GBps": 0.36976677933654384
+                },
+                "bucket_4M": {
+                  "source_s": [
+                    0.5922198730000332,
+                    0.5728280309999718,
+                    0.5689038379999829
+                  ],
+                  "receiver_s": [
+                    0.5927048830000103,
+                    0.5726543780000384,
+                    0.5693709229999513
+                  ],
+                  "median_s": 0.5728280309999718,
+                  "min_s": 0.5693709229999513,
+                  "max_s": 0.5927048830000103,
+                  "GBps": 1.724890337987054,
+                  "collectives": 246,
+                  "buckets": 236,
+                  "chunks": 236,
+                  "median_pack_s": 0.010215794999965055,
+                  "median_transfer_s": 0.41854205600003525,
+                  "median_hash_wait_s": 0.00030875400000240916,
+                  "median_verify_commit_s": 0.13943210899998348
+                },
+                "bucket_16M": {
+                  "source_s": [
+                    0.4550152460000163,
+                    0.46242764599998054,
+                    0.45701700699999037
+                  ],
+                  "receiver_s": [
+                    0.45544392099998277,
+                    0.4629489220000096,
+                    0.456799038999975
+                  ],
+                  "median_s": 0.45701700699999037,
+                  "min_s": 0.45544392099998277,
+                  "max_s": 0.4629489220000096,
+                  "GBps": 2.1619885493670936,
+                  "collectives": 69,
+                  "buckets": 59,
+                  "chunks": 59,
+                  "median_pack_s": 0.010165540999992118,
+                  "median_transfer_s": 0.37764123900001323,
+                  "median_hash_wait_s": 7.769400002644034e-05,
+                  "median_verify_commit_s": 0.06955254000001787
+                },
+                "bucket_64M": {
+                  "source_s": [
+                    0.433044859000006,
+                    0.49451837600003046,
+                    0.4503597769999601
+                  ],
+                  "receiver_s": [
+                    0.4340169459999288,
+                    0.49508257600007255,
+                    0.45116751699993074
+                  ],
+                  "median_s": 0.45116751699993074,
+                  "min_s": 0.4340169459999288,
+                  "max_s": 0.49508257600007255,
+                  "GBps": 2.1900192251654316,
+                  "collectives": 25,
+                  "buckets": 15,
+                  "chunks": 59,
+                  "median_pack_s": 0.010152516999994532,
+                  "median_transfer_s": 0.36425962599997774,
+                  "median_hash_wait_s": 0.015281751000031818,
+                  "median_verify_commit_s": 0.05028150599997616
+                },
+                "bucket_256M": {
+                  "source_s": [
+                    0.45141672300002256,
+                    0.464918187999956,
+                    0.4707481770000186
+                  ],
+                  "receiver_s": [
+                    0.45156613599999673,
+                    0.46488723499999196,
+                    0.47167472300009194
+                  ],
+                  "median_s": 0.464918187999956,
+                  "min_s": 0.45156613599999673,
+                  "max_s": 0.47167472300009194,
+                  "GBps": 2.125246035760798,
+                  "collectives": 14,
+                  "buckets": 4,
+                  "chunks": 59,
+                  "median_pack_s": 0.010076307000019824,
+                  "median_transfer_s": 0.38173646000001327,
+                  "median_hash_wait_s": 8.181299995158042e-05,
+                  "median_verify_commit_s": 0.07284430500004646
+                },
+                "bucket_1024M": {
+                  "source_s": [
+                    0.5427962210000032,
+                    0.5834469270000113,
+                    0.538003285000002
+                  ],
+                  "receiver_s": [
+                    0.5431009640000184,
+                    0.5834384029999455,
+                    0.5385464770000681
+                  ],
+                  "median_s": 0.5431009640000184,
+                  "min_s": 0.5385464770000681,
+                  "max_s": 0.5834469270000113,
+                  "GBps": 1.81930359453379,
+                  "collectives": 11,
+                  "buckets": 1,
+                  "chunks": 59,
+                  "median_pack_s": 0.0100479530000257,
+                  "median_transfer_s": 0.3796090839999806,
+                  "median_hash_wait_s": 0.05958335799999759,
+                  "median_verify_commit_s": 0.08859605899999679
+                },
+                "raw_4M": {
+                  "source_s": [
+                    0.36155796099995996,
+                    0.36217361899997513,
+                    0.3501654489999737
+                  ],
+                  "receiver_s": [
+                    0.38632967300009113,
+                    0.3798960279999619,
+                    0.3846835659999215
+                  ],
+                  "median_s": 0.3846835659999215,
+                  "min_s": 0.3798960279999619,
+                  "max_s": 0.38632967300009113,
+                  "GBps": 2.5685150688246496,
+                  "collectives": 236
+                },
+                "raw_16M": {
+                  "source_s": [
+                    0.34882912500000884,
+                    0.3529651279999939,
+                    0.366962075999993
+                  ],
+                  "receiver_s": [
+                    0.3719104790000074,
+                    0.37962662600000385,
+                    0.389711137000063
+                  ],
+                  "median_s": 0.37962662600000385,
+                  "min_s": 0.3719104790000074,
+                  "max_s": 0.389711137000063,
+                  "GBps": 2.602729809578715,
+                  "collectives": 59
+                },
+                "raw_64M": {
+                  "source_s": [
+                    0.33886774500001593,
+                    0.35894688500002303,
+                    0.3602979570000002
+                  ],
+                  "receiver_s": [
+                    0.36248473299997386,
+                    0.3862376719999929,
+                    0.38709428200002094
+                  ],
+                  "median_s": 0.3862376719999929,
+                  "min_s": 0.36248473299997386,
+                  "max_s": 0.38709428200002094,
+                  "GBps": 2.558180124905108,
+                  "collectives": 15
+                },
+                "raw_256M": {
+                  "source_s": [
+                    0.35286294200000157,
+                    0.3626600129999815,
+                    0.35448965199998383
+                  ],
+                  "receiver_s": [
+                    0.374169547000065,
+                    0.3935626310000089,
+                    0.3804195100000243
+                  ],
+                  "median_s": 0.3804195100000243,
+                  "min_s": 0.374169547000065,
+                  "max_s": 0.3935626310000089,
+                  "GBps": 2.5973051066700994,
+                  "collectives": 4
+                },
+                "raw_1024M": {
+                  "source_s": [
+                    0.36022005900002796,
+                    0.37310144700001047,
+                    0.368410831999995
+                  ],
+                  "receiver_s": [
+                    0.37444227699995736,
+                    0.39033999599996605,
+                    0.38631926499999736
+                  ],
+                  "median_s": 0.38631926499999736,
+                  "min_s": 0.37444227699995736,
+                  "max_s": 0.39033999599996605,
+                  "GBps": 2.55763982156056,
+                  "collectives": 1
+                }
+              },
+              "digests_agree": true,
+              "warmup_equal_to_base": true,
+              "source": {
+                "host": "job-1",
+                "env": {
+                  "NCCL_NET_PLUGIN": "none",
+                  "NCCL_VERSION": "2.25.1-1",
+                  "NCCL_SOCKET_IFNAME": "eth0",
+                  "CUDA_VISIBLE_DEVICES": "0",
+                  "NCCL_SOCKET_NTHREADS": "8",
+                  "NCCL_NSOCKS_PERTHREAD": "8",
+                  "NCCL_MIN_NCHANNELS": "4",
+                  "NCCL_DEBUG": "INFO",
+                  "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+                },
+                "device": "NVIDIA A10-24Q"
+              },
+              "receiver": {
+                "host": "job-0",
+                "env": {
+                  "NCCL_NET_PLUGIN": "none",
+                  "NCCL_VERSION": "2.25.1-1",
+                  "NCCL_SOCKET_IFNAME": "eth0",
+                  "CUDA_VISIBLE_DEVICES": "0",
+                  "NCCL_SOCKET_NTHREADS": "8",
+                  "NCCL_NSOCKS_PERTHREAD": "8",
+                  "NCCL_MIN_NCHANNELS": "4",
+                  "NCCL_DEBUG": "INFO",
+                  "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+                },
+                "device": "NVIDIA A10-24Q"
+              },
+              "torch": "2.8.0+cu128",
+              "backend": "nccl",
+              "nccl": "2.27.3"
+            }
+          ],
+          "tail": [
+            "{\"pass\": 1, \"done\": 24}",
+            "{\"pass\": 2, \"done\": 36}",
+            "{\"pass\": 3, \"done\": 48}",
+            "ROLE_RESULT {\"variants\": [\"per_tensor_sum64\", \"per_tensor_sha256\", \"bucket_4M\", \"bucket_16M\", \"bucket_64M\", \"bucket_256M\", \"bucket_1024M\", \"raw_4M\", \"raw_16M\", \"raw_64M\", \"raw_256M\", \"raw_1024M\"], \"passes\": 3, \"tensor_bytes\": 988065536, \"packed_bytes\": 988065536, \"tensors\": 290, \"rows\": {\"per_tensor_sum64\": {\"source_s\": [1.9151729619999855, 2.0205408920000423, 2.0196016570000097], \"receiver_s\": [1.9154311369999277, 2.021251472000017, 2.019778491000011], \"median_s\": 2.019778491000011, \"min_s\": 1.9154311369999277, \"max_s\": 2.021251472000017, \"GBps\": 0.4891949985618471}, \"per_tensor_sha256\": {\"source_s\": [2.6582876820000365, 2.6720437459999857, 2.8568167110000218], \"receiver_s\": [2.6587373109999817, 2.672131709000041, 2.8566363500000307], \"median_s\": 2.672131709000041, \"min_s\": 2.6587373109999817, \"max_s\": 2.8568167110000218, \"GBps\": 0.36976677933654384}, \"bucket_4M\": {\"source_s\": [0.5922198730000332, 0.5728280309999718, 0.5689038379999829], \"receiver_s\": [0.5927048830000103, 0.5726543780000384, 0.5693709229999513], \"median_s\": 0.5728280309999718, \"min_s\": 0.5693709229999513, \"max_s\": 0.5927048830000103, \"GBps\": 1.724890337987054, \"collectives\": 246, \"buckets\": 236, \"chunks\": 236, \"median_pack_s\": 0.010215794999965055, \"median_transfer_s\": 0.41854205600003525, \"median_hash_wait_s\": 0.00030875400000240916, \"median_verify_commit_s\": 0.13943210899998348}, \"bucket_16M\": {\"source_s\": [0.4550152460000163, 0.46242764599998054, 0.45701700699999037], \"receiver_s\": [0.45544392099998277, 0.4629489220000096, 0.456799038999975], \"median_s\": 0.45701700699999037, \"min_s\": 0.45544392099998277, \"max_s\": 0.4629489220000096, \"GBps\": 2.1619885493670936, \"collectives\": 69, \"buckets\": 59, \"chunks\": 59, \"median_pack_s\": 0.010165540999992118, \"median_transfer_s\": 0.37764123900001323, \"median_hash_wait_s\": 7.769400002644034e-05, \"median_verify_commit_s\": 0.06955254000001787}, \"bucket_64M\": {\"source_s\": [0.433044859000006, 0.49451837600003046, 0.4503597769999601], \"receiver_s\": [0.4340169459999288, 0.49508257600007255, 0.45116751699993074], \"median_s\": 0.45116751699993074, \"min_s\": 0.4340169459999288, \"max_s\": 0.49508257600007255, \"GBps\": 2.1900192251654316, \"collectives\": 25, \"buckets\": 15, \"chunks\": 59, \"median_pack_s\": 0.010152516999994532, \"median_transfer_s\": 0.36425962599997774, \"median_hash_wait_s\": 0.015281751000031818, \"median_verify_commit_s\": 0.05028150599997616}, \"bucket_256M\": {\"source_s\": [0.45141672300002256, 0.464918187999956, 0.4707481770000186], \"receiver_s\": [0.45156613599999673, 0.46488723499999196, 0.47167472300009194], \"median_s\": 0.464918187999956, \"min_s\": 0.45156613599999673, \"max_s\": 0.47167472300009194, \"GBps\": 2.125246035760798, \"collectives\": 14, \"buckets\": 4, \"chunks\": 59, \"median_pack_s\": 0.010076307000019824, \"median_transfer_s\": 0.38173646000001327, \"median_hash_wait_s\": 8.181299995158042e-05, \"median_verify_commit_s\": 0.07284430500004646}, \"bucket_1024M\": {\"source_s\": [0.5427962210000032, 0.5834469270000113, 0.538003285000002], \"receiver_s\": [0.5431009640000184, 0.5834384029999455, 0.5385464770000681], \"median_s\": 0.5431009640000184, \"min_s\": 0.5385464770000681, \"max_s\": 0.5834469270000113, \"GBps\": 1.81930359453379, \"collectives\": 11, \"buckets\": 1, \"chunks\": 59, \"median_pack_s\": 0.0100479530000257, \"median_transfer_s\": 0.3796090839999806, \"median_hash_wait_s\": 0.05958335799999759, \"median_verify_commit_s\": 0.08859605899999679}, \"raw_4M\": {\"source_s\": [0.36155796099995996, 0.36217361899997513, 0.3501654489999737], \"receiver_s\": [0.38632967300009113, 0.3798960279999619, 0.3846835659999215], \"median_s\": 0.3846835659999215, \"min_s\": 0.3798960279999619, \"max_s\": 0.38632967300009113, \"GBps\": 2.5685150688246496, \"collectives\": 236}, \"raw_16M\": {\"source_s\": [0.34882912500000884, 0.3529651279999939, 0.366962075999993], \"receiver_s\": [0.3719104790000074, 0.37962662600000385, 0.389711137000063], \"median_s\": 0.37962662600000385, \"min_s\": 0.3719104790000074, \"max_s\": 0.389711137000063, \"GBps\": 2.602729809578715, \"collectives\": 59}, \"raw_64M\": {\"source_s\": [0.33886774500001593, 0.35894688500002303, 0.3602979570000002], \"receiver_s\": [0.36248473299997386, 0.3862376719999929, 0.38709428200002094], \"median_s\": 0.3862376719999929, \"min_s\": 0.36248473299997386, \"max_s\": 0.38709428200002094, \"GBps\": 2.558180124905108, \"collectives\": 15}, \"raw_256M\": {\"source_s\": [0.35286294200000157, 0.3626600129999815, 0.35448965199998383], \"receiver_s\": [0.374169547000065, 0.3935626310000089, 0.3804195100000243], \"median_s\": 0.3804195100000243, \"min_s\": 0.374169547000065, \"max_s\": 0.3935626310000089, \"GBps\": 2.5973051066700994, \"collectives\": 4}, \"raw_1024M\": {\"source_s\": [0.36022005900002796, 0.37310144700001047, 0.368410831999995], \"receiver_s\": [0.37444227699995736, 0.39033999599996605, 0.38631926499999736], \"median_s\": 0.38631926499999736, \"min_s\": 0.37444227699995736, \"max_s\": 0.39033999599996605, \"GBps\": 2.55763982156056, \"collectives\": 1}}, \"digests_agree\": true, \"warmup_equal_to_base\": true, \"source\": {\"host\": \"job-1\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_SOCKET_NTHREADS\": \"8\", \"NCCL_NSOCKS_PERTHREAD\": \"8\", \"NCCL_MIN_NCHANNELS\": \"4\", \"NCCL_DEBUG\": \"INFO\", \"NCCL_DEBUG_SUBSYS\": \"INIT,NET,ENV\"}, \"device\": \"NVIDIA A10-24Q\"}, \"receiver\": {\"host\": \"job-0\", \"env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_SOCKET_NTHREADS\": \"8\", \"NCCL_NSOCKS_PERTHREAD\": \"8\", \"NCCL_MIN_NCHANNELS\": \"4\", \"NCCL_DEBUG\": \"INFO\", \"NCCL_DEBUG_SUBSYS\": \"INIT,NET,ENV\"}, \"device\": \"NVIDIA A10-24Q\"}, \"torch\": \"2.8.0+cu128\", \"backend\": \"nccl\", \"nccl\": \"2.27.3\"}",
+            "job-1:2526:2526 [0] NCCL INFO comm 0xf07b2f0 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+          ],
+          "node": {
+            "ip": "10.244.1.11",
+            "host": "job-1",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 98,
+              "mean_util_pct": 62.8,
+              "peak_used_mib": 3924.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "rollout",
+          "exit": 0,
+          "seconds": 47.1,
+          "host": "job-0",
+          "role_results": [
+            {
+              "role": "receiver",
+              "host": "job-0"
+            }
+          ],
+          "tail": [
+            "{\"pass\": 1, \"done\": 24}",
+            "{\"pass\": 2, \"done\": 36}",
+            "{\"pass\": 3, \"done\": 48}",
+            "ROLE_RESULT {\"role\": \"receiver\", \"host\": \"job-0\"}",
+            "job-0:3845:3845 [0] NCCL INFO comm 0x167ab5c0 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE"
+          ],
+          "node": {
+            "ip": "10.244.0.203",
+            "host": "job-0",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 94,
+              "mean_util_pct": 53.0,
+              "peak_used_mib": 3374.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e2b-bench.tar.gz",
+        "bytes": 12239
+      },
+      "seconds": 76.4
+    }
+  ],
+  "seconds": 661.1,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "STOPPING",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "2",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.624
+}

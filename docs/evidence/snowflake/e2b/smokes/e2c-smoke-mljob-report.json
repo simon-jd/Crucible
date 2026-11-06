@@ -1,0 +1,264 @@
+{
+  "started_at": "2026-11-06T15:57:42+00:00",
+  "pool": "SYSTEM_COMPUTE_POOL_GPU",
+  "instances": 2,
+  "entry": "scripts/snowflake/payloads/e12.py",
+  "include": [
+    "rl",
+    "kernels",
+    "scripts/snowflake",
+    "docs/evidence/raw/task9-confirmation-protocol.json"
+  ],
+  "pip": [
+    "vllm==0.10.2",
+    "torch==2.8.0",
+    "transformers==4.55.4",
+    "numpy==2.2.6"
+  ],
+  "env": [],
+  "args": [
+    "--run",
+    "e2b-e2c-smoke",
+    "--task",
+    "pair",
+    "--layout",
+    "two-node",
+    "--seed",
+    "17",
+    "--steps",
+    "8",
+    "--eval-subset",
+    "16",
+    "--port",
+    "12924",
+    "--bucket-mb",
+    "64",
+    "--role-env",
+    "all:NCCL_SOCKET_NTHREADS=8",
+    "all:NCCL_NSOCKS_PERTHREAD=8",
+    "all:NCCL_MIN_NCHANNELS=4",
+    "all:NCCL_DEBUG=INFO",
+    "all:NCCL_DEBUG_SUBSYS=INIT,NET,ENV"
+  ],
+  "lock_wait_s": 0.0,
+  "pool_before": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "job_id": "CRUCIBLE_LAB.PROBE.CRUCIBLE_E2B_1RWMS1SISHNQB",
+  "status": "DONE",
+  "results": [
+    {
+      "instance": 0,
+      "run": "e2b-e2c-smoke",
+      "task": "pair",
+      "layout": "two-node",
+      "nproc": 36,
+      "fetch": [
+        {
+          "asset": "models/Qwen2.5-0.5B-Instruct",
+          "bytes": 999628800,
+          "get_seconds": 5.5,
+          "MBps": 180.4
+        },
+        {
+          "asset": "e12/t11-data-full",
+          "bytes": 911360,
+          "get_seconds": 0.3,
+          "MBps": 2.6
+        }
+      ],
+      "roles": [
+        {
+          "role": "learner",
+          "exit": 0,
+          "seconds": 139.8,
+          "host": "job-1",
+          "role_results": [
+            {
+              "staleness_histogram": {
+                "0": 64,
+                "1": 448
+              },
+              "train_wall_s": 92.94597658700002,
+              "peak_allocated_bytes": 11477173760,
+              "peak_reserved_bytes": 14799601664,
+              "peak_device_used_bytes": 17928159232,
+              "device": "NVIDIA A10-24Q",
+              "host": "job-1",
+              "nccl_env": {
+                "NCCL_NET_PLUGIN": "none",
+                "NCCL_VERSION": "2.25.1-1",
+                "NCCL_SOCKET_IFNAME": "eth0",
+                "CUDA_VISIBLE_DEVICES": "0",
+                "NCCL_SOCKET_NTHREADS": "8",
+                "NCCL_NSOCKS_PERTHREAD": "8",
+                "NCCL_MIN_NCHANNELS": "4",
+                "NCCL_DEBUG": "INFO",
+                "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+              },
+              "sync_mode": {
+                "kind": "bucketed",
+                "bucket_mb": 64.0,
+                "digest": "sha256"
+              }
+            }
+          ],
+          "tail": [
+            "job-1:2560:3392 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0",
+            "{\"step\": 0, \"wait_batch_s\": 7.677134298999988, \"learn_s\": 11.516011789999993, \"sync_s\": 1.1535506480000208, \"wall_s\": 20.885683460999985}",
+            "ROLE_RESULT {\"staleness_histogram\": {\"0\": 64, \"1\": 448}, \"train_wall_s\": 92.94597658700002, \"peak_allocated_bytes\": 11477173760, \"peak_reserved_bytes\": 14799601664, \"peak_device_used_bytes\": 17928159232, \"device\": \"NVIDIA A10-24Q\", \"host\": \"job-1\", \"nccl_env\": {\"NCCL_NET_PLUGIN\": \"none\", \"NCCL_VERSION\": \"2.25.1-1\", \"NCCL_SOCKET_IFNAME\": \"eth0\", \"CUDA_VISIBLE_DEVICES\": \"0\", \"NCCL_SOCKET_NTHREADS\": \"8\", \"NCCL_NSOCKS_PERTHREAD\": \"8\", \"NCCL_MIN_NCHANNELS\": \"4\", \"NCCL_DEBUG\": \"INFO\", \"NCCL_DEBUG_SUBSYS\": \"INIT,NET,ENV\"}, \"sync_mode\": {\"kind\": \"bucketed\", \"bucket_mb\": 64.0, \"digest\": \"sha256\"}}",
+            "job-1:2560:2560 [0] NCCL INFO comm 0x6d763d60 rank 0 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE",
+            "job-1:2560:2560 [0] NCCL INFO comm 0x77b78550 rank 0 nranks 1 cudaDev 0 busId 200000 - Destroy COMPLETE"
+          ],
+          "node": {
+            "ip": "10.244.1.75",
+            "host": "job-1",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 279,
+              "mean_util_pct": 33.0,
+              "peak_used_mib": 14922.0,
+              "total_mib": 24512.0
+            }
+          }
+        },
+        {
+          "role": "rollout",
+          "exit": 0,
+          "seconds": 138.8,
+          "host": "job-0",
+          "role_results": [],
+          "tail": [
+            "INFO 11-06 16:08:54 [block_pool.py:292] Successfully reset prefix cache",
+            "INFO 11-06 16:09:04 [block_pool.py:292] Successfully reset prefix cache",
+            "{\"after\": {\"gsm8k\": 0.328125, \"math500\": 0.296875}}",
+            "job-0:3805:3805 [0] NCCL INFO comm 0x60e38e20 rank 1 nranks 2 cudaDev 0 busId 200000 - Destroy COMPLETE",
+            "[rank0]:[W1106 16:09:23.212553746 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+          ],
+          "node": {
+            "ip": "10.244.0.203",
+            "host": "job-0",
+            "cuda_visible_devices": "0"
+          },
+          "gpu_profile": {
+            "0": {
+              "samples": 277,
+              "mean_util_pct": 46.3,
+              "peak_used_mib": 5332.0,
+              "total_mib": 24512.0
+            }
+          }
+        }
+      ],
+      "pipeline": {
+        "training_window_s": 92.91623401641846,
+        "learner_gpu_busy_s": 85.19751691818237,
+        "rollout_gpu_busy_s": 47.895869731903076,
+        "learner_gpu_idle_share": 0.08307178158848083,
+        "rollout_gpu_idle_share": 0.48452635603548255,
+        "learn_generate_overlap_s": 31.709325313568115,
+        "trained_samples_per_s": 5.510339559280123,
+        "generated_samples_per_s": 5.510339559280123,
+        "step_wall_s": {
+          "median": 10.405904404499978,
+          "min": 8.556576543000006,
+          "max": 20.885683460999985
+        },
+        "wait_batch_s": {
+          "median": 0.009297551000003068,
+          "min": 0.007975413999986358,
+          "max": 7.677134298999988
+        },
+        "learn_s": {
+          "median": 9.03695502299999,
+          "min": 7.18356804199999,
+          "max": 11.516011789999993
+        },
+        "export_s": {
+          "median": 0.06401904850002893,
+          "min": 0.06146999100002404,
+          "max": 0.06658071399999699
+        },
+        "barrier_s": {
+          "median": 0.00024045300000352654,
+          "min": 0.0002144189999739865,
+          "max": 0.47421710099996517
+        },
+        "learner_push_s": {
+          "median": 1.2954079824999951,
+          "min": 0.9647741040000142,
+          "max": 1.3134361810000428
+        },
+        "rollout_generate_s": {
+          "median": 4.56861296149998,
+          "min": 4.266365955999959,
+          "max": 6.1796403619999865
+        },
+        "rollout_grade_s": {
+          "median": 1.3360471729999972,
+          "min": 1.2583699040000056,
+          "max": 1.4257435890000352
+        },
+        "rollout_recv_s": {
+          "median": 1.2955609255000127,
+          "min": 0.9646409440000525,
+          "max": 1.3137542640000675
+        },
+        "rollout_load_s": {
+          "median": 0.00847340300003907,
+          "min": 0.006750756999963414,
+          "max": 0.013531141999919782
+        },
+        "rollout_barrier_s": {
+          "median": 3.860332194000023,
+          "min": 1.2298660540000128,
+          "max": 8.928347541999983
+        },
+        "sync_bytes_per_version": [
+          988065536
+        ],
+        "learner_push_GBps": {
+          "median": 0.7627452137504422,
+          "min": 0.7522752534863876,
+          "max": 1.0241418503081894
+        },
+        "staleness_histogram": {
+          "0": 64,
+          "1": 448
+        },
+        "dropped_stale": 0,
+        "versions_loaded": 8
+      },
+      "after": {
+        "gsm8k": 0.328125,
+        "math500": 0.296875
+      },
+      "upload": {
+        "uploaded": "@CRUCIBLE_LAB.PROBE.ASSETS/results/e12/e2b-e2c-smoke.tar.gz",
+        "bytes": 46190
+      },
+      "seconds": 172.7
+    }
+  ],
+  "seconds": 752.7,
+  "stop": [
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU STOP ALL: ok",
+    "ALTER COMPUTE POOL SYSTEM_COMPUTE_POOL_GPU SUSPEND: ok"
+  ],
+  "pool_after": {
+    "state": "SUSPENDED",
+    "instance_family": "GPU_NV_SM",
+    "active_nodes": "0",
+    "idle_nodes": "0",
+    "num_services": "0",
+    "num_jobs": "0"
+  },
+  "credits_estimate": 0.711
+}

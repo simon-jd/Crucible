@@ -1,0 +1,421 @@
+{
+ "variants": [
+  "per_tensor_sum64",
+  "per_tensor_sha256",
+  "bucket_16M",
+  "bucket_256M",
+  "raw_16M",
+  "raw_256M"
+ ],
+ "passes": 1,
+ "tensor_bytes": 988065536,
+ "packed_bytes": 988065536,
+ "tensors": 290,
+ "rows": {
+  "per_tensor_sum64": {
+   "source_s": [
+    1.9683448040000258
+   ],
+   "receiver_s": [
+    1.9685480950000738
+   ],
+   "median_s": 1.9685480950000738,
+   "min_s": 1.9685480950000738,
+   "max_s": 1.9685480950000738,
+   "GBps": 0.5019260329527092
+  },
+  "per_tensor_sha256": {
+   "source_s": [
+    2.6091282690000526
+   ],
+   "receiver_s": [
+    2.609236571999986
+   ],
+   "median_s": 2.609236571999986,
+   "min_s": 2.609236571999986,
+   "max_s": 2.609236571999986,
+   "GBps": 0.3786799351975377
+  },
+  "bucket_16M": {
+   "source_s": [
+    0.4853025710000338
+   ],
+   "receiver_s": [
+    0.4857935820000421
+   ],
+   "median_s": 0.4857935820000421,
+   "min_s": 0.4857935820000421,
+   "max_s": 0.4857935820000421,
+   "GBps": 2.03392052223513,
+   "collectives": 69,
+   "buckets": 59,
+   "chunks": 59,
+   "median_pack_s": 0.010277939999923547,
+   "median_transfer_s": 0.40341805499997463,
+   "median_hash_wait_s": 7.396800003789394e-05,
+   "median_verify_commit_s": 0.0713693449999937
+  },
+  "bucket_256M": {
+   "source_s": [
+    0.463349760999904
+   ],
+   "receiver_s": [
+    0.46362913500001923
+   ],
+   "median_s": 0.46362913500001923,
+   "min_s": 0.46362913500001923,
+   "max_s": 0.46362913500001923,
+   "GBps": 2.1311549715268843,
+   "collectives": 14,
+   "buckets": 4,
+   "chunks": 59,
+   "median_pack_s": 0.010124866000069233,
+   "median_transfer_s": 0.3964771319999727,
+   "median_hash_wait_s": 7.505999997192703e-05,
+   "median_verify_commit_s": 0.05652688300006048
+  },
+  "raw_16M": {
+   "source_s": [
+    0.37046917900011067
+   ],
+   "receiver_s": [
+    0.38968151300002773
+   ],
+   "median_s": 0.38968151300002773,
+   "min_s": 0.38968151300002773,
+   "max_s": 0.38968151300002773,
+   "GBps": 2.53557200697876,
+   "collectives": 59
+  },
+  "raw_256M": {
+   "source_s": [
+    0.36271387899989804
+   ],
+   "receiver_s": [
+    0.38277064099997915
+   ],
+   "median_s": 0.38277064099997915,
+   "min_s": 0.38277064099997915,
+   "max_s": 0.38277064099997915,
+   "GBps": 2.581351415611977,
+   "collectives": 4
+  }
+ },
+ "digests_agree": true,
+ "warmup_equal_to_base": true,
+ "source": {
+  "host": "job-0",
+  "env": {
+   "NCCL_NET_PLUGIN": "none",
+   "NCCL_VERSION": "2.25.1-1",
+   "NCCL_SOCKET_IFNAME": "eth0",
+   "CUDA_VISIBLE_DEVICES": "0",
+   "NCCL_SOCKET_NTHREADS": "8",
+   "NCCL_NSOCKS_PERTHREAD": "8",
+   "NCCL_MIN_NCHANNELS": "4",
+   "NCCL_DEBUG": "INFO",
+   "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+  },
+  "device": "NVIDIA A10-24Q"
+ },
+ "receiver": {
+  "host": "job-1",
+  "env": {
+   "NCCL_NET_PLUGIN": "none",
+   "NCCL_VERSION": "2.25.1-1",
+   "NCCL_SOCKET_IFNAME": "eth0",
+   "CUDA_VISIBLE_DEVICES": "0",
+   "NCCL_SOCKET_NTHREADS": "8",
+   "NCCL_NSOCKS_PERTHREAD": "8",
+   "NCCL_MIN_NCHANNELS": "4",
+   "NCCL_DEBUG": "INFO",
+   "NCCL_DEBUG_SUBSYS": "INIT,NET,ENV"
+  },
+  "device": "NVIDIA A10-24Q"
+ },
+ "torch": "2.8.0+cu128",
+ "backend": "nccl",
+ "nccl": "2.27.3",
+ "records": [
+  {
+   "pass": 0,
+   "variant": "per_tensor_sum64",
+   "version": 1,
+   "barrier_s": 0.4963548150000179,
+   "seconds": 2.229215630999988,
+   "bytes": 988065536,
+   "digest": "bfd1de69696bd1f4efbbae476dc0e5a94d7479c69ca660a2134cfa40705b7380",
+   "detail": null,
+   "receiver_seconds": 2.2301195669999743,
+   "receiver_detail": null,
+   "receiver_equal_to_base": true,
+   "digests_agree": true
+  },
+  {
+   "pass": 0,
+   "variant": "per_tensor_sha256",
+   "version": 2,
+   "barrier_s": 0.5035437430000229,
+   "seconds": 3.1163726179999003,
+   "bytes": 988065536,
+   "digest": "cd9ab7155e90d48c167d34767650bc4745469342bd0d4d8bf5e73f2a33025fad",
+   "detail": null,
+   "receiver_seconds": 3.1167899230000558,
+   "receiver_detail": null,
+   "receiver_equal_to_base": true,
+   "digests_agree": true
+  },
+  {
+   "pass": 0,
+   "variant": "bucket_16M",
+   "version": 3,
+   "barrier_s": 0.526444821000041,
+   "seconds": 0.730087362000063,
+   "bytes": 988065536,
+   "digest": "9ba208e278ecde10f24b2dfa089c5ffa496f562bd3ca6b8dd16dd17f1f5b7428",
+   "detail": {
+    "seconds": 0.7298133420000568,
+    "pack_s": 0.011038020999990295,
+    "transfer_s": 0.6627452420000282,
+    "hash_wait_s": 0.0001512210000100822,
+    "verify_commit_s": 0.05587885800002823,
+    "buckets": 59,
+    "bucket_bytes": 16777216,
+    "chunks": 59,
+    "collectives": 69,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "9ba208e278ecde10f24b2dfa089c5ffa496f562bd3ca6b8dd16dd17f1f5b7428"
+   },
+   "receiver_seconds": 0.7304521780000641,
+   "receiver_detail": {
+    "seconds": 0.7302984819999665,
+    "pack_s": 0.011976430999993681,
+    "transfer_s": 0.6861259179999024,
+    "hash_wait_s": 0.008180403000096703,
+    "verify_commit_s": 0.0240157299999737,
+    "buckets": 59,
+    "bucket_bytes": 16777216,
+    "chunks": 59,
+    "collectives": 69,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "9ba208e278ecde10f24b2dfa089c5ffa496f562bd3ca6b8dd16dd17f1f5b7428"
+   },
+   "receiver_equal_to_base": true,
+   "digests_agree": true
+  },
+  {
+   "pass": 0,
+   "variant": "bucket_256M",
+   "version": 4,
+   "barrier_s": 0.475155811000036,
+   "seconds": 0.7786741759999813,
+   "bytes": 988065536,
+   "digest": "0184f9e1455ca8f03752d7066f0b604f93430f5dac1f754430d0de6f4878c803",
+   "detail": {
+    "seconds": 0.7784647980000727,
+    "pack_s": 0.012093271000026107,
+    "transfer_s": 0.71051773399995,
+    "hash_wait_s": 8.362599999145459e-05,
+    "verify_commit_s": 0.055770167000105175,
+    "buckets": 4,
+    "bucket_bytes": 268435456,
+    "chunks": 59,
+    "collectives": 14,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "0184f9e1455ca8f03752d7066f0b604f93430f5dac1f754430d0de6f4878c803"
+   },
+   "receiver_seconds": 0.7788498849999996,
+   "receiver_detail": {
+    "seconds": 0.7786878030000253,
+    "pack_s": 0.01257937499997297,
+    "transfer_s": 0.7177857070000755,
+    "hash_wait_s": 0.024291115999972135,
+    "verify_commit_s": 0.024031605000004674,
+    "buckets": 4,
+    "bucket_bytes": 268435456,
+    "chunks": 59,
+    "collectives": 14,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "0184f9e1455ca8f03752d7066f0b604f93430f5dac1f754430d0de6f4878c803"
+   },
+   "receiver_equal_to_base": true,
+   "digests_agree": true
+  },
+  {
+   "pass": 0,
+   "variant": "raw_16M",
+   "version": 5,
+   "barrier_s": 0.2978652100000545,
+   "seconds": 1.026456295999992,
+   "detail": {
+    "collectives": 59
+   },
+   "bytes": 988065536,
+   "receiver_seconds": 1.0366277680000167,
+   "receiver_detail": {
+    "collectives": 59
+   },
+   "receiver_equal_to_base": true
+  },
+  {
+   "pass": 0,
+   "variant": "raw_256M",
+   "version": 6,
+   "barrier_s": 0.30970908699998745,
+   "seconds": 1.0950109229999043,
+   "detail": {
+    "collectives": 4
+   },
+   "bytes": 988065536,
+   "receiver_seconds": 1.1064391579999437,
+   "receiver_detail": {
+    "collectives": 4
+   },
+   "receiver_equal_to_base": true
+  },
+  {
+   "pass": 1,
+   "variant": "per_tensor_sum64",
+   "version": 7,
+   "barrier_s": 0.2818067640000663,
+   "seconds": 1.9683448040000258,
+   "bytes": 988065536,
+   "digest": "ffdd7e25bc100382ceed48ccfe0f714001d8aa43629729805fe4031ad37afc86",
+   "detail": null,
+   "receiver_seconds": 1.9685480950000738,
+   "receiver_detail": null,
+   "receiver_equal_to_base": null,
+   "digests_agree": true
+  },
+  {
+   "pass": 1,
+   "variant": "per_tensor_sha256",
+   "version": 8,
+   "barrier_s": 0.0006670679999842832,
+   "seconds": 2.6091282690000526,
+   "bytes": 988065536,
+   "digest": "4c7948690df1508236b5bb94e3b659385102ce99c8bd39a4b9a3efdc8fae1ee2",
+   "detail": null,
+   "receiver_seconds": 2.609236571999986,
+   "receiver_detail": null,
+   "receiver_equal_to_base": null,
+   "digests_agree": true
+  },
+  {
+   "pass": 1,
+   "variant": "bucket_16M",
+   "version": 9,
+   "barrier_s": 0.0005923600000414808,
+   "seconds": 0.4853025710000338,
+   "bytes": 988065536,
+   "digest": "0766f70240838aba6c917e7695cbba80264befd43176f4db35b8141c98dd46c5",
+   "detail": {
+    "seconds": 0.48513930799992977,
+    "pack_s": 0.010277939999923547,
+    "transfer_s": 0.40341805499997463,
+    "hash_wait_s": 7.396800003789394e-05,
+    "verify_commit_s": 0.0713693449999937,
+    "buckets": 59,
+    "bucket_bytes": 16777216,
+    "chunks": 59,
+    "collectives": 69,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "0766f70240838aba6c917e7695cbba80264befd43176f4db35b8141c98dd46c5"
+   },
+   "receiver_seconds": 0.4857935820000421,
+   "receiver_detail": {
+    "seconds": 0.4856114939999543,
+    "pack_s": 0.010942455999952472,
+    "transfer_s": 0.4417138820000446,
+    "hash_wait_s": 0.00823129599996264,
+    "verify_commit_s": 0.024723859999994602,
+    "buckets": 59,
+    "bucket_bytes": 16777216,
+    "chunks": 59,
+    "collectives": 69,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "0766f70240838aba6c917e7695cbba80264befd43176f4db35b8141c98dd46c5"
+   },
+   "receiver_equal_to_base": null,
+   "digests_agree": true
+  },
+  {
+   "pass": 1,
+   "variant": "bucket_256M",
+   "version": 10,
+   "barrier_s": 0.0007935539999834873,
+   "seconds": 0.463349760999904,
+   "bytes": 988065536,
+   "digest": "11a117f5414c1dd6ebffb98a19a4d15f8111f278f019f70dad9765ed509e5906",
+   "detail": {
+    "seconds": 0.46320394100007434,
+    "pack_s": 0.010124866000069233,
+    "transfer_s": 0.3964771319999727,
+    "hash_wait_s": 7.505999997192703e-05,
+    "verify_commit_s": 0.05652688300006048,
+    "buckets": 4,
+    "bucket_bytes": 268435456,
+    "chunks": 59,
+    "collectives": 14,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "11a117f5414c1dd6ebffb98a19a4d15f8111f278f019f70dad9765ed509e5906"
+   },
+   "receiver_seconds": 0.46362913500001923,
+   "receiver_detail": {
+    "seconds": 0.4634753189999401,
+    "pack_s": 0.01087638399997104,
+    "transfer_s": 0.405147865999993,
+    "hash_wait_s": 0.02426679100005913,
+    "verify_commit_s": 0.023184277999916958,
+    "buckets": 4,
+    "bucket_bytes": 268435456,
+    "chunks": 59,
+    "collectives": 14,
+    "tensor_bytes": 988065536,
+    "total_bytes": 988065536,
+    "digest": "11a117f5414c1dd6ebffb98a19a4d15f8111f278f019f70dad9765ed509e5906"
+   },
+   "receiver_equal_to_base": null,
+   "digests_agree": true
+  },
+  {
+   "pass": 1,
+   "variant": "raw_16M",
+   "version": 11,
+   "barrier_s": 0.0005508030000100916,
+   "seconds": 0.37046917900011067,
+   "detail": {
+    "collectives": 59
+   },
+   "bytes": 988065536,
+   "receiver_seconds": 0.38968151300002773,
+   "receiver_detail": {
+    "collectives": 59
+   },
+   "receiver_equal_to_base": null
+  },
+  {
+   "pass": 1,
+   "variant": "raw_256M",
+   "version": 12,
+   "barrier_s": 0.01952822999999171,
+   "seconds": 0.36271387899989804,
+   "detail": {
+    "collectives": 4
+   },
+   "bytes": 988065536,
+   "receiver_seconds": 0.38277064099997915,
+   "receiver_detail": {
+    "collectives": 4
+   },
+   "receiver_equal_to_base": null
+  }
+ ]
+}
